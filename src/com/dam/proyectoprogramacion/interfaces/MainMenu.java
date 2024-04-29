@@ -1,4 +1,8 @@
 package com.dam.proyectoprogramacion.interfaces;
 
-public class MainMenu {
+import javax.swing.*;
+
+public class MainMenu extends JFrame {
+
+
 }
