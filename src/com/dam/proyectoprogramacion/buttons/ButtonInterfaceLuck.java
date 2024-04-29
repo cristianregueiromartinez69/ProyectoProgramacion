@@ -11,26 +11,24 @@ public class ButtonInterfaceLuck extends JPanel {
 
     public  JButton makeAccountButton(){
 
-        ImageIcon iconAccount = new ImageIcon("imagenes/crearCuenta.png");
-        createAccountButton = new CreateButtons("Crear Cuenta", iconAccount);
-        setBackground(Color.ORANGE);
+        ImageIcon iconFace = new ImageIcon("imagenes/cara.png");
+        faceButton = new CreateButtons("Cara", iconFace);
+        setBackground(Color.GREEN);
         setForeground(Color.BLACK);
-        setPreferredSize(new Dimension(150,50));
-        Border borderboton = BorderFactory.createLineBorder(Color.YELLOW, 2);
+        Border borderboton = BorderFactory.createLineBorder(Color.GREEN.darker().darker(), 2);
         setBorder(borderboton);
-        return createAccountButton;
+        return faceButton;
     }
 
     public  JButton makeBattleButton(){
 
-        ImageIcon iconBattle = new ImageIcon("imagenes/iconoBatalla.png");
-        combatButton = new CreateButtons("Batalla", iconBattle);
-        setBackground(Color.WHITE);
+        ImageIcon iconTail = new ImageIcon("imagenes/cruz.png");
+        tailButton = new CreateButtons("Cruz", iconTail);
+        setBackground(Color.CYAN);
         setForeground(Color.BLACK);
-        setPreferredSize(new Dimension(150,50));
-        Border borderboton = BorderFactory.createLineBorder(Color.YELLOW, 2);
+        Border borderboton = BorderFactory.createLineBorder(Color.CYAN.darker().darker(), 2);
         setBorder(borderboton);
-        return combatButton;
+        return tailButton;
     }
 
 
