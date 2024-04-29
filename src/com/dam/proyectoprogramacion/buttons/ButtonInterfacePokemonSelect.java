@@ -187,6 +187,11 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         return snorlaxButton;
 
     }
+    /**
+     * metodo para crear el boton de tinkaton
+     *
+     * @return el boton de tinkaton
+     */
     public JButton makeTinkatonButton() {
         ImageIcon iconFairy = new ImageIcon("imagenes/hada.png");
         tinkatonButton = new CreateButtons("Tinkaton", iconFairy);
@@ -197,6 +202,11 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         return tinkatonButton;
 
     }
+    /**
+     * metodo para crear el boton de tyranitar
+     *
+     * @return el boton de tyranitar
+     */
     public JButton makeTyranitarButton() {
         ImageIcon iconRock = new ImageIcon("imagenes/roca.png");
         tyranitarButton = new CreateButtons("Tyranitar", iconRock);
@@ -207,7 +217,41 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         return tyranitarButton;
 
     }
+    public JButton makeStartButton() {
+        ImageIcon iconStart = new ImageIcon("imagenes/empezar.png");
+        startButton = new CreateButtons("A batallar", iconStart);
+        setBackground(Color.WHITE);
+        setForeground(Color.BLACK);
+        Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
+        setBorder(borderboton);
+        return startButton;
 
+    }
+    public JButton makeReadyPlayer1Button(){
+        readyPlayer1Button = new JButton("Listo");
+        setBackground(Color.GREEN);
+        setForeground(Color.WHITE);
+        Border borderboton = BorderFactory.createLineBorder(Color.RED, 3);
+        setBorder(borderboton);
+        return readyPlayer1Button;
+    }
+    public JButton makeReadyPlayer2Button(){
+        readyPlayer2Button = new JButton("Listo");
+        setBackground(Color.GREEN);
+        setForeground(Color.WHITE);
+        Border borderboton = BorderFactory.createLineBorder(Color.RED, 3);
+        setBorder(borderboton);
+        return readyPlayer2Button;
+    }
+    public JButton makeBackToMenuButton(){
+        ImageIcon iconBackToMenu = new ImageIcon("imagenes/backMenu.png");
+        backToMenuButton = new CreateButtons("Volver al Menu", iconBackToMenu);
+        setBackground(Color.CYAN);
+        setForeground(Color.BLACK);
+        Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
+        setBorder(borderboton);
+        return backToMenuButton;
+    }
 
 
 
