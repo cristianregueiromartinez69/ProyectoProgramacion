@@ -9,7 +9,7 @@ import java.awt.event.MouseEvent;
 
 public class ProbandoBotonesPaneles extends JFrame {
 
-    ButtonInterfacePokemonSelect selectPokemon = new ButtonInterfacePokemonSelect();
+    ButtonInterfaceCreateAccount selectIcon = new ButtonInterfaceCreateAccount();
 
     public ProbandoBotonesPaneles(){
 
@@ -53,33 +53,28 @@ public class ProbandoBotonesPaneles extends JFrame {
         /**
          * creamos un boton que será la batalla que es igual al metodo creado en el paquete de los botones de la interfaz del menu
          */
-        JButton startButton = selectPokemon.makeReadyPlayer1Button();
-        startButton.setForeground(Color.BLACK);
-        startButton.setPreferredSize(new Dimension(150, 50));
-        contentPanel.add(ButtonBattlePanel(startButton), gbc);
+        JButton icon1 = selectIcon.makeIcon1Button();
+        icon1.setForeground(Color.BLACK);
+        icon1.setPreferredSize(new Dimension(150, 50));
+        contentPanel.add(ButtonBattlePanel(icon1), gbc);
 
 
         gbc.gridx = 1;
         gbc.gridy = 0;
 
 
-        /**
-         * creamos un boton que será la creacion de la cuenta que es igual al metodo creado en el paquete de los botones de la interfaz del menu
-         */
-        JButton backMenu = selectPokemon.makeReadyPlayer2Button();
-        backMenu.setForeground(Color.BLACK);
-        backMenu.setPreferredSize(new Dimension(150, 50));
-        contentPanel.add(CreateDashboardAccount(backMenu), gbc);
+
+
 
 
         /**
          * metodo para establecer el hover del boton
          * al pasar el raton por el boton, el boton sale de un color diferente
          */
-        startButton.addMouseListener(new MouseAdapter() {
+        icon1.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                startButton.setBackground(Color.BLUE);
+                icon1.setBackground(Color.BLUE);
 
             }
 
@@ -89,30 +84,12 @@ public class ProbandoBotonesPaneles extends JFrame {
              */
             @Override
             public void mouseExited(MouseEvent e) {
-                startButton.setBackground(Color.WHITE);
+                icon1.setBackground(Color.YELLOW.darker());
             }
         });
 
-        /**
-         * metodo para establecer el hover del boton
-         * al pasar el raton por el boton, el boton sale de un color diferente
-         */
-        backMenu.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                backMenu.setBackground(Color.BLUE.darker());
 
-            }
 
-            /**
-             * cuando dejemos de paar el cursor por encima, vuelve a su color original
-             * @param e the event to be processed un evento de tipo mouseevent
-             */
-            @Override
-            public void mouseExited(MouseEvent e) {
-                backMenu.setBackground(Color.CYAN);
-            }
-        });
 
 
     }
