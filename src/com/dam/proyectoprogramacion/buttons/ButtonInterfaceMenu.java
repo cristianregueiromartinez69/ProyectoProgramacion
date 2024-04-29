@@ -19,7 +19,7 @@ public class ButtonInterfaceMenu extends JPanel{
 
     /**
      * metodo que creará el boton de crear cuenta y establecemos métodos para el botón
-     * @return el botón creado
+     * @return el botón de crear cuenta
      */
     public  JButton makeAccountButton(){
 
@@ -34,7 +34,7 @@ public class ButtonInterfaceMenu extends JPanel{
     }
     /**
      * metodo que creará el boton de batalla y establecemos métodos para el botón
-     * @return el botón creado
+     * @return el botón de batalla
      */
     public  JButton makeBattleButton(){
 
