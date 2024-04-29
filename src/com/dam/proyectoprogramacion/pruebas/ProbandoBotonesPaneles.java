@@ -53,10 +53,10 @@ public class ProbandoBotonesPaneles extends JFrame {
         /**
          * creamos un boton que será la batalla que es igual al metodo creado en el paquete de los botones de la interfaz del menu
          */
-        JButton garchomp = selectPokemon.makeGarchompButton();
-        garchomp.setForeground(Color.WHITE);
-        garchomp.setPreferredSize(new Dimension(150, 50));
-        contentPanel.add(ButtonBattlePanel(garchomp), gbc);
+        JButton infernape = selectPokemon.makeInfernapeButton();
+        infernape.setForeground(Color.WHITE);
+        infernape.setPreferredSize(new Dimension(150, 50));
+        contentPanel.add(ButtonBattlePanel(infernape), gbc);
 
 
         gbc.gridx = 1;
@@ -66,20 +66,20 @@ public class ProbandoBotonesPaneles extends JFrame {
         /**
          * creamos un boton que será la creacion de la cuenta que es igual al metodo creado en el paquete de los botones de la interfaz del menu
          */
-        JButton gengar = selectPokemon.makeGengarButton();
-        gengar.setForeground(Color.WHITE);
-        gengar.setPreferredSize(new Dimension(150, 50));
-        contentPanel.add(CreateDashboardAccount(gengar), gbc);
+        JButton lucario = selectPokemon.makeLucarioButton();
+        lucario.setForeground(Color.WHITE);
+        lucario.setPreferredSize(new Dimension(150, 50));
+        contentPanel.add(CreateDashboardAccount(lucario), gbc);
 
 
         /**
          * metodo para establecer el hover del boton
          * al pasar el raton por el boton, el boton sale de un color diferente
          */
-        garchomp.addMouseListener(new MouseAdapter() {
+        infernape.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                garchomp.setBackground(Color.GREEN.darker().darker());
+                infernape.setBackground(Color.GREEN.darker().darker());
 
             }
 
@@ -89,7 +89,7 @@ public class ProbandoBotonesPaneles extends JFrame {
              */
             @Override
             public void mouseExited(MouseEvent e) {
-                garchomp.setBackground(Color.GREEN.brighter());
+                infernape.setBackground(Color.RED.brighter());
             }
         });
 
@@ -97,10 +97,10 @@ public class ProbandoBotonesPaneles extends JFrame {
          * metodo para establecer el hover del boton
          * al pasar el raton por el boton, el boton sale de un color diferente
          */
-        gengar.addMouseListener(new MouseAdapter() {
+        lucario.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                gengar.setBackground(Color.BLUE.darker());
+                lucario.setBackground(Color.BLUE.darker());
 
             }
 
@@ -110,7 +110,7 @@ public class ProbandoBotonesPaneles extends JFrame {
              */
             @Override
             public void mouseExited(MouseEvent e) {
-                gengar.setBackground(Color.GRAY.darker());
+                lucario.setBackground(Color.YELLOW.darker());
             }
         });
 

@@ -88,6 +88,28 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         setBorder(borderboton);
         return gengarButton;
     }
+    public  JButton makeInfernapeButton(){
+
+        ImageIcon iconFire = new ImageIcon("imagenes/fuego.png");
+        infernapeButton = new CreateButtons("Infernape", iconFire);
+        setBackground(Color.RED.brighter());
+        setForeground(Color.WHITE);
+        Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
+        setBorder(borderboton);
+        return infernapeButton;
+    }
+    public  JButton makeLucarioButton(){
+
+        ImageIcon iconFight = new ImageIcon("imagenes/lucha.png");
+        lucarioButton = new CreateButtons("Lucario", iconFight);
+        setBackground(Color.YELLOW.darker());
+        setForeground(Color.WHITE);
+        Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
+        setBorder(borderboton);
+        return lucarioButton;
+    }
+
+
 
 
 
