@@ -18,6 +18,10 @@ public class ButtonInterfaceLuck extends JPanel {
     private JButton tailButton;
     private JButton confirmButton;
 
+    /**
+     * metodo para crear el botón de la cara de la moneda en la interfaz suerte
+     * @return el boton creado
+     */
     public  JButton makeFaceButton(){
 
         ImageIcon iconFace = new ImageIcon("imagenes/cara.png");
@@ -29,6 +33,10 @@ public class ButtonInterfaceLuck extends JPanel {
         return faceButton;
     }
 
+    /**
+     * metodo para crear la cruz de la moneda en la interfaz suerte
+     * @return el boton creado
+     */
     public  JButton makeTailButton(){
 
         ImageIcon iconTail = new ImageIcon("imagenes/cruz.png");
@@ -40,6 +48,10 @@ public class ButtonInterfaceLuck extends JPanel {
         return tailButton;
     }
 
+    /**
+     * metodo para crear el boton de confirmar, una vez ambos jugadores ya saben quien escoge primero
+     * @return el boton creado
+     */
     public JButton makeConfirmButton(){
 
         confirmButton = new JButton("Listo");
