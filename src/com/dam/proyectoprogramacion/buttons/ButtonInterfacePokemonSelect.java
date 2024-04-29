@@ -157,6 +157,11 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         return marshadowButton;
 
     }
+    /**
+     * metodo para crear el boton de milotic
+     *
+     * @return el boton de milotic
+     */
     public JButton makeMiloticButton() {
         ImageIcon iconWater = new ImageIcon("imagenes/agua.png");
         miloticButton = new CreateButtons("Milotic", iconWater);
@@ -167,6 +172,11 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         return miloticButton;
 
     }
+    /**
+     * metodo para crear el boton de snorlax
+     *
+     * @return el boton de snorlax
+     */
     public JButton makeSnorlaxButton() {
         ImageIcon iconNormal = new ImageIcon("imagenes/normal.png");
         snorlaxButton = new CreateButtons("Snorlax", iconNormal);
