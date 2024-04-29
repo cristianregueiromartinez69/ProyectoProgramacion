@@ -53,10 +53,10 @@ public class ProbandoBotonesPaneles extends JFrame {
         /**
          * creamos un boton que será la batalla que es igual al metodo creado en el paquete de los botones de la interfaz del menu
          */
-        JButton milotic = selectPokemon.makeMiloticButton();
-        milotic.setForeground(Color.BLACK);
-        milotic.setPreferredSize(new Dimension(150, 50));
-        contentPanel.add(ButtonBattlePanel(milotic), gbc);
+        JButton tinkaton = selectPokemon.makeTinkatonButton();
+        tinkaton.setForeground(Color.BLACK);
+        tinkaton.setPreferredSize(new Dimension(150, 50));
+        contentPanel.add(ButtonBattlePanel(tinkaton), gbc);
 
 
         gbc.gridx = 1;
@@ -66,20 +66,20 @@ public class ProbandoBotonesPaneles extends JFrame {
         /**
          * creamos un boton que será la creacion de la cuenta que es igual al metodo creado en el paquete de los botones de la interfaz del menu
          */
-        JButton snorlax = selectPokemon.makeSnorlaxButton();
-        snorlax.setForeground(Color.BLACK);
-        snorlax.setPreferredSize(new Dimension(150, 50));
-        contentPanel.add(CreateDashboardAccount(snorlax), gbc);
+        JButton tyranitar = selectPokemon.makeTyranitarButton();
+        tyranitar.setForeground(Color.WHITE);
+        tyranitar.setPreferredSize(new Dimension(150, 50));
+        contentPanel.add(CreateDashboardAccount(tyranitar), gbc);
 
 
         /**
          * metodo para establecer el hover del boton
          * al pasar el raton por el boton, el boton sale de un color diferente
          */
-        milotic.addMouseListener(new MouseAdapter() {
+        tinkaton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                milotic.setBackground(Color.WHITE);
+                tinkaton.setBackground(Color.WHITE);
 
             }
 
@@ -89,7 +89,7 @@ public class ProbandoBotonesPaneles extends JFrame {
              */
             @Override
             public void mouseExited(MouseEvent e) {
-                milotic.setBackground(Color.BLUE.brighter().brighter());
+                tinkaton.setBackground(Color.PINK);
             }
         });
 
@@ -97,10 +97,10 @@ public class ProbandoBotonesPaneles extends JFrame {
          * metodo para establecer el hover del boton
          * al pasar el raton por el boton, el boton sale de un color diferente
          */
-        snorlax.addMouseListener(new MouseAdapter() {
+        tyranitar.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                snorlax.setBackground(Color.BLUE.darker());
+                tyranitar.setBackground(Color.BLUE.darker());
 
             }
 
@@ -110,7 +110,7 @@ public class ProbandoBotonesPaneles extends JFrame {
              */
             @Override
             public void mouseExited(MouseEvent e) {
-                snorlax.setBackground(Color.GRAY.brighter());
+                tyranitar.setBackground(Color.ORANGE.darker());
             }
         });
 

@@ -187,6 +187,26 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         return snorlaxButton;
 
     }
+    public JButton makeTinkatonButton() {
+        ImageIcon iconFairy = new ImageIcon("imagenes/hada.png");
+        tinkatonButton = new CreateButtons("Tinkaton", iconFairy);
+        setBackground(Color.PINK);
+        setForeground(Color.BLACK);
+        Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
+        setBorder(borderboton);
+        return tinkatonButton;
+
+    }
+    public JButton makeTyranitarButton() {
+        ImageIcon iconRock = new ImageIcon("imagenes/roca.png");
+        tyranitarButton = new CreateButtons("Tyranitar", iconRock);
+        setBackground(Color.orange.darker());
+        setForeground(Color.WHITE);
+        Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
+        setBorder(borderboton);
+        return tyranitarButton;
+
+    }
 
 
 
