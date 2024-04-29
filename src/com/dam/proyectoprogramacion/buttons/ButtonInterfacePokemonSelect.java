@@ -217,6 +217,11 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         return tyranitarButton;
 
     }
+    /**
+     * metodo para crear el boton de start
+     *
+     * @return el boton de start
+     */
     public JButton makeStartButton() {
         ImageIcon iconStart = new ImageIcon("imagenes/empezar.png");
         startButton = new CreateButtons("A batallar", iconStart);
@@ -227,6 +232,11 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         return startButton;
 
     }
+    /**
+     * metodo para crear el boton de listo para el jugador 1
+     *
+     * @return el boton del jugador 1
+     */
     public JButton makeReadyPlayer1Button(){
         readyPlayer1Button = new JButton("Listo");
         setBackground(Color.GREEN);
@@ -235,6 +245,11 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         setBorder(borderboton);
         return readyPlayer1Button;
     }
+    /**
+     * metodo para crear el boton de listo para el jugador 2
+     *
+     * @return el boton del jugador 2
+     */
     public JButton makeReadyPlayer2Button(){
         readyPlayer2Button = new JButton("Listo");
         setBackground(Color.GREEN);
@@ -243,6 +258,11 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         setBorder(borderboton);
         return readyPlayer2Button;
     }
+    /**
+     * metodo para crear el boton de volver al menu
+     *
+     * @return el boton de volver al menu
+     */
     public JButton makeBackToMenuButton(){
         ImageIcon iconBackToMenu = new ImageIcon("imagenes/backMenu.png");
         backToMenuButton = new CreateButtons("Volver al Menu", iconBackToMenu);
