@@ -127,7 +127,11 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         setBorder(borderboton);
         return lucarioButton;
     }
-
+    /**
+     * metodo para crear el boton de luxray
+     *
+     * @return el boton de luxray
+     */
     public JButton makeLuxrayButton() {
         ImageIcon iconElectric = new ImageIcon("imagenes/electrico.png");
         luxrayButton = new CreateButtons("Luxray", iconElectric);
@@ -138,6 +142,11 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         return luxrayButton;
 
     }
+    /**
+     * metodo para crear el boton de marshadow
+     *
+     * @return el boton de marshadow
+     */
     public JButton makeMarshadowButton() {
         ImageIcon iconGhost = new ImageIcon("imagenes/fantasma.png");
         marshadowButton = new CreateButtons("Marshadow", iconGhost);
