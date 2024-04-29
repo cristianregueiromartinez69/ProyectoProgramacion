@@ -190,6 +190,147 @@ public class ButtonInterfaceCreateAccount extends JPanel {
         return icon10Player1Button;
     }
 
+    /**
+     * metodo que crea el boton que ha de presionar el jugador 1 para seleccionar el icono 1
+     * @return el boton creado
+     */
+    public JButton makeIcon1Player2Button(){
+        ImageIcon icon1 = new ImageIcon("imagenes/iconosJugador2.png");
+        icon1Player2Button = new CreateButtons("Icono 1", icon1);
+        setBackground(Color.ORANGE.darker());
+        setForeground(Color.WHITE);
+        Border borderboton = BorderFactory.createLineBorder(Color.GREEN.darker().darker(), 2);
+        setBorder(borderboton);
+        return icon1Player2Button;
+    }
+
+    /**
+     * metodo que crea el boton que ha de presionar el jugador 1 para seleccionar el icono 2
+     * @return el boton creado
+     */
+    public JButton makeIcon2Player2Button(){
+        ImageIcon icon2 = new ImageIcon("imagenes/iconosJugador2.png");
+        icon2Player2Button = new CreateButtons("Icono 2", icon2);
+        setBackground(Color.ORANGE.darker());
+        setForeground(Color.WHITE);
+        Border borderboton = BorderFactory.createLineBorder(Color.GREEN.darker().darker(), 2);
+        setBorder(borderboton);
+        return icon2Player2Button;
+    }
+
+    /**
+     * metodo que crea el boton que ha de presionar el jugador 1 para seleccionar el icono 1
+     * @return el boton creado
+     */
+    public JButton makeIcon3Player2Button(){
+        ImageIcon icon3 = new ImageIcon("imagenes/iconosJugador2.png");
+        icon3Player2Button = new CreateButtons("Icono 3", icon3);
+        setBackground(Color.ORANGE.darker());
+        setForeground(Color.WHITE);
+        Border borderboton = BorderFactory.createLineBorder(Color.GREEN.darker().darker(), 2);
+        setBorder(borderboton);
+        return icon3Player2Button;
+    }
+
+    /**
+     * metodo que crea el boton que ha de presionar el jugador 1 para seleccionar el icono 2
+     * @return el boton creado
+     */
+    public JButton makeIcon4Player2Button(){
+        ImageIcon icon4 = new ImageIcon("imagenes/iconosJugador2.png");
+        icon4Player2Button = new CreateButtons("Icono 4", icon4);
+        setBackground(Color.ORANGE.darker());
+        setForeground(Color.WHITE);
+        Border borderboton = BorderFactory.createLineBorder(Color.GREEN.darker().darker(), 2);
+        setBorder(borderboton);
+        return icon4Player2Button;
+    }
+
+    /**
+     * metodo que crea el boton que ha de presionar el jugador 1 para seleccionar el icono 1
+     * @return el boton creado
+     */
+    public JButton makeIcon5Player2Button(){
+        ImageIcon icon5 = new ImageIcon("imagenes/iconosJugador2.png");
+        icon5Player2Button = new CreateButtons("Icono 5", icon5);
+        setBackground(Color.ORANGE.darker());
+        setForeground(Color.WHITE);
+        Border borderboton = BorderFactory.createLineBorder(Color.GREEN.darker().darker(), 2);
+        setBorder(borderboton);
+        return icon5Player2Button;
+    }
+
+    /**
+     * metodo que crea el boton que ha de presionar el jugador 1 para seleccionar el icono 2
+     * @return el boton creado
+     */
+    public JButton makeIcon6Player2Button(){
+        ImageIcon icon6 = new ImageIcon("imagenes/iconosJugador2.png");
+        icon6Player2Button = new CreateButtons("Icono 6", icon6);
+        setBackground(Color.ORANGE.darker());
+        setForeground(Color.WHITE);
+        Border borderboton = BorderFactory.createLineBorder(Color.GREEN.darker().darker(), 2);
+        setBorder(borderboton);
+        return icon6Player2Button;
+    }
+
+    /**
+     * metodo que crea el boton que ha de presionar el jugador 1 para seleccionar el icono 1
+     * @return el boton creado
+     */
+    public JButton makeIcon7Player2Button(){
+        ImageIcon icon7 = new ImageIcon("imagenes/iconosJugador2.png");
+        icon7Player2Button = new CreateButtons("Icono 7", icon7);
+        setBackground(Color.ORANGE.darker());
+        setForeground(Color.WHITE);
+        Border borderboton = BorderFactory.createLineBorder(Color.GREEN.darker().darker(), 2);
+        setBorder(borderboton);
+        return icon7Player2Button;
+    }
+
+    /**
+     * metodo que crea el boton que ha de presionar el jugador 1 para seleccionar el icono 2
+     * @return el boton creado
+     */
+    public JButton makeIcon8Player2Button(){
+        ImageIcon icon8 = new ImageIcon("imagenes/iconosJugador2.png");
+        icon8Player2Button = new CreateButtons("Icono 8", icon8);
+        setBackground(Color.ORANGE.darker());
+        setForeground(Color.WHITE);
+        Border borderboton = BorderFactory.createLineBorder(Color.GREEN.darker().darker(), 2);
+        setBorder(borderboton);
+        return icon8Player2Button;
+    }
+
+    /**
+     * metodo que crea el boton que ha de presionar el jugador 1 para seleccionar el icono 1
+     * @return el boton creado
+     */
+    public JButton makeIcon9Player2Button(){
+        ImageIcon icon9 = new ImageIcon("imagenes/iconosJugador2.png");
+        icon9Player2Button = new CreateButtons("Icono 9", icon9);
+        setBackground(Color.ORANGE.darker());
+        setForeground(Color.WHITE);
+        Border borderboton = BorderFactory.createLineBorder(Color.GREEN.darker().darker(), 2);
+        setBorder(borderboton);
+        return icon9Player2Button;
+    }
+
+    /**
+     * metodo que crea el boton que ha de presionar el jugador 1 para seleccionar el icono 2
+     * @return el boton creado
+     */
+    public JButton makeIcon10Player2Button(){
+        ImageIcon icon10 = new ImageIcon("imagenes/iconosJugador2.png");
+        icon10Player2Button = new CreateButtons("Icono 10", icon10);
+        setBackground(Color.ORANGE.darker());
+        setForeground(Color.WHITE);
+        Border borderboton = BorderFactory.createLineBorder(Color.GREEN.darker().darker(), 2);
+        setBorder(borderboton);
+        return icon10Player2Button;
+    }
+
+
 
 
 
