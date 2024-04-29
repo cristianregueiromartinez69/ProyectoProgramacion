@@ -53,9 +53,9 @@ public class ProbandoBotonesPaneles extends JFrame {
         /**
          * creamos un boton que será la batalla que es igual al metodo creado en el paquete de los botones de la interfaz del menu
          */
-        JButton cara = pruebaBotonesLuck.makeFaceButton();
-        cara.setPreferredSize(new Dimension(150, 50));
-        contentPanel.add(ButtonBattlePanel(cara), gbc);
+        JButton confirm = pruebaBotonesLuck.makeConfirmButton();
+        confirm.setPreferredSize(new Dimension(150, 50));
+        contentPanel.add(ButtonBattlePanel(confirm), gbc);
 
 
         gbc.gridx = 1;
@@ -74,10 +74,10 @@ public class ProbandoBotonesPaneles extends JFrame {
          * metodo para establecer el hover del boton
          * al pasar el raton por el boton, el boton sale de un color diferente
          */
-        cara.addMouseListener(new MouseAdapter() {
+        confirm.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                cara.setBackground(Color.GREEN.darker().darker());
+                confirm.setBackground(Color.GREEN.brighter().brighter());
 
             }
 
@@ -87,7 +87,7 @@ public class ProbandoBotonesPaneles extends JFrame {
              */
             @Override
             public void mouseExited(MouseEvent e) {
-                cara.setBackground(Color.GREEN);
+                confirm.setBackground(Color.GREEN);
             }
         });
 
