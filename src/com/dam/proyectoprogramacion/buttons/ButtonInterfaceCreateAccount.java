@@ -358,7 +358,7 @@ public class ButtonInterfaceCreateAccount extends JPanel {
     /**
      * metodo para crear el boton de volver al menu
      *
-     * @return el boton de volver al menu
+     * @return el boton para regresar al menu
      */
     public JButton makeBackToMenuButton(){
         ImageIcon iconBackToMenu = new ImageIcon("imagenes/backMenu.png");
