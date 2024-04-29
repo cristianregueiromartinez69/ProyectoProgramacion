@@ -9,7 +9,7 @@ public class ButtonInterfaceLuck extends JPanel {
     private JButton faceButton;
     private JButton tailButton;
 
-    public  JButton makeAccountButton(){
+    public  JButton makeFaceButton(){
 
         ImageIcon iconFace = new ImageIcon("imagenes/cara.png");
         faceButton = new CreateButtons("Cara", iconFace);
@@ -20,7 +20,7 @@ public class ButtonInterfaceLuck extends JPanel {
         return faceButton;
     }
 
-    public  JButton makeBattleButton(){
+    public  JButton makeTailButton(){
 
         ImageIcon iconTail = new ImageIcon("imagenes/cruz.png");
         tailButton = new CreateButtons("Cruz", iconTail);
