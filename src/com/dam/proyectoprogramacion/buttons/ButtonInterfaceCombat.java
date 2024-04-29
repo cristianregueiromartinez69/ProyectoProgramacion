@@ -45,4 +45,6 @@ public class ButtonInterfaceCombat extends JPanel {
         setBorder(borderboton);
         return changePokemonButton;
     }
+
+//TODO: faltan 3 interfaces de los botones
 }
