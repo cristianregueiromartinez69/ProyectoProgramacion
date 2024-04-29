@@ -61,6 +61,32 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         return empoleonButton;
     }
 
+    public  JButton makeGarchompButton(){
+
+        ImageIcon iconGround = new ImageIcon("imagenes/tierra.png");
+        garchompButton = new CreateButtons("Garchomp", iconGround);
+        setBackground(Color.BLUE.darker());
+        setForeground(Color.WHITE);
+        Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
+        setBorder(borderboton);
+        return garchompButton;
+    }
+
+    public  JButton makeGengarButton(){
+
+        ImageIcon iconGhost = new ImageIcon("imagenes/fantasma.png");
+        gengarButton = new CreateButtons("Gengar", iconGhost);
+        setBackground(Color.MAGENTA.darker().darker());
+        setForeground(Color.WHITE);
+        Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
+        setBorder(borderboton);
+        return gengarButton;
+    }
+
+
+
+
+
 
 
 

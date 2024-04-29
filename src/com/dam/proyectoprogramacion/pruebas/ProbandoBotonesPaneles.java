@@ -53,10 +53,10 @@ public class ProbandoBotonesPaneles extends JFrame {
         /**
          * creamos un boton que será la batalla que es igual al metodo creado en el paquete de los botones de la interfaz del menu
          */
-        JButton drampa = selectPokemon.makeDrampaButton();
-        drampa.setForeground(Color.WHITE);
-        drampa.setPreferredSize(new Dimension(150, 50));
-        contentPanel.add(ButtonBattlePanel(drampa), gbc);
+        JButton garchomp = selectPokemon.makeGarchompButton();
+        garchomp.setForeground(Color.WHITE);
+        garchomp.setPreferredSize(new Dimension(150, 50));
+        contentPanel.add(ButtonBattlePanel(garchomp), gbc);
 
 
         gbc.gridx = 1;
@@ -66,20 +66,20 @@ public class ProbandoBotonesPaneles extends JFrame {
         /**
          * creamos un boton que será la creacion de la cuenta que es igual al metodo creado en el paquete de los botones de la interfaz del menu
          */
-        JButton empoleon = selectPokemon.makeEmpoleonButton();
-        empoleon.setForeground(Color.WHITE);
-        empoleon.setPreferredSize(new Dimension(150, 50));
-        contentPanel.add(CreateDashboardAccount(empoleon), gbc);
+        JButton gengar = selectPokemon.makeGengarButton();
+        gengar.setForeground(Color.WHITE);
+        gengar.setPreferredSize(new Dimension(150, 50));
+        contentPanel.add(CreateDashboardAccount(gengar), gbc);
 
 
         /**
          * metodo para establecer el hover del boton
          * al pasar el raton por el boton, el boton sale de un color diferente
          */
-        drampa.addMouseListener(new MouseAdapter() {
+        garchomp.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                drampa.setBackground(Color.GREEN.darker().darker());
+                garchomp.setBackground(Color.GREEN.darker().darker());
 
             }
 
@@ -89,7 +89,7 @@ public class ProbandoBotonesPaneles extends JFrame {
              */
             @Override
             public void mouseExited(MouseEvent e) {
-                drampa.setBackground(Color.GREEN.brighter());
+                garchomp.setBackground(Color.GREEN.brighter());
             }
         });
 
@@ -97,10 +97,10 @@ public class ProbandoBotonesPaneles extends JFrame {
          * metodo para establecer el hover del boton
          * al pasar el raton por el boton, el boton sale de un color diferente
          */
-        empoleon.addMouseListener(new MouseAdapter() {
+        gengar.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                empoleon.setBackground(Color.BLUE.darker());
+                gengar.setBackground(Color.BLUE.darker());
 
             }
 
@@ -110,7 +110,7 @@ public class ProbandoBotonesPaneles extends JFrame {
              */
             @Override
             public void mouseExited(MouseEvent e) {
-                empoleon.setBackground(Color.GRAY.darker());
+                gengar.setBackground(Color.GRAY.darker());
             }
         });
 
