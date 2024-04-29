@@ -1,4 +1,5 @@
 package com.dam.proyectoprogramacion.interfaces;
+import com.dam.proyectoprogramacion.methodsandmain.MusicMainMenu;
 import com.dam.proyectoprogramacion.panels.*;
 import com.dam.proyectoprogramacion.buttons.*;
 import javax.swing.*;
@@ -9,7 +10,7 @@ import java.awt.event.MouseEvent;
 public class MainMenu extends JFrame {
     ButtonInterfaceMenu buttonsMenu = new ButtonInterfaceMenu();
     public MainMenu() {
-
+        MusicMainMenu.music();
         setTitle("Pokemon Showdown");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(600, 400);
