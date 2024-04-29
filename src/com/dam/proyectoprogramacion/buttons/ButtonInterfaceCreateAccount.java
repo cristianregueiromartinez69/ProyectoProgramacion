@@ -332,7 +332,7 @@ public class ButtonInterfaceCreateAccount extends JPanel {
     /**
      * metodo para crear el boton de listo para el jugador 1
      *
-     * @return el boton creado
+     * @return el boton listo del jugador 1
      */
     public JButton makeReadyPlayer1Button(){
         readyPlayer1Button = new JButton("Listo");
@@ -345,7 +345,7 @@ public class ButtonInterfaceCreateAccount extends JPanel {
     /**
      * metodo para crear el boton de listo para el jugador 2
      *
-     * @return el boton creado
+     * @return el boton de listo del jugador 2
      */
     public JButton makeReadyPlayer2Button(){
         readyPlayer2Button = new JButton("Listo");
