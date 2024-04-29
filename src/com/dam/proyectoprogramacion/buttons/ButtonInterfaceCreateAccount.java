@@ -329,7 +329,32 @@ public class ButtonInterfaceCreateAccount extends JPanel {
         setBorder(borderboton);
         return icon10Player2Button;
     }
-
+    /**
+     * metodo para crear el boton de listo para el jugador 1
+     *
+     * @return el boton creado
+     */
+    public JButton makeReadyPlayer1Button(){
+        readyPlayer1Button = new JButton("Listo");
+        setBackground(Color.GREEN);
+        setForeground(Color.WHITE);
+        Border borderboton = BorderFactory.createLineBorder(Color.RED, 3);
+        setBorder(borderboton);
+        return readyPlayer1Button;
+    }
+    /**
+     * metodo para crear el boton de listo para el jugador 2
+     *
+     * @return el boton creado
+     */
+    public JButton makeReadyPlayer2Button(){
+        readyPlayer2Button = new JButton("Listo");
+        setBackground(Color.GREEN);
+        setForeground(Color.WHITE);
+        Border borderboton = BorderFactory.createLineBorder(Color.RED, 3);
+        setBorder(borderboton);
+        return readyPlayer2Button;
+    }
 
 
 
