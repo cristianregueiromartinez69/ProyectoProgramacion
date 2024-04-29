@@ -88,6 +88,11 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         setBorder(borderboton);
         return gengarButton;
     }
+
+    /**
+     * metodo para crear el boton de infernape
+     * @return el boton de infernape
+     */
     public  JButton makeInfernapeButton(){
 
         ImageIcon iconFire = new ImageIcon("imagenes/fuego.png");
@@ -98,6 +103,10 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         setBorder(borderboton);
         return infernapeButton;
     }
+    /**
+     * metodo para crear el boton de lucario
+     * @return el boton de lucario
+     */
     public  JButton makeLucarioButton(){
 
         ImageIcon iconFight = new ImageIcon("imagenes/lucha.png");
