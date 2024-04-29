@@ -191,7 +191,7 @@ public class ButtonInterfaceCreateAccount extends JPanel {
     }
 
     /**
-     * metodo que crea el boton que ha de presionar el jugador 1 para seleccionar el icono 1
+     * metodo que crea el boton que ha de presionar el jugador 2 para seleccionar el icono 1
      * @return el boton creado
      */
     public JButton makeIcon1Player2Button(){
@@ -205,7 +205,7 @@ public class ButtonInterfaceCreateAccount extends JPanel {
     }
 
     /**
-     * metodo que crea el boton que ha de presionar el jugador 1 para seleccionar el icono 2
+     * metodo que crea el boton que ha de presionar el jugador 2 para seleccionar el icono 2
      * @return el boton creado
      */
     public JButton makeIcon2Player2Button(){
@@ -219,7 +219,7 @@ public class ButtonInterfaceCreateAccount extends JPanel {
     }
 
     /**
-     * metodo que crea el boton que ha de presionar el jugador 1 para seleccionar el icono 1
+     * metodo que crea el boton que ha de presionar el jugador 2 para seleccionar el icono 3
      * @return el boton creado
      */
     public JButton makeIcon3Player2Button(){
@@ -233,7 +233,7 @@ public class ButtonInterfaceCreateAccount extends JPanel {
     }
 
     /**
-     * metodo que crea el boton que ha de presionar el jugador 1 para seleccionar el icono 2
+     * metodo que crea el boton que ha de presionar el jugador 2 para seleccionar el icono 4
      * @return el boton creado
      */
     public JButton makeIcon4Player2Button(){
@@ -247,7 +247,7 @@ public class ButtonInterfaceCreateAccount extends JPanel {
     }
 
     /**
-     * metodo que crea el boton que ha de presionar el jugador 1 para seleccionar el icono 1
+     * metodo que crea el boton que ha de presionar el jugador 2 para seleccionar el icono 5
      * @return el boton creado
      */
     public JButton makeIcon5Player2Button(){
@@ -261,7 +261,7 @@ public class ButtonInterfaceCreateAccount extends JPanel {
     }
 
     /**
-     * metodo que crea el boton que ha de presionar el jugador 1 para seleccionar el icono 2
+     * metodo que crea el boton que ha de presionar el jugador 2 para seleccionar el icono 6
      * @return el boton creado
      */
     public JButton makeIcon6Player2Button(){
@@ -275,7 +275,7 @@ public class ButtonInterfaceCreateAccount extends JPanel {
     }
 
     /**
-     * metodo que crea el boton que ha de presionar el jugador 1 para seleccionar el icono 1
+     * metodo que crea el boton que ha de presionar el jugador 2 para seleccionar el icono 7
      * @return el boton creado
      */
     public JButton makeIcon7Player2Button(){
@@ -289,7 +289,7 @@ public class ButtonInterfaceCreateAccount extends JPanel {
     }
 
     /**
-     * metodo que crea el boton que ha de presionar el jugador 1 para seleccionar el icono 2
+     * metodo que crea el boton que ha de presionar el jugador 2 para seleccionar el icono 8
      * @return el boton creado
      */
     public JButton makeIcon8Player2Button(){
@@ -303,7 +303,7 @@ public class ButtonInterfaceCreateAccount extends JPanel {
     }
 
     /**
-     * metodo que crea el boton que ha de presionar el jugador 1 para seleccionar el icono 1
+     * metodo que crea el boton que ha de presionar el jugador 2 para seleccionar el icono 9
      * @return el boton creado
      */
     public JButton makeIcon9Player2Button(){
@@ -317,7 +317,7 @@ public class ButtonInterfaceCreateAccount extends JPanel {
     }
 
     /**
-     * metodo que crea el boton que ha de presionar el jugador 1 para seleccionar el icono 2
+     * metodo que crea el boton que ha de presionar el jugador 2 para seleccionar el icono 10
      * @return el boton creado
      */
     public JButton makeIcon10Player2Button(){
