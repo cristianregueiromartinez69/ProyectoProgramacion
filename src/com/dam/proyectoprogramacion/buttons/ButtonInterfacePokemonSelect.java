@@ -6,6 +6,7 @@ import java.awt.*;
 
 /**
  * clase con los botones de la interfaz de selección de pokemons
+ *
  * @author cristian
  * @version v1.0
  */
@@ -33,9 +34,10 @@ public class ButtonInterfacePokemonSelect extends JPanel {
 
     /**
      * metodo para crear el boton de drampa
+     *
      * @return el boton de drampa
      */
-    public  JButton makeDrampaButton(){
+    public JButton makeDrampaButton() {
 
         ImageIcon iconDragon = new ImageIcon("imagenes/dragon.png");
         drampaButton = new CreateButtons("Drampa", iconDragon);
@@ -48,9 +50,10 @@ public class ButtonInterfacePokemonSelect extends JPanel {
 
     /**
      * metodo para crear el boton de empoleon
+     *
      * @return el boton de empoleon
      */
-    public  JButton makeEmpoleonButton(){
+    public JButton makeEmpoleonButton() {
 
         ImageIcon iconSteel = new ImageIcon("imagenes/acero.png");
         empoleonButton = new CreateButtons("Empoleon", iconSteel);
@@ -60,11 +63,13 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         setBorder(borderboton);
         return empoleonButton;
     }
+
     /**
      * metodo para crear el boton de garchomp
+     *
      * @return el boton de garchomp
      */
-    public  JButton makeGarchompButton(){
+    public JButton makeGarchompButton() {
 
         ImageIcon iconGround = new ImageIcon("imagenes/tierra.png");
         garchompButton = new CreateButtons("Garchomp", iconGround);
@@ -74,11 +79,13 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         setBorder(borderboton);
         return garchompButton;
     }
+
     /**
      * metodo para crear el boton de gengar
+     *
      * @return el boton de gengar
      */
-    public  JButton makeGengarButton(){
+    public JButton makeGengarButton() {
 
         ImageIcon iconGhost = new ImageIcon("imagenes/fantasma.png");
         gengarButton = new CreateButtons("Gengar", iconGhost);
@@ -91,9 +98,10 @@ public class ButtonInterfacePokemonSelect extends JPanel {
 
     /**
      * metodo para crear el boton de infernape
+     *
      * @return el boton de infernape
      */
-    public  JButton makeInfernapeButton(){
+    public JButton makeInfernapeButton() {
 
         ImageIcon iconFire = new ImageIcon("imagenes/fuego.png");
         infernapeButton = new CreateButtons("Infernape", iconFire);
@@ -103,11 +111,13 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         setBorder(borderboton);
         return infernapeButton;
     }
+
     /**
      * metodo para crear el boton de lucario
+     *
      * @return el boton de lucario
      */
-    public  JButton makeLucarioButton(){
+    public JButton makeLucarioButton() {
 
         ImageIcon iconFight = new ImageIcon("imagenes/lucha.png");
         lucarioButton = new CreateButtons("Lucario", iconFight);
@@ -118,15 +128,26 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         return lucarioButton;
     }
 
+    public JButton makeLuxrayButton() {
+        ImageIcon iconElectric = new ImageIcon("imagenes/electrico.png");
+        luxrayButton = new CreateButtons("Luxray", iconElectric);
+        setBackground(Color.YELLOW);
+        setForeground(Color.BLACK);
+        Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
+        setBorder(borderboton);
+        return luxrayButton;
 
+    }
+    public JButton makeMarshadowButton() {
+        ImageIcon iconGhost = new ImageIcon("imagenes/fantasma.png");
+        marshadowButton = new CreateButtons("Marshadow", iconGhost);
+        setBackground(Color.MAGENTA.darker().darker());
+        setForeground(Color.WHITE);
+        Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
+        setBorder(borderboton);
+        return marshadowButton;
 
-
-
-
-
-
-
-
+    }
 
 
 

@@ -53,10 +53,10 @@ public class ProbandoBotonesPaneles extends JFrame {
         /**
          * creamos un boton que será la batalla que es igual al metodo creado en el paquete de los botones de la interfaz del menu
          */
-        JButton infernape = selectPokemon.makeInfernapeButton();
-        infernape.setForeground(Color.WHITE);
-        infernape.setPreferredSize(new Dimension(150, 50));
-        contentPanel.add(ButtonBattlePanel(infernape), gbc);
+        JButton luxray = selectPokemon.makeLuxrayButton();
+        luxray.setForeground(Color.BLACK);
+        luxray.setPreferredSize(new Dimension(150, 50));
+        contentPanel.add(ButtonBattlePanel(luxray), gbc);
 
 
         gbc.gridx = 1;
@@ -66,20 +66,20 @@ public class ProbandoBotonesPaneles extends JFrame {
         /**
          * creamos un boton que será la creacion de la cuenta que es igual al metodo creado en el paquete de los botones de la interfaz del menu
          */
-        JButton lucario = selectPokemon.makeLucarioButton();
-        lucario.setForeground(Color.WHITE);
-        lucario.setPreferredSize(new Dimension(150, 50));
-        contentPanel.add(CreateDashboardAccount(lucario), gbc);
+        JButton marshadow = selectPokemon.makeMarshadowButton();
+        marshadow.setForeground(Color.WHITE);
+        marshadow.setPreferredSize(new Dimension(150, 50));
+        contentPanel.add(CreateDashboardAccount(marshadow), gbc);
 
 
         /**
          * metodo para establecer el hover del boton
          * al pasar el raton por el boton, el boton sale de un color diferente
          */
-        infernape.addMouseListener(new MouseAdapter() {
+        luxray.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                infernape.setBackground(Color.GREEN.darker().darker());
+                luxray.setBackground(Color.WHITE);
 
             }
 
@@ -89,7 +89,7 @@ public class ProbandoBotonesPaneles extends JFrame {
              */
             @Override
             public void mouseExited(MouseEvent e) {
-                infernape.setBackground(Color.RED.brighter());
+                luxray.setBackground(Color.YELLOW);
             }
         });
 
@@ -97,10 +97,10 @@ public class ProbandoBotonesPaneles extends JFrame {
          * metodo para establecer el hover del boton
          * al pasar el raton por el boton, el boton sale de un color diferente
          */
-        lucario.addMouseListener(new MouseAdapter() {
+        marshadow.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                lucario.setBackground(Color.BLUE.darker());
+                marshadow.setBackground(Color.BLUE.darker());
 
             }
 
@@ -110,7 +110,7 @@ public class ProbandoBotonesPaneles extends JFrame {
              */
             @Override
             public void mouseExited(MouseEvent e) {
-                lucario.setBackground(Color.YELLOW.darker());
+                marshadow.setBackground(Color.MAGENTA.darker().darker());
             }
         });
 
