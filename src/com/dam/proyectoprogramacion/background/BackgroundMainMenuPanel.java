@@ -1,4 +1,4 @@
-package com.dam.proyectoprogramacion.panels;
+package com.dam.proyectoprogramacion.background;
 
 import javax.swing.*;
 import java.awt.*;
