@@ -9,7 +9,7 @@ public class MusicMainMenu {
     public static void music() {
         try {
             // Cargar el archivo de audio
-            File audioFile = new File("otramusicaredyblue.wav");
+            File audioFile = new File("canciones/otramusicaredyblue.wav");
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
 
             // Obtener el formato de audio

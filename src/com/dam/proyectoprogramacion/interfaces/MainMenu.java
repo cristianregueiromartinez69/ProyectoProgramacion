@@ -40,6 +40,7 @@ public class MainMenu extends JFrame {
 
 
         JButton battle = buttonsMenu.makeBattleButton();
+        battle.setPreferredSize(new Dimension(150, 50));
         contentPanel.add(ButtonBattlePanel(battle), gbc);
 
 
@@ -48,6 +49,7 @@ public class MainMenu extends JFrame {
 
 
         JButton account = buttonsMenu.makeAccountButton();
+        account.setPreferredSize(new Dimension(150, 50));
         contentPanel.add(CreateDashboardAccount(account), gbc);
 
 
