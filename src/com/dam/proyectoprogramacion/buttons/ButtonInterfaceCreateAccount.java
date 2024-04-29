@@ -355,7 +355,20 @@ public class ButtonInterfaceCreateAccount extends JPanel {
         setBorder(borderboton);
         return readyPlayer2Button;
     }
-
+    /**
+     * metodo para crear el boton de volver al menu
+     *
+     * @return el boton de volver al menu
+     */
+    public JButton makeBackToMenuButton(){
+        ImageIcon iconBackToMenu = new ImageIcon("imagenes/backMenu.png");
+        backToMenuButton = new CreateButtons("Volver al Menu", iconBackToMenu);
+        setBackground(Color.CYAN);
+        setForeground(Color.BLACK);
+        Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
+        setBorder(borderboton);
+        return backToMenuButton;
+    }
 
 
 
