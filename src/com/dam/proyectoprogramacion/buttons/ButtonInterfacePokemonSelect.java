@@ -60,7 +60,10 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         setBorder(borderboton);
         return empoleonButton;
     }
-
+    /**
+     * metodo para crear el boton de garchomp
+     * @return el boton de garchomp
+     */
     public  JButton makeGarchompButton(){
 
         ImageIcon iconGround = new ImageIcon("imagenes/tierra.png");
@@ -71,7 +74,10 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         setBorder(borderboton);
         return garchompButton;
     }
-
+    /**
+     * metodo para crear el boton de gengar
+     * @return el boton de gengar
+     */
     public  JButton makeGengarButton(){
 
         ImageIcon iconGhost = new ImageIcon("imagenes/fantasma.png");
@@ -82,6 +88,8 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         setBorder(borderboton);
         return gengarButton;
     }
+
+
 
 
 
