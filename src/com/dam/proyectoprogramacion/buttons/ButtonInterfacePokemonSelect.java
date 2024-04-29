@@ -4,8 +4,16 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 
+/**
+ * clase con los botones de la interfaz de selección de pokemons
+ * @author cristian
+ * @version v1.0
+ */
 public class ButtonInterfacePokemonSelect extends JPanel {
 
+    /**
+     * Atributos privados de tipo boton de la interfaz
+     */
     private JButton drampaButton;
     private JButton empoleonButton;
     private JButton garchompButton;
@@ -23,6 +31,10 @@ public class ButtonInterfacePokemonSelect extends JPanel {
     private JButton readyPlayer2Button;
     private JButton backToMenuButton;
 
+    /**
+     * metodo para crear el boton de drampa
+     * @return el boton de drampa
+     */
     public  JButton makeDrampaButton(){
 
         ImageIcon iconDragon = new ImageIcon("imagenes/dragon.png");
@@ -33,6 +45,11 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         setBorder(borderboton);
         return drampaButton;
     }
+
+    /**
+     * metodo para crear el boton de empoleon
+     * @return el boton de empoleon
+     */
     public  JButton makeEmpoleonButton(){
 
         ImageIcon iconSteel = new ImageIcon("imagenes/acero.png");
