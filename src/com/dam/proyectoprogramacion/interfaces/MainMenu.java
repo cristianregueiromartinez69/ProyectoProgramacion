@@ -56,20 +56,20 @@ public class MainMenu extends JFrame {
         battle.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                battle.setBackground(Color.WHITE);
+                battle.setBackground(Color.YELLOW.brighter());
 
             }
 
             @Override
             public void mouseExited(MouseEvent e) {
-                battle.setBackground(Color.RED);
+                battle.setBackground(Color.WHITE);
             }
         });
 
         account.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                account.setBackground(Color.ORANGE.brighter());
+                account.setBackground(Color.MAGENTA);
 
             }
 

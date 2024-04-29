@@ -40,7 +40,7 @@ public class ButtonInterfaceMenu extends JPanel{
 
         ImageIcon iconBattle = new ImageIcon("imagenes/iconoBatalla.png");
         combatButton = new CreateButtons("Batalla", iconBattle);
-        setBackground(Color.RED);
+        setBackground(Color.WHITE);
         setForeground(Color.BLACK);
         setPreferredSize(new Dimension(150,50));
         Border borderboton = BorderFactory.createLineBorder(Color.YELLOW, 2);
