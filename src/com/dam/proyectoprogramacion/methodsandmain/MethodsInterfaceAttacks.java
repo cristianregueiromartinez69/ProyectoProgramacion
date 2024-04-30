@@ -32,6 +32,7 @@ public class MethodsInterfaceAttacks {
     private static final String FAIRY = "hada";
 
 
+
     /**
      * metodo para establecer el logo de los ataques de los pokemon según el tipo
      * @param type el tipo del ataque
