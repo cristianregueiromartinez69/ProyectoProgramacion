@@ -11,7 +11,7 @@ public class ProbandoBotonesPaneles extends JFrame {
 
     ButtonInterfaceAttacks attackPokemon = new ButtonInterfaceAttacks();
 
-    public ProbandoBotonesPaneles(){
+    public ProbandoBotonesPaneles() {
 
         /**
          * defenimos características de la interfaz
@@ -53,18 +53,14 @@ public class ProbandoBotonesPaneles extends JFrame {
         /**
          * creamos un boton que será la batalla que es igual al metodo creado en el paquete de los botones de la interfaz del menu
          */
-        JButton attack4 = attackPokemon.makeAttack1Button();
-        attack4.setForeground(Color.BLACK);
+        JButton attack4 = attackPokemon.makeBackButton();
+        attack4.setForeground(Color.WHITE);
         attack4.setPreferredSize(new Dimension(150, 50));
         contentPanel.add(ButtonBattlePanel(attack4), gbc);
 
 
         gbc.gridx = 1;
         gbc.gridy = 0;
-
-
-
-
 
 
         /**
@@ -84,18 +80,16 @@ public class ProbandoBotonesPaneles extends JFrame {
              */
             @Override
             public void mouseExited(MouseEvent e) {
-                attack4.setBackground(Color.PINK);
+                attack4.setBackground(Color.BLUE);
             }
         });
-
-
-
 
 
     }
 
     /**
      * metodo para crear el panel con el boton de batalla
+     *
      * @param battle un objeto de tipo JButton
      * @return el panel creado
      */
@@ -108,6 +102,7 @@ public class ProbandoBotonesPaneles extends JFrame {
 
     /**
      * metodo para crear el panel con el boton de crear cuenta
+     *
      * @param cuenta objeto de tipo JButton
      * @return el panel creado
      */
@@ -120,6 +115,7 @@ public class ProbandoBotonesPaneles extends JFrame {
 
     /**
      * metodo para crear el panel que contendrá la imagen de fondo
+     *
      * @return el panel creado
      */
     private JPanel makeContentPanel() {
@@ -132,5 +128,4 @@ public class ProbandoBotonesPaneles extends JFrame {
         return contentPanel;
     }
 }
-
 
