@@ -126,6 +126,11 @@ public class MethodsInterfaceAttacks {
         return iconType;
     }
 
+    /**
+     * metodo para establecer el color del fondo según el tipo del pokemon
+     * @param type le vamos a pasar el tipo del pokemon que hay en batalla
+     * @return el color segun el tipo del pokemon dado
+     */
     public static Color backgroundPanelAttacks(String type) {
         Color color;
         switch (type) {
