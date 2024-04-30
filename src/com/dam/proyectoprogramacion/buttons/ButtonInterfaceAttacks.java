@@ -57,13 +57,8 @@ public class ButtonInterfaceAttacks extends JPanel {
     public JButton makeAttack3Button(){
         ImageIcon iconType = (MethodsInterfaceAttacks.putImageTypePokemon("fantasma"));
         attack3 = new CreateButtons("ataque 3", iconType);
-<<<<<<< HEAD
-        setBackground(Color.ORANGE);
-        setForeground(Color.BLACK);
-=======
         setBackground(MethodsInterfaceAttacks.backgroundPanelAttacks("fantasma"));
         setForeground(Color.WHITE);
->>>>>>> metodos
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
         setBorder(borderboton);
         return attack3;
