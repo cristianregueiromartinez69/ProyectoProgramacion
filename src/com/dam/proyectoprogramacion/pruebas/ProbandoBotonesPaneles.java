@@ -9,11 +9,10 @@ import java.awt.event.MouseEvent;
 
 public class ProbandoBotonesPaneles extends JFrame {
 
-<<<<<<< HEAD
+
     ButtonInterfaceCombat selectOption = new ButtonInterfaceCombat();
-=======
+
     ButtonInterfaceAttacks attackPokemon = new ButtonInterfaceAttacks();
->>>>>>> cristian
 
     public ProbandoBotonesPaneles(){
 
