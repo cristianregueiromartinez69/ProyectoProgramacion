@@ -53,7 +53,11 @@ public class ProbandoBotonesPaneles extends JFrame {
         /**
          * creamos un boton que será la batalla que es igual al metodo creado en el paquete de los botones de la interfaz del menu
          */
+<<<<<<< HEAD
         JButton attack4 = attackPokemon.makeBackButton();
+=======
+        JButton attack4 = attackPokemon.makeAttack3Button();
+>>>>>>> metodos
         attack4.setForeground(Color.WHITE);
         attack4.setPreferredSize(new Dimension(150, 50));
         contentPanel.add(ButtonBattlePanel(attack4), gbc);
@@ -80,7 +84,11 @@ public class ProbandoBotonesPaneles extends JFrame {
              */
             @Override
             public void mouseExited(MouseEvent e) {
+<<<<<<< HEAD
                 attack4.setBackground(Color.BLUE);
+=======
+                attack4.setBackground(Color.BLACK);
+>>>>>>> metodos
             }
         });
 
