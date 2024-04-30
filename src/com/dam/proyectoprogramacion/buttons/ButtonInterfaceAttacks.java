@@ -49,6 +49,16 @@ public class ButtonInterfaceAttacks extends JPanel {
         setBorder(borderboton);
         return attack4;
     }
+    public JButton makeBackButton(){
+        ImageIcon iconBack = new ImageIcon("imagenes/backMenu.png");
+        back = new CreateButtons("volver", iconBack);
+        setBackground(Color.BLUE);
+        setForeground(Color.WHITE);
+        Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
+        setBorder(borderboton);
+        return back;
+    }
+
 
 
 
