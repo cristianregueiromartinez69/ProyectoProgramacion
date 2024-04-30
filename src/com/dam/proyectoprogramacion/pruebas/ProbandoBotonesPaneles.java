@@ -11,7 +11,7 @@ public class ProbandoBotonesPaneles extends JFrame {
 
     ButtonInterfaceAttacks attackPokemon = new ButtonInterfaceAttacks();
 
-    public ProbandoBotonesPaneles(){
+    public ProbandoBotonesPaneles() {
 
         /**
          * defenimos características de la interfaz
@@ -63,10 +63,6 @@ public class ProbandoBotonesPaneles extends JFrame {
         gbc.gridy = 0;
 
 
-
-
-
-
         /**
          * metodo para establecer el hover del boton
          * al pasar el raton por el boton, el boton sale de un color diferente
@@ -89,13 +85,11 @@ public class ProbandoBotonesPaneles extends JFrame {
         });
 
 
-
-
-
     }
 
     /**
      * metodo para crear el panel con el boton de batalla
+     *
      * @param battle un objeto de tipo JButton
      * @return el panel creado
      */
@@ -108,6 +102,7 @@ public class ProbandoBotonesPaneles extends JFrame {
 
     /**
      * metodo para crear el panel con el boton de crear cuenta
+     *
      * @param cuenta objeto de tipo JButton
      * @return el panel creado
      */
@@ -120,6 +115,7 @@ public class ProbandoBotonesPaneles extends JFrame {
 
     /**
      * metodo para crear el panel que contendrá la imagen de fondo
+     *
      * @return el panel creado
      */
     private JPanel makeContentPanel() {
@@ -131,6 +127,5 @@ public class ProbandoBotonesPaneles extends JFrame {
         contentPanel.setLayout(new GridBagLayout());
         return contentPanel;
     }
-    }
-
+}
 
