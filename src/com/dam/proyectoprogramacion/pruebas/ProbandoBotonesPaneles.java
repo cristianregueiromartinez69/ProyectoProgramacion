@@ -9,7 +9,11 @@ import java.awt.event.MouseEvent;
 
 public class ProbandoBotonesPaneles extends JFrame {
 
+<<<<<<< HEAD
     ButtonInterfaceCombat selectOption = new ButtonInterfaceCombat();
+=======
+    ButtonInterfaceAttacks attackPokemon = new ButtonInterfaceAttacks();
+>>>>>>> cristian
 
     public ProbandoBotonesPaneles(){
 
@@ -53,10 +57,17 @@ public class ProbandoBotonesPaneles extends JFrame {
         /**
          * creamos un boton que será la batalla que es igual al metodo creado en el paquete de los botones de la interfaz del menu
          */
+<<<<<<< HEAD
         JButton icon1 = selectOption.makeChangePokemonButton();
         icon1.setForeground(Color.WHITE);
         icon1.setPreferredSize(new Dimension(150, 50));
         contentPanel.add(ButtonBattlePanel(icon1), gbc);
+=======
+        JButton attack4 = attackPokemon.makeAttack1Button();
+        attack4.setForeground(Color.BLACK);
+        attack4.setPreferredSize(new Dimension(150, 50));
+        contentPanel.add(ButtonBattlePanel(attack4), gbc);
+>>>>>>> cristian
 
 
         gbc.gridx = 1;
@@ -71,10 +82,17 @@ public class ProbandoBotonesPaneles extends JFrame {
          * metodo para establecer el hover del boton
          * al pasar el raton por el boton, el boton sale de un color diferente
          */
+<<<<<<< HEAD
         icon1.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
                 icon1.setBackground(Color.GREEN.darker());
+=======
+        attack4.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                attack4.setBackground(Color.GREEN.darker());
+>>>>>>> cristian
 
             }
 
@@ -84,7 +102,11 @@ public class ProbandoBotonesPaneles extends JFrame {
              */
             @Override
             public void mouseExited(MouseEvent e) {
+<<<<<<< HEAD
                 icon1.setBackground(Color.GREEN);
+=======
+                attack4.setBackground(Color.PINK);
+>>>>>>> cristian
             }
         });
 
