@@ -53,10 +53,10 @@ public class ProbandoBotonesPaneles extends JFrame {
         /**
          * creamos un boton que será la batalla que es igual al metodo creado en el paquete de los botones de la interfaz del menu
          */
-        JButton attack2 = attackPokemon.makeAttack2Button();
-        attack2.setForeground(Color.BLACK);
-        attack2.setPreferredSize(new Dimension(150, 50));
-        contentPanel.add(ButtonBattlePanel(attack2), gbc);
+        JButton attack3 = attackPokemon.makeAttack3Button();
+        attack3.setForeground(Color.BLACK);
+        attack3.setPreferredSize(new Dimension(150, 50));
+        contentPanel.add(ButtonBattlePanel(attack3), gbc);
 
 
         gbc.gridx = 1;
@@ -71,10 +71,10 @@ public class ProbandoBotonesPaneles extends JFrame {
          * metodo para establecer el hover del boton
          * al pasar el raton por el boton, el boton sale de un color diferente
          */
-        attack2.addMouseListener(new MouseAdapter() {
+        attack3.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                attack2.setBackground(Color.GREEN.darker());
+                attack3.setBackground(Color.GREEN.darker());
 
             }
 
@@ -84,7 +84,7 @@ public class ProbandoBotonesPaneles extends JFrame {
              */
             @Override
             public void mouseExited(MouseEvent e) {
-                attack2.setBackground(Color.YELLOW);
+                attack3.setBackground(Color.ORANGE);
             }
         });
 
