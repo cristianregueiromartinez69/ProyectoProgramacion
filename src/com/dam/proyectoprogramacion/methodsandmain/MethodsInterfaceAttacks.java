@@ -1,10 +1,7 @@
 package com.dam.proyectoprogramacion.methodsandmain;
 
 import javax.swing.*;
-<<<<<<< HEAD
-=======
 import java.awt.*;
->>>>>>> metodos
 
 /**
  * clase con los metodos que tendrá el panel de ataques pokemon
@@ -36,15 +33,9 @@ public class MethodsInterfaceAttacks {
     private static final String FAIRY = "hada";
 
 
-<<<<<<< HEAD
-
-    /**
-     * metodo para establecer el logo de los ataques de los pokemon según el tipo
-=======
     /**
      * metodo para establecer el logo de los ataques de los pokemon según el tipo
      *
->>>>>>> metodos
      * @param type el tipo del ataque
      * @return el imaIcon con el icono correspondiente al tipo
      */
@@ -135,9 +126,6 @@ public class MethodsInterfaceAttacks {
         return iconType;
     }
 
-<<<<<<< HEAD
-}
-=======
     /**
      * metodo para establecer el color del fondo según el tipo del pokemon
      * @param type le vamos a pasar el tipo del pokemon que hay en batalla
@@ -230,4 +218,3 @@ public class MethodsInterfaceAttacks {
         return color;
     }
 }
->>>>>>> metodos
