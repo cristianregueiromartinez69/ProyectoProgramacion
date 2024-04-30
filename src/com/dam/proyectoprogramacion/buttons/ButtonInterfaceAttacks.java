@@ -14,7 +14,7 @@ public class ButtonInterfaceAttacks extends JPanel {
 
 
     public JButton makeAttack1Button(){
-        ImageIcon iconFace = new ImageIcon("imagenes/hielo.png");
+        ImageIcon iconFace = new ImageIcon("imagenes/siniestro.png");
         attack1 = new CreateButtons("ataque 1", iconFace);
         setBackground(Color.BLUE);
         setForeground(Color.WHITE);
