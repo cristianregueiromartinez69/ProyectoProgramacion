@@ -9,7 +9,7 @@ import java.awt.event.MouseEvent;
 
 public class ProbandoBotonesPaneles extends JFrame {
 
-    ButtonInterfaceCombat selectOption = new ButtonInterfaceCombat();
+    ButtonInterfaceAttacks attackPokemon = new ButtonInterfaceAttacks();
 
     public ProbandoBotonesPaneles(){
 
@@ -53,10 +53,10 @@ public class ProbandoBotonesPaneles extends JFrame {
         /**
          * creamos un boton que será la batalla que es igual al metodo creado en el paquete de los botones de la interfaz del menu
          */
-        JButton icon1 = selectOption.makeChangePokemonButton();
-        icon1.setForeground(Color.WHITE);
-        icon1.setPreferredSize(new Dimension(150, 50));
-        contentPanel.add(ButtonBattlePanel(icon1), gbc);
+        JButton ataque1 = attackPokemon.makeAttack1Button();
+        ataque1.setForeground(Color.WHITE);
+        ataque1.setPreferredSize(new Dimension(150, 50));
+        contentPanel.add(ButtonBattlePanel(ataque1), gbc);
 
 
         gbc.gridx = 1;
@@ -71,10 +71,10 @@ public class ProbandoBotonesPaneles extends JFrame {
          * metodo para establecer el hover del boton
          * al pasar el raton por el boton, el boton sale de un color diferente
          */
-        icon1.addMouseListener(new MouseAdapter() {
+        ataque1.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                icon1.setBackground(Color.GREEN.darker());
+                ataque1.setBackground(Color.GREEN.darker());
 
             }
 
@@ -84,7 +84,7 @@ public class ProbandoBotonesPaneles extends JFrame {
              */
             @Override
             public void mouseExited(MouseEvent e) {
-                icon1.setBackground(Color.GREEN);
+                ataque1.setBackground(Color.BLUE);
             }
         });
 
