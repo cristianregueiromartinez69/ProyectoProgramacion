@@ -1,5 +1,5 @@
 package com.dam.proyectoprogramacion.buttons;
-
+import com.dam.proyectoprogramacion.methodsandmain.*;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
@@ -14,8 +14,8 @@ public class ButtonInterfaceAttacks extends JPanel {
 
 
     public JButton makeAttack1Button(){
-        ImageIcon iconFace = new ImageIcon("imagenes/psiquico.png");
-        attack1 = new CreateButtons("ataque 1", iconFace);
+        ImageIcon iconType = (MethodsInterfaceAttacks.putImageTypePokemon("hada"));
+        attack1 = new CreateButtons("ataque 1", iconType);
         setBackground(Color.BLUE);
         setForeground(Color.WHITE);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
@@ -23,8 +23,8 @@ public class ButtonInterfaceAttacks extends JPanel {
         return attack1;
     }
     public JButton makeAttack2Button(){
-        ImageIcon iconFace = new ImageIcon("imagenes/bicho.png");
-        attack2 = new CreateButtons("ataque 2", iconFace);
+        ImageIcon iconType = (MethodsInterfaceAttacks.putImageTypePokemon("fuego"));
+        attack2 = new CreateButtons("ataque 2", iconType);
         setBackground(Color.YELLOW);
         setForeground(Color.BLACK);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
@@ -32,8 +32,8 @@ public class ButtonInterfaceAttacks extends JPanel {
         return attack2;
     }
     public JButton makeAttack3Button(){
-        ImageIcon iconFace = new ImageIcon("imagenes/volador.png");
-        attack3 = new CreateButtons("ataque 3", iconFace);
+        ImageIcon iconType = (MethodsInterfaceAttacks.putImageTypePokemon("fantasma"));
+        attack3 = new CreateButtons("ataque 3", iconType);
         setBackground(Color.ORANGE);
         setForeground(Color.BLACK);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
@@ -41,8 +41,8 @@ public class ButtonInterfaceAttacks extends JPanel {
         return attack3;
     }
     public JButton makeAttack4Button(){
-        ImageIcon iconFace = new ImageIcon("imagenes/planta.png");
-        attack4 = new CreateButtons("ataque 4", iconFace);
+        ImageIcon iconType = (MethodsInterfaceAttacks.putImageTypePokemon("tierra"));
+        attack4 = new CreateButtons("ataque 4", iconType);
         setBackground(Color.PINK);
         setForeground(Color.BLACK);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
