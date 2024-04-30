@@ -45,4 +45,8 @@ public class ButtonInterfaceCombat extends JPanel {
         setBorder(borderboton);
         return changePokemonButton;
     }
+
+
+//TODO: faltaría poner una imagen del pokemon en batalla en el boton de ataque, pero eso es para más adelante
+
 }
