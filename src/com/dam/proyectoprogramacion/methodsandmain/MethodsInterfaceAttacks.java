@@ -1,6 +1,10 @@
 package com.dam.proyectoprogramacion.methodsandmain;
 
 import javax.swing.*;
+<<<<<<< HEAD
+=======
+import java.awt.*;
+>>>>>>> cristian
 
 /**
  * clase con los metodos que tendrá el panel de ataques pokemon
@@ -32,9 +36,15 @@ public class MethodsInterfaceAttacks {
     private static final String FAIRY = "hada";
 
 
+<<<<<<< HEAD
 
     /**
      * metodo para establecer el logo de los ataques de los pokemon según el tipo
+=======
+    /**
+     * metodo para establecer el logo de los ataques de los pokemon según el tipo
+     *
+>>>>>>> cristian
      * @param type el tipo del ataque
      * @return el imaIcon con el icono correspondiente al tipo
      */
@@ -125,4 +135,99 @@ public class MethodsInterfaceAttacks {
         return iconType;
     }
 
+<<<<<<< HEAD
 }
+=======
+    /**
+     * metodo para establecer el color del fondo según el tipo del pokemon
+     * @param type le vamos a pasar el tipo del pokemon que hay en batalla
+     * @return el color segun el tipo del pokemon dado
+     */
+    public static Color backgroundPanelAttacks(String type) {
+        Color color;
+        switch (type) {
+            case NORMAL -> {
+                color = Color.WHITE;
+                break;
+            }
+            case FIRE -> {
+                color = Color.RED;
+                break;
+            }
+            case WATER -> {
+                color = Color.BLUE.brighter();
+                break;
+            }
+            case ELECTRIC -> {
+                color = Color.YELLOW;
+                break;
+            }
+            case GRASS -> {
+                color = Color.GREEN;
+                break;
+            }
+            case ICE -> {
+                color = Color.CYAN;
+                break;
+            }
+            case FIGHTING -> {
+                color = Color.ORANGE;
+                break;
+            }
+            case POISON -> {
+                color = Color.MAGENTA.darker();
+                break;
+            }
+            case GROUND -> {
+                color = Color.ORANGE.darker();
+                break;
+            }
+            case FLYING -> {
+                color = Color.BLUE.brighter().brighter();
+                break;
+            }
+            case PSYCHIC -> {
+                color = Color.MAGENTA;
+                break;
+            }
+            case BUG -> {
+                color = Color.GREEN.brighter();
+                break;
+            }
+            case ROCK -> {
+                color = Color.ORANGE.brighter().brighter();
+                break;
+            }
+            case GHOST -> {
+                color = Color.BLACK;
+                break;
+            }
+            case DARK -> {
+                color = Color.MAGENTA.darker().brighter();
+                break;
+            }
+            case DRAGON -> {
+                color = Color.BLUE.darker();
+                break;
+            }
+            case STEEL -> {
+                color = Color.GRAY;
+                break;
+            }
+            case FAIRY -> {
+                color = Color.PINK;
+                break;
+            }
+            /**
+             * si no es ningun tipo, devolverá null
+             */
+            default -> {
+                color = Color.BLUE;
+
+            }
+
+        }
+        return color;
+    }
+}
+>>>>>>> cristian
