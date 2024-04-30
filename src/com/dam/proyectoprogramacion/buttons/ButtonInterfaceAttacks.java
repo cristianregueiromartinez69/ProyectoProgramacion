@@ -93,6 +93,7 @@ public class ButtonInterfaceAttacks extends JPanel {
         return back;
     }
 
+    //TODO: faltarían los nombres, pero no podemos hasta más adelante
 
 
 
