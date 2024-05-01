@@ -14,8 +14,8 @@ public class ButtonInterfaceChangePokemon extends JPanel {
     private JButton back;
 
     public JButton makePokemon1TeamButton(){
-        ImageIcon iconDrampa = new ImageIcon("imagenes/tinkaton.png");
-        pokemon1team = new CreateButtons(MethodsInterfaceChangePokemon.getNameChangePokemon1Team("tinkaton"), iconDrampa);
+        ImageIcon iconDrampa = MethodsInterfaceChangePokemon.getImagePokemonTeam1("tyranitar");
+        pokemon1team = new CreateButtons(MethodsInterfaceChangePokemon.getNameChangePokemon1Team("tyranitar"), iconDrampa);
         setBackground(Color.CYAN);
         setForeground(Color.BLACK);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);

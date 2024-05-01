@@ -1,5 +1,7 @@
 package com.dam.proyectoprogramacion.methodsandmain;
 
+import javax.swing.*;
+
 /**
  * clase con los metodos de la interfaz de cambio de pokemons
  * @author cristian
@@ -182,6 +184,54 @@ public class MethodsInterfaceChangePokemon {
 
         }
     }
-//
+
+
+    public static ImageIcon getImagePokemonTeam1(String namePokemonTeam1) {
+        ImageIcon imagePokemon;
+        switch (namePokemonTeam1) {
+            case DRAMPA -> {
+                return imagePokemon = new ImageIcon("imagenes/drampa.png");
+            }
+            case EMPOLEON -> {
+                return imagePokemon = new ImageIcon("imagenes/empoleon.png");
+            }
+            case GARCHOMP -> {
+                return imagePokemon = new ImageIcon("imagenes/garchomp.png");
+            }
+            case GENGAR -> {
+                return imagePokemon = new ImageIcon("imagenes/gengar.png");
+            }
+            case INFERNAPE -> {
+                return imagePokemon = new ImageIcon("imagenes/infernape.png");
+            }
+            case LUCARIO -> {
+                return imagePokemon = new ImageIcon("imagenes/lucario.png");
+            }
+            case LUXRAY -> {
+                return imagePokemon = new ImageIcon("imagenes/luxray.png");
+            }
+            case MARSHADOW -> {
+                return imagePokemon = new ImageIcon("imagenes/marshadow.png");
+            }
+            case MILOTIC -> {
+                return imagePokemon = new ImageIcon("imagenes/milotic.png");
+            }
+            case SNORLAX -> {
+                return imagePokemon = new ImageIcon("imagenes/snorlax.png");
+            }
+            case TINKATON -> {
+                return imagePokemon = new ImageIcon("imagenes/tinkaton.png");
+            }
+            case TYRANITAR -> {
+                return imagePokemon = new ImageIcon("imagenes/tyranitar.png");
+            }
+            default -> {
+                return imagePokemon = null;
+            }
+        }
+
+
+    }
+
 
 }
