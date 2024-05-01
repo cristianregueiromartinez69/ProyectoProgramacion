@@ -9,7 +9,7 @@ import java.awt.event.MouseEvent;
 
 public class ProbandoBotonesPaneles extends JFrame {
 
-    ButtonInterfaceChangePokemon changePokemon = new ButtonInterfaceChangePokemon();
+    ButtonInterfaceSkipHall skip = new ButtonInterfaceSkipHall();
 
     public ProbandoBotonesPaneles() {
 
@@ -53,7 +53,7 @@ public class ProbandoBotonesPaneles extends JFrame {
         /**
          * creamos un boton que será la batalla que es igual al metodo creado en el paquete de los botones de la interfaz del menu
          */
-        JButton attack4 = changePokemon.makeBackButton();
+        JButton attack4 = skip.makePlayAgainButton();
         attack4.setForeground(Color.BLACK);
         attack4.setPreferredSize(new Dimension(150, 50));
         contentPanel.add(ButtonBattlePanel(attack4), gbc);
@@ -70,7 +70,7 @@ public class ProbandoBotonesPaneles extends JFrame {
         attack4.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                attack4.setBackground(Color.GREEN.darker().darker());
+                attack4.setBackground(Color.RED);
 
             }
 
@@ -80,7 +80,7 @@ public class ProbandoBotonesPaneles extends JFrame {
              */
             @Override
             public void mouseExited(MouseEvent e) {
-                attack4.setBackground(Color.GREEN);
+                attack4.setBackground(Color.WHITE);
             }
         });
 
