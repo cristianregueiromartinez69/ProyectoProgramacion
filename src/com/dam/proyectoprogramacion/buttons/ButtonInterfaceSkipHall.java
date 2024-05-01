@@ -11,7 +11,7 @@ public class ButtonInterfaceSkipHall extends JPanel {
 
 
     public JButton makePlayAgainButton(){
-        ImageIcon iconBack = new ImageIcon("imagenes/otraBatalla.png");
+        ImageIcon iconBack = new ImageIcon("imagenes/iconoBatalla.png");
         playAgainButton = new CreateButtons("otra batalla", iconBack);
         setBackground(Color.WHITE);
         setForeground(Color.BLACK);
