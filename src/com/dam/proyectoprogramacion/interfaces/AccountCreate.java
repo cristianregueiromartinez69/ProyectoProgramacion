@@ -23,7 +23,7 @@ public class AccountCreate extends JFrame {
         setSize(600, 400);
         setVisible(true);
 
-        Image backgroundImage = new ImageIcon("imagenes/fondosPreparacion.jpg").getImage();
+        Image backgroundImage = new ImageIcon("imagenes/fondosPreparacion.png").getImage();
 
         BackgroundMainMenuPanel backgroundPanel = new BackgroundMainMenuPanel(backgroundImage);
         backgroundPanel.setLayout(new BorderLayout());
