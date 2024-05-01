@@ -100,7 +100,7 @@ public class AccountCreate extends JFrame {
 
     /**
      * metodo para construir un panel
-     * @return el panel creado
+     * @return el panel construido
      */
 
     private JPanel makeContentPanel() {
