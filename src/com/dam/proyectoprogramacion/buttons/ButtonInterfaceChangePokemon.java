@@ -16,7 +16,7 @@ public class ButtonInterfaceChangePokemon extends JPanel {
     public JButton makePokemon1TeamButton(){
         ImageIcon iconGengar = MethodsInterfaceChangePokemon.getImagePokemonTeam1("gengar");
         pokemon1team = new CreateButtons(MethodsInterfaceChangePokemon.getNameChangePokemon1Team("gengar"), iconGengar);
-        setBackground(Color.CYAN);
+        setBackground(Color.GREEN);
         setForeground(Color.BLACK);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
         setBorder(borderboton);
@@ -25,7 +25,7 @@ public class ButtonInterfaceChangePokemon extends JPanel {
     public JButton makePokemon2TeamButton(){
         ImageIcon iconMilotic = MethodsInterfaceChangePokemon.getImagePokemonTeam2("milotic");
         pokemon2team = new CreateButtons(MethodsInterfaceChangePokemon.getNameChangePokemon1Team("milotic"), iconMilotic);
-        setBackground(Color.CYAN);
+        setBackground(Color.GREEN);
         setForeground(Color.BLACK);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
         setBorder(borderboton);
@@ -34,7 +34,7 @@ public class ButtonInterfaceChangePokemon extends JPanel {
     public JButton makePokemon3TeamButton(){
         ImageIcon iconSnorlax = MethodsInterfaceChangePokemon.getImagePokemonTeam3("snorlax");
         pokemon3team = new CreateButtons(MethodsInterfaceChangePokemon.getNameChangePokemon1Team("snorlax"), iconSnorlax);
-        setBackground(Color.CYAN);
+        setBackground(Color.GREEN);
         setForeground(Color.BLACK);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
         setBorder(borderboton);
