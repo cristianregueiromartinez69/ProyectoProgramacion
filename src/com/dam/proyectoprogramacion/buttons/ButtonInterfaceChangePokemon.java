@@ -14,8 +14,8 @@ public class ButtonInterfaceChangePokemon extends JPanel {
     private JButton back;
 
     public JButton makePokemon1TeamButton(){
-        ImageIcon iconDrampa = MethodsInterfaceChangePokemon.getImagePokemonTeam1("tyranitar");
-        pokemon1team = new CreateButtons(MethodsInterfaceChangePokemon.getNameChangePokemon1Team("tyranitar"), iconDrampa);
+        ImageIcon iconGengar = MethodsInterfaceChangePokemon.getImagePokemonTeam1("gengar");
+        pokemon1team = new CreateButtons(MethodsInterfaceChangePokemon.getNameChangePokemon1Team("gengar"), iconGengar);
         setBackground(Color.CYAN);
         setForeground(Color.BLACK);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
@@ -23,18 +23,20 @@ public class ButtonInterfaceChangePokemon extends JPanel {
         return pokemon1team;
     }
     public JButton makePokemon2TeamButton(){
-        pokemon2team = new JButton("Gengar");
-        setBackground(Color.RED);
-        setForeground(Color.WHITE);
-        Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 3);
+        ImageIcon iconMilotic = MethodsInterfaceChangePokemon.getImagePokemonTeam2("milotic");
+        pokemon2team = new CreateButtons(MethodsInterfaceChangePokemon.getNameChangePokemon1Team("milotic"), iconMilotic);
+        setBackground(Color.CYAN);
+        setForeground(Color.BLACK);
+        Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
         setBorder(borderboton);
         return pokemon2team;
     }
     public JButton makePokemon3TeamButton(){
-        pokemon3team = new JButton("Tinkaton");
-        setBackground(Color.RED);
-        setForeground(Color.WHITE);
-        Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 3);
+        ImageIcon iconSnorlax = MethodsInterfaceChangePokemon.getImagePokemonTeam3("snorlax");
+        pokemon3team = new CreateButtons(MethodsInterfaceChangePokemon.getNameChangePokemon1Team("snorlax"), iconSnorlax);
+        setBackground(Color.CYAN);
+        setForeground(Color.BLACK);
+        Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
         setBorder(borderboton);
         return pokemon3team;
     }
