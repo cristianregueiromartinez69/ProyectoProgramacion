@@ -10,6 +10,15 @@ public class ButtonInterfaceSkipHall extends JPanel {
     private JButton backToMenuButton;
 
 
+    public JButton makePlayAgainButton(){
+        ImageIcon iconBack = new ImageIcon("imagenes/otraBatalla.png");
+        playAgainButton = new CreateButtons("otra batalla", iconBack);
+        setBackground(Color.WHITE);
+        setForeground(Color.BLACK);
+        Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
+        setBorder(borderboton);
+        return playAgainButton;
+    }
 
     public JButton makeBackButton(){
         ImageIcon iconBack = new ImageIcon("imagenes/backMenu.png");
