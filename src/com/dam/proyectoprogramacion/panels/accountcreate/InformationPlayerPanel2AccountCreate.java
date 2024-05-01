@@ -3,15 +3,25 @@ package com.dam.proyectoprogramacion.panels.accountcreate;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * clase que extiende de JPanel que servirá para la información del jugador 2
+ * @author cristian
+ * @version v1.0
+ */
 public class InformationPlayerPanel2AccountCreate extends JPanel{
 
-
+    /**
+     * atributos privados de tipo JLabel y JTextfield para introducir un alias
+     */
     private JLabel player2Label;
     private JLabel indicatorPutALiasLabel;
     private JTextField aliasTextPlayer2;
 
 
-
+    /**
+     * constructor en el que se inician las variables y se establece un layout
+     * el layout será de tipo BoxLayout con una disposición en vertical
+     */
     public InformationPlayerPanel2AccountCreate() {
 
         setVisible(true);
