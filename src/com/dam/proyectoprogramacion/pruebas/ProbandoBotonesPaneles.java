@@ -53,7 +53,7 @@ public class ProbandoBotonesPaneles extends JFrame {
         /**
          * creamos un boton que será la batalla que es igual al metodo creado en el paquete de los botones de la interfaz del menu
          */
-        JButton attack4 = skip.makePlayAgainButton();
+        JButton attack4 = skip.makeBackButton();
         attack4.setForeground(Color.BLACK);
         attack4.setPreferredSize(new Dimension(150, 50));
         contentPanel.add(ButtonBattlePanel(attack4), gbc);
