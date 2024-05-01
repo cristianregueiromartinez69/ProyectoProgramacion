@@ -5,7 +5,7 @@ import com.dam.proyectoprogramacion.pruebas.*;
 
 public class Main {
     public static void main(String[] args) {
-     //new MainMenu();
-        new ProbandoBotonesPaneles();
+     new MainMenu();
+       //TODO: empezar con la interfaz de crear cuenta. Botones todos hechos a la espera de más código
     }
 }
