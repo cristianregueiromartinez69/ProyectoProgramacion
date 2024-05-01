@@ -1,4 +1,8 @@
 package com.dam.proyectoprogramacion.interfaces;
 
-public class AccountCreate {
+import javax.swing.*;
+
+public class AccountCreate extends JFrame {
+
+
 }
