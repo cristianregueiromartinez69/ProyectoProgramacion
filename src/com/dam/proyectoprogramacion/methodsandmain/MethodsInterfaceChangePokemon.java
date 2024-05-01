@@ -186,6 +186,11 @@ public class MethodsInterfaceChangePokemon {
     }
 
 
+    /**
+     * metodo para poner una imagen del pokemon según el nombre que tengas en el equipo
+     * @param namePokemonTeam1 el nombre del primer pokemon del equipo
+     * @return la imagen del primer pokemon del equipo
+     */
     public static ImageIcon getImagePokemonTeam1(String namePokemonTeam1) {
         ImageIcon imagePokemon;
         switch (namePokemonTeam1) {
@@ -225,13 +230,20 @@ public class MethodsInterfaceChangePokemon {
             case TYRANITAR -> {
                 return imagePokemon = new ImageIcon("imagenes/tyranitar.png");
             }
+            /**
+             * si no hay nada, devuelve null
+             */
             default -> {
                 return imagePokemon = null;
             }
         }
 
-
     }
+    /**
+     * metodo para poner una imagen del pokemon según el nombre que tengas en el equipo
+     * @param namePokemonTeam2 el nombre del segundo pokemon del equipo
+     * @return la imagen del segundo pokemon del equipo
+     */
     public static ImageIcon getImagePokemonTeam2(String namePokemonTeam2) {
         ImageIcon imagePokemon;
         switch (namePokemonTeam2) {
@@ -271,6 +283,9 @@ public class MethodsInterfaceChangePokemon {
             case TYRANITAR -> {
                 return imagePokemon = new ImageIcon("imagenes/tyranitar.png");
             }
+            /**
+             * si no hay nada devuleve null
+             */
             default -> {
                 return imagePokemon = null;
             }
@@ -278,6 +293,12 @@ public class MethodsInterfaceChangePokemon {
 
 
     }
+
+    /**
+     * metodo para poner una imagen del pokemon según el nombre que tengas en el equipo
+     * @param namePokemonTeam3 el nombre del tercer pokemon del equipo
+     * @return la imagen del tercer pokemon del equipo
+     */
     public static ImageIcon getImagePokemonTeam3(String namePokemonTeam3) {
         ImageIcon imagePokemon;
         switch (namePokemonTeam3) {
@@ -317,6 +338,9 @@ public class MethodsInterfaceChangePokemon {
             case TYRANITAR -> {
                 return imagePokemon = new ImageIcon("imagenes/tyranitar.png");
             }
+            /**
+             * si no hay nada devuelve null
+             */
             default -> {
                 return imagePokemon = null;
             }
