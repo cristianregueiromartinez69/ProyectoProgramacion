@@ -9,7 +9,11 @@ import java.awt.event.MouseEvent;
 
 public class ProbandoBotonesPaneles extends JFrame {
 
+<<<<<<< HEAD
     ButtonInterfaceSkipHall skip = new ButtonInterfaceSkipHall();
+=======
+    ButtonInterfaceLuck luck = new ButtonInterfaceLuck();
+>>>>>>> buttons
 
     public ProbandoBotonesPaneles() {
 
@@ -53,7 +57,11 @@ public class ProbandoBotonesPaneles extends JFrame {
         /**
          * creamos un boton que será la batalla que es igual al metodo creado en el paquete de los botones de la interfaz del menu
          */
+<<<<<<< HEAD
         JButton attack4 = skip.makePlayAgainButton();
+=======
+        JButton attack4 = luck.makeTailButton();
+>>>>>>> buttons
         attack4.setForeground(Color.BLACK);
         attack4.setPreferredSize(new Dimension(150, 50));
         contentPanel.add(ButtonBattlePanel(attack4), gbc);
