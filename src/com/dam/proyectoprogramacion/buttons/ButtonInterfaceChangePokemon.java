@@ -12,10 +12,11 @@ public class ButtonInterfaceChangePokemon extends JPanel {
     private JButton back;
 
     public JButton makePokemon1TeamButton(){
-        pokemon1team = new JButton("Drampa");
-        setBackground(Color.RED);
-        setForeground(Color.WHITE);
-        Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 3);
+        ImageIcon iconDrampa = new ImageIcon("imagenes/drampa.png");
+        pokemon1team = new CreateButtons("Drampa", iconDrampa);
+        setBackground(Color.CYAN);
+        setForeground(Color.BLACK);
+        Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
         setBorder(borderboton);
         return pokemon1team;
     }
