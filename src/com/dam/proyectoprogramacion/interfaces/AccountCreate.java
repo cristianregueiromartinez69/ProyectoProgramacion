@@ -70,6 +70,9 @@ public class AccountCreate extends JFrame {
         globalPlayerPanel1 = new JPanel();
         globalPlayerPanel1.setLayout(new GridBagLayout());
 
+        globalPlayerPanel2 = new JPanel();
+        globalPlayerPanel2.setLayout(new GridBagLayout());
+
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.insets = new Insets(20, 20, 20, 20);
@@ -79,8 +82,18 @@ public class AccountCreate extends JFrame {
          * definimos un nuevo panel que es igual a una clase que extiende de jpanel
          */
         contentPanel.add(globalPlayerPanel1, gbc);
+
+        gbc.gridx = 1;
+        gbc.gridy = 0;
+        contentPanel.add(globalPlayerPanel2, gbc);
+
         JPanel informationPanelPlayer1 = new InformationPlayerPanel1AccountCreate();
         globalPlayerPanel1.add(informationPanelPlayer1);
+
+        JPanel informationPanelPlayer2 = new InformationPlayerPanel2AccountCreate();
+        globalPlayerPanel2.add(informationPanelPlayer2);
+
+
 
 
     }
