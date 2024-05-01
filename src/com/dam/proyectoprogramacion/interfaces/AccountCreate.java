@@ -70,6 +70,9 @@ public class AccountCreate extends JFrame {
         globalPlayerPanel1 = new JPanel();
         globalPlayerPanel1.setLayout(new GridBagLayout());
 
+        /**
+         * iniciamos el panel global de jugador 2
+         */
         globalPlayerPanel2 = new JPanel();
         globalPlayerPanel2.setLayout(new GridBagLayout());
 
@@ -87,9 +90,15 @@ public class AccountCreate extends JFrame {
         gbc.gridy = 0;
         contentPanel.add(globalPlayerPanel2, gbc);
 
+        /**
+         * creamos un panel para el jugador 1 que será igual al creado en otra clase
+         */
         JPanel informationPanelPlayer1 = new InformationPlayerPanel1AccountCreate();
         globalPlayerPanel1.add(informationPanelPlayer1);
 
+        /**
+         * creamos un panel para el jugador 2 que será igual al creado en otra clase
+         */
         JPanel informationPanelPlayer2 = new InformationPlayerPanel2AccountCreate();
         globalPlayerPanel2.add(informationPanelPlayer2);
 
