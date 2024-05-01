@@ -182,6 +182,6 @@ public class MethodsInterfaceChangePokemon {
 
         }
     }
-
+//
 
 }
