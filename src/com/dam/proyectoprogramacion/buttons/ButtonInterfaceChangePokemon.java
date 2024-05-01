@@ -12,7 +12,7 @@ public class ButtonInterfaceChangePokemon extends JPanel {
     private JButton back;
 
     public JButton makePokemon1TeamButton(){
-        ImageIcon iconDrampa = new ImageIcon("imagenes/marshadow.png");
+        ImageIcon iconDrampa = new ImageIcon("imagenes/milotic.png");
         pokemon1team = new CreateButtons("Drampa", iconDrampa);
         setBackground(Color.CYAN);
         setForeground(Color.BLACK);
