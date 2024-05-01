@@ -1,6 +1,7 @@
 package com.dam.proyectoprogramacion.interfaces;
 
 import com.dam.proyectoprogramacion.background.BackgroundMainMenuPanel;
+import com.dam.proyectoprogramacion.panels.accountcreate.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -35,6 +36,17 @@ public class AccountCreate extends JFrame {
 
 
         add(backgroundPanel);
+
+        globalPlayerPanel1 = new JPanel();
+        globalPlayerPanel1.setLayout(new GridBagLayout());
+
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.insets = new Insets(20,20,20,20);
+
+        contentPanel.add(globalPlayerPanel1, gbc);
+        JPanel informationPanelPlayer1 = new InformationPlayerPanel1AccountCreate();
+        globalPlayerPanel1.add(informationPanelPlayer1);
 
 
     }
