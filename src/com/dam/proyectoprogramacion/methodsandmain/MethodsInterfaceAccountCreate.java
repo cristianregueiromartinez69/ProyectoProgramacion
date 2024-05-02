@@ -5,12 +5,9 @@ import  com.dam.proyectoprogramacion.buttons.*;
 
 import java.awt.*;
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> interfaces
 /**
  * clase con los metodos de la interfaz de crear cuenta
  * @author cristian
@@ -23,29 +20,19 @@ public class MethodsInterfaceAccountCreate {
      * metodo que será el patrón de diseño a seguir en el resto de paneles de iconos a seleccionar
      * @return el panel creado
      */
-<<<<<<< HEAD
-=======
 
->>>>>>> interfaces
     public static JPanel makePanelImage1Row1Player1(){
 
         JPanel contentPanel = new JPanel();
         contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
-<<<<<<< HEAD
-=======
 
         /**
          * definimos un atributo de tipo imagen y le metemos el path con la imagen
          */
->>>>>>> interfaces
         ImageIcon imageIcon = new ImageIcon("imagenes/icono1.png");
         JLabel imageLabel = new JLabel();
         imageLabel.setIcon(imageIcon);
         contentPanel.add(imageLabel);
-<<<<<<< HEAD
-        JButton icon1Button = new ButtonInterfaceCreateAccount().makeIcon1Player1Button();
-        icon1Button.setPreferredSize(new Dimension(100,50));
-=======
 
         /**
          * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
@@ -53,14 +40,11 @@ public class MethodsInterfaceAccountCreate {
         JButton icon1Button = new ButtonInterfaceCreateAccount().makeIcon1Player1Button();
         icon1Button.setBackground(Color.YELLOW.darker());
         icon1Button.setPreferredSize(new Dimension(140,50));
->>>>>>> interfaces
         icon1Button.setForeground(Color.WHITE);
         contentPanel.add(icon1Button);
 
-    return contentPanel;
+        return contentPanel;
     }
-<<<<<<< HEAD
-=======
     /**
      * metodo para crear el panel con la imagen y el boton del icono2 del jugador 1
      * @return el panel creado
@@ -660,5 +644,4 @@ public class MethodsInterfaceAccountCreate {
         return contentPanel;
     }
 
->>>>>>> interfaces
 }

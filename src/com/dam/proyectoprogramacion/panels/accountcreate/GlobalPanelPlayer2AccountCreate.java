@@ -1,8 +1,5 @@
 package com.dam.proyectoprogramacion.panels.accountcreate;
 
-<<<<<<< HEAD
-public class GlobalPanelPlayer2AccountCreate {
-=======
 
 import com.dam.proyectoprogramacion.methodsandmain.MethodsInterfaceAccountCreate;
 
@@ -88,5 +85,4 @@ public class GlobalPanelPlayer2AccountCreate extends JPanel {
 
 
 
->>>>>>> interfaces
 }
