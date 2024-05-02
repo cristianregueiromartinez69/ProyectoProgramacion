@@ -17,6 +17,7 @@ public class GlobalPanelPlayer1AccountCreate extends JPanel {
      */
     private JPanel panelRow1Of5ImagesPlayer1;
     private JPanel panelRow2Of5ImagesPlayer1;
+    private JPanel panelReadyPlayer1;
 
 
     public GlobalPanelPlayer1AccountCreate() {
@@ -45,6 +46,10 @@ public class GlobalPanelPlayer1AccountCreate extends JPanel {
         panelRow2Of5ImagesPlayer1 = new JPanel();
         panelRow2Of5ImagesPlayer1.setLayout(new BoxLayout(panelRow2Of5ImagesPlayer1, BoxLayout.X_AXIS));
         this.add(panelRow2Of5ImagesPlayer1);
+
+        panelReadyPlayer1 = new JPanel();
+        panelReadyPlayer1.setLayout(new BoxLayout(panelReadyPlayer1, BoxLayout.Y_AXIS));
+        this.add(panelReadyPlayer1);
 
 
         /**
