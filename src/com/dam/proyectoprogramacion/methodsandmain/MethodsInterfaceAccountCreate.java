@@ -338,7 +338,7 @@ public class MethodsInterfaceAccountCreate {
         return contentPanel;
     }
     /**
-     * metodo para crear el panel con la imagen y el boton del icono2 del jugador 1
+     * metodo para crear el panel con la imagen y el boton del icono2 del jugador 2
      * @return el panel creado
      */
     public static JPanel makePanelImage2Row1Player2(){
@@ -366,7 +366,7 @@ public class MethodsInterfaceAccountCreate {
         return contentPanel;
     }
     /**
-     * metodo para crear el panel con la imagen y el boton del icono3 del jugador 1
+     * metodo para crear el panel con la imagen y el boton del icono3 del jugador 2
      * @return el panel creado
      */
     public static JPanel makePanelImage3Row1Player2(){
@@ -396,7 +396,7 @@ public class MethodsInterfaceAccountCreate {
 
 
     /**
-     *  metodo para crear el panel con la imagen y el boton del icono4 del jugador 1
+     *  metodo para crear el panel con la imagen y el boton del icono4 del jugador 2
      * @return el panel creado
      */
 
@@ -426,7 +426,7 @@ public class MethodsInterfaceAccountCreate {
     }
 
     /**
-     *  metodo para crear el panel con la imagen y el boton del icono5 del jugador 1
+     *  metodo para crear el panel con la imagen y el boton del icono5 del jugador 2
      * @return el panel creado
      */
 
@@ -456,7 +456,7 @@ public class MethodsInterfaceAccountCreate {
     }
 
     /**
-     *  metodo para crear el panel con la imagen y el boton del icono6 del jugador 1
+     *  metodo para crear el panel con la imagen y el boton del icono6 del jugador 2
      * @return el panel creado
      */
     public static JPanel makePanelImage1Row2Player2(){
@@ -485,7 +485,7 @@ public class MethodsInterfaceAccountCreate {
     }
 
     /**
-     *  metodo para crear el panel con la imagen y el boton del icono7 del jugador 1
+     *  metodo para crear el panel con la imagen y el boton del icono7 del jugador 2
      * @return el panel creado
      */
     public static JPanel makePanelImage2Row2Player2(){
@@ -514,7 +514,7 @@ public class MethodsInterfaceAccountCreate {
     }
 
     /**
-     *  metodo para crear el panel con la imagen y el boton del icono8 del jugador 1
+     *  metodo para crear el panel con la imagen y el boton del icono8 del jugador 2
      * @return el panel creado
      */
     public static JPanel makePanelImage3Row2Player2(){
@@ -543,7 +543,7 @@ public class MethodsInterfaceAccountCreate {
     }
 
     /**
-     *  metodo para crear el panel con la imagen y el boton del icono9 del jugador 1
+     *  metodo para crear el panel con la imagen y el boton del icono9 del jugador 2
      * @return el panel creado
      */
     public static JPanel makePanelImage4Row2Player2(){
@@ -572,7 +572,7 @@ public class MethodsInterfaceAccountCreate {
     }
 
     /**
-     *  metodo para crear el panel con la imagen y el boton del icono10 del jugador 1
+     *  metodo para crear el panel con la imagen y el boton del icono10 del jugador 2
      * @return el panel creado
      */
     public static JPanel makePanelImage5Row2Player2(){
