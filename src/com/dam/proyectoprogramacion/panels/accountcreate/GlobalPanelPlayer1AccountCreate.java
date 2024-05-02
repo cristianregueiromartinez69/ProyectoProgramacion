@@ -18,27 +18,6 @@ public class GlobalPanelPlayer1AccountCreate extends JPanel {
     private JPanel panelRow1Of5ImagesPlayer1;
     private JPanel panelRow2Of5ImagesPlayer1;
 
-    /**
-     * 5 atributos de tipo JPanel en el que cada 1 de ellos, tendrá la imagen del icono y el boton para
-     * seleccionarlo
-     * primera fila
-     */
-    private JPanel panelImage1Row1Player1;
-    private JPanel panelImage2Row1Player1;
-    private JPanel panelImage3Row1Player1;
-    private JPanel panelImage4Row1Player1;
-    private JPanel panelImage5Row1Player1;
-
-    /**
-     * 5 atributos de tipo JPanel en el que cada 1 de ellos, tendrá la imagen del icono y el boton para
-     * seleccionarlo
-     * segunda fila
-     */
-    private JPanel panelImage1Row2Player1;
-    private JPanel panelImage2Row2Player1;
-    private JPanel panelImage3Row2Player1;
-    private JPanel panelImage4Row2Player1;
-    private JPanel panelImage5Row2Player1;
 
     public GlobalPanelPlayer1AccountCreate() {
 
