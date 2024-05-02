@@ -96,12 +96,11 @@ public class AccountCreate extends JFrame {
         JPanel informationPanelPlayer1 = new InformationPlayerPanel1AccountCreate();
         globalPlayerPanel1.add(informationPanelPlayer1);
 
-        /**
-         * creamos un panel para el jugador 2 que será igual al creado en otra clase
-         */
+        gbc.gridx = 0;
+        gbc.gridy = 1;
 
         JPanel auxGlobalPlayerPanel1 = new GlobalPanelPlayer1AccountCreate();
-        globalPlayerPanel1.add(auxGlobalPlayerPanel1);
+        globalPlayerPanel1.add(auxGlobalPlayerPanel1, gbc);
 
                 /**
                  * creamos un panel para el jugador 2 que será igual al creado en otra clase
