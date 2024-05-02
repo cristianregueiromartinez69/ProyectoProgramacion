@@ -1,12 +1,6 @@
 package com.dam.proyectoprogramacion.panels.accountcreate;
-<<<<<<< HEAD
-
-public class GlobalPanelPlayer1AccountCreate {
-=======
 import javax.swing.*;
 import com.dam.proyectoprogramacion.methodsandmain.*;
-
-
 
 
 public class GlobalPanelPlayer1AccountCreate extends JPanel {
@@ -47,7 +41,7 @@ public class GlobalPanelPlayer1AccountCreate extends JPanel {
 
 
 
->>>>>>> cristian
+
 
 
 }
