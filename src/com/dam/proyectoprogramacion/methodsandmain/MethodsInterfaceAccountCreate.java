@@ -45,7 +45,10 @@ public class MethodsInterfaceAccountCreate {
 
     return contentPanel;
     }
-
+    /**
+     * metodo para crear el panel con la imagen y el boton del icono2 del jugador 1
+     * @return el panel creado
+     */
     public static JPanel makePanelImage2Row1Player1(){
 
         JPanel contentPanel = new JPanel();
@@ -70,7 +73,10 @@ public class MethodsInterfaceAccountCreate {
 
         return contentPanel;
     }
-
+    /**
+     * metodo para crear el panel con la imagen y el boton del icono3 del jugador 1
+     * @return el panel creado
+     */
     public static JPanel makePanelImage3Row1Player1(){
 
         JPanel contentPanel = new JPanel();
