@@ -221,5 +221,33 @@ public class MethodsInterfaceAccountCreate {
         return contentPanel;
     }
 
+    /**
+     *  metodo para crear el panel con la imagen y el boton del icono8 del jugador 1
+     * @return el panel creado
+     */
+    public static JPanel makePanelImage3Row2Player1(){
+
+        JPanel contentPanel = new JPanel();
+        contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
+
+        /**
+         * definimos un atributo de tipo imagen y le metemos el path con la imagen
+         */
+        ImageIcon imageIcon = new ImageIcon("imagenes/icono8.png");
+        JLabel imageLabel = new JLabel();
+        imageLabel.setIcon(imageIcon);
+        contentPanel.add(imageLabel);
+
+        /**
+         * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
+         */
+        JButton icon8Button = new ButtonInterfaceCreateAccount().makeIcon8Player1Button();
+        icon8Button.setBackground(Color.YELLOW.darker());
+        icon8Button.setPreferredSize(new Dimension(140,50));
+        icon8Button.setForeground(Color.WHITE);
+        contentPanel.add(icon8Button);
+
+        return contentPanel;
+    }
 
 }
