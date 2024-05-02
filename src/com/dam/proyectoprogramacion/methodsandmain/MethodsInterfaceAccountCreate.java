@@ -250,4 +250,62 @@ public class MethodsInterfaceAccountCreate {
         return contentPanel;
     }
 
+    /**
+     *  metodo para crear el panel con la imagen y el boton del icono9 del jugador 1
+     * @return el panel creado
+     */
+    public static JPanel makePanelImage4Row2Player1(){
+
+        JPanel contentPanel = new JPanel();
+        contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
+
+        /**
+         * definimos un atributo de tipo imagen y le metemos el path con la imagen
+         */
+        ImageIcon imageIcon = new ImageIcon("imagenes/icono9.png");
+        JLabel imageLabel = new JLabel();
+        imageLabel.setIcon(imageIcon);
+        contentPanel.add(imageLabel);
+
+        /**
+         * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
+         */
+        JButton icon9Button = new ButtonInterfaceCreateAccount().makeIcon9Player1Button();
+        icon9Button.setBackground(Color.YELLOW.darker());
+        icon9Button.setPreferredSize(new Dimension(140,50));
+        icon9Button.setForeground(Color.WHITE);
+        contentPanel.add(icon9Button);
+
+        return contentPanel;
+    }
+
+    /**
+     *  metodo para crear el panel con la imagen y el boton del icono10 del jugador 1
+     * @return el panel creado
+     */
+    public static JPanel makePanelImage5Row2Player1(){
+
+        JPanel contentPanel = new JPanel();
+        contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
+
+        /**
+         * definimos un atributo de tipo imagen y le metemos el path con la imagen
+         */
+        ImageIcon imageIcon = new ImageIcon("imagenes/icono10.png");
+        JLabel imageLabel = new JLabel();
+        imageLabel.setIcon(imageIcon);
+        contentPanel.add(imageLabel);
+
+        /**
+         * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
+         */
+        JButton icon10Button = new ButtonInterfaceCreateAccount().makeIcon10Player1Button();
+        icon10Button.setBackground(Color.YELLOW.darker());
+        icon10Button.setPreferredSize(new Dimension(140,50));
+        icon10Button.setForeground(Color.WHITE);
+        contentPanel.add(icon10Button);
+
+        return contentPanel;
+    }
+
 }
