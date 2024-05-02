@@ -11,6 +11,7 @@ public class GlobalPanelPlayer2AccountCreate extends JPanel {
      */
     private JPanel panelRow1Of5ImagesPlayer2;
     private JPanel panelRow2Of5ImagesPlayer2;
+    private JPanel panelReadyPlayer2;
 
 
     public GlobalPanelPlayer2AccountCreate() {
@@ -40,6 +41,10 @@ public class GlobalPanelPlayer2AccountCreate extends JPanel {
         panelRow2Of5ImagesPlayer2.setLayout(new BoxLayout(panelRow2Of5ImagesPlayer2, BoxLayout.X_AXIS));
         this.add(panelRow2Of5ImagesPlayer2);
 
+        panelReadyPlayer2 = new JPanel();
+        panelReadyPlayer2.setLayout(new BoxLayout(panelReadyPlayer2, BoxLayout.Y_AXIS));
+        this.add(panelReadyPlayer2);
+
 
         /**
          * vamos añadiendo los paneles que son metodos creados que una clase
@@ -63,6 +68,8 @@ public class GlobalPanelPlayer2AccountCreate extends JPanel {
         panelRow2Of5ImagesPlayer2.add(MethodsInterfaceAccountCreate.makePanelImage3Row2Player2());
         panelRow2Of5ImagesPlayer2.add(MethodsInterfaceAccountCreate.makePanelImage4Row2Player2());
         panelRow2Of5ImagesPlayer2.add(MethodsInterfaceAccountCreate.makePanelImage5Row2Player2());
+
+        panelReadyPlayer2.add(MethodsInterfaceAccountCreate.makeReadyPlayer1Panel());
 
 
 

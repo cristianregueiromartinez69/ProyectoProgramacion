@@ -618,4 +618,22 @@ public class MethodsInterfaceAccountCreate {
         return contentPanel;
     }
 
+    public static JPanel makeReadyPlayer2Panel(){
+
+        JPanel contentPanel = new JPanel();
+        contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
+
+
+        /**
+         * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
+         */
+        JButton readyButton = new ButtonInterfaceCreateAccount().makeReadyPlayer2Button();
+        readyButton.setBackground(Color.GREEN);
+        readyButton.setPreferredSize(new Dimension(140,50));
+        readyButton.setForeground(Color.WHITE);
+        contentPanel.add(readyButton);
+
+        return contentPanel;
+    }
+
 }
