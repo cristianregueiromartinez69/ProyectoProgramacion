@@ -7,7 +7,7 @@ import javax.swing.*;
 public class GlobalPanelPlayer2AccountCreate extends JPanel {
 
     /**
-     * atributos privados de tipo JPanel con las filas que almacenarán las imágenes del jugador 1
+     * atributos privados de tipo JPanel con las filas que almacenarán las imágenes del jugador 2
      */
     private JPanel panelRow1Of5ImagesPlayer2;
     private JPanel panelRow2Of5ImagesPlayer2;
