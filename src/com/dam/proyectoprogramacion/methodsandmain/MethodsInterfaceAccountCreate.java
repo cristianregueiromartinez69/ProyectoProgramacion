@@ -133,6 +133,36 @@ public class MethodsInterfaceAccountCreate {
         return contentPanel;
     }
 
+    /**
+     *  metodo para crear el panel con la imagen y el boton del icono5 del jugador 1
+     * @return el panel creado
+     */
+
+    public static JPanel makePanelImage5Row1Player1(){
+
+        JPanel contentPanel = new JPanel();
+        contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
+
+        /**
+         * definimos un atributo de tipo imagen y le metemos el path con la imagen
+         */
+        ImageIcon imageIcon = new ImageIcon("imagenes/icono5.png");
+        JLabel imageLabel = new JLabel();
+        imageLabel.setIcon(imageIcon);
+        contentPanel.add(imageLabel);
+
+        /**
+         * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
+         */
+        JButton icon5Button = new ButtonInterfaceCreateAccount().makeIcon5Player1Button();
+        icon5Button.setBackground(Color.YELLOW.darker());
+        icon5Button.setPreferredSize(new Dimension(140,50));
+        icon5Button.setForeground(Color.WHITE);
+        contentPanel.add(icon5Button);
+
+        return contentPanel;
+    }
+
 
 
 
