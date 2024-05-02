@@ -12,7 +12,7 @@ public class MethodsInterfaceAccountCreate {
 
         JPanel contentPanel = new JPanel();
         contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
-        ImageIcon imageIcon = new ImageIcon("imagenes/icono1");
+        ImageIcon imageIcon = new ImageIcon("imagenes/icono1.png");
         JLabel imageLabel = new JLabel();
         imageLabel.setIcon(imageIcon);
         contentPanel.add(imageLabel);

@@ -33,11 +33,11 @@ public class GlobalPanelPlayer1AccountCreate extends JPanel {
         panelRow2Of5ImagesPlayer1.setLayout(new BoxLayout(panelRow2Of5ImagesPlayer1, BoxLayout.X_AXIS));
         this.add(panelRow2Of5ImagesPlayer1);
 
-        panelRow1Of5ImagesPlayer1.add(MethodsInterfaceAccountCreate.makePanelImage1Row1Player1());
-
-
+        panelImage1Row1Player1 = MethodsInterfaceAccountCreate.makePanelImage1Row1Player1();
+        panelRow1Of5ImagesPlayer1.add(panelImage1Row1Player1);
 
     }
+
 
 
 
