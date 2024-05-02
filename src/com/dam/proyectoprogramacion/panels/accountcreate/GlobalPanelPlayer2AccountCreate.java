@@ -1,4 +1,8 @@
 package com.dam.proyectoprogramacion.panels.accountcreate;
 
-public class GlobalPanelPlayer2AccountCreate {
+import javax.swing.*;
+
+public class GlobalPanelPlayer2AccountCreate extends JPanel {
+
+
 }
