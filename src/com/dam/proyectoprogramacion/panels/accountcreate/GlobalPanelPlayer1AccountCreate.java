@@ -75,6 +75,8 @@ public class GlobalPanelPlayer1AccountCreate extends JPanel {
         panelRow2Of5ImagesPlayer1.add(MethodsInterfaceAccountCreate.makePanelImage4Row2Player1());
         panelRow2Of5ImagesPlayer1.add(MethodsInterfaceAccountCreate.makePanelImage5Row2Player1());
 
+        panelReadyPlayer1.add(MethodsInterfaceAccountCreate.makeReadyPlayer1Panel());
+
 
 
 
