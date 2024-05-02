@@ -46,11 +46,11 @@ public class GlobalPanelPlayer2AccountCreate extends JPanel {
          * Esa clase solo crea paneles y los vamos llamando
          * estos 5 serían los de la primera fila
          */
-        panelRow1Of5ImagesPlayer2.add(MethodsInterfaceAccountCreate.makePanelImage1Row1Player1());
-        panelRow1Of5ImagesPlayer2.add(MethodsInterfaceAccountCreate.makePanelImage2Row1Player1());
-        panelRow1Of5ImagesPlayer2.add(MethodsInterfaceAccountCreate.makePanelImage3Row1Player1());
-        panelRow1Of5ImagesPlayer2.add(MethodsInterfaceAccountCreate.makePanelImage4Row1Player1());
-        panelRow1Of5ImagesPlayer2.add(MethodsInterfaceAccountCreate.makePanelImage5Row1Player1());
+        panelRow1Of5ImagesPlayer2.add(MethodsInterfaceAccountCreate.makePanelImage1Row1Player2());
+        panelRow1Of5ImagesPlayer2.add(MethodsInterfaceAccountCreate.makePanelImage2Row1Player2());
+        panelRow1Of5ImagesPlayer2.add(MethodsInterfaceAccountCreate.makePanelImage3Row1Player2());
+        panelRow1Of5ImagesPlayer2.add(MethodsInterfaceAccountCreate.makePanelImage4Row1Player2());
+        panelRow1Of5ImagesPlayer2.add(MethodsInterfaceAccountCreate.makePanelImage5Row1Player2());
 
 
         /**
@@ -58,11 +58,11 @@ public class GlobalPanelPlayer2AccountCreate extends JPanel {
          * Esa clase solo crea paneles y los vamos llamando
          * estos 5 serían los de la segunda  fila
          */
-        panelRow2Of5ImagesPlayer2.add(MethodsInterfaceAccountCreate.makePanelImage1Row2Player1());
-        panelRow2Of5ImagesPlayer2.add(MethodsInterfaceAccountCreate.makePanelImage2Row2Player1());
-        panelRow2Of5ImagesPlayer2.add(MethodsInterfaceAccountCreate.makePanelImage3Row2Player1());
-        panelRow2Of5ImagesPlayer2.add(MethodsInterfaceAccountCreate.makePanelImage4Row2Player1());
-        panelRow2Of5ImagesPlayer2.add(MethodsInterfaceAccountCreate.makePanelImage5Row2Player1());
+        panelRow2Of5ImagesPlayer2.add(MethodsInterfaceAccountCreate.makePanelImage1Row2Player2());
+        panelRow2Of5ImagesPlayer2.add(MethodsInterfaceAccountCreate.makePanelImage2Row2Player2());
+        panelRow2Of5ImagesPlayer2.add(MethodsInterfaceAccountCreate.makePanelImage3Row2Player2());
+        panelRow2Of5ImagesPlayer2.add(MethodsInterfaceAccountCreate.makePanelImage4Row2Player2());
+        panelRow2Of5ImagesPlayer2.add(MethodsInterfaceAccountCreate.makePanelImage5Row2Player2());
 
 
 
