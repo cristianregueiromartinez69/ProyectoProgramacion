@@ -5,7 +5,7 @@ import java.lang.reflect.Array;
 /**
  * Clase abstracta con todos los atributos de los pokemon los cuales van a heredar cada uno
  */
-public abstract class PokemonProperties {
+public abstract class PokemonProperties implements IPokemon{
 
     private String name;
     private String type;
