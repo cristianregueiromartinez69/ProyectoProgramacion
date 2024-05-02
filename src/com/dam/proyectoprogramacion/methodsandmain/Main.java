@@ -8,7 +8,7 @@ public class Main {
      new MainMenu();
 
 
-       //TODO: empezar con la interfaz de crear cuenta. Botones todos hechos a la espera de más código
+       //TODO: acabar la interfaz de crear cuenta
 
 
 

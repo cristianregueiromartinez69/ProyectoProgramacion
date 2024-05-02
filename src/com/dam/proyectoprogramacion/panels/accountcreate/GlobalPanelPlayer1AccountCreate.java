@@ -47,6 +47,9 @@ public class GlobalPanelPlayer1AccountCreate extends JPanel {
         panelRow2Of5ImagesPlayer1.setLayout(new BoxLayout(panelRow2Of5ImagesPlayer1, BoxLayout.X_AXIS));
         this.add(panelRow2Of5ImagesPlayer1);
 
+        /**
+         * iniciamos el panel de ready del jugador 1
+         */
         panelReadyPlayer1 = new JPanel();
         panelReadyPlayer1.setLayout(new BoxLayout(panelReadyPlayer1, BoxLayout.Y_AXIS));
         this.add(panelReadyPlayer1);
@@ -75,6 +78,9 @@ public class GlobalPanelPlayer1AccountCreate extends JPanel {
         panelRow2Of5ImagesPlayer1.add(MethodsInterfaceAccountCreate.makePanelImage4Row2Player1());
         panelRow2Of5ImagesPlayer1.add(MethodsInterfaceAccountCreate.makePanelImage5Row2Player1());
 
+        /**
+         * añadimos a este pane, un metodo que crea este panel en otra clase
+         */
         panelReadyPlayer1.add(MethodsInterfaceAccountCreate.makeReadyPlayer1Panel());
 
 

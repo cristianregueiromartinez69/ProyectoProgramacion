@@ -600,6 +600,10 @@ public class MethodsInterfaceAccountCreate {
         return contentPanel;
     }
 
+    /**
+     * metodo para crear el panel del ready del jugador 1
+     * @return el panel creado
+     */
     public static JPanel makeReadyPlayer1Panel(){
 
         JPanel contentPanel = new JPanel();
@@ -618,6 +622,10 @@ public class MethodsInterfaceAccountCreate {
         return contentPanel;
     }
 
+    /**
+     * metodo para crear el panel del ready del jugador 2
+     * @return el panel creado
+     */
     public static JPanel makeReadyPlayer2Panel(){
 
         JPanel contentPanel = new JPanel();
