@@ -15,7 +15,7 @@ public class InformationPlayerPanel1AccountCreate extends JPanel {
      */
     private JLabel player1Label;
     private JLabel indicatorPutALiasLabel;
-    private JTextField aliasTextPlayer1;
+    private static JTextField aliasTextPlayer1;
 
 
     /**
@@ -34,5 +34,13 @@ public class InformationPlayerPanel1AccountCreate extends JPanel {
         aliasTextPlayer1 = new JTextField(5);
         this.add(aliasTextPlayer1);
 
+    }
+
+    public static JTextField getAliasTextPlayer1() {
+        return aliasTextPlayer1;
+    }
+
+    public static void setAliasTextPlayer1(JTextField aliasTextPlayer1) {
+        InformationPlayerPanel1AccountCreate.aliasTextPlayer1 = aliasTextPlayer1;
     }
 }
