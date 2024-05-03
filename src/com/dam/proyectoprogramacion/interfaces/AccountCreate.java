@@ -37,6 +37,8 @@ public class AccountCreate extends JFrame {
      */
     private JPanel startAreaPanel;
 
+
+
     public AccountCreate() {
         /**
          * le damos visibilidad y ponemos un titulo al frame

@@ -4,8 +4,7 @@ import javax.swing.*;
 import  com.dam.proyectoprogramacion.buttons.*;
 
 import java.awt.*;
-
-
+import java.util.HashMap;
 
 
 /**
@@ -15,6 +14,7 @@ import java.awt.*;
  */
 public class MethodsInterfaceAccountCreate {
 
+    private static HashMap <String, ImageIcon> players = new HashMap<>();
 
     /**
      * metodo que será el patrón de diseño a seguir en el resto de paneles de iconos a seleccionar
@@ -644,4 +644,12 @@ public class MethodsInterfaceAccountCreate {
         return contentPanel;
     }
 
+    public static void putPlayersInformation(String alias, ImageIcon image){
+
+        players.put(alias, image);
+    }
+
+    public static HashMap<String, ImageIcon> getPlayers() {
+        return players;
+    }
 }
