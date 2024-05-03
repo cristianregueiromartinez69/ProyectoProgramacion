@@ -78,7 +78,7 @@ public class AccountCreate extends JFrame {
 
         gbc.gridx = 0;
         gbc.gridy = 0;
-        gbc.insets = new Insets(20, 20, 20, 20);
+        gbc.insets = new Insets(10, 10, 10, 10);
 
         /**
          * lo añadimos al panel que tiene la imagen
@@ -121,6 +121,20 @@ public class AccountCreate extends JFrame {
         JPanel auxGlobalPlayerPanel2 = new GlobalPanelPlayer2AccountCreate();
         globalPlayerPanel2.add(auxGlobalPlayerPanel2, gbc);
 
+        gbc.gridx = 1;
+        gbc.gridy = 2;
+        gbc.insets = new Insets(20,100,100,900);
+
+        startAreaPanel = makeStartPanel();
+        contentPanel.add(startAreaPanel, gbc);
+
+        JButton startButton = makeStartButton("Finish");
+        startButton.setForeground(Color.WHITE);
+        startButton.setPreferredSize(new Dimension(150,50));
+        startAreaPanel.add(startButton);
+
+
+
 
 
 
@@ -137,6 +151,18 @@ public class AccountCreate extends JFrame {
         contentPanel.setOpaque(false);
         contentPanel.setLayout(new GridBagLayout());
         return contentPanel;
+    }
+
+    private JPanel makeStartPanel(){
+        JPanel auxStartPanel = new JPanel();
+        auxStartPanel.setLayout(new GridBagLayout());
+        return auxStartPanel;
+    }
+
+    private JButton makeStartButton(String message){
+        JButton startButton = new JButton(message);
+        startButton.setBackground(Color.RED);
+        return startButton;
     }
 
 }
