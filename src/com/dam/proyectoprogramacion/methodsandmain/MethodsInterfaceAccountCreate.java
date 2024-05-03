@@ -43,7 +43,7 @@ public class MethodsInterfaceAccountCreate {
         icon1Button.setForeground(Color.WHITE);
         contentPanel.add(icon1Button);
 
-    return contentPanel;
+        return contentPanel;
     }
     /**
      * metodo para crear el panel con la imagen y el boton del icono2 del jugador 1
@@ -329,7 +329,7 @@ public class MethodsInterfaceAccountCreate {
         /**
          * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
          */
-        JButton icon1Button = new ButtonInterfaceCreateAccount().makeIcon1Player1Button();
+        JButton icon1Button = new ButtonInterfaceCreateAccount().makeIcon1Player2Button();
         icon1Button.setBackground(Color.ORANGE.darker());
         icon1Button.setPreferredSize(new Dimension(140,50));
         icon1Button.setForeground(Color.WHITE);
@@ -357,7 +357,7 @@ public class MethodsInterfaceAccountCreate {
         /**
          * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
          */
-        JButton icon2Button = new ButtonInterfaceCreateAccount().makeIcon2Player1Button();
+        JButton icon2Button = new ButtonInterfaceCreateAccount().makeIcon2Player2Button();
         icon2Button.setBackground(Color.ORANGE.darker());
         icon2Button.setPreferredSize(new Dimension(140,50));
         icon2Button.setForeground(Color.WHITE);
@@ -385,7 +385,7 @@ public class MethodsInterfaceAccountCreate {
         /**
          * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
          */
-        JButton icon3Button = new ButtonInterfaceCreateAccount().makeIcon3Player1Button();
+        JButton icon3Button = new ButtonInterfaceCreateAccount().makeIcon3Player2Button();
         icon3Button.setBackground(Color.ORANGE.darker());
         icon3Button.setPreferredSize(new Dimension(140,50));
         icon3Button.setForeground(Color.WHITE);
@@ -416,7 +416,7 @@ public class MethodsInterfaceAccountCreate {
         /**
          * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
          */
-        JButton icon4Button = new ButtonInterfaceCreateAccount().makeIcon4Player1Button();
+        JButton icon4Button = new ButtonInterfaceCreateAccount().makeIcon4Player2Button();
         icon4Button.setBackground(Color.ORANGE.darker());
         icon4Button.setPreferredSize(new Dimension(140,50));
         icon4Button.setForeground(Color.WHITE);
@@ -446,7 +446,7 @@ public class MethodsInterfaceAccountCreate {
         /**
          * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
          */
-        JButton icon5Button = new ButtonInterfaceCreateAccount().makeIcon5Player1Button();
+        JButton icon5Button = new ButtonInterfaceCreateAccount().makeIcon5Player2Button();
         icon5Button.setBackground(Color.ORANGE.darker());
         icon5Button.setPreferredSize(new Dimension(140,50));
         icon5Button.setForeground(Color.WHITE);
@@ -475,7 +475,7 @@ public class MethodsInterfaceAccountCreate {
         /**
          * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
          */
-        JButton icon6Button = new ButtonInterfaceCreateAccount().makeIcon6Player1Button();
+        JButton icon6Button = new ButtonInterfaceCreateAccount().makeIcon6Player2Button();
         icon6Button.setBackground(Color.ORANGE.darker());
         icon6Button.setPreferredSize(new Dimension(140,50));
         icon6Button.setForeground(Color.WHITE);
@@ -504,7 +504,7 @@ public class MethodsInterfaceAccountCreate {
         /**
          * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
          */
-        JButton icon7Button = new ButtonInterfaceCreateAccount().makeIcon7Player1Button();
+        JButton icon7Button = new ButtonInterfaceCreateAccount().makeIcon7Player2Button();
         icon7Button.setBackground(Color.ORANGE.darker());
         icon7Button.setPreferredSize(new Dimension(140,50));
         icon7Button.setForeground(Color.WHITE);
@@ -533,7 +533,7 @@ public class MethodsInterfaceAccountCreate {
         /**
          * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
          */
-        JButton icon8Button = new ButtonInterfaceCreateAccount().makeIcon8Player1Button();
+        JButton icon8Button = new ButtonInterfaceCreateAccount().makeIcon8Player2Button();
         icon8Button.setBackground(Color.ORANGE.darker());
         icon8Button.setPreferredSize(new Dimension(140,50));
         icon8Button.setForeground(Color.WHITE);
@@ -562,7 +562,7 @@ public class MethodsInterfaceAccountCreate {
         /**
          * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
          */
-        JButton icon9Button = new ButtonInterfaceCreateAccount().makeIcon9Player1Button();
+        JButton icon9Button = new ButtonInterfaceCreateAccount().makeIcon9Player2Button();
         icon9Button.setBackground(Color.ORANGE.darker());
         icon9Button.setPreferredSize(new Dimension(140,50));
         icon9Button.setForeground(Color.WHITE);
@@ -591,7 +591,7 @@ public class MethodsInterfaceAccountCreate {
         /**
          * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
          */
-        JButton icon10Button = new ButtonInterfaceCreateAccount().makeIcon10Player1Button();
+        JButton icon10Button = new ButtonInterfaceCreateAccount().makeIcon10Player2Button();
         icon10Button.setBackground(Color.ORANGE.darker());
         icon10Button.setPreferredSize(new Dimension(140,50));
         icon10Button.setForeground(Color.WHITE);

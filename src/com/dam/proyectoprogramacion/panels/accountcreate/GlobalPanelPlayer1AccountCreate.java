@@ -1,8 +1,11 @@
 package com.dam.proyectoprogramacion.panels.accountcreate;
-
 import javax.swing.*;
 
 import com.dam.proyectoprogramacion.methodsandmain.*;
+
+
+
+
 
 /**
  * clase con todos los paneles de la parte del jugador 1 en la interfaz de crear cuenta
@@ -87,6 +90,7 @@ public class GlobalPanelPlayer1AccountCreate extends JPanel {
 
 
     }
+
 
 
 }
