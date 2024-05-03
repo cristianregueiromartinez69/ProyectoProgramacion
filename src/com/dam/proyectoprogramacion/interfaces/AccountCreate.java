@@ -76,16 +76,23 @@ public class AccountCreate extends JFrame {
         globalPlayerPanel2 = new JPanel();
         globalPlayerPanel2.setLayout(new GridBagLayout());
 
+        /**
+         * establecemos una posicion para el panel del jugador 1
+         */
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.insets = new Insets(10, 10, 10, 10);
 
         /**
-         * lo añadimos al panel que tiene la imagen
-         * definimos un nuevo panel que es igual a una clase que extiende de jpanel
+         * añadimos el panel del jugador 1
+         *
          */
         contentPanel.add(globalPlayerPanel1, gbc);
 
+        /**
+         * añadimos el panel del jugador 2 y cambiamos la posicion
+         *
+         */
         gbc.gridx = 1;
         gbc.gridy = 0;
         contentPanel.add(globalPlayerPanel2, gbc);
@@ -104,33 +111,55 @@ public class AccountCreate extends JFrame {
         globalPlayerPanel2.add(informationPanelPlayer2);
 
 
+        /**
+         * establecemos la posicion para toda la informacion del panel del jugador 1
+         */
         gbc.gridx = 0;
         gbc.gridy = 1;
 
+        /**
+         * instanciamos una variable de tipo jpanel que es igual a un panel creado en otra clase
+         * lo añadimos
+         */
         JPanel auxGlobalPlayerPanel1 = new GlobalPanelPlayer1AccountCreate();
         globalPlayerPanel1.add(auxGlobalPlayerPanel1, gbc);
 
         /**
-         * creamos un panel para el jugador 2 que será igual al creado en otra clase
+         * establecemos nuevas posiciones
          */
         gbc.gridx = 1;
         gbc.gridy = 1;
 
 
-
+        /**
+         * instanciamos una variable de tipo jpanel que es igual a un panel creado en otra clase
+         * lo añadimos
+         */
         JPanel auxGlobalPlayerPanel2 = new GlobalPanelPlayer2AccountCreate();
         globalPlayerPanel2.add(auxGlobalPlayerPanel2, gbc);
 
+        /**
+         * establecemos una nueva posicion para el panel de start
+         */
         gbc.gridx = 1;
         gbc.gridy = 2;
         gbc.insets = new Insets(20,100,100,900);
 
+        /**
+         * iniciamos el panel de start que es igual a un metodo que devuelve un panel
+         */
         startAreaPanel = makeStartPanel();
         contentPanel.add(startAreaPanel, gbc);
 
+        /**
+         * iniciamos un boton que es igual a un metodo que devuelve un boton
+         */
         JButton startButton = makeStartButton("Finish");
         startButton.setForeground(Color.WHITE);
         startButton.setPreferredSize(new Dimension(150,50));
+        /**
+         * lo añadimos al panel que tiene el start
+         */
         startAreaPanel.add(startButton);
 
 
@@ -153,12 +182,21 @@ public class AccountCreate extends JFrame {
         return contentPanel;
     }
 
+    /**
+     * metodo que crea el panel de start de la interfaz de crear cuenta
+     * @return el panel creado
+     */
     private JPanel makeStartPanel(){
         JPanel auxStartPanel = new JPanel();
         auxStartPanel.setLayout(new GridBagLayout());
         return auxStartPanel;
     }
 
+    /**
+     * metodo que crea el boton de start en la interfaz crear cuenta
+     * @param message el mensage que va a tener el boton
+     * @return el boton creado
+     */
     private JButton makeStartButton(String message){
         JButton startButton = new JButton(message);
         startButton.setBackground(Color.RED);
