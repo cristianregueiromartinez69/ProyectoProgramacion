@@ -2,10 +2,13 @@ package com.dam.proyectoprogramacion.methodsandmain;
 
 import javax.swing.*;
 import  com.dam.proyectoprogramacion.buttons.*;
+import com.dam.proyectoprogramacion.interfaces.AccountCreate;
+import com.dam.proyectoprogramacion.panels.accountcreate.InformationPlayerPanel1AccountCreate;
+import com.dam.proyectoprogramacion.panels.accountcreate.InformationPlayerPanel2AccountCreate;
 
 import java.awt.*;
-
-
+import java.awt.event.ActionEvent;
+import java.util.HashMap;
 
 
 /**
@@ -14,6 +17,8 @@ import java.awt.*;
  * @version v1.0
  */
 public class MethodsInterfaceAccountCreate {
+
+    private static HashMap <String, ImageIcon> players = new HashMap<>();
 
 
     /**
@@ -643,5 +648,55 @@ public class MethodsInterfaceAccountCreate {
 
         return contentPanel;
     }
+
+    public static JPanel makeBackToMenuPanel(){
+        JPanel contentPanel = new JPanel();
+        contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
+
+        JButton backButton = new ButtonInterfaceCreateAccount().makeBackToMenuButton();
+        backButton.setBackground(Color.CYAN);
+        backButton.setPreferredSize(new Dimension(140,50));
+        backButton.setForeground(Color.BLACK);
+        contentPanel.add(backButton);
+        return contentPanel;
+    }
+
+    public static void putPlayersInformation(String alias, ImageIcon image){
+
+        players.put(alias, image);
+    }
+
+    public static HashMap<String, ImageIcon> getPlayers() {
+        return players;
+    }
+
+    public static boolean checkEmptyContentPlayer1(){
+        String aliasTextPlayer1 = InformationPlayerPanel1AccountCreate.getAliasTextPlayer1().getText();
+       return  !aliasTextPlayer1.isEmpty();
+    }
+    public static boolean checkEmptyContentPlayer2(){
+        String aliasTextPlayer2 = InformationPlayerPanel2AccountCreate.getAliasTextPlayer2().getText();
+        return  !aliasTextPlayer2.isEmpty();
+    }
+    public static void disableButtonsAndAliases(){
+
+        ButtonInterfaceCreateAccount.getIcon1Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon2Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon3Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon4Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon5Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon6Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon7Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon8Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon9Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon10Player1Button().setEnabled(false);
+        InformationPlayerPanel1AccountCreate.notEditableAliasText();
+        ButtonInterfaceCreateAccount.getBackToMenuButton().setEnabled(false);
+
+
+    }
+
+
+
 
 }

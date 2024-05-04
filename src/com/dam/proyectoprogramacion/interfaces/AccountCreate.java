@@ -1,10 +1,14 @@
 package com.dam.proyectoprogramacion.interfaces;
 
 import com.dam.proyectoprogramacion.background.BackgroundMainMenuPanel;
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCreateAccount;
+import com.dam.proyectoprogramacion.methodsandmain.MethodsInterfaceAccountCreate;
+import com.dam.proyectoprogramacion.methodsandmain.MethodsLogicalAccountCreate;
 import com.dam.proyectoprogramacion.panels.accountcreate.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 
 /**
  * clase con la interfaz de crear cuenta en la que nos loguearemos para poder jugar
@@ -36,6 +40,20 @@ public class AccountCreate extends JFrame {
      * atributo privado de tipo JPanel para poner el boton de start de ambos jugadores cuando terminaron de crear la cuenta
      */
     private JPanel startAreaPanel;
+    private JButton startButton;
+
+    /**
+     * atributo privado de tipo jpanel que serán en donde pongamos el boton para voler al menu
+     */
+    private JPanel backAreaPanel;
+
+    /**
+     * atributo privado de tipo jpanel que nos servirá para que, una vel el usuario a introducido el alias
+     * y un logo, le aparezca en un panel inferior lo introducido
+     */
+    private JPanel aliasAndLogoPlayer1Panel;
+    private JPanel AliasAndLogoPlayer2Panel;
+
 
     public AccountCreate() {
         /**
@@ -81,7 +99,7 @@ public class AccountCreate extends JFrame {
          */
         gbc.gridx = 0;
         gbc.gridy = 0;
-        gbc.insets = new Insets(10, 10, 10, 10);
+        gbc.insets = new Insets(50, 50, 50, 50);
 
         /**
          * añadimos el panel del jugador 1
@@ -108,7 +126,11 @@ public class AccountCreate extends JFrame {
          * creamos un panel para el jugador 2 que será igual al creado en otra clase
          */
         JPanel informationPanelPlayer2 = new InformationPlayerPanel2AccountCreate();
-        globalPlayerPanel2.add(informationPanelPlayer2);
+        /**
+         * este inset va a posicionar correctarmente el alias y el JTextField del jugador 2
+         */
+        gbc.insets = new Insets(0, 20, 0, 20);
+        globalPlayerPanel2.add(informationPanelPlayer2, gbc);
 
 
         /**
@@ -142,8 +164,8 @@ public class AccountCreate extends JFrame {
          * establecemos una nueva posicion para el panel de start
          */
         gbc.gridx = 1;
-        gbc.gridy = 2;
-        gbc.insets = new Insets(20,100,100,900);
+        gbc.gridy = 3;
+        gbc.insets = new Insets(20, 100, 100, 700);
 
         /**
          * iniciamos el panel de start que es igual a un metodo que devuelve un panel
@@ -154,24 +176,197 @@ public class AccountCreate extends JFrame {
         /**
          * iniciamos un boton que es igual a un metodo que devuelve un boton
          */
-        JButton startButton = makeStartButton("Finish");
+        startButton = makeStartButton("Finish");
+        startButton.setEnabled(false);
         startButton.setForeground(Color.WHITE);
-        startButton.setPreferredSize(new Dimension(150,50));
+        startButton.setPreferredSize(new Dimension(200, 50));
         /**
          * lo añadimos al panel que tiene el start
          */
         startAreaPanel.add(startButton);
 
+        /**
+         * iniciamos el panel con el boton de volver al menu que será igual a un metodo que crea este panel
+         */
+        backAreaPanel = MethodsInterfaceAccountCreate.makeBackToMenuPanel();
+        /**
+         * establecemos las medidas del panel
+         */
+        gbc.gridx = 0;
+        gbc.gridy = 3;
+        gbc.insets = new Insets(0, 200, 78, 0);
+        contentPanel.add(backAreaPanel, gbc);
+
+        /**
+         * establecemos las medidas del panel donde saldrá la informacion seleccionada por parte del jugador 1
+         */
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        /**
+         * iniciamos el panel del jugador 1 en el que aparecerá la información seleccionada
+         */
+        aliasAndLogoPlayer1Panel = new JPanel();
+        aliasAndLogoPlayer1Panel.setLayout(new BoxLayout(aliasAndLogoPlayer1Panel, BoxLayout.Y_AXIS));
+        contentPanel.add(aliasAndLogoPlayer1Panel, gbc);
+
+        /**
+         * llamamos a los botones de la clase donde tenemos los botones creados y les ponemos un actionlistener
+         */
+        ButtonInterfaceCreateAccount.getIcon1Player1Button().addActionListener(this::selectNameAndIconPlayer1);
+        ButtonInterfaceCreateAccount.getIcon2Player1Button().addActionListener(this::selectNameAndIconPlayer1);
+        ButtonInterfaceCreateAccount.getIcon3Player1Button().addActionListener(this::selectNameAndIconPlayer1);
+        ButtonInterfaceCreateAccount.getIcon4Player1Button().addActionListener(this::selectNameAndIconPlayer1);
+        ButtonInterfaceCreateAccount.getIcon5Player1Button().addActionListener(this::selectNameAndIconPlayer1);
+        ButtonInterfaceCreateAccount.getIcon6Player1Button().addActionListener(this::selectNameAndIconPlayer1);
+        ButtonInterfaceCreateAccount.getIcon7Player1Button().addActionListener(this::selectNameAndIconPlayer1);
+        ButtonInterfaceCreateAccount.getIcon8Player1Button().addActionListener(this::selectNameAndIconPlayer1);
+        ButtonInterfaceCreateAccount.getIcon9Player1Button().addActionListener(this::selectNameAndIconPlayer1);
+        ButtonInterfaceCreateAccount.getIcon10Player1Button().addActionListener(this::selectNameAndIconPlayer1);
+        ButtonInterfaceCreateAccount.getReadyPlayer1Button().addActionListener(this::confirmReadyPlayer1);
+
+    }
+
+    /**
+     * metodo para confirmar la cuenta del jugador 1
+     *
+     * @param e este es el objeto de tipo actionlistener que será añadido a los botones
+     */
+    public void selectNameAndIconPlayer1(ActionEvent e) {
+
+        /**
+         * iniciamos una variable local que es igual al texto introducido en el alias del jugador 1
+         */
+        String aliasTextPlayer1 = InformationPlayerPanel1AccountCreate.getAliasTextPlayer1().getText();
+        /**
+         * si el alias se ha introducido, podemos proseguir
+         */
+        if (MethodsInterfaceAccountCreate.checkEmptyContentPlayer1()) {
+            /**
+             * si el usuario pulsa el boton del icono1, aparecerá su alias junto con el logo escogido
+             * se borra lo anterior del panel para introducir lo nuevo
+             */
+            if (e.getSource() == ButtonInterfaceCreateAccount.getIcon1Player1Button()) {
+                ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
+                aliasAndLogoPlayer1Panel.removeAll();
+                aliasAndLogoPlayer1Panel.revalidate();
+                aliasAndLogoPlayer1Panel.repaint();
+                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage1Player1());
+                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
+                MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono1.png"));
+
+            } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon2Player1Button()) {
+                ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
+                aliasAndLogoPlayer1Panel.removeAll();
+                aliasAndLogoPlayer1Panel.revalidate();
+                aliasAndLogoPlayer1Panel.repaint();
+                startButton.setEnabled(true);
+                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage2Player1());
+                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
+
+                MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono2.png"));
+
+            } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon3Player1Button()) {
+                ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
+                aliasAndLogoPlayer1Panel.removeAll();
+                aliasAndLogoPlayer1Panel.revalidate();
+                aliasAndLogoPlayer1Panel.repaint();
+                startButton.setEnabled(true);
+                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage3Player1());
+                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
+
+            } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon4Player1Button()) {
+                ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
+                aliasAndLogoPlayer1Panel.removeAll();
+                aliasAndLogoPlayer1Panel.revalidate();
+                aliasAndLogoPlayer1Panel.repaint();
+                startButton.setEnabled(true);
+                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage4Player1());
+                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
+
+                MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono4.png"));
+
+            } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon5Player1Button()) {
+                ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
+                aliasAndLogoPlayer1Panel.removeAll();
+                aliasAndLogoPlayer1Panel.revalidate();
+                aliasAndLogoPlayer1Panel.repaint();
+                startButton.setEnabled(true);
+                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage5Player1());
+                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
+
+                MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono5.png"));
+
+            } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon6Player1Button()) {
+                ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
+                aliasAndLogoPlayer1Panel.removeAll();
+                aliasAndLogoPlayer1Panel.revalidate();
+                aliasAndLogoPlayer1Panel.repaint();
+                startButton.setEnabled(true);
+                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage6Player1());
+                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
+
+                MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono6.png"));
+
+            } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon7Player1Button()) {
+                ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
+                aliasAndLogoPlayer1Panel.removeAll();
+                aliasAndLogoPlayer1Panel.revalidate();
+                aliasAndLogoPlayer1Panel.repaint();
+                startButton.setEnabled(true);
+                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage7Player1());
+                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
+
+                MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono7.png"));
+
+            } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon8Player1Button()) {
+                ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
+                aliasAndLogoPlayer1Panel.removeAll();
+                aliasAndLogoPlayer1Panel.revalidate();
+                aliasAndLogoPlayer1Panel.repaint();
+                startButton.setEnabled(true);
+                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage8Player1());
+                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
+
+                MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono8.png"));
+
+            } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon9Player1Button()) {
+                ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
+                aliasAndLogoPlayer1Panel.removeAll();
+                aliasAndLogoPlayer1Panel.revalidate();
+                aliasAndLogoPlayer1Panel.repaint();
+                startButton.setEnabled(true);
+                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage9Player1());
+                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
+
+                MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono9.png"));
+
+            } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon10Player1Button()) {
+                ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
+                aliasAndLogoPlayer1Panel.removeAll();
+                aliasAndLogoPlayer1Panel.revalidate();
+                aliasAndLogoPlayer1Panel.repaint();
+                startButton.setEnabled(true);
+                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage10Player1());
+                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
+
+                MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono10.png"));
+
+            }
+
+        }
+    }
+
+    public void confirmReadyPlayer1(ActionEvent e) {
 
 
-
-
-
+        aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeTickReadyButtonPlayer1());
+        MethodsInterfaceAccountCreate.disableButtonsAndAliases();
 
     }
 
     /**
      * metodo para construir un panel
+     *
      * @return el panel construido
      */
 
@@ -184,9 +379,10 @@ public class AccountCreate extends JFrame {
 
     /**
      * metodo que crea el panel de start de la interfaz de crear cuenta
+     *
      * @return el panel creado
      */
-    private JPanel makeStartPanel(){
+    private JPanel makeStartPanel() {
         JPanel auxStartPanel = new JPanel();
         auxStartPanel.setLayout(new GridBagLayout());
         return auxStartPanel;
@@ -194,10 +390,11 @@ public class AccountCreate extends JFrame {
 
     /**
      * metodo que crea el boton de start en la interfaz crear cuenta
+     *
      * @param message el mensage que va a tener el boton
      * @return el boton creado
      */
-    private JButton makeStartButton(String message){
+    private JButton makeStartButton(String message) {
         JButton startButton = new JButton(message);
         startButton.setBackground(Color.RED);
         return startButton;
