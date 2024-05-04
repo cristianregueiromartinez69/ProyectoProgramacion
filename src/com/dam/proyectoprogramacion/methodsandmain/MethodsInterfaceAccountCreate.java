@@ -690,7 +690,7 @@ public class MethodsInterfaceAccountCreate {
         ButtonInterfaceCreateAccount.getIcon8Player1Button().setEnabled(false);
         ButtonInterfaceCreateAccount.getIcon9Player1Button().setEnabled(false);
         ButtonInterfaceCreateAccount.getIcon10Player1Button().setEnabled(false);
-        InformationPlayerPanel1AccountCreate.getAliasTextPlayer1().setEditable(false);
+        InformationPlayerPanel1AccountCreate.notEditableAliasText();
         ButtonInterfaceCreateAccount.getBackToMenuButton().setEnabled(false);
 
 
