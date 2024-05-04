@@ -645,6 +645,18 @@ public class MethodsInterfaceAccountCreate {
         return contentPanel;
     }
 
+    public static JPanel makeBackToMenuPanel(){
+        JPanel contentPanel = new JPanel();
+        contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
+
+        JButton backButton = new ButtonInterfaceCreateAccount().makeBackToMenuButton();
+        backButton.setBackground(Color.CYAN);
+        backButton.setPreferredSize(new Dimension(140,50));
+        backButton.setForeground(Color.BLACK);
+        contentPanel.add(backButton);
+        return contentPanel;
+    }
+
     public static void putPlayersInformation(String alias, ImageIcon image){
 
         players.put(alias, image);

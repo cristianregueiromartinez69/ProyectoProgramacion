@@ -1,6 +1,8 @@
 package com.dam.proyectoprogramacion.interfaces;
 
 import com.dam.proyectoprogramacion.background.BackgroundMainMenuPanel;
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCreateAccount;
+import com.dam.proyectoprogramacion.methodsandmain.MethodsInterfaceAccountCreate;
 import com.dam.proyectoprogramacion.panels.accountcreate.*;
 
 import javax.swing.*;
@@ -36,6 +38,12 @@ public class AccountCreate extends JFrame {
      * atributo privado de tipo JPanel para poner el boton de start de ambos jugadores cuando terminaron de crear la cuenta
      */
     private JPanel startAreaPanel;
+
+    private JPanel backAreaPanel;
+
+    private JPanel aliasAndLogoPlayer1Panel;
+    private JPanel AliasAndLogoPlayer2Panel;
+
 
 
 
@@ -110,6 +118,9 @@ public class AccountCreate extends JFrame {
          * creamos un panel para el jugador 2 que será igual al creado en otra clase
          */
         JPanel informationPanelPlayer2 = new InformationPlayerPanel2AccountCreate();
+        /**
+         * este inset va a posicionar correctarmente el alias y el JTextField del jugador 2
+         */
         gbc.insets = new Insets(0,20,0,20);
         globalPlayerPanel2.add(informationPanelPlayer2, gbc);
 
@@ -164,6 +175,13 @@ public class AccountCreate extends JFrame {
          * lo añadimos al panel que tiene el start
          */
         startAreaPanel.add(startButton);
+
+        backAreaPanel = MethodsInterfaceAccountCreate.makeBackToMenuPanel();
+        gbc.gridx = 0;
+        gbc.gridy = 3;
+        contentPanel.add(backAreaPanel, gbc);
+
+
 
 
 
