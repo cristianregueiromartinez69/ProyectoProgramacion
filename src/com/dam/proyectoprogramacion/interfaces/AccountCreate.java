@@ -83,7 +83,7 @@ public class AccountCreate extends JFrame {
          */
         gbc.gridx = 0;
         gbc.gridy = 0;
-        gbc.insets = new Insets(10, 10, 10, 10);
+        gbc.insets = new Insets(50, 50, 50, 50);
 
         /**
          * añadimos el panel del jugador 1
@@ -110,7 +110,8 @@ public class AccountCreate extends JFrame {
          * creamos un panel para el jugador 2 que será igual al creado en otra clase
          */
         JPanel informationPanelPlayer2 = new InformationPlayerPanel2AccountCreate();
-        globalPlayerPanel2.add(informationPanelPlayer2);
+        gbc.insets = new Insets(0,20,0,20);
+        globalPlayerPanel2.add(informationPanelPlayer2, gbc);
 
 
         /**
@@ -145,7 +146,7 @@ public class AccountCreate extends JFrame {
          */
         gbc.gridx = 1;
         gbc.gridy = 2;
-        gbc.insets = new Insets(20,100,100,900);
+        gbc.insets = new Insets(20,100,100,700);
 
         /**
          * iniciamos el panel de start que es igual a un metodo que devuelve un panel
@@ -158,7 +159,7 @@ public class AccountCreate extends JFrame {
          */
         JButton startButton = makeStartButton("Finish");
         startButton.setForeground(Color.WHITE);
-        startButton.setPreferredSize(new Dimension(150,50));
+        startButton.setPreferredSize(new Dimension(200,50));
         /**
          * lo añadimos al panel que tiene el start
          */
