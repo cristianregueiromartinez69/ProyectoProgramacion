@@ -678,6 +678,23 @@ public class MethodsInterfaceAccountCreate {
         String aliasTextPlayer2 = InformationPlayerPanel2AccountCreate.getAliasTextPlayer2().getText();
         return  !aliasTextPlayer2.isEmpty();
     }
+    public static void disableButtonsAndAliases(){
+
+        ButtonInterfaceCreateAccount.getIcon1Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon2Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon3Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon4Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon5Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon6Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon7Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon8Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon9Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon10Player1Button().setEnabled(false);
+        InformationPlayerPanel1AccountCreate.getAliasTextPlayer1().setEditable(false);
+        ButtonInterfaceCreateAccount.getBackToMenuButton().setEnabled(false);
+
+
+    }
 
 
 
