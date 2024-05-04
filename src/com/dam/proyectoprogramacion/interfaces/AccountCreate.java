@@ -177,7 +177,6 @@ public class AccountCreate extends JFrame {
          * iniciamos un boton que es igual a un metodo que devuelve un boton
          */
         startButton = makeStartButton("Finish");
-        ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(false);
         startButton.setEnabled(false);
         startButton.setForeground(Color.WHITE);
         startButton.setPreferredSize(new Dimension(200, 50));
@@ -357,12 +356,12 @@ public class AccountCreate extends JFrame {
         }
     }
 
-    public void confirmReadyPlayer1(ActionEvent e){
-        if(!MethodsInterfaceAccountCreate.getPlayers().isEmpty()){
-            ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
-            aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeTickReadyButtonPlayer1());
-            MethodsInterfaceAccountCreate.disableButtonsAndAliases();
-        }
+    public void confirmReadyPlayer1(ActionEvent e) {
+
+
+        aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeTickReadyButtonPlayer1());
+        MethodsInterfaceAccountCreate.disableButtonsAndAliases();
+
     }
 
     /**
