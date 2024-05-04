@@ -177,6 +177,7 @@ public class AccountCreate extends JFrame {
          * iniciamos un boton que es igual a un metodo que devuelve un boton
          */
         startButton = makeStartButton("Finish");
+        ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(false);
         startButton.setEnabled(false);
         startButton.setForeground(Color.WHITE);
         startButton.setPreferredSize(new Dimension(200, 50));
@@ -212,17 +213,17 @@ public class AccountCreate extends JFrame {
         /**
          * llamamos a los botones de la clase donde tenemos los botones creados y les ponemos un actionlistener
          */
-        ButtonInterfaceCreateAccount.getIcon1Player1Button().addActionListener(this::confirmAccountsPlayer1);
-        ButtonInterfaceCreateAccount.getIcon2Player1Button().addActionListener(this::confirmAccountsPlayer1);
-        ButtonInterfaceCreateAccount.getIcon3Player1Button().addActionListener(this::confirmAccountsPlayer1);
-        ButtonInterfaceCreateAccount.getIcon4Player1Button().addActionListener(this::confirmAccountsPlayer1);
-        ButtonInterfaceCreateAccount.getIcon5Player1Button().addActionListener(this::confirmAccountsPlayer1);
-        ButtonInterfaceCreateAccount.getIcon6Player1Button().addActionListener(this::confirmAccountsPlayer1);
-        ButtonInterfaceCreateAccount.getIcon7Player1Button().addActionListener(this::confirmAccountsPlayer1);
-        ButtonInterfaceCreateAccount.getIcon8Player1Button().addActionListener(this::confirmAccountsPlayer1);
-        ButtonInterfaceCreateAccount.getIcon9Player1Button().addActionListener(this::confirmAccountsPlayer1);
-        ButtonInterfaceCreateAccount.getIcon10Player1Button().addActionListener(this::confirmAccountsPlayer1);
-
+        ButtonInterfaceCreateAccount.getIcon1Player1Button().addActionListener(this::selectNameAndIconPlayer1);
+        ButtonInterfaceCreateAccount.getIcon2Player1Button().addActionListener(this::selectNameAndIconPlayer1);
+        ButtonInterfaceCreateAccount.getIcon3Player1Button().addActionListener(this::selectNameAndIconPlayer1);
+        ButtonInterfaceCreateAccount.getIcon4Player1Button().addActionListener(this::selectNameAndIconPlayer1);
+        ButtonInterfaceCreateAccount.getIcon5Player1Button().addActionListener(this::selectNameAndIconPlayer1);
+        ButtonInterfaceCreateAccount.getIcon6Player1Button().addActionListener(this::selectNameAndIconPlayer1);
+        ButtonInterfaceCreateAccount.getIcon7Player1Button().addActionListener(this::selectNameAndIconPlayer1);
+        ButtonInterfaceCreateAccount.getIcon8Player1Button().addActionListener(this::selectNameAndIconPlayer1);
+        ButtonInterfaceCreateAccount.getIcon9Player1Button().addActionListener(this::selectNameAndIconPlayer1);
+        ButtonInterfaceCreateAccount.getIcon10Player1Button().addActionListener(this::selectNameAndIconPlayer1);
+        ButtonInterfaceCreateAccount.getReadyPlayer1Button().addActionListener(this::confirmReadyPlayer1);
 
     }
 
@@ -231,7 +232,7 @@ public class AccountCreate extends JFrame {
      *
      * @param e este es el objeto de tipo actionlistener que será añadido a los botones
      */
-    public void confirmAccountsPlayer1(ActionEvent e) {
+    public void selectNameAndIconPlayer1(ActionEvent e) {
 
         /**
          * iniciamos una variable local que es igual al texto introducido en el alias del jugador 1
@@ -252,11 +253,7 @@ public class AccountCreate extends JFrame {
                 aliasAndLogoPlayer1Panel.repaint();
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage1Player1());
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
-                if (e.getSource() == ButtonInterfaceCreateAccount.getReadyPlayer1Button()) {
-                 MethodsInterfaceAccountCreate.disableButtonsAndAliases();
-                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeTickReadyButtonPlayer1());
-                 MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono1.png"));
-                }
+                MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono1.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon2Player1Button()) {
                 ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
@@ -266,11 +263,9 @@ public class AccountCreate extends JFrame {
                 startButton.setEnabled(true);
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage2Player1());
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
-                if (e.getSource() == ButtonInterfaceCreateAccount.getReadyPlayer1Button()) {
-                    MethodsInterfaceAccountCreate.disableButtonsAndAliases();
-                    aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeTickReadyButtonPlayer1());
-                    MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono2.png"));
-                }
+
+                MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono2.png"));
+
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon3Player1Button()) {
                 ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
                 aliasAndLogoPlayer1Panel.removeAll();
@@ -279,108 +274,96 @@ public class AccountCreate extends JFrame {
                 startButton.setEnabled(true);
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage3Player1());
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
-                if (e.getSource() == ButtonInterfaceCreateAccount.getReadyPlayer1Button()) {
-                    MethodsInterfaceAccountCreate.disableButtonsAndAliases();
-                    aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeTickReadyButtonPlayer1());
-                    MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono3.png"));
-                }
-            } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon4Player1Button()) {
-                ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
-                aliasAndLogoPlayer1Panel.removeAll();
-                aliasAndLogoPlayer1Panel.revalidate();
-                aliasAndLogoPlayer1Panel.repaint();
-                startButton.setEnabled(true);
-                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage4Player1());
-                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
-                if (e.getSource() == ButtonInterfaceCreateAccount.getReadyPlayer1Button()) {
-                    MethodsInterfaceAccountCreate.disableButtonsAndAliases();
-                    aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeTickReadyButtonPlayer1());
-                    MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono4.png"));
-                }
-            } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon5Player1Button()) {
-                ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
-                aliasAndLogoPlayer1Panel.removeAll();
-                aliasAndLogoPlayer1Panel.revalidate();
-                aliasAndLogoPlayer1Panel.repaint();
-                startButton.setEnabled(true);
-                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage5Player1());
-                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
-                if (e.getSource() == ButtonInterfaceCreateAccount.getReadyPlayer1Button()) {
-                    MethodsInterfaceAccountCreate.disableButtonsAndAliases();
-                    aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeTickReadyButtonPlayer1());
-                    MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono5.png"));
-                }
-            } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon6Player1Button()) {
-                ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
-                aliasAndLogoPlayer1Panel.removeAll();
-                aliasAndLogoPlayer1Panel.revalidate();
-                aliasAndLogoPlayer1Panel.repaint();
-                startButton.setEnabled(true);
-                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage6Player1());
-                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
-                if (e.getSource() == ButtonInterfaceCreateAccount.getReadyPlayer1Button()) {
-                    MethodsInterfaceAccountCreate.disableButtonsAndAliases();
-                    aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeTickReadyButtonPlayer1());
-                    MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono6.png"));
-                }
-            } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon7Player1Button()) {
-                ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
-                aliasAndLogoPlayer1Panel.removeAll();
-                aliasAndLogoPlayer1Panel.revalidate();
-                aliasAndLogoPlayer1Panel.repaint();
-                startButton.setEnabled(true);
-                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage7Player1());
-                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
-                if (e.getSource() == ButtonInterfaceCreateAccount.getReadyPlayer1Button()) {
-                    MethodsInterfaceAccountCreate.disableButtonsAndAliases();
-                    aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeTickReadyButtonPlayer1());
-                    MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono7.png"));
-                }
-            } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon8Player1Button()) {
-                ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
-                aliasAndLogoPlayer1Panel.removeAll();
-                aliasAndLogoPlayer1Panel.revalidate();
-                aliasAndLogoPlayer1Panel.repaint();
-                startButton.setEnabled(true);
-                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage8Player1());
-                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
-                if (e.getSource() == ButtonInterfaceCreateAccount.getReadyPlayer1Button()) {
-                    MethodsInterfaceAccountCreate.disableButtonsAndAliases();
-                    aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeTickReadyButtonPlayer1());
-                    MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono8.png"));
-                }
-            } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon9Player1Button()) {
-                ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
-                aliasAndLogoPlayer1Panel.removeAll();
-                aliasAndLogoPlayer1Panel.revalidate();
-                aliasAndLogoPlayer1Panel.repaint();
-                startButton.setEnabled(true);
-                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage9Player1());
-                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
-                if (e.getSource() == ButtonInterfaceCreateAccount.getReadyPlayer1Button()) {
-                    MethodsInterfaceAccountCreate.disableButtonsAndAliases();
-                    aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeTickReadyButtonPlayer1());
-                    MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono9.png"));
-                }
-            } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon10Player1Button()) {
-                ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
-                aliasAndLogoPlayer1Panel.removeAll();
-                aliasAndLogoPlayer1Panel.revalidate();
-                aliasAndLogoPlayer1Panel.repaint();
-                startButton.setEnabled(true);
-                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage10Player1());
-                aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
-                if (e.getSource() == ButtonInterfaceCreateAccount.getReadyPlayer1Button()) {
-                    MethodsInterfaceAccountCreate.disableButtonsAndAliases();
-                    aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeTickReadyButtonPlayer1());
-                    MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono10.png"));
-                }
+
             }
+        } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon4Player1Button()) {
+            ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
+            aliasAndLogoPlayer1Panel.removeAll();
+            aliasAndLogoPlayer1Panel.revalidate();
+            aliasAndLogoPlayer1Panel.repaint();
+            startButton.setEnabled(true);
+            aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage4Player1());
+            aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
+
+            MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono4.png"));
+
+        } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon5Player1Button()) {
+            ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
+            aliasAndLogoPlayer1Panel.removeAll();
+            aliasAndLogoPlayer1Panel.revalidate();
+            aliasAndLogoPlayer1Panel.repaint();
+            startButton.setEnabled(true);
+            aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage5Player1());
+            aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
+
+            MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono5.png"));
+
+        } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon6Player1Button()) {
+            ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
+            aliasAndLogoPlayer1Panel.removeAll();
+            aliasAndLogoPlayer1Panel.revalidate();
+            aliasAndLogoPlayer1Panel.repaint();
+            startButton.setEnabled(true);
+            aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage6Player1());
+            aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
+
+            MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono6.png"));
+
+        } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon7Player1Button()) {
+            ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
+            aliasAndLogoPlayer1Panel.removeAll();
+            aliasAndLogoPlayer1Panel.revalidate();
+            aliasAndLogoPlayer1Panel.repaint();
+            startButton.setEnabled(true);
+            aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage7Player1());
+            aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
+
+            MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono7.png"));
+
+        } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon8Player1Button()) {
+            ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
+            aliasAndLogoPlayer1Panel.removeAll();
+            aliasAndLogoPlayer1Panel.revalidate();
+            aliasAndLogoPlayer1Panel.repaint();
+            startButton.setEnabled(true);
+            aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage8Player1());
+            aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
+
+            MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono8.png"));
+
+        } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon9Player1Button()) {
+            ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
+            aliasAndLogoPlayer1Panel.removeAll();
+            aliasAndLogoPlayer1Panel.revalidate();
+            aliasAndLogoPlayer1Panel.repaint();
+            startButton.setEnabled(true);
+            aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage9Player1());
+            aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
+
+            MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono9.png"));
+
+        } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon10Player1Button()) {
+            ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
+            aliasAndLogoPlayer1Panel.removeAll();
+            aliasAndLogoPlayer1Panel.revalidate();
+            aliasAndLogoPlayer1Panel.repaint();
+            startButton.setEnabled(true);
+            aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage10Player1());
+            aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
+
+            MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono10.png"));
 
         }
 
     }
 
+    public void confirmReadyPlayer1(ActionEvent e){
+        if(!MethodsInterfaceAccountCreate.getPlayers().isEmpty()){
+            ButtonInterfaceCreateAccount.getReadyPlayer1Button().setEnabled(true);
+            MethodsInterfaceAccountCreate.disableButtonsAndAliases();
+            aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeTickReadyButtonPlayer1());
+        }
+    }
     /**
      * metodo para construir un panel
      *
