@@ -178,7 +178,8 @@ public class AccountCreate extends JFrame {
 
         backAreaPanel = MethodsInterfaceAccountCreate.makeBackToMenuPanel();
         gbc.gridx = 0;
-        gbc.gridy = 3;
+        gbc.gridy = 2;
+        gbc.insets = new Insets(0,200,78,0);
         contentPanel.add(backAreaPanel, gbc);
 
 
