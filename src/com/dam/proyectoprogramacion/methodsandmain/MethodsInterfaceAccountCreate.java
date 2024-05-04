@@ -2,8 +2,12 @@ package com.dam.proyectoprogramacion.methodsandmain;
 
 import javax.swing.*;
 import  com.dam.proyectoprogramacion.buttons.*;
+import com.dam.proyectoprogramacion.interfaces.AccountCreate;
+import com.dam.proyectoprogramacion.panels.accountcreate.InformationPlayerPanel1AccountCreate;
+import com.dam.proyectoprogramacion.panels.accountcreate.InformationPlayerPanel2AccountCreate;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.util.HashMap;
 
 
@@ -665,4 +669,17 @@ public class MethodsInterfaceAccountCreate {
     public static HashMap<String, ImageIcon> getPlayers() {
         return players;
     }
+
+    public static boolean checkEmptyContentPlayer1(){
+        String aliasTextPlayer1 = InformationPlayerPanel1AccountCreate.getAliasTextPlayer1().getText();
+       return  !aliasTextPlayer1.isEmpty();
+    }
+    public static boolean checkEmptyContentPlayer2(){
+        String aliasTextPlayer2 = InformationPlayerPanel2AccountCreate.getAliasTextPlayer2().getText();
+        return  !aliasTextPlayer2.isEmpty();
+    }
+
+
+
+
 }

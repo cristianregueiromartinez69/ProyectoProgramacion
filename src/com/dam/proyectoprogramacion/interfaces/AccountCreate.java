@@ -7,6 +7,7 @@ import com.dam.proyectoprogramacion.panels.accountcreate.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 
 /**
  * clase con la interfaz de crear cuenta en la que nos loguearemos para poder jugar
@@ -38,13 +39,12 @@ public class AccountCreate extends JFrame {
      * atributo privado de tipo JPanel para poner el boton de start de ambos jugadores cuando terminaron de crear la cuenta
      */
     private JPanel startAreaPanel;
+    private JButton startButton;
 
     private JPanel backAreaPanel;
 
     private JPanel aliasAndLogoPlayer1Panel;
     private JPanel AliasAndLogoPlayer2Panel;
-
-
 
 
     public AccountCreate() {
@@ -121,7 +121,7 @@ public class AccountCreate extends JFrame {
         /**
          * este inset va a posicionar correctarmente el alias y el JTextField del jugador 2
          */
-        gbc.insets = new Insets(0,20,0,20);
+        gbc.insets = new Insets(0, 20, 0, 20);
         globalPlayerPanel2.add(informationPanelPlayer2, gbc);
 
 
@@ -157,7 +157,7 @@ public class AccountCreate extends JFrame {
          */
         gbc.gridx = 1;
         gbc.gridy = 2;
-        gbc.insets = new Insets(20,100,100,700);
+        gbc.insets = new Insets(20, 100, 100, 700);
 
         /**
          * iniciamos el panel de start que es igual a un metodo que devuelve un panel
@@ -168,9 +168,10 @@ public class AccountCreate extends JFrame {
         /**
          * iniciamos un boton que es igual a un metodo que devuelve un boton
          */
-        JButton startButton = makeStartButton("Finish");
+         startButton = makeStartButton("Finish");
+        startButton.setEnabled(false);
         startButton.setForeground(Color.WHITE);
-        startButton.setPreferredSize(new Dimension(200,50));
+        startButton.setPreferredSize(new Dimension(200, 50));
         /**
          * lo añadimos al panel que tiene el start
          */
@@ -179,23 +180,31 @@ public class AccountCreate extends JFrame {
         backAreaPanel = MethodsInterfaceAccountCreate.makeBackToMenuPanel();
         gbc.gridx = 0;
         gbc.gridy = 2;
-        gbc.insets = new Insets(0,200,78,0);
+        gbc.insets = new Insets(0, 200, 78, 0);
         contentPanel.add(backAreaPanel, gbc);
 
 
+    }
 
+    public  void confirmAccountsPlayer1(ActionEvent e, JPanel auxPanel){
 
+        String aliasTextPlayer1 = InformationPlayerPanel1AccountCreate.getAliasTextPlayer1().getText();
+        auxPanel = new JPanel();
+        auxPanel.setLayout(new BoxLayout(auxPanel, BoxLayout.Y_AXIS));
+        if(MethodsInterfaceAccountCreate.checkEmptyContentPlayer1()){
+            if(e.getSource() == ButtonInterfaceCreateAccount.getIcon1Player1Button()){
+                startButton.setEnabled(true);
+                MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/1cono1.png"));
 
+            }
 
-
-
-
-
+        }
 
     }
 
     /**
      * metodo para construir un panel
+     *
      * @return el panel construido
      */
 
@@ -208,9 +217,10 @@ public class AccountCreate extends JFrame {
 
     /**
      * metodo que crea el panel de start de la interfaz de crear cuenta
+     *
      * @return el panel creado
      */
-    private JPanel makeStartPanel(){
+    private JPanel makeStartPanel() {
         JPanel auxStartPanel = new JPanel();
         auxStartPanel.setLayout(new GridBagLayout());
         return auxStartPanel;
@@ -218,10 +228,11 @@ public class AccountCreate extends JFrame {
 
     /**
      * metodo que crea el boton de start en la interfaz crear cuenta
+     *
      * @param message el mensage que va a tener el boton
      * @return el boton creado
      */
-    private JButton makeStartButton(String message){
+    private JButton makeStartButton(String message) {
         JButton startButton = new JButton(message);
         startButton.setBackground(Color.RED);
         return startButton;
