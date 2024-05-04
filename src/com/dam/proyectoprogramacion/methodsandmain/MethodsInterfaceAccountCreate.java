@@ -15,16 +15,7 @@ import java.util.HashMap;
 public class MethodsInterfaceAccountCreate {
 
     private static HashMap <String, ImageIcon> players = new HashMap<>();
-    private  JButton auxButtonIcon1;
-    private  JButton auxButtonIcon2;
-    private  JButton auxButtonIcon3;
-    private  JButton auxButtonIcon4;
-    private  JButton auxButtonIcon5;
-    private  JButton auxButtonIcon6;
-    private  JButton auxButtonIcon7;
-    private  JButton auxButtonIcon8;
-    private  JButton auxButtonIcon9;
-    private  JButton auxButtonIcon10;
+
 
     /**
      * metodo que será el patrón de diseño a seguir en el resto de paneles de iconos a seleccionar
