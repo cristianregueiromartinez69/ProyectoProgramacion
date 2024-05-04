@@ -190,7 +190,17 @@ public class AccountCreate extends JFrame {
         aliasAndLogoPlayer1Panel.setLayout(new BoxLayout(aliasAndLogoPlayer1Panel, BoxLayout.Y_AXIS));
         contentPanel.add(aliasAndLogoPlayer1Panel, gbc);
 
-        ButtonInterfaceCreateAccount.getReadyPlayer1Button().addActionListener(this::confirmAccountsPlayer1);
+        ButtonInterfaceCreateAccount.getIcon1Player1Button().addActionListener(this::confirmAccountsPlayer1);
+        ButtonInterfaceCreateAccount.getIcon2Player1Button().addActionListener(this::confirmAccountsPlayer1);
+        ButtonInterfaceCreateAccount.getIcon3Player1Button().addActionListener(this::confirmAccountsPlayer1);
+        ButtonInterfaceCreateAccount.getIcon4Player1Button().addActionListener(this::confirmAccountsPlayer1);
+        ButtonInterfaceCreateAccount.getIcon5Player1Button().addActionListener(this::confirmAccountsPlayer1);
+        ButtonInterfaceCreateAccount.getIcon6Player1Button().addActionListener(this::confirmAccountsPlayer1);
+        ButtonInterfaceCreateAccount.getIcon7Player1Button().addActionListener(this::confirmAccountsPlayer1);
+        ButtonInterfaceCreateAccount.getIcon8Player1Button().addActionListener(this::confirmAccountsPlayer1);
+        ButtonInterfaceCreateAccount.getIcon9Player1Button().addActionListener(this::confirmAccountsPlayer1);
+        ButtonInterfaceCreateAccount.getIcon10Player1Button().addActionListener(this::confirmAccountsPlayer1);
+
 
 
 
