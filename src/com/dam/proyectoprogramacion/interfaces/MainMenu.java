@@ -4,6 +4,8 @@ import com.dam.proyectoprogramacion.background.*;
 import com.dam.proyectoprogramacion.buttons.*;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -118,6 +120,13 @@ public class MainMenu extends JFrame {
             @Override
             public void mouseExited(MouseEvent e) {
                 account.setBackground(Color.ORANGE);
+            }
+        });
+        account.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new AccountCreate();
+
             }
         });
 
