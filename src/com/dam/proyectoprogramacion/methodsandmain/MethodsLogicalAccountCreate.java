@@ -173,4 +173,20 @@ public class MethodsLogicalAccountCreate {
     public static void setImagePlayer1(ImageIcon imagePlayer1) {
         MethodsLogicalAccountCreate.imagePlayer1 = imagePlayer1;
     }
+
+    public static String getAliasPlayer2() {
+        return aliasPlayer2;
+    }
+
+    public static void setAliasPlayer2(String aliasPlayer2) {
+        MethodsLogicalAccountCreate.aliasPlayer2 = aliasPlayer2;
+    }
+
+    public static ImageIcon getImagePlayer2() {
+        return imagePlayer2;
+    }
+
+    public static void setImagePlayer2(ImageIcon imagePlayer2) {
+        MethodsLogicalAccountCreate.imagePlayer2 = imagePlayer2;
+    }
 }
