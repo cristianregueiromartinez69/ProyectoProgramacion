@@ -43,6 +43,10 @@ public class InformationPlayerPanel1AccountCreate extends JPanel {
     public static void setAliasTextPlayer1(JTextField aliasTextPlayer1) {
         InformationPlayerPanel1AccountCreate.aliasTextPlayer1 = aliasTextPlayer1;
     }
+
+    /**
+     * metodo para establecer que el alias no es editable una vez le dimos a listo
+     */
     public static void notEditableAliasText() {
         aliasTextPlayer1.setEditable(false);
     }
