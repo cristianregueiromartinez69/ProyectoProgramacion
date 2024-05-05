@@ -76,7 +76,7 @@ public class GlobalPanelPlayer2AccountCreate extends JPanel {
         /**
          * añadimos a este pane, un metodo que crea este panel en otra clase
          */
-        panelReadyPlayer2.add(MethodsInterfaceAccountCreate.makeReadyPlayer1Panel());
+        panelReadyPlayer2.add(MethodsInterfaceAccountCreate.makeReadyPlayer2Panel());
 
 
 
