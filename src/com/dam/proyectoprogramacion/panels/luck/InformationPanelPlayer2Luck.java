@@ -3,13 +3,14 @@ package com.dam.proyectoprogramacion.panels.luck;
 import javax.swing.*;
 import java.awt.*;
 
-public class InformationPanelPlayer2 extends JPanel {
+public class InformationPanelPlayer2Luck extends JPanel {
     private JLabel player2Label;
     private JLabel indicatorPutALiasLabel;
     private static JTextField aliasTextPlayer2;
+    private JPanel enterButtonPanel;
     private JButton enterButtonPlayer2;
 
-    public InformationPanelPlayer2(){
+    public InformationPanelPlayer2Luck(){
         setVisible(true);
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         player2Label = new JLabel("Jugador 2");
@@ -19,10 +20,9 @@ public class InformationPanelPlayer2 extends JPanel {
         this.add(indicatorPutALiasLabel);
         aliasTextPlayer2 = new JTextField(5);
         this.add(aliasTextPlayer2);
-        enterButtonPlayer2 = new JButton("enter");
-        enterButtonPlayer2.setBackground(Color.GREEN);
-        enterButtonPlayer2.setForeground(Color.WHITE);
-        enterButtonPlayer2.setPreferredSize(new Dimension(100,100));
-        this.add(enterButtonPlayer2);
+        enterButtonPanel = new JPanel();
+        enterButtonPanel.setLayout(new BoxLayout(enterButtonPanel, BoxLayout.X_AXIS));
+        this.add(enterButtonPanel);
+
     }
 }
