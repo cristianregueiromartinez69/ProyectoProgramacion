@@ -3,7 +3,7 @@ package com.dam.proyectoprogramacion.panels.luck;
 import javax.swing.*;
 import java.awt.*;
 /**
- * clase que tiene el panel de informacion del jugador 2
+ * clase que tiene el panel de enter del jugador 2
  * @author cristian
  * @version v1.0
  */

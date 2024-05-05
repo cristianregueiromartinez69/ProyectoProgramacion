@@ -11,8 +11,14 @@ public class InformationPanelPlayer2Luck extends JPanel {
     private JButton enterButtonPlayer2;
 
     public InformationPanelPlayer2Luck(){
+        /**
+         * atributos privados de tipo JLabel, JTextField y JButton de la clase
+         */
         setVisible(true);
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        /**
+         * iniciamos las variables
+         */
         player2Label = new JLabel("Jugador 2");
         player2Label.setForeground(Color.RED);
         this.add(player2Label);
@@ -20,9 +26,7 @@ public class InformationPanelPlayer2Luck extends JPanel {
         this.add(indicatorPutALiasLabel);
         aliasTextPlayer2 = new JTextField(5);
         this.add(aliasTextPlayer2);
-        enterButtonPanel = new JPanel();
-        enterButtonPanel.setLayout(new BoxLayout(enterButtonPanel, BoxLayout.X_AXIS));
-        this.add(enterButtonPanel);
+
 
     }
 }
