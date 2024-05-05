@@ -4,6 +4,8 @@ import javax.swing.*;
 
 public class MethodsLogicalAccountCreate {
 
+    private static String aliasPlayer1;
+    private static ImageIcon imagePlayer1;
     public static JLabel makeSelectAliasPlayer1(String alias){
         JLabel aliasText = new JLabel(alias);
         return aliasText;
@@ -79,6 +81,19 @@ public class MethodsLogicalAccountCreate {
         return imagePanel;
     }
 
+    public static String getAliasPlayer1() {
+        return aliasPlayer1;
+    }
 
+    public static void setAliasPlayer1(String aliasPlayer1) {
+        MethodsLogicalAccountCreate.aliasPlayer1 = aliasPlayer1;
+    }
 
+    public static ImageIcon getImagePlayer1() {
+        return imagePlayer1;
+    }
+
+    public static void setImagePlayer1(ImageIcon imagePlayer1) {
+        MethodsLogicalAccountCreate.imagePlayer1 = imagePlayer1;
+    }
 }

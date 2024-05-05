@@ -251,7 +251,8 @@ public class AccountCreate extends JFrame {
                 aliasAndLogoPlayer1Panel.repaint();
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage1Player1());
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
-                MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono1.png"));
+                MethodsLogicalAccountCreate.setAliasPlayer1(aliasTextPlayer1);
+                MethodsLogicalAccountCreate.setImagePlayer1(new ImageIcon("imagenes/icono1.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon2Player1Button()) {
                 aliasAndLogoPlayer1Panel.removeAll();
@@ -259,8 +260,8 @@ public class AccountCreate extends JFrame {
                 aliasAndLogoPlayer1Panel.repaint();
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage2Player1());
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
-
-                MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono2.png"));
+                MethodsLogicalAccountCreate.setAliasPlayer1(aliasTextPlayer1);
+                MethodsLogicalAccountCreate.setImagePlayer1(new ImageIcon("imagenes/icono2.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon3Player1Button()) {
                 aliasAndLogoPlayer1Panel.removeAll();
@@ -268,6 +269,8 @@ public class AccountCreate extends JFrame {
                 aliasAndLogoPlayer1Panel.repaint();
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage3Player1());
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
+                MethodsLogicalAccountCreate.setAliasPlayer1(aliasTextPlayer1);
+                MethodsLogicalAccountCreate.setImagePlayer1(new ImageIcon("imagenes/icono3.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon4Player1Button()) {
                 aliasAndLogoPlayer1Panel.removeAll();
@@ -275,8 +278,8 @@ public class AccountCreate extends JFrame {
                 aliasAndLogoPlayer1Panel.repaint();
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage4Player1());
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
-
-                MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono4.png"));
+                MethodsLogicalAccountCreate.setAliasPlayer1(aliasTextPlayer1);
+                MethodsLogicalAccountCreate.setImagePlayer1(new ImageIcon("imagenes/icono4.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon5Player1Button()) {
                 aliasAndLogoPlayer1Panel.removeAll();
@@ -284,8 +287,8 @@ public class AccountCreate extends JFrame {
                 aliasAndLogoPlayer1Panel.repaint();
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage5Player1());
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
-
-                MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono5.png"));
+                MethodsLogicalAccountCreate.setAliasPlayer1(aliasTextPlayer1);
+                MethodsLogicalAccountCreate.setImagePlayer1(new ImageIcon("imagenes/icono5.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon6Player1Button()) {
                 aliasAndLogoPlayer1Panel.removeAll();
@@ -293,8 +296,8 @@ public class AccountCreate extends JFrame {
                 aliasAndLogoPlayer1Panel.repaint();
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage6Player1());
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
-
-                MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono6.png"));
+                MethodsLogicalAccountCreate.setAliasPlayer1(aliasTextPlayer1);
+                MethodsLogicalAccountCreate.setImagePlayer1(new ImageIcon("imagenes/icono6.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon7Player1Button()) {
                 aliasAndLogoPlayer1Panel.removeAll();
@@ -302,8 +305,8 @@ public class AccountCreate extends JFrame {
                 aliasAndLogoPlayer1Panel.repaint();
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage7Player1());
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
-
-                MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono7.png"));
+                MethodsLogicalAccountCreate.setAliasPlayer1(aliasTextPlayer1);
+                MethodsLogicalAccountCreate.setImagePlayer1(new ImageIcon("imagenes/icono7.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon8Player1Button()) {
                 aliasAndLogoPlayer1Panel.removeAll();
@@ -311,8 +314,8 @@ public class AccountCreate extends JFrame {
                 aliasAndLogoPlayer1Panel.repaint();
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage8Player1());
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
-
-                MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono8.png"));
+                MethodsLogicalAccountCreate.setAliasPlayer1(aliasTextPlayer1);
+                MethodsLogicalAccountCreate.setImagePlayer1(new ImageIcon("imagenes/icono8.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon9Player1Button()) {
                 aliasAndLogoPlayer1Panel.removeAll();
@@ -320,8 +323,8 @@ public class AccountCreate extends JFrame {
                 aliasAndLogoPlayer1Panel.repaint();
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage9Player1());
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
-
-                MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono9.png"));
+                MethodsLogicalAccountCreate.setAliasPlayer1(aliasTextPlayer1);
+                MethodsLogicalAccountCreate.setImagePlayer1(new ImageIcon("imagenes/icono9.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon10Player1Button()) {
                 aliasAndLogoPlayer1Panel.removeAll();
@@ -329,8 +332,8 @@ public class AccountCreate extends JFrame {
                 aliasAndLogoPlayer1Panel.repaint();
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage10Player1());
                 aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
-
-                MethodsInterfaceAccountCreate.putPlayersInformation(aliasTextPlayer1, new ImageIcon("imagenes/icono10.png"));
+                MethodsLogicalAccountCreate.setAliasPlayer1(aliasTextPlayer1);
+                MethodsLogicalAccountCreate.setImagePlayer1(new ImageIcon("imagenes/icono10.png"));
 
             }
 
@@ -343,6 +346,8 @@ public class AccountCreate extends JFrame {
         aliasAndLogoPlayer1Panel.repaint();
         aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeTickReadyButtonPlayer1());
         MethodsInterfaceAccountCreate.disableButtonsAndAliases();
+        MethodsInterfaceAccountCreate.putPlayersInformation(MethodsLogicalAccountCreate.getAliasPlayer1(), MethodsLogicalAccountCreate.getImagePlayer1());
+        System.out.println(MethodsInterfaceAccountCreate.getPlayers().toString());
     }
 
 
