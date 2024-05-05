@@ -178,7 +178,6 @@ public class AccountCreate extends JFrame {
          * iniciamos un boton que es igual a un metodo que devuelve un boton
          */
         startButton = makeStartButton("Finish");
-        startButton.setEnabled(false);
         startButton.setForeground(Color.WHITE);
         startButton.setPreferredSize(new Dimension(200, 50));
         /**
@@ -272,6 +271,7 @@ public class AccountCreate extends JFrame {
                 dispose();
             }
         });
+        startButton.addActionListener(this::completeInformationBothPlayers);
 
     }
 
@@ -563,6 +563,12 @@ public class AccountCreate extends JFrame {
          */
         MethodsInterfaceAccountCreate.putPlayersInformation(MethodsLogicalAccountCreate.getAliasPlayer2(), MethodsLogicalAccountCreate.getImagePlayer2());
     }
+    public void completeInformationBothPlayers(ActionEvent e){
+        if(MethodsInterfaceAccountCreate.checkEnabledButtonsPlayer1ToFinish() &&
+        MethodsInterfaceAccountCreate.checkEnabledButtonsPlayer2ToFinish()){
+            dispose();
+        }
+    }
 
 
     /**
@@ -600,5 +606,6 @@ public class AccountCreate extends JFrame {
         startButton.setBackground(Color.RED);
         return startButton;
     }
+
 
 }

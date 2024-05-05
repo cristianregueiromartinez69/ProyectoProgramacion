@@ -774,7 +774,7 @@ public class MethodsInterfaceAccountCreate {
 
     }
 
-    private boolean checkEnabledButtonsPlayer1ToFinish() {
+    public static  boolean checkEnabledButtonsPlayer1ToFinish() {
 
         return !ButtonInterfaceCreateAccount.getIcon1Player1Button().isEnabled() &&
                 !ButtonInterfaceCreateAccount.getIcon2Player1Button().isEnabled() &&
@@ -791,7 +791,7 @@ public class MethodsInterfaceAccountCreate {
 
     }
 
-    private boolean checkEnabledButtonsPlayer2ToFinish() {
+    public static  boolean checkEnabledButtonsPlayer2ToFinish() {
 
         return !ButtonInterfaceCreateAccount.getIcon1Player2Button().isEnabled() &&
                 !ButtonInterfaceCreateAccount.getIcon2Player2Button().isEnabled() &&
