@@ -9,66 +9,121 @@ import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * interfaz de la suerte en la que se decide quien tira primero
+ * @author cristian
+ * @version v1.0
+ */
 public class Luck extends JFrame {
 
-    private JPanel globalPanelPLayer1;
-    private JPanel globalPanelPLayer2;
+    /**
+     *atributos privados de tipo JPanel en los que vamos a poner la información de los jugadores
+     */
+    private JPanel aliasPanelPLayer1;
+    private JPanel aliasPanelPLayer2;
     private JPanel resultPanel;
 
     public Luck() {
+        /**
+         * establecemos un titulo y dimensiones
+         * lo hacemos visible
+         */
         setTitle("¿Quien escoge el primer pokemon?");
         setSize(600, 400);
         setVisible(true);
 
+        /**
+         * instanciamos un objeto de tipo ImageIcon y le damos el path del fondo de imagen
+         */
         Image backgroundImage = new ImageIcon("imagenes/fondoluck.png").getImage();
 
+        /**
+         * creamos un panel y lo hacemos igual a otro creado en otra clase
+         */
         BackgroundMainMenuPanel backgroundPanel = new BackgroundMainMenuPanel(backgroundImage);
         backgroundPanel.setLayout(new BorderLayout());
 
+        /**
+         * creamos un panel que contendrá la imagen de fondo y lo hacemos igual a un metodo que crea el panel
+         */
         JPanel contentPanel = makeContentPanel();
         GridBagConstraints gbc = new GridBagConstraints();
 
+        /**
+         * añadimos el panel
+         */
         backgroundPanel.add(contentPanel, BorderLayout.CENTER);
 
 
         add(backgroundPanel);
 
-        globalPanelPLayer1 = new JPanel();
-        globalPanelPLayer1.setLayout(new GridBagLayout());
+        /**
+         * iniciamos el panel de informacion del jugador 1
+         * le ponemos un layout
+         */
+        aliasPanelPLayer1 = new JPanel();
+        aliasPanelPLayer1.setLayout(new GridBagLayout());
 
 
-        globalPanelPLayer2 = new JPanel();
-        globalPanelPLayer2.setLayout(new GridBagLayout());
+        /**
+         * iniciamos el panel del jugador 2
+         * le ponemos un layout
+         */
+        aliasPanelPLayer2 = new JPanel();
+        aliasPanelPLayer2.setLayout(new GridBagLayout());
 
 
+        /**
+         * establecemos donde se va a situar el panel de informacion del juhador 1
+         */
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.insets = new Insets(50, 200, 50, 200);
 
 
-        contentPanel.add(globalPanelPLayer1, gbc);
+        /**
+         * lo añadimos al panel central
+         */
+        contentPanel.add(aliasPanelPLayer1, gbc);
 
 
+        /**
+         * establecemos donde se va a situar el panel de informacion del juhador 2
+         */
         gbc.gridx = 1;
         gbc.gridy = 0;
-        contentPanel.add(globalPanelPLayer2, gbc);
+        /**
+         * lo añadimos al panel central
+         */
+        contentPanel.add(aliasPanelPLayer2, gbc);
 
-        JPanel informationPanelPlayer1 = new InformationPanelPlayer1Luck();
-        globalPanelPLayer1.add(informationPanelPlayer1);
+        /**
+         * instanciamos un panel y decimos que es igual a un panel creado en otra clase
+         * este es el panel de informacion del jugador1
+         */
+        JPanel aliasInformationPanelPLayer1 = new InformationPanelPlayer1Luck();
+        aliasPanelPLayer1.add(aliasInformationPanelPLayer1);
 
-        JPanel informationPanelPlayer2 = new InformationPanelPlayer2Luck();
-        globalPanelPLayer2.add(informationPanelPlayer2);
+        /**
+         * instanciamos un panel y decimos que es igual a un panel creado en otra clase
+         * este es el panel de informacion del jugador2
+         */
+        JPanel aliasInformationPlayer2 = new InformationPanelPlayer2Luck();
+        aliasPanelPLayer2.add(aliasInformationPlayer2);
 
-
-        gbc.gridx = 0;
-        gbc.gridy = 1;
+        /**
+         * instanciamos un panel y decimos que es igual a un panel creado en otra clase
+         * este es el panel de enter del jugador 1
+         */
         JPanel enterPanelPlayer1 = new EnterPanelPlayer1Luck();
-        globalPanelPLayer1.add(enterPanelPlayer1);
+        aliasPanelPLayer1.add(enterPanelPlayer1);
 
-        gbc.gridx = 1;
-        gbc.gridy = 1;
+        /**
+         * instanciamos un panel y decimos que es igual a un panel creado en otra clase
+         * este es el panel de enter del jugador 2
+         */
         JPanel enterPanelPlayer2 = new EnterPanelPlayer2Luck();
-        globalPanelPLayer2.add(enterPanelPlayer2);
+        aliasPanelPLayer2.add(enterPanelPlayer2);
 
 
 

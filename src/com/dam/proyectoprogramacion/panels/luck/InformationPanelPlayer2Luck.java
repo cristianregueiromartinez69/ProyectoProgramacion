@@ -14,7 +14,7 @@ public class InformationPanelPlayer2Luck extends JPanel {
         setVisible(true);
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         player2Label = new JLabel("Jugador 2");
-        player2Label.setForeground(Color.blue);
+        player2Label.setForeground(Color.RED);
         this.add(player2Label);
         indicatorPutALiasLabel = new JLabel("Introduce un alias");
         this.add(indicatorPutALiasLabel);
