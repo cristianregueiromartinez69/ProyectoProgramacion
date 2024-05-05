@@ -647,6 +647,10 @@ public class MethodsInterfaceAccountCreate {
         return contentPanel;
     }
 
+    /**
+     * metodo para la creación del panel con el boton de volver al menu
+     * @return el panel creado
+     */
     public static JPanel makeBackToMenuPanel(){
         JPanel contentPanel = new JPanel();
         contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
@@ -659,23 +663,44 @@ public class MethodsInterfaceAccountCreate {
         return contentPanel;
     }
 
+    /**
+     * metodo para añadir valores al hashmap de los jugadores
+     * @param alias el alias del jugador que será un string
+     * @param image la imagen del jugador que será el path del icono
+     */
     public static void putPlayersInformation(String alias, ImageIcon image){
 
         players.put(alias, image);
     }
 
+    /**
+     * getter que nos va a devolver el hashmap de los jugadores
+     * @return el hashmap de los jugadores
+     */
     public static HashMap<String, ImageIcon> getPlayers() {
         return players;
     }
 
+    /**
+     * metodo booleano que comprueba si se ha rellenado el campo del alias del jugador 1
+     * @return true en caso correcto, false en caos falso
+     */
     public static boolean checkEmptyContentPlayer1(){
         String aliasTextPlayer1 = InformationPlayerPanel1AccountCreate.getAliasTextPlayer1().getText();
        return  !aliasTextPlayer1.isEmpty();
     }
+    /**
+     * metodo booleano que comprueba si se ha rellenado el campo del alias del jugador 2
+     * @return true en caso correcto, false en caos falso
+     */
     public static boolean checkEmptyContentPlayer2(){
         String aliasTextPlayer2 = InformationPlayerPanel2AccountCreate.getAliasTextPlayer2().getText();
         return  !aliasTextPlayer2.isEmpty();
     }
+
+    /**
+     * metodo para deshabilitar los botones del jugador 1 cuando presione listo
+     */
     public static void disableButtonsAndAliasesPlayer1(){
 
         ButtonInterfaceCreateAccount.getIcon1Player1Button().setEnabled(false);
@@ -693,6 +718,9 @@ public class MethodsInterfaceAccountCreate {
 
 
     }
+    /**
+     * metodo para deshabilitar los botones del jugador 2 cuando presione listo
+     */
     public static void disableButtonsAndAliasesPlayer2(){
 
         ButtonInterfaceCreateAccount.getIcon1Player2Button().setEnabled(false);
