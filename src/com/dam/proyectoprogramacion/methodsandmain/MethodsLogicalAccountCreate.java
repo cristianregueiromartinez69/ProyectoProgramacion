@@ -263,6 +263,7 @@ public class MethodsLogicalAccountCreate {
         return imagePanel;
     }
 
+
     /**
      * getters y setters de los atributos que nos servirán para poner información en el hashmap de players
      * @return el valor correspondiente

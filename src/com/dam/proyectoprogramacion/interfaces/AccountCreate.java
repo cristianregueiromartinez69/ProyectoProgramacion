@@ -9,6 +9,7 @@ import com.dam.proyectoprogramacion.panels.accountcreate.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * clase con la interfaz de crear cuenta en la que nos loguearemos para poder jugar
@@ -177,7 +178,6 @@ public class AccountCreate extends JFrame {
          * iniciamos un boton que es igual a un metodo que devuelve un boton
          */
         startButton = makeStartButton("Finish");
-        startButton.setEnabled(false);
         startButton.setForeground(Color.WHITE);
         startButton.setPreferredSize(new Dimension(200, 50));
         /**
@@ -258,6 +258,20 @@ public class AccountCreate extends JFrame {
          */
         ButtonInterfaceCreateAccount.getReadyPlayer1Button().addActionListener(this::confirmReadyPlayer1);
         ButtonInterfaceCreateAccount.getReadyPlayer2Button().addActionListener(this::confirmReadyPlayer2);
+
+        /**
+         * añadiendo un actionListener al boton de volver al menu
+         */
+        ButtonInterfaceCreateAccount.getBackToMenuButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                /**
+                 * este metodo cierra la ventana y nos llevará al menú
+                 */
+                dispose();
+            }
+        });
+        startButton.addActionListener(this::completeInformationBothPlayers);
 
     }
 
@@ -549,6 +563,12 @@ public class AccountCreate extends JFrame {
          */
         MethodsInterfaceAccountCreate.putPlayersInformation(MethodsLogicalAccountCreate.getAliasPlayer2(), MethodsLogicalAccountCreate.getImagePlayer2());
     }
+    public void completeInformationBothPlayers(ActionEvent e){
+        if(MethodsInterfaceAccountCreate.checkEnabledButtonsPlayer1ToFinish() &&
+        MethodsInterfaceAccountCreate.checkEnabledButtonsPlayer2ToFinish()){
+            dispose();
+        }
+    }
 
 
     /**
@@ -586,5 +606,6 @@ public class AccountCreate extends JFrame {
         startButton.setBackground(Color.RED);
         return startButton;
     }
+
 
 }
