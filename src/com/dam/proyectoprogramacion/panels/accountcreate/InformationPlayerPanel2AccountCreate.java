@@ -15,7 +15,7 @@ public class InformationPlayerPanel2AccountCreate extends JPanel{
      */
     private JLabel player2Label;
     private JLabel indicatorPutALiasLabel;
-    private JTextField aliasTextPlayer2;
+    private static JTextField aliasTextPlayer2;
 
 
     /**
@@ -34,5 +34,19 @@ public class InformationPlayerPanel2AccountCreate extends JPanel{
         aliasTextPlayer2 = new JTextField(5);
         this.add(aliasTextPlayer2);
 
+    }
+
+    public static JTextField getAliasTextPlayer2() {
+        return aliasTextPlayer2;
+    }
+
+    public static void setAliasTextPlayer2(JTextField aliasTextPlayer2) {
+        InformationPlayerPanel2AccountCreate.aliasTextPlayer2 = aliasTextPlayer2;
+    }
+    /**
+     * metodo para establecer que el alias no es editable una vez le dimos a listo
+     */
+    public static void notEditableAliasText() {
+        aliasTextPlayer2.setEditable(false);
     }
 }

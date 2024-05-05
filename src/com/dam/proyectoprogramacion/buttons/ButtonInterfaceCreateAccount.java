@@ -14,41 +14,41 @@ public class ButtonInterfaceCreateAccount extends JPanel {
     /**
      * atributos privados de tipo JButton que es lo que presionará el jugador 1 para seleccionar un icono
      */
-    private JButton icon1Player1Button;
-    private JButton icon2Player1Button;
-    private JButton icon3Player1Button;
-    private JButton icon4Player1Button;
-    private JButton icon5Player1Button;
-    private JButton icon6Player1Button;
-    private JButton icon7Player1Button;
-    private JButton icon8Player1Button;
-    private JButton icon9Player1Button;
-    private JButton icon10Player1Button;
+    private  static JButton icon1Player1Button;
+    private static JButton icon2Player1Button;
+    private  static JButton icon3Player1Button;
+    private static JButton icon4Player1Button;
+    private static JButton icon5Player1Button;
+    private  static JButton icon6Player1Button;
+    private static JButton icon7Player1Button;
+    private static JButton icon8Player1Button;
+    private static JButton icon9Player1Button;
+    private static JButton icon10Player1Button;
 
     /**
      * atributos privados de tipo JButton que es lo que presionará el jugador 2 para seleccionar un icono
      */
-    private JButton icon1Player2Button;
-    private JButton icon2Player2Button;
-    private JButton icon3Player2Button;
-    private JButton icon4Player2Button;
-    private JButton icon5Player2Button;
-    private JButton icon6Player2Button;
-    private JButton icon7Player2Button;
-    private JButton icon8Player2Button;
-    private JButton icon9Player2Button;
-    private JButton icon10Player2Button;
+    private static JButton icon1Player2Button;
+    private static JButton icon2Player2Button;
+    private static JButton icon3Player2Button;
+    private static JButton icon4Player2Button;
+    private static JButton icon5Player2Button;
+    private static JButton icon6Player2Button;
+    private static JButton icon7Player2Button;
+    private static JButton icon8Player2Button;
+    private static JButton icon9Player2Button;
+    private static JButton icon10Player2Button;
 
     /**
      * atributos privados de tipo JButton que son los botones de confirmacion del jugador 1 y 2
      */
-    private JButton readyPlayer1Button;
-    private JButton readyPlayer2Button;
+    private static JButton readyPlayer1Button;
+    private static JButton readyPlayer2Button;
 
     /**
      * atributo privado de tipo JButton que sirve para volver al menu
      */
-    private JButton backToMenuButton;
+    private static JButton backToMenuButton;
 
     /**
      * metodo que crea el boton que ha de presionar el jugador 1 para seleccionar el icono 1
@@ -360,7 +360,7 @@ public class ButtonInterfaceCreateAccount extends JPanel {
      *
      * @return el boton para regresar al menu
      */
-    public JButton makeBackToMenuButton(){
+    public  JButton makeBackToMenuButton(){
         ImageIcon iconBackToMenu = new ImageIcon("imagenes/backMenu.png");
         backToMenuButton = new CreateButtons("Volver al Menu", iconBackToMenu);
         setBackground(Color.CYAN);
@@ -370,7 +370,95 @@ public class ButtonInterfaceCreateAccount extends JPanel {
         return backToMenuButton;
     }
 
+    public static JButton getIcon1Player1Button() {
+        return icon1Player1Button;
+    }
 
+    public static JButton getIcon2Player1Button() {
+        return icon2Player1Button;
+    }
 
+    public static JButton getIcon3Player1Button() {
+        return icon3Player1Button;
+    }
 
+    public static JButton getIcon4Player1Button() {
+        return icon4Player1Button;
+    }
+
+    public static JButton getIcon5Player1Button() {
+        return icon5Player1Button;
+    }
+
+    public static JButton getIcon6Player1Button() {
+        return icon6Player1Button;
+    }
+
+    public static JButton getIcon7Player1Button() {
+        return icon7Player1Button;
+    }
+
+    public static JButton getIcon8Player1Button() {
+        return icon8Player1Button;
+    }
+
+    public static JButton getIcon9Player1Button() {
+        return icon9Player1Button;
+    }
+
+    public static JButton getIcon10Player1Button() {
+        return icon10Player1Button;
+    }
+
+    public static JButton getIcon1Player2Button() {
+        return icon1Player2Button;
+    }
+
+    public static JButton getIcon2Player2Button() {
+        return icon2Player2Button;
+    }
+
+    public static JButton getIcon3Player2Button() {
+        return icon3Player2Button;
+    }
+
+    public static JButton getIcon4Player2Button() {
+        return icon4Player2Button;
+    }
+
+    public static JButton getIcon5Player2Button() {
+        return icon5Player2Button;
+    }
+
+    public static JButton getIcon6Player2Button() {
+        return icon6Player2Button;
+    }
+
+    public static JButton getIcon7Player2Button() {
+        return icon7Player2Button;
+    }
+
+    public static JButton getIcon8Player2Button() {
+        return icon8Player2Button;
+    }
+
+    public static JButton getIcon9Player2Button() {
+        return icon9Player2Button;
+    }
+
+    public static JButton getIcon10Player2Button() {
+        return icon10Player2Button;
+    }
+
+    public static JButton getReadyPlayer1Button() {
+        return readyPlayer1Button;
+    }
+
+    public static JButton getReadyPlayer2Button() {
+        return readyPlayer2Button;
+    }
+
+    public static JButton getBackToMenuButton() {
+        return backToMenuButton;
+    }
 }

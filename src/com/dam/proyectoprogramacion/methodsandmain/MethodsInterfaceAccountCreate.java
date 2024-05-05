@@ -2,10 +2,11 @@ package com.dam.proyectoprogramacion.methodsandmain;
 
 import javax.swing.*;
 import  com.dam.proyectoprogramacion.buttons.*;
+import com.dam.proyectoprogramacion.panels.accountcreate.InformationPlayerPanel1AccountCreate;
+import com.dam.proyectoprogramacion.panels.accountcreate.InformationPlayerPanel2AccountCreate;
 
 import java.awt.*;
-
-
+import java.util.HashMap;
 
 
 /**
@@ -14,6 +15,8 @@ import java.awt.*;
  * @version v1.0
  */
 public class MethodsInterfaceAccountCreate {
+
+    private static HashMap <String, ImageIcon> players = new HashMap<>();
 
 
     /**
@@ -43,7 +46,7 @@ public class MethodsInterfaceAccountCreate {
         icon1Button.setForeground(Color.WHITE);
         contentPanel.add(icon1Button);
 
-    return contentPanel;
+        return contentPanel;
     }
     /**
      * metodo para crear el panel con la imagen y el boton del icono2 del jugador 1
@@ -329,7 +332,7 @@ public class MethodsInterfaceAccountCreate {
         /**
          * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
          */
-        JButton icon1Button = new ButtonInterfaceCreateAccount().makeIcon1Player1Button();
+        JButton icon1Button = new ButtonInterfaceCreateAccount().makeIcon1Player2Button();
         icon1Button.setBackground(Color.ORANGE.darker());
         icon1Button.setPreferredSize(new Dimension(140,50));
         icon1Button.setForeground(Color.WHITE);
@@ -357,7 +360,7 @@ public class MethodsInterfaceAccountCreate {
         /**
          * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
          */
-        JButton icon2Button = new ButtonInterfaceCreateAccount().makeIcon2Player1Button();
+        JButton icon2Button = new ButtonInterfaceCreateAccount().makeIcon2Player2Button();
         icon2Button.setBackground(Color.ORANGE.darker());
         icon2Button.setPreferredSize(new Dimension(140,50));
         icon2Button.setForeground(Color.WHITE);
@@ -385,7 +388,7 @@ public class MethodsInterfaceAccountCreate {
         /**
          * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
          */
-        JButton icon3Button = new ButtonInterfaceCreateAccount().makeIcon3Player1Button();
+        JButton icon3Button = new ButtonInterfaceCreateAccount().makeIcon3Player2Button();
         icon3Button.setBackground(Color.ORANGE.darker());
         icon3Button.setPreferredSize(new Dimension(140,50));
         icon3Button.setForeground(Color.WHITE);
@@ -416,7 +419,7 @@ public class MethodsInterfaceAccountCreate {
         /**
          * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
          */
-        JButton icon4Button = new ButtonInterfaceCreateAccount().makeIcon4Player1Button();
+        JButton icon4Button = new ButtonInterfaceCreateAccount().makeIcon4Player2Button();
         icon4Button.setBackground(Color.ORANGE.darker());
         icon4Button.setPreferredSize(new Dimension(140,50));
         icon4Button.setForeground(Color.WHITE);
@@ -446,7 +449,7 @@ public class MethodsInterfaceAccountCreate {
         /**
          * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
          */
-        JButton icon5Button = new ButtonInterfaceCreateAccount().makeIcon5Player1Button();
+        JButton icon5Button = new ButtonInterfaceCreateAccount().makeIcon5Player2Button();
         icon5Button.setBackground(Color.ORANGE.darker());
         icon5Button.setPreferredSize(new Dimension(140,50));
         icon5Button.setForeground(Color.WHITE);
@@ -475,7 +478,7 @@ public class MethodsInterfaceAccountCreate {
         /**
          * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
          */
-        JButton icon6Button = new ButtonInterfaceCreateAccount().makeIcon6Player1Button();
+        JButton icon6Button = new ButtonInterfaceCreateAccount().makeIcon6Player2Button();
         icon6Button.setBackground(Color.ORANGE.darker());
         icon6Button.setPreferredSize(new Dimension(140,50));
         icon6Button.setForeground(Color.WHITE);
@@ -504,7 +507,7 @@ public class MethodsInterfaceAccountCreate {
         /**
          * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
          */
-        JButton icon7Button = new ButtonInterfaceCreateAccount().makeIcon7Player1Button();
+        JButton icon7Button = new ButtonInterfaceCreateAccount().makeIcon7Player2Button();
         icon7Button.setBackground(Color.ORANGE.darker());
         icon7Button.setPreferredSize(new Dimension(140,50));
         icon7Button.setForeground(Color.WHITE);
@@ -533,7 +536,7 @@ public class MethodsInterfaceAccountCreate {
         /**
          * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
          */
-        JButton icon8Button = new ButtonInterfaceCreateAccount().makeIcon8Player1Button();
+        JButton icon8Button = new ButtonInterfaceCreateAccount().makeIcon8Player2Button();
         icon8Button.setBackground(Color.ORANGE.darker());
         icon8Button.setPreferredSize(new Dimension(140,50));
         icon8Button.setForeground(Color.WHITE);
@@ -562,7 +565,7 @@ public class MethodsInterfaceAccountCreate {
         /**
          * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
          */
-        JButton icon9Button = new ButtonInterfaceCreateAccount().makeIcon9Player1Button();
+        JButton icon9Button = new ButtonInterfaceCreateAccount().makeIcon9Player2Button();
         icon9Button.setBackground(Color.ORANGE.darker());
         icon9Button.setPreferredSize(new Dimension(140,50));
         icon9Button.setForeground(Color.WHITE);
@@ -591,7 +594,7 @@ public class MethodsInterfaceAccountCreate {
         /**
          * hacemos el boton con el metodo de los paquetes de los botones y le añadimos funcionalidades
          */
-        JButton icon10Button = new ButtonInterfaceCreateAccount().makeIcon10Player1Button();
+        JButton icon10Button = new ButtonInterfaceCreateAccount().makeIcon10Player2Button();
         icon10Button.setBackground(Color.ORANGE.darker());
         icon10Button.setPreferredSize(new Dimension(140,50));
         icon10Button.setForeground(Color.WHITE);
@@ -643,5 +646,100 @@ public class MethodsInterfaceAccountCreate {
 
         return contentPanel;
     }
+
+    /**
+     * metodo para la creación del panel con el boton de volver al menu
+     * @return el panel creado
+     */
+    public static JPanel makeBackToMenuPanel(){
+        JPanel contentPanel = new JPanel();
+        contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
+
+        JButton backButton = new ButtonInterfaceCreateAccount().makeBackToMenuButton();
+        backButton.setBackground(Color.CYAN);
+        backButton.setPreferredSize(new Dimension(140,50));
+        backButton.setForeground(Color.BLACK);
+        contentPanel.add(backButton);
+        return contentPanel;
+    }
+
+    /**
+     * metodo para añadir valores al hashmap de los jugadores
+     * @param alias el alias del jugador que será un string
+     * @param image la imagen del jugador que será el path del icono
+     */
+    public static void putPlayersInformation(String alias, ImageIcon image){
+
+        players.put(alias, image);
+    }
+
+    /**
+     * getter que nos va a devolver el hashmap de los jugadores
+     * @return el hashmap de los jugadores
+     */
+    public static HashMap<String, ImageIcon> getPlayers() {
+        return players;
+    }
+
+    /**
+     * metodo booleano que comprueba si se ha rellenado el campo del alias del jugador 1
+     * @return true en caso correcto, false en caos falso
+     */
+    public static boolean checkEmptyContentPlayer1(){
+        String aliasTextPlayer1 = InformationPlayerPanel1AccountCreate.getAliasTextPlayer1().getText();
+       return  !aliasTextPlayer1.isEmpty();
+    }
+    /**
+     * metodo booleano que comprueba si se ha rellenado el campo del alias del jugador 2
+     * @return true en caso correcto, false en caos falso
+     */
+    public static boolean checkEmptyContentPlayer2(){
+        String aliasTextPlayer2 = InformationPlayerPanel2AccountCreate.getAliasTextPlayer2().getText();
+        return  !aliasTextPlayer2.isEmpty();
+    }
+
+    /**
+     * metodo para deshabilitar los botones del jugador 1 cuando presione listo
+     */
+    public static void disableButtonsAndAliasesPlayer1(){
+
+        ButtonInterfaceCreateAccount.getIcon1Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon2Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon3Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon4Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon5Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon6Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon7Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon8Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon9Player1Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon10Player1Button().setEnabled(false);
+        InformationPlayerPanel1AccountCreate.notEditableAliasText();
+        ButtonInterfaceCreateAccount.getBackToMenuButton().setEnabled(false);
+
+
+    }
+    /**
+     * metodo para deshabilitar los botones del jugador 2 cuando presione listo
+     */
+    public static void disableButtonsAndAliasesPlayer2(){
+
+        ButtonInterfaceCreateAccount.getIcon1Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon2Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon3Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon4Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon5Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon6Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon7Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon8Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon9Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon10Player2Button().setEnabled(false);
+        InformationPlayerPanel2AccountCreate.notEditableAliasText();
+        ButtonInterfaceCreateAccount.getBackToMenuButton().setEnabled(false);
+
+
+    }
+
+
+
 
 }
