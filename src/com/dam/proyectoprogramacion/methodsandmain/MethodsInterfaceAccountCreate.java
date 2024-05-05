@@ -2,12 +2,10 @@ package com.dam.proyectoprogramacion.methodsandmain;
 
 import javax.swing.*;
 import  com.dam.proyectoprogramacion.buttons.*;
-import com.dam.proyectoprogramacion.interfaces.AccountCreate;
 import com.dam.proyectoprogramacion.panels.accountcreate.InformationPlayerPanel1AccountCreate;
 import com.dam.proyectoprogramacion.panels.accountcreate.InformationPlayerPanel2AccountCreate;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.util.HashMap;
 
 
@@ -649,6 +647,10 @@ public class MethodsInterfaceAccountCreate {
         return contentPanel;
     }
 
+    /**
+     * metodo para hacer un panel con el boton de volver al menu
+     * @return el panel creado
+     */
     public static JPanel makeBackToMenuPanel(){
         JPanel contentPanel = new JPanel();
         contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
@@ -661,24 +663,45 @@ public class MethodsInterfaceAccountCreate {
         return contentPanel;
     }
 
+    /**
+     * metodo para añadir valores al hashmap de los jugadores
+     * @param alias el alias del jugador que será un string
+     * @param image la imagen del jugador que será el path del icono
+     */
     public static void putPlayersInformation(String alias, ImageIcon image){
 
         players.put(alias, image);
     }
 
+    /**
+     * getter que nos va a devolver el hashmap de los jugadores
+     * @return el hashmap de los jugadores
+     */
     public static HashMap<String, ImageIcon> getPlayers() {
         return players;
     }
 
+    /**
+     * metodo booleano que comprueba si se ha rellenado el campo del alias del jugador 1
+     * @return true en caso correcto, false en caos falso
+     */
     public static boolean checkEmptyContentPlayer1(){
         String aliasTextPlayer1 = InformationPlayerPanel1AccountCreate.getAliasTextPlayer1().getText();
        return  !aliasTextPlayer1.isEmpty();
     }
+    /**
+     * metodo booleano que comprueba si se ha rellenado el campo del alias del jugador 2
+     * @return true en caso correcto, false en caos falso
+     */
     public static boolean checkEmptyContentPlayer2(){
         String aliasTextPlayer2 = InformationPlayerPanel2AccountCreate.getAliasTextPlayer2().getText();
         return  !aliasTextPlayer2.isEmpty();
     }
-    public static void disableButtonsAndAliases(){
+
+    /**
+     * metodo para deshabilitar los botones del jugador 1 cuando presione listo
+     */
+    public static void disableButtonsAndAliasesPlayer1(){
 
         ButtonInterfaceCreateAccount.getIcon1Player1Button().setEnabled(false);
         ButtonInterfaceCreateAccount.getIcon2Player1Button().setEnabled(false);
@@ -691,6 +714,26 @@ public class MethodsInterfaceAccountCreate {
         ButtonInterfaceCreateAccount.getIcon9Player1Button().setEnabled(false);
         ButtonInterfaceCreateAccount.getIcon10Player1Button().setEnabled(false);
         InformationPlayerPanel1AccountCreate.notEditableAliasText();
+        ButtonInterfaceCreateAccount.getBackToMenuButton().setEnabled(false);
+
+
+    }
+    /**
+     * metodo para deshabilitar los botones del jugador 2 cuando presione listo
+     */
+    public static void disableButtonsAndAliasesPlayer2(){
+
+        ButtonInterfaceCreateAccount.getIcon1Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon2Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon3Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon4Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon5Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon6Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon7Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon8Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon9Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon10Player2Button().setEnabled(false);
+        InformationPlayerPanel2AccountCreate.notEditableAliasText();
         ButtonInterfaceCreateAccount.getBackToMenuButton().setEnabled(false);
 
 
