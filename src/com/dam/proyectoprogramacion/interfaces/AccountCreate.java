@@ -9,6 +9,7 @@ import com.dam.proyectoprogramacion.panels.accountcreate.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * clase con la interfaz de crear cuenta en la que nos loguearemos para poder jugar
@@ -258,6 +259,19 @@ public class AccountCreate extends JFrame {
          */
         ButtonInterfaceCreateAccount.getReadyPlayer1Button().addActionListener(this::confirmReadyPlayer1);
         ButtonInterfaceCreateAccount.getReadyPlayer2Button().addActionListener(this::confirmReadyPlayer2);
+
+        /**
+         * añadiendo un actionListener al boton de volver al menu
+         */
+        ButtonInterfaceCreateAccount.getBackToMenuButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                /**
+                 * este metodo cierra la ventana y nos llevará al menú
+                 */
+                dispose();
+            }
+        });
 
     }
 
