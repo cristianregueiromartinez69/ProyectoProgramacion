@@ -48,7 +48,7 @@ public class AccountCreate extends JFrame {
     private JPanel backAreaPanel;
 
     /**
-     * atributo privado de tipo jpanel que nos servirá para que, una vel el usuario a introducido el alias
+     * atributo privado de tipo jpanel que nos servirá para que, una vez el usuario a introducido el alias
      * y un logo, le aparezca en un panel inferior lo introducido
      */
     private JPanel ALiasAndLogoPlayer1Panel;
@@ -209,14 +209,22 @@ public class AccountCreate extends JFrame {
         ALiasAndLogoPlayer1Panel.setLayout(new BoxLayout(ALiasAndLogoPlayer1Panel, BoxLayout.Y_AXIS));
         contentPanel.add(ALiasAndLogoPlayer1Panel, gbc);
 
+        /**
+         * establecemos nuevas medidas para la información seleccionada por parte del jugador 2
+         */
         gbc.gridx = 1;
         gbc.gridy = 3;
+        /**
+         * iniciamos el panel del jugador 2
+         * le damos un layout y lo añadimos al panel principal
+         */
         AliasAndLogoPlayer2Panel = new JPanel();
         AliasAndLogoPlayer2Panel.setLayout(new BoxLayout(AliasAndLogoPlayer2Panel, BoxLayout.Y_AXIS));
         contentPanel.add(AliasAndLogoPlayer2Panel, gbc);
 
         /**
          * llamamos a los botones de la clase donde tenemos los botones creados y les ponemos un actionlistener
+         * estos botones son los del jugador 1 en el que tiene que escoger el logo que le va a acompañar en la batalla
          */
         ButtonInterfaceCreateAccount.getIcon1Player1Button().addActionListener(this::selectNameAndIconPlayer1);
         ButtonInterfaceCreateAccount.getIcon2Player1Button().addActionListener(this::selectNameAndIconPlayer1);
@@ -229,6 +237,10 @@ public class AccountCreate extends JFrame {
         ButtonInterfaceCreateAccount.getIcon9Player1Button().addActionListener(this::selectNameAndIconPlayer1);
         ButtonInterfaceCreateAccount.getIcon10Player1Button().addActionListener(this::selectNameAndIconPlayer1);
 
+        /**
+         * llamamos a los botones de la clase donde tenemos los botones creados y les ponemos un actionlistener
+         * estos botones son los del jugador 2 en el que tiene que escoger el logo que le va a acompañar en la batalla
+         */
         ButtonInterfaceCreateAccount.getIcon1Player2Button().addActionListener(this::selectNameAndIconPlayer2);
         ButtonInterfaceCreateAccount.getIcon2Player2Button().addActionListener(this::selectNameAndIconPlayer2);
         ButtonInterfaceCreateAccount.getIcon3Player2Button().addActionListener(this::selectNameAndIconPlayer2);
@@ -240,6 +252,10 @@ public class AccountCreate extends JFrame {
         ButtonInterfaceCreateAccount.getIcon9Player2Button().addActionListener(this::selectNameAndIconPlayer2);
         ButtonInterfaceCreateAccount.getIcon10Player2Button().addActionListener(this::selectNameAndIconPlayer2);
 
+        /**
+         * boton de de confirmacion del jugador 1 y 2
+         * le añadimos un actionListener
+         */
         ButtonInterfaceCreateAccount.getReadyPlayer1Button().addActionListener(this::confirmReadyPlayer1);
         ButtonInterfaceCreateAccount.getReadyPlayer2Button().addActionListener(this::confirmReadyPlayer2);
 
@@ -261,7 +277,7 @@ public class AccountCreate extends JFrame {
          */
         if (MethodsInterfaceAccountCreate.checkEmptyContentPlayer1()) {
             /**
-             * si el usuario pulsa el boton del icono1, aparecerá su alias junto con el logo escogido
+             * si el usuario pulsa el boton del icono, aparecerá su alias junto con el logo escogido
              * se borra lo anterior del panel para introducir lo nuevo
              */
             if (e.getSource() == ButtonInterfaceCreateAccount.getIcon1Player1Button()) {
@@ -270,9 +286,17 @@ public class AccountCreate extends JFrame {
                 ALiasAndLogoPlayer1Panel.repaint();
                 ALiasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectImage1Player1());
                 ALiasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer1(aliasTextPlayer1));
+                /**
+                 * estos metodos van a recoger 2 variables:
+                 * 1. será el alias del jugador
+                 * 2. el path de la imagen del logo que ha escogido el jugador
+                 */
                 MethodsLogicalAccountCreate.setAliasPlayer1(aliasTextPlayer1);
                 MethodsLogicalAccountCreate.setImagePlayer1(new ImageIcon("imagenes/icono1.png"));
 
+                /**
+                 * Se repite la misma instruccion por cada boton de icono que hay
+                 */
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon2Player1Button()) {
                 ALiasAndLogoPlayer1Panel.removeAll();
                 ALiasAndLogoPlayer1Panel.revalidate();
@@ -362,7 +386,7 @@ public class AccountCreate extends JFrame {
     public void selectNameAndIconPlayer2(ActionEvent e) {
 
         /**
-         * iniciamos una variable local que es igual al texto introducido en el alias del jugador 1
+         * iniciamos una variable local que es igual al texto introducido en el alias del jugador 2
          */
         String aliasTextPlayer2 = InformationPlayerPanel2AccountCreate.getAliasTextPlayer2().getText();
         /**
@@ -370,7 +394,7 @@ public class AccountCreate extends JFrame {
          */
         if (MethodsInterfaceAccountCreate.checkEmptyContentPlayer2()) {
             /**
-             * si el usuario pulsa el boton del icono1, aparecerá su alias junto con el logo escogido
+             * si el usuario pulsa el boton del icono, aparecerá su alias junto con el logo escogido
              * se borra lo anterior del panel para introducir lo nuevo
              */
             if (e.getSource() == ButtonInterfaceCreateAccount.getIcon1Player2Button()) {
@@ -379,9 +403,17 @@ public class AccountCreate extends JFrame {
                 AliasAndLogoPlayer2Panel.repaint();
                 AliasAndLogoPlayer2Panel.add(MethodsLogicalAccountCreate.makeSelectImage1Player2());
                 AliasAndLogoPlayer2Panel.add(MethodsLogicalAccountCreate.makeSelectAliasPlayer2(aliasTextPlayer2));
+                /**
+                 * estos metodos van a recoger 2 variables:
+                 * 1. será el alias del jugador
+                 * 2. el path de la imagen del logo que ha escogido el jugador
+                 */
                 MethodsLogicalAccountCreate.setAliasPlayer2(aliasTextPlayer2);
                 MethodsLogicalAccountCreate.setImagePlayer2(new ImageIcon("imagenes/icono1.png"));
 
+                /**
+                 * Se repite la misma instruccion por cada boton de icono que hay
+                 */
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon2Player2Button()) {
                 AliasAndLogoPlayer2Panel.removeAll();
                 AliasAndLogoPlayer2Panel.revalidate();
@@ -468,24 +500,54 @@ public class AccountCreate extends JFrame {
         }
     }
 
+    /**
+     * metodo para modificar el panel en el que aparece la informacion seleccionada del jugador 1
+     * @param e el objeto de tipo actionevent
+     */
     public void confirmReadyPlayer1(ActionEvent e) {
+        /**
+         * se elimina lo que había
+         */
         ALiasAndLogoPlayer1Panel.removeAll();
         ALiasAndLogoPlayer1Panel.revalidate();
         ALiasAndLogoPlayer1Panel.repaint();
+        /**
+         * añadimos un panel que será un tick verde en señal de que salió bien
+         */
         ALiasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeTickReadyButtonPlayer1());
+        /**
+         * llamamos a un metodo que deshabilita los botones de los iconos y no deja modificar el alias del jugador
+         */
         MethodsInterfaceAccountCreate.disableButtonsAndAliasesPlayer1();
+        /**
+         * por último, añadimos la información seleccionada a el hashmap de los jugadores
+         */
         MethodsInterfaceAccountCreate.putPlayersInformation(MethodsLogicalAccountCreate.getAliasPlayer1(), MethodsLogicalAccountCreate.getImagePlayer1());
-        System.out.println(MethodsInterfaceAccountCreate.getPlayers().toString());
-    }
 
+    }
+    /**
+     * metodo para modificar el panel en el que aparece la informacion seleccionada del jugador 2
+     * @param e el objeto de tipo actionevent
+     */
     public void confirmReadyPlayer2(ActionEvent e) {
+        /**
+         * se elimina lo que había
+         */
         AliasAndLogoPlayer2Panel.removeAll();
         AliasAndLogoPlayer2Panel.revalidate();
         AliasAndLogoPlayer2Panel.repaint();
+        /**
+         * añadimos un panel que será un tick verde en señal de que salió bien
+         */
         AliasAndLogoPlayer2Panel.add(MethodsLogicalAccountCreate.makeTickReadyButtonPlayer2());
+        /**
+         * llamamos a un metodo que deshabilita los botones de los iconos y no deja modificar el alias del jugador
+         */
         MethodsInterfaceAccountCreate.disableButtonsAndAliasesPlayer2();
+        /**
+         * por último, añadimos la información seleccionada a el hashmap de los jugadores
+         */
         MethodsInterfaceAccountCreate.putPlayersInformation(MethodsLogicalAccountCreate.getAliasPlayer2(), MethodsLogicalAccountCreate.getImagePlayer2());
-        System.out.println(MethodsInterfaceAccountCreate.getPlayers().toString());
     }
 
 
