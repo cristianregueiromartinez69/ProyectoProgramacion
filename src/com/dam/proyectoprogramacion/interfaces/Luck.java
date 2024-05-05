@@ -1,4 +1,9 @@
 package com.dam.proyectoprogramacion.interfaces;
 
-public class Luck {
+import javax.swing.*;
+
+public class Luck extends JFrame {
+
+
+
 }
