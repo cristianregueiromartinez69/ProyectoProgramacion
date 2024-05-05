@@ -2,12 +2,10 @@ package com.dam.proyectoprogramacion.methodsandmain;
 
 import javax.swing.*;
 import  com.dam.proyectoprogramacion.buttons.*;
-import com.dam.proyectoprogramacion.interfaces.AccountCreate;
 import com.dam.proyectoprogramacion.panels.accountcreate.InformationPlayerPanel1AccountCreate;
 import com.dam.proyectoprogramacion.panels.accountcreate.InformationPlayerPanel2AccountCreate;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.util.HashMap;
 
 
@@ -678,7 +676,7 @@ public class MethodsInterfaceAccountCreate {
         String aliasTextPlayer2 = InformationPlayerPanel2AccountCreate.getAliasTextPlayer2().getText();
         return  !aliasTextPlayer2.isEmpty();
     }
-    public static void disableButtonsAndAliases(){
+    public static void disableButtonsAndAliasesPlayer1(){
 
         ButtonInterfaceCreateAccount.getIcon1Player1Button().setEnabled(false);
         ButtonInterfaceCreateAccount.getIcon2Player1Button().setEnabled(false);
@@ -691,6 +689,23 @@ public class MethodsInterfaceAccountCreate {
         ButtonInterfaceCreateAccount.getIcon9Player1Button().setEnabled(false);
         ButtonInterfaceCreateAccount.getIcon10Player1Button().setEnabled(false);
         InformationPlayerPanel1AccountCreate.notEditableAliasText();
+        ButtonInterfaceCreateAccount.getBackToMenuButton().setEnabled(false);
+
+
+    }
+    public static void disableButtonsAndAliasesPlayer2(){
+
+        ButtonInterfaceCreateAccount.getIcon1Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon2Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon3Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon4Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon5Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon6Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon7Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon8Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon9Player2Button().setEnabled(false);
+        ButtonInterfaceCreateAccount.getIcon10Player2Button().setEnabled(false);
+        InformationPlayerPanel2AccountCreate.notEditableAliasText();
         ButtonInterfaceCreateAccount.getBackToMenuButton().setEnabled(false);
 
 

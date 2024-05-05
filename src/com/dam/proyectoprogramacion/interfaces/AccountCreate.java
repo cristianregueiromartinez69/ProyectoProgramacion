@@ -345,7 +345,7 @@ public class AccountCreate extends JFrame {
         aliasAndLogoPlayer1Panel.revalidate();
         aliasAndLogoPlayer1Panel.repaint();
         aliasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeTickReadyButtonPlayer1());
-        MethodsInterfaceAccountCreate.disableButtonsAndAliases();
+        MethodsInterfaceAccountCreate.disableButtonsAndAliasesPlayer1();
         MethodsInterfaceAccountCreate.putPlayersInformation(MethodsLogicalAccountCreate.getAliasPlayer1(), MethodsLogicalAccountCreate.getImagePlayer1());
     }
 
