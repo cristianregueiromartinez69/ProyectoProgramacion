@@ -70,11 +70,13 @@ public class MethodsLogicalAccountCreate {
         imageLabel.setIcon(imageIcon);
         return imageLabel;
     }
-    public static JLabel makeTickReadyButtonPlayer1(){
+    public static JPanel makeTickReadyButtonPlayer1(){
+        JPanel imagePanel = new JPanel();
         ImageIcon imageIcon = new ImageIcon("imagenes/tick.png");
         JLabel imageLabel = new JLabel();
         imageLabel.setIcon(imageIcon);
-        return imageLabel;
+        imagePanel.add(imageLabel);
+        return imagePanel;
     }
 
 
