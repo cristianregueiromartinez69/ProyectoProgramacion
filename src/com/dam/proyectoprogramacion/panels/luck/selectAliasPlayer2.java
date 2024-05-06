@@ -27,7 +27,7 @@ public class selectAliasPlayer2 extends JPanel {
         /**
          * hacemos que el panel sea igual a el de otra clase
          */
-        aliasImagePlayer2 = MethodsInterfaceLuck.selectAliasImagePlayer1();
+        aliasImagePlayer2 = MethodsInterfaceLuck.selectAliasImagePlayer2();
         /**
          * lo añadimos
          */

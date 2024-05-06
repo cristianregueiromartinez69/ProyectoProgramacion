@@ -64,6 +64,34 @@ public class MethodsInterfaceLuck {
             }
         return aliasPlayer1;
         }
+    /**
+     * metodo para crear un panel en función del alias escrito
+     * @return el panel creado
+     */
+    public static JPanel selectAliasImagePlayer2(){
+        JPanel aliasPlayer2 = new JPanel();
+        aliasPlayer2.setLayout(new BoxLayout(aliasPlayer2, BoxLayout.Y_AXIS));
+        /**
+         * variable de tipo string que es igual a lo introducido en el jtexfield de la intefaz luck
+         */
+        String aliasToLookFor = InformationPanelPlayer2Luck.getAliasTextPlayer2().getText();
+        ImageIcon imageAlias;
+        /**
+         * este for recorre le hashmap de los juagdores
+         * si coincide con uno existente, se crea el panel con el alias y la foto escogida
+         */
+        for (Map.Entry<String, ImageIcon> entry : MethodsInterfaceAccountCreate.getPlayers().entrySet()) {
+            if (entry.getKey().equals(aliasToLookFor)) {
+                JLabel aliasText = new JLabel(aliasToLookFor);
+                aliasPlayer2.add(aliasText);
+                imageAlias = new ImageIcon(String.valueOf(entry.getValue()));
+                JLabel imageLabel = new JLabel();
+                imageLabel.setIcon(imageAlias);
+                aliasPlayer2.add(imageLabel);
+            }
+        }
+        return aliasPlayer2;
+    }
 
     /**
      * metodo para verificar si el usuario existe en el hashmap para el boton de enter
