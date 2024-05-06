@@ -15,7 +15,7 @@ public class InformationPanelPlayer1Luck extends JPanel {
     private JLabel player1Label;
     private JLabel indicatorPutALiasLabel;
     private static JTextField aliasTextPlayer1;
-    private JButton enterButtonPlayer1;
+
 
     public InformationPanelPlayer1Luck(){
         /**

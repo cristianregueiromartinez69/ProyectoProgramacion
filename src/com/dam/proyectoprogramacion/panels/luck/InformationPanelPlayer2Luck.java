@@ -7,8 +7,7 @@ public class InformationPanelPlayer2Luck extends JPanel {
     private JLabel player2Label;
     private JLabel indicatorPutALiasLabel;
     private static JTextField aliasTextPlayer2;
-    private JPanel enterButtonPanel;
-    private JButton enterButtonPlayer2;
+
 
     public InformationPanelPlayer2Luck(){
         /**

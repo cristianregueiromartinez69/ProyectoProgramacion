@@ -13,11 +13,9 @@ public class selecAliasPlayer1 extends JPanel {
     /**
      * atributos privados de tipo jpanel
      * el primero sirve para poner el alias y el logo escogido por el jugador 1
-     * el segundo sirve para poner los botones de cara o cruz
      */
     private JPanel aliasImagePlayer1;
-    private JPanel faceOrTailPlayer1;
-    private JPanel confirmFaceOrTAilPlayer1;
+
 
     /**
      * constructor de la clase
