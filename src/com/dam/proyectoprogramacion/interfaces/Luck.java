@@ -139,7 +139,7 @@ public class Luck extends JFrame {
 
         faceOrTailPlayer1 = new JPanel();
         faceOrTailPlayer1 = MethodsInterfaceLuck.faceOrTailPanelPlayer1();
-        aliasPanelPLayer1.add(faceOrTailPlayer1);
+
 
         gbc.gridx = 0;
         gbc.gridy = 2;
