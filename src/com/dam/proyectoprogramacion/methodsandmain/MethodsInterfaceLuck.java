@@ -3,7 +3,9 @@ package com.dam.proyectoprogramacion.methodsandmain;
 import javax.swing.*;
 import com.dam.proyectoprogramacion.panels.luck.*;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
+import com.dam.proyectoprogramacion.buttons.*;
 
+import java.awt.*;
 import java.util.Map;
 
 /**
@@ -57,7 +59,27 @@ public class MethodsInterfaceLuck {
             return marca;
         }
 
+        public static JPanel faceOrTailPanelPlayer1(){
+
+        JPanel faceOrTailPanel = new JPanel();
+        faceOrTailPanel.setLayout(new BoxLayout(faceOrTailPanel, BoxLayout.X_AXIS));
+        JButton faceButton = new ButtonInterfaceLuck().makeFaceButton();
+        faceButton.setBackground(Color.ORANGE.brighter());
+        faceButton.setForeground(Color.WHITE);
+        faceButton.setPreferredSize(new Dimension(140,50));
+        faceOrTailPanel.add(faceButton);
+        JButton tailButton = new ButtonInterfaceLuck().makeTailButton();
+        tailButton.setBackground(Color.CYAN);
+        tailButton.setForeground(Color.BLACK);
+        faceButton.setPreferredSize(new Dimension(140,50));
+        faceOrTailPanel.add(faceButton);
+
+        return faceOrTailPanel;
+        }
+
     }
+
+
 
 
 

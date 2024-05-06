@@ -26,7 +26,7 @@ public class ButtonInterfaceLuck extends JPanel {
 
         ImageIcon iconFace = new ImageIcon("imagenes/cara.png");
         faceButton = new CreateButtons("Cara", iconFace);
-        setBackground(Color.GREEN);
+        setBackground(Color.ORANGE.brighter());
         setForeground(Color.BLACK);
         Border borderboton = BorderFactory.createLineBorder(Color.GREEN.darker().darker(), 2);
         setBorder(borderboton);
