@@ -65,14 +65,14 @@ public class MethodsInterfaceLuck {
         faceOrTailPanel.setLayout(new BoxLayout(faceOrTailPanel, BoxLayout.X_AXIS));
         JButton faceButton = new ButtonInterfaceLuck().makeFaceButton();
         faceButton.setBackground(Color.ORANGE.brighter());
-        faceButton.setForeground(Color.WHITE);
+        faceButton.setForeground(Color.BLACK);
         faceButton.setPreferredSize(new Dimension(140,50));
         faceOrTailPanel.add(faceButton);
         JButton tailButton = new ButtonInterfaceLuck().makeTailButton();
         tailButton.setBackground(Color.CYAN);
         tailButton.setForeground(Color.BLACK);
-        faceButton.setPreferredSize(new Dimension(140,50));
-        faceOrTailPanel.add(faceButton);
+        tailButton.setPreferredSize(new Dimension(140,50));
+        faceOrTailPanel.add(tailButton);
 
         return faceOrTailPanel;
         }
