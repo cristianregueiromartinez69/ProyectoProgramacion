@@ -24,6 +24,7 @@ public class Luck extends JFrame {
     private JPanel aliasPanelPLayer1;
     private JPanel aliasPanelPLayer2;
     private JPanel aliasSelectedPlayer1;
+    private JPanel faceOrTailPlayer1;
     private JPanel resultPanel;
 
     public Luck() {
@@ -133,6 +134,9 @@ public class Luck extends JFrame {
         aliasSelectedPlayer1 = new JPanel();
         contentPanel.add(aliasSelectedPlayer1, gbc);
 
+        faceOrTailPlayer1 = new JPanel();
+        aliasPanelPLayer1.add(faceOrTailPlayer1);
+
         EnterPanelPlayer1Luck.getEnterButtonPlayer1().addActionListener(this::putAliasImageAliasPLayer1);
 
 
@@ -155,7 +159,9 @@ public class Luck extends JFrame {
             aliasSelectedPlayer1.revalidate();
             aliasSelectedPlayer1.repaint();
             JPanel newContentPanel = MethodsInterfaceLuck.selectAliasImagePlayer1();
+            JPanel newFaceTailPanel = MethodsInterfaceLuck.faceOrTailPanelPlayer1();
             aliasSelectedPlayer1.add(newContentPanel);
+            aliasSelectedPlayer1.add(newFaceTailPanel);
         }
     }
 
