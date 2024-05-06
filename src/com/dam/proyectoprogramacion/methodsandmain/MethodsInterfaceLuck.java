@@ -1,7 +1,7 @@
 package com.dam.proyectoprogramacion.methodsandmain;
 
 import javax.swing.*;
-import com.dam.proyectoprogramacion.panels.*;
+import com.dam.proyectoprogramacion.panels.luck.*;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 
 import java.util.Map;
@@ -24,6 +24,17 @@ public class MethodsInterfaceLuck {
                 }
             }
         return aliasPlayer1;
+        }
+
+        public static boolean checkAliasPlayer1(){
+            String aliasToLookFor = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+            boolean marca = false;
+            for (Map.Entry<String, ImageIcon> entry : MethodsInterfaceAccountCreate.getPlayers().entrySet()) {
+                if (entry.getKey().equals(aliasToLookFor)) {
+                 marca = true;
+                }
+            }
+            return marca;
         }
 
     }

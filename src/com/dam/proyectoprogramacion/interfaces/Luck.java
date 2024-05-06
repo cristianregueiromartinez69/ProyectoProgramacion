@@ -1,6 +1,7 @@
 package com.dam.proyectoprogramacion.interfaces;
 
 import com.dam.proyectoprogramacion.background.BackgroundMainMenuPanel;
+import com.dam.proyectoprogramacion.methodsandmain.MethodsInterfaceLuck;
 import com.dam.proyectoprogramacion.panels.luck.EnterPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.panels.luck.EnterPanelPlayer2Luck;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
@@ -8,6 +9,7 @@ import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 
 /**
  * interfaz de la suerte en la que se decide quien tira primero
@@ -21,6 +23,7 @@ public class Luck extends JFrame {
      */
     private JPanel aliasPanelPLayer1;
     private JPanel aliasPanelPLayer2;
+    private JPanel aliasSelectedPlayer1;
     private JPanel resultPanel;
 
     public Luck() {
@@ -125,6 +128,14 @@ public class Luck extends JFrame {
         JPanel enterPanelPlayer2 = new EnterPanelPlayer2Luck();
         aliasPanelPLayer2.add(enterPanelPlayer2);
 
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        aliasSelectedPlayer1 = new JPanel();
+        contentPanel.add(aliasSelectedPlayer1, gbc);
+
+        EnterPanelPlayer1Luck.getEnterButtonPlayer1().addActionListener(this::putAliasImageAliasPLayer1);
+
+
 
 
 
@@ -138,5 +149,15 @@ public class Luck extends JFrame {
         contentPanel.setLayout(new GridBagLayout());
         return contentPanel;
     }
+    public void putAliasImageAliasPLayer1(ActionEvent e){
+        if(MethodsInterfaceLuck.checkAliasPlayer1()){
+            aliasSelectedPlayer1.removeAll();
+            aliasSelectedPlayer1.revalidate();
+            aliasSelectedPlayer1.repaint();
+            JPanel newContentPanel = MethodsInterfaceLuck.selectAliasImagePlayer1();
+            aliasSelectedPlayer1.add(newContentPanel);
+        }
+    }
+
 
 }
