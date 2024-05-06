@@ -14,9 +14,10 @@ public class ButtonInterfaceLuck extends JPanel {
     /**
      * atributos privados de tipo JButton que serán los de la clase de la suerte
      */
-    private JButton faceButton;
-    private JButton tailButton;
-    private JButton confirmButton;
+    private static JButton faceButton;
+    private static JButton tailButton;
+    private static JButton confirmbuttonPlayer1;
+    private static JButton confirmbuttonPlayer2;
 
     /**
      * metodo para crear el botón de la cara de la moneda en la interfaz suerte
@@ -52,16 +53,65 @@ public class ButtonInterfaceLuck extends JPanel {
      * metodo para crear el boton de confirmar, una vez ambos jugadores ya saben quien escoge primero
      * @return el boton creado
      */
-    public JButton makeConfirmButton(){
+    public JButton makeConfirmButtonPlayer1(){
 
-        confirmButton = new JButton("Listo");
+        confirmbuttonPlayer1 = new JButton("Listo");
         setBackground(Color.GREEN);
         setForeground(Color.WHITE);
         Border borderboton = BorderFactory.createLineBorder(Color.RED, 3);
         setBorder(borderboton);
-        return confirmButton;
+        return confirmbuttonPlayer1;
 
     }
 
+    public JButton makeConfirmButtonPlayer2(){
 
+        confirmbuttonPlayer1 = new JButton("Listo");
+        setBackground(Color.GREEN);
+        setForeground(Color.WHITE);
+        Border borderboton = BorderFactory.createLineBorder(Color.RED, 3);
+        setBorder(borderboton);
+        return confirmbuttonPlayer1;
+
+    }
+
+    public static JButton getFaceButton() {
+        return faceButton;
+    }
+
+    public static void setFaceButton(JButton faceButton) {
+        ButtonInterfaceLuck.faceButton = faceButton;
+    }
+
+    public static JButton getTailButton() {
+        return tailButton;
+    }
+
+    public static void setTailButton(JButton tailButton) {
+        ButtonInterfaceLuck.tailButton = tailButton;
+    }
+
+    public static JButton getConfirmButton() {
+        return confirmbuttonPlayer1;
+    }
+
+    public static void setConfirmButton(JButton confirmButton) {
+        ButtonInterfaceLuck.confirmbuttonPlayer1 = confirmButton;
+    }
+
+    public static JButton getConfirmbuttonPlayer1() {
+        return confirmbuttonPlayer1;
+    }
+
+    public static void setConfirmbuttonPlayer1(JButton confirmbuttonPlayer1) {
+        ButtonInterfaceLuck.confirmbuttonPlayer1 = confirmbuttonPlayer1;
+    }
+
+    public static JButton getConfirmbuttonPlayer2() {
+        return confirmbuttonPlayer2;
+    }
+
+    public static void setConfirmbuttonPlayer2(JButton confirmbuttonPlayer2) {
+        ButtonInterfaceLuck.confirmbuttonPlayer2 = confirmbuttonPlayer2;
+    }
 }

@@ -1,6 +1,7 @@
 package com.dam.proyectoprogramacion.interfaces;
 
 import com.dam.proyectoprogramacion.background.BackgroundMainMenuPanel;
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceLuck;
 import com.dam.proyectoprogramacion.methodsandmain.MethodsInterfaceLuck;
 import com.dam.proyectoprogramacion.panels.luck.EnterPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.panels.luck.EnterPanelPlayer2Luck;
@@ -25,6 +26,8 @@ public class Luck extends JFrame {
     private JPanel aliasPanelPLayer2;
     private JPanel aliasSelectedPlayer1;
     private JPanel faceOrTailPlayer1;
+    private JPanel confirmFaceOrTailPlayer1;
+    private JButton enterPlayer1;
     private JPanel resultPanel;
 
     public Luck() {
@@ -137,8 +140,15 @@ public class Luck extends JFrame {
         faceOrTailPlayer1 = new JPanel();
         aliasPanelPLayer1.add(faceOrTailPlayer1);
 
-        EnterPanelPlayer1Luck.getEnterButtonPlayer1().addActionListener(this::putAliasImageAliasPLayer1);
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        confirmFaceOrTailPlayer1 = new JPanel();
+        confirmFaceOrTailPlayer1.setLayout(new BoxLayout(confirmFaceOrTailPlayer1, BoxLayout.X_AXIS));
+        contentPanel.add(confirmFaceOrTailPlayer1, gbc);
 
+        EnterPanelPlayer1Luck.getEnterButtonPlayer1().addActionListener(this::putAliasImageAliasPLayer1);
+        ButtonInterfaceLuck.getFaceButton().addActionListener(this::selectTailOrFace);
+        ButtonInterfaceLuck.getTailButton().addActionListener(this::selectTailOrFace);
 
 
 
@@ -163,6 +173,48 @@ public class Luck extends JFrame {
             aliasSelectedPlayer1.add(newContentPanel);
             aliasSelectedPlayer1.add(newFaceTailPanel);
         }
+    }
+
+    public void selectTailOrFace(ActionEvent e){
+        JPanel faceOrTailPanel = new JPanel();
+        faceOrTailPanel.setLayout(new BoxLayout(faceOrTailPanel, BoxLayout.X_AXIS));
+
+        if(e.getSource()== ButtonInterfaceLuck.getFaceButton()){
+            removeFacePanelPlayer1(faceOrTailPanel);
+        }
+        else if(e.getSource()==ButtonInterfaceLuck.getTailButton()){
+            removeFacePanelPlayer1(faceOrTailPanel);
+        }
+
+
+    }
+
+    private void removeFacePanelPlayer1(JPanel facePanel) {
+        confirmFaceOrTailPlayer1.removeAll();
+        confirmFaceOrTailPlayer1.revalidate();
+        confirmFaceOrTailPlayer1.repaint();
+        JButton faceButton = new ButtonInterfaceLuck().makeFaceButton();
+        faceButton.setBackground(Color.ORANGE.brighter());
+        faceButton.setForeground(Color.BLACK);
+        faceButton.setPreferredSize(new Dimension(140,50));
+        facePanel.add(faceButton);
+        JButton confirmButton = new ButtonInterfaceLuck().makeConfirmButtonPlayer1();
+        confirmButton.setBackground(Color.GREEN);
+        confirmButton.setForeground(Color.WHITE);
+        confirmButton.setPreferredSize(new Dimension(140, 50));
+
+        confirmFaceOrTailPlayer1.add(facePanel);
+    }
+    private void removeTailPanelPlayer1(JPanel facePanel) {
+        confirmFaceOrTailPlayer1.removeAll();
+        confirmFaceOrTailPlayer1.revalidate();
+        confirmFaceOrTailPlayer1.repaint();
+        JButton tailButton = new ButtonInterfaceLuck().makeTailButton();
+        tailButton.setBackground(Color.CYAN);
+        tailButton.setForeground(Color.BLACK);
+        tailButton.setPreferredSize(new Dimension(140,50));
+        facePanel.add(tailButton);
+        confirmFaceOrTailPlayer1.add(facePanel);
     }
 
 

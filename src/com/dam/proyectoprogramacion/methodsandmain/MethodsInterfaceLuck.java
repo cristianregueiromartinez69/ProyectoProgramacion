@@ -6,6 +6,7 @@ import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.buttons.*;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.util.Map;
 
 /**
@@ -76,6 +77,8 @@ public class MethodsInterfaceLuck {
 
         return faceOrTailPanel;
         }
+
+
 
     }
 
