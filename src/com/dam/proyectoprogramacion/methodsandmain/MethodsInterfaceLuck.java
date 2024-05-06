@@ -143,6 +143,28 @@ public class MethodsInterfaceLuck {
 
         return faceOrTailPanel;
         }
+    /**
+     * metodo para crear el panel de cara o cruz del jugador 2
+     * @return el panel creado
+     */
+    public static JPanel faceOrTailPanelPlayer2(){
+
+        JPanel faceOrTailPanel = new JPanel();
+        faceOrTailPanel.setLayout(new BoxLayout(faceOrTailPanel, BoxLayout.X_AXIS));
+        JButton faceButton = new ButtonInterfaceLuck().makeFaceButton();
+        faceButton.setBackground(Color.ORANGE.brighter());
+        faceButton.setForeground(Color.BLACK);
+        faceButton.setPreferredSize(new Dimension(140,50));
+        faceOrTailPanel.add(faceButton);
+        JButton tailButton = new ButtonInterfaceLuck().makeTailButton();
+        tailButton.setBackground(Color.CYAN);
+        tailButton.setForeground(Color.BLACK);
+        tailButton.setPreferredSize(new Dimension(140,50));
+        faceOrTailPanel.add(tailButton);
+
+        return faceOrTailPanel;
+    }
+
 
     /**
      * metodo que será usado en el boton de enter una vez has elegido cara o cruz
@@ -156,6 +178,18 @@ public class MethodsInterfaceLuck {
         EnterPanelPlayer1Luck.getEnterButtonPlayer1().setEnabled(false);
 
         }
+    /**
+     * metodo que será usado en el boton de enter una vez has elegido cara o cruz
+     * el metodo deshabilita todos los botones del juagdor 2
+     */
+    public static void disableButtonsAndAliasesPlayer2Luck(){
+
+        ButtonInterfaceLuck.getFaceButton().setEnabled(false);
+        ButtonInterfaceLuck.getTailButton().setEnabled(false);
+        InformationPanelPlayer1Luck.getAliasTextPlayer1().setEditable(false);
+        EnterPanelPlayer1Luck.getEnterButtonPlayer1().setEnabled(false);
+
+    }
 
     /**
      * getter y setter de los atributos de la clase
