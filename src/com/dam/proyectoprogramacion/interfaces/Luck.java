@@ -27,7 +27,7 @@ public class Luck extends JFrame {
     private JPanel aliasSelectedPlayer1;
     private JPanel faceOrTailPlayer1;
     private JPanel confirmFaceOrTailPlayer1;
-    private JButton enterPlayer1;
+    private  JButton enterPlayer1;
     private JPanel resultPanel;
 
     public Luck() {
@@ -178,6 +178,8 @@ public class Luck extends JFrame {
             confirmFaceOrTailPlayer1.removeAll();
             confirmFaceOrTailPlayer1.revalidate();
             confirmFaceOrTailPlayer1.repaint();
+            String auxMapAliasPlayer1Luck = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+            int chosenItem = MethodsInterfaceLuck.CARA;
             ImageIcon imageIcon = new ImageIcon("imagenes/cara.png");
             JLabel imageLabel = new JLabel();
             imageLabel.setIcon(imageIcon);
@@ -193,6 +195,8 @@ public class Luck extends JFrame {
             confirmFaceOrTailPlayer1.removeAll();
             confirmFaceOrTailPlayer1.revalidate();
             confirmFaceOrTailPlayer1.repaint();
+            String auxMapAliasPlayer1Luck = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+            int chosenItem = MethodsInterfaceLuck.CRUZ;
             ImageIcon imageIcon = new ImageIcon("imagenes/cruz.png");
             JLabel imageLabel = new JLabel();
             imageLabel.setIcon(imageIcon);
