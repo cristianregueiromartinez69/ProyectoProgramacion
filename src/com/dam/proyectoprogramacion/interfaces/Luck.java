@@ -20,14 +20,22 @@ import java.awt.event.ActionEvent;
 public class Luck extends JFrame {
 
     /**
-     *atributos privados de tipo JPanel en los que vamos a poner la información de los jugadores
+     *atributos privados de tipo JPanel en los que vamos a poner la información del jugador 1
      */
     private JPanel aliasPanelPLayer1;
     private JPanel aliasPanelPLayer2;
     private JPanel aliasSelectedPlayer1;
     private JPanel faceOrTailPlayer1;
     private JPanel confirmFaceOrTailPlayer1;
-    private JPanel contentPanel;
+    private JPanel contentPanelPlayer1;
+
+    /**
+     *atributos privados de tipo JPanel en los que vamos a poner la información del jugador 2
+     */
+    private JPanel aliasSelectedPlayer2;
+    private JPanel faceOrTailPlayer2;
+    private JPanel confirmFaceOrTailPlayer2;
+    private JPanel contentPanelPlayer2;
     /**
      * atributo privado de tipo JPanel en el que saldrá el ganador del sorteo
      */
@@ -35,7 +43,8 @@ public class Luck extends JFrame {
     /**
      * atributo privado de tipo JButton para poder iniciar la variable del boton de confirnar
      */
-    private JButton confirmButton;
+    private JButton confirmButtonPlayer1;
+    private JButton confirmButtonPlayer2;
     /**
      * tenemos que hacer un atributo con las posiciones de los paneles fuera del constructor
      */
@@ -65,13 +74,13 @@ public class Luck extends JFrame {
         /**
          * creamos un panel que contendrá la imagen de fondo y lo hacemos igual a un metodo que crea el panel
          */
-         contentPanel = makeContentPanel();
+         contentPanelPlayer1 = makeContentPanel();
          gbc = new GridBagConstraints();
 
         /**
          * añadimos el panel
          */
-        backgroundPanel.add(contentPanel, BorderLayout.CENTER);
+        backgroundPanel.add(contentPanelPlayer1, BorderLayout.CENTER);
 
 
         add(backgroundPanel);
@@ -103,7 +112,7 @@ public class Luck extends JFrame {
         /**
          * lo añadimos al panel central
          */
-        contentPanel.add(aliasPanelPLayer1, gbc);
+        contentPanelPlayer1.add(aliasPanelPLayer1, gbc);
 
 
         /**
@@ -114,7 +123,7 @@ public class Luck extends JFrame {
         /**
          * lo añadimos al panel central
          */
-        contentPanel.add(aliasPanelPLayer2, gbc);
+        contentPanelPlayer1.add(aliasPanelPLayer2, gbc);
 
         /**
          * instanciamos un panel y decimos que es igual a un panel creado en otra clase
@@ -153,7 +162,7 @@ public class Luck extends JFrame {
          * iniciamos el panel del alias del jugador 1
          */
         aliasSelectedPlayer1 = new JPanel();
-        contentPanel.add(aliasSelectedPlayer1, gbc);
+        contentPanelPlayer1.add(aliasSelectedPlayer1, gbc);
 
         /**
          * iniciamos el panel de cara o cruz del jugador1
@@ -174,7 +183,7 @@ public class Luck extends JFrame {
         /**
          * inicimos un el boton de confirmacion para que sea igual al creado en otra clase
          */
-        confirmButton = new ButtonInterfaceLuck().makeConfirmButtonPlayer1();
+        confirmButtonPlayer1 = new ButtonInterfaceLuck().makeConfirmButtonPlayer1();
         /**
          * hacemos que el panel de confirmacion sea igual a un metodo que nos devuelve un panel
          */
@@ -248,14 +257,14 @@ public class Luck extends JFrame {
             JLabel imageLabel = new JLabel();
             imageLabel.setIcon(imageIcon);
             confirmFaceOrTailPlayer1.add(imageLabel);
-            confirmButton.setBackground(Color.GREEN);
-            confirmButton.setForeground(Color.WHITE);
-            confirmButton.setPreferredSize(new Dimension(140, 50));
-            confirmFaceOrTailPlayer1.add(confirmButton);
+            confirmButtonPlayer1.setBackground(Color.GREEN);
+            confirmButtonPlayer1.setForeground(Color.WHITE);
+            confirmButtonPlayer1.setPreferredSize(new Dimension(140, 50));
+            confirmFaceOrTailPlayer1.add(confirmButtonPlayer1);
             /**
              * actualizamos el panel central
              */
-            contentPanel.add(confirmFaceOrTailPlayer1, gbc);
+            contentPanelPlayer1.add(confirmFaceOrTailPlayer1, gbc);
 
         }
         /**
@@ -279,14 +288,14 @@ public class Luck extends JFrame {
             JLabel imageLabel = new JLabel();
             imageLabel.setIcon(imageIcon);
             confirmFaceOrTailPlayer1.add(imageLabel);
-            confirmButton.setBackground(Color.GREEN);
-            confirmButton.setForeground(Color.WHITE);
-            confirmButton.setPreferredSize(new Dimension(140, 50));
-            confirmFaceOrTailPlayer1.add(confirmButton);
+            confirmButtonPlayer1.setBackground(Color.GREEN);
+            confirmButtonPlayer1.setForeground(Color.WHITE);
+            confirmButtonPlayer1.setPreferredSize(new Dimension(140, 50));
+            confirmFaceOrTailPlayer1.add(confirmButtonPlayer1);
             /**
              * actualizamos el panel central
              */
-            contentPanel.add(confirmFaceOrTailPlayer1, gbc);
+            contentPanelPlayer1.add(confirmFaceOrTailPlayer1, gbc);
         }
 
 
@@ -314,10 +323,10 @@ public class Luck extends JFrame {
         JLabel imageLabel = new JLabel();
         imageLabel.setIcon(imageIcon);
         confirmPanel.add(imageLabel);
-        confirmButton.setBackground(Color.GREEN);
-        confirmButton.setForeground(Color.WHITE);
-        confirmButton.setPreferredSize(new Dimension(140, 50));
-        confirmPanel.add(confirmButton);
+        confirmButtonPlayer1.setBackground(Color.GREEN);
+        confirmButtonPlayer1.setForeground(Color.WHITE);
+        confirmButtonPlayer1.setPreferredSize(new Dimension(140, 50));
+        confirmPanel.add(confirmButtonPlayer1);
         return confirmPanel;
     }
 
