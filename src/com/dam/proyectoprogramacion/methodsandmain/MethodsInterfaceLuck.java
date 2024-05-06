@@ -23,6 +23,8 @@ public class MethodsInterfaceLuck {
      */
     public final static  int CARA = 1;
     public final static  int CRUZ = 2;
+    private static String auxMapAliasPlayer1Luck;
+    private static  int chosenItem;
     private int randomNumberSelection;
     private static HashMap <String, Integer> luckPlayers = new HashMap<>();
 
@@ -84,7 +86,7 @@ public class MethodsInterfaceLuck {
         return faceOrTailPanel;
         }
 
-        public static void disableButtonsAndAliases(){
+        public static void disableButtonsAndAliasesPlayer1Luck(){
 
         ButtonInterfaceLuck.getFaceButton().setEnabled(false);
         ButtonInterfaceLuck.getTailButton().setEnabled(false);
@@ -101,7 +103,21 @@ public class MethodsInterfaceLuck {
         luckPlayers.put(alias, faceOrTail);
     }
 
+    public static String getAuxMapAliasPlayer1Luck() {
+        return auxMapAliasPlayer1Luck;
+    }
 
+    public static void setAuxMapAliasPlayer1Luck(String auxMapAliasPlayer1Luck) {
+        MethodsInterfaceLuck.auxMapAliasPlayer1Luck = auxMapAliasPlayer1Luck;
+    }
+
+    public static int getChosenItem() {
+        return chosenItem;
+    }
+
+    public static void setChosenItem(int chosenItem) {
+        MethodsInterfaceLuck.chosenItem = chosenItem;
+    }
 }
 
 

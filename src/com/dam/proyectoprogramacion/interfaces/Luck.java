@@ -29,6 +29,7 @@ public class Luck extends JFrame {
     private JPanel confirmFaceOrTailPlayer1;
     private  JButton enterPlayer1;
     private JPanel resultPanel;
+    private JButton confirmButton;
 
     public Luck() {
         /**
@@ -38,6 +39,7 @@ public class Luck extends JFrame {
         setTitle("¿Quien escoge el primer pokemon?");
         setSize(600, 400);
         setVisible(true);
+        confirmButton = new ButtonInterfaceLuck().makeConfirmButtonPlayer1();
 
         /**
          * instanciamos un objeto de tipo ImageIcon y le damos el path del fondo de imagen
@@ -141,15 +143,17 @@ public class Luck extends JFrame {
         faceOrTailPlayer1 = MethodsInterfaceLuck.faceOrTailPanelPlayer1();
 
 
+
         gbc.gridx = 0;
         gbc.gridy = 2;
         confirmFaceOrTailPlayer1 = new JPanel();
+        confirmFaceOrTailPlayer1 = makeConfirmFaceOrTailPlayer1();
         confirmFaceOrTailPlayer1.setLayout(new BoxLayout(confirmFaceOrTailPlayer1, BoxLayout.X_AXIS));
         contentPanel.add(confirmFaceOrTailPlayer1, gbc);
-
         EnterPanelPlayer1Luck.getEnterButtonPlayer1().addActionListener(this::putAliasImageAliasPLayer1);
         ButtonInterfaceLuck.getFaceButton().addActionListener(this::selectTailOrFace);
         ButtonInterfaceLuck.getTailButton().addActionListener(this::selectTailOrFace);
+        ButtonInterfaceLuck.getConfirmbuttonPlayer1().addActionListener(this::LuckChoiceMadePlayer1);
 
 
     }
@@ -178,13 +182,12 @@ public class Luck extends JFrame {
             confirmFaceOrTailPlayer1.removeAll();
             confirmFaceOrTailPlayer1.revalidate();
             confirmFaceOrTailPlayer1.repaint();
-            String auxMapAliasPlayer1Luck = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
-            int chosenItem = MethodsInterfaceLuck.CARA;
+            MethodsInterfaceLuck.setAuxMapAliasPlayer1Luck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
+            MethodsInterfaceLuck.setChosenItem(MethodsInterfaceLuck.CARA);
             ImageIcon imageIcon = new ImageIcon("imagenes/cara.png");
             JLabel imageLabel = new JLabel();
             imageLabel.setIcon(imageIcon);
             confirmFaceOrTailPlayer1.add(imageLabel);
-            JButton confirmButton = new ButtonInterfaceLuck().makeConfirmButtonPlayer1();
             confirmButton.setBackground(Color.GREEN);
             confirmButton.setForeground(Color.WHITE);
             confirmButton.setPreferredSize(new Dimension(140, 50));
@@ -195,13 +198,12 @@ public class Luck extends JFrame {
             confirmFaceOrTailPlayer1.removeAll();
             confirmFaceOrTailPlayer1.revalidate();
             confirmFaceOrTailPlayer1.repaint();
-            String auxMapAliasPlayer1Luck = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
-            int chosenItem = MethodsInterfaceLuck.CRUZ;
+            MethodsInterfaceLuck.setAuxMapAliasPlayer1Luck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
+            MethodsInterfaceLuck.setChosenItem(MethodsInterfaceLuck.CRUZ);
             ImageIcon imageIcon = new ImageIcon("imagenes/cruz.png");
             JLabel imageLabel = new JLabel();
             imageLabel.setIcon(imageIcon);
             confirmFaceOrTailPlayer1.add(imageLabel);
-            JButton confirmButton = new ButtonInterfaceLuck().makeConfirmButtonPlayer1();
             confirmButton.setBackground(Color.GREEN);
             confirmButton.setForeground(Color.WHITE);
             confirmButton.setPreferredSize(new Dimension(140, 50));
@@ -209,6 +211,26 @@ public class Luck extends JFrame {
         }
 
 
+    }
+    public void LuckChoiceMadePlayer1(ActionEvent e){
+            MethodsInterfaceLuck.disableButtonsAndAliasesPlayer1Luck();
+            MethodsInterfaceLuck.setLuckPlayers(MethodsInterfaceLuck.getAuxMapAliasPlayer1Luck(),
+                    MethodsInterfaceLuck.getChosenItem());
+
+    }
+
+    private JPanel makeConfirmFaceOrTailPlayer1(){
+        JPanel confirmPanel = new JPanel();
+        ImageIcon imageIcon = new ImageIcon();
+        JLabel imageLabel = new JLabel();
+        imageLabel.setIcon(imageIcon);
+        confirmPanel.add(imageLabel);
+         confirmButton = new ButtonInterfaceLuck().makeConfirmButtonPlayer1();
+        confirmButton.setBackground(Color.GREEN);
+        confirmButton.setForeground(Color.WHITE);
+        confirmButton.setPreferredSize(new Dimension(140, 50));
+        confirmPanel.add(confirmButton);
+        return confirmPanel;
     }
 
 
