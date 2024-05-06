@@ -75,43 +75,20 @@ public class ButtonInterfaceLuck extends JPanel {
 
     }
 
+
     public static JButton getFaceButton() {
         return faceButton;
-    }
-
-    public static void setFaceButton(JButton faceButton) {
-        ButtonInterfaceLuck.faceButton = faceButton;
     }
 
     public static JButton getTailButton() {
         return tailButton;
     }
 
-    public static void setTailButton(JButton tailButton) {
-        ButtonInterfaceLuck.tailButton = tailButton;
-    }
-
-    public static JButton getConfirmButton() {
-        return confirmbuttonPlayer1;
-    }
-
-    public static void setConfirmButton(JButton confirmButton) {
-        ButtonInterfaceLuck.confirmbuttonPlayer1 = confirmButton;
-    }
-
     public static JButton getConfirmbuttonPlayer1() {
         return confirmbuttonPlayer1;
     }
 
-    public static void setConfirmbuttonPlayer1(JButton confirmbuttonPlayer1) {
-        ButtonInterfaceLuck.confirmbuttonPlayer1 = confirmbuttonPlayer1;
-    }
-
     public static JButton getConfirmbuttonPlayer2() {
         return confirmbuttonPlayer2;
-    }
-
-    public static void setConfirmbuttonPlayer2(JButton confirmbuttonPlayer2) {
-        ButtonInterfaceLuck.confirmbuttonPlayer2 = confirmbuttonPlayer2;
     }
 }

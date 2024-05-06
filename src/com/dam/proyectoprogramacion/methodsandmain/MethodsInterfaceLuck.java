@@ -3,7 +3,7 @@ package com.dam.proyectoprogramacion.methodsandmain;
 import javax.swing.*;
 import com.dam.proyectoprogramacion.panels.luck.*;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
-import com.dam.proyectoprogramacion.buttons.*;
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceLuck;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -20,6 +20,7 @@ public class MethodsInterfaceLuck {
      * metodo para crear un panel en función del alias escrito
      * @return el panel creado
      */
+    private static ButtonInterfaceLuck buttonInterfaceLuck = new ButtonInterfaceLuck();
     public static JPanel selectAliasImagePlayer1(){
         JPanel aliasPlayer1 = new JPanel();
         aliasPlayer1.setLayout(new BoxLayout(aliasPlayer1, BoxLayout.Y_AXIS));
