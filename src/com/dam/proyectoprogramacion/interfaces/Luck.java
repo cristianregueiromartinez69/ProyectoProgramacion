@@ -27,9 +27,19 @@ public class Luck extends JFrame {
     private JPanel aliasSelectedPlayer1;
     private JPanel faceOrTailPlayer1;
     private JPanel confirmFaceOrTailPlayer1;
-    private  JButton enterPlayer1;
+    private JPanel contentPanel;
+    /**
+     * atributo privado de tipo JPanel en el que saldrá el ganador del sorteo
+     */
     private JPanel resultPanel;
+    /**
+     * atributo privado de tipo JButton para poder iniciar la variable del boton de confirnar
+     */
     private JButton confirmButton;
+    /**
+     * tenemos que hacer un atributo con las posiciones de los paneles fuera del constructor
+     */
+    GridBagConstraints gbc;
 
     public Luck() {
         /**
@@ -39,7 +49,7 @@ public class Luck extends JFrame {
         setTitle("¿Quien escoge el primer pokemon?");
         setSize(600, 400);
         setVisible(true);
-        confirmButton = new ButtonInterfaceLuck().makeConfirmButtonPlayer1();
+
 
         /**
          * instanciamos un objeto de tipo ImageIcon y le damos el path del fondo de imagen
@@ -55,8 +65,8 @@ public class Luck extends JFrame {
         /**
          * creamos un panel que contendrá la imagen de fondo y lo hacemos igual a un metodo que crea el panel
          */
-        JPanel contentPanel = makeContentPanel();
-        GridBagConstraints gbc = new GridBagConstraints();
+         contentPanel = makeContentPanel();
+         gbc = new GridBagConstraints();
 
         /**
          * añadimos el panel
@@ -134,22 +144,49 @@ public class Luck extends JFrame {
         JPanel enterPanelPlayer2 = new EnterPanelPlayer2Luck();
         aliasPanelPLayer2.add(enterPanelPlayer2);
 
+        /**
+         * establecemos nuevas medidas
+         */
         gbc.gridx = 0;
         gbc.gridy = 1;
+        /**
+         * iniciamos el panel del alias del jugador 1
+         */
         aliasSelectedPlayer1 = new JPanel();
         contentPanel.add(aliasSelectedPlayer1, gbc);
 
+        /**
+         * iniciamos el panel de cara o cruz del jugador1
+         */
         faceOrTailPlayer1 = new JPanel();
         faceOrTailPlayer1 = MethodsInterfaceLuck.faceOrTailPanelPlayer1();
 
 
-
+        /**
+         * establecemos nuevas medidas
+         */
         gbc.gridx = 0;
         gbc.gridy = 2;
+        /**
+         * iniciamos el panel de confirmacion de cara o cruz del jugador 1
+         */
         confirmFaceOrTailPlayer1 = new JPanel();
+        /**
+         * inicimos un el boton de confirmacion para que sea igual al creado en otra clase
+         */
+        confirmButton = new ButtonInterfaceLuck().makeConfirmButtonPlayer1();
+        /**
+         * hacemos que el panel de confirmacion sea igual a un metodo que nos devuelve un panel
+         */
         confirmFaceOrTailPlayer1 = makeConfirmFaceOrTailPlayer1();
+        /**
+         * establecemos un layout para el panel de confirmacion de cara o cruz
+         */
         confirmFaceOrTailPlayer1.setLayout(new BoxLayout(confirmFaceOrTailPlayer1, BoxLayout.X_AXIS));
-        contentPanel.add(confirmFaceOrTailPlayer1, gbc);
+
+        /**
+         * añadimos los actionListener a los botones
+         */
         EnterPanelPlayer1Luck.getEnterButtonPlayer1().addActionListener(this::putAliasImageAliasPLayer1);
         ButtonInterfaceLuck.getFaceButton().addActionListener(this::selectTailOrFace);
         ButtonInterfaceLuck.getTailButton().addActionListener(this::selectTailOrFace);
@@ -158,12 +195,21 @@ public class Luck extends JFrame {
 
     }
 
+    /**
+     * metodo que crea un panel
+     * @return el panel creado
+     */
     private JPanel makeContentPanel() {
         JPanel contentPanel = new JPanel();
         contentPanel.setOpaque(false);
         contentPanel.setLayout(new GridBagLayout());
         return contentPanel;
     }
+
+    /**
+     * metodo que limpia un panel para poner la imagen y el alias del jugador introducido
+     * @param e el objeto de tipo ActionEvent
+     */
     public void putAliasImageAliasPLayer1(ActionEvent e){
         if(MethodsInterfaceLuck.checkAliasPlayer1()){
             aliasSelectedPlayer1.removeAll();
@@ -174,16 +220,30 @@ public class Luck extends JFrame {
             aliasSelectedPlayer1.add(faceOrTailPlayer1);
         }
     }
-
+    /**
+     * metodo que limpia un panel para poner si has elegido cara o cruz y el boton de confirmar
+     * @param e el objeto de tipo ActionEvent
+     */
     public void selectTailOrFace(ActionEvent e){
 
 
+        /**
+         * si has elegido cara, saldrá una imagen que será la cara de la moneda
+         * al lado saldrá un boton que confirmacion
+         */
         if(e.getSource() == ButtonInterfaceLuck.getFaceButton()){
             confirmFaceOrTailPlayer1.removeAll();
             confirmFaceOrTailPlayer1.revalidate();
             confirmFaceOrTailPlayer1.repaint();
+            /**
+             * recogemos en variables el alias y la eleccion de cara o cruz
+             * esto será usado para introducirlo en un hashmap
+             */
             MethodsInterfaceLuck.setAuxMapAliasPlayer1Luck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
             MethodsInterfaceLuck.setChosenItem(MethodsInterfaceLuck.CARA);
+            /**
+             * añadimos imagen y boton al panel
+             */
             ImageIcon imageIcon = new ImageIcon("imagenes/cara.png");
             JLabel imageLabel = new JLabel();
             imageLabel.setIcon(imageIcon);
@@ -192,14 +252,29 @@ public class Luck extends JFrame {
             confirmButton.setForeground(Color.WHITE);
             confirmButton.setPreferredSize(new Dimension(140, 50));
             confirmFaceOrTailPlayer1.add(confirmButton);
+            /**
+             * actualizamos el panel central
+             */
+            contentPanel.add(confirmFaceOrTailPlayer1, gbc);
 
         }
+        /**
+         * si has elegido cruz, saldrá una imagen que será la cruz de la moneda
+         * al lado saldrá un boton que confirmacion
+         */
         else if(e.getSource() == ButtonInterfaceLuck.getTailButton()){
             confirmFaceOrTailPlayer1.removeAll();
             confirmFaceOrTailPlayer1.revalidate();
             confirmFaceOrTailPlayer1.repaint();
+            /**
+             * recogemos en variables el alias y la eleccion de cara o cruz
+             * esto será usado para introducirlo en un hashmap
+             */
             MethodsInterfaceLuck.setAuxMapAliasPlayer1Luck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
             MethodsInterfaceLuck.setChosenItem(MethodsInterfaceLuck.CRUZ);
+            /**
+             * añadimos imagen y boton al panel
+             */
             ImageIcon imageIcon = new ImageIcon("imagenes/cruz.png");
             JLabel imageLabel = new JLabel();
             imageLabel.setIcon(imageIcon);
@@ -208,10 +283,20 @@ public class Luck extends JFrame {
             confirmButton.setForeground(Color.WHITE);
             confirmButton.setPreferredSize(new Dimension(140, 50));
             confirmFaceOrTailPlayer1.add(confirmButton);
+            /**
+             * actualizamos el panel central
+             */
+            contentPanel.add(confirmFaceOrTailPlayer1, gbc);
         }
 
 
     }
+
+    /**
+     * si pulsas enter, una vez has elegido cara o cruz, deshabilitas todos los botones
+     * además, se introduce el valor en el hashmap
+     * @param e el objeto de tipo ActionEvent
+     */
     public void LuckChoiceMadePlayer1(ActionEvent e){
             MethodsInterfaceLuck.disableButtonsAndAliasesPlayer1Luck();
             MethodsInterfaceLuck.setLuckPlayers(MethodsInterfaceLuck.getAuxMapAliasPlayer1Luck(),
@@ -219,13 +304,16 @@ public class Luck extends JFrame {
 
     }
 
+    /**
+     * metodo para crear el panel de confirmacion del jugador 1
+     * @return el panel creado
+     */
     private JPanel makeConfirmFaceOrTailPlayer1(){
         JPanel confirmPanel = new JPanel();
         ImageIcon imageIcon = new ImageIcon();
         JLabel imageLabel = new JLabel();
         imageLabel.setIcon(imageIcon);
         confirmPanel.add(imageLabel);
-         confirmButton = new ButtonInterfaceLuck().makeConfirmButtonPlayer1();
         confirmButton.setBackground(Color.GREEN);
         confirmButton.setForeground(Color.WHITE);
         confirmButton.setPreferredSize(new Dimension(140, 50));
