@@ -1,6 +1,7 @@
 package com.dam.proyectoprogramacion.panels.luck;
 
 import javax.swing.*;
+import com.dam.proyectoprogramacion.methodsandmain.*;
 
 public class selecAliasPlayer1 extends JPanel {
 
@@ -10,6 +11,8 @@ public class selecAliasPlayer1 extends JPanel {
     public selecAliasPlayer1(){
         setVisible(true);
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        aliasImagePlayer1 = MethodsInterfaceLuck.selectAliasImagePlayer1();
+        this.add(aliasImagePlayer1);
 
 
 

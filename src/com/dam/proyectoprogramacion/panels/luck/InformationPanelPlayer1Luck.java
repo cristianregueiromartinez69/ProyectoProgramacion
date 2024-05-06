@@ -35,4 +35,12 @@ public class InformationPanelPlayer1Luck extends JPanel {
         this.add(aliasTextPlayer1);
 
     }
+
+    public static JTextField getAliasTextPlayer1() {
+        return aliasTextPlayer1;
+    }
+
+    public static void setAliasTextPlayer1(JTextField aliasTextPlayer1) {
+        InformationPanelPlayer1Luck.aliasTextPlayer1 = aliasTextPlayer1;
+    }
 }
