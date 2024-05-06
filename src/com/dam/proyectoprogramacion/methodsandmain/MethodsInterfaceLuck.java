@@ -18,16 +18,28 @@ import java.util.Map;
 public class MethodsInterfaceLuck {
 
     /**
-     * metodo para crear un panel en función del alias escrito
-     * @return el panel creado
+     * atributos privados estáticos y finales de cara o cruz
      */
     public final static  int CARA = 1;
     public final static  int CRUZ = 2;
+    /**
+     * las variables que será introducidas en el hashmap
+     */
     private static String auxMapAliasPlayer1Luck;
     private static  int chosenItem;
+    /**
+     * variable que nos ayudará a determinar quien gana o pierde el sorteo
+     */
     private int randomNumberSelection;
+    /**
+     * el hashmap donde vamos a guardar los valores introducidos
+     */
     private static HashMap <String, Integer> luckPlayers = new HashMap<>();
 
+    /**
+     * metodo para crear un panel en función del alias escrito
+     * @return el panel creado
+     */
     public static JPanel selectAliasImagePlayer1(){
         JPanel aliasPlayer1 = new JPanel();
         aliasPlayer1.setLayout(new BoxLayout(aliasPlayer1, BoxLayout.Y_AXIS));
@@ -68,7 +80,11 @@ public class MethodsInterfaceLuck {
             return marca;
         }
 
-        public static JPanel faceOrTailPanelPlayer1(){
+    /**
+     * metodo para crear el panel de cara o cruz del jugador 1
+     * @return el panel creado
+     */
+    public static JPanel faceOrTailPanelPlayer1(){
 
         JPanel faceOrTailPanel = new JPanel();
         faceOrTailPanel.setLayout(new BoxLayout(faceOrTailPanel, BoxLayout.X_AXIS));
@@ -86,7 +102,11 @@ public class MethodsInterfaceLuck {
         return faceOrTailPanel;
         }
 
-        public static void disableButtonsAndAliasesPlayer1Luck(){
+    /**
+     * metodo que será usado en el boton de enter una vez has elegido cara o cruz
+     * el metodo deshabilita todos los botones del juagdor 1
+     */
+    public static void disableButtonsAndAliasesPlayer1Luck(){
 
         ButtonInterfaceLuck.getFaceButton().setEnabled(false);
         ButtonInterfaceLuck.getTailButton().setEnabled(false);
@@ -95,6 +115,10 @@ public class MethodsInterfaceLuck {
 
         }
 
+    /**
+     * getter y setter de los atributos de la clase
+     * @return el atributo correspondiente
+     */
     public static HashMap<String, Integer> getLuckPlayers() {
         return luckPlayers;
     }
