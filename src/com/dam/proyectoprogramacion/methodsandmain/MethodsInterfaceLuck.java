@@ -107,6 +107,20 @@ public class MethodsInterfaceLuck {
             }
             return marca;
         }
+    /**
+     * metodo para verificar si el usuario existe en el hashmap para el boton de enter
+     * @return true si existe y false si no existe
+     */
+    public static boolean checkAliasPlayer2(){
+        String aliasToLookFor = InformationPanelPlayer2Luck.getAliasTextPlayer2().getText();
+        boolean marca = false;
+        for (Map.Entry<String, ImageIcon> entry : MethodsInterfaceAccountCreate.getPlayers().entrySet()) {
+            if (entry.getKey().equals(aliasToLookFor)) {
+                marca = true;
+            }
+        }
+        return marca;
+    }
 
     /**
      * metodo para crear el panel de cara o cruz del jugador 1
