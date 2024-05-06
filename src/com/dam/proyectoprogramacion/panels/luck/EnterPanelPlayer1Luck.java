@@ -12,7 +12,7 @@ public class EnterPanelPlayer1Luck extends JPanel {
     /**
      * atributo de tipo jButton que será el boton de enter
      */
-    private JButton enterButtonPlayer1;
+    private static JButton enterButtonPlayer1;
     public EnterPanelPlayer1Luck(){
         /**
          * iniciamos el boton y lo añadimos al panel
@@ -22,5 +22,17 @@ public class EnterPanelPlayer1Luck extends JPanel {
         enterButtonPlayer1.setForeground(Color.WHITE);
         enterButtonPlayer1.setPreferredSize(new Dimension(100,50));
         this.add(enterButtonPlayer1);
+    }
+
+    /**
+     * getter y setter del boton de enter del jugador 1
+     * @return boton de enter
+     */
+    public static JButton getEnterButtonPlayer1() {
+        return enterButtonPlayer1;
+    }
+
+    public static void setEnterButtonPlayer1(JButton enterButtonPlayer1) {
+        EnterPanelPlayer1Luck.enterButtonPlayer1 = enterButtonPlayer1;
     }
 }

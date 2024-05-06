@@ -7,8 +7,7 @@ public class InformationPanelPlayer2Luck extends JPanel {
     private JLabel player2Label;
     private JLabel indicatorPutALiasLabel;
     private static JTextField aliasTextPlayer2;
-    private JPanel enterButtonPanel;
-    private JButton enterButtonPlayer2;
+
 
     public InformationPanelPlayer2Luck(){
         /**
@@ -28,5 +27,17 @@ public class InformationPanelPlayer2Luck extends JPanel {
         this.add(aliasTextPlayer2);
 
 
+    }
+
+    /**
+     * getter y setter del text alias del jugador 2
+     * @return el alias del jugador 2
+     */
+    public static JTextField getAliasTextPlayer2() {
+        return aliasTextPlayer2;
+    }
+
+    public static void setAliasTextPlayer2(JTextField aliasTextPlayer2) {
+        InformationPanelPlayer2Luck.aliasTextPlayer2 = aliasTextPlayer2;
     }
 }

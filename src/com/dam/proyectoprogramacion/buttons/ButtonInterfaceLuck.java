@@ -14,9 +14,10 @@ public class ButtonInterfaceLuck extends JPanel {
     /**
      * atributos privados de tipo JButton que serán los de la clase de la suerte
      */
-    private JButton faceButton;
-    private JButton tailButton;
-    private JButton confirmButton;
+    private static JButton faceButton;
+    private static JButton tailButton;
+    private static JButton confirmbuttonPlayer1;
+    private static JButton confirmbuttonPlayer2;
 
     /**
      * metodo para crear el botón de la cara de la moneda en la interfaz suerte
@@ -26,7 +27,7 @@ public class ButtonInterfaceLuck extends JPanel {
 
         ImageIcon iconFace = new ImageIcon("imagenes/cara.png");
         faceButton = new CreateButtons("Cara", iconFace);
-        setBackground(Color.GREEN);
+        setBackground(Color.ORANGE.brighter());
         setForeground(Color.BLACK);
         Border borderboton = BorderFactory.createLineBorder(Color.GREEN.darker().darker(), 2);
         setBorder(borderboton);
@@ -52,16 +53,42 @@ public class ButtonInterfaceLuck extends JPanel {
      * metodo para crear el boton de confirmar, una vez ambos jugadores ya saben quien escoge primero
      * @return el boton creado
      */
-    public JButton makeConfirmButton(){
+    public JButton makeConfirmButtonPlayer1(){
 
-        confirmButton = new JButton("Listo");
+        confirmbuttonPlayer1 = new JButton("Listo");
         setBackground(Color.GREEN);
         setForeground(Color.WHITE);
         Border borderboton = BorderFactory.createLineBorder(Color.RED, 3);
         setBorder(borderboton);
-        return confirmButton;
+        return confirmbuttonPlayer1;
+
+    }
+
+    public JButton makeConfirmButtonPlayer2(){
+
+        confirmbuttonPlayer1 = new JButton("Listo");
+        setBackground(Color.GREEN);
+        setForeground(Color.WHITE);
+        Border borderboton = BorderFactory.createLineBorder(Color.RED, 3);
+        setBorder(borderboton);
+        return confirmbuttonPlayer1;
 
     }
 
 
+    public static JButton getFaceButton() {
+        return faceButton;
+    }
+
+    public static JButton getTailButton() {
+        return tailButton;
+    }
+
+    public static JButton getConfirmbuttonPlayer1() {
+        return confirmbuttonPlayer1;
+    }
+
+    public static JButton getConfirmbuttonPlayer2() {
+        return confirmbuttonPlayer2;
+    }
 }
