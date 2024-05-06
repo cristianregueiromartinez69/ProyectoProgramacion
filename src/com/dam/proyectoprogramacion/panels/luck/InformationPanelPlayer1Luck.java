@@ -36,6 +36,10 @@ public class InformationPanelPlayer1Luck extends JPanel {
 
     }
 
+    /**
+     * getter y setter del text alias del jugador 1
+     * @return el alias del jugador 1
+     */
     public static JTextField getAliasTextPlayer1() {
         return aliasTextPlayer1;
     }

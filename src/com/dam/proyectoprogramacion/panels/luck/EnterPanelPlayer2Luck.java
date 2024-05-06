@@ -22,4 +22,16 @@ public class EnterPanelPlayer2Luck extends JPanel {
         enterButtonPlayer2.setPreferredSize(new Dimension(100,50));
         this.add(enterButtonPlayer2);
     }
+
+    /**
+     * getter y setter del boton de enter del jugador 2
+     * @return el boton de enter del jugador 2
+     */
+    public JButton getEnterButtonPlayer2() {
+        return enterButtonPlayer2;
+    }
+
+    public void setEnterButtonPlayer2(JButton enterButtonPlayer2) {
+        this.enterButtonPlayer2 = enterButtonPlayer2;
+    }
 }

@@ -24,6 +24,10 @@ public class EnterPanelPlayer1Luck extends JPanel {
         this.add(enterButtonPlayer1);
     }
 
+    /**
+     * getter y setter del boton de enter del jugador 1
+     * @return boton de enter
+     */
     public static JButton getEnterButtonPlayer1() {
         return enterButtonPlayer1;
     }
