@@ -209,6 +209,16 @@ public class Luck extends JFrame {
         confirmFaceOrTailPlayer1.setLayout(new BoxLayout(confirmFaceOrTailPlayer1, BoxLayout.X_AXIS));
         auxWinnerPanelPLayer1 = new JPanel();
         auxWinnerPanelPLayer2 = new JPanel();
+        resultPanel = new JPanel();
+        gbc.gridx = 0;
+        gbc.gridy = 3;
+        gbc.insets = new Insets(50,100,0,0);
+        resultPanel = MethodsInterfaceLuck.luckyInterfaceWinner();
+        contentPanelPlayer1.add(resultPanel, gbc);
+
+
+
+
 
         /**
          * añadimos los actionListener a los botones
@@ -221,6 +231,7 @@ public class Luck extends JFrame {
         ButtonInterfaceLuck.getTailButton().addActionListener(this::selectTailOrFace2);
         ButtonInterfaceLuck.getConfirmbuttonPlayer1().addActionListener(this::LuckChoiceMadePlayer1);
         ButtonInterfaceLuck2.getConfirmbuttonPlayer2().addActionListener(this::LuckChoiceMadePlayer2);
+
 
 
     }
@@ -416,16 +427,24 @@ public class Luck extends JFrame {
      */
     public void LuckChoiceMadePlayer1(ActionEvent e){
             MethodsInterfaceLuck.disableButtonsAndAliasesPlayer1Luck();
+
+
             MethodsInterfaceLuck.setLuckPlayers(MethodsInterfaceLuck.getAuxMapAliasPlayer1Luck(),
                     MethodsInterfaceLuck.getChosenItem());
-        System.out.println(MethodsInterfaceLuck.getLuckPlayers().toString());
+
 
     }
     public void LuckChoiceMadePlayer2(ActionEvent e){
         MethodsInterfaceLuck.disableButtonsAndAliasesPlayer2Luck();
         MethodsInterfaceLuck.setLuckPlayers(MethodsInterfaceLuck.getAuxMapAliasPlayer2Luck(),
                 MethodsInterfaceLuck.getChosenItem2());
-        System.out.println(MethodsInterfaceLuck.getLuckPlayers().toString());
+
+    }
+    public void winnerFaceOrTail(ActionEvent e){
+        if(MethodsInterfaceLuck.showWinnerLuck()){
+
+            dispose();
+        }
     }
 
 

@@ -224,16 +224,22 @@ public class MethodsInterfaceLuck {
     }
 
     public static JPanel luckyInterfaceWinner(int electionPlayer1, int electionPlayer2) {
-
         JPanel winner = new JPanel();
-        randomNumberSelection = (int) (1 + Math.random() * 2);
-        if (electionPlayer1 == randomNumberSelection) {
-            winner = new WinnerPlayer1Luck();
-        } else if (electionPlayer2 == randomNumberSelection) {
-            winner = new WinnerPLayer2Luck();
-        }
+
+
+            randomNumberSelection = (int) (1 + Math.random() * 2);
+            if (electionPlayer1 == randomNumberSelection) {
+                winner = new WinnerPlayer1Luck();
+            } else if (electionPlayer2 == randomNumberSelection) {
+                winner = new WinnerPLayer2Luck();
+            }
 
         return winner;
+    }
+
+    public static boolean showWinnerLuck(){
+
+        return !InformationPanelPlayer1Luck.getAliasTextPlayer1().isEditable() && !InformationPanelPlayer2Luck.getAliasTextPlayer2().isEditable();
     }
 
     /**
