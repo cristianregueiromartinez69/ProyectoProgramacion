@@ -174,8 +174,7 @@ public class MethodsInterfaceLuck {
      */
     public static void disableButtonsAndAliasesPlayer1Luck(){
 
-        ButtonInterfaceLuck.getFaceButton().setEnabled(false);
-        ButtonInterfaceLuck.getTailButton().setEnabled(false);
+
         InformationPanelPlayer1Luck.getAliasTextPlayer1().setEditable(false);
         EnterPanelPlayer1Luck.getEnterButtonPlayer1().setEnabled(false);
 
