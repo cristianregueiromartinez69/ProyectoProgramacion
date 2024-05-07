@@ -1,6 +1,8 @@
 package com.dam.proyectoprogramacion.methodsandmain;
 
 import javax.swing.*;
+
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceLuck2;
 import com.dam.proyectoprogramacion.panels.luck.*;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceLuck;
@@ -151,12 +153,12 @@ public class MethodsInterfaceLuck {
 
         JPanel faceOrTailPanel = new JPanel();
         faceOrTailPanel.setLayout(new BoxLayout(faceOrTailPanel, BoxLayout.X_AXIS));
-        JButton faceButton = new ButtonInterfaceLuck().makeFaceButton();
+        JButton faceButton = new ButtonInterfaceLuck2().makeFaceButton();
         faceButton.setBackground(Color.ORANGE.brighter());
         faceButton.setForeground(Color.BLACK);
         faceButton.setPreferredSize(new Dimension(140,50));
         faceOrTailPanel.add(faceButton);
-        JButton tailButton = new ButtonInterfaceLuck().makeTailButton();
+        JButton tailButton = new ButtonInterfaceLuck2().makeTailButton();
         tailButton.setBackground(Color.CYAN);
         tailButton.setForeground(Color.BLACK);
         tailButton.setPreferredSize(new Dimension(140,50));

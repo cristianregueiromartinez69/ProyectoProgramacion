@@ -29,13 +29,14 @@ public class Luck extends JFrame {
     private JPanel confirmFaceOrTailPlayer1;
     private JPanel contentPanelPlayer1;
 
+
     /**
      *atributos privados de tipo JPanel en los que vamos a poner la información del jugador 2
      */
     private JPanel aliasSelectedPlayer2;
     private JPanel faceOrTailPlayer2;
     private JPanel confirmFaceOrTailPlayer2;
-    private JPanel contentPanelPlayer2;
+
     /**
      * atributo privado de tipo JPanel en el que saldrá el ganador del sorteo
      */
@@ -164,11 +165,18 @@ public class Luck extends JFrame {
         aliasSelectedPlayer1 = new JPanel();
         contentPanelPlayer1.add(aliasSelectedPlayer1, gbc);
 
+        gbc.gridx = 1;
+        gbc.gridy = 1;
+        aliasSelectedPlayer2 = new JPanel();
+        contentPanelPlayer1.add(aliasSelectedPlayer2, gbc);
+
         /**
          * iniciamos el panel de cara o cruz del jugador1
          */
         faceOrTailPlayer1 = new JPanel();
         faceOrTailPlayer1 = MethodsInterfaceLuck.faceOrTailPanelPlayer1();
+        faceOrTailPlayer2 = new JPanel();
+        faceOrTailPlayer2 = MethodsInterfaceLuck.faceOrTailPanelPlayer2();
 
 
         /**
@@ -197,6 +205,7 @@ public class Luck extends JFrame {
          * añadimos los actionListener a los botones
          */
         EnterPanelPlayer1Luck.getEnterButtonPlayer1().addActionListener(this::putAliasImageAliasPLayer1);
+        EnterPanelPlayer2Luck.getEnterButtonPlayer2().addActionListener(this::putAliasImageAliasPLayer2);
         ButtonInterfaceLuck.getFaceButton().addActionListener(this::selectTailOrFace);
         ButtonInterfaceLuck.getTailButton().addActionListener(this::selectTailOrFace);
         ButtonInterfaceLuck.getConfirmbuttonPlayer1().addActionListener(this::LuckChoiceMadePlayer1);
@@ -227,6 +236,16 @@ public class Luck extends JFrame {
             JPanel newContentPanel = MethodsInterfaceLuck.selectAliasImagePlayer1();
             aliasSelectedPlayer1.add(newContentPanel);
             aliasSelectedPlayer1.add(faceOrTailPlayer1);
+        }
+    }
+    public void putAliasImageAliasPLayer2(ActionEvent e){
+        if(MethodsInterfaceLuck.checkAliasPlayer2()){
+            aliasSelectedPlayer2.removeAll();
+            aliasSelectedPlayer2.revalidate();
+            aliasSelectedPlayer2.repaint();
+            JPanel newContentPanel = MethodsInterfaceLuck.selectAliasImagePlayer2();
+            aliasSelectedPlayer2.add(newContentPanel);
+            aliasSelectedPlayer2.add(faceOrTailPlayer1);
         }
     }
     /**
