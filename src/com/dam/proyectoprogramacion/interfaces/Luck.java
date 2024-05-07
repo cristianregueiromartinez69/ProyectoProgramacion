@@ -25,10 +25,13 @@ public class Luck extends JFrame {
      */
     private JPanel aliasPanelPLayer1;
     private JPanel aliasPanelPLayer2;
-    private JPanel aliasSelectedPlayer1;
+    private  JPanel aliasSelectedPlayer1;
     private JPanel faceOrTailPlayer1;
     private JPanel confirmFaceOrTailPlayer1;
     private JPanel contentPanelPlayer1;
+    private static JPanel auxWinnerPanelPLayer1;
+    private static JPanel auxWinnerPanelPLayer2;
+
 
 
     /**
@@ -204,6 +207,8 @@ public class Luck extends JFrame {
          * establecemos un layout para el panel de confirmacion de cara o cruz
          */
         confirmFaceOrTailPlayer1.setLayout(new BoxLayout(confirmFaceOrTailPlayer1, BoxLayout.X_AXIS));
+        auxWinnerPanelPLayer1 = new JPanel();
+        auxWinnerPanelPLayer2 = new JPanel();
 
         /**
          * añadimos los actionListener a los botones
@@ -242,6 +247,7 @@ public class Luck extends JFrame {
             aliasSelectedPlayer1.repaint();
             JPanel newContentPanel = MethodsInterfaceLuck.selectAliasImagePlayer1();
             aliasSelectedPlayer1.add(newContentPanel);
+            auxWinnerPanelPLayer1 = aliasSelectedPlayer1;
             aliasSelectedPlayer1.add(faceOrTailPlayer1);
         }
     }
@@ -252,6 +258,7 @@ public class Luck extends JFrame {
             aliasSelectedPlayer2.repaint();
             JPanel newContentPanel = MethodsInterfaceLuck.selectAliasImagePlayer2();
             aliasSelectedPlayer2.add(newContentPanel);
+            auxWinnerPanelPLayer2 = aliasSelectedPlayer2;
             aliasSelectedPlayer2.add(faceOrTailPlayer1);
         }
     }
@@ -451,7 +458,19 @@ public class Luck extends JFrame {
         return confirmPanel;
     }
 
+    public static JPanel getAuxWinnerPanelPLayer1() {
+        return auxWinnerPanelPLayer1;
+    }
 
+    public static void setAuxWinnerPanelPLayer1(JPanel auxWinnerPanelPLayer1) {
+        Luck.auxWinnerPanelPLayer1 = auxWinnerPanelPLayer1;
+    }
 
+    public static JPanel getAuxWinnerPanelPLayer2() {
+        return auxWinnerPanelPLayer2;
+    }
 
+    public static void setAuxWinnerPanelPLayer2(JPanel auxWinnerPanelPLayer2) {
+        Luck.auxWinnerPanelPLayer2 = auxWinnerPanelPLayer2;
+    }
 }
