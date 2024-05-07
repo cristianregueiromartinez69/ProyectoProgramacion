@@ -31,6 +31,8 @@ public class Luck extends JFrame {
     private JPanel contentPanelPlayer1;
     private static JPanel auxWinnerPanelPLayer1;
     private static JPanel auxWinnerPanelPLayer2;
+    private int valuePlayer1;
+    private int valuePlayer2;
 
 
 
@@ -213,7 +215,7 @@ public class Luck extends JFrame {
         gbc.gridx = 0;
         gbc.gridy = 3;
         gbc.insets = new Insets(50,100,0,0);
-        resultPanel = MethodsInterfaceLuck.luckyInterfaceWinner();
+        resultPanel = MethodsInterfaceLuck.luckyInterfaceWinner(1,2);
         contentPanelPlayer1.add(resultPanel, gbc);
 
 
@@ -427,10 +429,10 @@ public class Luck extends JFrame {
      */
     public void LuckChoiceMadePlayer1(ActionEvent e){
             MethodsInterfaceLuck.disableButtonsAndAliasesPlayer1Luck();
-
-
             MethodsInterfaceLuck.setLuckPlayers(MethodsInterfaceLuck.getAuxMapAliasPlayer1Luck(),
                     MethodsInterfaceLuck.getChosenItem());
+            valuePlayer1 = MethodsInterfaceLuck.takeValuesPlayer1(MethodsInterfaceLuck.getLuckPlayers());
+
 
 
     }
@@ -438,6 +440,7 @@ public class Luck extends JFrame {
         MethodsInterfaceLuck.disableButtonsAndAliasesPlayer2Luck();
         MethodsInterfaceLuck.setLuckPlayers(MethodsInterfaceLuck.getAuxMapAliasPlayer2Luck(),
                 MethodsInterfaceLuck.getChosenItem2());
+        valuePlayer2 = MethodsInterfaceLuck.takeValuesPlayer2(MethodsInterfaceLuck.getLuckPlayers());
 
     }
     public void winnerFaceOrTail(ActionEvent e){

@@ -19,7 +19,7 @@ public class WinnerPlayer1Luck extends JPanel {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         winnerImagePanel = MethodsInterfaceLuck.makeImageWinnerPanel();
         this.add(winnerImagePanel);
-        aliasWinnerPanel = Luck.getAuxWinnerPanelPLayer1();
+        aliasWinnerPanel = MethodsInterfaceLuck.selectAliasImagePlayer1();
         this.add(aliasWinnerPanel);
         buttonFinishPanel = MethodsInterfaceLuck.makeButtonFinishPanel();
         this.add(buttonFinishPanel);

@@ -236,6 +236,42 @@ public class MethodsInterfaceLuck {
 
         return winner;
     }
+    public static int takeValuesPlayer1(HashMap<String, Integer> map) {
+        int valuePlayer1 = 0;
+
+
+
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            String player = entry.getKey();
+            int value = entry.getValue();
+
+
+            if (player.equals(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())) {
+
+                valuePlayer1 = value;
+            }
+        }
+        return valuePlayer1;
+    }
+    public static int takeValuesPlayer2(HashMap<String, Integer> map) {
+        int valuePlayer2 = 0;
+
+
+
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            String player = entry.getKey();
+            int value = entry.getValue();
+
+
+            if (player.equals(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())) {
+
+                valuePlayer2 = value;
+            }
+        }
+        return valuePlayer2;
+    }
+
+
 
     public static boolean showWinnerLuck(){
 
