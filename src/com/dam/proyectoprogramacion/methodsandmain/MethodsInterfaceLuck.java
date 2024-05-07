@@ -29,6 +29,8 @@ public class MethodsInterfaceLuck {
      */
     private static String auxMapAliasPlayer1Luck;
     private static  int chosenItem;
+    private static String auxMapAliasPlayer2Luck;
+    private static  int chosenItem2;
     /**
      * variable que nos ayudará a determinar quien gana o pierde el sorteo
      */
@@ -185,10 +187,9 @@ public class MethodsInterfaceLuck {
      */
     public static void disableButtonsAndAliasesPlayer2Luck(){
 
-        ButtonInterfaceLuck.getFaceButton().setEnabled(false);
-        ButtonInterfaceLuck.getTailButton().setEnabled(false);
-        InformationPanelPlayer1Luck.getAliasTextPlayer1().setEditable(false);
-        EnterPanelPlayer1Luck.getEnterButtonPlayer1().setEnabled(false);
+
+        InformationPanelPlayer2Luck.getAliasTextPlayer2().setEditable(false);
+        EnterPanelPlayer2Luck.getEnterButtonPlayer2().setEnabled(false);
 
     }
 
@@ -218,6 +219,34 @@ public class MethodsInterfaceLuck {
 
     public static void setChosenItem(int chosenItem) {
         MethodsInterfaceLuck.chosenItem = chosenItem;
+    }
+
+    public static String getAuxMapAliasPlayer2Luck() {
+        return auxMapAliasPlayer2Luck;
+    }
+
+    public static void setAuxMapAliasPlayer2Luck(String auxMapAliasPlayer2Luck) {
+        MethodsInterfaceLuck.auxMapAliasPlayer2Luck = auxMapAliasPlayer2Luck;
+    }
+
+    public static int getChosenItem2() {
+        return chosenItem2;
+    }
+
+    public static void setChosenItem2(int chosenItem2) {
+        MethodsInterfaceLuck.chosenItem2 = chosenItem2;
+    }
+
+    public int getRandomNumberSelection() {
+        return randomNumberSelection;
+    }
+
+    public void setRandomNumberSelection(int randomNumberSelection) {
+        this.randomNumberSelection = randomNumberSelection;
+    }
+
+    public static void setLuckPlayers(HashMap<String, Integer> luckPlayers) {
+        MethodsInterfaceLuck.luckPlayers = luckPlayers;
     }
 }
 
