@@ -379,7 +379,7 @@ public class Luck extends JFrame {
              * esto será usado para introducirlo en un hashmap
              */
             MethodsInterfaceLuck.setAuxMapAliasPlayer2Luck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
-            MethodsInterfaceLuck.setChosenItem(MethodsInterfaceLuck.CRUZ);
+            MethodsInterfaceLuck.setChosenItem2(MethodsInterfaceLuck.CRUZ);
             /**
              * añadimos imagen y boton al panel
              */
@@ -411,13 +411,14 @@ public class Luck extends JFrame {
             MethodsInterfaceLuck.disableButtonsAndAliasesPlayer1Luck();
             MethodsInterfaceLuck.setLuckPlayers(MethodsInterfaceLuck.getAuxMapAliasPlayer1Luck(),
                     MethodsInterfaceLuck.getChosenItem());
+        System.out.println(MethodsInterfaceLuck.getLuckPlayers().toString());
 
     }
     public void LuckChoiceMadePlayer2(ActionEvent e){
         MethodsInterfaceLuck.disableButtonsAndAliasesPlayer2Luck();
         MethodsInterfaceLuck.setLuckPlayers(MethodsInterfaceLuck.getAuxMapAliasPlayer2Luck(),
                 MethodsInterfaceLuck.getChosenItem2());
-
+        System.out.println(MethodsInterfaceLuck.getLuckPlayers().toString());
     }
 
 
