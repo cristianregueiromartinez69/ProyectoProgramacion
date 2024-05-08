@@ -27,6 +27,14 @@ public class Conexion {
         return con;
     }
 
+    public void CrearTabla() {
 
+        try (Statement stmt = con.createStatement()){
+                String sql = String.join("\n", "CREATE TABLE IF NOT EXISTS  Pokemon (", "Name VARCHAR(12) NOT NULL, PRIMARY KEY", "Type VARCHAR(10) NOT NULL, ", "Level INT NOT NULL, ", "Sex VARCHAR(7) NOT NULL, ", "Speed INT NOT NULL, ", "Lyfe INT NOT NULL, ", "Syze FLOAT NOT NULL, ", "Weight FLOAT NOT NULL, ", "Attacks VARCHAR(20) NOT NULL, ");
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
 }
