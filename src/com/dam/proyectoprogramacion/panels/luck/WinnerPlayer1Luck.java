@@ -10,7 +10,7 @@ public class WinnerPlayer1Luck extends JPanel {
 
     private JPanel winnerImagePanel;
     private JPanel aliasWinnerPanel;
-    private JPanel buttonFinishPanel;
+
 
 
     public WinnerPlayer1Luck(){
@@ -21,8 +21,7 @@ public class WinnerPlayer1Luck extends JPanel {
         this.add(winnerImagePanel);
         aliasWinnerPanel = MethodsInterfaceLuck.selectAliasImagePlayer1();
         this.add(aliasWinnerPanel);
-        buttonFinishPanel = MethodsInterfaceLuck.makeButtonFinishPanel();
-        this.add(buttonFinishPanel);
+
 
 
     }

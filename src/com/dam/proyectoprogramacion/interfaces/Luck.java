@@ -47,6 +47,8 @@ public class Luck extends JFrame {
      * atributo privado de tipo JPanel en el que saldrá el ganador del sorteo
      */
     private JPanel finishPanel;
+
+    private JPanel winnerPanel;
     /**
      * atributo privado de tipo JButton para poder iniciar la variable del boton de confirnar
      */
@@ -212,12 +214,16 @@ public class Luck extends JFrame {
         auxWinnerPanelPLayer1 = new JPanel();
         auxWinnerPanelPLayer2 = new JPanel();
         finishPanel = new JPanel();
+        winnerPanel = new JPanel();
+        winnerPanel = MethodsInterfaceLuck.luckyInterfaceWinner(1,2);
         gbc.gridx = 0;
         gbc.gridy = 3;
         gbc.insets = new Insets(50,100,0,0);
         finishPanel = MethodsInterfaceLuck.makeButtonFinishPanel();
         contentPanelPlayer1.add(finishPanel, gbc);
-
+        gbc.gridx = 1;
+        gbc.gridy = 3;
+        contentPanelPlayer1.add(winnerPanel);
 
 
 
@@ -233,6 +239,7 @@ public class Luck extends JFrame {
         ButtonInterfaceLuck.getTailButton().addActionListener(this::selectTailOrFace2);
         ButtonInterfaceLuck.getConfirmbuttonPlayer1().addActionListener(this::LuckChoiceMadePlayer1);
         ButtonInterfaceLuck2.getConfirmbuttonPlayer2().addActionListener(this::LuckChoiceMadePlayer2);
+        ButtonInterfaceLuck.getFinishButton().addActionListener(this::winnerFaceOrTail);
 
 
 
@@ -445,7 +452,10 @@ public class Luck extends JFrame {
     }
     public void winnerFaceOrTail(ActionEvent e){
         if(MethodsInterfaceLuck.showWinnerLuck()){
-
+            winnerPanel.removeAll();
+            winnerPanel.revalidate();
+            winnerPanel.repaint();
+            winnerPanel.add(MethodsInterfaceLuck.luckyInterfaceWinner(1,2));
 
         }
     }
