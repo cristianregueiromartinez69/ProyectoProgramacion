@@ -88,7 +88,7 @@ public class ButtonInterfaceLuck extends JPanel {
     }
     public JButton makeSelecTionButton(){
 
-        selectionButton = new JButton("Seguir");
+        selectionButton = new JButton("Seleccion de Pokemon");
         setBackground(Color.CYAN);
         setForeground(Color.BLACK);
         Border borderboton = BorderFactory.createLineBorder(Color.RED, 3);

@@ -57,7 +57,7 @@ public class Luck extends JFrame {
      */
     private JButton confirmButtonPlayer1;
     private JButton confirmButtonPlayer2;
-    private JButton goToSelectionPokemonButton;
+    private  JButton goToSelectionPokemonButton;
     /**
      * tenemos que hacer un atributo con las posiciones de los paneles fuera del constructor
      */
@@ -230,7 +230,7 @@ public class Luck extends JFrame {
         contentPanelPlayer1.add(winnerPanel);
 
 
-        goToSelectionPokemonButton = ButtonInterfaceLuck.getSelectionButton();
+        goToSelectionPokemonButton = new ButtonInterfaceLuck().makeSelecTionButton();
         gbc.gridx = 1;
         gbc.gridy = 4;
         goToSelectionPanel = new JPanel();
@@ -255,6 +255,7 @@ public class Luck extends JFrame {
         ButtonInterfaceLuck.getConfirmbuttonPlayer1().addActionListener(this::LuckChoiceMadePlayer1);
         ButtonInterfaceLuck2.getConfirmbuttonPlayer2().addActionListener(this::LuckChoiceMadePlayer2);
         ButtonInterfaceLuck.getFinishButton().addActionListener(this::winnerFaceOrTail);
+        ButtonInterfaceLuck.getSelectionButton().addActionListener();
 
 
 
@@ -481,7 +482,7 @@ public class Luck extends JFrame {
             goToSelectionPanel.removeAll();
             goToSelectionPanel.revalidate();
             goToSelectionPanel.repaint();
-            goToSelectionPokemonButton.setPreferredSize(new Dimension(130,40));
+            goToSelectionPokemonButton.setPreferredSize(new Dimension(200,40));
             goToSelectionPokemonButton.setBackground(Color.CYAN);
             goToSelectionPokemonButton.setForeground(Color.BLACK);
             goToSelectionPanel.add(goToSelectionPokemonButton);
