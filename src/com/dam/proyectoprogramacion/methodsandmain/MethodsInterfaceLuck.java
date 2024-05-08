@@ -40,6 +40,9 @@ public class MethodsInterfaceLuck {
      * el hashmap donde vamos a guardar los valores introducidos
      */
     private static HashMap<String, Integer> luckPlayers = new HashMap<>();
+    /**
+     * variable privada de tipo string en la que se almacenará el nombre del ganador del sorteo
+     */
     private static String aliasWinnerLuck;
 
     /**
@@ -205,6 +208,10 @@ public class MethodsInterfaceLuck {
 
     }
 
+    /**
+     * metodo que crea un panel en el que aparecerá una imagen de ganador
+     * @return el panel creado
+     */
     public static JPanel makeImageWinnerPanel() {
         JPanel labelPanel = new JPanel();
         ImageIcon imageIcon = new ImageIcon("imagenes/winnerLuck.png");
@@ -214,6 +221,10 @@ public class MethodsInterfaceLuck {
         return labelPanel;
     }
 
+    /**
+     * metodo para crear el panel con el boton de finish de la interfaz luck
+     * @return el panel creado
+     */
     public static JPanel makeButtonFinishPanel() {
         JPanel finishPanel = new JPanel();
         JButton finish = new ButtonInterfaceLuck().makeFinishButton();
@@ -224,6 +235,13 @@ public class MethodsInterfaceLuck {
         return finishPanel;
     }
 
+    /**
+     * metodo que nos creará un panel u otro en función del resultado de los jugadores
+     * @param electionPlayer1 aquí irá una variable que es cara o cruz
+     *  Cara = 1 y cruz = 2
+     * @param electionPlayer2 aquí irá una variable que es cara o cruz
+     * @return el panel correspondiente según el valor obtenido
+     */
     public static JPanel luckyInterfaceWinner(int electionPlayer1, int electionPlayer2) {
         JPanel winner = new JPanel();
 
@@ -243,6 +261,11 @@ public class MethodsInterfaceLuck {
     }
 
 
+    /**
+     * metodo para obtener el valor que ha seleccionado el jugador 1
+     * @param map el hashmap de la suerte de los jugadores
+     * @return el valor que ha seleccionado
+     */
     public static int takeValuesPlayer1(HashMap<String, Integer> map) {
         int valuePlayer1 = 0;
 
@@ -260,6 +283,11 @@ public class MethodsInterfaceLuck {
         }
         return valuePlayer1;
     }
+    /**
+     * metodo para obtener el valor que ha seleccionado el jugador 2
+     * @param map el hashmap de la suerte de los jugadores
+     * @return el valor que ha seleccionado
+     */
     public static int takeValuesPlayer2(HashMap<String, Integer> map) {
         int valuePlayer2 = 0;
 
@@ -279,12 +307,18 @@ public class MethodsInterfaceLuck {
     }
 
 
-
+    /**
+     * metodo booleano que comprueba si los alias están deshabilitados para escribir
+     * @return true si está deshabilitado
+     */
     public static boolean showWinnerLuck(){
 
         return !InformationPanelPlayer1Luck.getAliasTextPlayer1().isEditable() && !InformationPanelPlayer2Luck.getAliasTextPlayer2().isEditable();
     }
 
+    /**
+     * metodo para deshabilitar el resto de los botones de la interfaz luck
+     */
     public static void disableAllButtonsLuck(){
 
         ButtonInterfaceLuck.getTailButton().setEnabled(false);
