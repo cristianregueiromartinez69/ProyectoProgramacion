@@ -12,6 +12,7 @@ import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * interfaz de la suerte en la que se decide quien tira primero
@@ -49,11 +50,14 @@ public class Luck extends JFrame {
     private JPanel finishPanel;
 
     private JPanel winnerPanel;
+
+    private JPanel goToSelectionPanel;
     /**
      * atributo privado de tipo JButton para poder iniciar la variable del boton de confirnar
      */
     private JButton confirmButtonPlayer1;
     private JButton confirmButtonPlayer2;
+    private JButton goToSelectionPokemonButton;
     /**
      * tenemos que hacer un atributo con las posiciones de los paneles fuera del constructor
      */
@@ -226,6 +230,17 @@ public class Luck extends JFrame {
         contentPanelPlayer1.add(winnerPanel);
 
 
+        goToSelectionPokemonButton = ButtonInterfaceLuck.getSelectionButton();
+        gbc.gridx = 1;
+        gbc.gridy = 4;
+        goToSelectionPanel = new JPanel();
+        goToSelectionPanel = makeGoToSelectionPanel();
+        contentPanelPlayer1.add(goToSelectionPanel, gbc);
+
+
+
+
+
 
 
         /**
@@ -252,6 +267,12 @@ public class Luck extends JFrame {
     private JPanel makeContentPanel() {
         JPanel contentPanel = new JPanel();
         contentPanel.setOpaque(false);
+        contentPanel.setLayout(new GridBagLayout());
+        return contentPanel;
+    }
+
+    private JPanel makeGoToSelectionPanel() {
+        JPanel contentPanel = new JPanel();
         contentPanel.setLayout(new GridBagLayout());
         return contentPanel;
     }
@@ -455,7 +476,16 @@ public class Luck extends JFrame {
             winnerPanel.removeAll();
             winnerPanel.revalidate();
             winnerPanel.repaint();
-            winnerPanel.add(MethodsInterfaceLuck.luckyInterfaceWinner(1,2));
+            winnerPanel.add(MethodsInterfaceLuck.luckyInterfaceWinner(MethodsInterfaceLuck.takeValuesPlayer1(MethodsInterfaceLuck.getLuckPlayers()),
+                    MethodsInterfaceLuck.takeValuesPlayer2(MethodsInterfaceLuck.getLuckPlayers())));
+            goToSelectionPanel.removeAll();
+            goToSelectionPanel.revalidate();
+            goToSelectionPanel.repaint();
+            goToSelectionPokemonButton.setPreferredSize(new Dimension(130,40));
+            goToSelectionPokemonButton.setBackground(Color.CYAN);
+            goToSelectionPokemonButton.setForeground(Color.BLACK);
+            goToSelectionPanel.add(goToSelectionPokemonButton);
+
 
         }
     }

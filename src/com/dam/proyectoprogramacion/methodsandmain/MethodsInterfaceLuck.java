@@ -40,6 +40,7 @@ public class MethodsInterfaceLuck {
      * el hashmap donde vamos a guardar los valores introducidos
      */
     private static HashMap<String, Integer> luckPlayers = new HashMap<>();
+    private static String aliasWinnerLuck;
 
     /**
      * metodo para crear un panel en función del alias escrito
@@ -230,12 +231,18 @@ public class MethodsInterfaceLuck {
             randomNumberSelection = (int) (1 + Math.random() * 2);
             if (electionPlayer1 == randomNumberSelection) {
                 winner = new WinnerPlayer1Luck();
+                aliasWinnerLuck = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+
             } else if (electionPlayer2 == randomNumberSelection) {
                 winner = new WinnerPLayer2Luck();
+                aliasWinnerLuck = InformationPanelPlayer2Luck.getAliasTextPlayer2().getText();
+
             }
 
         return winner;
     }
+
+
     public static int takeValuesPlayer1(HashMap<String, Integer> map) {
         int valuePlayer1 = 0;
 
@@ -277,6 +284,8 @@ public class MethodsInterfaceLuck {
 
         return !InformationPanelPlayer1Luck.getAliasTextPlayer1().isEditable() && !InformationPanelPlayer2Luck.getAliasTextPlayer2().isEditable();
     }
+
+
 
     /**
      * getter y setter de los atributos de la clase
@@ -333,6 +342,14 @@ public class MethodsInterfaceLuck {
 
     public static void setLuckPlayers(HashMap<String, Integer> luckPlayers) {
         MethodsInterfaceLuck.luckPlayers = luckPlayers;
+    }
+
+    public static String getAliasWinnerLuck() {
+        return aliasWinnerLuck;
+    }
+
+    public static void setAliasWinnerLuck(String aliasWinnerLuck) {
+        MethodsInterfaceLuck.aliasWinnerLuck = aliasWinnerLuck;
     }
 }
 

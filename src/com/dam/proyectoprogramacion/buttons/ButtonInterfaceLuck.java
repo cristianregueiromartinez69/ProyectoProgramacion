@@ -19,6 +19,7 @@ public class ButtonInterfaceLuck extends JPanel {
     private static JButton confirmbuttonPlayer1;
     private static JButton confirmbuttonPlayer2;
     private static JButton finishButton;
+    private static JButton selectionButton;
 
     /**
      * metodo para crear el botón de la cara de la moneda en la interfaz suerte
@@ -85,6 +86,17 @@ public class ButtonInterfaceLuck extends JPanel {
         return finishButton;
 
     }
+    public JButton makeSelecTionButton(){
+
+        selectionButton = new JButton("Seguir");
+        setBackground(Color.CYAN);
+        setForeground(Color.BLACK);
+        Border borderboton = BorderFactory.createLineBorder(Color.RED, 3);
+        setBorder(borderboton);
+        return selectionButton;
+
+    }
+
 
 
 
@@ -110,5 +122,13 @@ public class ButtonInterfaceLuck extends JPanel {
 
     public static void setFinishButton(JButton finishButton) {
         ButtonInterfaceLuck.finishButton = finishButton;
+    }
+
+    public static JButton getSelectionButton() {
+        return selectionButton;
+    }
+
+    public static void setSelectionButton(JButton selectionButton) {
+        ButtonInterfaceLuck.selectionButton = selectionButton;
     }
 }
