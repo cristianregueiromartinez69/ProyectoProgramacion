@@ -31,6 +31,9 @@ public class Luck extends JFrame {
     private JPanel confirmFaceOrTailPlayer1;
     private JPanel contentPanelPlayer1;
     private static JPanel auxWinnerPanelPLayer1;
+    /**
+     * atributo privado de tipo jpanel que sirve para guardar la informacion del panel ganador del jugador 2
+     */
     private static JPanel auxWinnerPanelPLayer2;
     private int valuePlayer1;
     private int valuePlayer2;
@@ -48,12 +51,19 @@ public class Luck extends JFrame {
      * atributo privado de tipo JPanel en el que saldrá el ganador del sorteo
      */
     private JPanel finishPanel;
+    /**
+     * atributo privado de tipo JPanel para poner el alias ganador del sorteo
+     */
 
     private JPanel winnerPanel;
+    /**
+     * atributo privado de tipo JPanel para poner el boton de ir a seleccion de pokemon
+     */
 
     private JPanel goToSelectionPanel;
     /**
      * atributo privado de tipo JButton para poder iniciar la variable del boton de confirnar
+     * y el boton de seleccion de pokemon
      */
     private JButton confirmButtonPlayer1;
     private JButton confirmButtonPlayer2;
@@ -177,8 +187,15 @@ public class Luck extends JFrame {
         aliasSelectedPlayer1 = new JPanel();
         contentPanelPlayer1.add(aliasSelectedPlayer1, gbc);
 
+        /**
+         * establecemos nuevas medidas
+         */
         gbc.gridx = 1;
         gbc.gridy = 1;
+        /**
+         * iniciamos el aliasslectedpanel de jugador 2
+         * lo añadimos al panel central
+         */
         aliasSelectedPlayer2 = new JPanel();
         contentPanelPlayer1.add(aliasSelectedPlayer2, gbc);
 
@@ -187,13 +204,14 @@ public class Luck extends JFrame {
          */
         faceOrTailPlayer1 = new JPanel();
         faceOrTailPlayer1 = MethodsInterfaceLuck.faceOrTailPanelPlayer1();
+
+        /**
+         * iniciamos el panel de cara o cruz del jugador2
+         */
         faceOrTailPlayer2 = new JPanel();
         faceOrTailPlayer2 = MethodsInterfaceLuck.faceOrTailPanelPlayer2();
 
 
-        /**
-         * establecemos nuevas medidas
-         */
 
         /**
          * iniciamos el panel de confirmacion de cara o cruz del jugador 1
@@ -206,35 +224,69 @@ public class Luck extends JFrame {
         confirmButtonPlayer1 = new ButtonInterfaceLuck().makeConfirmButtonPlayer1();
         confirmButtonPlayer2 = new ButtonInterfaceLuck2().makeConfirmButtonPlayer2();
         /**
-         * hacemos que el panel de confirmacion sea igual a un metodo que nos devuelve un panel
+         * hacemos que el panel de confirmacion de cara o cruz sea igual a un metodo que nos devuelve un panel
          */
         confirmFaceOrTailPlayer1 = makeConfirmFaceOrTailPlayer1();
         confirmFaceOrTailPlayer2 = makeConfirmFaceOrTailPlayer2();
 
         /**
-         * establecemos un layout para el panel de confirmacion de cara o cruz
+         * le damos medidas al panel de confirmar cara o cruz
          */
         confirmFaceOrTailPlayer1.setLayout(new BoxLayout(confirmFaceOrTailPlayer1, BoxLayout.X_AXIS));
+        /**
+         * iniciamos los paneles que almacenan la informacion de ganador del panel del jugador 1 y 2
+         */
         auxWinnerPanelPLayer1 = new JPanel();
         auxWinnerPanelPLayer2 = new JPanel();
+        /**
+         * iniciamos los paneles que almacenan el boton de fin y el panel con el ganador del sorteo
+         */
         finishPanel = new JPanel();
         winnerPanel = new JPanel();
+        /**
+         * hacemos que el panel del ganador del sorteo sea igual a un metodo que devuelve un panel
+         */
         winnerPanel = MethodsInterfaceLuck.luckyInterfaceWinner(1,2);
+        /**
+         * establecemos nuevas medidas
+         */
         gbc.gridx = 0;
         gbc.gridy = 3;
+        /**
+         * establecemos nuevos margenes
+         */
         gbc.insets = new Insets(50,100,0,0);
+        /**
+         * hacemos que el panel que contiene el boton de finish sea igual a un metodo que nos devuelve un panel
+         */
         finishPanel = MethodsInterfaceLuck.makeButtonFinishPanel();
+        /**
+         * lo añadimos al panel central
+         */
         contentPanelPlayer1.add(finishPanel, gbc);
         gbc.gridx = 1;
         gbc.gridy = 3;
         contentPanelPlayer1.add(winnerPanel);
 
 
+        /**
+         * iniciamos el boton de seleccion de pokemon que e sigual a un metodo que crea un boton
+         */
         goToSelectionPokemonButton = new ButtonInterfaceLuck().makeSelecTionButton();
+        /**
+         * establecemos nuevas medidas
+         */
         gbc.gridx = 1;
         gbc.gridy = 4;
+        /**
+         * iniciamos el panel que que contiene el boton de ir a seleccion de pokemon
+         * hacemos que sea igual a un metodo que devuelve un panel
+         */
         goToSelectionPanel = new JPanel();
         goToSelectionPanel = makeGoToSelectionPanel();
+        /**
+         * lo añadimos al panel central
+         */
         contentPanelPlayer1.add(goToSelectionPanel, gbc);
 
 
@@ -272,6 +324,10 @@ public class Luck extends JFrame {
         return contentPanel;
     }
 
+    /**
+     * metodo que crea el panel que contiene el boton de ir a seleccion de pokemon
+     * @return el panel creado
+     */
     private JPanel makeGoToSelectionPanel() {
         JPanel contentPanel = new JPanel();
         contentPanel.setLayout(new GridBagLayout());
@@ -284,23 +340,57 @@ public class Luck extends JFrame {
      */
     public void putAliasImageAliasPLayer1(ActionEvent e){
         if(MethodsInterfaceLuck.checkAliasPlayer1()){
+            /**
+             * limpiamos el panel entero
+             */
             aliasSelectedPlayer1.removeAll();
             aliasSelectedPlayer1.revalidate();
             aliasSelectedPlayer1.repaint();
+            /**
+             * creamos un nuevo panel que es igual a un metodo que crea un panel
+             */
             JPanel newContentPanel = MethodsInterfaceLuck.selectAliasImagePlayer1();
+            /**
+             * lo añadimos
+             */
             aliasSelectedPlayer1.add(newContentPanel);
+            /**
+             * hacemos que el panel auxwinner sea igual al panel que tiene la imagen y alias
+             */
             auxWinnerPanelPLayer1 = aliasSelectedPlayer1;
+            /**
+             * añadimos a este panel, un panel que tiene cara o cruz
+             */
             aliasSelectedPlayer1.add(faceOrTailPlayer1);
         }
     }
+    /**
+     * metodo que limpia un panel para poner la imagen y el alias del jugador introducido
+     * @param e el objeto de tipo ActionEvent
+     */
     public void putAliasImageAliasPLayer2(ActionEvent e){
         if(MethodsInterfaceLuck.checkAliasPlayer2()){
+            /**
+             * limpiamos el panel entero
+             */
             aliasSelectedPlayer2.removeAll();
             aliasSelectedPlayer2.revalidate();
             aliasSelectedPlayer2.repaint();
+            /**
+             * creamos un nuevo panel que es igual a un metodo que crea un panel
+             */
             JPanel newContentPanel = MethodsInterfaceLuck.selectAliasImagePlayer2();
+            /**
+             * lo añadimos
+             */
             aliasSelectedPlayer2.add(newContentPanel);
+            /**
+             * hacemos que el panel auxwinner sea igual al panel que tiene la imagen y alias
+             */
             auxWinnerPanelPLayer2 = aliasSelectedPlayer2;
+            /**
+             * añadimos a este panel, un panel que tiene cara o cruz
+             */
             aliasSelectedPlayer2.add(faceOrTailPlayer1);
         }
     }
@@ -452,7 +542,7 @@ public class Luck extends JFrame {
     }
 
     /**
-     * si pulsas enter, una vez has elegido cara o cruz, deshabilitas todos los botones
+     * si pulsas enter, una vez has elegido cara o cruz, deshabilita el alias y el boton de enter
      * además, se introduce el valor en el hashmap
      * @param e el objeto de tipo ActionEvent
      */
@@ -465,6 +555,11 @@ public class Luck extends JFrame {
 
 
     }
+    /**
+     * si pulsas enter, una vez has elegido cara o cruz, deshabilita el alias y el boton de enter
+     * además, se introduce el valor en el hashmap
+     * @param e el objeto de tipo ActionEvent
+     */
     public void LuckChoiceMadePlayer2(ActionEvent e){
         MethodsInterfaceLuck.disableButtonsAndAliasesPlayer2Luck();
         MethodsInterfaceLuck.setLuckPlayers(MethodsInterfaceLuck.getAuxMapAliasPlayer2Luck(),
@@ -472,26 +567,57 @@ public class Luck extends JFrame {
         valuePlayer2 = MethodsInterfaceLuck.takeValuesPlayer2(MethodsInterfaceLuck.getLuckPlayers());
 
     }
+
+    /**
+     * metodo que limpia el panel del ganador del sorteo para meter la imagen del ganador
+     * @param e el objeto de tipo actionevent
+     */
     public void winnerFaceOrTail(ActionEvent e){
+        /**
+         * si se cumple la condicion de este metodo, se pued epulsar el boton
+         * el metodo consiste en saber si está editable el alias del jugador 1 y 2
+         */
         if(MethodsInterfaceLuck.showWinnerLuck()){
+            /**
+             * limpiamos el panel del ganador del sorteo
+             */
             winnerPanel.removeAll();
             winnerPanel.revalidate();
             winnerPanel.repaint();
+            /**
+             * añadimos al hashmap de ganador, los valores que introdujeron el jugador 1 y 2
+             */
             winnerPanel.add(MethodsInterfaceLuck.luckyInterfaceWinner(MethodsInterfaceLuck.takeValuesPlayer1(MethodsInterfaceLuck.getLuckPlayers()),
                     MethodsInterfaceLuck.takeValuesPlayer2(MethodsInterfaceLuck.getLuckPlayers())));
+            /**
+             * limpiamos el panel de ir a seleccion de pokemon
+             */
             goToSelectionPanel.removeAll();
             goToSelectionPanel.revalidate();
             goToSelectionPanel.repaint();
+            /**
+             * personalizamos el boton de ir a seleccion de pokemon
+             */
             goToSelectionPokemonButton.setPreferredSize(new Dimension(200,40));
             goToSelectionPokemonButton.setBackground(Color.CYAN);
             goToSelectionPokemonButton.setForeground(Color.BLACK);
+            /**
+             * lo añadimos al panel
+             */
             goToSelectionPanel.add(goToSelectionPokemonButton);
+            /**
+             * deshabilitamos el resto de botones una vez se conoce al ganador
+             */
              MethodsInterfaceLuck.disableAllButtonsLuck();
 
 
         }
     }
 
+    /**
+     * metodo para ir a la interfaz de seleccion de pokemon
+     * @param e el objeto de tipo actionEvent
+     */
     public void goToSelectionInterface(ActionEvent e){
         new SelectionPokemon();
         dispose();
@@ -514,6 +640,10 @@ public class Luck extends JFrame {
         confirmPanel.add(confirmButtonPlayer1);
         return confirmPanel;
     }
+    /**
+     * metodo para crear el panel de confirmacion del jugador 2
+     * @return el panel creado
+     */
     private JPanel makeConfirmFaceOrTailPlayer2(){
         JPanel confirmPanel = new JPanel();
         ImageIcon imageIcon = new ImageIcon();
@@ -527,6 +657,10 @@ public class Luck extends JFrame {
         return confirmPanel;
     }
 
+    /**
+     * getter y setter de los atributos de la clase
+     * @return los atributos correspondientes
+     */
     public static JPanel getAuxWinnerPanelPLayer1() {
         return auxWinnerPanelPLayer1;
     }
