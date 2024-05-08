@@ -66,6 +66,10 @@ public class ButtonInterfaceLuck extends JPanel {
 
     }
 
+    /**
+     * metodo para crear el boton de confirmacion del jugador 2
+     * @return el boton creado
+     */
     public JButton makeConfirmButtonPlayer2(){
 
         confirmbuttonPlayer1 = new JButton("Listo");
@@ -76,6 +80,11 @@ public class ButtonInterfaceLuck extends JPanel {
         return confirmbuttonPlayer1;
 
     }
+
+    /**
+     * metodo para crear el boton de finish de la interfaz de la suerte
+     * @return el boton creado
+     */
     public JButton makeFinishButton(){
 
         finishButton = new JButton("Finish");
@@ -86,6 +95,11 @@ public class ButtonInterfaceLuck extends JPanel {
         return finishButton;
 
     }
+
+    /**
+     * metodo para crear el boton de ir al menu de seleccion de pokemon
+     * @return el boton creado
+     */
     public JButton makeSelecTionButton(){
 
         selectionButton = new JButton("Seleccion de Pokemon");
@@ -98,8 +112,10 @@ public class ButtonInterfaceLuck extends JPanel {
     }
 
 
-
-
+    /**
+     * getter y setter de los botones de la interfaz luck
+     * @return os botones correspondientes
+     */
     public static JButton getFaceButton() {
         return faceButton;
     }
