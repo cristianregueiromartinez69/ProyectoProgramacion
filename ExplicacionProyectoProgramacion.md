@@ -62,3 +62,35 @@ Chema:
 15. Realización de la super clase pokemon de la cual van a haredar las clases anteriores
 16. Criticar la imagen de fondo de la interfaz creaar cuenta XD
 
+***Semana 2 del proyecto***
+Esta semana nos toca seguir haciendo interfaces con su funcionalidad e implementar la base de datos
+
+Cristian:
+1. Realizacion de la interfaz cuenta
+2. Realizacion de los metodos de la interfaz cuenta
+3. Realizacion de más botones para la interfaz cuenta
+
+***Explicacion de el funcionamiento de la interfaz***
+La interfaz funciona de la siguiente manera:
+1. para poder avanzar, tienes que tener una cuenta creada, si no no puedes jugar
+2. Si creaste la cuenta, deberías poder introducir correctamente el usuario
+3. Al introducirlo, tienes que seleccionar si quieres cara o cruz
+4. El jugador 2 hará lo mismo
+5. si ya has seleccionado cara y estás conforme con la eleccion, le das a enter
+6. el jugador 2 hará lo mismo
+7. El ganador del sorteo se decide de la siguiente manera:
+si el jugador escoge cara, se le asigna el numero 1
+si el jugador 1 escoge cruz, se le asigna el nunero 2
+se genera un numero aleatorio entre el 1 y 2 
+el numero escogido por el jugador 1 y 2 debe de ser igual al numero generado, de ahí sale el ganador
+8. Una vez se conoce al ganador, sale una imagen del ganador del sorteo en el panel de winner
+9. sale también un boton para ir a la seleccion de pokemons
+
+***Problemas encontrados y a resolver en el futuro***
+1. los botones de cara o cruz no consigo que salgan 2 para cada jugador
+2. el posicionamiento de los botones y paneles no es el que me gustaría
+3. Falta refactorizar bastante esa clase
+4. Lo bueno es que funciona perfectamente y lo unico que nos importa de esa interfaz es saber el ganador del sorteo, el cual funciona perfectamente
+
+Chema:
+1. Implementación de la base de datos en el proyecto
