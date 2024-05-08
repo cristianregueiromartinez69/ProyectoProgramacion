@@ -6,8 +6,9 @@ import java.awt.*;
 
 /**
  * Clase de los botones de la interfaz de la suerte
+ * Esta es una clase auxiliar para la interfaz luck
  * @author Cristian
- * @version v1.0
+ * @version v2.0
  */
 public class ButtonInterfaceLuck2 extends JPanel {
 
@@ -64,6 +65,10 @@ public class ButtonInterfaceLuck2 extends JPanel {
 
     }
 
+    /**
+     * getter y setter de la clase auxiliar de la suerte
+     * @return
+     */
     public static JButton getFaceButton() {
         return faceButton;
     }
