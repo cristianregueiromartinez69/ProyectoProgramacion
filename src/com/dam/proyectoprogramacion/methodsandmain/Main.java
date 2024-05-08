@@ -9,7 +9,8 @@ public class Main {
 
 
 
-        //TODO: acabar la interfaz de crear cuenta
+
+        //TODO: hay que hacer mejor la interfaz de la suerte, pero funciona que es lo importante
 
 
 
