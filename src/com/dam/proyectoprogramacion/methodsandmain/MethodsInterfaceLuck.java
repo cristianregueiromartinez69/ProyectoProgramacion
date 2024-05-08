@@ -285,6 +285,15 @@ public class MethodsInterfaceLuck {
         return !InformationPanelPlayer1Luck.getAliasTextPlayer1().isEditable() && !InformationPanelPlayer2Luck.getAliasTextPlayer2().isEditable();
     }
 
+    public static void disableAllButtonsLuck(){
+
+        ButtonInterfaceLuck.getTailButton().setEnabled(false);
+        ButtonInterfaceLuck.getFaceButton().setEnabled(false);
+        ButtonInterfaceLuck.getConfirmbuttonPlayer1().setEnabled(false);
+
+
+    }
+
 
 
     /**

@@ -1,4 +1,6 @@
 package com.dam.proyectoprogramacion.interfaces;
 
-public class SelectionPokemon {
+import javax.swing.*;
+
+public class SelectionPokemon extends JFrame {
 }

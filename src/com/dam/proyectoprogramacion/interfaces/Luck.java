@@ -255,7 +255,7 @@ public class Luck extends JFrame {
         ButtonInterfaceLuck.getConfirmbuttonPlayer1().addActionListener(this::LuckChoiceMadePlayer1);
         ButtonInterfaceLuck2.getConfirmbuttonPlayer2().addActionListener(this::LuckChoiceMadePlayer2);
         ButtonInterfaceLuck.getFinishButton().addActionListener(this::winnerFaceOrTail);
-        ButtonInterfaceLuck.getSelectionButton().addActionListener();
+        ButtonInterfaceLuck.getSelectionButton().addActionListener(this::goToSelectionInterface);
 
 
 
@@ -486,9 +486,15 @@ public class Luck extends JFrame {
             goToSelectionPokemonButton.setBackground(Color.CYAN);
             goToSelectionPokemonButton.setForeground(Color.BLACK);
             goToSelectionPanel.add(goToSelectionPokemonButton);
+             MethodsInterfaceLuck.disableAllButtonsLuck();
 
 
         }
+    }
+
+    public void goToSelectionInterface(ActionEvent e){
+        new SelectionPokemon();
+        dispose();
     }
 
 
