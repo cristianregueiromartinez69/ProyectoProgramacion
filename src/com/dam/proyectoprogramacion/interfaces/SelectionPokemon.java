@@ -4,6 +4,7 @@ import com.dam.proyectoprogramacion.background.BackgroundMainMenuPanel;
 import com.dam.proyectoprogramacion.panels.selectionpokemon.JLabelsPokemons;
 import com.dam.proyectoprogramacion.panels.selectionpokemon.PanelsPokemonRow1;
 import com.dam.proyectoprogramacion.panels.selectionpokemon.PanelsPokemonsRowsToSelect;
+import com.dam.proyectoprogramacion.pokemonSongs.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -87,7 +88,7 @@ public class SelectionPokemon extends JFrame {
             }
             @Override
             public void mouseClicked(MouseEvent e) {
-
+               DrampaSong.musicDrampa();
             }
         });
 

@@ -13,7 +13,7 @@ import java.io.IOException;
  */
 public class DrampaSong {
 
-    public static void music() {
+    public static void musicDrampa() {
         try {
             /**
              * Cargar el archivo de audio
