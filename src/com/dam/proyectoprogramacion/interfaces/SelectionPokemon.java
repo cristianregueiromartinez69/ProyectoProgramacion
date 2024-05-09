@@ -94,24 +94,24 @@ public class SelectionPokemon extends JFrame {
         });
 
         /**
-         * al JLabel de drampa le ponemos 3 acciones
+         * al JLabel de empoleon le ponemos 3 acciones
          * La primera es que para cuando pases el cursor por encima, cambie de color el fondo
          * La segunda que para cuando dejes de psar el cursor por encima, vuelva al coolor original
          * La tercera que para cuando pulses el boton, selecciones el pokemon
          * Además, sonará el sonido del pokemon y elimina al pokemon del panel, para que no pueda ser escogido
          */
-        JLabelsPokemons.getDrampaLabel().addMouseListener(new MouseAdapter() {
+        JLabelsPokemons.getEmpoleonLabel().addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.GREEN);
+                PanelsPokemonRow1.getEmpoleonPanel().setBackground(Color.BLUE);
             }
             @Override
             public void mouseExited(MouseEvent e) {
-                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.WHITE);
+                PanelsPokemonRow1.getEmpoleonPanel().setBackground(Color.WHITE);
             }
             @Override
             public void mouseClicked(MouseEvent e) {
-                DrampaSong.musicDrampa();
+                EmpoleonSong.musicEmpoleon();
             }
         });
 
