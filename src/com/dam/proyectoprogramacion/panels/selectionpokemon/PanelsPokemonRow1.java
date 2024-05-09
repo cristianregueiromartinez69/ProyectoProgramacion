@@ -12,7 +12,7 @@ public class PanelsPokemonRow1 extends JPanel {
     /**
      * atributos privados de tipo JPanel
      */
-    private JPanel drampaPanel;
+    private static JPanel drampaPanel;
     private JPanel empoleonPanel;
     private JPanel garchompPanel;
     private JPanel gengarPanel;
@@ -131,4 +131,11 @@ public class PanelsPokemonRow1 extends JPanel {
         return pokemon4;
     }
 
+    public static JPanel getDrampaPanel() {
+        return drampaPanel;
+    }
+
+    public static void setDrampaPanel(JPanel drampaPanel) {
+        PanelsPokemonRow1.drampaPanel = drampaPanel;
+    }
 }

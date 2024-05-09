@@ -1,4 +1,4 @@
-package com.dam.proyectoprogramacion.methodsandmain;
+package com.dam.proyectoprogramacion.musics;
 
 import javax.sound.sampled.*;
 import java.io.File;

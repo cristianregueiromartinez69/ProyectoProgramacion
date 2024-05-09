@@ -2,6 +2,7 @@ package com.dam.proyectoprogramacion.interfaces;
 
 import com.dam.proyectoprogramacion.background.BackgroundMainMenuPanel;
 import com.dam.proyectoprogramacion.panels.selectionpokemon.JLabelsPokemons;
+import com.dam.proyectoprogramacion.panels.selectionpokemon.PanelsPokemonRow1;
 import com.dam.proyectoprogramacion.panels.selectionpokemon.PanelsPokemonsRowsToSelect;
 
 import javax.swing.*;
@@ -58,23 +59,35 @@ public class SelectionPokemon extends JFrame {
 
 
         add(backgroundPanel);
+        /**
+         * establecemos dimensiones
+         */
         gbc.gridy = 1;
         gbc.gridx = 0;
 
+        /**
+         * añadimos al panel central, un panel con toda la información de los pokemons
+         */
         contentPanel.add(new PanelsPokemonsRowsToSelect(), gbc);
 
+        /**
+         * al JLabel de drampa le ponemos 3 acciones
+         * La primera es que para cuando pases el cursor por encima, cambie de color el fondo
+         * La segunda que para cuando dejes de psar el cursor por encima, vuelva al coolor original
+         * La tercera que para cuando pulses el boton, selecciones el pokemon
+         */
         JLabelsPokemons.getDrampaLabel().addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-               JLabelsPokemons.getDrampaLabel().setBackground(Color.GREEN);
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.GREEN);
             }
             @Override
             public void mouseExited(MouseEvent e) {
-                JLabelsPokemons.getDrampaLabel().setBackground(null);
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.WHITE);
             }
             @Override
             public void mouseClicked(MouseEvent e) {
-                System.out.println("hola, soy drampa");
+
             }
         });
 
