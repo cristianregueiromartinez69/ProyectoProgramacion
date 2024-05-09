@@ -93,6 +93,14 @@ public class SelectionPokemon extends JFrame {
          */
         contentPanel.add(globalPanelSelectionPokemon, gbc);
 
+        gbc.gridy = 2;
+        gbc.gridx = 0;
+        gbc.insets = new Insets(0, 1200, 30, 0);
+
+        globalPanelPlayer2 = new JPanel();
+        globalPanelPlayer2.add(new PanelPlayer2());
+        contentPanel.add(globalPanelPlayer2, gbc);
+
 
 
 
