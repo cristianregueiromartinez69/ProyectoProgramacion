@@ -93,7 +93,7 @@ public class PanelsPokemonRow3 extends JPanel {
         pokemon2.setLayout(new BoxLayout(pokemon2, BoxLayout.Y_AXIS));
         JLabel namePokemon2 = new JLabel("Snorlax");
         pokemon2.add(namePokemon2);
-        pokemon2.add(JLabelsPokemons.makeSnorlaxLabel();
+        pokemon2.add(JLabelsPokemons.makeSnorlaxLabel());
         return pokemon2;
     }
     /**

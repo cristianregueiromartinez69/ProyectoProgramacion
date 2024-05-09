@@ -54,8 +54,10 @@ public class SelectionPokemon extends JFrame {
 
 
         add(backgroundPanel);
+        gbc.gridy = 1;
+        gbc.gridx = 0;
 
-        contentPanel.add(new PanelsPokemonsRowsToSelect());
+        contentPanel.add(new PanelsPokemonsRowsToSelect(), gbc);
 
 
     }
