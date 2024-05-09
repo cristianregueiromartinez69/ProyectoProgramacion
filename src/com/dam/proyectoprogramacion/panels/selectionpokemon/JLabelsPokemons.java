@@ -27,9 +27,9 @@ public class JLabelsPokemons {
      */
     public static JLabel makeDrampaLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/drampaSP.png");
-        JLabel drampa = new JLabel();
-        drampa.setIcon(imageIcon);
-        return drampa;
+         drampaLabel = new JLabel();
+        drampaLabel.setIcon(imageIcon);
+        return drampaLabel;
 
     }
     /**
@@ -38,9 +38,9 @@ public class JLabelsPokemons {
      */
     public static JLabel makeEmpoleonLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/empoleonSP.png");
-        JLabel empoleon = new JLabel();
-        empoleon.setIcon(imageIcon);
-        return empoleon;
+        empoleonLabel = new JLabel();
+        empoleonLabel.setIcon(imageIcon);
+        return empoleonLabel;
 
     }
     /**
@@ -49,9 +49,9 @@ public class JLabelsPokemons {
      */
     public static JLabel makeGarchompLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/garchompSP.png");
-        JLabel garchomp = new JLabel();
-        garchomp.setIcon(imageIcon);
-        return garchomp;
+        garchompLabel = new JLabel();
+        garchompLabel.setIcon(imageIcon);
+        return garchompLabel;
 
     }
     /**
@@ -60,9 +60,9 @@ public class JLabelsPokemons {
      */
     public static JLabel makeGengarLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/gengarSP.png");
-        JLabel gengar = new JLabel();
-        gengar.setIcon(imageIcon);
-        return gengar;
+        gengarLabel = new JLabel();
+        gengarLabel.setIcon(imageIcon);
+        return gengarLabel;
 
     }
     /**
@@ -71,9 +71,9 @@ public class JLabelsPokemons {
      */
     public static JLabel makeInfernapeLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/infernapeSP.png");
-        JLabel infernape = new JLabel();
-        infernape.setIcon(imageIcon);
-        return infernape;
+         infernapeLabel = new JLabel();
+        infernapeLabel.setIcon(imageIcon);
+        return infernapeLabel;
 
     }
     /**
@@ -82,9 +82,9 @@ public class JLabelsPokemons {
      */
     public static JLabel makeLucarioLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/lucarioSP.png");
-        JLabel lucario = new JLabel();
-        lucario.setIcon(imageIcon);
-        return lucario;
+         lucarioLabel = new JLabel();
+        lucarioLabel.setIcon(imageIcon);
+        return lucarioLabel;
 
     }
     /**
@@ -93,9 +93,9 @@ public class JLabelsPokemons {
      */
     public static JLabel makeLuxrayLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/luxraySP.png");
-        JLabel luxray = new JLabel();
-        luxray.setIcon(imageIcon);
-        return luxray;
+         luxrayLabel = new JLabel();
+        luxrayLabel.setIcon(imageIcon);
+        return luxrayLabel;
 
     }
     /**
@@ -104,9 +104,9 @@ public class JLabelsPokemons {
      */
     public static JLabel makeMarshadowLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/marshadowSP.png");
-        JLabel marshadow = new JLabel();
-        marshadow.setIcon(imageIcon);
-        return marshadow;
+         marshadowLabel = new JLabel();
+        marshadowLabel.setIcon(imageIcon);
+        return marshadowLabel;
 
     }
     /**
@@ -115,9 +115,9 @@ public class JLabelsPokemons {
      */
     public static JLabel makeMiloticLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/miloticSP.png");
-        JLabel milotic = new JLabel();
-        milotic.setIcon(imageIcon);
-        return milotic;
+         miloticLabel = new JLabel();
+        miloticLabel.setIcon(imageIcon);
+        return miloticLabel;
 
     }
     /**
@@ -126,9 +126,9 @@ public class JLabelsPokemons {
      */
     public static JLabel makeSnorlaxLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/snorlaxSP.png");
-        JLabel snorlax = new JLabel();
-        snorlax.setIcon(imageIcon);
-        return snorlax;
+         snorlaxLabel = new JLabel();
+        snorlaxLabel.setIcon(imageIcon);
+        return snorlaxLabel;
 
     }
     /**
@@ -137,9 +137,9 @@ public class JLabelsPokemons {
      */
     public static JLabel makeTinkatonLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/tinkatonSP.png");
-        JLabel tinkaton = new JLabel();
-        tinkaton.setIcon(imageIcon);
-        return tinkaton;
+         tinkatonLabel = new JLabel();
+        tinkatonLabel.setIcon(imageIcon);
+        return tinkatonLabel;
 
     }
     /**
@@ -148,9 +148,9 @@ public class JLabelsPokemons {
      */
     public static JLabel makeTyranitarLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/tyranitarSP.png");
-        JLabel tyranitar = new JLabel();
-        tyranitar.setIcon(imageIcon);
-        return tyranitar;
+         tyranitarLabel = new JLabel();
+        tyranitarLabel.setIcon(imageIcon);
+        return tyranitarLabel;
 
     }
 

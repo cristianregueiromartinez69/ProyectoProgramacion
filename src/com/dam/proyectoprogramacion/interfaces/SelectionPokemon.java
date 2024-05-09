@@ -1,10 +1,13 @@
 package com.dam.proyectoprogramacion.interfaces;
 
 import com.dam.proyectoprogramacion.background.BackgroundMainMenuPanel;
+import com.dam.proyectoprogramacion.panels.selectionpokemon.JLabelsPokemons;
 import com.dam.proyectoprogramacion.panels.selectionpokemon.PanelsPokemonsRowsToSelect;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 /**
  * Interfaz de seleccion de pokemons
@@ -31,6 +34,7 @@ public class SelectionPokemon extends JFrame {
         setTitle("Seleccion de POkemon");
         setSize(600, 400);
         setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
         /**
@@ -58,6 +62,21 @@ public class SelectionPokemon extends JFrame {
         gbc.gridx = 0;
 
         contentPanel.add(new PanelsPokemonsRowsToSelect(), gbc);
+
+        JLabelsPokemons.getDrampaLabel().addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+               JLabelsPokemons.getDrampaLabel().setBackground(Color.GREEN);
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                JLabelsPokemons.getDrampaLabel().setBackground(null);
+            }
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                System.out.println("hola, soy drampa");
+            }
+        });
 
 
     }
