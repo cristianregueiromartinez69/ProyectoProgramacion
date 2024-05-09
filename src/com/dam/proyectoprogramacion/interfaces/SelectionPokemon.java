@@ -53,16 +53,35 @@ public class SelectionPokemon extends JFrame {
          */
         JPanel contentPanel = makeContentPanel();
         GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(0, 0, 30, 1000);
 
         backgroundPanel.add(contentPanel, BorderLayout.CENTER);
 
 
         add(backgroundPanel);
+
+        /**
+         * establecemos dimensiones
+         */
+        gbc.gridy = 0;
+        gbc.gridx = 0;
+        /**
+         * iniciamos el panel del jugdor 1
+         * hacemos que sea igual a la clase que crea el panel
+         */
+        globalPanelPlayer1 = new JPanel();
+        globalPanelPlayer1.add(new PanelPlayer1());
+        /**
+         * lo añadimos al panel principal
+         */
+        contentPanel.add(globalPanelPlayer1, gbc);
+
         /**
          * establecemos dimensiones
          */
         gbc.gridy = 1;
         gbc.gridx = 0;
+        gbc.insets = new Insets(0, 100, 30, 0);
 
         /**
          * iniciamos el panel de los pokemons y añadimos todos los pokemons
@@ -73,6 +92,10 @@ public class SelectionPokemon extends JFrame {
          * lo añadimos al panel principal
          */
         contentPanel.add(globalPanelSelectionPokemon, gbc);
+
+
+
+
 
         /**
          * al JLabel de drampa le ponemos 3 acciones
