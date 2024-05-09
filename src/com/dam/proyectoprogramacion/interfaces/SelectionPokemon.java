@@ -93,6 +93,248 @@ public class SelectionPokemon extends JFrame {
             }
         });
 
+        /**
+         * al JLabel de drampa le ponemos 3 acciones
+         * La primera es que para cuando pases el cursor por encima, cambie de color el fondo
+         * La segunda que para cuando dejes de psar el cursor por encima, vuelva al coolor original
+         * La tercera que para cuando pulses el boton, selecciones el pokemon
+         * Además, sonará el sonido del pokemon y elimina al pokemon del panel, para que no pueda ser escogido
+         */
+        JLabelsPokemons.getDrampaLabel().addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.GREEN);
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.WHITE);
+            }
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                DrampaSong.musicDrampa();
+            }
+        });
+
+        /**
+         * al JLabel de drampa le ponemos 3 acciones
+         * La primera es que para cuando pases el cursor por encima, cambie de color el fondo
+         * La segunda que para cuando dejes de psar el cursor por encima, vuelva al coolor original
+         * La tercera que para cuando pulses el boton, selecciones el pokemon
+         * Además, sonará el sonido del pokemon y elimina al pokemon del panel, para que no pueda ser escogido
+         */
+        JLabelsPokemons.getDrampaLabel().addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.GREEN);
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.WHITE);
+            }
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                DrampaSong.musicDrampa();
+            }
+        });
+
+        /**
+         * al JLabel de drampa le ponemos 3 acciones
+         * La primera es que para cuando pases el cursor por encima, cambie de color el fondo
+         * La segunda que para cuando dejes de psar el cursor por encima, vuelva al coolor original
+         * La tercera que para cuando pulses el boton, selecciones el pokemon
+         * Además, sonará el sonido del pokemon y elimina al pokemon del panel, para que no pueda ser escogido
+         */
+        JLabelsPokemons.getDrampaLabel().addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.GREEN);
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.WHITE);
+            }
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                DrampaSong.musicDrampa();
+            }
+        });
+
+        /**
+         * al JLabel de drampa le ponemos 3 acciones
+         * La primera es que para cuando pases el cursor por encima, cambie de color el fondo
+         * La segunda que para cuando dejes de psar el cursor por encima, vuelva al coolor original
+         * La tercera que para cuando pulses el boton, selecciones el pokemon
+         * Además, sonará el sonido del pokemon y elimina al pokemon del panel, para que no pueda ser escogido
+         */
+        JLabelsPokemons.getDrampaLabel().addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.GREEN);
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.WHITE);
+            }
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                DrampaSong.musicDrampa();
+            }
+        });
+
+        /**
+         * al JLabel de drampa le ponemos 3 acciones
+         * La primera es que para cuando pases el cursor por encima, cambie de color el fondo
+         * La segunda que para cuando dejes de psar el cursor por encima, vuelva al coolor original
+         * La tercera que para cuando pulses el boton, selecciones el pokemon
+         * Además, sonará el sonido del pokemon y elimina al pokemon del panel, para que no pueda ser escogido
+         */
+        JLabelsPokemons.getDrampaLabel().addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.GREEN);
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.WHITE);
+            }
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                DrampaSong.musicDrampa();
+            }
+        });
+
+        /**
+         * al JLabel de drampa le ponemos 3 acciones
+         * La primera es que para cuando pases el cursor por encima, cambie de color el fondo
+         * La segunda que para cuando dejes de psar el cursor por encima, vuelva al coolor original
+         * La tercera que para cuando pulses el boton, selecciones el pokemon
+         * Además, sonará el sonido del pokemon y elimina al pokemon del panel, para que no pueda ser escogido
+         */
+        JLabelsPokemons.getDrampaLabel().addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.GREEN);
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.WHITE);
+            }
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                DrampaSong.musicDrampa();
+            }
+        });
+
+        /**
+         * al JLabel de drampa le ponemos 3 acciones
+         * La primera es que para cuando pases el cursor por encima, cambie de color el fondo
+         * La segunda que para cuando dejes de psar el cursor por encima, vuelva al coolor original
+         * La tercera que para cuando pulses el boton, selecciones el pokemon
+         * Además, sonará el sonido del pokemon y elimina al pokemon del panel, para que no pueda ser escogido
+         */
+        JLabelsPokemons.getDrampaLabel().addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.GREEN);
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.WHITE);
+            }
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                DrampaSong.musicDrampa();
+            }
+        });
+
+        /**
+         * al JLabel de drampa le ponemos 3 acciones
+         * La primera es que para cuando pases el cursor por encima, cambie de color el fondo
+         * La segunda que para cuando dejes de psar el cursor por encima, vuelva al coolor original
+         * La tercera que para cuando pulses el boton, selecciones el pokemon
+         * Además, sonará el sonido del pokemon y elimina al pokemon del panel, para que no pueda ser escogido
+         */
+        JLabelsPokemons.getDrampaLabel().addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.GREEN);
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.WHITE);
+            }
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                DrampaSong.musicDrampa();
+            }
+        });
+
+        /**
+         * al JLabel de drampa le ponemos 3 acciones
+         * La primera es que para cuando pases el cursor por encima, cambie de color el fondo
+         * La segunda que para cuando dejes de psar el cursor por encima, vuelva al coolor original
+         * La tercera que para cuando pulses el boton, selecciones el pokemon
+         * Además, sonará el sonido del pokemon y elimina al pokemon del panel, para que no pueda ser escogido
+         */
+        JLabelsPokemons.getDrampaLabel().addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.GREEN);
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.WHITE);
+            }
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                DrampaSong.musicDrampa();
+            }
+        });
+
+        /**
+         * al JLabel de drampa le ponemos 3 acciones
+         * La primera es que para cuando pases el cursor por encima, cambie de color el fondo
+         * La segunda que para cuando dejes de psar el cursor por encima, vuelva al coolor original
+         * La tercera que para cuando pulses el boton, selecciones el pokemon
+         * Además, sonará el sonido del pokemon y elimina al pokemon del panel, para que no pueda ser escogido
+         */
+        JLabelsPokemons.getDrampaLabel().addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.GREEN);
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.WHITE);
+            }
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                DrampaSong.musicDrampa();
+            }
+        });
+
+        /**
+         * al JLabel de drampa le ponemos 3 acciones
+         * La primera es que para cuando pases el cursor por encima, cambie de color el fondo
+         * La segunda que para cuando dejes de psar el cursor por encima, vuelva al coolor original
+         * La tercera que para cuando pulses el boton, selecciones el pokemon
+         * Además, sonará el sonido del pokemon y elimina al pokemon del panel, para que no pueda ser escogido
+         */
+        JLabelsPokemons.getDrampaLabel().addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.GREEN);
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                PanelsPokemonRow1.getDrampaPanel().setBackground(Color.WHITE);
+            }
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                DrampaSong.musicDrampa();
+            }
+        });
+
 
     }
 
