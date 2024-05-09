@@ -1,22 +1,24 @@
-package com.dam.proyectoprogramacion.musics;
+package com.dam.proyectoprogramacion.pokemonSongs;
+
+
 
 import javax.sound.sampled.*;
 import java.io.File;
 import java.io.IOException;
 
 /**
- * clase con la musica del menu dle juego
+ * clase con el grito de drampa
  * @author cristian
- * @version v1.0
+ * @version v2.0
  */
-public class MusicMainMenu {
+public class DrampaSong {
 
     public static void music() {
         try {
             /**
              * Cargar el archivo de audio
              */
-            File audioFile = new File("canciones/otramusicaredyblue.wav");
+            File audioFile = new File("canciones/gritoDrampa.wav");
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
 
             /**
@@ -35,7 +37,7 @@ public class MusicMainMenu {
              * / Reproducir el audio en bucle infinito
              */
             clip.start();
-            clip.loop(Clip.LOOP_CONTINUOUSLY);
+
 
 
             /**
@@ -46,3 +48,4 @@ public class MusicMainMenu {
         }
     }
 }
+
