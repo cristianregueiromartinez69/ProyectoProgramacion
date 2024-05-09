@@ -4,6 +4,10 @@ import javax.swing.*;
 
 public class JLabelsPokemons {
 
+    /**
+     * atributos privados estáticos de tipo JLabel
+     * estos atributos tendrán la imagen de los pokemons a escoger
+     */
     private static JLabel drampaLabel;
     private static JLabel empoleonLabel;
     private static JLabel garchompLabel;
@@ -17,6 +21,10 @@ public class JLabelsPokemons {
     private static JLabel tinkatonLabel;
     private static JLabel tyranitarLabel;
 
+    /**
+     * metodo que crea un JLabel con la imagen de drampa
+     * @return el JLabel creado
+     */
     public JLabel makeDrampaLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/drampaSP.png");
         JLabel drampa = new JLabel();
@@ -24,6 +32,10 @@ public class JLabelsPokemons {
         return drampa;
 
     }
+    /**
+     * metodo que crea un JLabel con la imagen de empoleon
+     * @return el JLabel creado
+     */
     public JLabel makeEmpoleonLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/empoleonSP.png");
         JLabel empoleon = new JLabel();
@@ -31,6 +43,10 @@ public class JLabelsPokemons {
         return empoleon;
 
     }
+    /**
+     * metodo que crea un JLabel con la imagen de garchomp
+     * @return el JLabel creado
+     */
     public JLabel makeGarchompLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/garchompSP.png");
         JLabel garchomp = new JLabel();
@@ -38,6 +54,10 @@ public class JLabelsPokemons {
         return garchomp;
 
     }
+    /**
+     * metodo que crea un JLabel con la imagen de gengar
+     * @return el JLabel creado
+     */
     public JLabel makeGengarLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/gengarSP.png");
         JLabel gengar = new JLabel();
@@ -45,6 +65,10 @@ public class JLabelsPokemons {
         return gengar;
 
     }
+    /**
+     * metodo que crea un JLabel con la imagen de infernape
+     * @return el JLabel creado
+     */
     public JLabel makeInfernapeLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/infernapeSP.png");
         JLabel infernape = new JLabel();
@@ -52,6 +76,10 @@ public class JLabelsPokemons {
         return infernape;
 
     }
+    /**
+     * metodo que crea un JLabel con la imagen de lucario
+     * @return el JLabel creado
+     */
     public JLabel makeLucarioLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/lucarioSP.png");
         JLabel lucario = new JLabel();
@@ -59,6 +87,10 @@ public class JLabelsPokemons {
         return lucario;
 
     }
+    /**
+     * metodo que crea un JLabel con la imagen de luxray
+     * @return el JLabel creado
+     */
     public JLabel makeLuxrayLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/luxraySP.png");
         JLabel luxray = new JLabel();
@@ -66,6 +98,10 @@ public class JLabelsPokemons {
         return luxray;
 
     }
+    /**
+     * metodo que crea un JLabel con la imagen de marshadow
+     * @return el JLabel creado
+     */
     public JLabel makeMarshadowLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/marshadowSP.png");
         JLabel marshadow = new JLabel();
@@ -73,6 +109,10 @@ public class JLabelsPokemons {
         return marshadow;
 
     }
+    /**
+     * metodo que crea un JLabel con la imagen de milotic
+     * @return el JLabel creado
+     */
     public JLabel makeMiloticLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/miloticSP.png");
         JLabel milotic = new JLabel();
@@ -80,6 +120,10 @@ public class JLabelsPokemons {
         return milotic;
 
     }
+    /**
+     * metodo que crea un JLabel con la imagen de snorlax
+     * @return el JLabel creado
+     */
     public JLabel makeSnorlaxLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/snorlaxSP.png");
         JLabel snorlax = new JLabel();
@@ -87,6 +131,10 @@ public class JLabelsPokemons {
         return snorlax;
 
     }
+    /**
+     * metodo que crea un JLabel con la imagen de tinkaton
+     * @return el JLabel creado
+     */
     public JLabel makeTinkatonLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/tinkatonSP.png");
         JLabel tinkaton = new JLabel();
@@ -94,6 +142,10 @@ public class JLabelsPokemons {
         return tinkaton;
 
     }
+    /**
+     * metodo que crea un JLabel con la imagen de tyranitar
+     * @return el JLabel creado
+     */
     public JLabel makeTyranitarLabel(){
         ImageIcon imageIcon = new ImageIcon("imagenes/tyranitarSP.png");
         JLabel tyranitar = new JLabel();
