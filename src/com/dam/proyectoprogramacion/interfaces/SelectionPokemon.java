@@ -65,9 +65,14 @@ public class SelectionPokemon extends JFrame {
         gbc.gridx = 0;
 
         /**
-         * añadimos al panel central, un panel con toda la información de los pokemons
+         * iniciamos el panel de los pokemons y añadimos todos los pokemons
          */
-        contentPanel.add(new PanelsPokemonsRowsToSelect(), gbc);
+        globalPanelSelectionPokemon = new JPanel();
+        globalPanelSelectionPokemon.add(new PanelsPokemonsRowsToSelect());
+        /**
+         * lo añadimos al panel principal
+         */
+        contentPanel.add(globalPanelSelectionPokemon, gbc);
 
         /**
          * al JLabel de drampa le ponemos 3 acciones
