@@ -13,9 +13,9 @@ public class PanelsPokemonRow1 extends JPanel {
      * atributos privados de tipo JPanel
      */
     private static JPanel drampaPanel;
-    private JPanel empoleonPanel;
-    private JPanel garchompPanel;
-    private JPanel gengarPanel;
+    private static JPanel empoleonPanel;
+    private static JPanel garchompPanel;
+    private static JPanel gengarPanel;
 
     /**
      * constructor de la clase
@@ -131,11 +131,31 @@ public class PanelsPokemonRow1 extends JPanel {
         return pokemon4;
     }
 
+    /**
+     * getter y setter de los atributos de la clase
+     * @return el atributo correspondiente
+     */
     public static JPanel getDrampaPanel() {
         return drampaPanel;
     }
 
     public static void setDrampaPanel(JPanel drampaPanel) {
         PanelsPokemonRow1.drampaPanel = drampaPanel;
+    }
+
+    /**
+     * getters de los paneles de los pokemons para cambiar el color
+     * @return el atributo correspondiente
+     */
+    public static JPanel getEmpoleonPanel() {
+        return empoleonPanel;
+    }
+
+    public static JPanel getGarchompPanel() {
+        return garchompPanel;
+    }
+
+    public static JPanel getGengarPanel() {
+        return gengarPanel;
     }
 }

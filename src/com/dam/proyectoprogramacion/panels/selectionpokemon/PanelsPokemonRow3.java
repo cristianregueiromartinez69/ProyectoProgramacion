@@ -12,10 +12,10 @@ public class PanelsPokemonRow3 extends JPanel {
     /**
      * atributos privados de tipo JPanel
      */
-    private JPanel miloticPanel;
-    private JPanel snorlaxPanel;
-    private JPanel tinkatonPanel;
-    private JPanel tyranitarPanel;
+    private static JPanel miloticPanel;
+    private static JPanel snorlaxPanel;
+    private static JPanel tinkatonPanel;
+    private static JPanel tyranitarPanel;
 
     /**
      * constructor de la clase
@@ -131,4 +131,23 @@ public class PanelsPokemonRow3 extends JPanel {
         return pokemon4;
     }
 
+    /**
+     * getter de los paneles de los pokemons para cambiarles el color
+     * @return el panel correspondiente
+     */
+    public static JPanel getMiloticPanel() {
+        return miloticPanel;
+    }
+
+    public static JPanel getSnorlaxPanel() {
+        return snorlaxPanel;
+    }
+
+    public static JPanel getTinkatonPanel() {
+        return tinkatonPanel;
+    }
+
+    public static JPanel getTyranitarPanel() {
+        return tyranitarPanel;
+    }
 }

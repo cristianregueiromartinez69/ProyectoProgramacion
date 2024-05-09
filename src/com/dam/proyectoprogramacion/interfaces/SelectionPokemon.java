@@ -76,6 +76,7 @@ public class SelectionPokemon extends JFrame {
          * La primera es que para cuando pases el cursor por encima, cambie de color el fondo
          * La segunda que para cuando dejes de psar el cursor por encima, vuelva al coolor original
          * La tercera que para cuando pulses el boton, selecciones el pokemon
+         * Además, sonará el sonido del pokemon y elimina al pokemon del panel, para que no pueda ser escogido
          */
         JLabelsPokemons.getDrampaLabel().addMouseListener(new MouseAdapter() {
             @Override

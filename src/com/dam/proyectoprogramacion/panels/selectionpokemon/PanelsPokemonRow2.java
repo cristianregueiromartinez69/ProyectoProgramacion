@@ -12,10 +12,10 @@ public class PanelsPokemonRow2 extends JPanel {
     /**
      * atributos privados de tipo JPanel
      */
-    private JPanel infernapePanel;
-    private JPanel lucarioPanel;
-    private JPanel luxrayPanel;
-    private JPanel marshadowPanel;
+    private static JPanel infernapePanel;
+    private static JPanel lucarioPanel;
+    private static JPanel luxrayPanel;
+    private static JPanel marshadowPanel;
 
     /**
      * constructor de la clase
@@ -131,4 +131,23 @@ public class PanelsPokemonRow2 extends JPanel {
         return pokemon4;
     }
 
+    /**
+     * getters de los paneles para cambiarles el color de fondo
+     * @return el panel correspondiente
+     */
+    public static JPanel getInfernapePanel() {
+        return infernapePanel;
+    }
+
+    public static JPanel getLucarioPanel() {
+        return lucarioPanel;
+    }
+
+    public static JPanel getLuxrayPanel() {
+        return luxrayPanel;
+    }
+
+    public static JPanel getMarshadowPanel() {
+        return marshadowPanel;
+    }
 }
