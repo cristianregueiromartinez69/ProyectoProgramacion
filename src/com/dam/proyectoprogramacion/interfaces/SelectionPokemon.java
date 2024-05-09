@@ -1,6 +1,7 @@
 package com.dam.proyectoprogramacion.interfaces;
 
 import com.dam.proyectoprogramacion.background.BackgroundMainMenuPanel;
+import com.dam.proyectoprogramacion.panels.selectionpokemon.PanelsPokemonsRowsToSelect;
 
 import javax.swing.*;
 import java.awt.*;
@@ -53,6 +54,8 @@ public class SelectionPokemon extends JFrame {
 
 
         add(backgroundPanel);
+
+        contentPanel.add(new PanelsPokemonsRowsToSelect());
 
 
     }

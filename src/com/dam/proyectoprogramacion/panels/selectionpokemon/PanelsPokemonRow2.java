@@ -28,25 +28,25 @@ public class PanelsPokemonRow2 extends JPanel {
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
 
         /**
-         * iniciamos el panel de drampa y lo hacemos igual a un metodo que devuelve el panel
+         * iniciamos el panel de infernape y lo hacemos igual a un metodo que devuelve el panel
          */
         infernapePanel = new JPanel();
         infernapePanel = makeInfernapePanel();
 
         /**
-         * iniciamos el panel de empoleon y lo hacemos igual a un metodo que devuelve el panel
+         * iniciamos el panel de lucario y lo hacemos igual a un metodo que devuelve el panel
          */
         lucarioPanel = new JPanel();
         lucarioPanel = makeLucarioPanel();
 
         /**
-         * iniciamos el panel de garchomp y lo hacemos igual a un metodo que devuelve el panel
+         * iniciamos el panel de luxray y lo hacemos igual a un metodo que devuelve el panel
          */
         luxrayPanel = new JPanel();
         luxrayPanel = makeLuxrayPanel();
 
         /**
-         * iniciamos el panel de gengar y lo hacemos igual a un metodo que devuelve el panel
+         * iniciamos el panel de marshadow y lo hacemos igual a un metodo que devuelve el panel
          */
         marshadowPanel = new JPanel();
         marshadowPanel = makeMarshadowPanel();

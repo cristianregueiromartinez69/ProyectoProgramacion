@@ -41,6 +41,10 @@ public class PanelsPokemonsRowsToSelect extends JPanel {
         row3OF3PokemonsToChose = makeRow3OF3PokemonsToChose();
         this.add(row3OF3PokemonsToChose);
 
+        row1OF3PokemonsToChose.add(new PanelsPokemonRow1());
+        row2OF3PokemonsToChose.add(new PanelsPokemonRow2());
+        row3OF3PokemonsToChose.add(new PanelsPokemonRow3());
+
 
 
 
