@@ -17,7 +17,7 @@ public class Atacks {
     public void CrearTabla() {
 
         try (Statement stmt = con.createStatement()){
-            String sql = String.join("\n", "CREATE TABLE IF NOT EXISTS  Ataques (", "Name VARCHAR(15) NOT NULL, PRIMARY KEY", "Type VARCHAR(10) NOT NULL, ", "Power INT NOT NULL, ", "PP INT NOT NULL, ", "Precission FLOAT NOT NULL, ");
+            String sql = String.join("\n", "CREATE TABLE IF NOT EXISTS  Atacks (", "Name VARCHAR(15) NOT NULL, PRIMARY KEY", "Type VARCHAR(10) NOT NULL, ", "Power INT NOT NULL, ", "PP INT NOT NULL, ", "Precission FLOAT NOT NULL, ");
             stmt.executeUpdate(sql);
             JOptionPane.showMessageDialog(null, "Tabla de Ataques registrado con exito");
         } catch (SQLException e) {
@@ -37,6 +37,21 @@ public class Atacks {
             JOptionPane.showMessageDialog(null, "Insertado exitosamente");
         }catch (SQLException e) {
             JOptionPane.showMessageDialog(null,"Error al insertar la tabla");
+        }
+    }
+
+    public void EliminarAtack(String Name) {
+        String sql = "DELETE FROM Atacks WHERE Name = ?";
+        try (PreparedStatement pstmt = con.prepareStatement(sql)){
+            pstmt.setString(1,Name);
+            int affectedRows = pstmt.executeUpdate();
+            if (affectedRows > 0) {
+                JOptionPane.showMessageDialog(null, "Eliminado exitosamente");
+            }else {
+                JOptionPane.showMessageDialog(null, "No se encontro el Pokemon");
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null,"Error al eliminar la tabla");
         }
     }
 
