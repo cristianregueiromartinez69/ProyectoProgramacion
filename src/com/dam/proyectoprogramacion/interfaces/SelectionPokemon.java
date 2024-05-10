@@ -151,6 +151,7 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 EmpoleonSong.musicEmpoleon();
+                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelEmpoleonPlayer1(), BorderLayout.WEST);
             }
         });
 
@@ -173,6 +174,7 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 GarchompSong.musicGarchomp();
+                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelGarchompPlayer1(), BorderLayout.WEST);
             }
         });
 
@@ -195,6 +197,7 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 GengarSong.musicGengar();
+                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelGengarPlayer1(), BorderLayout.WEST);
             }
         });
 
@@ -217,6 +220,7 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                InfernapeSong.musicInfernape();
+                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelInfernapePlayer1(), BorderLayout.WEST);
             }
         });
 
@@ -239,6 +243,7 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 LucarioSong.musicLucario();
+                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelLucarioPlayer1(), BorderLayout.WEST);
             }
         });
 
@@ -261,6 +266,7 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 LuxraySong.musicLuxray();
+                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelLuxrayPlayer1(), BorderLayout.WEST);
             }
         });
 
@@ -283,6 +289,7 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 MarshadowSong.musicMarshadow();
+                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelMarshadowPlayer1(), BorderLayout.WEST);
             }
         });
 
@@ -305,6 +312,7 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 MiloticSong.musicMilotic();
+                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelMiloticPlayer1(), BorderLayout.WEST);
             }
         });
 
@@ -327,6 +335,7 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 SnorlaxSong.musicSnorlax();
+                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelSnorlaxPlayer1(), BorderLayout.WEST);
             }
         });
 
@@ -349,6 +358,7 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 TinkatonSong.musicTinkaton();
+                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelTinkatonPlayer1(), BorderLayout.WEST);
             }
         });
 
@@ -371,6 +381,7 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 TyranitarSong.musicTyranitar();
+                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelTyranitarPlayer1(), BorderLayout.WEST);
             }
         });
 
