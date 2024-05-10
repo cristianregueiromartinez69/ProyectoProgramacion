@@ -55,5 +55,18 @@ public class Conexion {
             JOptionPane.showMessageDialog(null,"Error al insertar la tabla");
         }
     }
+    public void EliminarPokemon(String Name) {
+        String sql = "DELETE FROM Pokemon WHERE Name = ?";
+        try (PreparedStatement pstmt = con.prepareStatement(sql)){
+            pstmt.setString(1,Name);
+            int affectedRows = pstmt.executeUpdate();
+            if (affectedRows > 0) {
+                JOptionPane.showMessageDialog(null, "Eliminado exitosamente");
+            }else {
+                JOptionPane.showMessageDialog(null, "No se encontro el Pokemon");
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null,"Error al eliminar la tabla");
+        }
+    }
 
-}
