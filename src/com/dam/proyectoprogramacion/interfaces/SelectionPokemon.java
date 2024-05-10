@@ -87,7 +87,6 @@ public class SelectionPokemon extends JFrame {
          * iniciamos el panel de los pokemons y añadimos todos los pokemons
          */
         globalPanelSelectionPokemon = new JPanel();
-        globalPanelSelectionPokemon.setPreferredSize(new Dimension(800,800));
         globalPanelSelectionPokemon.add(new PanelsPokemonsRowsToSelect());
         /**
          * lo añadimos al panel principal
@@ -381,6 +380,7 @@ public class SelectionPokemon extends JFrame {
         JPanel contentPanel = new JPanel();
         contentPanel.setOpaque(false);
         contentPanel.setLayout(new BorderLayout());
+        contentPanel.setPreferredSize(new Dimension(1000,1000));
         return contentPanel;
     }
 

@@ -22,6 +22,7 @@ public class PanelPlayer1 extends JPanel {
          */
         setVisible(true);
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+
         /**
          * añadimos al panel central un metodo que devueleve un panel
          */
