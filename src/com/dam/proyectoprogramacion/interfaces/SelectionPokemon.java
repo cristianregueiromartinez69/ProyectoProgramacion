@@ -74,7 +74,7 @@ public class SelectionPokemon extends JFrame {
         /**
          * lo añadimos al panel principal
          */
-        contentPanel.add(globalPanelPlayer1, gbc);
+        contentPanel.add(globalPanelPlayer1, BorderLayout.WEST);
 
         /**
          * establecemos dimensiones
@@ -87,11 +87,12 @@ public class SelectionPokemon extends JFrame {
          * iniciamos el panel de los pokemons y añadimos todos los pokemons
          */
         globalPanelSelectionPokemon = new JPanel();
+        globalPanelSelectionPokemon.setPreferredSize(new Dimension(800,800));
         globalPanelSelectionPokemon.add(new PanelsPokemonsRowsToSelect());
         /**
          * lo añadimos al panel principal
          */
-        contentPanel.add(globalPanelSelectionPokemon, gbc);
+        contentPanel.add(globalPanelSelectionPokemon, BorderLayout.CENTER);
 
         gbc.gridy = 2;
         gbc.gridx = 0;
@@ -99,7 +100,7 @@ public class SelectionPokemon extends JFrame {
 
         globalPanelPlayer2 = new JPanel();
         globalPanelPlayer2.add(new PanelPlayer2());
-        contentPanel.add(globalPanelPlayer2, gbc);
+        contentPanel.add(globalPanelPlayer2, BorderLayout.EAST);
 
 
 
@@ -379,7 +380,7 @@ public class SelectionPokemon extends JFrame {
     private JPanel makeContentPanel() {
         JPanel contentPanel = new JPanel();
         contentPanel.setOpaque(false);
-        contentPanel.setLayout(new GridBagLayout());
+        contentPanel.setLayout(new BorderLayout());
         return contentPanel;
     }
 
