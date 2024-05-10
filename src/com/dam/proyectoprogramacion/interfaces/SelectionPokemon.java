@@ -1,6 +1,7 @@
 package com.dam.proyectoprogramacion.interfaces;
 
 import com.dam.proyectoprogramacion.background.BackgroundMainMenuPanel;
+import com.dam.proyectoprogramacion.methodsandmain.MethosInterfaceSelectionPokemon;
 import com.dam.proyectoprogramacion.panels.selectionpokemon.*;
 import com.dam.proyectoprogramacion.pokemonSongs.*;
 
@@ -124,7 +125,11 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                DrampaSong.musicDrampa();
+
+               contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelDrampaPlayer1(), BorderLayout.WEST);
+
             }
+
         });
 
         /**
