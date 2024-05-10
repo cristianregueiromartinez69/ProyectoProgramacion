@@ -1,6 +1,7 @@
 package com.dam.proyectoprogramacion.panels.selectionpokemon;
 
 import com.dam.proyectoprogramacion.methodsandmain.MethodsInterfaceAccountCreate;
+import com.dam.proyectoprogramacion.methodsandmain.MethodsInterfaceLuck;
 import com.dam.proyectoprogramacion.methodsandmain.MethodsLogicalAccountCreate;
 
 import javax.swing.*;
@@ -33,11 +34,9 @@ public class PanelPlayer2 extends JPanel {
      * @return el panel creado
      */
     public JPanel makePanelPlayer2(){
-        JPanel pokemon4 = new JPanel();
-        pokemon4.setLayout(new BoxLayout(pokemon4, BoxLayout.Y_AXIS));
-        JLabel namePokemon4 = new JLabel("Jugador 2");
-        pokemon4.add(namePokemon4);
-        pokemon4.add(MethodsLogicalAccountCreate.makeSelectImage1Player2());
-        return pokemon4;
+        JPanel player2 = new JPanel();
+        player2.setLayout(new BoxLayout(player2, BoxLayout.Y_AXIS));
+        player2 = MethodsInterfaceLuck.selectAliasImagePlayer2();
+       return player2;
     }
 }
