@@ -42,13 +42,13 @@ public class Conexion {
         String sql = "INSERT INTO Pokemon (Name, Type, Level, Life, Sex, Speed. Syze, Weight, Attacks) VALUES (?,?,?,?,?,?,?,?,?)";
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setString(1,Name);
-            pstmt.setString(1,Type);
-            pstmt.setInt(1,Level);
-            pstmt.setInt(1,Life);
-            pstmt.setString(1,Sex);
-            pstmt.setInt(1,Speed);
-            pstmt.setFloat(1,Syze);
-            pstmt.setFloat(1,Weight);
+            pstmt.setString(2,Type);
+            pstmt.setInt(3,Level);
+            pstmt.setInt(4,Life);
+            pstmt.setString(5,Sex);
+            pstmt.setInt(6,Speed);
+            pstmt.setFloat(7,Syze);
+            pstmt.setFloat(8,Weight);
             pstmt.executeUpdate();
             JOptionPane.showMessageDialog(null, "Insertado exitosamente");
         }catch (SQLException e) {
@@ -70,3 +70,21 @@ public class Conexion {
         }
     }
 
+    public void actualizarTypePokemon(String Name, String newType){
+        String sql = "UPDATE Pokemon SET Name = ? WHERE Name = ?";
+        try (PreparedStatement pstmt = con.prepareStatement(sql)){
+            pstmt.setString(1,newType);
+            pstmt.setString(2,Name);
+            int affectedRows = pstmt.executeUpdate();
+            if (affectedRows > 0) {
+                JOptionPane.showMessageDialog(null, "Actualizado exitosamente");
+            }else {
+                JOptionPane.showMessageDialog(null, "No se encontro el Pokemon");
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null,"Error al actualizar la tabla");
+        }
+    }
+
+
+}
