@@ -11,10 +11,12 @@ import java.awt.event.ActionEvent;
 
 public class MethosInterfaceSelectionPokemon {
 
+    private static JPanel panelPokemonsPlayer1 = makeContentPokemonPanel();
+
     public static JPanel updatePanelDrampaPlayer1(){
 
         clearPanelPlayer1();
-        JPanel panelPokemonsPlayer1 = PanelsPokemonRow1.getDrampaPanel();
+        panelPokemonsPlayer1.add(PanelsPokemonRow1.getDrampaPanel());
 
     return addSelectedPokemonPanel(panelPokemonsPlayer1);
     }
@@ -24,63 +26,63 @@ public class MethosInterfaceSelectionPokemon {
     public static JPanel updatePanelEmpoleonPlayer1(){
 
         clearPanelPlayer1();
-        JPanel panelPokemonsPlayer1 = PanelsPokemonRow1.getEmpoleonPanel();
+         panelPokemonsPlayer1.add(PanelsPokemonRow1.getEmpoleonPanel());
 
         return addSelectedPokemonPanel(panelPokemonsPlayer1);
     }
     public static JPanel updatePanelGarchompPlayer1(){
 
         clearPanelPlayer1();
-        JPanel panelPokemonsPlayer1 = PanelsPokemonRow1.getGarchompPanel();
+         panelPokemonsPlayer1.add(PanelsPokemonRow1.getGarchompPanel());
 
         return addSelectedPokemonPanel(panelPokemonsPlayer1);
     }
     public static JPanel updatePanelGengarPlayer1(){
 
         clearPanelPlayer1();
-        JPanel panelPokemonsPlayer1 = PanelsPokemonRow1.getGengarPanel();
+        panelPokemonsPlayer1.add(PanelsPokemonRow1.getGengarPanel());
 
         return addSelectedPokemonPanel(panelPokemonsPlayer1);
     }
     public static JPanel updatePanelInfernapePlayer1(){
 
         clearPanelPlayer1();
-        JPanel panelPokemonsPlayer1 = PanelsPokemonRow2.getInfernapePanel();
+         panelPokemonsPlayer1.add(PanelsPokemonRow2.getInfernapePanel());
 
         return addSelectedPokemonPanel(panelPokemonsPlayer1);
     }
     public static JPanel updatePanelLucarioPlayer1(){
 
         clearPanelPlayer1();
-        JPanel panelPokemonsPlayer1 = PanelsPokemonRow2.getLucarioPanel();
+         panelPokemonsPlayer1.add(PanelsPokemonRow2.getLucarioPanel());
 
         return addSelectedPokemonPanel(panelPokemonsPlayer1);
     }
     public static JPanel updatePanelLuxrayPlayer1(){
 
         clearPanelPlayer1();
-        JPanel panelPokemonsPlayer1 = PanelsPokemonRow2.getLuxrayPanel();
+         panelPokemonsPlayer1.add(PanelsPokemonRow2.getLuxrayPanel());
 
         return addSelectedPokemonPanel(panelPokemonsPlayer1);
     }
     public static JPanel updatePanelMarshadowPlayer1(){
 
         clearPanelPlayer1();
-        JPanel panelPokemonsPlayer1 = PanelsPokemonRow2.getMarshadowPanel();
+         panelPokemonsPlayer1.add(PanelsPokemonRow2.getMarshadowPanel());
 
         return addSelectedPokemonPanel(panelPokemonsPlayer1);
     }
     public static JPanel updatePanelMiloticPlayer1(){
 
         clearPanelPlayer1();
-        JPanel panelPokemonsPlayer1 = PanelsPokemonRow3.getMiloticPanel();
+         panelPokemonsPlayer1.add(PanelsPokemonRow3.getMiloticPanel());
 
         return addSelectedPokemonPanel(panelPokemonsPlayer1);
     }
     public static JPanel updatePanelSnorlaxPlayer1(){
 
         clearPanelPlayer1();
-        JPanel panelPokemonsPlayer1 = PanelsPokemonRow3.getSnorlaxPanel();
+         panelPokemonsPlayer1.add(PanelsPokemonRow3.getSnorlaxPanel());
 
         return addSelectedPokemonPanel(panelPokemonsPlayer1);
     }
@@ -88,7 +90,7 @@ public class MethosInterfaceSelectionPokemon {
 
 
         clearPanelPlayer1();
-        JPanel panelPokemonsPlayer1 = PanelsPokemonRow3.getTinkatonPanel();
+         panelPokemonsPlayer1.add(PanelsPokemonRow3.getTinkatonPanel());
 
         return addSelectedPokemonPanel(panelPokemonsPlayer1);
     }
@@ -96,7 +98,7 @@ public class MethosInterfaceSelectionPokemon {
 
 
         clearPanelPlayer1();
-        JPanel panelPokemonsPlayer1 = PanelsPokemonRow3.getTyranitarPanel();
+         panelPokemonsPlayer1.add(PanelsPokemonRow3.getTyranitarPanel());
 
         return addSelectedPokemonPanel(panelPokemonsPlayer1);
     }
@@ -113,5 +115,11 @@ public class MethosInterfaceSelectionPokemon {
         SelectionPokemon.getGlobalPanelPlayer1().removeAll();
         SelectionPokemon.getGlobalPanelPlayer1().revalidate();
         SelectionPokemon.getGlobalPanelPlayer1().repaint();
+    }
+
+    private static JPanel makeContentPokemonPanel(){
+        JPanel panelGroupPokemons = new JPanel();
+        panelGroupPokemons.setLayout(new BoxLayout(panelGroupPokemons, BoxLayout.Y_AXIS));
+        return panelGroupPokemons;
     }
 }
