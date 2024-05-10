@@ -25,5 +25,19 @@ public class Atacks {
         }
     }
 
+    public void InsertAtacks(String Name, String Type, Integer Power, Integer PP, Float Precission) {
+        String sql = "INSERT INTO Ataques (Name, Type, Power, PP, Precission) VALUES (?,?,?,?,?)";
+        try (PreparedStatement pstmt = con.prepareStatement(sql)) {
+            pstmt.setString(1,Name);
+            pstmt.setString(2,Type);
+            pstmt.setInt(3,Power);
+            pstmt.setInt(4,PP);
+            pstmt.setFloat(8,Precission);
+            pstmt.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Insertado exitosamente");
+        }catch (SQLException e) {
+            JOptionPane.showMessageDialog(null,"Error al insertar la tabla");
+        }
+    }
 
 }
