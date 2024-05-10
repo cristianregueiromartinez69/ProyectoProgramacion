@@ -1,6 +1,7 @@
 package com.dam.proyectoprogramacion.interfaces;
 
 import com.dam.proyectoprogramacion.background.BackgroundMainMenuPanel;
+import com.dam.proyectoprogramacion.methodsandmain.MethosInterfaceSelectionPokemon;
 import com.dam.proyectoprogramacion.panels.selectionpokemon.*;
 import com.dam.proyectoprogramacion.pokemonSongs.*;
 
@@ -19,10 +20,10 @@ public class SelectionPokemon extends JFrame {
     /**
      * atributos privados de tipo JPanel de la interfaz
      */
-    private JPanel globalPanelPlayer1;
-    private JPanel globalPanelSelectionPokemon;
-    private JPanel globalPanelPlayer2;
-    private JPanel goToBattlePanel;
+    private static JPanel globalPanelPlayer1;
+    private static JPanel globalPanelSelectionPokemon;
+    private static JPanel globalPanelPlayer2;
+    private static JPanel goToBattlePanel;
 
     /**
      * constructor de la clase
@@ -34,7 +35,7 @@ public class SelectionPokemon extends JFrame {
         setTitle("Seleccion de POkemon");
         setSize(600, 400);
         setVisible(true);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 
 
         /**
@@ -74,7 +75,7 @@ public class SelectionPokemon extends JFrame {
         /**
          * lo añadimos al panel principal
          */
-        contentPanel.add(globalPanelPlayer1, gbc);
+        contentPanel.add(globalPanelPlayer1, BorderLayout.WEST);
 
         /**
          * establecemos dimensiones
@@ -91,7 +92,7 @@ public class SelectionPokemon extends JFrame {
         /**
          * lo añadimos al panel principal
          */
-        contentPanel.add(globalPanelSelectionPokemon, gbc);
+        contentPanel.add(globalPanelSelectionPokemon, BorderLayout.CENTER);
 
         gbc.gridy = 2;
         gbc.gridx = 0;
@@ -99,7 +100,7 @@ public class SelectionPokemon extends JFrame {
 
         globalPanelPlayer2 = new JPanel();
         globalPanelPlayer2.add(new PanelPlayer2());
-        contentPanel.add(globalPanelPlayer2, gbc);
+        contentPanel.add(globalPanelPlayer2, BorderLayout.EAST);
 
 
 
@@ -124,7 +125,11 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                DrampaSong.musicDrampa();
+
+               contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelDrampaPlayer1(), BorderLayout.WEST);
+
             }
+
         });
 
         /**
@@ -146,6 +151,7 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 EmpoleonSong.musicEmpoleon();
+                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelEmpoleonPlayer1(), BorderLayout.WEST);
             }
         });
 
@@ -168,6 +174,7 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 GarchompSong.musicGarchomp();
+                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelGarchompPlayer1(), BorderLayout.WEST);
             }
         });
 
@@ -190,6 +197,7 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 GengarSong.musicGengar();
+                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelGengarPlayer1(), BorderLayout.WEST);
             }
         });
 
@@ -212,6 +220,7 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                InfernapeSong.musicInfernape();
+                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelInfernapePlayer1(), BorderLayout.WEST);
             }
         });
 
@@ -234,6 +243,7 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 LucarioSong.musicLucario();
+                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelLucarioPlayer1(), BorderLayout.WEST);
             }
         });
 
@@ -256,6 +266,7 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 LuxraySong.musicLuxray();
+                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelLuxrayPlayer1(), BorderLayout.WEST);
             }
         });
 
@@ -278,6 +289,7 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 MarshadowSong.musicMarshadow();
+                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelMarshadowPlayer1(), BorderLayout.WEST);
             }
         });
 
@@ -300,6 +312,7 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 MiloticSong.musicMilotic();
+                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelMiloticPlayer1(), BorderLayout.WEST);
             }
         });
 
@@ -322,6 +335,7 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 SnorlaxSong.musicSnorlax();
+                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelSnorlaxPlayer1(), BorderLayout.WEST);
             }
         });
 
@@ -344,6 +358,7 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 TinkatonSong.musicTinkaton();
+                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelTinkatonPlayer1(), BorderLayout.WEST);
             }
         });
 
@@ -366,6 +381,7 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 TyranitarSong.musicTyranitar();
+                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelTyranitarPlayer1(), BorderLayout.WEST);
             }
         });
 
@@ -379,8 +395,28 @@ public class SelectionPokemon extends JFrame {
     private JPanel makeContentPanel() {
         JPanel contentPanel = new JPanel();
         contentPanel.setOpaque(false);
-        contentPanel.setLayout(new GridBagLayout());
+        contentPanel.setLayout(new BorderLayout());
+        contentPanel.setPreferredSize(new Dimension(1000,1000));
         return contentPanel;
     }
 
+    /**
+     * getter y setter de os atributos de la interfaz de seleccion de pokemon
+     * @return los atributos de la clase
+     */
+    public static JPanel getGlobalPanelPlayer1() {
+        return globalPanelPlayer1;
+    }
+
+    public static JPanel getGlobalPanelSelectionPokemon() {
+        return globalPanelSelectionPokemon;
+    }
+
+    public static JPanel getGlobalPanelPlayer2() {
+        return globalPanelPlayer2;
+    }
+
+    public static JPanel getGoToBattlePanel() {
+        return goToBattlePanel;
+    }
 }
