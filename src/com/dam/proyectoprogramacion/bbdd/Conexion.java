@@ -118,5 +118,19 @@ public class Conexion {
         }
     }
 
-
+    public void actualizarSexPokemon(String Name, String newSex){
+        String sql = "UPDATE Pokemon SET Name = ? WHERE Name = ?";
+        try (PreparedStatement pstmt = con.prepareStatement(sql)){
+            pstmt.setString(1,newSex);
+            pstmt.setString(2,Name);
+            int affectedRows = pstmt.executeUpdate();
+            if (affectedRows > 0) {
+                JOptionPane.showMessageDialog(null, "Actualizado exitosamente");
+            }else {
+                JOptionPane.showMessageDialog(null, "No se encontro el Pokemon");
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null,"Error al actualizar la tabla");
+        }
+    }
 }
