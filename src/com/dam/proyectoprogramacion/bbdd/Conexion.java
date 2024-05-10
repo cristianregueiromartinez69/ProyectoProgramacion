@@ -16,7 +16,7 @@ public class Conexion {
     private String port = "3306";
     private String url = "jdbc:mysql://" + ip + ":" + port + "/" + bd + "";
 
-    public Connection Conexion() {
+    public Connection crearConexion() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(url,usuario,contraseña);
@@ -150,10 +150,10 @@ public class Conexion {
         }
     }
 
-    public void actualizarWeightPokemon(String Name, Float newWeight){
+    public void actualizarWeightPokemon(String Name, Float newSyze){
         String sql = "UPDATE Pokemon SET Name = ? WHERE Name = ?";
         try (PreparedStatement pstmt = con.prepareStatement(sql)){
-            pstmt.setFloat(1,newWeight);
+            pstmt.setFloat(1,newSyze);
             pstmt.setString(2,Name);
             int affectedRows = pstmt.executeUpdate();
             if (affectedRows > 0) {
@@ -165,4 +165,21 @@ public class Conexion {
             JOptionPane.showMessageDialog(null,"Error al actualizar la tabla");
         }
     }
+
+    public void actualizarSyzePokemon(String Name, Float newSyze){
+        String sql = "UPDATE Pokemon SET Name = ? WHERE Name = ?";
+        try (PreparedStatement pstmt = con.prepareStatement(sql)){
+            pstmt.setFloat(1,newSyze);
+            pstmt.setString(2,Name);
+            int affectedRows = pstmt.executeUpdate();
+            if (affectedRows > 0) {
+                JOptionPane.showMessageDialog(null, "Actualizado exitosamente");
+            }else {
+                JOptionPane.showMessageDialog(null, "No se encontro el Pokemon");
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null,"Error al actualizar la tabla");
+        }
+    }
+
 }
