@@ -34,7 +34,7 @@ public class SelectionPokemon extends JFrame {
         setTitle("Seleccion de POkemon");
         setSize(600, 400);
         setVisible(true);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 
 
         /**
