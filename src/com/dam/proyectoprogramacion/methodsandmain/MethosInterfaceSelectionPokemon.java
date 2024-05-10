@@ -11,234 +11,107 @@ import java.awt.event.ActionEvent;
 
 public class MethosInterfaceSelectionPokemon {
 
-
     public static JPanel updatePanelDrampaPlayer1(){
 
-        SelectionPokemon.getGlobalPanelPlayer1().removeAll();
-        SelectionPokemon.getGlobalPanelPlayer1().revalidate();
-        SelectionPokemon.getGlobalPanelPlayer1().repaint();
-        JPanel auxPanelAliasAndPokemon1 = new JPanel();
+        clearPanelPlayer1();
+        JPanel panelPokemonsPlayer1 = PanelsPokemonRow1.getDrampaPanel();
 
-
-        SelectionPokemon.getGlobalPanelPlayer1().add(MethodsInterfaceLuck.selectAliasImagePlayer1());
-        auxPanelAliasAndPokemon1.add(SelectionPokemon.getGlobalPanelPlayer1());
-        SelectionPokemon.getGlobalPanelPlayer1().add(PanelsPokemonRow1.getDrampaPanel());
-
-
-
-
-
-
-    return auxPanelAliasAndPokemon1;
+    return addSelectedPokemonPanel(panelPokemonsPlayer1);
     }
+
+
+
     public static JPanel updatePanelEmpoleonPlayer1(){
 
-        SelectionPokemon.getGlobalPanelPlayer1().removeAll();
-        SelectionPokemon.getGlobalPanelPlayer1().revalidate();
-        SelectionPokemon.getGlobalPanelPlayer1().repaint();
-        JPanel auxPanelAliasAndPokemon1 = new JPanel();
+        clearPanelPlayer1();
+        JPanel panelPokemonsPlayer1 = PanelsPokemonRow1.getEmpoleonPanel();
 
-
-        SelectionPokemon.getGlobalPanelPlayer1().add(MethodsInterfaceLuck.selectAliasImagePlayer1());
-        auxPanelAliasAndPokemon1.add(SelectionPokemon.getGlobalPanelPlayer1());
-        SelectionPokemon.getGlobalPanelPlayer1().add(PanelsPokemonRow1.getEmpoleonPanel());
-
-
-
-
-
-
-        return auxPanelAliasAndPokemon1;
+        return addSelectedPokemonPanel(panelPokemonsPlayer1);
     }
     public static JPanel updatePanelGarchompPlayer1(){
 
-        SelectionPokemon.getGlobalPanelPlayer1().removeAll();
-        SelectionPokemon.getGlobalPanelPlayer1().revalidate();
-        SelectionPokemon.getGlobalPanelPlayer1().repaint();
-        JPanel auxPanelAliasAndPokemon1 = new JPanel();
+        clearPanelPlayer1();
+        JPanel panelPokemonsPlayer1 = PanelsPokemonRow1.getGarchompPanel();
 
-
-        SelectionPokemon.getGlobalPanelPlayer1().add(MethodsInterfaceLuck.selectAliasImagePlayer1());
-        auxPanelAliasAndPokemon1.add(SelectionPokemon.getGlobalPanelPlayer1());
-        SelectionPokemon.getGlobalPanelPlayer1().add(PanelsPokemonRow1.getGarchompPanel());
-
-
-
-
-
-
-        return auxPanelAliasAndPokemon1;
+        return addSelectedPokemonPanel(panelPokemonsPlayer1);
     }
     public static JPanel updatePanelGengarPlayer1(){
 
-        SelectionPokemon.getGlobalPanelPlayer1().removeAll();
-        SelectionPokemon.getGlobalPanelPlayer1().revalidate();
-        SelectionPokemon.getGlobalPanelPlayer1().repaint();
-        JPanel auxPanelAliasAndPokemon1 = new JPanel();
+        clearPanelPlayer1();
+        JPanel panelPokemonsPlayer1 = PanelsPokemonRow1.getGengarPanel();
 
-
-        SelectionPokemon.getGlobalPanelPlayer1().add(MethodsInterfaceLuck.selectAliasImagePlayer1());
-        auxPanelAliasAndPokemon1.add(SelectionPokemon.getGlobalPanelPlayer1());
-        SelectionPokemon.getGlobalPanelPlayer1().add(PanelsPokemonRow1.getGengarPanel());
-
-
-
-
-
-
-        return auxPanelAliasAndPokemon1;
+        return addSelectedPokemonPanel(panelPokemonsPlayer1);
     }
     public static JPanel updatePanelInfernapePlayer1(){
 
-        SelectionPokemon.getGlobalPanelPlayer1().removeAll();
-        SelectionPokemon.getGlobalPanelPlayer1().revalidate();
-        SelectionPokemon.getGlobalPanelPlayer1().repaint();
-        JPanel auxPanelAliasAndPokemon1 = new JPanel();
+        clearPanelPlayer1();
+        JPanel panelPokemonsPlayer1 = PanelsPokemonRow2.getInfernapePanel();
 
-
-        SelectionPokemon.getGlobalPanelPlayer1().add(MethodsInterfaceLuck.selectAliasImagePlayer1());
-        auxPanelAliasAndPokemon1.add(SelectionPokemon.getGlobalPanelPlayer1());
-        SelectionPokemon.getGlobalPanelPlayer1().add(PanelsPokemonRow2.getInfernapePanel());
-
-
-
-
-
-
-        return auxPanelAliasAndPokemon1;
+        return addSelectedPokemonPanel(panelPokemonsPlayer1);
     }
     public static JPanel updatePanelLucarioPlayer1(){
 
-        SelectionPokemon.getGlobalPanelPlayer1().removeAll();
-        SelectionPokemon.getGlobalPanelPlayer1().revalidate();
-        SelectionPokemon.getGlobalPanelPlayer1().repaint();
-        JPanel auxPanelAliasAndPokemon1 = new JPanel();
+        clearPanelPlayer1();
+        JPanel panelPokemonsPlayer1 = PanelsPokemonRow2.getLucarioPanel();
 
-
-        SelectionPokemon.getGlobalPanelPlayer1().add(MethodsInterfaceLuck.selectAliasImagePlayer1());
-        auxPanelAliasAndPokemon1.add(SelectionPokemon.getGlobalPanelPlayer1());
-        SelectionPokemon.getGlobalPanelPlayer1().add(PanelsPokemonRow2.getLucarioPanel());
-
-
-
-
-
-
-        return auxPanelAliasAndPokemon1;
+        return addSelectedPokemonPanel(panelPokemonsPlayer1);
     }
     public static JPanel updatePanelLuxrayPlayer1(){
 
-        SelectionPokemon.getGlobalPanelPlayer1().removeAll();
-        SelectionPokemon.getGlobalPanelPlayer1().revalidate();
-        SelectionPokemon.getGlobalPanelPlayer1().repaint();
-        JPanel auxPanelAliasAndPokemon1 = new JPanel();
+        clearPanelPlayer1();
+        JPanel panelPokemonsPlayer1 = PanelsPokemonRow2.getLuxrayPanel();
 
-
-        SelectionPokemon.getGlobalPanelPlayer1().add(MethodsInterfaceLuck.selectAliasImagePlayer1());
-        auxPanelAliasAndPokemon1.add(SelectionPokemon.getGlobalPanelPlayer1());
-        SelectionPokemon.getGlobalPanelPlayer1().add(PanelsPokemonRow2.getLuxrayPanel());
-
-
-
-
-
-
-        return auxPanelAliasAndPokemon1;
+        return addSelectedPokemonPanel(panelPokemonsPlayer1);
     }
     public static JPanel updatePanelMarshadowPlayer1(){
 
-        SelectionPokemon.getGlobalPanelPlayer1().removeAll();
-        SelectionPokemon.getGlobalPanelPlayer1().revalidate();
-        SelectionPokemon.getGlobalPanelPlayer1().repaint();
-        JPanel auxPanelAliasAndPokemon1 = new JPanel();
+        clearPanelPlayer1();
+        JPanel panelPokemonsPlayer1 = PanelsPokemonRow2.getMarshadowPanel();
 
-
-        SelectionPokemon.getGlobalPanelPlayer1().add(MethodsInterfaceLuck.selectAliasImagePlayer1());
-        auxPanelAliasAndPokemon1.add(SelectionPokemon.getGlobalPanelPlayer1());
-        SelectionPokemon.getGlobalPanelPlayer1().add(PanelsPokemonRow2.getMarshadowPanel());
-
-
-
-
-
-
-        return auxPanelAliasAndPokemon1;
+        return addSelectedPokemonPanel(panelPokemonsPlayer1);
     }
     public static JPanel updatePanelMiloticPlayer1(){
 
-        SelectionPokemon.getGlobalPanelPlayer1().removeAll();
-        SelectionPokemon.getGlobalPanelPlayer1().revalidate();
-        SelectionPokemon.getGlobalPanelPlayer1().repaint();
-        JPanel auxPanelAliasAndPokemon1 = new JPanel();
+        clearPanelPlayer1();
+        JPanel panelPokemonsPlayer1 = PanelsPokemonRow3.getMiloticPanel();
 
-
-        SelectionPokemon.getGlobalPanelPlayer1().add(MethodsInterfaceLuck.selectAliasImagePlayer1());
-        auxPanelAliasAndPokemon1.add(SelectionPokemon.getGlobalPanelPlayer1());
-        SelectionPokemon.getGlobalPanelPlayer1().add(PanelsPokemonRow3.getMiloticPanel());
-
-
-
-
-
-
-        return auxPanelAliasAndPokemon1;
+        return addSelectedPokemonPanel(panelPokemonsPlayer1);
     }
     public static JPanel updatePanelSnorlaxPlayer1(){
 
-        SelectionPokemon.getGlobalPanelPlayer1().removeAll();
-        SelectionPokemon.getGlobalPanelPlayer1().revalidate();
-        SelectionPokemon.getGlobalPanelPlayer1().repaint();
-        JPanel auxPanelAliasAndPokemon1 = new JPanel();
+        clearPanelPlayer1();
+        JPanel panelPokemonsPlayer1 = PanelsPokemonRow3.getSnorlaxPanel();
 
-
-        SelectionPokemon.getGlobalPanelPlayer1().add(MethodsInterfaceLuck.selectAliasImagePlayer1());
-        auxPanelAliasAndPokemon1.add(SelectionPokemon.getGlobalPanelPlayer1());
-        SelectionPokemon.getGlobalPanelPlayer1().add(PanelsPokemonRow3.getSnorlaxPanel());
-
-
-
-
-
-
-        return auxPanelAliasAndPokemon1;
+        return addSelectedPokemonPanel(panelPokemonsPlayer1);
     }
     public static JPanel updatePanelTinkatonPlayer1(){
 
-        SelectionPokemon.getGlobalPanelPlayer1().removeAll();
-        SelectionPokemon.getGlobalPanelPlayer1().revalidate();
-        SelectionPokemon.getGlobalPanelPlayer1().repaint();
-        JPanel auxPanelAliasAndPokemon1 = new JPanel();
 
+        clearPanelPlayer1();
+        JPanel panelPokemonsPlayer1 = PanelsPokemonRow3.getTinkatonPanel();
 
-        SelectionPokemon.getGlobalPanelPlayer1().add(MethodsInterfaceLuck.selectAliasImagePlayer1());
-        auxPanelAliasAndPokemon1.add(SelectionPokemon.getGlobalPanelPlayer1());
-        SelectionPokemon.getGlobalPanelPlayer1().add(PanelsPokemonRow3.getTinkatonPanel());
-
-
-
-
-
-
-        return auxPanelAliasAndPokemon1;
+        return addSelectedPokemonPanel(panelPokemonsPlayer1);
     }
     public static JPanel updatePanelTyranitarPlayer1(){
 
-        SelectionPokemon.getGlobalPanelPlayer1().removeAll();
-        SelectionPokemon.getGlobalPanelPlayer1().revalidate();
-        SelectionPokemon.getGlobalPanelPlayer1().repaint();
+
+        clearPanelPlayer1();
+        JPanel panelPokemonsPlayer1 = PanelsPokemonRow3.getTyranitarPanel();
+
+        return addSelectedPokemonPanel(panelPokemonsPlayer1);
+    }
+
+    private static JPanel addSelectedPokemonPanel(JPanel panelPokemon) {
         JPanel auxPanelAliasAndPokemon1 = new JPanel();
-
-
         SelectionPokemon.getGlobalPanelPlayer1().add(MethodsInterfaceLuck.selectAliasImagePlayer1());
         auxPanelAliasAndPokemon1.add(SelectionPokemon.getGlobalPanelPlayer1());
-        SelectionPokemon.getGlobalPanelPlayer1().add(PanelsPokemonRow3.getTyranitarPanel());
-
-
-
-
-
-
+        SelectionPokemon.getGlobalPanelPlayer1().add(panelPokemon);
         return auxPanelAliasAndPokemon1;
     }
 
+    private static void clearPanelPlayer1() {
+        SelectionPokemon.getGlobalPanelPlayer1().removeAll();
+        SelectionPokemon.getGlobalPanelPlayer1().revalidate();
+        SelectionPokemon.getGlobalPanelPlayer1().repaint();
+    }
 }
