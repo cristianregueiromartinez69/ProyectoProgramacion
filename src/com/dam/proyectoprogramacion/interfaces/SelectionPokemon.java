@@ -400,6 +400,10 @@ public class SelectionPokemon extends JFrame {
         return contentPanel;
     }
 
+    /**
+     * getter y setter de os atributos de la interfaz de seleccion de pokemon
+     * @return los atributos de la clase
+     */
     public static JPanel getGlobalPanelPlayer1() {
         return globalPanelPlayer1;
     }
