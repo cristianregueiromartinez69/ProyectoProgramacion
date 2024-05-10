@@ -19,10 +19,10 @@ public class SelectionPokemon extends JFrame {
     /**
      * atributos privados de tipo JPanel de la interfaz
      */
-    private JPanel globalPanelPlayer1;
-    private JPanel globalPanelSelectionPokemon;
-    private JPanel globalPanelPlayer2;
-    private JPanel goToBattlePanel;
+    private static JPanel globalPanelPlayer1;
+    private static JPanel globalPanelSelectionPokemon;
+    private static JPanel globalPanelPlayer2;
+    private static JPanel goToBattlePanel;
 
     /**
      * constructor de la clase
@@ -384,4 +384,19 @@ public class SelectionPokemon extends JFrame {
         return contentPanel;
     }
 
+    public static JPanel getGlobalPanelPlayer1() {
+        return globalPanelPlayer1;
+    }
+
+    public static JPanel getGlobalPanelSelectionPokemon() {
+        return globalPanelSelectionPokemon;
+    }
+
+    public static JPanel getGlobalPanelPlayer2() {
+        return globalPanelPlayer2;
+    }
+
+    public static JPanel getGoToBattlePanel() {
+        return goToBattlePanel;
+    }
 }
