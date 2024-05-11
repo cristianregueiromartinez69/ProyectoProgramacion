@@ -307,4 +307,15 @@ public class MethosInterfaceSelectionPokemon {
         panelGroupPokemons.setLayout(new BoxLayout(panelGroupPokemons, BoxLayout.Y_AXIS));
         return panelGroupPokemons;
     }
+
+    private static String chossingFirstPokemons(String winnerLuck){
+        String firstTrainer = "";
+        for(String name:MethodsInterfaceLuck.getLuckPlayers().keySet()){
+            if(winnerLuck.equalsIgnoreCase(name)){
+                firstTrainer = winnerLuck;
+            }
+        }
+        return firstTrainer;
+    }
+
 }
