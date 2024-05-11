@@ -36,7 +36,7 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
         drampa.setLevel(50);
         drampa.setLife(185);
         drampa.setSex("Macho");
-        drampa.setSpeed(30);
+        drampa.setSpeed(36);
         AttacksPokemons[] drampaAttacks = {
                 new AttacksPokemons("Dragon", "Pulso dragon", 85, 100),
                 new AttacksPokemons("Psiquico", "Paranormal", 85, 100),
@@ -49,6 +49,29 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
 
       return drampa;
     }
+
+    public static Empoleon makeEmpoleonObject() {
+
+        empoleon.setName("Empoleon");
+        empoleon.setType("agua-acero");
+        empoleon.setLevel(50);
+        empoleon.setLife(191);
+        empoleon.setSex("Macho");
+        empoleon.setSpeed(96);
+        AttacksPokemons[] empoleonAttacks = {
+                new AttacksPokemons("Roca", "Trampa rocas", 0, 100),
+                new AttacksPokemons("Agua", "Surf", 90, 100),
+                new AttacksPokemons("Hielo", "Rayo hielo", 90, 100),
+                new AttacksPokemons("Volador", "Respiro", 0, 100)
+        };
+        empoleon.setAttacks(empoleonAttacks);
+        empoleon.setSize(1.7f);
+        empoleon.setWeight(84.5f);
+
+        return empoleon;
+    }
+
+
 
 
 }
