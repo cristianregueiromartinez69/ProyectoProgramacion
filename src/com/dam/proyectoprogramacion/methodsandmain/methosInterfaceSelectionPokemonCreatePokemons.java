@@ -169,6 +169,30 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
 
         return lucario;
     }
+    /**
+     * metodo para crear el objeto Luxray
+     * @return el objeto creado
+     */
+    public static Luxray makeLuxrayObject() {
+
+        luxray.setName("Luxray");
+        luxray.setType("electrico");
+        luxray.setLevel(50);
+        luxray.setLife(160);
+        luxray.setSex("Hembra");
+        luxray.setSpeed(134);
+        AttacksPokemons[] luxrayAttacks = {
+                new AttacksPokemons("Electrico", "Voltio cruel", 90, 100),
+                new AttacksPokemons("Electrico", "Voltiocambio", 70, 100),
+                new AttacksPokemons("Planta", "abrecaminos", 50, 100),
+                new AttacksPokemons("Siniestro", "Triturar", 80, 100)
+        };
+        luxray.setAttacks(luxrayAttacks);
+        luxray.setSize(1.4f);
+        luxray.setWeight(42.0f);
+
+        return luxray;
+    }
 
 
 
