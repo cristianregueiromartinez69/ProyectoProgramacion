@@ -117,9 +117,33 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
         };
         gengar.setAttacks(gengarAttacks);
         gengar.setSize(1.5f);
-        garchomp.setWeight(40.5f);
+        gengar.setWeight(40.5f);
 
         return gengar;
+    }
+    /**
+     * metodo para crear el objeto Infernape
+     * @return el objeto creado
+     */
+    public static Infernape makeInfernapeObject() {
+
+        infernape.setName("Infernape");
+        infernape.setType("fuego-lucha");
+        infernape.setLevel(50);
+        infernape.setLife(160);
+        infernape.setSex("Macho");
+        infernape.setSpeed(176);
+        AttacksPokemons[] infernapeAttacks = {
+                new AttacksPokemons("Fuego", "Envite igneo", 120, 100),
+                new AttacksPokemons("Lucha", "A bocajarro", 95, 100),
+                new AttacksPokemons("Bicho", "Ida y vuelta", 70, 100),
+                new AttacksPokemons("Electrico", "Puño electrico", 75, 100)
+        };
+        infernape.setAttacks(infernapeAttacks);
+        infernape.setSize(1.2f);
+        infernape.setWeight(55.0f);
+
+        return infernape;
     }
 
 
