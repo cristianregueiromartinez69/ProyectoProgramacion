@@ -130,10 +130,10 @@ public class SelectionPokemon extends JFrame {
                DrampaSong.musicDrampa();
 
                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
-                   contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelDrampaPlayer1(), BorderLayout.WEST);
+                   contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelDrampaBothPlayers(), BorderLayout.WEST);
                }
                else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
-                   contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelDrampaPlayer1(), BorderLayout.EAST);
+                   contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelDrampaBothPlayers(), BorderLayout.EAST);
                }
 
 

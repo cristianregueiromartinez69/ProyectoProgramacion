@@ -51,7 +51,7 @@ public class MethosInterfaceSelectionPokemon {
      * metodo para añadir a drampa al panel dle jugador 1
      * @return el panel creado
      */
-    public static JPanel updatePanelDrampaPlayer1(){
+    public static JPanel updatePanelDrampaBothPlayers(){
 
 
         if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())) {
@@ -61,6 +61,10 @@ public class MethosInterfaceSelectionPokemon {
                     checkSizeListPokemonsPLayer1()) {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getDrampaPanel());
+                pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeDrampaObject());
+                for(Object d:pokemonsPLayer1){
+                    System.out.println();
+                }
                 addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
 
             } else if (MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase

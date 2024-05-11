@@ -7,30 +7,30 @@ import com.dam.proyectoprogramacion.pokemon.*;
  * @author cristian
  * @version v2.0
  */
-public class methosInterfaceSelectionPokemonCreatePokemons {
+public class MethosInterfaceSelectionPokemonCreatePokemons {
 
     /**
      * atributos estáticos de tipo pokemon
      */
-    private static Drampa drampa = new Drampa();
-    private static Empoleon empoleon = new Empoleon();
-    private static Garchomp garchomp = new Garchomp();
-    private static Gengar gengar = new Gengar();
-    private static Infernape infernape = new Infernape();
-    private static Lucario lucario = new Lucario();
+    private static Drampa drampa;
+    private static Empoleon empoleon;
+    private static Garchomp garchomp;
+    private static Gengar gengar;
+    private static Infernape infernape;
+    private static Lucario lucario;
     private static Luxray luxray = new Luxray();
-    private static Marshadow marshadow = new Marshadow();
-    private static Milotic milotic = new Milotic();
-    private static Snorlax snorlax = new Snorlax();
-    private static Tinkaton tinkaton = new Tinkaton();
-    private static Tyranitar tyranitar = new Tyranitar();
+    private static Marshadow marshadow;
+    private static Milotic milotic;
+    private static Snorlax snorlax;
+    private static Tinkaton tinkaton;
+    private static Tyranitar tyranitar;
 
     /**
      * metodo para crear el objeto drampa
      * @return el objeto creado
      */
     public static Drampa makeDrampaObject() {
-
+        drampa = new Drampa();
         drampa.setName("drampa");
         drampa.setType("normal-dragon");
         drampa.setLevel(50);
@@ -54,7 +54,7 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
      * @return el objeto creado
      */
     public static Empoleon makeEmpoleonObject() {
-
+         empoleon = new Empoleon();
         empoleon.setName("Empoleon");
         empoleon.setType("agua-acero");
         empoleon.setLevel(50);
@@ -78,7 +78,7 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
      * @return el objeto creado
      */
     public static Garchomp makeGarchompObject() {
-
+        garchomp = new Garchomp();
         garchomp.setName("Garchomp");
         garchomp.setType("dragon-tierra");
         garchomp.setLevel(50);
@@ -102,7 +102,7 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
      * @return el objeto creado
      */
     public static Gengar makeGengarObject() {
-
+         gengar = new Gengar();
         gengar.setName("Gengar");
         gengar.setType("fantasma-veneno");
         gengar.setLevel(50);
@@ -126,7 +126,7 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
      * @return el objeto creado
      */
     public static Infernape makeInfernapeObject() {
-
+        infernape = new Infernape();
         infernape.setName("Infernape");
         infernape.setType("fuego-lucha");
         infernape.setLevel(50);
@@ -150,7 +150,7 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
      * @return el objeto creado
      */
     public static Lucario makeLucarioObject() {
-
+        lucario = new Lucario();
         lucario.setName("Lucario");
         lucario.setType("lucha-acero");
         lucario.setLevel(50);
@@ -174,7 +174,7 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
      * @return el objeto creado
      */
     public static Luxray makeLuxrayObject() {
-
+         luxray = new Luxray();
         luxray.setName("Luxray");
         luxray.setType("electrico");
         luxray.setLevel(50);
@@ -198,7 +198,7 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
      * @return el objeto creado
      */
     public static Marshadow makeMarshadowObject() {
-
+        marshadow = new Marshadow();
         marshadow.setName("Marshadow");
         marshadow.setType("lucha-fantasma");
         marshadow.setLevel(50);
@@ -222,7 +222,7 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
      * @return el objeto creado
      */
     public static Milotic makeMiloticObject() {
-
+        milotic = new Milotic();
         milotic.setName("Milotic");
         milotic.setType("agua");
         milotic.setLevel(50);
@@ -247,7 +247,7 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
      * @return el objeto creado
      */
     public static Snorlax makeSnorlaxObject() {
-
+        snorlax = new Snorlax();
         snorlax.setName("Snorlax");
         snorlax.setType("normal");
         snorlax.setLevel(50);
@@ -271,7 +271,7 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
      * @return el objeto creado
      */
     public static Tinkaton makeTinkatonObject() {
-
+        tinkaton = new Tinkaton();
         tinkaton.setName("Tinkaton");
         tinkaton.setType("hada-acero");
         tinkaton.setLevel(50);
@@ -295,7 +295,7 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
      * @return el objeto creado
      */
     public static Tyranitar makeTyranitarObject() {
-
+        tyranitar = new Tyranitar();
         tyranitar.setName("Tyranitar");
         tyranitar.setType("roca-siniestro");
         tyranitar.setLevel(50);
