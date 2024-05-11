@@ -135,7 +135,7 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
         infernape.setSpeed(176);
         AttacksPokemons[] infernapeAttacks = {
                 new AttacksPokemons("Fuego", "Envite igneo", 120, 100),
-                new AttacksPokemons("Lucha", "A bocajarro", 95, 100),
+                new AttacksPokemons("Lucha", "A bocajarro", 120, 100),
                 new AttacksPokemons("Bicho", "Ida y vuelta", 70, 100),
                 new AttacksPokemons("Electrico", "Puño electrico", 75, 100)
         };
@@ -159,7 +159,7 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
         lucario.setSpeed(156);
         AttacksPokemons[] lucarioAttacks = {
                 new AttacksPokemons("Normal", "Danza espada", 0, 100),
-                new AttacksPokemons("Lucha", "A bocajarro", 95, 100),
+                new AttacksPokemons("Lucha", "A bocajarro", 120, 100),
                 new AttacksPokemons("Acero", "Puño meteoro", 90, 90),
                 new AttacksPokemons("Normal", "Velocidad extrema", 80, 100)
         };
@@ -192,6 +192,54 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
         luxray.setWeight(42.0f);
 
         return luxray;
+    }
+    /**
+     * metodo para crear el objeto marshadow
+     * @return el objeto creado
+     */
+    public static Marshadow makeMarshadowObject() {
+
+        marshadow.setName("Marshadow");
+        marshadow.setType("lucha-fantasma");
+        marshadow.setLevel(50);
+        marshadow.setLife(170);
+        marshadow.setSex(null);
+        marshadow.setSpeed(194);
+        AttacksPokemons[] marshadowAttacks = {
+                new AttacksPokemons("Fantasma", "Roba sombra", 90, 100),
+                new AttacksPokemons("Hielo", "Puño hielo", 75, 100),
+                new AttacksPokemons("Lucha", "A bocajarro", 120, 100),
+                new AttacksPokemons("Fantasma", "Sombre vil", 40, 100)
+        };
+        marshadow.setAttacks(marshadowAttacks);
+        marshadow.setSize(0.7f);
+        marshadow.setWeight(22.2f);
+
+        return marshadow;
+    }
+    /**
+     * metodo para crear el objeto milotic
+     * @return el objeto creado
+     */
+    public static Milotic makeMiloticObject() {
+
+        marshadow.setName("Marshadow");
+        marshadow.setType("lucha-fantasma");
+        marshadow.setLevel(50);
+        marshadow.setLife(170);
+        marshadow.setSex(null);
+        marshadow.setSpeed(194);
+        AttacksPokemons[] marshadowAttacks = {
+                new AttacksPokemons("Fantasma", "Roba sombra", 90, 100),
+                new AttacksPokemons("Hielo", "Puño hielo", 75, 100),
+                new AttacksPokemons("Lucha", "A bocajarro", 120, 100),
+                new AttacksPokemons("Fantasma", "Sombre vil", 40, 100)
+        };
+        marshadow.setAttacks(marshadowAttacks);
+        marshadow.setSize(0.7f);
+        marshadow.setWeight(22.2f);
+
+        return marshadow;
     }
 
 
