@@ -49,7 +49,10 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
 
       return drampa;
     }
-
+    /**
+     * metodo para crear el objeto empoleon
+     * @return el objeto creado
+     */
     public static Empoleon makeEmpoleonObject() {
 
         empoleon.setName("Empoleon");
@@ -70,6 +73,31 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
 
         return empoleon;
     }
+    /**
+     * metodo para crear el objeto garchomp
+     * @return el objeto creado
+     */
+    public static Garchomp makeGarchompObject() {
+
+        garchomp.setName("Garchomp");
+        garchomp.setType("dragon-tierra");
+        garchomp.setLevel(50);
+        garchomp.setLife(195);
+        garchomp.setSex("Hembra");
+        garchomp.setSpeed(169);
+        AttacksPokemons[] garchompAttacks = {
+                new AttacksPokemons("Dragon", "Garra Dragon", 80, 100),
+                new AttacksPokemons("Tierra", "Terremoto", 100, 100),
+                new AttacksPokemons("Acero", "Cabeza de hierro", 80, 100),
+                new AttacksPokemons("Normal", "Danza espada", 0, 100)
+        };
+        garchomp.setAttacks(garchompAttacks);
+        garchomp.setSize(1.9f);
+        garchomp.setWeight(95.0f);
+
+        return garchomp;
+    }
+
 
 
 
