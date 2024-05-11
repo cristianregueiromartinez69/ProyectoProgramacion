@@ -13,7 +13,7 @@ public abstract class PokemonProperties implements IPokemon{
     private Integer life;
     private String sex;
     private Integer speed;
-    private Array attacks;
+    private AttacksPokemons[] attacks;
     private Float size;
     private Float weight;
 
@@ -113,11 +113,11 @@ public abstract class PokemonProperties implements IPokemon{
      * @return attacks
      */
 
-    public Array getAttacks() {
+    public AttacksPokemons[] getAttacks() {
         return attacks;
     }
 
-    public void setAttacks(Array attacks) {
+    public void setAttacks(AttacksPokemons[] attacks) {
         this.attacks = attacks;
     }
 
