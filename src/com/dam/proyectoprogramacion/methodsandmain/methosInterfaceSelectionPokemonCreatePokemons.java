@@ -242,6 +242,31 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
         return milotic;
     }
 
+    /**
+     * metodo para crear el objeto snorlax
+     * @return el objeto creado
+     */
+    public static Snorlax makeSnorlaxObject() {
+
+        snorlax.setName("Snorlax");
+        snorlax.setType("normal");
+        snorlax.setLevel(50);
+        snorlax.setLife(267);
+        snorlax.setSex("Macho");
+        snorlax.setSpeed(31);
+        AttacksPokemons[] snorlaxAttacks = {
+                new AttacksPokemons("Normal", "Tambor", 0, 100),
+                new AttacksPokemons("Normal", "Golpe Cuerpo", 85, 100),
+                new AttacksPokemons("Psiquico", "Descanso", 0, 100),
+                new AttacksPokemons("Psiquico", "Cabezazo zen", 80, 90)
+        };
+        snorlax.setAttacks(snorlaxAttacks);
+        snorlax.setSize(2.1f);
+        snorlax.setWeight(460.0f);
+
+        return snorlax;
+    }
+
 
 
 
