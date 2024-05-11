@@ -288,6 +288,20 @@ public class MethosInterfaceSelectionPokemon {
         SelectionPokemon.getGlobalPanelPlayer1().add(panelPokemon);
         return auxPanelAliasAndPokemon1;
     }
+    /**
+     * metodo que reordena el panel del jugador 2 añadiendo 2 cosas:
+     * 1. la imagen y el alias del jugador 2
+     * los pokemons que va escogiendo el jugador 2
+     * @param panelPokemon el Jpanel que va añadiendo el jugador 2
+     * @return el panel del jugador 2
+     */
+    private static JPanel addSelectedPokemonPanelPlayer2(JPanel panelPokemon) {
+        JPanel auxPanelAliasAndPokemon2 = new JPanel();
+        SelectionPokemon.getGlobalPanelPlayer2().add(MethodsInterfaceLuck.selectAliasImagePlayer2());
+        auxPanelAliasAndPokemon2.add(SelectionPokemon.getGlobalPanelPlayer2());
+        SelectionPokemon.getGlobalPanelPlayer2().add(panelPokemon);
+        return auxPanelAliasAndPokemon2;
+    }
 
     /**
      * metodo que limpia el panel del jugador 1
