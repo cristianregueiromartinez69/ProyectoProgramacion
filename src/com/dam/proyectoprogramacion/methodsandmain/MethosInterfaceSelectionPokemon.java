@@ -5,6 +5,7 @@ import com.dam.proyectoprogramacion.panels.selectionpokemon.JLabelsPokemons;
 import com.dam.proyectoprogramacion.panels.selectionpokemon.PanelsPokemonRow1;
 import com.dam.proyectoprogramacion.panels.selectionpokemon.PanelsPokemonRow2;
 import com.dam.proyectoprogramacion.panels.selectionpokemon.PanelsPokemonRow3;
+import com.dam.proyectoprogramacion.pokemon.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -27,6 +28,22 @@ public class MethosInterfaceSelectionPokemon {
     private static HashMap<String, ArrayList> playersBattle = new HashMap<>();
     private static ArrayList <Object> pokemonsPLayer1 = new ArrayList<>();
     private static ArrayList <Object> pokemonsPLayer2 = new ArrayList<>();
+
+    /**
+     * atributos privados de tipo pokemons que los haremos igual a los metodos que construyen los objetos
+     */
+    private static Drampa drampa;
+    private static Empoleon empoleon;
+    private static Garchomp garchomp;
+    private static Gengar gengar;
+    private static Infernape infernape;
+    private static Lucario lucario;
+    private static Luxray luxray;
+    private static Marshadow marshadow;
+    private static Milotic milotic;
+    private static Snorlax snorlax;
+    private static Tinkaton tinkaton;
+    private static Tyranitar tyranitar;
 
 
     /**
