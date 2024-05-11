@@ -48,7 +48,7 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getDrampaPanel());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeDrampaObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
+
 
             } else if (MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer1Luck.getAliasTextPlayer1().getText()) &&
@@ -57,7 +57,7 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getDrampaPanel());
                 panelPokemonsPlayer1.add(new EnterPanelPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeDrampaObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
+
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
             }
