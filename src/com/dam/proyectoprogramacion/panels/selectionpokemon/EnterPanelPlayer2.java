@@ -13,6 +13,7 @@ public class EnterPanelPlayer2 extends JPanel {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         enterButtonPlayer2 = new ButtonInterfacePokemonSelect().makeReadyPlayer2Button();
         enterButtonPlayer2.setPreferredSize(new Dimension(150,40));
+        enterButtonPlayer2.setBackground(Color.GREEN);
         enterButtonPlayer2.setForeground(Color.WHITE);
         this.add(enterButtonPlayer2);
     }
