@@ -97,6 +97,30 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
 
         return garchomp;
     }
+    /**
+     * metodo para crear el objeto gengar
+     * @return el objeto creado
+     */
+    public static Gengar makeGengarObject() {
+
+        gengar.setName("Gengar");
+        gengar.setType("fantasma-veneno");
+        gengar.setLevel(50);
+        gengar.setLife(135);
+        gengar.setSex("Macho");
+        gengar.setSpeed(178);
+        AttacksPokemons[] gengarAttacks = {
+                new AttacksPokemons("Fantasma", "Bola sombra", 80, 100),
+                new AttacksPokemons("Veneno", "Onda toxica", 95, 100),
+                new AttacksPokemons("Lucha", "Onda certera", 120, 70),
+                new AttacksPokemons("Electrico", "Rayo", 90, 100)
+        };
+        gengar.setAttacks(gengarAttacks);
+        gengar.setSize(1.5f);
+        garchomp.setWeight(40.5f);
+
+        return gengar;
+    }
 
 
 
