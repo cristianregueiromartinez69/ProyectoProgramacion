@@ -145,6 +145,30 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
 
         return infernape;
     }
+    /**
+     * metodo para crear el objeto Lucario
+     * @return el objeto creado
+     */
+    public static Lucario makeLucarioObject() {
+
+        lucario.setName("Lucario");
+        lucario.setType("lucha-acero");
+        lucario.setLevel(50);
+        lucario.setLife(150);
+        lucario.setSex("Macho");
+        lucario.setSpeed(156);
+        AttacksPokemons[] lucarioAttacks = {
+                new AttacksPokemons("Normal", "Danza espada", 0, 100),
+                new AttacksPokemons("Lucha", "A bocajarro", 95, 100),
+                new AttacksPokemons("Acero", "Puño meteoro", 90, 90),
+                new AttacksPokemons("Normal", "Velocidad extrema", 80, 100)
+        };
+        lucario.setAttacks(lucarioAttacks);
+        lucario.setSize(1.2f);
+        lucario.setWeight(54.0f);
+
+        return lucario;
+    }
 
 
 
