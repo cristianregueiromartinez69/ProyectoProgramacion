@@ -63,7 +63,7 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getDrampaPanel());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeDrampaObject());
                 for(Object d:pokemonsPLayer1){
-                    System.out.println();
+                    System.out.println(d);
                 }
                 addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
 

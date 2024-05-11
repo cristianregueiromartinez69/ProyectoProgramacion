@@ -45,4 +45,14 @@ public class AttacksPokemons {
     public void setPrecision(int precision) {
         this.precision = precision;
     }
+
+    @Override
+    public String toString() {
+        return
+                "tipo: " + type + "\n" +
+                "nombre: " + name + "\n" +
+                "poder: " + power + "\n" +
+                "precision: " + precision + "\n"
+                ;
+    }
 }
