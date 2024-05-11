@@ -266,6 +266,30 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
 
         return snorlax;
     }
+    /**
+     * metodo para crear el objeto tinkaton
+     * @return el objeto creado
+     */
+    public static Tinkaton makeTinkatonObject() {
+
+        tinkaton.setName("Tinkaton");
+        tinkaton.setType("hada-acero");
+        tinkaton.setLevel(50);
+        tinkaton.setLife(180);
+        tinkaton.setSex("Hembra");
+        tinkaton.setSpeed(160);
+        AttacksPokemons[] tinkatonAttacks = {
+                new AttacksPokemons("Acero", "Martillo colosal", 160, 100),
+                new AttacksPokemons("Siniestro", "Desarme", 65, 100),
+                new AttacksPokemons("Hielo", "Martillo de hielo", 100, 90),
+                new AttacksPokemons("Normal", "Sorpresa", 40, 100)
+        };
+        tinkaton.setAttacks(tinkatonAttacks);
+        tinkaton.setSize(0.7f);
+        tinkaton.setWeight(112.8f);
+
+        return tinkaton;
+    }
 
 
 
