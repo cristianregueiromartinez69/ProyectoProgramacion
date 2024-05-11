@@ -223,23 +223,23 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
      */
     public static Milotic makeMiloticObject() {
 
-        marshadow.setName("Marshadow");
-        marshadow.setType("lucha-fantasma");
-        marshadow.setLevel(50);
-        marshadow.setLife(170);
-        marshadow.setSex(null);
-        marshadow.setSpeed(194);
-        AttacksPokemons[] marshadowAttacks = {
-                new AttacksPokemons("Fantasma", "Roba sombra", 90, 100),
-                new AttacksPokemons("Hielo", "Puño hielo", 75, 100),
-                new AttacksPokemons("Lucha", "A bocajarro", 120, 100),
-                new AttacksPokemons("Fantasma", "Sombre vil", 40, 100)
+        milotic.setName("Milotic");
+        milotic.setType("agua");
+        milotic.setLevel(50);
+        milotic.setLife(202);
+        milotic.setSex("Hembra");
+        milotic.setSpeed(138);
+        AttacksPokemons[] miloticAttacks = {
+                new AttacksPokemons("Agua", "Escaldar", 80, 100),
+                new AttacksPokemons("Hielo", "Niebla", 0, 100),
+                new AttacksPokemons("Veneno", "Toxico", 0, 100),
+                new AttacksPokemons("Normal", "Recuperacion", 0, 100)
         };
-        marshadow.setAttacks(marshadowAttacks);
-        marshadow.setSize(0.7f);
-        marshadow.setWeight(22.2f);
+        milotic.setAttacks(miloticAttacks);
+        milotic.setSize(6.2f);
+        milotic.setWeight(162.0f);
 
-        return marshadow;
+        return milotic;
     }
 
 
