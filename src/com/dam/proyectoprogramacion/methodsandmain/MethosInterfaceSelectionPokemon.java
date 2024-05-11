@@ -64,7 +64,7 @@ public class MethosInterfaceSelectionPokemon {
         /**
          * devolvemos el nuevo panel creado
          */
-    return addSelectedPokemonPanel(panelPokemonsPlayer1);
+    return addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
     }
 
 
@@ -85,7 +85,7 @@ public class MethosInterfaceSelectionPokemon {
         /**
          * devolvemos el nuevo panel creado
          */
-        return addSelectedPokemonPanel(panelPokemonsPlayer1);
+        return addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
     }
     /**
      * metodo para añadir a garchomp al panel del jugador 1
@@ -103,7 +103,7 @@ public class MethosInterfaceSelectionPokemon {
         /**
          * devolvemos el nuevo panel creado
          */
-        return addSelectedPokemonPanel(panelPokemonsPlayer1);
+        return addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
     }
     /**
      * metodo para añadir a gengar al panel del jugador 1
@@ -121,7 +121,7 @@ public class MethosInterfaceSelectionPokemon {
         /**
          * devolvemos el nuevo panel creado
          */
-        return addSelectedPokemonPanel(panelPokemonsPlayer1);
+        return addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
     }
     /**
      * metodo para añadir a infernape al panel del jugador 1
@@ -139,7 +139,7 @@ public class MethosInterfaceSelectionPokemon {
         /**
          * devolvemos el nuevo panel creado
          */
-        return addSelectedPokemonPanel(panelPokemonsPlayer1);
+        return addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
     }
     /**
      * metodo para añadir a lucario al panel del jugador 1
@@ -158,7 +158,7 @@ public class MethosInterfaceSelectionPokemon {
         /**
          * devolvemos el nuevo panel creado
          */
-        return addSelectedPokemonPanel(panelPokemonsPlayer1);
+        return addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
     }
     /**
      * metodo para añadir a luxray al panel del jugador 1
@@ -177,7 +177,7 @@ public class MethosInterfaceSelectionPokemon {
         /**
          * devolvemos el nuevo panel creado
          */
-        return addSelectedPokemonPanel(panelPokemonsPlayer1);
+        return addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
     }
     /**
      * metodo para añadir a marshadow al panel del jugador 1
@@ -196,7 +196,7 @@ public class MethosInterfaceSelectionPokemon {
         /**
          * devolvemos el nuevo panel creado
          */
-        return addSelectedPokemonPanel(panelPokemonsPlayer1);
+        return addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
     }
     /**
      * metodo para añadir a milotic al panel del jugador 1
@@ -214,7 +214,7 @@ public class MethosInterfaceSelectionPokemon {
         /**
          * devolvemos el nuevo panel creado
          */
-        return addSelectedPokemonPanel(panelPokemonsPlayer1);
+        return addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
     }
     /**
      * metodo para añadir a snorlax al panel del jugador 1
@@ -233,7 +233,7 @@ public class MethosInterfaceSelectionPokemon {
         /**
          * devolvemos el nuevo panel creado
          */
-        return addSelectedPokemonPanel(panelPokemonsPlayer1);
+        return addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
     }
     /**
      * metodo para añadir a tinkaton al panel del jugador 1
@@ -252,7 +252,7 @@ public class MethosInterfaceSelectionPokemon {
         /**
          * devolvemos el nuevo panel creado
          */
-        return addSelectedPokemonPanel(panelPokemonsPlayer1);
+        return addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
     }
     /**
      * metodo para añadir a tyranitar al panel del jugador 1
@@ -271,7 +271,7 @@ public class MethosInterfaceSelectionPokemon {
         /**
          * devolvemos el nuevo panel creado
          */
-        return addSelectedPokemonPanel(panelPokemonsPlayer1);
+        return addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
     }
 
     /**
@@ -281,7 +281,7 @@ public class MethosInterfaceSelectionPokemon {
      * @param panelPokemon el Jpanel que va añadiendo el jugador 1
      * @return el panel del jugador 1
      */
-    private static JPanel addSelectedPokemonPanel(JPanel panelPokemon) {
+    private static JPanel addSelectedPokemonPanelPlayer1(JPanel panelPokemon) {
         JPanel auxPanelAliasAndPokemon1 = new JPanel();
         SelectionPokemon.getGlobalPanelPlayer1().add(MethodsInterfaceLuck.selectAliasImagePlayer1());
         auxPanelAliasAndPokemon1.add(SelectionPokemon.getGlobalPanelPlayer1());
@@ -296,6 +296,14 @@ public class MethosInterfaceSelectionPokemon {
         SelectionPokemon.getGlobalPanelPlayer1().removeAll();
         SelectionPokemon.getGlobalPanelPlayer1().revalidate();
         SelectionPokemon.getGlobalPanelPlayer1().repaint();
+    }
+    /**
+     * metodo que limpia el panel del jugador 2
+     */
+    private static void clearPanelPlayer2() {
+        SelectionPokemon.getGlobalPanelPlayer2().removeAll();
+        SelectionPokemon.getGlobalPanelPlayer2().revalidate();
+        SelectionPokemon.getGlobalPanelPlayer2().repaint();
     }
 
     /**
