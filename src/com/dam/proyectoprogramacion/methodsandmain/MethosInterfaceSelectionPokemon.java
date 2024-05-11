@@ -8,6 +8,9 @@ import com.dam.proyectoprogramacion.panels.selectionpokemon.PanelsPokemonRow3;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * Clase con los metodos de la interfaz de seleccion de pokemons
@@ -20,6 +23,11 @@ public class MethosInterfaceSelectionPokemon {
      * atributo privado de tipo JPanel que nos ayudará a registrar uno a uno los pokemons escogidos por el jugador 1
      */
     private static JPanel panelPokemonsPlayer1 = makeContentPokemonPanel();
+
+    private static HashMap<String, ArrayList> playersBattle = new HashMap<>();
+    private static ArrayList <Object> pokemonsPLayer1 = new ArrayList<>();
+    private static ArrayList <Object> pokemonsPLayer2 = new ArrayList<>();
+
 
     /**
      * metodo para añadir a drampa al panel dle jugador 1
