@@ -321,6 +321,23 @@ public class MethosInterfaceSelectionPokemon {
     }
 
     /**
+     * metodo booleano para comprobar si se han seleccionado tres pokemons para el jugador 1
+     * @return true si se han seleccionado 3, false si no se han seleccionado aun 3
+     */
+    private boolean  checkSizeListPokemonsPLayer1(){
+
+        return pokemonsPLayer1.size() < 3;
+    }
+    /**
+     * metodo booleano para comprobar si se han seleccionado tres pokemons para el jugador 2
+     * @return true si se han seleccionado 3, false si no se han seleccionado aun 3
+     */
+    private boolean  checkSizeListPokemonsPLayer2(){
+
+        return pokemonsPLayer2.size() < 3;
+    }
+
+    /**
      * metodo que crea el panel dle jugador 1
      * @return el panel creado
      */
