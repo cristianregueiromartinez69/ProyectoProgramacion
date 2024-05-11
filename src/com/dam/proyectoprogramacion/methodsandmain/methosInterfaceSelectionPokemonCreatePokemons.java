@@ -290,6 +290,31 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
 
         return tinkaton;
     }
+    /**
+     * metodo para crear el objeto tyranitar
+     * @return el objeto creado
+     */
+    public static Tyranitar makeTyranitarObject() {
+
+        tyranitar.setName("Tyranitar");
+        tyranitar.setType("roca-siniestro");
+        tyranitar.setLevel(50);
+        tyranitar.setLife(207);
+        tyranitar.setSex("Hembra");
+        tyranitar.setSpeed(110);
+        AttacksPokemons[] tyranitarAttacks = {
+                new AttacksPokemons("Roca", "Roca afilada", 100, 80),
+                new AttacksPokemons("Siniestro", "Desarme", 65, 100),
+                new AttacksPokemons("Electrico", "Onda trueno", 0, 90),
+                new AttacksPokemons("Tierra", "Terremoto", 100, 100)
+        };
+        tyranitar.setAttacks(tyranitarAttacks);
+        tyranitar.setSize(2.0f);
+        tyranitar.setWeight(202.0f);
+
+        return tyranitar;
+    }
+
 
 
 
