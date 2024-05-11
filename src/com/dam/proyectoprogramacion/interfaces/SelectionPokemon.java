@@ -1,7 +1,10 @@
 package com.dam.proyectoprogramacion.interfaces;
 
 import com.dam.proyectoprogramacion.background.BackgroundMainMenuPanel;
+import com.dam.proyectoprogramacion.methodsandmain.MethodsInterfaceLuck;
 import com.dam.proyectoprogramacion.methodsandmain.MethosInterfaceSelectionPokemon;
+import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
+import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
 import com.dam.proyectoprogramacion.panels.selectionpokemon.*;
 import com.dam.proyectoprogramacion.pokemonSongs.*;
 
@@ -126,7 +129,13 @@ public class SelectionPokemon extends JFrame {
             public void mouseClicked(MouseEvent e) {
                DrampaSong.musicDrampa();
 
-               contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelDrampaPlayer1(), BorderLayout.WEST);
+               if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                   contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelDrampaPlayer1(), BorderLayout.WEST);
+               }
+               else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                   contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelDrampaPlayer1(), BorderLayout.EAST);
+               }
+
 
             }
 

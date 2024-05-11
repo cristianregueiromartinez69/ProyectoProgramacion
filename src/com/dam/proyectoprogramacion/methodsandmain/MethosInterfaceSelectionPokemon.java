@@ -1,10 +1,9 @@
 package com.dam.proyectoprogramacion.methodsandmain;
 
 import com.dam.proyectoprogramacion.interfaces.SelectionPokemon;
-import com.dam.proyectoprogramacion.panels.selectionpokemon.JLabelsPokemons;
-import com.dam.proyectoprogramacion.panels.selectionpokemon.PanelsPokemonRow1;
-import com.dam.proyectoprogramacion.panels.selectionpokemon.PanelsPokemonRow2;
-import com.dam.proyectoprogramacion.panels.selectionpokemon.PanelsPokemonRow3;
+import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
+import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
+import com.dam.proyectoprogramacion.panels.selectionpokemon.*;
 import com.dam.proyectoprogramacion.pokemon.*;
 
 import javax.swing.*;
@@ -24,6 +23,8 @@ public class MethosInterfaceSelectionPokemon {
      * atributo privado de tipo JPanel que nos ayudará a registrar uno a uno los pokemons escogidos por el jugador 1
      */
     private static JPanel panelPokemonsPlayer1 = makeContentPokemonPanel();
+    private static JPanel panelPokemonsPlayer2 = makeContentPokemonPanel();
+
 
     private static HashMap<String, ArrayList> playersBattle = new HashMap<>();
     private static ArrayList <Object> pokemonsPLayer1 = new ArrayList<>();
@@ -52,19 +53,57 @@ public class MethosInterfaceSelectionPokemon {
      */
     public static JPanel updatePanelDrampaPlayer1(){
 
-        /**
-         * este es un metodo que limpia el panel del jugador 1
-         */
-        clearPanelPlayer1();
-        /**
-         * añadimos el pokemon correspondiente
-         */
-        panelPokemonsPlayer1.add(PanelsPokemonRow1.getDrampaPanel());
 
-        /**
-         * devolvemos el nuevo panel creado
-         */
-    return addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
+        if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())) {
+
+            if (MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
+                    (InformationPanelPlayer1Luck.getAliasTextPlayer1().getText()) &&
+                    checkSizeListPokemonsPLayer1()) {
+                clearPanelPlayer1();
+                panelPokemonsPlayer1.add(PanelsPokemonRow1.getDrampaPanel());
+                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
+
+            } else if (MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
+                    (InformationPanelPlayer1Luck.getAliasTextPlayer1().getText()) &&
+                    pokemonsPLayer1.size() == 2) {
+                clearPanelPlayer1();
+                panelPokemonsPlayer1.add(PanelsPokemonRow1.getDrampaPanel());
+                panelPokemonsPlayer1.add(new EnterPanelPlayer1());
+                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
+
+            } else if (MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
+                    (InformationPanelPlayer1Luck.getAliasTextPlayer1().getText()) &&
+                    pokemonsPLayer1.size() == 3) {
+                MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
+            }
+            return addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
+        }
+        else{
+               if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
+                    (InformationPanelPlayer2Luck.getAliasTextPlayer2().getText()) &&
+                    checkSizeListPokemonsPLayer2()){
+                clearPanelPlayer2();
+                panelPokemonsPlayer2.add(PanelsPokemonRow1.getDrampaPanel());
+                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
+
+            }
+            else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
+                    (InformationPanelPlayer2Luck.getAliasTextPlayer2().getText()) &&
+                    pokemonsPLayer2.size() == 2){
+                clearPanelPlayer2();
+                panelPokemonsPlayer2.add(PanelsPokemonRow1.getDrampaPanel());
+                panelPokemonsPlayer2.add(new EnterPanelPlayer2());
+                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
+
+            }
+            else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
+                    (InformationPanelPlayer2Luck.getAliasTextPlayer2().getText()) &&
+                    pokemonsPLayer2.size() == 3){
+                MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
+            }
+            return addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
+        }
+
     }
 
 
@@ -324,17 +363,17 @@ public class MethosInterfaceSelectionPokemon {
      * metodo booleano para comprobar si se han seleccionado tres pokemons para el jugador 1
      * @return true si se han seleccionado 3, false si no se han seleccionado aun 3
      */
-    private boolean  checkSizeListPokemonsPLayer1(){
+    private static  boolean  checkSizeListPokemonsPLayer1(){
 
-        return pokemonsPLayer1.size() < 3;
+        return pokemonsPLayer1.size() <= 3;
     }
     /**
      * metodo booleano para comprobar si se han seleccionado tres pokemons para el jugador 2
      * @return true si se han seleccionado 3, false si no se han seleccionado aun 3
      */
-    private boolean  checkSizeListPokemonsPLayer2(){
+    private static  boolean  checkSizeListPokemonsPLayer2(){
 
-        return pokemonsPLayer2.size() < 3;
+        return pokemonsPLayer2.size() <= 3;
     }
 
     /**
