@@ -12,18 +12,18 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
     /**
      * atributos estáticos de tipo pokemon
      */
-    static Drampa drampa = new Drampa();
-    static Empoleon empoleon = new Empoleon();
-    static Garchomp garchomp = new Garchomp();
-    static Gengar gengar = new Gengar();
-    static Infernape infernape = new Infernape();
-    static Lucario lucario = new Lucario();
-    static Luxray luxray = new Luxray();
-    static Marshadow marshadow = new Marshadow();
-    static Milotic milotic = new Milotic();
-    static Snorlax snorlax = new Snorlax();
-    static Tinkaton tinkaton = new Tinkaton();
-    static Tyranitar tyranitar = new Tyranitar();
+    private static Drampa drampa = new Drampa();
+    private static Empoleon empoleon = new Empoleon();
+    private static Garchomp garchomp = new Garchomp();
+    private static Gengar gengar = new Gengar();
+    private static Infernape infernape = new Infernape();
+    private static Lucario lucario = new Lucario();
+    private static Luxray luxray = new Luxray();
+    private static Marshadow marshadow = new Marshadow();
+    private static Milotic milotic = new Milotic();
+    private static Snorlax snorlax = new Snorlax();
+    private static Tinkaton tinkaton = new Tinkaton();
+    private static Tyranitar tyranitar = new Tyranitar();
 
     /**
      * metodo para crear el objeto drampa
@@ -316,8 +316,55 @@ public class methosInterfaceSelectionPokemonCreatePokemons {
     }
 
 
+    /**
+     * getters de los atributos de tipo pokemon
+     * @return los atributos correspondientes
+     */
+    public static Drampa getDrampa() {
+        return drampa;
+    }
 
+    public static Empoleon getEmpoleon() {
+        return empoleon;
+    }
 
+    public static Garchomp getGarchomp() {
+        return garchomp;
+    }
 
+    public static Gengar getGengar() {
+        return gengar;
+    }
 
+    public static Infernape getInfernape() {
+        return infernape;
+    }
+
+    public static Lucario getLucario() {
+        return lucario;
+    }
+
+    public static Luxray getLuxray() {
+        return luxray;
+    }
+
+    public static Marshadow getMarshadow() {
+        return marshadow;
+    }
+
+    public static Milotic getMilotic() {
+        return milotic;
+    }
+
+    public static Snorlax getSnorlax() {
+        return snorlax;
+    }
+
+    public static Tinkaton getTinkaton() {
+        return tinkaton;
+    }
+
+    public static Tyranitar getTyranitar() {
+        return tyranitar;
+    }
 }
