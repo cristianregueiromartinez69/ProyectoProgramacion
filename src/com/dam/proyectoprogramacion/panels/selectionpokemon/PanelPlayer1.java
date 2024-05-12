@@ -28,7 +28,6 @@ public class PanelPlayer1 extends JPanel {
          * añadimos al panel central un metodo que devueleve un panel
          */
         this.add(makePanelPlayer1());
-        this.add(MethosInterfaceSelectionPokemon.addEnterButonPlayer1Panel(new EnterPanelPlayer1()));
 
 
 

@@ -57,6 +57,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer1.size() == 2) {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getDrampaPanel());
+                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeDrampaObject());
 
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
@@ -79,6 +80,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer2.size() == 2){
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow1.getDrampaPanel());
+                   panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                    pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeDrampaObject());
                    MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
@@ -110,6 +112,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer1.size() == 2) {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getEmpoleonPanel());
+                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeEmpoleonObject());
 
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
@@ -132,6 +135,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer2.size() == 2){
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow1.getEmpoleonPanel());
+                panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeEmpoleonObject());
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
@@ -161,6 +165,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer1.size() == 2) {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getGarchompPanel());
+                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeGarchompObject());
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
@@ -182,6 +187,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer2.size() == 2){
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow1.getGarchompPanel());
+                panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeGarchompObject());
 
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
@@ -212,6 +218,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer1.size() == 2) {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getGengarPanel());
+                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeGengarObject());
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
@@ -232,6 +239,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer2.size() == 2){
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow1.getGengarPanel());
+                panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeGengarObject());
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
@@ -260,6 +268,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer1.size() == 2) {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow2.getInfernapePanel());
+                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeInfernapeObject());
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
@@ -280,6 +289,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer2.size() == 2){
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow2.getInfernapePanel());
+                panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeInfernapeObject());
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
@@ -307,6 +317,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer1.size() == 2) {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow2.getLucarioPanel());
+                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeLucarioObject());
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
@@ -327,6 +338,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer2.size() == 2){
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow2.getLucarioPanel());
+                panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeLucarioObject());
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
@@ -354,6 +366,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer1.size() == 2) {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow2.getLuxrayPanel());
+                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeLuxrayObject());
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
@@ -374,6 +387,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer2.size() == 2){
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow2.getLuxrayPanel());
+                panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeLuxrayObject());
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
@@ -401,6 +415,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer1.size() == 2) {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow2.getMarshadowPanel());
+                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeMarshadowObject());
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
@@ -421,6 +436,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer2.size() == 2){
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow2.getMarshadowPanel());
+                panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeMarshadowObject());
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
@@ -448,6 +464,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer1.size() == 2) {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow3.getMiloticPanel());
+                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeMiloticObject());
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
@@ -468,6 +485,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer2.size() == 2){
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow3.getMiloticPanel());
+                panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeMiloticObject());
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
@@ -496,6 +514,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer1.size() == 2) {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow3.getSnorlaxPanel());
+                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeSnorlaxObject());
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
@@ -516,6 +535,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer2.size() == 2){
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow3.getSnorlaxPanel());
+                panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeSnorlaxObject());
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
@@ -543,6 +563,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer1.size() == 2) {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow3.getTinkatonPanel());
+                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeTinkatonObject());
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
@@ -563,6 +584,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer2.size() == 2){
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow3.getTinkatonPanel());
+                panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeTinkatonObject());
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
@@ -590,6 +612,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer1.size() == 2) {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow3.getTyranitarPanel());
+                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeTyranitarObject());
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
@@ -610,6 +633,7 @@ public class MethosInterfaceSelectionPokemon {
                     pokemonsPLayer2.size() == 2){
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow3.getTyranitarPanel());
+                panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeTyranitarObject());
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
@@ -676,8 +700,8 @@ public class MethosInterfaceSelectionPokemon {
     private static JPanel addSelectedPokemonPanelPlayer2(JPanel panelPokemon) {
         JPanel auxPanelAliasAndPokemon2 = new JPanel();
         SelectionPokemon.getGlobalPanelPlayer2().add(MethodsInterfaceLuck.selectAliasImagePlayer2());
-        auxPanelAliasAndPokemon2.add(SelectionPokemon.getGlobalPanelPlayer2());
         SelectionPokemon.getGlobalPanelPlayer2().add(panelPokemon);
+        auxPanelAliasAndPokemon2.add(SelectionPokemon.getGlobalPanelPlayer2());
         return auxPanelAliasAndPokemon2;
     }
 
