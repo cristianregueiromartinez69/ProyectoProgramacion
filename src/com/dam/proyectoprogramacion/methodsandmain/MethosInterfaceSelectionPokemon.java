@@ -682,21 +682,7 @@ public class MethosInterfaceSelectionPokemon {
         return imagePanel;
     }
 
-    public static JPanel addEnterButonPlayer1Panel(JPanel enterPanel){
-        JPanel auxPanel = new JPanel();
 
-            auxPanel.add(enterPanel);
-
-        return auxPanel;
-    }
-
-    public static JPanel addEnterButonPlayer2Panel(JPanel enterPanel){
-        JPanel auxPanel = new JPanel();
-
-            auxPanel.add(enterPanel);
-
-        return auxPanel;
-    }
 
     public static void putPlayersAndPokemons(String alias, ArrayList <Object> pokemons){
         playersBattle.put(alias, pokemons);
