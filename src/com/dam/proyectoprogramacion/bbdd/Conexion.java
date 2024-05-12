@@ -30,7 +30,7 @@ public class Conexion {
     public void CrearTabla() {
 
         try (Statement stmt = con.createStatement()){
-                String sql = String.join("\n", "CREATE TABLE IF NOT EXISTS  Pokemon (", "Name VARCHAR(12) NOT NULL, PRIMARY KEY", "Type VARCHAR(10) NOT NULL, ", "Level INT NOT NULL, ", "Sex VARCHAR(7) NOT NULL, ", "Speed INT NOT NULL, ", "Lyfe INT NOT NULL, ", "Syze FLOAT NOT NULL, ", "Weight FLOAT NOT NULL, ", "Attacks VARCHAR(20) NOT NULL, ");
+                String sql = String.join("\n", "CREATE TABLE IF NOT EXISTS  Pokemon (", "Name VARCHAR(12) NOT NULL, PRIMARY KEY", "Type1 VARCHAR(10) NOT NULL, ","Type2 VARCHAR(10),", "Level INT NOT NULL, ", "Sex VARCHAR(7) NOT NULL, ", "Speed INT NOT NULL, ", "Lyfe INT NOT NULL, ", "Syze FLOAT NOT NULL, ", "Weight FLOAT NOT NULL, ", "Attacks VARCHAR(20) NOT NULL, ");
                 stmt.executeUpdate(sql);
                 JOptionPane.showMessageDialog(null, "Tabla de Pokemon registrado con exito");
         } catch (SQLException e) {
@@ -38,17 +38,18 @@ public class Conexion {
         }
     }
 
-    public void InsertarPokemon(String Name, String Type, Integer Level, Integer Life, String Sex, Integer Speed, Float Syze, Float Weight, String Atacks) {
-        String sql = "INSERT INTO Pokemon (Name, Type, Level, Life, Sex, Speed. Syze, Weight, Attacks) VALUES (?,?,?,?,?,?,?,?,?)";
+    public void InsertarPokemon(String Name, String Type1,String Type2, Integer Level, Integer Life, String Sex, Integer Speed, Float Syze, Float Weight, String Atacks) {
+        String sql = "INSERT INTO Pokemon (Name, Type1,,Type2 Level, Life, Sex, Speed. Syze, Weight, Attacks) VALUES (?,?,?,?,?,?,?,?,?)";
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setString(1,Name);
-            pstmt.setString(2,Type);
-            pstmt.setInt(3,Level);
-            pstmt.setInt(4,Life);
-            pstmt.setString(5,Sex);
-            pstmt.setInt(6,Speed);
-            pstmt.setFloat(7,Syze);
-            pstmt.setFloat(8,Weight);
+            pstmt.setString(2,Type1);
+            pstmt.setString(3,Type2);
+            pstmt.setInt(4,Level);
+            pstmt.setInt(5,Life);
+            pstmt.setString(6,Sex);
+            pstmt.setInt(7,Speed);
+            pstmt.setFloat(8,Syze);
+            pstmt.setFloat(9,Weight);
             pstmt.executeUpdate();
             JOptionPane.showMessageDialog(null, "Insertado exitosamente");
         }catch (SQLException e) {
@@ -181,5 +182,6 @@ public class Conexion {
             JOptionPane.showMessageDialog(null,"Error al actualizar la tabla");
         }
     }
+
 
 }

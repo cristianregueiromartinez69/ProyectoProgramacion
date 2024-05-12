@@ -55,4 +55,67 @@ public class Atacks {
         }
     }
 
+    public void actualizarTypeAtack(String Name, String newType){
+        String sql = "UPDATE Pokemon SET Name = ? WHERE Name = ?";
+        try (PreparedStatement pstmt = con.prepareStatement(sql)){
+            pstmt.setString(1,newType);
+            pstmt.setString(2,Name);
+            int affectedRows = pstmt.executeUpdate();
+            if (affectedRows > 0) {
+                JOptionPane.showMessageDialog(null, "Actualizado exitosamente");
+            }else {
+                JOptionPane.showMessageDialog(null, "No se encontro el Ataque");
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null,"Error al actualizar la tabla");
+        }
+    }
+
+    public void actualizarPowerAtack(String Name, Integer newPower){
+        String sql = "UPDATE Pokemon SET Name = ? WHERE Name = ?";
+        try (PreparedStatement pstmt = con.prepareStatement(sql)){
+            pstmt.setInt(1,newPower);
+            pstmt.setString(2,Name);
+            int affectedRows = pstmt.executeUpdate();
+            if (affectedRows > 0) {
+                JOptionPane.showMessageDialog(null, "Actualizado exitosamente");
+            }else {
+                JOptionPane.showMessageDialog(null, "No se encontro el Ataque");
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null,"Error al actualizar la tabla");
+        }
+    }
+
+    public void actualizarPPAtacks(String Name, Integer newPP){
+        String sql = "UPDATE Pokemon SET Name = ? WHERE Name = ?";
+        try (PreparedStatement pstmt = con.prepareStatement(sql)){
+            pstmt.setInt(1,newPP);
+            pstmt.setString(2,Name);
+            int affectedRows = pstmt.executeUpdate();
+            if (affectedRows > 0) {
+                JOptionPane.showMessageDialog(null, "Actualizado exitosamente");
+            }else {
+                JOptionPane.showMessageDialog(null, "No se encontro el Ataque");
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null,"Error al actualizar la tabla");
+        }
+    }
+
+    public void actualizarPrecissionAtacks(String Name, Float newPrecision){
+        String sql = "UPDATE Pokemon SET Name = ? WHERE Name = ?";
+        try (PreparedStatement pstmt = con.prepareStatement(sql)){
+            pstmt.setFloat(1,newPrecision);
+            pstmt.setString(2,Name);
+            int affectedRows = pstmt.executeUpdate();
+            if (affectedRows > 0) {
+                JOptionPane.showMessageDialog(null, "Actualizado exitosamente");
+            }else {
+                JOptionPane.showMessageDialog(null, "No se encontro el Ataque");
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null,"Error al actualizar la tabla");
+        }
+    }
 }
