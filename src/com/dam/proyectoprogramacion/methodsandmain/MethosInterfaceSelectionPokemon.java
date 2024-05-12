@@ -70,7 +70,7 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow1.getDrampaPanel());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeDrampaObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
+
 
             }
             else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
@@ -80,7 +80,6 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer2.add(PanelsPokemonRow1.getDrampaPanel());
                 panelPokemonsPlayer2.add(new EnterPanelPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeDrampaObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
                    MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
                }
@@ -104,7 +103,7 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getEmpoleonPanel());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeEmpoleonObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
+
 
             } else if (MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer1Luck.getAliasTextPlayer1().getText()) &&
@@ -113,7 +112,7 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getEmpoleonPanel());
                 panelPokemonsPlayer1.add(new EnterPanelPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeEmpoleonObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
+
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
             }
@@ -126,7 +125,7 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow1.getEmpoleonPanel());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeEmpoleonObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
+
 
             }
             else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
@@ -136,7 +135,6 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer2.add(PanelsPokemonRow1.getEmpoleonPanel());
                 panelPokemonsPlayer2.add(new EnterPanelPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeEmpoleonObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
             }
@@ -158,7 +156,7 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getGarchompPanel());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeGarchompObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
+
 
             } else if (MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer1Luck.getAliasTextPlayer1().getText()) &&
@@ -167,7 +165,6 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getGarchompPanel());
                 panelPokemonsPlayer1.add(new EnterPanelPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeGarchompObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
             }
@@ -180,7 +177,7 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow1.getGarchompPanel());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeGarchompObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
+
 
             }
             else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
@@ -190,7 +187,7 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer2.add(PanelsPokemonRow1.getGarchompPanel());
                 panelPokemonsPlayer2.add(new EnterPanelPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeGarchompObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
+
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
             }
@@ -212,7 +209,7 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getGengarPanel());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeGengarObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
+
 
             } else if (MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer1Luck.getAliasTextPlayer1().getText()) &&
@@ -221,7 +218,6 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getGengarPanel());
                 panelPokemonsPlayer1.add(new EnterPanelPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeGengarObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
             }
@@ -234,7 +230,6 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow1.getGengarPanel());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeGengarObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
 
             }
             else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
@@ -244,7 +239,6 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer2.add(PanelsPokemonRow1.getGengarPanel());
                 panelPokemonsPlayer2.add(new EnterPanelPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeGengarObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
             }
@@ -266,7 +260,6 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow2.getInfernapePanel());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeInfernapeObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
 
             } else if (MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer1Luck.getAliasTextPlayer1().getText()) &&
@@ -275,7 +268,6 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer1.add(PanelsPokemonRow2.getInfernapePanel());
                 panelPokemonsPlayer1.add(new EnterPanelPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeInfernapeObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
             }
@@ -288,7 +280,6 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow2.getInfernapePanel());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeInfernapeObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
 
             }
             else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
@@ -298,7 +289,6 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer2.add(PanelsPokemonRow2.getInfernapePanel());
                 panelPokemonsPlayer2.add(new EnterPanelPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeInfernapeObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
             }
@@ -319,7 +309,6 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow2.getLucarioPanel());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeLucarioObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
 
             } else if (MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer1Luck.getAliasTextPlayer1().getText()) &&
@@ -328,7 +317,6 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer1.add(PanelsPokemonRow2.getLucarioPanel());
                 panelPokemonsPlayer1.add(new EnterPanelPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeLucarioObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
             }
@@ -341,7 +329,6 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow2.getLucarioPanel());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeLucarioObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
 
             }
             else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
@@ -351,7 +338,6 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer2.add(PanelsPokemonRow2.getLucarioPanel());
                 panelPokemonsPlayer2.add(new EnterPanelPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeLucarioObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
             }
@@ -372,7 +358,6 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow2.getLuxrayPanel());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeLuxrayObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
 
             } else if (MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer1Luck.getAliasTextPlayer1().getText()) &&
@@ -381,7 +366,6 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer1.add(PanelsPokemonRow2.getLuxrayPanel());
                 panelPokemonsPlayer1.add(new EnterPanelPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeLuxrayObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
             }
@@ -394,7 +378,6 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow2.getLuxrayPanel());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeLuxrayObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
 
             }
             else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
@@ -404,7 +387,6 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer2.add(PanelsPokemonRow2.getLuxrayPanel());
                 panelPokemonsPlayer2.add(new EnterPanelPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeLuxrayObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
             }
@@ -425,7 +407,6 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow2.getMarshadowPanel());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeMarshadowObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
 
             } else if (MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer1Luck.getAliasTextPlayer1().getText()) &&
@@ -434,7 +415,6 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer1.add(PanelsPokemonRow2.getMarshadowPanel());
                 panelPokemonsPlayer1.add(new EnterPanelPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeMarshadowObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
             }
@@ -447,7 +427,6 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow2.getMarshadowPanel());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeMarshadowObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
 
             }
             else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
@@ -457,7 +436,6 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer2.add(PanelsPokemonRow2.getMarshadowPanel());
                 panelPokemonsPlayer2.add(new EnterPanelPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeMarshadowObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
             }
@@ -478,7 +456,6 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow3.getMiloticPanel());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeMiloticObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
 
             } else if (MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer1Luck.getAliasTextPlayer1().getText()) &&
@@ -487,7 +464,6 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer1.add(PanelsPokemonRow3.getMiloticPanel());
                 panelPokemonsPlayer1.add(new EnterPanelPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeMiloticObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
             }
@@ -500,7 +476,6 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow3.getMiloticPanel());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeMiloticObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
 
             }
             else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
@@ -510,7 +485,6 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer2.add(PanelsPokemonRow3.getMiloticPanel());
                 panelPokemonsPlayer2.add(new EnterPanelPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeMiloticObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
             }
@@ -532,7 +506,6 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow3.getSnorlaxPanel());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeSnorlaxObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
 
             } else if (MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer1Luck.getAliasTextPlayer1().getText()) &&
@@ -541,7 +514,6 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer1.add(PanelsPokemonRow3.getSnorlaxPanel());
                 panelPokemonsPlayer1.add(new EnterPanelPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeSnorlaxObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
             }
@@ -554,7 +526,6 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow3.getSnorlaxPanel());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeSnorlaxObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
 
             }
             else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
@@ -564,7 +535,6 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer2.add(PanelsPokemonRow3.getSnorlaxPanel());
                 panelPokemonsPlayer2.add(new EnterPanelPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeSnorlaxObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
             }
@@ -585,7 +555,6 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow3.getTinkatonPanel());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeTinkatonObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
 
             } else if (MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer1Luck.getAliasTextPlayer1().getText()) &&
@@ -594,7 +563,6 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer1.add(PanelsPokemonRow3.getTinkatonPanel());
                 panelPokemonsPlayer1.add(new EnterPanelPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeTinkatonObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
             }
@@ -607,7 +575,6 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow3.getTinkatonPanel());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeTinkatonObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
 
             }
             else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
@@ -617,7 +584,6 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer2.add(PanelsPokemonRow3.getTinkatonPanel());
                 panelPokemonsPlayer2.add(new EnterPanelPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeTinkatonObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
             }
@@ -638,7 +604,6 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow3.getTyranitarPanel());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeTyranitarObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
 
             } else if (MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer1Luck.getAliasTextPlayer1().getText()) &&
@@ -647,7 +612,6 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer1.add(PanelsPokemonRow3.getTyranitarPanel());
                 panelPokemonsPlayer1.add(new EnterPanelPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeTyranitarObject());
-                addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
             }
@@ -660,7 +624,6 @@ public class MethosInterfaceSelectionPokemon {
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow3.getTyranitarPanel());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeTyranitarObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
 
             }
             else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
@@ -670,7 +633,6 @@ public class MethosInterfaceSelectionPokemon {
                 panelPokemonsPlayer2.add(PanelsPokemonRow3.getTyranitarPanel());
                 panelPokemonsPlayer2.add(new EnterPanelPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeTyranitarObject());
-                addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
             }
