@@ -1,6 +1,7 @@
 package com.dam.proyectoprogramacion.pokemon;
 
 import java.lang.reflect.Array;
+import java.util.Arrays;
 
 /**
  * Clase abstracta con todos los atributos de los pokemon los cuales van a heredar cada uno
@@ -13,7 +14,7 @@ public abstract class PokemonProperties implements IPokemon{
     private Integer life;
     private String sex;
     private Integer speed;
-    private Array attacks;
+    private AttacksPokemons[] attacks;
     private Float size;
     private Float weight;
 
@@ -113,11 +114,11 @@ public abstract class PokemonProperties implements IPokemon{
      * @return attacks
      */
 
-    public Array getAttacks() {
+    public AttacksPokemons[] getAttacks() {
         return attacks;
     }
 
-    public void setAttacks(Array attacks) {
+    public void setAttacks(AttacksPokemons[] attacks) {
         this.attacks = attacks;
     }
 
@@ -134,6 +135,17 @@ public abstract class PokemonProperties implements IPokemon{
         this.weight = weight;
     }
 
-
-
+    @Override
+    public String toString() {
+        return
+                "nombre: " + name + "\n" +
+                "tipo: " + type + "\n" +
+                "nivel: " + level + "\n" +
+                "vida: " + life + "\n" +
+                "sexo: " + sex + "\n" +
+                "velocidad: " + speed +  "\n" +
+                "ataques: " + Arrays.toString(attacks) + "\n" +
+                "tamaño: " + size +  "\n" +
+                "peso: " + weight;
+    }
 }
