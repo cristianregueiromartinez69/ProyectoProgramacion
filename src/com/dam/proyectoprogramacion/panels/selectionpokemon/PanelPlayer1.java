@@ -3,6 +3,7 @@ package com.dam.proyectoprogramacion.panels.selectionpokemon;
 import com.dam.proyectoprogramacion.methodsandmain.MethodsInterfaceAccountCreate;
 import com.dam.proyectoprogramacion.methodsandmain.MethodsInterfaceLuck;
 import com.dam.proyectoprogramacion.methodsandmain.MethodsLogicalAccountCreate;
+import com.dam.proyectoprogramacion.methodsandmain.MethosInterfaceSelectionPokemon;
 
 import javax.swing.*;
 
@@ -27,6 +28,8 @@ public class PanelPlayer1 extends JPanel {
          * añadimos al panel central un metodo que devueleve un panel
          */
         this.add(makePanelPlayer1());
+
+
 
     }
 

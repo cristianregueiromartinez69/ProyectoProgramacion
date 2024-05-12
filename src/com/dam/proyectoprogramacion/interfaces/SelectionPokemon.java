@@ -1,12 +1,18 @@
 package com.dam.proyectoprogramacion.interfaces;
 
 import com.dam.proyectoprogramacion.background.BackgroundMainMenuPanel;
+import com.dam.proyectoprogramacion.buttons.ButtonInterfacePokemonSelect;
+import com.dam.proyectoprogramacion.methodsandmain.MethodsInterfaceLuck;
 import com.dam.proyectoprogramacion.methodsandmain.MethosInterfaceSelectionPokemon;
+import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
+import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
 import com.dam.proyectoprogramacion.panels.selectionpokemon.*;
 import com.dam.proyectoprogramacion.pokemonSongs.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -23,6 +29,7 @@ public class SelectionPokemon extends JFrame {
     private static JPanel globalPanelPlayer1;
     private static JPanel globalPanelSelectionPokemon;
     private static JPanel globalPanelPlayer2;
+    private JPanel contentPanel;
     private static JPanel goToBattlePanel;
 
     /**
@@ -52,20 +59,13 @@ public class SelectionPokemon extends JFrame {
         /**
          * añadimos el panel creado
          */
-        JPanel contentPanel = makeContentPanel();
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(0, 0, 30, 1000);
+         contentPanel = makeContentPanel();
 
         backgroundPanel.add(contentPanel, BorderLayout.CENTER);
 
 
         add(backgroundPanel);
 
-        /**
-         * establecemos dimensiones
-         */
-        gbc.gridy = 0;
-        gbc.gridx = 0;
         /**
          * iniciamos el panel del jugdor 1
          * hacemos que sea igual a la clase que crea el panel
@@ -77,12 +77,6 @@ public class SelectionPokemon extends JFrame {
          */
         contentPanel.add(globalPanelPlayer1, BorderLayout.WEST);
 
-        /**
-         * establecemos dimensiones
-         */
-        gbc.gridy = 1;
-        gbc.gridx = 0;
-        gbc.insets = new Insets(0, 100, 30, 0);
 
         /**
          * iniciamos el panel de los pokemons y añadimos todos los pokemons
@@ -94,13 +88,26 @@ public class SelectionPokemon extends JFrame {
          */
         contentPanel.add(globalPanelSelectionPokemon, BorderLayout.CENTER);
 
-        gbc.gridy = 2;
-        gbc.gridx = 0;
-        gbc.insets = new Insets(0, 1200, 30, 0);
 
+        /**
+         * iniciamos el panel del jugador 2 y lo ponemos a la derecha
+         */
         globalPanelPlayer2 = new JPanel();
         globalPanelPlayer2.add(new PanelPlayer2());
         contentPanel.add(globalPanelPlayer2, BorderLayout.EAST);
+
+
+        /**
+         * iniciamos el panel donde estará el boton de ir a la batalla y lo ponemos al sur
+         */
+        goToBattlePanel = new JPanel();
+        goToBattlePanel.add(new GoToBattlePanel());
+
+        contentPanel.add(showFinishPanel(), BorderLayout.SOUTH);
+
+
+
+
 
 
 
@@ -109,7 +116,7 @@ public class SelectionPokemon extends JFrame {
         /**
          * al JLabel de drampa le ponemos 3 acciones
          * La primera es que para cuando pases el cursor por encima, cambie de color el fondo
-         * La segunda que para cuando dejes de psar el cursor por encima, vuelva al coolor original
+         * La segunda que para cuando dejes de pasar el cursor por encima, vuelva al coolor original
          * La tercera que para cuando pulses el boton, selecciones el pokemon
          * Además, sonará el sonido del pokemon y elimina al pokemon del panel, para que no pueda ser escogido
          */
@@ -126,7 +133,17 @@ public class SelectionPokemon extends JFrame {
             public void mouseClicked(MouseEvent e) {
                DrampaSong.musicDrampa();
 
-               contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelDrampaPlayer1(), BorderLayout.WEST);
+                /**
+                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                 * en caso contrario se actualiza el del jugador 2
+                 */
+               if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                   contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelDrampaBothPlayers(), BorderLayout.WEST);
+               }
+               else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                   contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelDrampaBothPlayers(), BorderLayout.EAST);
+               }
+
 
             }
 
@@ -151,7 +168,17 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 EmpoleonSong.musicEmpoleon();
-                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelEmpoleonPlayer1(), BorderLayout.WEST);
+
+                /**
+                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                 * en caso contrario se actualiza el del jugador 2
+                 */
+                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelEmpoleonBothPlayers(), BorderLayout.WEST);
+                }
+                else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelEmpoleonBothPlayers(), BorderLayout.EAST);
+                }
             }
         });
 
@@ -174,7 +201,16 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 GarchompSong.musicGarchomp();
-                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelGarchompPlayer1(), BorderLayout.WEST);
+                /**
+                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                 * en caso contrario se actualiza el del jugador 2
+                 */
+                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelGarchompBothPlayers(), BorderLayout.WEST);
+                }
+                else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelGarchompBothPlayers(), BorderLayout.EAST);
+                }
             }
         });
 
@@ -197,7 +233,16 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 GengarSong.musicGengar();
-                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelGengarPlayer1(), BorderLayout.WEST);
+                /**
+                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                 * en caso contrario se actualiza el del jugador 2
+                 */
+                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelGengarBothPlayers(), BorderLayout.WEST);
+                }
+                else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelGengarBothPlayers(), BorderLayout.EAST);
+                }
             }
         });
 
@@ -220,7 +265,16 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                InfernapeSong.musicInfernape();
-                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelInfernapePlayer1(), BorderLayout.WEST);
+                /**
+                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                 * en caso contrario se actualiza el del jugador 2
+                 */
+                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelInfernapeBothPlayers(), BorderLayout.WEST);
+                }
+                else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelInfernapeBothPlayers(), BorderLayout.EAST);
+                }
             }
         });
 
@@ -243,7 +297,16 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 LucarioSong.musicLucario();
-                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelLucarioPlayer1(), BorderLayout.WEST);
+                /**
+                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                 * en caso contrario se actualiza el del jugador 2
+                 */
+                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelLucarioBothPlayers(), BorderLayout.WEST);
+                }
+                else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelLucarioBothPlayers(), BorderLayout.EAST);
+                }
             }
         });
 
@@ -266,7 +329,16 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 LuxraySong.musicLuxray();
-                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelLuxrayPlayer1(), BorderLayout.WEST);
+                /**
+                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                 * en caso contrario se actualiza el del jugador 2
+                 */
+                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelLuxrayBothPlayers(), BorderLayout.WEST);
+                }
+                else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelLuxrayBothPlayers(), BorderLayout.EAST);
+                }
             }
         });
 
@@ -289,7 +361,16 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 MarshadowSong.musicMarshadow();
-                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelMarshadowPlayer1(), BorderLayout.WEST);
+                /**
+                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                 * en caso contrario se actualiza el del jugador 2
+                 */
+                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelMarshadowBothPlayers(), BorderLayout.WEST);
+                }
+                else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelMarshadowBothPlayers(), BorderLayout.EAST);
+                }
             }
         });
 
@@ -312,7 +393,16 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 MiloticSong.musicMilotic();
-                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelMiloticPlayer1(), BorderLayout.WEST);
+                /**
+                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                 * en caso contrario se actualiza el del jugador 2
+                 */
+                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelMiloticBothPlayers(), BorderLayout.WEST);
+                }
+                else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelMiloticBothPlayers(), BorderLayout.EAST);
+                }
             }
         });
 
@@ -335,7 +425,16 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 SnorlaxSong.musicSnorlax();
-                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelSnorlaxPlayer1(), BorderLayout.WEST);
+                /**
+                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                 * en caso contrario se actualiza el del jugador 2
+                 */
+                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelSnorlaxBothPlayers(), BorderLayout.WEST);
+                }
+                else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelSnorlaxBothPlayers(), BorderLayout.EAST);
+                }
             }
         });
 
@@ -358,7 +457,16 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 TinkatonSong.musicTinkaton();
-                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelTinkatonPlayer1(), BorderLayout.WEST);
+                /**
+                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                 * en caso contrario se actualiza el del jugador 2
+                 */
+                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelTinkatonBothPlayers(), BorderLayout.WEST);
+                }
+                else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelTinkatonBothPlayers(), BorderLayout.EAST);
+                }
             }
         });
 
@@ -381,9 +489,34 @@ public class SelectionPokemon extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 TyranitarSong.musicTyranitar();
-                contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelTyranitarPlayer1(), BorderLayout.WEST);
+                /**
+                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                 * en caso contrario se actualiza el del jugador 2
+                 */
+                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelTyranitarBothPlayers(), BorderLayout.WEST);
+                }
+                else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelTyranitarBothPlayers(), BorderLayout.EAST);
+                }
             }
         });
+        /**
+         * action listener del boton de ir a batalla de la interfaz
+         * Solo funciona si el jugador 1 y 2 tienen 3 pokemons escogidos
+         */
+        ButtonInterfacePokemonSelect.getStartButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+               if(MethosInterfaceSelectionPokemon.getPokemonsPLayer1().size() == 3 &&
+               MethosInterfaceSelectionPokemon.getPokemonsPLayer2().size() == 3){
+                   new Battle();
+                   dispose();
+               }
+            }
+        });
+
+
 
 
     }
@@ -398,6 +531,20 @@ public class SelectionPokemon extends JFrame {
         contentPanel.setLayout(new BorderLayout());
         contentPanel.setPreferredSize(new Dimension(1000,1000));
         return contentPanel;
+    }
+
+    /**
+     * metodo para crear el panel con el boton de batalla de la interfaz
+     * @return el panel creado
+     */
+    private JPanel showFinishPanel(){
+        JPanel auxPanel = new JPanel();
+
+            auxPanel = goToBattlePanel;
+
+
+
+        return auxPanel;
     }
 
     /**
