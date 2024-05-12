@@ -29,6 +29,7 @@ public class SelectionPokemon extends JFrame {
     private static JPanel globalPanelPlayer1;
     private static JPanel globalPanelSelectionPokemon;
     private static JPanel globalPanelPlayer2;
+    private JPanel contentPanel;
     private JPanel tickPanelPlayer1;
     private JPanel tickPanelPlayer2;
     private static JPanel goToBattlePanel;
@@ -60,7 +61,7 @@ public class SelectionPokemon extends JFrame {
         /**
          * añadimos el panel creado
          */
-        JPanel contentPanel = makeContentPanel();
+         contentPanel = makeContentPanel();
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(0, 0, 30, 1000);
 
@@ -115,6 +116,11 @@ public class SelectionPokemon extends JFrame {
 
         tickPanelPlayer2 = new JPanel();
         tickPanelPlayer2 = MethosInterfaceSelectionPokemon.makeTickReadyButtonPlayer2();
+
+        goToBattlePanel = new JPanel();
+        goToBattlePanel.add(new GoToBattlePanel());
+
+        contentPanel.add(showFinishPanel(), BorderLayout.SOUTH);
 
 
 
@@ -464,6 +470,12 @@ public class SelectionPokemon extends JFrame {
                 }
             }
         });
+        ButtonInterfacePokemonSelect.getStartButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("hola");
+            }
+        });
 
 
 
@@ -480,6 +492,13 @@ public class SelectionPokemon extends JFrame {
         contentPanel.setLayout(new BorderLayout());
         contentPanel.setPreferredSize(new Dimension(1000,1000));
         return contentPanel;
+    }
+    private JPanel showFinishPanel(){
+        JPanel auxPanel = new JPanel();
+
+            auxPanel = goToBattlePanel;
+
+        return auxPanel;
     }
 
     /**
