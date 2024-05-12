@@ -26,6 +26,8 @@ public class SelectionPokemon extends JFrame {
     private static JPanel globalPanelPlayer1;
     private static JPanel globalPanelSelectionPokemon;
     private static JPanel globalPanelPlayer2;
+    private JPanel tickPanelPlayer1;
+    private JPanel tickPanelPlayer2;
     private static JPanel goToBattlePanel;
 
     /**
@@ -104,6 +106,12 @@ public class SelectionPokemon extends JFrame {
         globalPanelPlayer2 = new JPanel();
         globalPanelPlayer2.add(new PanelPlayer2());
         contentPanel.add(globalPanelPlayer2, BorderLayout.EAST);
+
+        tickPanelPlayer1 = new JPanel();
+        tickPanelPlayer1 = MethosInterfaceSelectionPokemon.makeTickReadyButtonPlayer1();
+
+        tickPanelPlayer2 = new JPanel();
+        tickPanelPlayer2 = MethosInterfaceSelectionPokemon.makeTickReadyButtonPlayer2();
 
 
 

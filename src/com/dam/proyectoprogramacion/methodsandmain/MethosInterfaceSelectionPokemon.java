@@ -640,6 +640,24 @@ public class MethosInterfaceSelectionPokemon {
         }
     }
 
+    public static JPanel makeTickReadyButtonPlayer1(){
+        JPanel imagePanel = new JPanel();
+        ImageIcon imageIcon = new ImageIcon("imagenes/tick.png");
+        JLabel imageLabel = new JLabel();
+        imageLabel.setIcon(imageIcon);
+        imagePanel.add(imageLabel);
+        return imagePanel;
+    }
+
+    public static JPanel makeTickReadyButtonPlayer2(){
+        JPanel imagePanel = new JPanel();
+        ImageIcon imageIcon = new ImageIcon("imagenes/tick.png");
+        JLabel imageLabel = new JLabel();
+        imageLabel.setIcon(imageIcon);
+        imagePanel.add(imageLabel);
+        return imagePanel;
+    }
+
     /**
      * metodo que reordena el panel del jugador 1 añadiendo 2 cosas:
      * 1. la imagen y el alias del jugador 1
