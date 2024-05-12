@@ -573,6 +573,7 @@ public class Luck extends JFrame {
      * @param e el objeto de tipo actionevent
      */
     public void winnerFaceOrTail(ActionEvent e){
+        //estas 2 lineas se tienen que quitar, las tengo puestas porque el ordenador de mi casa es una PUTA MIERDA
         MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
         new SelectionPokemon();
         /**
