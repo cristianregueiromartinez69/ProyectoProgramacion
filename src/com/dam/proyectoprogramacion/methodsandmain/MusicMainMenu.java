@@ -1,4 +1,4 @@
-package com.dam.proyectoprogramacion.methodsandmain;
+package com.dam.proyectoprogramacion.pokemonSongs;
 
 import javax.sound.sampled.*;
 import java.io.File;
@@ -35,7 +35,7 @@ public class MusicMainMenu {
              * / Reproducir el audio en bucle infinito
              */
             clip.start();
-            clip.loop(Clip.LOOP_CONTINUOUSLY);
+
 
 
             /**

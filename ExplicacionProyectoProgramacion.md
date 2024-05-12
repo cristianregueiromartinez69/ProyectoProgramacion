@@ -62,3 +62,63 @@ Chema:
 15. Realización de la super clase pokemon de la cual van a haredar las clases anteriores
 16. Criticar la imagen de fondo de la interfaz creaar cuenta XD
 
+***Semana 2 del proyecto***
+Esta semana nos toca seguir haciendo interfaces con su funcionalidad e implementar la base de datos
+
+Cristian:
+1. Realizacion de la interfaz cuenta
+2. Realizacion de los metodos de la interfaz suerte
+3. Realizacion de más botones para la interfaz suerte
+4. Realización de la interfaz de selección de pokemons
+5. Realizción de los metodos de la interfaz de selección de pokemons
+6. Realización de la lógica de la interfaz de selección de pokemons
+
+***Explicacion de el funcionamiento de la interfaz de la suerte***
+La interfaz funciona de la siguiente manera:
+1. para poder avanzar, tienes que tener una cuenta creada, si no no puedes jugar
+2. Si creaste la cuenta, deberías poder introducir correctamente el usuario
+3. Al introducirlo, tienes que seleccionar si quieres cara o cruz
+4. El jugador 2 hará lo mismo
+5. si ya has seleccionado cara y estás conforme con la eleccion, le das a enter
+6. el jugador 2 hará lo mismo
+7. El ganador del sorteo se decide de la siguiente manera:
+si el jugador escoge cara, se le asigna el numero 1
+si el jugador 1 escoge cruz, se le asigna el nunero 2
+se genera un numero aleatorio entre el 1 y 2 
+el numero escogido por el jugador 1 y 2 debe de ser igual al numero generado, de ahí sale el ganador
+8. Una vez se conoce al ganador, sale una imagen del ganador del sorteo en el panel de winner
+9. sale también un boton para ir a la seleccion de pokemons
+
+***Problemas encontrados y a resolver en el futuro***
+1. los botones de cara o cruz no consigo que salgan 2 para cada jugador
+2. el posicionamiento de los botones y paneles no es el que me gustaría
+3. Falta refactorizar bastante esa clase
+4. Lo bueno es que funciona perfectamente y lo unico que nos importa de esa interfaz es saber el ganador del sorteo, el cual funciona perfectamente
+
+***Explicación del funcionamiento de la interfaz de selección de pokemons***
+La interfaz funciona de la siguiente manera:
+1. UNa vez se sabe el ganador del sorteo de cara o cruz, pasamos aesta interfaz
+2. Nos encontramos con 12 pokemons a escoger
+3. El ganador del sorteo tiene que escoger primero
+4. Escoge a sus 3 pokemons, se eliminan del panel de los pokemons y se añaden a los del jugador
+5. Una vez escogió a los 3 pokemons, no podrá escoger a ninguno más
+6. Le aparecerá un tick verde en señal de que todo ha ido bien
+7. Si el ganador del sorteo ya escogió a todos sus pokemons, le toca al otro jugador
+8. El otro jugador tendrá el mismo criterio, tiene que escoger a 3 pokemons
+9. Cuando escoja a todos, no podrá escoger a ninguno más
+10. Si el jugador 1 y 2 ya tienen a sus 3 pokemons escogidos, se habilita el boton de ir a la batalla
+11. Si presionamos el boton, salimos de esta interfaz y nos vamos a la batalla pokemon
+
+**Problemas encontrados y que se podráin resolver en el futuro**
+1. Los metodos funcionan.
+2. Las listas se actualizan y el hashmap funciona que es lo importante
+3. Me gustaría que apareciese un boton cuando ya escogiste  tus 3 pokemons y que cuando le deas al boton, aparezca un tick verde
+4. Lo intenté pero me daba null todo el tiempo
+5. Mejor posicionamiento de paneles y que hubiera imagen de fondo, pero los paneles son muy grandes
+6. Por lo demás perfecto
+
+Chema:
+1. Implementación de la base de datos en el proyecto
+2. Creación de las tablas de la base de datos de los pokemons mediante conexión
+3. refactor del codigo de la interfaz de la suerte
+
