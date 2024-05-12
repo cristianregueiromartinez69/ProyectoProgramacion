@@ -28,7 +28,13 @@ public class MethosInterfaceSelectionPokemon {
     private static JPanel panelPokemonsPlayer2 = makeContentPokemonPanel();
 
 
+    /**
+     * atributo privado de tipo Hashmap para almacenar el alias del jugador y sus pokemons
+     */
     private static HashMap<String, ArrayList> playersBattle = new HashMap<>();
+    /**
+     * atributo privado de tipo ArrayList para almacenar los pokemons
+     */
     private static ArrayList <Object> pokemonsPLayer1 = new ArrayList<>();
     private static ArrayList <Object> pokemonsPLayer2 = new ArrayList<>();
 
@@ -36,57 +42,118 @@ public class MethosInterfaceSelectionPokemon {
 
 
     /**
-     * metodo para añadir a drampa al panel dle jugador 1
+     * metodo para añadir a drampa al panel del jugador 1
      * @return el panel creado
      */
     public static JPanel updatePanelDrampaBothPlayers(){
 
 
+        /**
+         * si el ganador del sorteo coincide con el alias del jugador 1 se mete en el codigo
+         */
         if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())) {
 
+            /**
+             * si el ganador del sorteo coincide con el alias del jugador 1
+             * y el tamaño de la lista de los objetos de pokemons es menor que 2
+             *  se mete en el codigo
+             */
             if (MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer1Luck.getAliasTextPlayer1().getText()) &&
                     checkSizeListPokemonsPLayer1()) {
+                /**
+                 * llama a un metodo que limpia el panel del jugador 1
+                 * añade el panel de drampa
+                 * añade el objeto drampa a la lista
+                 */
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getDrampaPanel());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeDrampaObject());
 
-
+                /**
+                 * si el ganador del sorteo coincide con el alias del jugador 1
+                 * y el tamaño de la lista de los objetos de pokemons es igual que 2
+                 *  se mete en el codigo
+                 */
             } else if (MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer1Luck.getAliasTextPlayer1().getText()) &&
                     pokemonsPLayer1.size() == 2) {
+                /**
+                 * llama a un metodo que limpia el panel del jugador 1
+                 * añade el panel de drampa
+                 * añade al final un tick verde en señal de que ha introducido correctamnete los pokemons
+                 * añade el objeto drampa a la lista
+                 */
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getDrampaPanel());
                 panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeDrampaObject());
+                /**
+                 * añadimos la informacion al hashmap del jugador 1
+                 */
                 putPlayersAndPokemons(MethodsInterfaceLuck.getAliasWinnerLuck(), pokemonsPLayer1);
+                /**
+                 * cambiamos el valor del ganador del sorteo para que ahora le toque al jugador 2
+                 */
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
 
             }
+            /**
+             * retornamos el nuevo panel con la informacion actualizada
+             */
             return addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
         }
         else{
+            /**
+             * si el ganador del sorteo coincide con el alias del jugador 2
+             * y el tamaño de la lista de los objetos de pokemons es menor que 2
+             *  se mete en el codigo
+             */
                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer2Luck.getAliasTextPlayer2().getText()) &&
                     checkSizeListPokemonsPLayer2()){
+                   /**
+                    * llama a un metodo que limpia el panel del jugador 2
+                    * añade el panel de drampa
+                    * añade el objeto drampa a la lista
+                    */
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow1.getDrampaPanel());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeDrampaObject());
 
 
-            }
+            } /**
+                * si el ganador del sorteo coincide con el alias del jugador 2
+                * y el tamaño de la lista de los objetos de pokemons es igual que 2
+                *  se mete en el codigo
+                */
             else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer2Luck.getAliasTextPlayer2().getText()) &&
                     pokemonsPLayer2.size() == 2){
+                   /**
+                    * llama a un metodo que limpia el panel del jugador 2
+                    * añade el panel de drampa
+                    * añade al final un tick verde en señal de que ha introducido correctamnete los pokemons
+                    * añade el objeto drampa a la lista
+                    */
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow1.getDrampaPanel());
                    panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                    pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeDrampaObject());
+                   /**
+                    * añadimos la informacion al hashmap del jugador 2
+                    */
                    putPlayersAndPokemons(MethodsInterfaceLuck.getAliasWinnerLuck(), pokemonsPLayer2);
+                   /**
+                    * cambiamos el valor del ganador del sorteo para que ahora le toque al jugador 2
+                    */
                    MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
                }
+            /**
+             * retornamos el nuevo panel con la informacion actualizada
+             */
             return addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
         }
 
@@ -99,50 +166,113 @@ public class MethosInterfaceSelectionPokemon {
      */
     public static JPanel updatePanelEmpoleonBothPlayers(){
 
+        /**
+         * si el ganador del sorteo coincide con el alias del jugador 1 se mete en el codigo
+         */
         if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())) {
 
+            /**
+             * si el ganador del sorteo coincide con el alias del jugador 1
+             * y el tamaño de la lista de los objetos de pokemons es menor que 2
+             *  se mete en el codigo
+             */
             if (MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer1Luck.getAliasTextPlayer1().getText()) &&
                     checkSizeListPokemonsPLayer1()) {
+                /**
+                 * llama a un metodo que limpia el panel del jugador 1
+                 * añade el panel de empoleon
+                 * añade el objeto empoleon a la lista
+                 */
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getEmpoleonPanel());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeEmpoleonObject());
 
 
+                /**
+                 * si el ganador del sorteo coincide con el alias del jugador 1
+                 * y el tamaño de la lista de los objetos de pokemons es igual que 2
+                 *  se mete en el codigo
+                 */
             } else if (MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer1Luck.getAliasTextPlayer1().getText()) &&
                     pokemonsPLayer1.size() == 2) {
+                /**
+                 * llama a un metodo que limpia el panel del jugador 1
+                 * añade el panel de empoleon
+                 * añade al final un tick verde en señal de que ha introducido correctamnete los pokemons
+                 * añade el objeto empoleon a la lista
+                 */
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getEmpoleonPanel());
                 panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeEmpoleonObject());
+                /**
+                 * añadimos la informacion al hashmap del jugador 1
+                 */
                 putPlayersAndPokemons(MethodsInterfaceLuck.getAliasWinnerLuck(), pokemonsPLayer1);
+                /**
+                 * cambiamos el valor del ganador del sorteo para que ahora le toque al jugador 2
+                 */
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
             }
+            /**
+             * retornamos el nuevo panel con la informacion actualizada
+             */
             return addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
         }
         else{
+            /**
+             * si el ganador del sorteo coincide con el alias del jugador 2
+             * y el tamaño de la lista de los objetos de pokemons es menor que 2
+             *  se mete en el codigo
+             */
             if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer2Luck.getAliasTextPlayer2().getText()) &&
                     checkSizeListPokemonsPLayer2()){
+                /**
+                 * llama a un metodo que limpia el panel del jugador 2
+                 * añade el panel de empoleon
+                 * añade el objeto empoleon a la lista
+                 */
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow1.getEmpoleonPanel());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeEmpoleonObject());
 
 
             }
+            /**
+             * si el ganador del sorteo coincide con el alias del jugador 2
+             * y el tamaño de la lista de los objetos de pokemons es igual que 2
+             *  se mete en el codigo
+             */
             else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer2Luck.getAliasTextPlayer2().getText()) &&
                     pokemonsPLayer2.size() == 2){
+                /**
+                 * llama a un metodo que limpia el panel del jugador 2
+                 * añade el panel de empoleon
+                 * añade al final un tick verde en señal de que ha introducido correctamnete los pokemons
+                 * añade el objeto empoleon a la lista
+                 */
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow1.getEmpoleonPanel());
                 panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeEmpoleonObject());
+                /**
+                 * añadimos la informacion al hashmap del jugador 1
+                 */
                 putPlayersAndPokemons(MethodsInterfaceLuck.getAliasWinnerLuck(), pokemonsPLayer2);
+                /**
+                 * cambiamos el valor del ganador del sorteo para que ahora le toque al jugador 1
+                 */
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
             }
+            /**
+             * retornamos el nuevo panel con la informacion actualizada
+             */
             return addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
         }
 
