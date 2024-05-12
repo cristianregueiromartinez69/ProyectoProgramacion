@@ -473,7 +473,11 @@ public class SelectionPokemon extends JFrame {
         ButtonInterfacePokemonSelect.getStartButton().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("hola");
+               if(MethosInterfaceSelectionPokemon.getPokemonsPLayer1().size() == 3 &&
+               MethosInterfaceSelectionPokemon.getPokemonsPLayer2().size() == 3){
+                   new Battle();
+                   dispose();
+               }
             }
         });
 
@@ -497,6 +501,8 @@ public class SelectionPokemon extends JFrame {
         JPanel auxPanel = new JPanel();
 
             auxPanel = goToBattlePanel;
+
+
 
         return auxPanel;
     }
