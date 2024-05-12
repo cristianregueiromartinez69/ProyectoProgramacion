@@ -283,50 +283,111 @@ public class MethosInterfaceSelectionPokemon {
      */
     public static JPanel updatePanelGarchompBothPlayers(){
 
+        /**
+         * si el ganador del sorteo coincide con el alias del jugador 1 se mete en el codigo
+         */
         if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())) {
 
+            /**
+             * si el ganador del sorteo coincide con el alias del jugador 1
+             * y el tamaño de la lista de los objetos de pokemons es menor que 2
+             *  se mete en el codigo
+             */
             if (MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer1Luck.getAliasTextPlayer1().getText()) &&
                     checkSizeListPokemonsPLayer1()) {
+                /**
+                 * llama a un metodo que limpia el panel del jugador 1
+                 * añade el panel de garchomp
+                 * añade el objeto garchomp a la lista
+                 */
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getGarchompPanel());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeGarchompObject());
 
 
+                /**
+                 * si el ganador del sorteo coincide con el alias del jugador 1
+                 * y el tamaño de la lista de los objetos de pokemons es igual que 2
+                 *  se mete en el codigo
+                 */
             } else if (MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer1Luck.getAliasTextPlayer1().getText()) &&
                     pokemonsPLayer1.size() == 2) {
+                /**
+                 * llama a un metodo que limpia el panel del jugador 1
+                 * añade el panel de garchomp
+                 * añade al final un tick verde en señal de que ha introducido correctamnete los pokemons
+                 * añade el objeto garchomp a la lista
+                 */
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getGarchompPanel());
                 panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeGarchompObject());
+                /**
+                 * añadimos la informacion al hashmap del jugador 1
+                 */
                 putPlayersAndPokemons(MethodsInterfaceLuck.getAliasWinnerLuck(), pokemonsPLayer1);
+                /**
+                 * cambiamos el valor del ganador del sorteo para que ahora le toque al jugador 2
+                 */
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
             }
+            /**
+             * retornamos el panel con la información actualizada
+             */
             return addSelectedPokemonPanelPlayer1(panelPokemonsPlayer1);
         }
         else{
+            /**
+             * si el ganador del sorteo coincide con el alias del jugador 2
+             * y el tamaño de la lista de los objetos de pokemons es menor que 2
+             *  se mete en el codigo
+             */
             if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer2Luck.getAliasTextPlayer2().getText()) &&
                     checkSizeListPokemonsPLayer2()){
+                /**
+                 * llama a un metodo que limpia el panel del jugador 2
+                 * añade el panel de garchomp
+                 * añade el objeto garchomp a la lista
+                 */
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow1.getGarchompPanel());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeGarchompObject());
-
-
+                /**
+                 * si el ganador del sorteo coincide con el alias del jugador 2
+                 * y el tamaño de la lista de los objetos de pokemons es igual que 2
+                 *  se mete en el codigo
+                 */
             }
             else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase
                     (InformationPanelPlayer2Luck.getAliasTextPlayer2().getText()) &&
                     pokemonsPLayer2.size() == 2){
+                /**
+                 * llama a un metodo que limpia el panel del jugador 2
+                 * añade el panel de garchomp
+                 * añade al final un tick verde en señal de que ha introducido correctamnete los pokemons
+                 * añade el objeto garchomp a la lista
+                 */
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow1.getGarchompPanel());
                 panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeGarchompObject());
+                /**
+                 * añadimos la informacion al hashmap del jugador 2
+                 */
                 putPlayersAndPokemons(MethodsInterfaceLuck.getAliasWinnerLuck(), pokemonsPLayer2);
+                /**
+                 * cambiamos el valor del ganador del sorteo para que ahora le toque al jugador 1
+                 */
                 MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
 
             }
+            /**
+             * retornamos el panel con la información actualizada
+             */
             return addSelectedPokemonPanelPlayer2(panelPokemonsPlayer2);
         }
 
