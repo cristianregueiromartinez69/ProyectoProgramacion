@@ -658,6 +658,22 @@ public class MethosInterfaceSelectionPokemon {
         return imagePanel;
     }
 
+    public static JPanel addEnterButonPlayer1Panel(JPanel enterPanel){
+        JPanel auxPanel = new JPanel();
+        if(pokemonsPLayer1.size() == 3){
+            auxPanel.add(enterPanel);
+        }
+        return auxPanel;
+    }
+
+    public static JPanel addEnterButonPlayer2Panel(JPanel enterPanel){
+        JPanel auxPanel = new JPanel();
+        if(pokemonsPLayer2.size() == 3){
+            auxPanel.add(enterPanel);
+        }
+        return auxPanel;
+    }
+
     /**
      * metodo que reordena el panel del jugador 1 añadiendo 2 cosas:
      * 1. la imagen y el alias del jugador 1
@@ -730,6 +746,8 @@ public class MethosInterfaceSelectionPokemon {
         panelGroupPokemons.setLayout(new BoxLayout(panelGroupPokemons, BoxLayout.Y_AXIS));
         return panelGroupPokemons;
     }
+
+
 
 
 }

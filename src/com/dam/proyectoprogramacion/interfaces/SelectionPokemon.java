@@ -1,6 +1,7 @@
 package com.dam.proyectoprogramacion.interfaces;
 
 import com.dam.proyectoprogramacion.background.BackgroundMainMenuPanel;
+import com.dam.proyectoprogramacion.buttons.ButtonInterfacePokemonSelect;
 import com.dam.proyectoprogramacion.methodsandmain.MethodsInterfaceLuck;
 import com.dam.proyectoprogramacion.methodsandmain.MethosInterfaceSelectionPokemon;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
@@ -10,6 +11,8 @@ import com.dam.proyectoprogramacion.pokemonSongs.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -112,6 +115,10 @@ public class SelectionPokemon extends JFrame {
 
         tickPanelPlayer2 = new JPanel();
         tickPanelPlayer2 = MethosInterfaceSelectionPokemon.makeTickReadyButtonPlayer2();
+
+
+
+
 
 
 
@@ -455,6 +462,21 @@ public class SelectionPokemon extends JFrame {
                 else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
                     contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelTyranitarBothPlayers(), BorderLayout.EAST);
                 }
+            }
+        });
+
+        ButtonInterfacePokemonSelect.getReadyPlayer1Button().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                globalPanelPlayer1.add(tickPanelPlayer1);
+
+            }
+        });
+        ButtonInterfacePokemonSelect.getReadyPlayer2Button().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                globalPanelPlayer2.add(tickPanelPlayer2);
+
             }
         });
 

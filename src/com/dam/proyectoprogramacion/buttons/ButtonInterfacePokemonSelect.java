@@ -273,6 +273,14 @@ public class ButtonInterfacePokemonSelect extends JPanel {
         return backToMenuButton;
     }
 
+    public JButton getStartButton() {
+        return startButton;
+    }
+
+    public void setStartButton(JButton startButton) {
+        this.startButton = startButton;
+    }
+
     public static JButton getReadyPlayer1Button() {
         return readyPlayer1Button;
     }
@@ -287,5 +295,13 @@ public class ButtonInterfacePokemonSelect extends JPanel {
 
     public static void setReadyPlayer2Button(JButton readyPlayer2Button) {
         ButtonInterfacePokemonSelect.readyPlayer2Button = readyPlayer2Button;
+    }
+
+    public JButton getBackToMenuButton() {
+        return backToMenuButton;
+    }
+
+    public void setBackToMenuButton(JButton backToMenuButton) {
+        this.backToMenuButton = backToMenuButton;
     }
 }
