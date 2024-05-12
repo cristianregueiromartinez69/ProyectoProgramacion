@@ -31,6 +31,7 @@ public class PanelPlayer1 extends JPanel {
         this.add(MethosInterfaceSelectionPokemon.addEnterButonPlayer1Panel(new EnterPanelPlayer1()));
 
 
+
     }
 
     /**

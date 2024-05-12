@@ -465,18 +465,20 @@ public class SelectionPokemon extends JFrame {
             }
         });
 
-        ButtonInterfacePokemonSelect.getReadyPlayer1Button().addActionListener(new ActionListener() {
+        EnterPanelPlayer1.getEnterButtonPlayer1().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                globalPanelPlayer1.add(tickPanelPlayer1);
+
+
+                globalPanelPlayer1.add(MethosInterfaceSelectionPokemon.makeTickReadyButtonPlayer1());
 
             }
         });
-        ButtonInterfacePokemonSelect.getReadyPlayer2Button().addActionListener(new ActionListener() {
+        EnterPanelPlayer2.getEnterButtonPlayer2().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                globalPanelPlayer2.add(tickPanelPlayer2);
 
+                globalPanelPlayer2.add(MethosInterfaceSelectionPokemon.makeTickReadyButtonPlayer2());
             }
         });
 
