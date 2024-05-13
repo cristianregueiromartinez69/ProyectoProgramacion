@@ -14,6 +14,7 @@ public class AttacksPokemonPlayer1 extends JPanel {
      */
     private JPanel row1Of2PokemonAttacksInBattle;
     private JPanel row2Of2PokemonAttacksInBattle;
+    private JPanel backToBattlePanel;
 
     public AttacksPokemonPlayer1(){
         /**
@@ -33,8 +34,13 @@ public class AttacksPokemonPlayer1 extends JPanel {
       row2Of2PokemonAttacksInBattle.setLayout(new BoxLayout(row2Of2PokemonAttacksInBattle, BoxLayout.X_AXIS));
       row2Of2PokemonAttacksInBattle.add(new ThreeAndFourAttacksPokemonInBattlePLayer1());
 
+      backToBattlePanel = new JPanel();
+      backToBattlePanel.setLayout(new BoxLayout(backToBattlePanel, BoxLayout.X_AXIS));
+      backToBattlePanel.add(new BackAttacksPokemonPlayer1());
+
       this.add(row1Of2PokemonAttacksInBattle);
       this.add(row2Of2PokemonAttacksInBattle);
+      this.add(backToBattlePanel);
 
 
 
