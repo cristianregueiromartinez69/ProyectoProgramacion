@@ -2,12 +2,9 @@ package com.dam.proyectoprogramacion.interfaces;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
-import com.dam.proyectoprogramacion.panels.battle.battlePlayer1.AliasAndLogoPlayer1;
-import com.dam.proyectoprogramacion.panels.battle.battlePlayer1.AttacksAndChangesPokemonPlayer1;
+import com.dam.proyectoprogramacion.panels.battle.battleplayer1.AliasAndLogoPlayer1;
+import com.dam.proyectoprogramacion.panels.battle.battleplayer1.AttacksAndChangesPokemonPlayer1;
 
 /**
  * interfaz del combate pokemon

@@ -1,4 +1,4 @@
-package com.dam.proyectoprogramacion.panels.battle.battlePlayer1;
+package com.dam.proyectoprogramacion.panels.battle.battleplayer1;
 import com.dam.proyectoprogramacion.methodsandmain.MethodsInterfaceLuck;
 
 
