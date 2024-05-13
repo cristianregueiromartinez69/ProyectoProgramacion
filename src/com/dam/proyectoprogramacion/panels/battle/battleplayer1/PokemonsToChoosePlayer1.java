@@ -10,6 +10,7 @@ public class PokemonsToChoosePlayer1 extends JPanel {
     private JPanel pokemon1;
     private JPanel pokemon2;
     private JPanel pokemon3;
+    private JPanel backToBattlePanel;
 
     public PokemonsToChoosePlayer1(){
         setVisible(true);
@@ -48,12 +49,15 @@ public class PokemonsToChoosePlayer1 extends JPanel {
 
         pokemon3.add(pokemon3Button);
 
-
+        backToBattlePanel = new JPanel();
+        backToBattlePanel.setLayout(new BoxLayout(backToBattlePanel, BoxLayout.X_AXIS));
+        backToBattlePanel.add(new BackChangePokemonPlayer1());
 
 
         this.add(pokemon1);
         this.add(pokemon2);
         this.add(pokemon3);
+        this.add(backToBattlePanel);
     }
 
 

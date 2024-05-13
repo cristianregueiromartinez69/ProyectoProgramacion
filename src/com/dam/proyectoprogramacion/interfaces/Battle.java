@@ -124,13 +124,19 @@ public class Battle extends JFrame {
                /**
                 * hace visible un panel y oculta otro
                 */
-          clearGlobalPanelPlayer1WhenPressBack();
+          clearGlobalPanelPlayer1WhenPressBackinAttack();
            }
        });
        ButtonInterfaceCombat.getChangePokemonButtonPlayer1().addActionListener(new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent e) {
                clearGlobalPanelPlayer1WhenPressChange();
+           }
+       });
+       ButtonInterfaceChangePokemon.getBack().addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               clearGlobalPanelPlayer1WhenPressBackInChangePokemon();
            }
        });
 
@@ -166,7 +172,7 @@ public class Battle extends JFrame {
     /**
      * metodo que hace visible el panel de ataque y cambio y oculta el de ataques
      */
-    private void clearGlobalPanelPlayer1WhenPressBack(){
+    private void clearGlobalPanelPlayer1WhenPressBackinAttack(){
        attacksPanelPlayer1.setVisible(false);
        attacksChangesPlayer1.setVisible(true);
     }
@@ -177,7 +183,10 @@ public class Battle extends JFrame {
         attacksChangesPlayer1.setVisible(false);
     }
 
-
+    private void clearGlobalPanelPlayer1WhenPressBackInChangePokemon(){
+        changesPokemonsPLayer1.setVisible(false);
+        attacksChangesPlayer1.setVisible(true);
+    }
 
 
 
