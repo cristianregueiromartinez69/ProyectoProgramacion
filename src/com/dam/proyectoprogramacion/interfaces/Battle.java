@@ -5,6 +5,8 @@ import java.awt.*;
 
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.AliasAndLogoPlayer1;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.AttacksAndChangesPokemonPlayer1;
+import com.dam.proyectoprogramacion.panels.battle.battleplayer2.AliasAndLogoPlayer2;
+import com.dam.proyectoprogramacion.panels.battle.battleplayer2.AttacksAndChangesPokemonPlayer2;
 
 /**
  * interfaz del combate pokemon
@@ -53,6 +55,13 @@ public class Battle extends JFrame {
         globalPanelPLayer1.add(new AliasAndLogoPlayer1());
         globalPanelPLayer1.add(new AttacksAndChangesPokemonPlayer1());
         contentPanel.add(globalPanelPLayer1, BorderLayout.WEST);
+
+        globalPanelPLayer2 = new JPanel();
+        globalPanelPLayer2.setLayout(new BoxLayout(globalPanelPLayer2, BoxLayout.Y_AXIS));
+
+        globalPanelPLayer2.add(new AliasAndLogoPlayer2());
+        globalPanelPLayer2.add(new AttacksAndChangesPokemonPlayer2());
+        contentPanel.add(globalPanelPLayer2, BorderLayout.EAST);
 
 
 
