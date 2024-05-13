@@ -26,6 +26,8 @@ public class Battle extends JFrame {
      */
     private JPanel contentPanel;
     private  JPanel globalPanelPLayer1;
+    private JPanel aliasLogoPlayer1;
+    private JPanel attacksChangesPlayer1;
     private  JPanel attacksPanelPlayer1;
     private  JPanel battlePanel;
     private  JPanel globalPanelPLayer2;
@@ -59,12 +61,12 @@ public class Battle extends JFrame {
         /**
          * iniciamos un panel que será el alias y el logo del jugador 1 y lo hacemos igual a un panel de otra clase
          */
-        JPanel aliasLogoPlayer1 = new AliasAndLogoPlayer1();
+         aliasLogoPlayer1 = new AliasAndLogoPlayer1();
         globalPanelPLayer1.add(aliasLogoPlayer1);
         /**
          * iniciamos un panel que serán los botones de cambio y ataque del jugador 1 y lo hacemos igual a un panel de otra clase
          */
-        JPanel attacksChangesPlayer1 = new AttacksAndChangesPokemonPlayer1();
+        attacksChangesPlayer1 = new AttacksAndChangesPokemonPlayer1();
         globalPanelPLayer1.add(attacksChangesPlayer1);
         contentPanel.add(globalPanelPLayer1, BorderLayout.WEST);
 
@@ -77,6 +79,11 @@ public class Battle extends JFrame {
          * lo hacemos igual a un panel con los ataques del pokemon
          */
         attacksPanelPlayer1.add(new AttacksPokemonPlayer1());
+        attacksPanelPlayer1.setVisible(false);
+        globalPanelPLayer1.add(attacksPanelPlayer1);
+
+
+
 
         /**
          * iniciamos el panel del jugador 2 y le damos un layout
@@ -95,10 +102,13 @@ public class Battle extends JFrame {
        ButtonInterfaceCombat.getAttackButtonPlayer1().addActionListener(new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent e) {
-               /**
-                * metodo que limpia el panel de ataque y cambio y muestra los ataques
-                */
-               clearGlobalPanelPlayer1(attacksChangesPlayer1);
+             clearGlobalPanelPlayer1WhenPressAttack();
+           }
+       });
+       ButtonInterfaceAttacks.getBackPlayer1().addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {
+          clearGlobalPanelPlayer1WhenPressBack();
            }
        });
 
@@ -120,21 +130,20 @@ public class Battle extends JFrame {
         return contentPanel;
     }
 
-    /**
-     * metodo que limpia el panel de ataque y cambio dle jugador 1
-     * @param auxPanelPlayer1 el panel de ataque y cambio del jugador 1
-     * @return el nuevo panel
-     */
-    private  JPanel clearGlobalPanelPlayer1(JPanel auxPanelPlayer1){
 
-        JPanel attacksPanel = new JPanel();
-        auxPanelPlayer1.removeAll();
-        auxPanelPlayer1.revalidate();
-        auxPanelPlayer1.repaint();
-        attacksPanel.add(attacksPanelPlayer1);
-        auxPanelPlayer1.add(attacksPanel);
-        return attacksPanel;
+    private  void clearGlobalPanelPlayer1WhenPressAttack(){
+
+        attacksPanelPlayer1.setVisible(true);
+        attacksChangesPlayer1.setVisible(false);
     }
+    private void clearGlobalPanelPlayer1WhenPressBack(){
+       attacksPanelPlayer1.setVisible(false);
+       attacksChangesPlayer1.setVisible(true);
+    }
+
+
+
+
 
     /**
      * getter y setter de los atributos de la clase
