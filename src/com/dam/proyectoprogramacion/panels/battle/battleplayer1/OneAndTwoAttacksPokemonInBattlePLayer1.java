@@ -32,7 +32,7 @@ public class OneAndTwoAttacksPokemonInBattlePLayer1 extends JPanel {
          */
         attack1Player1 = new JPanel();
         JButton attack1 = new ButtonInterfaceAttacks().makeAttack1ButtonPlayer1();
-        attack1.setBackground(DataNamesIconsColorsAttacksPlayer1.getColorBackgroundAttack());
+        attack1.setBackground(DataNamesIconsColorsAttacksPlayer1.getColorBackgroundAttack1());
         attack1.setForeground(Color.WHITE);
         attack1.setPreferredSize(new Dimension(170,100));
         attack1.setMaximumSize(new Dimension(170,100));

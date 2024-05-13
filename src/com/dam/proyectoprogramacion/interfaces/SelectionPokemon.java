@@ -512,9 +512,9 @@ public class SelectionPokemon extends JFrame {
                MethosInterfaceSelectionPokemon.getPokemonsPLayer2().size() == 3){
                    ButtonInterfaceCombat.setPathPokemonBattlePlayer1(MethodsBattlePlayer1.putImageAttackButtonPlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    ButtonInterfaceCombat.setPathPokemonBattlePlayer2(MethodsBattlePlayer2.putImageAttackButtonPlayer2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
-                   DataNamesIconsColorsAttacksPlayer1.setPathIconAttack(MethodsBattlePlayer1.getTypeAttack1PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
-                   DataNamesIconsColorsAttacksPlayer1.setNameAttack(MethodsBattlePlayer1.getNameAttack1PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
-                   DataNamesIconsColorsAttacksPlayer1.setColorBackgroundAttack(MethodsBattlePlayer1.getColorAttack1PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   DataNamesIconsColorsAttacksPlayer1.setPathIconAttack1(MethodsBattlePlayer1.getTypeAttack1PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   DataNamesIconsColorsAttacksPlayer1.setNameAttack1(MethodsBattlePlayer1.getNameAttack1PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   DataNamesIconsColorsAttacksPlayer1.setColorBackgroundAttack1(MethodsBattlePlayer1.getColorAttack1PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    new Battle();
                    dispose();
                }
