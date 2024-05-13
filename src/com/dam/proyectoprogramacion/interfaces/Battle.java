@@ -102,12 +102,18 @@ public class Battle extends JFrame {
        ButtonInterfaceCombat.getAttackButtonPlayer1().addActionListener(new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent e) {
+               /**
+                * hace visible un panel y oculta otro
+                */
              clearGlobalPanelPlayer1WhenPressAttack();
            }
        });
        ButtonInterfaceAttacks.getBackPlayer1().addActionListener(new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent e) {
+               /**
+                * hace visible un panel y oculta otro
+                */
           clearGlobalPanelPlayer1WhenPressBack();
            }
        });
@@ -130,12 +136,18 @@ public class Battle extends JFrame {
         return contentPanel;
     }
 
-
+    /**
+     * metodo que hace visible el panel de ataques y oculta el de ataque y cambio
+     */
     private  void clearGlobalPanelPlayer1WhenPressAttack(){
 
         attacksPanelPlayer1.setVisible(true);
         attacksChangesPlayer1.setVisible(false);
     }
+
+    /**
+     * metodo que hace visible el panel de ataque y cambio y oculta el de ataques
+     */
     private void clearGlobalPanelPlayer1WhenPressBack(){
        attacksPanelPlayer1.setVisible(false);
        attacksChangesPlayer1.setVisible(true);
