@@ -121,6 +121,11 @@ public class MethodsBattlePlayer1 {
 
     }
 
+    /**
+     * metodo para escoger el icono del ataque según el tipo
+     * @param type el tipo del ataque
+     * @return el path del icono
+     */
     private static String chooseAttack1Pokemon1Player1(String type){
 
         String pathType = "";
@@ -218,7 +223,7 @@ public class MethodsBattlePlayer1 {
                      */
                     AttacksPokemons attack = firstPokemon.getAttacks()[0];
                     /**
-                     * almacenamos el tipo
+                     * almacenamos el nombre
                      */
                     name = attack.getName();
                     break;
@@ -239,10 +244,14 @@ public class MethodsBattlePlayer1 {
         return name;
 
     }
+
+    /**
+     * Metodo para escoger el color del fondo del ataque del pokemon
+     * @param players el hashmap de los jugadores
+     * @return el color de fondo
+     */
     public static  Color getColorAttack1PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players){
-        /**
-         * variable local para almacenar el nombre del ataque
-         */
+
 
         String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
 
@@ -285,11 +294,17 @@ public class MethodsBattlePlayer1 {
             }
         }
         /**
-         * retorna un metodo que devuelve el path con la imagen del icono según el tipo
+         * retorna un metodo que devuelve el color  según el tipo
          */
         return chooseColorAttack1PokemonPlayer1(type.toLowerCase());
 
     }
+
+    /**
+     * metodo para escoger el color de fondo del ataque 1 del pokemon en batalla
+     * @param type el tipo del ataque
+     * @return el color correspondiente
+     */
     private static Color chooseColorAttack1PokemonPlayer1(String type){
 
         Color colorAttack = Color.BLUE;
