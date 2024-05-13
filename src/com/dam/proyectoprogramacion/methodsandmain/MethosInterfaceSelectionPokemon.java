@@ -67,6 +67,7 @@ public class MethosInterfaceSelectionPokemon {
                  * añade el objeto drampa a la lista
                  */
                 clearPanelPlayer1();
+
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getDrampaPanel());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeDrampaObject());
 

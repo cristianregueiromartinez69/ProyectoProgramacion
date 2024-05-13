@@ -19,13 +19,15 @@ public class ButtonInterfaceCombat extends JPanel {
      */
     private static JButton attackButton;
     private static JButton changePokemonButton;
+    private static String pathPokemonBattle;
 
     /**
      * metodo para crear el boton de atacar en el combate pokemon
      * @return el boton creado
      */
     public JButton makeAttackButton(){
-        attackButton = new JButton("Atacar");
+        ImageIcon pokemonImage = new ImageIcon(pathPokemonBattle);
+        attackButton = new CreateButtons("Atacar", pokemonImage);
         setBackground(Color.RED);
         setForeground(Color.WHITE);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 3);
@@ -60,6 +62,14 @@ public class ButtonInterfaceCombat extends JPanel {
 
     public static JButton getChangePokemonButton() {
         return changePokemonButton;
+    }
+
+    public static void setPathPokemonBattle(String pathPokemonBattle) {
+        ButtonInterfaceCombat.pathPokemonBattle = pathPokemonBattle;
+    }
+
+    public static String  getPathPokemonBattle() {
+        return pathPokemonBattle;
     }
 
     //TODO: faltaría poner una imagen del pokemon en batalla en el boton de ataque, pero eso es para más adelante
