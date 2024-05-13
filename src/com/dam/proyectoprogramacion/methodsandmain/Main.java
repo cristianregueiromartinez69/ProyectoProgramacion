@@ -13,7 +13,7 @@ public class Main {
 
 
 
-        //TODO: hay que hacer mejor la interfaz de la suerte, pero funciona que es lo importante
+        //TODO: hay que hacer el combate pokemon y el funcionamiento
 
 
 
