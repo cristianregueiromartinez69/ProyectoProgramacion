@@ -47,9 +47,9 @@ public class ButtonInterfaceAttacks extends JPanel {
      * @return el boton creado
      */
     public JButton makeAttack2ButtonPlayer1(){
-        ImageIcon iconType = (MethodsInterfaceAttacks.putImageTypePokemon("fuego"));
-        attack2PLayer1 = new CreateButtons("ataque 2", iconType);
-        setBackground(Color.YELLOW);
+        ImageIcon iconType = new ImageIcon(DataNamesIconsColorsAttacksPlayer1.getPathIconAttack2());
+        attack2PLayer1 = new CreateButtons(DataNamesIconsColorsAttacksPlayer1.getNameAttack2(), iconType);
+        setBackground(DataNamesIconsColorsAttacksPlayer1.getColorBackgroundAttack2());
         setForeground(Color.BLACK);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
         setBorder(borderboton);
