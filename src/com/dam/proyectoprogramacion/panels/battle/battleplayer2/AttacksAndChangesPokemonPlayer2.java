@@ -32,7 +32,7 @@ public class AttacksAndChangesPokemonPlayer2 extends JPanel {
         /**
          * instanciamos el boton de ataque y le damos unos valores
          */
-        attackButtonPlayer2 = new ButtonInterfaceCombat().makeAttackButton();
+        attackButtonPlayer2 = new ButtonInterfaceCombat().makeAttackButtonPlayer2();
         attackButtonPlayer2.setBackground(Color.RED);
         attackButtonPlayer2.setForeground(Color.WHITE);
         attackButtonPlayer2.setPreferredSize(new Dimension(200,300));
@@ -41,7 +41,7 @@ public class AttacksAndChangesPokemonPlayer2 extends JPanel {
         /**
          * instanciamos el boton de cambio y le damos unos valores
          */
-        changeButtonPlayer2 = new ButtonInterfaceCombat().makeChangePokemonButton();
+        changeButtonPlayer2 = new ButtonInterfaceCombat().makeChangePokemonButtonPLayer2();
         changeButtonPlayer2.setBackground(Color.GREEN);
         changeButtonPlayer2.setForeground(Color.WHITE);
         changeButtonPlayer2.setPreferredSize(new Dimension(200,300));

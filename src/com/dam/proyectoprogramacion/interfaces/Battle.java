@@ -35,7 +35,7 @@ public class Battle extends JFrame {
          */
         setVisible(true);
         setLayout(new BorderLayout());
-        setBounds(1000,1000,1000,1000);
+        setBounds(600,600,600,600);
 
         /**
          * hacemos el panel que contendrá a todos los paneles

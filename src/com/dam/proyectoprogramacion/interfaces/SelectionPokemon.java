@@ -512,7 +512,7 @@ public class SelectionPokemon extends JFrame {
             public void actionPerformed(ActionEvent e) {
                if(MethosInterfaceSelectionPokemon.getPokemonsPLayer1().size() == 3 &&
                MethosInterfaceSelectionPokemon.getPokemonsPLayer2().size() == 3){
-                   ButtonInterfaceCombat.setPathPokemonBattle(MethodsBattlePlayer1.putImageAttackButtonPlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   ButtonInterfaceCombat.setPathPokemonBattlePlayer1(MethodsBattlePlayer1.putImageAttackButtonPlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    new Battle();
                    dispose();
                }
