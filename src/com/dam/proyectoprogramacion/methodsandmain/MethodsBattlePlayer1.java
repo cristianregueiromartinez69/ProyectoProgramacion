@@ -1,9 +1,11 @@
 package com.dam.proyectoprogramacion.methodsandmain;
 
+import com.dam.proyectoprogramacion.interfaces.Battle;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.pokemon.AttacksPokemons;
 import com.dam.proyectoprogramacion.pokemon.PokemonProperties;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -133,13 +135,13 @@ public class MethodsBattlePlayer1 {
                 pathType = "imagenes/dragon.png";
                 break;
             case "electrico":
-                pathType = "imagenes/hada.png";
+                pathType = "imagenes/electrico.png";
                 break;
             case "lucha":
                 pathType = "imagenes/lucha.png";
                 break;
             case "hada":
-                pathType = "imagenes/bicho.png";
+                pathType = "imagenes/hada.png";
                 break;
             case "fuego":
                 pathType = "imagenes/fuego.png";
@@ -181,6 +183,8 @@ public class MethodsBattlePlayer1 {
         }
         return pathType;
     }
+
+
 
 
     }

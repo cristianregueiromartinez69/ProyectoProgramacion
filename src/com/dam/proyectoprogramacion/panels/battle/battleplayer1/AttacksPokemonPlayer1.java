@@ -11,6 +11,11 @@ public class AttacksPokemonPlayer1 extends JPanel {
       setVisible(true);
       setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
+      row1Of2PokemonAttacksInBattle = new JPanel();
+      row1Of2PokemonAttacksInBattle.setLayout(new BoxLayout(row1Of2PokemonAttacksInBattle, BoxLayout.X_AXIS));
+      row1Of2PokemonAttacksInBattle.add(new OneAndTwoAttacksPokemonInBattlePLayer1());
+
+      this.add(row1Of2PokemonAttacksInBattle);
 
 
 
