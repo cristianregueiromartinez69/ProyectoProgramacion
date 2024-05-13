@@ -1,7 +1,7 @@
 package com.dam.proyectoprogramacion.panels.battle.battleplayer1;
 
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceAttacks;
-import com.dam.proyectoprogramacion.methodsandmain.DataNamesIconsColorsAttacksPlayer1;
+import com.dam.proyectoprogramacion.methodsandmain.DataNamesIconsColorsAttacksAndPokemonsPlayer1;
 
 import javax.swing.*;
 import java.awt.*;
@@ -32,7 +32,7 @@ public class OneAndTwoAttacksPokemonInBattlePLayer1 extends JPanel {
          */
         attack1Player1 = new JPanel();
         JButton attack1 = new ButtonInterfaceAttacks().makeAttack1ButtonPlayer1();
-        attack1.setBackground(DataNamesIconsColorsAttacksPlayer1.getColorBackgroundAttack1());
+        attack1.setBackground(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getColorBackgroundAttack1());
         attack1.setForeground(Color.WHITE);
         attack1.setPreferredSize(new Dimension(170,100));
         attack1.setMaximumSize(new Dimension(170,100));
@@ -44,7 +44,7 @@ public class OneAndTwoAttacksPokemonInBattlePLayer1 extends JPanel {
          */
         attack2Player1 = new JPanel();
         JButton attack2 = new ButtonInterfaceAttacks().makeAttack2ButtonPlayer1();
-        attack2.setBackground(DataNamesIconsColorsAttacksPlayer1.getColorBackgroundAttack2());
+        attack2.setBackground(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getColorBackgroundAttack2());
         attack2.setForeground(Color.WHITE);
         attack2.setPreferredSize(new Dimension(170,100));
         attack2.setMaximumSize(new Dimension(170,100));

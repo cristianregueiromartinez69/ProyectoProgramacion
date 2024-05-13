@@ -33,9 +33,9 @@ public class ButtonInterfaceAttacks extends JPanel {
      * @return el boton creado
      */
     public JButton makeAttack1ButtonPlayer1(){
-        ImageIcon iconType = new ImageIcon(DataNamesIconsColorsAttacksPlayer1.getPathIconAttack1());
-        attack1Player1 = new CreateButtons(DataNamesIconsColorsAttacksPlayer1.getNameAttack1(), iconType);
-        setBackground(DataNamesIconsColorsAttacksPlayer1.getColorBackgroundAttack1());
+        ImageIcon iconType = new ImageIcon(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getPathIconAttack1());
+        attack1Player1 = new CreateButtons(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getNameAttack1(), iconType);
+        setBackground(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getColorBackgroundAttack1());
         setForeground(Color.WHITE);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
         setBorder(borderboton);
@@ -47,9 +47,9 @@ public class ButtonInterfaceAttacks extends JPanel {
      * @return el boton creado
      */
     public JButton makeAttack2ButtonPlayer1(){
-        ImageIcon iconType = new ImageIcon(DataNamesIconsColorsAttacksPlayer1.getPathIconAttack2());
-        attack2PLayer1 = new CreateButtons(DataNamesIconsColorsAttacksPlayer1.getNameAttack2(), iconType);
-        setBackground(DataNamesIconsColorsAttacksPlayer1.getColorBackgroundAttack2());
+        ImageIcon iconType = new ImageIcon(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getPathIconAttack2());
+        attack2PLayer1 = new CreateButtons(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getNameAttack2(), iconType);
+        setBackground(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getColorBackgroundAttack2());
         setForeground(Color.BLACK);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
         setBorder(borderboton);
@@ -61,9 +61,9 @@ public class ButtonInterfaceAttacks extends JPanel {
      * @return el boton creado
      */
     public JButton makeAttack3ButtonPlayer1(){
-        ImageIcon iconType = new ImageIcon(DataNamesIconsColorsAttacksPlayer1.getPathIconAttack3());
-        attack3Player1 = new CreateButtons(DataNamesIconsColorsAttacksPlayer1.getNameAttack3(), iconType);
-        setBackground(DataNamesIconsColorsAttacksPlayer1.getColorBackgroundAttack3());
+        ImageIcon iconType = new ImageIcon(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getPathIconAttack3());
+        attack3Player1 = new CreateButtons(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getNameAttack3(), iconType);
+        setBackground(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getColorBackgroundAttack3());
         setForeground(Color.WHITE);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
         setBorder(borderboton);
@@ -75,9 +75,9 @@ public class ButtonInterfaceAttacks extends JPanel {
      * @return el boton creado
      */
     public JButton makeAttack4ButtonPLayer1(){
-        ImageIcon iconType = new ImageIcon(DataNamesIconsColorsAttacksPlayer1.getPathIconAttack4());
-        attack4Player1 = new CreateButtons(DataNamesIconsColorsAttacksPlayer1.getNameAttack4(), iconType);
-        setBackground(DataNamesIconsColorsAttacksPlayer1.getColorBackgroundAttack4());
+        ImageIcon iconType = new ImageIcon(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getPathIconAttack4());
+        attack4Player1 = new CreateButtons(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getNameAttack4(), iconType);
+        setBackground(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getColorBackgroundAttack4());
         setForeground(Color.WHITE);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
         setBorder(borderboton);

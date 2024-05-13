@@ -1,5 +1,6 @@
 package com.dam.proyectoprogramacion.buttons;
 
+import com.dam.proyectoprogramacion.methodsandmain.DataNamesIconsColorsAttacksAndPokemonsPlayer1;
 import com.dam.proyectoprogramacion.methodsandmain.MethodsInterfaceChangePokemon;
 
 import javax.swing.*;
@@ -26,8 +27,8 @@ public class ButtonInterfaceChangePokemon extends JPanel {
      * @return el boton creado
      */
     public JButton makePokemon1TeamButton(){
-        ImageIcon iconGengar = MethodsInterfaceChangePokemon.getImagePokemonTeam1("gengar");
-        pokemon1team = new CreateButtons(MethodsInterfaceChangePokemon.getNameChangePokemon1Team("gengar"), iconGengar);
+        ImageIcon iconPokemon = new ImageIcon(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getPathIconPokemon1());
+        pokemon1team = new CreateButtons(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getNamePokemon1(), iconPokemon);
         setBackground(Color.GREEN);
         setForeground(Color.BLACK);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
@@ -39,8 +40,8 @@ public class ButtonInterfaceChangePokemon extends JPanel {
      * @return el boton creado
      */
     public JButton makePokemon2TeamButton(){
-        ImageIcon iconMilotic = MethodsInterfaceChangePokemon.getImagePokemonTeam2("milotic");
-        pokemon2team = new CreateButtons(MethodsInterfaceChangePokemon.getNameChangePokemon1Team("milotic"), iconMilotic);
+        ImageIcon iconPokemon = new ImageIcon(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getPathIconPokemon2());
+        pokemon2team = new CreateButtons(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getNamePokemon2(), iconPokemon);
         setBackground(Color.GREEN);
         setForeground(Color.BLACK);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
@@ -52,8 +53,8 @@ public class ButtonInterfaceChangePokemon extends JPanel {
      * @return el boton creado
      */
     public JButton makePokemon3TeamButton(){
-        ImageIcon iconSnorlax = MethodsInterfaceChangePokemon.getImagePokemonTeam3("snorlax");
-        pokemon3team = new CreateButtons(MethodsInterfaceChangePokemon.getNameChangePokemon1Team("snorlax"), iconSnorlax);
+        ImageIcon iconPokemon = new ImageIcon(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getPathIconPokemon3());
+        pokemon3team = new CreateButtons(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getNamePokemon3(), iconPokemon);
         setBackground(Color.GREEN);
         setForeground(Color.BLACK);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
