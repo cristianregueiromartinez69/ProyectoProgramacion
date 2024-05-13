@@ -4,6 +4,7 @@ import com.dam.proyectoprogramacion.background.BackgroundMainMenuPanel;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfacePokemonSelect;
 import com.dam.proyectoprogramacion.methodsandmain.MethodsBattlePlayer1;
+import com.dam.proyectoprogramacion.methodsandmain.MethodsBattlePlayer2;
 import com.dam.proyectoprogramacion.methodsandmain.MethodsInterfaceLuck;
 import com.dam.proyectoprogramacion.methodsandmain.MethosInterfaceSelectionPokemon;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
@@ -513,6 +514,7 @@ public class SelectionPokemon extends JFrame {
                if(MethosInterfaceSelectionPokemon.getPokemonsPLayer1().size() == 3 &&
                MethosInterfaceSelectionPokemon.getPokemonsPLayer2().size() == 3){
                    ButtonInterfaceCombat.setPathPokemonBattlePlayer1(MethodsBattlePlayer1.putImageAttackButtonPlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   ButtonInterfaceCombat.setPathPokemonBattlePlayer2(MethodsBattlePlayer2.putImageAttackButtonPlayer2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    new Battle();
                    dispose();
                }

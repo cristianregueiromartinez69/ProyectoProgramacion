@@ -19,7 +19,7 @@ public class MethodsBattlePlayer2 {
      * @param players el hashmap de los jugadores
      * @return el path con la imagen del pokemon seleccionado
      */
-    public static String putImageAttackButtonPlayer1(HashMap<String, ArrayList<Object>> players){
+    public static String putImageAttackButtonPlayer2(HashMap<String, ArrayList<Object>> players){
 
         String pathImagePokemon="";
         String aliasPlayer2 = InformationPanelPlayer2Luck.getAliasTextPlayer2().getText();
