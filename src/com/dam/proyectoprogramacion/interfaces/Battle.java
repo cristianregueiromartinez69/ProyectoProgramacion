@@ -85,9 +85,15 @@ public class Battle extends JFrame {
         attacksPanelPlayer1.setVisible(false);
         globalPanelPLayer1.add(attacksPanelPlayer1);
 
+        /**
+         * iniciamos el panel de cambio de pokemons y le damos un layout
+         */
         changesPokemonsPLayer1 = new JPanel();
         changesPokemonsPLayer1.setLayout(new BoxLayout(changesPokemonsPLayer1, BoxLayout.Y_AXIS));
 
+        /**
+         * hacemos el panel de cambio de pokemon del jugador 1 clase que es un panel que lo crea
+         */
         changesPokemonsPLayer1.add(new PokemonsToChoosePlayer1());
         changesPokemonsPLayer1.setVisible(false);
         globalPanelPLayer1.add(changesPokemonsPLayer1);
@@ -101,6 +107,9 @@ public class Battle extends JFrame {
         globalPanelPLayer2 = new JPanel();
         globalPanelPLayer2.setLayout(new BoxLayout(globalPanelPLayer2, BoxLayout.Y_AXIS));
 
+        /**
+         * añadimos al panel global del jugador 1 el logo, alias y el boton de atacar y cambio
+         */
         globalPanelPLayer2.add(new AliasAndLogoPlayer2());
         globalPanelPLayer2.add(new AttacksAndChangesPokemonPlayer2());
         contentPanel.add(globalPanelPLayer2, BorderLayout.EAST);
@@ -118,6 +127,9 @@ public class Battle extends JFrame {
              clearGlobalPanelPlayer1WhenPressAttack();
            }
        });
+        /**
+         * acionlistener para volver atras en el menu de atacar
+         */
        ButtonInterfaceAttacks.getBackPlayer1().addActionListener(new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent e) {
@@ -127,12 +139,18 @@ public class Battle extends JFrame {
           clearGlobalPanelPlayer1WhenPressBackinAttack();
            }
        });
+        /**
+         * actionlistener del boton de cambiar de pokemon
+         */
        ButtonInterfaceCombat.getChangePokemonButtonPlayer1().addActionListener(new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent e) {
                clearGlobalPanelPlayer1WhenPressChange();
            }
        });
+        /**
+         * actionListener del boton de volver atras en el menu de cambio de pokemon
+         */
        ButtonInterfaceChangePokemon.getBack().addActionListener(new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent e) {
@@ -177,12 +195,17 @@ public class Battle extends JFrame {
        attacksChangesPlayer1.setVisible(true);
     }
 
+    /**
+     * metodo que hace visible los pokemons a elegir y oculta el de ataque y cambio
+     */
     private  void clearGlobalPanelPlayer1WhenPressChange(){
 
         changesPokemonsPLayer1.setVisible(true);
         attacksChangesPlayer1.setVisible(false);
     }
-
+    /**
+     * metodo que hace visible el ataque y cambio de pokemon y oculta los pokemons a cambiar
+     */
     private void clearGlobalPanelPlayer1WhenPressBackInChangePokemon(){
         changesPokemonsPLayer1.setVisible(false);
         attacksChangesPlayer1.setVisible(true);
