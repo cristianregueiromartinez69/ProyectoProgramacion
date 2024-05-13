@@ -35,12 +35,18 @@ public class AttacksAndChangesPokemonPlayer1 extends JPanel {
         attackButton = new ButtonInterfaceCombat().makeAttackButton();
         attackButton.setBackground(Color.RED);
         attackButton.setForeground(Color.WHITE);
+        attackButton.setPreferredSize(new Dimension(200,300));
+        attackButton.setMaximumSize(new Dimension(250,150));
+        attackButton.setMinimumSize(new Dimension(250,150));
         /**
          * instanciamos el boton de cambio y le damos unos valores
          */
         changeButton = new ButtonInterfaceCombat().makeChangePokemonButton();
         changeButton.setBackground(Color.GREEN);
         changeButton.setForeground(Color.WHITE);
+        changeButton.setPreferredSize(new Dimension(200,300));
+        changeButton.setMaximumSize(new Dimension(250,150));
+        changeButton.setMinimumSize(new Dimension(250,150));
         /**
          * añadimos los botones
          */
