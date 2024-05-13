@@ -965,7 +965,210 @@ public class MethodsBattlePlayer1 {
         return namePokemon;
 
     }
+    /**
+     * metodo para obtener el path del icono del  pokemon escogido por el jugador 1
+     * @param players el hashmap de los jugadores
+     * @return el nombre del pokemon
+     */
+    public static  String getPathPokemon2Player1(HashMap<String, ArrayList<Object>> players){
+        /**
+         * variable local para almacenar el path del icono del pokemon
+         */
+        String pathIconPokemon="";
+        String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
 
+        /**
+         * for para recorrer el hashmap de los jugadores
+         */
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+
+            if (key.equals(aliasPlayer1)) {
+                /**
+                 * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
+                 */
+                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                if (!pokemons.isEmpty()) {
+
+                    /**
+                     * hacemos un objeto de pokemons y decimos que es igual al segundo elemento de la lista de pokemons
+                     */
+                    PokemonProperties secondPokemon = (PokemonProperties) pokemons.get(1);
+                    /**
+                     * almacenamos el path
+                     */
+                    pathIconPokemon = "imagenes/" + secondPokemon.getName().toLowerCase() + ".png";
+
+                    break;
+
+                } else {
+
+                    /**
+                     * si no hay nada devuelve null
+                     */
+                    return null;
+                }
+
+            }
+        }
+        /**
+         * retorna el path con el icono del pokemon
+         */
+        return pathIconPokemon;
+
+    }
+    /**
+     * metodo para obtener el nombre del segundo pokemon escogido por el jugador 1
+     * @param players el hashmap de los jugadores
+     * @return el nombre del pokemon
+     */
+    public static  String getNamePokemon2Player1(HashMap<String, ArrayList<Object>> players){
+        /**
+         * variable local para almacenar el nombre del pokemon
+         */
+        String namePokemon = "";
+        String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+
+        /**
+         * for para recorrer el hashmap de los jugadores
+         */
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+
+            if (key.equals(aliasPlayer1)) {
+                /**
+                 * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
+                 */
+                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                if (!pokemons.isEmpty()) {
+
+                    /**
+                     * hacemos un objeto de pokemons y decimos que es igual al segundo elemento de la lista de pokemons
+                     */
+                    PokemonProperties secondPokemon = (PokemonProperties) pokemons.get(1);
+                    /**
+                     * almacenamos el nombre del pokemon
+                     */
+                    namePokemon = secondPokemon.getName();
+
+                    break;
+
+                } else {
+
+                    /**
+                     * si no hay nada devuelve null
+                     */
+                    return null;
+                }
+
+            }
+        }
+        /**
+         * retorna el nombre del pokemon
+         */
+        return namePokemon;
+
+    }
+    /**
+     * metodo para obtener el path del icono del  pokemon escogido por el jugador 1
+     * @param players el hashmap de los jugadores
+     * @return el nombre del pokemon
+     */
+    public static  String getPathPokemon3Player1(HashMap<String, ArrayList<Object>> players){
+        /**
+         * variable local para almacenar el path del icono del pokemon
+         */
+        String pathIconPokemon="";
+        String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+
+        /**
+         * for para recorrer el hashmap de los jugadores
+         */
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+
+            if (key.equals(aliasPlayer1)) {
+                /**
+                 * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
+                 */
+                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                if (!pokemons.isEmpty()) {
+
+                    /**
+                     * hacemos un objeto de pokemons y decimos que es igual al primer elemento de la lista de pokemons
+                     */
+                    PokemonProperties thirdPokemon = (PokemonProperties) pokemons.get(2);
+                    /**
+                     * almacenamos el path
+                     */
+                    pathIconPokemon = "imagenes/" + thirdPokemon.getName().toLowerCase() + ".png";
+
+                    break;
+
+                } else {
+
+                    /**
+                     * si no hay nada devuelve null
+                     */
+                    return null;
+                }
+
+            }
+        }
+        /**
+         * retorna el path con el icono del pokemon
+         */
+        return pathIconPokemon;
+
+    }
+    /**
+     * metodo para obtener el nombre del tercer pokemon escogido por el jugador 1
+     * @param players el hashmap de los jugadores
+     * @return el nombre del pokemon
+     */
+    public static  String getNamePokemon3Player1(HashMap<String, ArrayList<Object>> players){
+        /**
+         * variable local para almacenar el nombre del pokemon
+         */
+        String namePokemon = "";
+        String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+
+        /**
+         * for para recorrer el hashmap de los jugadores
+         */
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+
+            if (key.equals(aliasPlayer1)) {
+                /**
+                 * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
+                 */
+                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                if (!pokemons.isEmpty()) {
+
+                    /**
+                     * hacemos un objeto de pokemons y decimos que es igual al tercer elemento de la lista de pokemons
+                     */
+                    PokemonProperties thirdPokemon = (PokemonProperties) pokemons.get(2);
+                    /**
+                     * almacenamos el nombre del pokemon
+                     */
+                    namePokemon = thirdPokemon.getName();
+
+                    break;
+
+                } else {
+
+                    /**
+                     * si no hay nada devuelve null
+                     */
+                    return null;
+                }
+
+            }
+        }
+        /**
+         * retorna el nombre del pokemon
+         */
+        return namePokemon;
+
+    }
 
 
 }

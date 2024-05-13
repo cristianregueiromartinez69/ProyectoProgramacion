@@ -17,10 +17,10 @@ public class ButtonInterfaceChangePokemon extends JPanel {
     /**
      * atributos privados de tipo JButton que son los 3 miembros del equipo y un boton para volver al combate
      */
-    private JButton pokemon1team;
-    private JButton pokemon2team;
-    private JButton pokemon3team;
-    private JButton back;
+    private static JButton pokemon1team;
+    private static JButton pokemon2team;
+    private static JButton pokemon3team;
+    private static JButton back;
 
     /**
      * metodo para crear el boton del primer pokemon del equipo
@@ -75,4 +75,35 @@ public class ButtonInterfaceChangePokemon extends JPanel {
         return back;
     }
 
+    public static JButton getPokemon1team() {
+        return pokemon1team;
+    }
+
+    public static void setPokemon1team(JButton pokemon1team) {
+        ButtonInterfaceChangePokemon.pokemon1team = pokemon1team;
+    }
+
+    public static JButton getPokemon2team() {
+        return pokemon2team;
+    }
+
+    public static void setPokemon2team(JButton pokemon2team) {
+        ButtonInterfaceChangePokemon.pokemon2team = pokemon2team;
+    }
+
+    public static JButton getPokemon3team() {
+        return pokemon3team;
+    }
+
+    public static void setPokemon3team(JButton pokemon3team) {
+        ButtonInterfaceChangePokemon.pokemon3team = pokemon3team;
+    }
+
+    public static JButton getBack() {
+        return back;
+    }
+
+    public static void setBack(JButton back) {
+        ButtonInterfaceChangePokemon.back = back;
+    }
 }

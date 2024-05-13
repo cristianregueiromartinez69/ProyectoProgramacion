@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceAttacks;
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemon;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
 import com.dam.proyectoprogramacion.methodsandmain.MethodsBattlePlayer1;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.AliasAndLogoPlayer1;
@@ -132,6 +133,8 @@ public class Battle extends JFrame {
                clearGlobalPanelPlayer1WhenPressChange();
            }
        });
+
+
 
 
 

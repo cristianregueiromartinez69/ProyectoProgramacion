@@ -531,6 +531,13 @@ public class SelectionPokemon extends JFrame {
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconPokemon1(MethodsBattlePlayer1.getPathPokemon1Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNamePokemon1(MethodsBattlePlayer1.getNamePokemon1Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconPokemon2(MethodsBattlePlayer1.getPathPokemon2Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNamePokemon2(MethodsBattlePlayer1.getNamePokemon2Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconPokemon3(MethodsBattlePlayer1.getPathPokemon3Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNamePokemon3(MethodsBattlePlayer1.getNamePokemon3Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+
+
                    new Battle();
                    dispose();
                }

@@ -26,8 +26,34 @@ public class PokemonsToChoosePlayer1 extends JPanel {
 
         pokemon1.add(pokemon1Button);
 
+        pokemon2 = new JPanel();
+
+        JButton pokemon2Button = new ButtonInterfaceChangePokemon().makePokemon2TeamButton();
+        pokemon2Button.setBackground(Color.GREEN);
+        pokemon2Button.setForeground(Color.WHITE);
+        pokemon2Button.setPreferredSize(new Dimension(170,100));
+        pokemon2Button.setMaximumSize(new Dimension(170, 100));
+        pokemon2Button.setMinimumSize(new Dimension(170,100));
+
+        pokemon2.add(pokemon2Button);
+
+        pokemon3 = new JPanel();
+
+        JButton pokemon3Button = new ButtonInterfaceChangePokemon().makePokemon3TeamButton();
+        pokemon3Button.setBackground(Color.GREEN);
+        pokemon3Button.setForeground(Color.WHITE);
+        pokemon3Button.setPreferredSize(new Dimension(170,100));
+        pokemon3Button.setMaximumSize(new Dimension(170, 100));
+        pokemon3Button.setMinimumSize(new Dimension(170,100));
+
+        pokemon3.add(pokemon3Button);
+
+
+
 
         this.add(pokemon1);
+        this.add(pokemon2);
+        this.add(pokemon3);
     }
 
 
