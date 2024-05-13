@@ -17,8 +17,8 @@ public class ButtonInterfaceCombat extends JPanel {
      * atacar y escoger el ataque del pokemon
      * cambiar y poder elegir que pokemon quieres usar
      */
-    private JButton attackButton;
-    private JButton changePokemonButton;
+    private static JButton attackButton;
+    private static JButton changePokemonButton;
 
     /**
      * metodo para crear el boton de atacar en el combate pokemon
@@ -46,7 +46,22 @@ public class ButtonInterfaceCombat extends JPanel {
         return changePokemonButton;
     }
 
+    public static void setAttackButton(JButton attackButton) {
+        ButtonInterfaceCombat.attackButton = attackButton;
+    }
 
-//TODO: faltaría poner una imagen del pokemon en batalla en el boton de ataque, pero eso es para más adelante
+    public static void setChangePokemonButton(JButton changePokemonButton) {
+        ButtonInterfaceCombat.changePokemonButton = changePokemonButton;
+    }
+
+    public static JButton getAttackButton() {
+        return attackButton;
+    }
+
+    public static JButton getChangePokemonButton() {
+        return changePokemonButton;
+    }
+
+    //TODO: faltaría poner una imagen del pokemon en batalla en el boton de ataque, pero eso es para más adelante
 
 }
