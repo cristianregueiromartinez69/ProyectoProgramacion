@@ -1,6 +1,7 @@
 package com.dam.proyectoprogramacion.panels.battle.battleplayer1;
 
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceAttacks;
+import com.dam.proyectoprogramacion.methodsandmain.DataNamesIconsColorsAttacksPlayer1;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,11 +18,11 @@ public class OneAndTwoAttacksPokemonInBattlePLayer1 extends JPanel {
 
         attack1Player1 = new JPanel();
         JButton attack1 = new ButtonInterfaceAttacks().makeAttack1ButtonPlayer1();
-        attack1.setBackground(Color.ORANGE);
+        attack1.setBackground(DataNamesIconsColorsAttacksPlayer1.getColorBackgroundAttack());
         attack1.setForeground(Color.WHITE);
-        attack1.setPreferredSize(new Dimension(250,150));
-        attack1.setMaximumSize(new Dimension(250,150));
-        attack1.setMinimumSize(new Dimension(250,150));
+        attack1.setPreferredSize(new Dimension(170,100));
+        attack1.setMaximumSize(new Dimension(170,100));
+        attack1.setMinimumSize(new Dimension(170,100));
         attack1Player1.add(attack1);
 
 

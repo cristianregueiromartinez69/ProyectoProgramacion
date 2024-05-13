@@ -35,7 +35,7 @@ public class ButtonInterfaceAttacks extends JPanel {
     public JButton makeAttack1ButtonPlayer1(){
         ImageIcon iconType = new ImageIcon(DataNamesIconsColorsAttacksPlayer1.getPathIconAttack());
         attack1Player1 = new CreateButtons(DataNamesIconsColorsAttacksPlayer1.getNameAttack(), iconType);
-        setBackground(Color.BLUE);
+        setBackground(DataNamesIconsColorsAttacksPlayer1.getColorBackgroundAttack());
         setForeground(Color.WHITE);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
         setBorder(borderboton);

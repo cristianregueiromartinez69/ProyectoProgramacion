@@ -6,6 +6,7 @@ import com.dam.proyectoprogramacion.pokemon.AttacksPokemons;
 import com.dam.proyectoprogramacion.pokemon.PokemonProperties;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -237,6 +238,120 @@ public class MethodsBattlePlayer1 {
          */
         return name;
 
+    }
+    public static  Color getColorAttack1PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players){
+        /**
+         * variable local para almacenar el nombre del ataque
+         */
+
+        String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+
+        /**
+         * for para recorrer el hashmap de los jugadores
+         */
+        String type = "";
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+
+            if (key.equals(aliasPlayer1)) {
+                /**
+                 * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
+                 */
+                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                if (!pokemons.isEmpty()) {
+
+                    /**
+                     * hacemos un objeto de pokemons y decimos que es igual al primer elemento de la lista de pokemons
+                     */
+                    PokemonProperties firstPokemon = (PokemonProperties) pokemons.get(0);
+                    /**
+                     * iniciamos una variable de tipo ataques pokemon para recoger el array
+                     */
+                    AttacksPokemons attack = firstPokemon.getAttacks()[0];
+                    /**
+                     * almacenamos el tipo
+                     */
+                     type = attack.getType();
+
+                    break;
+
+                } else {
+
+                    /**
+                     * si no hay nada devuelve null
+                     */
+                    return null;
+                }
+
+            }
+        }
+        /**
+         * retorna un metodo que devuelve el path con la imagen del icono según el tipo
+         */
+        return chooseColorAttack1PokemonPlayer1(type.toLowerCase());
+
+    }
+    private static Color chooseColorAttack1PokemonPlayer1(String type){
+
+        Color colorAttack = Color.BLUE;
+        switch(type){
+
+            case "bicho":
+                colorAttack = Color.GREEN.brighter();
+                break;
+            case "siniestro":
+                colorAttack = Color.MAGENTA.darker();
+                break;
+            case "dragon":
+                colorAttack = Color.BLUE.brighter();
+                break;
+            case "electrico":
+                colorAttack = Color.YELLOW;
+                break;
+            case "lucha":
+                colorAttack = Color.ORANGE;
+                break;
+            case "hada":
+                colorAttack = Color.PINK;
+                break;
+            case "fuego":
+                colorAttack = Color.RED;
+                break;
+            case "volador":
+                colorAttack = Color.CYAN;
+                break;
+            case "fantasma":
+                colorAttack = Color.MAGENTA.darker().darker();
+                break;
+            case "planta":
+                colorAttack = Color.GREEN;
+                break;
+            case "tierra":
+                colorAttack = Color.ORANGE.darker();
+                break;
+            case "hielo":
+                colorAttack = Color.CYAN.brighter();
+                break;
+            case "normal":
+                colorAttack = Color.GRAY.brighter();
+                break;
+            case "veneno":
+                colorAttack = Color.PINK.darker();
+                break;
+            case "psiquico":
+                colorAttack = Color.MAGENTA;
+                break;
+            case "roca":
+                colorAttack = Color.GRAY.darker();
+                break;
+            case "acero":
+                colorAttack = Color.GRAY;
+                break;
+            case "agua":
+                colorAttack = Color.BLUE;
+                break;
+
+        }
+        return colorAttack;
     }
 
 
