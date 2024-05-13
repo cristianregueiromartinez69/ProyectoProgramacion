@@ -31,7 +31,7 @@ public class MethosInterfaceSelectionPokemon {
     /**
      * atributo privado de tipo Hashmap para almacenar el alias del jugador y sus pokemons
      */
-    private static HashMap<String, ArrayList> playersBattle = new HashMap<>();
+    private static HashMap<String, ArrayList<Object>> playersBattle = new HashMap<>();
     /**
      * atributo privado de tipo ArrayList para almacenar los pokemons
      */
@@ -1521,7 +1521,7 @@ public class MethosInterfaceSelectionPokemon {
         MethosInterfaceSelectionPokemon.pokemonsPLayer2 = pokemonsPLayer2;
     }
 
-    public static HashMap<String, ArrayList> getPlayersBattle() {
+    public static HashMap<String, ArrayList<Object>> getPlayersBattle() {
         return playersBattle;
     }
 }

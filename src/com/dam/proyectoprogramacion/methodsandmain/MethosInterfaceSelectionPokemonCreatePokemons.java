@@ -55,7 +55,7 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
      */
     public static Empoleon makeEmpoleonObject() {
          empoleon = new Empoleon();
-        empoleon.setName("Empoleon");
+        empoleon.setName("empoleon");
         empoleon.setType("agua-acero");
         empoleon.setLevel(50);
         empoleon.setLife(191);
