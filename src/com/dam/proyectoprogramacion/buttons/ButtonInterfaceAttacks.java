@@ -61,9 +61,9 @@ public class ButtonInterfaceAttacks extends JPanel {
      * @return el boton creado
      */
     public JButton makeAttack3ButtonPlayer1(){
-        ImageIcon iconType = (MethodsInterfaceAttacks.putImageTypePokemon("fantasma"));
-        attack3Player1 = new CreateButtons("ataque 3", iconType);
-        setBackground(MethodsInterfaceAttacks.backgroundPanelAttacks("fantasma"));
+        ImageIcon iconType = new ImageIcon(DataNamesIconsColorsAttacksPlayer1.getPathIconAttack3());
+        attack3Player1 = new CreateButtons(DataNamesIconsColorsAttacksPlayer1.getNameAttack3(), iconType);
+        setBackground(DataNamesIconsColorsAttacksPlayer1.getColorBackgroundAttack3());
         setForeground(Color.WHITE);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
         setBorder(borderboton);
@@ -112,7 +112,7 @@ public class ButtonInterfaceAttacks extends JPanel {
      *
      * @return el boton creado
      */
-    public JButton makeAttack2Button(){
+    public JButton makeAttack2ButtonPlayer2(){
         ImageIcon iconType = (MethodsInterfaceAttacks.putImageTypePokemon("fuego"));
         attack2PLayer2 = new CreateButtons("ataque 2", iconType);
         setBackground(Color.YELLOW);
@@ -126,7 +126,7 @@ public class ButtonInterfaceAttacks extends JPanel {
      *
      * @return el boton creado
      */
-    public JButton makeAttack3Button(){
+    public JButton makeAttack3ButtonPlayer2(){
         ImageIcon iconType = (MethodsInterfaceAttacks.putImageTypePokemon("fantasma"));
         attack3Player2 = new CreateButtons("ataque 3", iconType);
         setBackground(MethodsInterfaceAttacks.backgroundPanelAttacks("fantasma"));
@@ -140,7 +140,7 @@ public class ButtonInterfaceAttacks extends JPanel {
      *
      * @return el boton creado
      */
-    public JButton makeAttack4Button(){
+    public JButton makeAttack4ButtonPlayer2(){
         ImageIcon iconType = (MethodsInterfaceAttacks.putImageTypePokemon("tierra"));
         attack4Player2 = new CreateButtons("ataque 4", iconType);
         setBackground(Color.PINK);
@@ -155,7 +155,7 @@ public class ButtonInterfaceAttacks extends JPanel {
      *
      * @return el boton creado
      */
-    public JButton makeBackButton(){
+    public JButton makeBackButtonPlayer2(){
         ImageIcon iconBack = new ImageIcon("imagenes/backMenu.png");
         backPlayer1 = new CreateButtons("volver", iconBack);
         setBackground(Color.BLUE);

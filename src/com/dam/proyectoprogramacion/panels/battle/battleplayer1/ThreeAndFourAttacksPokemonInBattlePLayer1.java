@@ -30,31 +30,31 @@ public class ThreeAndFourAttacksPokemonInBattlePLayer1 extends JPanel {
          * iniciamos el panel del primer ataque y metemos el boton
          */
         attack3Player1 = new JPanel();
-        JButton attack1 = new ButtonInterfaceAttacks().makeAttack3ButtonPlayer1();
-        attack1.setBackground(DataNamesIconsColorsAttacksPlayer1.getColorBackgroundAttack1());
-        attack1.setForeground(Color.WHITE);
-        attack1.setPreferredSize(new Dimension(170,100));
-        attack1.setMaximumSize(new Dimension(170,100));
-        attack1.setMinimumSize(new Dimension(170,100));
-        attack3Player1.add(attack1);
+        JButton attack3 = new ButtonInterfaceAttacks().makeAttack3ButtonPlayer1();
+        attack3.setBackground(DataNamesIconsColorsAttacksPlayer1.getColorBackgroundAttack3());
+        attack3.setForeground(Color.WHITE);
+        attack3.setPreferredSize(new Dimension(170,100));
+        attack3.setMaximumSize(new Dimension(170,100));
+        attack3.setMinimumSize(new Dimension(170,100));
+        attack3Player1.add(attack3);
 
         /**
          * iniciamos el panel del segundo ataque y metemos el boton
          */
-        attack4Player1 = new JPanel();
-        JButton attack2 = new ButtonInterfaceAttacks().makeAttack4ButtonPlayer1();
-        attack2.setBackground(DataNamesIconsColorsAttacksPlayer1.getColorBackgroundAttack2());
+        /*attack4Player1 = new JPanel();
+        JButton attack2 = new ButtonInterfaceAttacks().makeAttack4ButtonPLayer1();
+        attack2.setBackground(DataNamesIconsColorsAttacksPlayer1.getColorBackgroundAttack3());
         attack2.setForeground(Color.WHITE);
         attack2.setPreferredSize(new Dimension(170,100));
         attack2.setMaximumSize(new Dimension(170,100));
         attack2.setMinimumSize(new Dimension(170,100));
-        attack4Player1.add(attack2);
+        attack4Player1.add(attack2);*/
 
         /**
          * lo añadimos al panel
          */
         this.add(attack3Player1);
-        this.add(attack4Player1);
+
 
     }
 
