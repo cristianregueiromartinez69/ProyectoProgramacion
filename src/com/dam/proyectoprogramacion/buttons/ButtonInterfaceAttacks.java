@@ -75,10 +75,10 @@ public class ButtonInterfaceAttacks extends JPanel {
      * @return el boton creado
      */
     public JButton makeAttack4ButtonPLayer1(){
-        ImageIcon iconType = (MethodsInterfaceAttacks.putImageTypePokemon("tierra"));
-        attack4Player1 = new CreateButtons("ataque 4", iconType);
-        setBackground(Color.PINK);
-        setForeground(Color.BLACK);
+        ImageIcon iconType = new ImageIcon(DataNamesIconsColorsAttacksPlayer1.getPathIconAttack4());
+        attack4Player1 = new CreateButtons(DataNamesIconsColorsAttacksPlayer1.getNameAttack4(), iconType);
+        setBackground(DataNamesIconsColorsAttacksPlayer1.getColorBackgroundAttack4());
+        setForeground(Color.WHITE);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
         setBorder(borderboton);
         return attack4Player1;

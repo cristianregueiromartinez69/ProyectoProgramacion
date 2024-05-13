@@ -41,19 +41,20 @@ public class ThreeAndFourAttacksPokemonInBattlePLayer1 extends JPanel {
         /**
          * iniciamos el panel del segundo ataque y metemos el boton
          */
-        /*attack4Player1 = new JPanel();
-        JButton attack2 = new ButtonInterfaceAttacks().makeAttack4ButtonPLayer1();
-        attack2.setBackground(DataNamesIconsColorsAttacksPlayer1.getColorBackgroundAttack3());
-        attack2.setForeground(Color.WHITE);
-        attack2.setPreferredSize(new Dimension(170,100));
-        attack2.setMaximumSize(new Dimension(170,100));
-        attack2.setMinimumSize(new Dimension(170,100));
-        attack4Player1.add(attack2);*/
+        attack4Player1 = new JPanel();
+        JButton attack4 = new ButtonInterfaceAttacks().makeAttack4ButtonPLayer1();
+        attack4.setBackground(DataNamesIconsColorsAttacksPlayer1.getColorBackgroundAttack4());
+        attack4.setForeground(Color.WHITE);
+        attack4.setPreferredSize(new Dimension(170,100));
+        attack4.setMaximumSize(new Dimension(170,100));
+        attack4.setMinimumSize(new Dimension(170,100));
+        attack4Player1.add(attack4);
 
         /**
          * lo añadimos al panel
          */
         this.add(attack3Player1);
+        this.add(attack4Player1);
 
 
     }

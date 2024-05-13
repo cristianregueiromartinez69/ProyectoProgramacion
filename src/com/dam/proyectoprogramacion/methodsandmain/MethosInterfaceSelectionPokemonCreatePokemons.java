@@ -137,7 +137,7 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
                 new AttacksPokemons("Fuego", "Envite igneo", 120, 100),
                 new AttacksPokemons("Lucha", "A bocajarro", 120, 100),
                 new AttacksPokemons("Bicho", "Ida y vuelta", 70, 100),
-                new AttacksPokemons("Electrico", "Puño electrico", 75, 100)
+                new AttacksPokemons("Electrico", "Puño trueno", 75, 100)
         };
         infernape.setAttacks(infernapeAttacks);
         infernape.setSize(1.2f);
