@@ -69,6 +69,8 @@ public class Battle extends JFrame {
 
 
 
+
+
     }
 
 
