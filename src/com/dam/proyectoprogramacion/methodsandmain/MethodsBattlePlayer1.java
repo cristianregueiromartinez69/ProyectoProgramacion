@@ -63,34 +63,62 @@ public class MethodsBattlePlayer1 {
     }
 
 
-    private String getTypeAttack1PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players){
+    /**
+     * metodo para pasar el path con el icono del primer ataque del pokemon del jugador 1
+     * @param players el hashmap de los jugadores
+     * @return el path con el icono
+     */
+    public static  String getTypeAttack1PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players){
+        /**
+         * variable local para almacenar el icono del ataque
+         */
         String type="";
         String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
 
+        /**
+         * for para recorrer el hashmap de los jugadores
+         */
         for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
 
             if (key.equals(aliasPlayer1)) {
-
+                /**
+                 * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
+                 */
                 ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
                 if (!pokemons.isEmpty()) {
 
+                    /**
+                     * hacemos un objeto de pokemons y decimos que es igual al primer elemento de la lista de pokemons
+                     */
                     PokemonProperties firstPokemon = (PokemonProperties) pokemons.get(0);
+                    /**
+                     * iniciamos una variable de tipo ataques pokemon para recoger el array
+                     */
                     AttacksPokemons attack = firstPokemon.getAttacks()[0];
+                    /**
+                     * almacenamos el tipo
+                     */
                     type = attack.getType();
                     break;
 
                 } else {
 
+                    /**
+                     * si no hay nada devuelve null
+                     */
                     return null;
                 }
 
             }
         }
+        /**
+         * retorna un metodo que devuelve el path con la imagen del icono según el tipo
+         */
         return chooseAttack1Pokemon1Player1(type.toLowerCase());
 
     }
 
-    private String chooseAttack1Pokemon1Player1(String type){
+    private static String chooseAttack1Pokemon1Player1(String type){
 
         String pathType = "";
         switch(type){

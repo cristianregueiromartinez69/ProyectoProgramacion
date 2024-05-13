@@ -33,7 +33,7 @@ public class ButtonInterfaceAttacks extends JPanel {
      * @return el boton creado
      */
     public JButton makeAttack1ButtonPlayer1(){
-        ImageIcon iconType = (MethodsInterfaceAttacks.putImageTypePokemon("lucha"));
+        ImageIcon iconType = new ImageIcon(DataNamesIconsColorsAttacksPlayer1.getPathIconAttack());
         attack1Player1 = new CreateButtons("ataque 1", iconType);
         setBackground(Color.BLUE);
         setForeground(Color.WHITE);
