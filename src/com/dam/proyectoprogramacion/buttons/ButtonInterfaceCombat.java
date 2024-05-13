@@ -38,7 +38,7 @@ public class ButtonInterfaceCombat extends JPanel {
      * @return el boton creado
      */
     public JButton makeChangePokemonButton(){
-        changePokemonButton = new JButton("Pokemon");
+        changePokemonButton = new JButton("Cambiar");
         setBackground(Color.GREEN);
         setForeground(Color.WHITE);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 3);
