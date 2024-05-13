@@ -1,9 +1,9 @@
 package com.dam.proyectoprogramacion.interfaces;
 
 import com.dam.proyectoprogramacion.background.BackgroundMainMenuPanel;
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfacePokemonSelect;
-import com.dam.proyectoprogramacion.methodsandmain.MethodsInterfaceLuck;
-import com.dam.proyectoprogramacion.methodsandmain.MethosInterfaceSelectionPokemon;
+import com.dam.proyectoprogramacion.methodsandmain.*;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
 import com.dam.proyectoprogramacion.panels.selectionpokemon.*;
@@ -510,6 +510,34 @@ public class SelectionPokemon extends JFrame {
             public void actionPerformed(ActionEvent e) {
                if(MethosInterfaceSelectionPokemon.getPokemonsPLayer1().size() == 3 &&
                MethosInterfaceSelectionPokemon.getPokemonsPLayer2().size() == 3){
+                   ButtonInterfaceCombat.setPathPokemonBattlePlayer1(MethodsBattlePlayer1.putImageAttackButtonPlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   ButtonInterfaceCombat.setPathPokemonBattlePlayer2(MethodsBattlePlayer2.putImageAttackButtonPlayer2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack1(MethodsBattlePlayer1.getTypeAttack1PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNameAttack1(MethodsBattlePlayer1.getNameAttack1PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack1(MethodsBattlePlayer1.getColorAttack1PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack2(MethodsBattlePlayer1.getTypeAttack2PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNameAttack2(MethodsBattlePlayer1.getNameAttack2PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack2(MethodsBattlePlayer1.getColorAttack2PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack3(MethodsBattlePlayer1.getTypeAttack3PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNameAttack3(MethodsBattlePlayer1.getNameAttack3PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack3(MethodsBattlePlayer1.getColorAttack3PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack4(MethodsBattlePlayer1.getTypeAttack4PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNameAttack4(MethodsBattlePlayer1.getNameAttack4PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack4(MethodsBattlePlayer1.getColorAttack4PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconPokemon1(MethodsBattlePlayer1.getPathPokemon1Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNamePokemon1(MethodsBattlePlayer1.getNamePokemon1Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconPokemon2(MethodsBattlePlayer1.getPathPokemon2Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNamePokemon2(MethodsBattlePlayer1.getNamePokemon2Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconPokemon3(MethodsBattlePlayer1.getPathPokemon3Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNamePokemon3(MethodsBattlePlayer1.getNamePokemon3Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+
+
                    new Battle();
                    dispose();
                }
