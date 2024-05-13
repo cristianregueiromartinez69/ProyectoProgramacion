@@ -57,18 +57,30 @@ public class Battle extends JFrame {
         globalPanelPLayer1 = new JPanel();
         globalPanelPLayer1.setLayout(new BoxLayout(globalPanelPLayer1, BoxLayout.Y_AXIS));
         /**
-         * añadimos el alias y los botones al panel
+         * iniciamos un panel que será el alias y el logo del jugador 1 y lo hacemos igual a un panel de otra clase
          */
         JPanel aliasLogoPlayer1 = new AliasAndLogoPlayer1();
         globalPanelPLayer1.add(aliasLogoPlayer1);
+        /**
+         * iniciamos un panel que serán los botones de cambio y ataque del jugador 1 y lo hacemos igual a un panel de otra clase
+         */
         JPanel attacksChangesPlayer1 = new AttacksAndChangesPokemonPlayer1();
         globalPanelPLayer1.add(attacksChangesPlayer1);
         contentPanel.add(globalPanelPLayer1, BorderLayout.WEST);
 
+        /**
+         * Jpanel que va a albergar los 4 ataques del pokemon en batalla del jugador 1
+         */
         attacksPanelPlayer1 = new JPanel();
         attacksPanelPlayer1.setLayout(new BoxLayout(attacksPanelPlayer1, BoxLayout.Y_AXIS));
+        /**
+         * lo hacemos igual a un panel con los ataques del pokemon
+         */
         attacksPanelPlayer1.add(new AttacksPokemonPlayer1());
 
+        /**
+         * iniciamos el panel del jugador 2 y le damos un layout
+         */
         globalPanelPLayer2 = new JPanel();
         globalPanelPLayer2.setLayout(new BoxLayout(globalPanelPLayer2, BoxLayout.Y_AXIS));
 
@@ -77,9 +89,15 @@ public class Battle extends JFrame {
         contentPanel.add(globalPanelPLayer2, BorderLayout.EAST);
 
 
+        /**
+         * actionListener del boton de atacar
+         */
        ButtonInterfaceCombat.getAttackButtonPlayer1().addActionListener(new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent e) {
+               /**
+                * metodo que limpia el panel de ataque y cambio y muestra los ataques
+                */
                clearGlobalPanelPlayer1(attacksChangesPlayer1);
            }
        });
@@ -100,6 +118,12 @@ public class Battle extends JFrame {
         contentPanel.setLayout(new BorderLayout());
         return contentPanel;
     }
+
+    /**
+     * metodo que limpia el panel de ataque y cambio dle jugador 1
+     * @param auxPanelPlayer1 el panel de ataque y cambio del jugador 1
+     * @return el nuevo panel
+     */
     private  JPanel clearGlobalPanelPlayer1(JPanel auxPanelPlayer1){
 
         JPanel attacksPanel = new JPanel();
@@ -111,6 +135,10 @@ public class Battle extends JFrame {
         return attacksPanel;
     }
 
+    /**
+     * getter y setter de los atributos de la clase
+     * @return los atributos
+     */
     public JPanel getContentPanel() {
         return contentPanel;
     }
