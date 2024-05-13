@@ -86,7 +86,6 @@ public class MethosInterfaceSelectionPokemon {
                  */
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getDrampaPanel());
-                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeDrampaObject());
                 /**
                  * añadimos la informacion al hashmap del jugador 1
@@ -139,7 +138,7 @@ public class MethosInterfaceSelectionPokemon {
                     */
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow1.getDrampaPanel());
-                   panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
+
                    pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeDrampaObject());
                    /**
                     * añadimos la informacion al hashmap del jugador 2
@@ -205,7 +204,6 @@ public class MethosInterfaceSelectionPokemon {
                  */
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getEmpoleonPanel());
-                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeEmpoleonObject());
                 /**
                  * añadimos la informacion al hashmap del jugador 1
@@ -258,7 +256,6 @@ public class MethosInterfaceSelectionPokemon {
                  */
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow1.getEmpoleonPanel());
-                panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeEmpoleonObject());
                 /**
                  * añadimos la informacion al hashmap del jugador 1
@@ -322,7 +319,6 @@ public class MethosInterfaceSelectionPokemon {
                  */
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getGarchompPanel());
-                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeGarchompObject());
                 /**
                  * añadimos la informacion al hashmap del jugador 1
@@ -373,7 +369,6 @@ public class MethosInterfaceSelectionPokemon {
                  */
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow1.getGarchompPanel());
-                panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeGarchompObject());
                 /**
                  * añadimos la informacion al hashmap del jugador 2
@@ -436,7 +431,6 @@ public class MethosInterfaceSelectionPokemon {
                  */
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow1.getGengarPanel());
-                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeGengarObject());
 
                 /**
@@ -489,7 +483,6 @@ public class MethosInterfaceSelectionPokemon {
                  */
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow1.getGengarPanel());
-                panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeGengarObject());
                 /**
                  * añadimos la informacion al hashmap del jugador 2
@@ -551,7 +544,6 @@ public class MethosInterfaceSelectionPokemon {
                  */
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow2.getInfernapePanel());
-                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeInfernapeObject());
                 /**
                  * añadimos la informacion al hashmap del jugador 1
@@ -604,7 +596,6 @@ public class MethosInterfaceSelectionPokemon {
                  */
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow2.getInfernapePanel());
-                panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeInfernapeObject());
                 /**
                  * añadimos la informacion al hashmap del jugador 2
@@ -666,7 +657,6 @@ public class MethosInterfaceSelectionPokemon {
                  */
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow2.getLucarioPanel());
-                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeLucarioObject());
                 /**
                  * añadimos la informacion al hashmap del jugador 1
@@ -718,7 +708,6 @@ public class MethosInterfaceSelectionPokemon {
                  */
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow2.getLucarioPanel());
-                panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeLucarioObject());
                 /**
                  * añadimos la informacion al hashmap del jugador 2
@@ -779,7 +768,6 @@ public class MethosInterfaceSelectionPokemon {
                  */
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow2.getLuxrayPanel());
-                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeLuxrayObject());
                 /**
                  * añadimos la informacion al hashmap del jugador 1
@@ -831,7 +819,6 @@ public class MethosInterfaceSelectionPokemon {
                  */
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow2.getLuxrayPanel());
-                panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeLuxrayObject());
                 /**
                  * añadimos la informacion al hashmap del jugador 2
@@ -892,7 +879,6 @@ public class MethosInterfaceSelectionPokemon {
                  */
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow2.getMarshadowPanel());
-                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeMarshadowObject());
                 /**
                  * añadimos la informacion al hashmap del jugador 1
@@ -944,7 +930,6 @@ public class MethosInterfaceSelectionPokemon {
                  */
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow2.getMarshadowPanel());
-                panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeMarshadowObject());
                 /**
                  * añadimos la informacion al hashmap del jugador 2
@@ -1005,7 +990,6 @@ public class MethosInterfaceSelectionPokemon {
                  */
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow3.getMiloticPanel());
-                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeMiloticObject());
                 /**
                  * añadimos la informacion al hashmap del jugador 1
@@ -1057,7 +1041,6 @@ public class MethosInterfaceSelectionPokemon {
                  */
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow3.getMiloticPanel());
-                panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeMiloticObject());
                 /**
                  * añadimos la informacion al hashmap del jugador 2
@@ -1119,7 +1102,6 @@ public class MethosInterfaceSelectionPokemon {
                  */
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow3.getSnorlaxPanel());
-                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeSnorlaxObject());
                 /**
                  * añadimos la informacion al hashmap del jugador 1
@@ -1171,7 +1153,6 @@ public class MethosInterfaceSelectionPokemon {
                  */
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow3.getSnorlaxPanel());
-                panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeSnorlaxObject());
                 /**
                  * añadimos la informacion al hashmap del jugador 2
@@ -1230,7 +1211,6 @@ public class MethosInterfaceSelectionPokemon {
                  */
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow3.getTinkatonPanel());
-                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeTinkatonObject());
                 /**
                  * añadimos la informacion al hashmap del jugador 1
@@ -1282,7 +1262,6 @@ public class MethosInterfaceSelectionPokemon {
                  */
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow3.getTinkatonPanel());
-                panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeTinkatonObject());
                 /**
                  * añadimos la informacion al hashmap del jugador 2
@@ -1343,7 +1322,6 @@ public class MethosInterfaceSelectionPokemon {
                  */
                 clearPanelPlayer1();
                 panelPokemonsPlayer1.add(PanelsPokemonRow3.getTyranitarPanel());
-                panelPokemonsPlayer1.add(makeTickReadyButtonPlayer1());
                 pokemonsPLayer1.add(MethosInterfaceSelectionPokemonCreatePokemons.makeTyranitarObject());
                 /**
                  * añadimos la informacion al hashmap del jugador 1
@@ -1395,7 +1373,6 @@ public class MethosInterfaceSelectionPokemon {
                  */
                 clearPanelPlayer2();
                 panelPokemonsPlayer2.add(PanelsPokemonRow3.getTyranitarPanel());
-                panelPokemonsPlayer2.add(makeTickReadyButtonPlayer2());
                 pokemonsPLayer2.add(MethosInterfaceSelectionPokemonCreatePokemons.makeTyranitarObject());
                 /**
                  * añadimos la informacion al hashmap del jugador 2
