@@ -11,6 +11,7 @@ import com.dam.proyectoprogramacion.methodsandmain.MethodsBattlePlayer1;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.AliasAndLogoPlayer1;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.AttacksAndChangesPokemonPlayer1;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.AttacksPokemonPlayer1;
+import com.dam.proyectoprogramacion.panels.battle.battleplayer1.PokemonsToChoosePlayer1;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer2.AliasAndLogoPlayer2;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer2.AttacksAndChangesPokemonPlayer2;
 
@@ -29,6 +30,7 @@ public class Battle extends JFrame {
     private JPanel aliasLogoPlayer1;
     private JPanel attacksChangesPlayer1;
     private  JPanel attacksPanelPlayer1;
+    private JPanel changesPokemonsPLayer1;
     private  JPanel battlePanel;
     private  JPanel globalPanelPLayer2;
     private  JPanel lifePanelPokemons;
@@ -82,6 +84,13 @@ public class Battle extends JFrame {
         attacksPanelPlayer1.setVisible(false);
         globalPanelPLayer1.add(attacksPanelPlayer1);
 
+        changesPokemonsPLayer1 = new JPanel();
+        changesPokemonsPLayer1.setLayout(new BoxLayout(changesPokemonsPLayer1, BoxLayout.Y_AXIS));
+
+        changesPokemonsPLayer1.add(new PokemonsToChoosePlayer1());
+        changesPokemonsPLayer1.setVisible(false);
+        globalPanelPLayer1.add(changesPokemonsPLayer1);
+
 
 
 
@@ -115,6 +124,12 @@ public class Battle extends JFrame {
                 * hace visible un panel y oculta otro
                 */
           clearGlobalPanelPlayer1WhenPressBack();
+           }
+       });
+       ButtonInterfaceCombat.getChangePokemonButtonPlayer1().addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               clearGlobalPanelPlayer1WhenPressChange();
            }
        });
 
@@ -152,6 +167,13 @@ public class Battle extends JFrame {
        attacksPanelPlayer1.setVisible(false);
        attacksChangesPlayer1.setVisible(true);
     }
+
+    private  void clearGlobalPanelPlayer1WhenPressChange(){
+
+        changesPokemonsPLayer1.setVisible(true);
+        attacksChangesPlayer1.setVisible(false);
+    }
+
 
 
 
