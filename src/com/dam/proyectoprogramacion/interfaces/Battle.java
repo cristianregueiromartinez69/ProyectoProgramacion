@@ -179,7 +179,7 @@ public class Battle extends JFrame {
         ButtonInterfaceChangePokemon.getPokemon2team().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                clearGlobalPanelPlayer1WhenPressButtonToChangePokemon1InChangePokemon();
+                clearGlobalPanelPlayer1WhenPressButtonToChangePokemon2InChangePokemon();
                 /**
                  * llamamos al propio metodo para actualizar todo
                  */
@@ -193,7 +193,7 @@ public class Battle extends JFrame {
         ButtonInterfaceChangePokemon.getPokemon3team().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                clearGlobalPanelPlayer1WhenPressButtonToChangePokemon1InChangePokemon();
+                clearGlobalPanelPlayer1WhenPressButtonToChangePokemon3InChangePokemon();
                 /**
                  * llamamos al propio metodo para actualizar todo
                  */
@@ -293,6 +293,152 @@ public class Battle extends JFrame {
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNameAttack4(MethodsBattlePlayer1.newName4Attack4Pokemon1Player1());
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack4(MethodsBattlePlayer1.newColor4Attack4Pokemon1Player1());
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack4(MethodsBattlePlayer1.newType4Attack4Pokemon1Player1());
+
+
+
+        /**
+         * limpiamos el panel de ataque y cambio
+         */
+        attacksChangesPokemon1Player1.removeAll();
+        attacksChangesPokemon1Player1.repaint();
+        attacksChangesPokemon1Player1.revalidate();
+
+        /**
+         * limpiamos el panel de ataques
+         */
+        attacksPanelPlayer1.removeAll();
+        attacksPanelPlayer1.repaint();
+        attacksPanelPlayer1.revalidate();
+
+        /**
+         * volvemos a añadir el panel de ataque y cambio
+         */
+        attacksChangesPokemon1Player1.add(new AttacksAndChangesPokemonPlayer1());
+        /**
+         * volvemos a añadir el panel de ataques
+         */
+        attacksPanelPlayer1.add(new AttacksPokemonPlayer1());
+        globalPanelPLayer1.add(attacksChangesPokemon1Player1);
+        globalPanelPLayer1.add(attacksPanelPlayer1);
+        contentPanel.add(globalPanelPLayer1, BorderLayout.WEST);
+
+
+
+        contentPanel.repaint();
+        contentPanel.revalidate();
+
+        changesPokemonsPLayer1.setVisible(false);
+        attacksChangesPokemon1Player1.setVisible(true);
+    }
+    /**
+     * metodo para limpiar el panel entero al cambiar de pokemon
+     */
+    private static  void clearGlobalPanelPlayer1WhenPressButtonToChangePokemon2InChangePokemon(){
+        /**
+         * establecemos la nueva imagen del pokemon
+         */
+        ButtonInterfaceCombat.setPathPokemonBattlePlayer1(MethodsBattlePlayer1.newPathIconPokemon2Player1());
+
+        /**
+         * establecemos los nuevos valores del primer ataque
+         */
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNameAttack1(MethodsBattlePlayer1.newName1Attack1Pokemon2Player1());
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack1(MethodsBattlePlayer1.newColor1Attack1Pokemon2Player1());
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack1(MethodsBattlePlayer1.newType1Attack1Pokemon2Player1());
+
+        /**
+         * establecemos los nuevos valores del segundo ataque
+         */
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNameAttack2(MethodsBattlePlayer1.newName2Attack2Pokemon2Player1());
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack2(MethodsBattlePlayer1.newColor2Attack2Pokemon2Player1());
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack2(MethodsBattlePlayer1.newType2Attack2Pokemon2Player1());
+
+        /**
+         * establecemos los nuevos valores del tercer ataque
+         */
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNameAttack3(MethodsBattlePlayer1.newName3Attack3Pokemon2Player1());
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack3(MethodsBattlePlayer1.newColor3Attack3Pokemon2Player1());
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack3(MethodsBattlePlayer1.newType3Attack3Pokemon2Player1());
+
+        /**
+         * establecemos los nuevos valores del cuarto ataque
+         */
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNameAttack4(MethodsBattlePlayer1.newName4Attack4Pokemon2Player1());
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack4(MethodsBattlePlayer1.newColor4Attack4Pokemon2Player1());
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack4(MethodsBattlePlayer1.newType4Attack4Pokemon2Player1());
+
+
+
+        /**
+         * limpiamos el panel de ataque y cambio
+         */
+        attacksChangesPokemon1Player1.removeAll();
+        attacksChangesPokemon1Player1.repaint();
+        attacksChangesPokemon1Player1.revalidate();
+
+        /**
+         * limpiamos el panel de ataques
+         */
+        attacksPanelPlayer1.removeAll();
+        attacksPanelPlayer1.repaint();
+        attacksPanelPlayer1.revalidate();
+
+        /**
+         * volvemos a añadir el panel de ataque y cambio
+         */
+        attacksChangesPokemon1Player1.add(new AttacksAndChangesPokemonPlayer1());
+        /**
+         * volvemos a añadir el panel de ataques
+         */
+        attacksPanelPlayer1.add(new AttacksPokemonPlayer1());
+        globalPanelPLayer1.add(attacksChangesPokemon1Player1);
+        globalPanelPLayer1.add(attacksPanelPlayer1);
+        contentPanel.add(globalPanelPLayer1, BorderLayout.WEST);
+
+
+
+        contentPanel.repaint();
+        contentPanel.revalidate();
+
+        changesPokemonsPLayer1.setVisible(false);
+        attacksChangesPokemon1Player1.setVisible(true);
+    }
+    /**
+     * metodo para limpiar el panel entero al cambiar de pokemon
+     */
+    private static  void clearGlobalPanelPlayer1WhenPressButtonToChangePokemon3InChangePokemon(){
+        /**
+         * establecemos la nueva imagen del pokemon
+         */
+        ButtonInterfaceCombat.setPathPokemonBattlePlayer1(MethodsBattlePlayer1.newPathIconPokemon3Player1());
+
+        /**
+         * establecemos los nuevos valores del primer ataque
+         */
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNameAttack1(MethodsBattlePlayer1.newName1Attack1Pokemon3Player1());
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack1(MethodsBattlePlayer1.newColor1Attack1Pokemon3Player1());
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack1(MethodsBattlePlayer1.newType1Attack1Pokemon3Player1());
+
+        /**
+         * establecemos los nuevos valores del segundo ataque
+         */
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNameAttack2(MethodsBattlePlayer1.newName2Attack2Pokemon3Player1());
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack2(MethodsBattlePlayer1.newColor2Attack2Pokemon3Player1());
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack2(MethodsBattlePlayer1.newType2Attack2Pokemon3Player1());
+
+        /**
+         * establecemos los nuevos valores del tercer ataque
+         */
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNameAttack3(MethodsBattlePlayer1.newName3Attack3Pokemon3Player1());
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack3(MethodsBattlePlayer1.newColor3Attack3Pokemon3Player1());
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack3(MethodsBattlePlayer1.newType3Attack3Pokemon3Player1());
+
+        /**
+         * establecemos los nuevos valores del cuarto ataque
+         */
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNameAttack4(MethodsBattlePlayer1.newName4Attack4Pokemon3Player1());
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack4(MethodsBattlePlayer1.newColor4Attack4Pokemon3Player1());
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack4(MethodsBattlePlayer1.newType4Attack4Pokemon3Player1());
 
 
 
