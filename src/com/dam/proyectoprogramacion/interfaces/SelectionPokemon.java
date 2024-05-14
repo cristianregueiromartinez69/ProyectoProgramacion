@@ -510,6 +510,9 @@ public class SelectionPokemon extends JFrame {
             public void actionPerformed(ActionEvent e) {
                if(MethosInterfaceSelectionPokemon.getPokemonsPLayer1().size() == 3 &&
                MethosInterfaceSelectionPokemon.getPokemonsPLayer2().size() == 3){
+                   /**
+                    * establecemos todos los valores de los pokemons del jugador 1
+                    */
                    ButtonInterfaceCombat.setPathPokemonBattlePlayer1(MethodsBattlePlayer1.putImageAttackButtonPlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    ButtonInterfaceCombat.setPathPokemonBattlePlayer2(MethodsBattlePlayer2.putImageAttackButtonPlayer2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack1(MethodsBattlePlayer1.getTypeAttack1PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));

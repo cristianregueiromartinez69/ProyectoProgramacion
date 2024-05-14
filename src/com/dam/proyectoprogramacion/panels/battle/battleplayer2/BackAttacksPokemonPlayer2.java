@@ -1,21 +1,22 @@
-package com.dam.proyectoprogramacion.panels.battle.battleplayer1;
+package com.dam.proyectoprogramacion.panels.battle.battleplayer2;
 
-import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer1;
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceAttacks;
 
 import javax.swing.*;
 import java.awt.*;
+
 /**
- * clase con el panel para volver atras en el menu de cambio de  pokemon
+ * clase con el panel para volver atras en el menu de ataques pokemon del jugador 2
  * @author cristian
  * @version v3.0
  */
-public class BackChangePokemonPlayer1 extends JPanel {
+public class BackAttacksPokemonPlayer2 extends JPanel {
     /**
      * atributo privado de tipo jpanel
      */
     private JPanel backPanel;
 
-    public BackChangePokemonPlayer1(){
+    public BackAttacksPokemonPlayer2(){
 
         /**
          * lo hacemos visible y le damos un layout
@@ -32,14 +33,14 @@ public class BackChangePokemonPlayer1 extends JPanel {
         /**
          * instanciamos un boton y lo hacemos igual a un metodo que crea el boton
          */
-        JButton backToAttackChange = new ButtonInterfaceChangePokemonPlayer1().makeBackButton();
+        JButton backToAttackChange = new ButtonInterfaceAttacks().makeBackButtonPlayer2();
         backToAttackChange.setBackground(Color.BLUE);
         backToAttackChange.setForeground(Color.WHITE);
+
         /**
-         * lo añadimos todo
+         * lo añadimos
          */
         backPanel.add(backToAttackChange);
         this.add(backPanel);
     }
-
 }
