@@ -1291,7 +1291,7 @@ public class MethodsBattlePlayer1 {
      * metodo para cambiar el icono del ataque 1 del pokemon cambiado
      * @return el nuevo icono
      */
-    public static String newType1Pokemon1Player1() {
+    public static String newType1Attack1Player1() {
         String typeAttack1 = "";
         /**
          * recorremos el array de objetos pokemons
