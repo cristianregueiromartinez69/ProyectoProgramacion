@@ -119,6 +119,10 @@ public class Battle extends JFrame {
         pokemonBattle();
 
     }
+
+    /**
+     * Metemos las acciones de los botones en un metodo para poder actualizar los cambios
+     */
     public static void pokemonBattle(){
         /**
          * actionListener del boton de atacar
@@ -154,10 +158,17 @@ public class Battle extends JFrame {
                 clearGlobalPanelPlayer1WhenPressChange();
             }
         });
+        /**
+         * actionListener para cambiar un pokemon por otro
+         * al cambiar se actualizan las características y todo
+         */
         ButtonInterfaceChangePokemon.getPokemon2team().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 clearGlobalPanelPlayer1WhenPressButtonToChangePokemon1InChangePokemon();
+                /**
+                 * llamamos al propio metodo para actualizar todo
+                 */
                 pokemonBattle();
             }
         });
