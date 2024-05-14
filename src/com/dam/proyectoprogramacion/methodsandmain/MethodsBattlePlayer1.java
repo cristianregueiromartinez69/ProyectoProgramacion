@@ -1,6 +1,7 @@
 package com.dam.proyectoprogramacion.methodsandmain;
 
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemon;
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
 import com.dam.proyectoprogramacion.interfaces.Battle;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.pokemon.AttacksPokemons;
@@ -1755,6 +1756,34 @@ public class MethodsBattlePlayer1 {
          * devolvemos el nuevo color del ataque
          */
         return chooseColorAttacksPokemonPlayer1(typeAttack4.toLowerCase());
+    }
+
+    /**
+     * metodo para saber si el pokemon que se intenta cambiar es el que ya está en batalla
+     * @return true si no lo es, false si lo es
+     */
+    public boolean checkingPokemonNamewithPokemonInBattlePokemon1(){
+        boolean marca = true;
+        /**
+         * iniciamos variables iguales al pokemon en batalla y al que quiere ser cambiado
+         */
+        String namePokemonInBattle = ButtonInterfaceCombat.getPathPokemonBattlePlayer1();
+        String namePokemonToChange1 = ButtonInterfaceChangePokemon.getPokemon1team().getText();
+
+        /**
+         * tenemos que recortar uno de ellos ya que estamos cogiendo el path
+         */
+        int lastIndex = namePokemonInBattle.lastIndexOf('/');
+        String auxPokemonInBattle = namePokemonInBattle.substring(lastIndex + 1, namePokemonInBattle.lastIndexOf('.'));
+
+        /**
+         * si es igual, no se hará el cambio, si no lo es, se hará
+         */
+        if(namePokemonInBattle.equalsIgnoreCase(auxPokemonInBattle)){
+            marca = false;
+        }
+
+      return marca;
     }
 
     /**
