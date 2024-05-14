@@ -1212,13 +1212,11 @@ public class MethodsBattlePlayer1 {
         for (Object obj : MethosInterfaceSelectionPokemon.getPokemonsPLayer1()) {
             if (obj instanceof PokemonProperties) {
                 PokemonProperties pokemon1 = (PokemonProperties) obj;
-                if (pokemon1.getName().equals(getNameOfThePokemonPlayer1().toLowerCase())) {
+                if (pokemon1.getName().equalsIgnoreCase(getNameOfThePokemonPlayer1())) {
 
                     pathIcon = "imagenes/" + getNameOfThePokemonPlayer1().toLowerCase() + ".png";
                 }
-                else{
-                    return null;
-                }
+
             }
 
 
@@ -1227,8 +1225,27 @@ public class MethodsBattlePlayer1 {
 
      return pathIcon;
     }
+    public static String newNamePokemon1Player1() {
+        String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+        String name = "";
+        for (Object obj : MethosInterfaceSelectionPokemon.getPokemonsPLayer1()) {
+            if (obj instanceof PokemonProperties) {
+                PokemonProperties pokemon1 = (PokemonProperties) obj;
+                if (pokemon1.getName().equalsIgnoreCase(getNameOfThePokemonPlayer1())) {
+
+                    name =  getNameOfThePokemonPlayer1();
+                }
+
+            }
+
+
+        }
+
+
+        return name;
+    }
     private static String getNameOfThePokemonPlayer1 () {
 
-        return ButtonInterfaceChangePokemon.getPokemon1team().getText();
+        return ButtonInterfaceChangePokemon.getPokemon2team().getText();
     }
 }

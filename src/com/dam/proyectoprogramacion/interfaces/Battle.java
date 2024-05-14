@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceAttacks;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemon;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
+import com.dam.proyectoprogramacion.methodsandmain.DataNamesIconsColorsAttacksAndPokemonsPlayer1;
 import com.dam.proyectoprogramacion.methodsandmain.MethodsBattlePlayer1;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.AliasAndLogoPlayer1;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.AttacksAndChangesPokemonPlayer1;
@@ -148,6 +149,13 @@ public class Battle extends JFrame {
                clearGlobalPanelPlayer1WhenPressChange();
            }
        });
+       ButtonInterfaceChangePokemon.getPokemon2team().addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               ButtonInterfaceCombat.setPathPokemonBattlePlayer1(MethodsBattlePlayer1.newPathIconPokemon1Player1());
+               clearGlobalPanelPlayer1WhenPressButtonToChangePokemonInChangePokemon();
+           }
+       });
         /**
          * actionListener del boton de volver atras en el menu de cambio de pokemon
          */
@@ -211,6 +219,10 @@ public class Battle extends JFrame {
         attacksChangesPlayer1.setVisible(true);
     }
 
+    private void clearGlobalPanelPlayer1WhenPressButtonToChangePokemonInChangePokemon(){
+        changesPokemonsPLayer1.setVisible(false);
+        attacksChangesPlayer1.setVisible(true);
+    }
 
 
 
