@@ -1248,7 +1248,7 @@ public class MethodsBattlePlayer1 {
      * metodo para poner el nuevo nombre del primer ataque del pokemon
      * @return el nuevo nombre del primer ataque
      */
-    public static String newNameAttack1Pokemon1Player1() {
+    public static String newName1Attack1Pokemon1Player1() {
         String nameAttack1 = "";
         /**
          * recorremos el array de objetos pokemons
@@ -1291,7 +1291,7 @@ public class MethodsBattlePlayer1 {
      * metodo para cambiar el icono del ataque 1 del pokemon cambiado
      * @return el nuevo icono
      */
-    public static String newType1Attack1Player1() {
+    public static String newType1Attack1Pokemon1Player1() {
         String typeAttack1 = "";
         /**
          * recorremos el array de objetos pokemons
@@ -1334,7 +1334,7 @@ public class MethodsBattlePlayer1 {
      * metodo para cambiar el color del ataque 1 del pokemon cambiado
      * @return el nuevo color
      */
-    public static Color newColor1Pokemon1Player1() {
+    public static Color newColor1Attack1Pokemon1Player1() {
         String typeAttack1 = "";
         /**
          * recorremos el array de objetos pokemons
@@ -1376,7 +1376,7 @@ public class MethodsBattlePlayer1 {
      * metodo para poner el nuevo nombre del segundo ataque del pokemon
      * @return el nuevo nombre del primer ataque
      */
-    public static String newNameAttack2Pokemon1Player1() {
+    public static String newName2Attack2Pokemon1Player1() {
         String nameAttack2 = "";
         /**
          * recorremos el array de objetos pokemons
@@ -1419,7 +1419,7 @@ public class MethodsBattlePlayer1 {
      * metodo para cambiar el icono del ataque 2 del pokemon cambiado
      * @return el nuevo icono
      */
-    public static String newType1Attack2Player1() {
+    public static String newType2Attack2Pokemon1Player1() {
         String typeAttack2 = "";
         /**
          * recorremos el array de objetos pokemons
@@ -1462,7 +1462,7 @@ public class MethodsBattlePlayer1 {
      * metodo para cambiar el color del ataque 2 del pokemon cambiado
      * @return el nuevo color
      */
-    public static Color newColor2Pokemon1Player1() {
+    public static Color newColor2Attack2Pokemon1Player1() {
         String typeAttack2 = "";
         /**
          * recorremos el array de objetos pokemons
