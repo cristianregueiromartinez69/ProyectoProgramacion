@@ -3,12 +3,11 @@ package com.dam.proyectoprogramacion.methodsandmain;
 import java.awt.*;
 
 /**
- * clase para almacenar datos de ataques, nombres y colores de fondo que iran cambiando en batalla del jugador 1
+ * clase para almacenar datos de ataques, nombres y colores de fondo que iran cambiando en batalla del jugador 2
  * @author cristian
  * @version v3.0
  */
-public class DataNamesIconsColorsAttacksAndPokemonsPlayer1 {
-
+public class DataNamesIconsColorsAttacksAndPokemonsPlayer2 {
     /**
      * atributos privados de la clase
      */
@@ -46,7 +45,7 @@ public class DataNamesIconsColorsAttacksAndPokemonsPlayer1 {
     }
 
     public static void setNameAttack1(String nameAttack1) {
-        DataNamesIconsColorsAttacksAndPokemonsPlayer1.nameAttack1 = nameAttack1;
+        DataNamesIconsColorsAttacksAndPokemonsPlayer2.nameAttack1 = nameAttack1;
     }
 
     public static String getPathIconAttack1() {
@@ -54,7 +53,7 @@ public class DataNamesIconsColorsAttacksAndPokemonsPlayer1 {
     }
 
     public static void setPathIconAttack1(String pathIconAttack1) {
-        DataNamesIconsColorsAttacksAndPokemonsPlayer1.pathIconAttack1 = pathIconAttack1;
+        DataNamesIconsColorsAttacksAndPokemonsPlayer2.pathIconAttack1 = pathIconAttack1;
     }
 
     public static Color getColorBackgroundAttack1() {
@@ -62,7 +61,7 @@ public class DataNamesIconsColorsAttacksAndPokemonsPlayer1 {
     }
 
     public static void setColorBackgroundAttack1(Color colorBackgroundAttack1) {
-        DataNamesIconsColorsAttacksAndPokemonsPlayer1.colorBackgroundAttack1 = colorBackgroundAttack1;
+        DataNamesIconsColorsAttacksAndPokemonsPlayer2.colorBackgroundAttack1 = colorBackgroundAttack1;
     }
 
     public static String getNameAttack2() {
@@ -70,7 +69,7 @@ public class DataNamesIconsColorsAttacksAndPokemonsPlayer1 {
     }
 
     public static void setNameAttack2(String nameAttack2) {
-        DataNamesIconsColorsAttacksAndPokemonsPlayer1.nameAttack2 = nameAttack2;
+        DataNamesIconsColorsAttacksAndPokemonsPlayer2.nameAttack2 = nameAttack2;
     }
 
     public static String getPathIconAttack2() {
@@ -78,7 +77,7 @@ public class DataNamesIconsColorsAttacksAndPokemonsPlayer1 {
     }
 
     public static void setPathIconAttack2(String pathIconAttack2) {
-        DataNamesIconsColorsAttacksAndPokemonsPlayer1.pathIconAttack2 = pathIconAttack2;
+        DataNamesIconsColorsAttacksAndPokemonsPlayer2.pathIconAttack2 = pathIconAttack2;
     }
 
     public static Color getColorBackgroundAttack2() {
@@ -86,7 +85,7 @@ public class DataNamesIconsColorsAttacksAndPokemonsPlayer1 {
     }
 
     public static void setColorBackgroundAttack2(Color colorBackgroundAttack2) {
-        DataNamesIconsColorsAttacksAndPokemonsPlayer1.colorBackgroundAttack2 = colorBackgroundAttack2;
+        DataNamesIconsColorsAttacksAndPokemonsPlayer2.colorBackgroundAttack2 = colorBackgroundAttack2;
     }
 
     public static String getNameAttack3() {
@@ -94,7 +93,7 @@ public class DataNamesIconsColorsAttacksAndPokemonsPlayer1 {
     }
 
     public static void setNameAttack3(String nameAttack3) {
-        DataNamesIconsColorsAttacksAndPokemonsPlayer1.nameAttack3 = nameAttack3;
+        DataNamesIconsColorsAttacksAndPokemonsPlayer2.nameAttack3 = nameAttack3;
     }
 
     public static String getPathIconAttack3() {
@@ -102,7 +101,7 @@ public class DataNamesIconsColorsAttacksAndPokemonsPlayer1 {
     }
 
     public static void setPathIconAttack3(String pathIconAttack3) {
-        DataNamesIconsColorsAttacksAndPokemonsPlayer1.pathIconAttack3 = pathIconAttack3;
+        DataNamesIconsColorsAttacksAndPokemonsPlayer2.pathIconAttack3 = pathIconAttack3;
     }
 
     public static Color getColorBackgroundAttack3() {
@@ -110,7 +109,7 @@ public class DataNamesIconsColorsAttacksAndPokemonsPlayer1 {
     }
 
     public static void setColorBackgroundAttack3(Color colorBackgroundAttack3) {
-        DataNamesIconsColorsAttacksAndPokemonsPlayer1.colorBackgroundAttack3 = colorBackgroundAttack3;
+        DataNamesIconsColorsAttacksAndPokemonsPlayer2.colorBackgroundAttack3 = colorBackgroundAttack3;
     }
 
     public static String getNameAttack4() {
@@ -118,7 +117,7 @@ public class DataNamesIconsColorsAttacksAndPokemonsPlayer1 {
     }
 
     public static void setNameAttack4(String nameAttack4) {
-        DataNamesIconsColorsAttacksAndPokemonsPlayer1.nameAttack4 = nameAttack4;
+        DataNamesIconsColorsAttacksAndPokemonsPlayer2.nameAttack4 = nameAttack4;
     }
 
     public static String getPathIconAttack4() {
@@ -126,7 +125,7 @@ public class DataNamesIconsColorsAttacksAndPokemonsPlayer1 {
     }
 
     public static void setPathIconAttack4(String pathIconAttack4) {
-        DataNamesIconsColorsAttacksAndPokemonsPlayer1.pathIconAttack4 = pathIconAttack4;
+        DataNamesIconsColorsAttacksAndPokemonsPlayer2.pathIconAttack4 = pathIconAttack4;
     }
 
     public static Color getColorBackgroundAttack4() {
@@ -134,7 +133,7 @@ public class DataNamesIconsColorsAttacksAndPokemonsPlayer1 {
     }
 
     public static void setColorBackgroundAttack4(Color colorBackgroundAttack4) {
-        DataNamesIconsColorsAttacksAndPokemonsPlayer1.colorBackgroundAttack4 = colorBackgroundAttack4;
+        DataNamesIconsColorsAttacksAndPokemonsPlayer2.colorBackgroundAttack4 = colorBackgroundAttack4;
     }
 
     public static String getPathIconPokemon1() {
@@ -142,7 +141,7 @@ public class DataNamesIconsColorsAttacksAndPokemonsPlayer1 {
     }
 
     public static void setPathIconPokemon1(String pathIconPokemon1) {
-        DataNamesIconsColorsAttacksAndPokemonsPlayer1.pathIconPokemon1 = pathIconPokemon1;
+        DataNamesIconsColorsAttacksAndPokemonsPlayer2.pathIconPokemon1 = pathIconPokemon1;
     }
 
     public static String getNamePokemon1() {
@@ -150,7 +149,7 @@ public class DataNamesIconsColorsAttacksAndPokemonsPlayer1 {
     }
 
     public static void setNamePokemon1(String namePokemon1) {
-        DataNamesIconsColorsAttacksAndPokemonsPlayer1.namePokemon1 = namePokemon1;
+        DataNamesIconsColorsAttacksAndPokemonsPlayer2.namePokemon1 = namePokemon1;
     }
 
     public static String getPathIconPokemon2() {
@@ -158,7 +157,7 @@ public class DataNamesIconsColorsAttacksAndPokemonsPlayer1 {
     }
 
     public static void setPathIconPokemon2(String pathIconPokemon2) {
-        DataNamesIconsColorsAttacksAndPokemonsPlayer1.pathIconPokemon2 = pathIconPokemon2;
+        DataNamesIconsColorsAttacksAndPokemonsPlayer2.pathIconPokemon2 = pathIconPokemon2;
     }
 
     public static String getNamePokemon2() {
@@ -166,7 +165,7 @@ public class DataNamesIconsColorsAttacksAndPokemonsPlayer1 {
     }
 
     public static void setNamePokemon2(String namePokemon2) {
-        DataNamesIconsColorsAttacksAndPokemonsPlayer1.namePokemon2 = namePokemon2;
+        DataNamesIconsColorsAttacksAndPokemonsPlayer2.namePokemon2 = namePokemon2;
     }
 
     public static String getPathIconPokemon3() {
@@ -174,7 +173,7 @@ public class DataNamesIconsColorsAttacksAndPokemonsPlayer1 {
     }
 
     public static void setPathIconPokemon3(String pathIconPokemon3) {
-        DataNamesIconsColorsAttacksAndPokemonsPlayer1.pathIconPokemon3 = pathIconPokemon3;
+        DataNamesIconsColorsAttacksAndPokemonsPlayer2.pathIconPokemon3 = pathIconPokemon3;
     }
 
     public static String getNamePokemon3() {
@@ -182,6 +181,6 @@ public class DataNamesIconsColorsAttacksAndPokemonsPlayer1 {
     }
 
     public static void setNamePokemon3(String namePokemon3) {
-        DataNamesIconsColorsAttacksAndPokemonsPlayer1.namePokemon3 = namePokemon3;
+        DataNamesIconsColorsAttacksAndPokemonsPlayer2.namePokemon3 = namePokemon3;
     }
 }
