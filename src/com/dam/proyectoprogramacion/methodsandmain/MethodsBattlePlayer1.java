@@ -1372,9 +1372,149 @@ public class MethodsBattlePlayer1 {
          */
         return chooseColorAttacksPokemonPlayer1(typeAttack1.toLowerCase());
     }
+    /**
+     * metodo para poner el nuevo nombre del segundo ataque del pokemon
+     * @return el nuevo nombre del primer ataque
+     */
+    public static String newNameAttack2Pokemon1Player1() {
+        String nameAttack2 = "";
+        /**
+         * recorremos el array de objetos pokemons
+         */
+        for (Object obj : MethosInterfaceSelectionPokemon.getPokemonsPLayer1()) {
+            /**
+             * si es una instancia de los pokemons, se mete en la condicion
+             */
+            if (obj instanceof PokemonProperties) {
+                PokemonProperties pokemon1 = (PokemonProperties) obj;
+                /**
+                 * si el nombre es igual al nombre del boton del pokemon se mete en la condicion
+                 */
+                if (pokemon1.getName().equalsIgnoreCase(getNameOfThePokemonPlayer1())) {
 
+                    /**
+                     * iniciamos un objeto de tipo ataques pokemon que será igual a la
+                     * posicion 1 del array de ataques del pokemon
+                     */
+                    AttacksPokemons attakc2 = pokemon1.getAttacks()[1];
+                    /**
+                     * obtenemos el nombre
+                     */
+                    nameAttack2 = attakc2.getName();
+                }
+
+            }
+
+
+        }
+
+
+        /**
+         * devolvemos el nuevo nombre
+         */
+        return nameAttack2;
+    }
+
+    /**
+     * metodo para cambiar el icono del ataque 2 del pokemon cambiado
+     * @return el nuevo icono
+     */
+    public static String newType1Attack2Player1() {
+        String typeAttack2 = "";
+        /**
+         * recorremos el array de objetos pokemons
+         */
+        for (Object obj : MethosInterfaceSelectionPokemon.getPokemonsPLayer1()) {
+            /**
+             * si es una instancia de los pokemons, se mete en la condicion
+             */
+            if (obj instanceof PokemonProperties) {
+                PokemonProperties pokemon1 = (PokemonProperties) obj;
+                /**
+                 * si el nombre es igual al nombre del boton del pokemon se mete en la condicion
+                 */
+                if (pokemon1.getName().equalsIgnoreCase(getNameOfThePokemonPlayer1())) {
+
+                    /**
+                     * iniciamos un objeto de tipo ataques pokemon que será igual a la
+                     * posicion 1 del array de ataques del pokemon
+                     */
+                    AttacksPokemons attakc2 = pokemon1.getAttacks()[1];
+                    /**
+                     * obtenemos el tipo del primer ataque
+                     */
+                    typeAttack2 = attakc2.getType();
+                }
+
+            }
+
+
+        }
+
+
+        /**
+         * devolvemos el nuevo icono del tipo
+         */
+        return chooseAttackIconPokemon1Player1(typeAttack2.toLowerCase());
+    }
+
+    /**
+     * metodo para cambiar el color del ataque 2 del pokemon cambiado
+     * @return el nuevo color
+     */
+    public static Color newColor2Pokemon1Player1() {
+        String typeAttack2 = "";
+        /**
+         * recorremos el array de objetos pokemons
+         */
+        for (Object obj : MethosInterfaceSelectionPokemon.getPokemonsPLayer1()) {
+            /**
+             * si es una instancia de los pokemons, se mete en la condicion
+             */
+            if (obj instanceof PokemonProperties) {
+                PokemonProperties pokemon1 = (PokemonProperties) obj;
+                /**
+                 * si el nombre es igual al nombre del boton del pokemon se mete en la condicion
+                 */
+                if (pokemon1.getName().equalsIgnoreCase(getNameOfThePokemonPlayer1())) {
+
+                    /**
+                     * iniciamos un objeto de tipo ataques pokemon que será igual a la
+                     * posicion 1 del array de ataques del pokemon
+                     */
+                    AttacksPokemons attakc2 = pokemon1.getAttacks()[1];
+                    /**
+                     * obtenemos el tipo del primer ataque
+                     */
+                    typeAttack2 = attakc2.getType();
+                }
+
+            }
+
+
+        }
+
+
+        /**
+         * devolvemos el nuevo color del ataque
+         */
+        return chooseColorAttacksPokemonPlayer1(typeAttack2.toLowerCase());
+    }
+
+    /**
+     * metodos para obtener el texto del boton de los pokemons
+     * @return el texto de los pokemons
+     */
     private static String getNameOfThePokemonPlayer1 () {
 
+        return ButtonInterfaceChangePokemon.getPokemon1team().getText();
+    }
+    private static String getNameOfThePokemonPlayer1Pokemon2 () {
+
         return ButtonInterfaceChangePokemon.getPokemon2team().getText();
+    }
+    private static String getNameOfThePokemonPlayer1Pokemon3 () {
+
+        return ButtonInterfaceChangePokemon.getPokemon3team().getText();
     }
 }

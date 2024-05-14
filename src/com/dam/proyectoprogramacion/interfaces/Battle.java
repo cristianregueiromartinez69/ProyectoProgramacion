@@ -172,6 +172,12 @@ public class Battle extends JFrame {
                 pokemonBattle();
             }
         });
+        ButtonInterfaceChangePokemon.getBack().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clearGlobalPanelPlayer1WhenPressBackInChangePokemon();
+            }
+        });
 
 
 
@@ -222,28 +228,45 @@ public class Battle extends JFrame {
         attacksChangesPokemon1Player1.setVisible(true);
     }
 
+    /**
+     * metodo para limpiar el panel entero al cambiar de pokemon
+     */
     private static  void clearGlobalPanelPlayer1WhenPressButtonToChangePokemon1InChangePokemon(){
+        /**
+         * establecemos nuevos valores del primer ataque
+         */
         ButtonInterfaceCombat.setPathPokemonBattlePlayer1(MethodsBattlePlayer1.newPathIconPokemon1Player1());
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNameAttack1(MethodsBattlePlayer1.newNameAttack1Pokemon1Player1());
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack1(MethodsBattlePlayer1.newColor1Pokemon1Player1());
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack1(MethodsBattlePlayer1.newType1Attack1Player1());
 
+        /**
+         * limpiamos el panel de ataque y cambio
+         */
         attacksChangesPokemon1Player1.removeAll();
         attacksChangesPokemon1Player1.repaint();
         attacksChangesPokemon1Player1.revalidate();
 
+        /**
+         * limpiamos el panel de ataques
+         */
         attacksPanelPlayer1.removeAll();
         attacksPanelPlayer1.repaint();
         attacksPanelPlayer1.revalidate();
 
+        /**
+         * volvemos a añadir el panel de ataque y cambio
+         */
         attacksChangesPokemon1Player1.add(new AttacksAndChangesPokemonPlayer1());
+        /**
+         * volvemos a añadir el panel de ataques
+         */
         attacksPanelPlayer1.add(new AttacksPokemonPlayer1());
         globalPanelPLayer1.add(attacksChangesPokemon1Player1);
         globalPanelPLayer1.add(attacksPanelPlayer1);
         contentPanel.add(globalPanelPLayer1, BorderLayout.WEST);
 
-        ButtonInterfaceCombat.getAttackButtonPlayer1().setEnabled(true);
-        ButtonInterfaceCombat.getChangePokemonButtonPlayer1().setEnabled(true);
+
 
         contentPanel.repaint();
         contentPanel.revalidate();
