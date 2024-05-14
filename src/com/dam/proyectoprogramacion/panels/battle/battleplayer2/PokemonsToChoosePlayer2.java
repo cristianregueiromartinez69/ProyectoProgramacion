@@ -1,16 +1,19 @@
-package com.dam.proyectoprogramacion.panels.battle.battleplayer1;
+package com.dam.proyectoprogramacion.panels.battle.battleplayer2;
 
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer1;
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer2;
+import com.dam.proyectoprogramacion.panels.battle.battleplayer1.BackChangePokemonPlayer1;
 
 import javax.swing.*;
 import java.awt.*;
 
 /**
- * clase que será el panel con los botones de cambio de pokemons
+ * clase que será el panel con los botones de cambio de pokemons del jugador 2
  * @author cristian
  * @version v3.0
  */
-public class PokemonsToChoosePlayer1 extends JPanel {
+public class PokemonsToChoosePlayer2 extends JPanel {
+
 
     /**
      * atributos privados de la clase
@@ -20,7 +23,7 @@ public class PokemonsToChoosePlayer1 extends JPanel {
     private JPanel pokemon3;
     private JPanel backToBattlePanel;
 
-    public PokemonsToChoosePlayer1(){
+    public PokemonsToChoosePlayer2() {
         /**
          * lo hacemos visible y le damos un layout
          */
@@ -35,12 +38,12 @@ public class PokemonsToChoosePlayer1 extends JPanel {
         /**
          * instanciamos el boton del pokemon 1
          */
-        JButton pokemon1Button = new ButtonInterfaceChangePokemonPlayer1().makePokemon1TeamButton();
+        JButton pokemon1Button = new ButtonInterfaceChangePokemonPlayer2().makePokemon1TeamButton();
         pokemon1Button.setBackground(Color.GREEN);
         pokemon1Button.setForeground(Color.WHITE);
-        pokemon1Button.setPreferredSize(new Dimension(170,100));
+        pokemon1Button.setPreferredSize(new Dimension(170, 100));
         pokemon1Button.setMaximumSize(new Dimension(170, 100));
-        pokemon1Button.setMinimumSize(new Dimension(170,100));
+        pokemon1Button.setMinimumSize(new Dimension(170, 100));
 
         /**
          * lo añadimos
@@ -54,12 +57,12 @@ public class PokemonsToChoosePlayer1 extends JPanel {
         /**
          * instanciamos el boton del pokemon 1
          */
-        JButton pokemon2Button = new ButtonInterfaceChangePokemonPlayer1().makePokemon2TeamButton();
+        JButton pokemon2Button = new ButtonInterfaceChangePokemonPlayer2().makePokemon2TeamButton();
         pokemon2Button.setBackground(Color.GREEN);
         pokemon2Button.setForeground(Color.WHITE);
-        pokemon2Button.setPreferredSize(new Dimension(170,100));
+        pokemon2Button.setPreferredSize(new Dimension(170, 100));
         pokemon2Button.setMaximumSize(new Dimension(170, 100));
-        pokemon2Button.setMinimumSize(new Dimension(170,100));
+        pokemon2Button.setMinimumSize(new Dimension(170, 100));
 
         /**
          * lo añadimos
@@ -74,12 +77,12 @@ public class PokemonsToChoosePlayer1 extends JPanel {
         /**
          * instanciamos el boton del pokemon 1
          */
-        JButton pokemon3Button = new ButtonInterfaceChangePokemonPlayer1().makePokemon3TeamButton();
+        JButton pokemon3Button = new ButtonInterfaceChangePokemonPlayer2().makePokemon3TeamButton();
         pokemon3Button.setBackground(Color.GREEN);
         pokemon3Button.setForeground(Color.WHITE);
-        pokemon3Button.setPreferredSize(new Dimension(170,100));
+        pokemon3Button.setPreferredSize(new Dimension(170, 100));
         pokemon3Button.setMaximumSize(new Dimension(170, 100));
-        pokemon3Button.setMinimumSize(new Dimension(170,100));
+        pokemon3Button.setMinimumSize(new Dimension(170, 100));
         /**
          * lo añadimos
          */
@@ -90,7 +93,7 @@ public class PokemonsToChoosePlayer1 extends JPanel {
          */
         backToBattlePanel = new JPanel();
         backToBattlePanel.setLayout(new BoxLayout(backToBattlePanel, BoxLayout.X_AXIS));
-        backToBattlePanel.add(new BackChangePokemonPlayer1());
+        backToBattlePanel.add(new BackChangePokemonPlayer2());
 
 
         /**
@@ -101,7 +104,4 @@ public class PokemonsToChoosePlayer1 extends JPanel {
         this.add(pokemon3);
         this.add(backToBattlePanel);
     }
-
-
-
 }

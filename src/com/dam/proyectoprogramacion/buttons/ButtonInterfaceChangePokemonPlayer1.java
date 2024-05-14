@@ -1,18 +1,17 @@
 package com.dam.proyectoprogramacion.buttons;
 
 import com.dam.proyectoprogramacion.methodsandmain.DataNamesIconsColorsAttacksAndPokemonsPlayer1;
-import com.dam.proyectoprogramacion.methodsandmain.MethodsInterfaceChangePokemon;
 
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 
 /**
- * clase con los botones de la interfaz de cambios de pokemons
+ * clase con los botones de la interfaz de cambios de pokemons para el jugador 1
  * @author cristian
  * @version v1.0
  */
-public class ButtonInterfaceChangePokemon extends JPanel {
+public class ButtonInterfaceChangePokemonPlayer1 extends JPanel {
 
     /**
      * atributos privados de tipo JButton que son los 3 miembros del equipo y un boton para volver al combate
@@ -80,7 +79,7 @@ public class ButtonInterfaceChangePokemon extends JPanel {
     }
 
     public static void setPokemon1team(JButton pokemon1team) {
-        ButtonInterfaceChangePokemon.pokemon1team = pokemon1team;
+        ButtonInterfaceChangePokemonPlayer1.pokemon1team = pokemon1team;
     }
 
     public static JButton getPokemon2team() {
@@ -88,7 +87,7 @@ public class ButtonInterfaceChangePokemon extends JPanel {
     }
 
     public static void setPokemon2team(JButton pokemon2team) {
-        ButtonInterfaceChangePokemon.pokemon2team = pokemon2team;
+        ButtonInterfaceChangePokemonPlayer1.pokemon2team = pokemon2team;
     }
 
     public static JButton getPokemon3team() {
@@ -96,7 +95,7 @@ public class ButtonInterfaceChangePokemon extends JPanel {
     }
 
     public static void setPokemon3team(JButton pokemon3team) {
-        ButtonInterfaceChangePokemon.pokemon3team = pokemon3team;
+        ButtonInterfaceChangePokemonPlayer1.pokemon3team = pokemon3team;
     }
 
     public static JButton getBack() {
@@ -104,6 +103,6 @@ public class ButtonInterfaceChangePokemon extends JPanel {
     }
 
     public static void setBack(JButton back) {
-        ButtonInterfaceChangePokemon.back = back;
+        ButtonInterfaceChangePokemonPlayer1.back = back;
     }
 }

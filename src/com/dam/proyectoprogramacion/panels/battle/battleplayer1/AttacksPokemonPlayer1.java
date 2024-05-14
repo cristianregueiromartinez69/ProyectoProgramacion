@@ -3,7 +3,7 @@ package com.dam.proyectoprogramacion.panels.battle.battleplayer1;
 import javax.swing.*;
 
 /**
- * clase con los paneles de los ataques del pokemon en batalla
+ * clase con los paneles de los ataques del pokemon en batalla del jugador 1
  * @author cristian
  * @version v3.0
  */
