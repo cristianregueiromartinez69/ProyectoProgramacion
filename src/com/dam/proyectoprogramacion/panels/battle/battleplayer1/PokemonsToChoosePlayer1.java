@@ -1,6 +1,6 @@
 package com.dam.proyectoprogramacion.panels.battle.battleplayer1;
 
-import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemon;
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer1;
 
 import javax.swing.*;
 import java.awt.*;
@@ -35,7 +35,7 @@ public class PokemonsToChoosePlayer1 extends JPanel {
         /**
          * instanciamos el boton del pokemon 1
          */
-        JButton pokemon1Button = new ButtonInterfaceChangePokemon().makePokemon1TeamButton();
+        JButton pokemon1Button = new ButtonInterfaceChangePokemonPlayer1().makePokemon1TeamButton();
         pokemon1Button.setBackground(Color.GREEN);
         pokemon1Button.setForeground(Color.WHITE);
         pokemon1Button.setPreferredSize(new Dimension(170,100));
@@ -54,7 +54,7 @@ public class PokemonsToChoosePlayer1 extends JPanel {
         /**
          * instanciamos el boton del pokemon 1
          */
-        JButton pokemon2Button = new ButtonInterfaceChangePokemon().makePokemon2TeamButton();
+        JButton pokemon2Button = new ButtonInterfaceChangePokemonPlayer1().makePokemon2TeamButton();
         pokemon2Button.setBackground(Color.GREEN);
         pokemon2Button.setForeground(Color.WHITE);
         pokemon2Button.setPreferredSize(new Dimension(170,100));
@@ -74,7 +74,7 @@ public class PokemonsToChoosePlayer1 extends JPanel {
         /**
          * instanciamos el boton del pokemon 1
          */
-        JButton pokemon3Button = new ButtonInterfaceChangePokemon().makePokemon3TeamButton();
+        JButton pokemon3Button = new ButtonInterfaceChangePokemonPlayer1().makePokemon3TeamButton();
         pokemon3Button.setBackground(Color.GREEN);
         pokemon3Button.setForeground(Color.WHITE);
         pokemon3Button.setPreferredSize(new Dimension(170,100));

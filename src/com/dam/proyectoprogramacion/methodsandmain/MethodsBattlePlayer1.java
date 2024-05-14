@@ -1,13 +1,11 @@
 package com.dam.proyectoprogramacion.methodsandmain;
 
-import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemon;
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer1;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
-import com.dam.proyectoprogramacion.interfaces.Battle;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.pokemon.AttacksPokemons;
 import com.dam.proyectoprogramacion.pokemon.PokemonProperties;
 
-import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -2872,7 +2870,7 @@ public class MethodsBattlePlayer1 {
          * iniciamos variables iguales al pokemon en batalla y al que quiere ser cambiado
          */
         String namePokemonInBattle = ButtonInterfaceCombat.getPathPokemonBattlePlayer1();
-        String namePokemonToChange1 = ButtonInterfaceChangePokemon.getPokemon1team().getText();
+        String namePokemonToChange1 = ButtonInterfaceChangePokemonPlayer1.getPokemon1team().getText();
 
         /**
          * tenemos que recortar uno de ellos ya que estamos cogiendo el path
@@ -2899,7 +2897,7 @@ public class MethodsBattlePlayer1 {
          * iniciamos variables iguales al pokemon en batalla y al que quiere ser cambiado
          */
         String namePokemonInBattle = ButtonInterfaceCombat.getPathPokemonBattlePlayer1();
-        String namePokemonToChange2 = ButtonInterfaceChangePokemon.getPokemon2team().getText();
+        String namePokemonToChange2 = ButtonInterfaceChangePokemonPlayer1.getPokemon2team().getText();
 
         /**
          * tenemos que recortar uno de ellos ya que estamos cogiendo el path
@@ -2926,7 +2924,7 @@ public class MethodsBattlePlayer1 {
          * iniciamos variables iguales al pokemon en batalla y al que quiere ser cambiado
          */
         String namePokemonInBattle = ButtonInterfaceCombat.getPathPokemonBattlePlayer1();
-        String namePokemonToChange3 = ButtonInterfaceChangePokemon.getPokemon3team().getText();
+        String namePokemonToChange3 = ButtonInterfaceChangePokemonPlayer1.getPokemon3team().getText();
 
         /**
          * tenemos que recortar uno de ellos ya que estamos cogiendo el path
@@ -2950,14 +2948,14 @@ public class MethodsBattlePlayer1 {
      */
     private static String getNameOfThePokemonPlayer1Pokemon1 () {
 
-        return ButtonInterfaceChangePokemon.getPokemon1team().getText();
+        return ButtonInterfaceChangePokemonPlayer1.getPokemon1team().getText();
     }
     private static String getNameOfThePokemonPlayer1Pokemon2 () {
 
-        return ButtonInterfaceChangePokemon.getPokemon2team().getText();
+        return ButtonInterfaceChangePokemonPlayer1.getPokemon2team().getText();
     }
     private static String getNameOfThePokemonPlayer1Pokemon3 () {
 
-        return ButtonInterfaceChangePokemon.getPokemon3team().getText();
+        return ButtonInterfaceChangePokemonPlayer1.getPokemon3team().getText();
     }
 }

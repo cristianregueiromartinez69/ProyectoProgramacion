@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceAttacks;
-import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemon;
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer1;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
 import com.dam.proyectoprogramacion.methodsandmain.DataNamesIconsColorsAttacksAndPokemonsPlayer1;
 import com.dam.proyectoprogramacion.methodsandmain.MethodsBattlePlayer1;
@@ -162,9 +162,12 @@ public class Battle extends JFrame {
          * actionListener para cambiar un pokemon por otro
          * al cambiar se actualizan las características y todo
          */
-        ButtonInterfaceChangePokemon.getPokemon1team().addActionListener(new ActionListener() {
+        ButtonInterfaceChangePokemonPlayer1.getPokemon1team().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                /**
+                 * llamamos al metodo que actualiza los paneles al cambiar de pokemon
+                 */
                 clearGlobalPanelPlayer1WhenPressButtonToChangePokemon1InChangePokemon();
                 /**
                  * llamamos al propio metodo para actualizar todo
@@ -176,9 +179,12 @@ public class Battle extends JFrame {
          * actionListener para cambiar un pokemon por otro
          * al cambiar se actualizan las características y todo
          */
-        ButtonInterfaceChangePokemon.getPokemon2team().addActionListener(new ActionListener() {
+        ButtonInterfaceChangePokemonPlayer1.getPokemon2team().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                /**
+                 * llamamos al metodo que actualiza los paneles al cambiar de pokemon
+                 */
                 clearGlobalPanelPlayer1WhenPressButtonToChangePokemon2InChangePokemon();
                 /**
                  * llamamos al propio metodo para actualizar todo
@@ -190,9 +196,12 @@ public class Battle extends JFrame {
          * actionListener para cambiar un pokemon por otro
          * al cambiar se actualizan las características y todo
          */
-        ButtonInterfaceChangePokemon.getPokemon3team().addActionListener(new ActionListener() {
+        ButtonInterfaceChangePokemonPlayer1.getPokemon3team().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                /**
+                 * llamamos al metodo que actualiza los paneles al cambiar de pokemon
+                 */
                 clearGlobalPanelPlayer1WhenPressButtonToChangePokemon3InChangePokemon();
                 /**
                  * llamamos al propio metodo para actualizar todo
@@ -201,7 +210,7 @@ public class Battle extends JFrame {
             }
         });
 
-        ButtonInterfaceChangePokemon.getBack().addActionListener(new ActionListener() {
+        ButtonInterfaceChangePokemonPlayer1.getBack().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 clearGlobalPanelPlayer1WhenPressBackInChangePokemon();

@@ -1,7 +1,6 @@
 package com.dam.proyectoprogramacion.panels.battle.battleplayer1;
 
-import com.dam.proyectoprogramacion.buttons.ButtonInterfaceAttacks;
-import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemon;
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer1;
 
 import javax.swing.*;
 import java.awt.*;
@@ -33,7 +32,7 @@ public class BackChangePokemonPlayer1 extends JPanel {
         /**
          * instanciamos un boton y lo hacemos igual a un metodo que crea el boton
          */
-        JButton backToAttackChange = new ButtonInterfaceChangePokemon().makeBackButton();
+        JButton backToAttackChange = new ButtonInterfaceChangePokemonPlayer1().makeBackButton();
         backToAttackChange.setBackground(Color.BLUE);
         backToAttackChange.setForeground(Color.WHITE);
         /**
