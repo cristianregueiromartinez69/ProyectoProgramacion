@@ -162,6 +162,20 @@ public class Battle extends JFrame {
          * actionListener para cambiar un pokemon por otro
          * al cambiar se actualizan las características y todo
          */
+        ButtonInterfaceChangePokemon.getPokemon1team().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clearGlobalPanelPlayer1WhenPressButtonToChangePokemon1InChangePokemon();
+                /**
+                 * llamamos al propio metodo para actualizar todo
+                 */
+                pokemonBattle();
+            }
+        });
+        /**
+         * actionListener para cambiar un pokemon por otro
+         * al cambiar se actualizan las características y todo
+         */
         ButtonInterfaceChangePokemon.getPokemon2team().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -172,6 +186,21 @@ public class Battle extends JFrame {
                 pokemonBattle();
             }
         });
+        /**
+         * actionListener para cambiar un pokemon por otro
+         * al cambiar se actualizan las características y todo
+         */
+        ButtonInterfaceChangePokemon.getPokemon3team().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clearGlobalPanelPlayer1WhenPressButtonToChangePokemon1InChangePokemon();
+                /**
+                 * llamamos al propio metodo para actualizar todo
+                 */
+                pokemonBattle();
+            }
+        });
+
         ButtonInterfaceChangePokemon.getBack().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
