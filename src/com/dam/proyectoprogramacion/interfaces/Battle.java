@@ -16,6 +16,8 @@ import com.dam.proyectoprogramacion.panels.battle.battleplayer1.AttacksPokemonPl
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.PokemonsToChoosePlayer1;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer2.AliasAndLogoPlayer2;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer2.AttacksAndChangesPokemonPlayer2;
+import com.dam.proyectoprogramacion.panels.battle.battleplayer2.AttacksPokemonPlayer2;
+import com.dam.proyectoprogramacion.panels.battle.battleplayer2.PokemonsToChoosePlayer2;
 
 /**
  * interfaz del combate pokemon
@@ -31,12 +33,14 @@ public class Battle extends JFrame {
     private  static JPanel globalPanelPLayer1;
     private static JPanel aliasLogoPlayer1;
     private static JPanel attacksChangesPokemon1Player1;
-    private static JPanel attacksChangesPokemon2Player1;
-    private static JPanel attacksChangesPokemon3Player1;
     private  static JPanel attacksPanelPlayer1;
     private static JPanel changesPokemonsPLayer1;
     private  static JPanel battlePanel;
     private  static JPanel globalPanelPLayer2;
+    private static JPanel aliasLogoPlayer2;
+    private static JPanel attacksChangesPokemon1Player2;
+    private  static JPanel attacksPanelPlayer2;
+    private static JPanel changesPokemonsPLayer2;
     private  static JPanel lifePanelPokemons;
 
 
@@ -111,11 +115,43 @@ public class Battle extends JFrame {
         globalPanelPLayer2.setLayout(new BoxLayout(globalPanelPLayer2, BoxLayout.Y_AXIS));
 
         /**
-         * añadimos al panel global del jugador 1 el logo, alias y el boton de atacar y cambio
+         * añadimos al panel global del jugador 2 el logo y alias
          */
-        globalPanelPLayer2.add(new AliasAndLogoPlayer2());
-        globalPanelPLayer2.add(new AttacksAndChangesPokemonPlayer2());
+        aliasLogoPlayer2 = new AliasAndLogoPlayer2();
+        globalPanelPLayer2.add(aliasLogoPlayer2);
+
+        /**
+         * añadimos al panel global del jugador 2 los ataques
+         */
+        attacksChangesPokemon1Player2 = new AttacksAndChangesPokemonPlayer2();
+        globalPanelPLayer2.add(attacksChangesPokemon1Player2);
         contentPanel.add(globalPanelPLayer2, BorderLayout.EAST);
+
+        /**
+         * iniciamos el panel de ataques del jugador 2
+         */
+        attacksPanelPlayer2 = new JPanel();
+        attacksPanelPlayer2.setLayout(new BoxLayout(attacksPanelPlayer2, BoxLayout.Y_AXIS));
+        /**
+         * lo hacemos igual a un panel con los ataques del pokemon
+         */
+        attacksPanelPlayer2.add(new AttacksPokemonPlayer2());
+        attacksPanelPlayer2.setVisible(false);
+        globalPanelPLayer2.add(attacksPanelPlayer2);
+
+        /**
+         * iniciamos el panel de cambio de pokemons y le damos un layout
+         */
+        changesPokemonsPLayer2 = new JPanel();
+        changesPokemonsPLayer2.setLayout(new BoxLayout(changesPokemonsPLayer2, BoxLayout.Y_AXIS));
+
+        /**
+         * hacemos el panel de cambio de pokemon del jugador 1 clase que es un panel que lo crea
+         */
+        changesPokemonsPLayer2.add(new PokemonsToChoosePlayer2());
+        changesPokemonsPLayer2.setVisible(false);
+        globalPanelPLayer2.add(changesPokemonsPLayer2);
+
         pokemonBattle();
 
     }
