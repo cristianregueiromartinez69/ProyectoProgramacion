@@ -1,5 +1,6 @@
 package com.dam.proyectoprogramacion.methodsandmain;
 
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemon;
 import com.dam.proyectoprogramacion.interfaces.Battle;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.pokemon.AttacksPokemons;
@@ -19,12 +20,13 @@ public class MethodsBattlePlayer1 {
 
     /**
      * metodo que recorre un hashmap y busca el primer pokemon escogido por el jugador 1
+     *
      * @param players el hashmap de los jugadores
      * @return el path con la imagen del pokemon seleccionado
      */
-    public static String putImageAttackButtonPlayer1(HashMap<String, ArrayList<Object>> players){
+    public static String putImageAttackButtonPlayer1(HashMap<String, ArrayList<Object>> players) {
 
-        String pathImagePokemon="";
+        String pathImagePokemon = "";
         String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
         /**
          * for para recorrer el hashmap de los jugadores
@@ -37,7 +39,7 @@ public class MethodsBattlePlayer1 {
                 /**
                  * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
                  */
-                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
                 if (!pokemons.isEmpty()) {
                     /**
                      * hacemos un objeto de pokemons y decimos que es igual al primer elemento de la lista de pokemons
@@ -61,16 +63,18 @@ public class MethodsBattlePlayer1 {
 
 
 //---------------------------------xAtaque numero 1 ---------------------------//
+
     /**
      * metodo para pasar el path con el icono del primer ataque del pokemon del jugador 1
+     *
      * @param players el hashmap de los jugadores
      * @return el path con el icono
      */
-    public static  String getTypeAttack1PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players){
+    public static String getTypeAttack1PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players) {
         /**
          * variable local para almacenar el icono del ataque
          */
-        String type="";
+        String type = "";
         String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
 
         /**
@@ -82,7 +86,7 @@ public class MethodsBattlePlayer1 {
                 /**
                  * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
                  */
-                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
                 if (!pokemons.isEmpty()) {
 
                     /**
@@ -118,13 +122,14 @@ public class MethodsBattlePlayer1 {
 
     /**
      * metodo para escoger el icono del ataque según el tipo
+     *
      * @param type el tipo del ataque
      * @return el path del icono
      */
-    private static String chooseAttackIconPokemon1Player1(String type){
+    private static String chooseAttackIconPokemon1Player1(String type) {
 
         String pathType = "";
-        switch(type){
+        switch (type) {
 
             case "bicho":
                 pathType = "imagenes/bicho.png";
@@ -187,14 +192,15 @@ public class MethodsBattlePlayer1 {
 
     /**
      * metodo para establecer el nombre del primer ataque del pokemon en batalla
+     *
      * @param players el hashmap de los jugadores
      * @return el nombre del primer ataque
      */
-    public static  String getNameAttack1PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players){
+    public static String getNameAttack1PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players) {
         /**
          * variable local para almacenar el nombre del ataque
          */
-        String name="";
+        String name = "";
         String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
 
         /**
@@ -206,7 +212,7 @@ public class MethodsBattlePlayer1 {
                 /**
                  * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
                  */
-                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
                 if (!pokemons.isEmpty()) {
 
                     /**
@@ -242,10 +248,11 @@ public class MethodsBattlePlayer1 {
 
     /**
      * Metodo para escoger el color del fondo del ataque del pokemon
+     *
      * @param players el hashmap de los jugadores
      * @return el color de fondo
      */
-    public static  Color getColorAttack1PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players){
+    public static Color getColorAttack1PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players) {
 
 
         String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
@@ -260,7 +267,7 @@ public class MethodsBattlePlayer1 {
                 /**
                  * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
                  */
-                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
                 if (!pokemons.isEmpty()) {
 
                     /**
@@ -274,7 +281,7 @@ public class MethodsBattlePlayer1 {
                     /**
                      * almacenamos el tipo
                      */
-                     type = attack.getType();
+                    type = attack.getType();
 
                     break;
 
@@ -297,13 +304,14 @@ public class MethodsBattlePlayer1 {
 
     /**
      * metodo para escoger el color de fondo del ataque 1 del pokemon en batalla
+     *
      * @param type el tipo del ataque
      * @return el color correspondiente
      */
-    private static Color chooseColorAttacksPokemonPlayer1(String type){
+    private static Color chooseColorAttacksPokemonPlayer1(String type) {
 
         Color colorAttack = Color.BLUE;
-        switch(type){
+        switch (type) {
 
             case "bicho":
                 colorAttack = Color.GREEN.brighter();
@@ -368,14 +376,15 @@ public class MethodsBattlePlayer1 {
 
     /**
      * metodo para pasar el path con el icono del segundo ataque del pokemon del jugador 1
+     *
      * @param players el hashmap de los jugadores
      * @return el path con el icono
      */
-    public static  String getTypeAttack2PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players){
+    public static String getTypeAttack2PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players) {
         /**
          * variable local para almacenar el icono del ataque
          */
-        String type="";
+        String type = "";
         String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
 
         /**
@@ -387,7 +396,7 @@ public class MethodsBattlePlayer1 {
                 /**
                  * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
                  */
-                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
                 if (!pokemons.isEmpty()) {
 
                     /**
@@ -420,16 +429,18 @@ public class MethodsBattlePlayer1 {
         return chooseAttackIconPokemon1Player1(type.toLowerCase());
 
     }
+
     /**
      * metodo para establecer el nombre del segundo ataque del pokemon en batalla
+     *
      * @param players el hashmap de los jugadores
      * @return el nombre del primer ataque
      */
-    public static  String getNameAttack2PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players){
+    public static String getNameAttack2PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players) {
         /**
          * variable local para almacenar el nombre del ataque
          */
-        String name="";
+        String name = "";
         String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
 
         /**
@@ -441,7 +452,7 @@ public class MethodsBattlePlayer1 {
                 /**
                  * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
                  */
-                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
                 if (!pokemons.isEmpty()) {
 
                     /**
@@ -474,12 +485,14 @@ public class MethodsBattlePlayer1 {
         return name;
 
     }
+
     /**
      * Metodo para escoger el color del fondo del segundo del pokemon
+     *
      * @param players el hashmap de los jugadores
      * @return el color de fondo
      */
-    public static  Color getColorAttack2PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players){
+    public static Color getColorAttack2PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players) {
 
 
         String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
@@ -494,7 +507,7 @@ public class MethodsBattlePlayer1 {
                 /**
                  * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
                  */
-                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
                 if (!pokemons.isEmpty()) {
 
                     /**
@@ -534,14 +547,15 @@ public class MethodsBattlePlayer1 {
 
     /**
      * metodo para pasar el path con el icono del tercer ataque del pokemon del jugador 1
+     *
      * @param players el hashmap de los jugadores
      * @return el path con el icono
      */
-    public static  String getTypeAttack3PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players){
+    public static String getTypeAttack3PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players) {
         /**
          * variable local para almacenar el icono del ataque
          */
-        String type="";
+        String type = "";
         String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
 
         /**
@@ -553,7 +567,7 @@ public class MethodsBattlePlayer1 {
                 /**
                  * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
                  */
-                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
                 if (!pokemons.isEmpty()) {
 
                     /**
@@ -586,16 +600,18 @@ public class MethodsBattlePlayer1 {
         return chooseAttackIconPokemon1Player1(type.toLowerCase());
 
     }
+
     /**
      * metodo para establecer el nombre del tercer ataque del pokemon en batalla
+     *
      * @param players el hashmap de los jugadores
      * @return el nombre del primer ataque
      */
-    public static  String getNameAttack3PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players){
+    public static String getNameAttack3PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players) {
         /**
          * variable local para almacenar el nombre del ataque
          */
-        String name="";
+        String name = "";
         String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
 
         /**
@@ -607,7 +623,7 @@ public class MethodsBattlePlayer1 {
                 /**
                  * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
                  */
-                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
                 if (!pokemons.isEmpty()) {
 
                     /**
@@ -640,12 +656,14 @@ public class MethodsBattlePlayer1 {
         return name;
 
     }
+
     /**
      * Metodo para escoger el color del fondo del tercer del pokemon
+     *
      * @param players el hashmap de los jugadores
      * @return el color de fondo
      */
-    public static  Color getColorAttack3PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players){
+    public static Color getColorAttack3PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players) {
 
 
         String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
@@ -660,7 +678,7 @@ public class MethodsBattlePlayer1 {
                 /**
                  * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
                  */
-                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
                 if (!pokemons.isEmpty()) {
 
                     /**
@@ -699,14 +717,15 @@ public class MethodsBattlePlayer1 {
 
     /**
      * metodo para pasar el path con el icono del cuarto ataque del pokemon del jugador 1
+     *
      * @param players el hashmap de los jugadores
      * @return el path con el icono
      */
-    public static  String getTypeAttack4PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players){
+    public static String getTypeAttack4PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players) {
         /**
          * variable local para almacenar el icono del ataque
          */
-        String type="";
+        String type = "";
         String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
 
         /**
@@ -718,7 +737,7 @@ public class MethodsBattlePlayer1 {
                 /**
                  * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
                  */
-                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
                 if (!pokemons.isEmpty()) {
 
                     /**
@@ -751,16 +770,18 @@ public class MethodsBattlePlayer1 {
         return chooseAttackIconPokemon1Player1(type.toLowerCase());
 
     }
+
     /**
      * metodo para establecer el nombre del cuarto ataque del pokemon en batalla
+     *
      * @param players el hashmap de los jugadores
      * @return el nombre del primer ataque
      */
-    public static  String getNameAttack4PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players){
+    public static String getNameAttack4PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players) {
         /**
          * variable local para almacenar el nombre del ataque
          */
-        String name="";
+        String name = "";
         String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
 
         /**
@@ -772,7 +793,7 @@ public class MethodsBattlePlayer1 {
                 /**
                  * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
                  */
-                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
                 if (!pokemons.isEmpty()) {
 
                     /**
@@ -805,12 +826,14 @@ public class MethodsBattlePlayer1 {
         return name;
 
     }
+
     /**
      * Metodo para escoger el color del fondo del cuarto del pokemon
+     *
      * @param players el hashmap de los jugadores
      * @return el color de fondo
      */
-    public static  Color getColorAttack4PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players){
+    public static Color getColorAttack4PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players) {
 
 
         String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
@@ -825,7 +848,7 @@ public class MethodsBattlePlayer1 {
                 /**
                  * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
                  */
-                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
                 if (!pokemons.isEmpty()) {
 
                     /**
@@ -865,14 +888,15 @@ public class MethodsBattlePlayer1 {
 
     /**
      * metodo para obtener el path del icono del  pokemon escogido por el jugador 1
+     *
      * @param players el hashmap de los jugadores
      * @return el nombre del pokemon
      */
-    public static  String getPathPokemon1Player1(HashMap<String, ArrayList<Object>> players){
+    public static String getPathPokemon1Player1(HashMap<String, ArrayList<Object>> players) {
         /**
          * variable local para almacenar el path del icono del pokemon
          */
-        String pathIconPokemon="";
+        String pathIconPokemon = "";
         String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
 
         /**
@@ -884,7 +908,7 @@ public class MethodsBattlePlayer1 {
                 /**
                  * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
                  */
-                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
                 if (!pokemons.isEmpty()) {
 
                     /**
@@ -914,12 +938,14 @@ public class MethodsBattlePlayer1 {
         return pathIconPokemon;
 
     }
+
     /**
      * metodo para obtener el nombre del primer pokemon escogido por el jugador 1
+     *
      * @param players el hashmap de los jugadores
      * @return el nombre del pokemon
      */
-    public static  String getNamePokemon1Player1(HashMap<String, ArrayList<Object>> players){
+    public static String getNamePokemon1Player1(HashMap<String, ArrayList<Object>> players) {
         /**
          * variable local para almacenar el nombre del pokemon
          */
@@ -935,7 +961,7 @@ public class MethodsBattlePlayer1 {
                 /**
                  * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
                  */
-                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
                 if (!pokemons.isEmpty()) {
 
                     /**
@@ -965,16 +991,18 @@ public class MethodsBattlePlayer1 {
         return namePokemon;
 
     }
+
     /**
      * metodo para obtener el path del icono del  pokemon escogido por el jugador 1
+     *
      * @param players el hashmap de los jugadores
      * @return el nombre del pokemon
      */
-    public static  String getPathPokemon2Player1(HashMap<String, ArrayList<Object>> players){
+    public static String getPathPokemon2Player1(HashMap<String, ArrayList<Object>> players) {
         /**
          * variable local para almacenar el path del icono del pokemon
          */
-        String pathIconPokemon="";
+        String pathIconPokemon = "";
         String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
 
         /**
@@ -986,7 +1014,7 @@ public class MethodsBattlePlayer1 {
                 /**
                  * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
                  */
-                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
                 if (!pokemons.isEmpty()) {
 
                     /**
@@ -1016,12 +1044,14 @@ public class MethodsBattlePlayer1 {
         return pathIconPokemon;
 
     }
+
     /**
      * metodo para obtener el nombre del segundo pokemon escogido por el jugador 1
+     *
      * @param players el hashmap de los jugadores
      * @return el nombre del pokemon
      */
-    public static  String getNamePokemon2Player1(HashMap<String, ArrayList<Object>> players){
+    public static String getNamePokemon2Player1(HashMap<String, ArrayList<Object>> players) {
         /**
          * variable local para almacenar el nombre del pokemon
          */
@@ -1037,7 +1067,7 @@ public class MethodsBattlePlayer1 {
                 /**
                  * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
                  */
-                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
                 if (!pokemons.isEmpty()) {
 
                     /**
@@ -1067,16 +1097,18 @@ public class MethodsBattlePlayer1 {
         return namePokemon;
 
     }
+
     /**
      * metodo para obtener el path del icono del  pokemon escogido por el jugador 1
+     *
      * @param players el hashmap de los jugadores
      * @return el nombre del pokemon
      */
-    public static  String getPathPokemon3Player1(HashMap<String, ArrayList<Object>> players){
+    public static String getPathPokemon3Player1(HashMap<String, ArrayList<Object>> players) {
         /**
          * variable local para almacenar el path del icono del pokemon
          */
-        String pathIconPokemon="";
+        String pathIconPokemon = "";
         String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
 
         /**
@@ -1088,7 +1120,7 @@ public class MethodsBattlePlayer1 {
                 /**
                  * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
                  */
-                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
                 if (!pokemons.isEmpty()) {
 
                     /**
@@ -1118,12 +1150,14 @@ public class MethodsBattlePlayer1 {
         return pathIconPokemon;
 
     }
+
     /**
      * metodo para obtener el nombre del tercer pokemon escogido por el jugador 1
+     *
      * @param players el hashmap de los jugadores
      * @return el nombre del pokemon
      */
-    public static  String getNamePokemon3Player1(HashMap<String, ArrayList<Object>> players){
+    public static String getNamePokemon3Player1(HashMap<String, ArrayList<Object>> players) {
         /**
          * variable local para almacenar el nombre del pokemon
          */
@@ -1139,7 +1173,7 @@ public class MethodsBattlePlayer1 {
                 /**
                  * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
                  */
-                ArrayList <Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
                 if (!pokemons.isEmpty()) {
 
                     /**
@@ -1170,6 +1204,31 @@ public class MethodsBattlePlayer1 {
 
     }
 
+    //-------------------------Pulsas un boton y cambias de pokemon-------------------------//
 
+    public static String newPathIconPokemon1Player1() {
+        String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+        String pathIcon = "";
+        for (Object obj : MethosInterfaceSelectionPokemon.getPokemonsPLayer1()) {
+            if (obj instanceof PokemonProperties) {
+                PokemonProperties pokemon1 = (PokemonProperties) obj;
+                if (pokemon1.getName().equals(getNameOfThePokemonPlayer1().toLowerCase())) {
+
+                    pathIcon = "imagenes/" + getNameOfThePokemonPlayer1().toLowerCase() + ".png";
+                }
+                else{
+                    return null;
+                }
+            }
+
+
+        }
+
+
+     return pathIcon;
+    }
+    private static String getNameOfThePokemonPlayer1 () {
+
+        return ButtonInterfaceChangePokemon.getPokemon1team().getText();
+    }
 }
-
