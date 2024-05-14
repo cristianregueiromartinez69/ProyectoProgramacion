@@ -1779,11 +1779,65 @@ public class MethodsBattlePlayer1 {
         /**
          * si es igual, no se hará el cambio, si no lo es, se hará
          */
-        if(namePokemonInBattle.equalsIgnoreCase(auxPokemonInBattle)){
+        if(namePokemonToChange1.equalsIgnoreCase(auxPokemonInBattle)){
             marca = false;
         }
 
       return marca;
+    }
+    /**
+     * metodo para saber si el pokemon que se intenta cambiar es el que ya está en batalla
+     * @return true si no lo es, false si lo es
+     */
+    public boolean checkingPokemonNamewithPokemonInBattlePokemon2(){
+        boolean marca = true;
+        /**
+         * iniciamos variables iguales al pokemon en batalla y al que quiere ser cambiado
+         */
+        String namePokemonInBattle = ButtonInterfaceCombat.getPathPokemonBattlePlayer1();
+        String namePokemonToChange2 = ButtonInterfaceChangePokemon.getPokemon2team().getText();
+
+        /**
+         * tenemos que recortar uno de ellos ya que estamos cogiendo el path
+         */
+        int lastIndex = namePokemonInBattle.lastIndexOf('/');
+        String auxPokemonInBattle = namePokemonInBattle.substring(lastIndex + 1, namePokemonInBattle.lastIndexOf('.'));
+
+        /**
+         * si es igual, no se hará el cambio, si no lo es, se hará
+         */
+        if(namePokemonToChange2.equalsIgnoreCase(auxPokemonInBattle)){
+            marca = false;
+        }
+
+        return marca;
+    }
+    /**
+     * metodo para saber si el pokemon que se intenta cambiar es el que ya está en batalla
+     * @return true si no lo es, false si lo es
+     */
+    public boolean checkingPokemonNamewithPokemonInBattlePokemon3(){
+        boolean marca = true;
+        /**
+         * iniciamos variables iguales al pokemon en batalla y al que quiere ser cambiado
+         */
+        String namePokemonInBattle = ButtonInterfaceCombat.getPathPokemonBattlePlayer1();
+        String namePokemonToChange3 = ButtonInterfaceChangePokemon.getPokemon3team().getText();
+
+        /**
+         * tenemos que recortar uno de ellos ya que estamos cogiendo el path
+         */
+        int lastIndex = namePokemonInBattle.lastIndexOf('/');
+        String auxPokemonInBattle = namePokemonInBattle.substring(lastIndex + 1, namePokemonInBattle.lastIndexOf('.'));
+
+        /**
+         * si es igual, no se hará el cambio, si no lo es, se hará
+         */
+        if(namePokemonToChange3.equalsIgnoreCase(auxPokemonInBattle)){
+            marca = false;
+        }
+
+        return marca;
     }
 
     /**
