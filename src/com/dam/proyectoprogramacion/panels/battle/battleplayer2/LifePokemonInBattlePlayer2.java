@@ -43,9 +43,9 @@ public class LifePokemonInBattlePlayer2 extends JPanel{
         /**
          * le damos valores a la vida de los pokemons del jugador 2
          */
-        lifePokemon1PLayer2 = MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1();
-        lifePokemon2PLayer2 = MethodsLifeBattlePokemonPlayer1.getLifePokemon2Player1();
-        lifePokemon3PLayer2 = MethodsLifeBattlePokemonPlayer1.getLifePokemon3Player1();
+        lifePokemon1PLayer2 = MethodsLifeBattlePokemonPlayer2.getLifePokemon1Player2();
+        lifePokemon2PLayer2 = MethodsLifeBattlePokemonPlayer2.getLifePokemon2Player2();
+        lifePokemon3PLayer2 = MethodsLifeBattlePokemonPlayer2.getLifePokemon3Player2();
 
         /**
          * le damos un valor a la barra de vida del pokemon en batalla

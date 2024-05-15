@@ -7,6 +7,7 @@ import com.dam.proyectoprogramacion.methods.battle.*;
 import com.dam.proyectoprogramacion.methods.luck.MethodsInterfaceLuck;
 import com.dam.proyectoprogramacion.methods.selectionpokemon.MethosInterfaceSelectionPokemon;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.LifePokemonInBattlePlayer1;
+import com.dam.proyectoprogramacion.panels.battle.battleplayer2.LifePokemonInBattlePlayer2;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
 import com.dam.proyectoprogramacion.panels.selectionpokemon.*;
@@ -575,6 +576,8 @@ public class SelectionPokemon extends JFrame {
 
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setPathIconPokemon3(MethodsBattlePlayer2.getPathPokemon3Player2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setNamePokemon3(MethodsBattlePlayer2.getNamePokemon3Player2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+
+                   LifePokemonInBattlePlayer2.setActualLifePokemonInBattlePlayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon1Player2());
 
 
 
