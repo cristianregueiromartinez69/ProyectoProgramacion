@@ -15,8 +15,7 @@ import java.util.ArrayList;
 public class MethodsLifeBattlePokemonPlayer1 {
 
     /**
-     * metodo para obtener el valor de la vida del pokemon numero 1 del jugador 2
-     *
+     * metodo para obtener el valor de la vida del pokemon numero 1 del jugador 1
      * @return el valor de la vida del pokemon
      */
     public static int getLifePokemon1Player1() {
@@ -61,5 +60,101 @@ public class MethodsLifeBattlePokemonPlayer1 {
          * retornamos la vida del pokemon
          */
       return lifePokemon1;
+    }
+
+    /**
+     * metodo para obtener el valor de la vida del pokemon numero 2 del jugador 1
+     * @return el valor de la vida del pokemon
+     */
+    public static int getLifePokemon2Player1() {
+
+        /**
+         * iniciamos una variable de tipo int en la que vamos a almacenar la vida del primer pokemon
+         */
+        int lifePokemon2 = 0;
+        String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+
+        /**
+         * for para recorrer el hashmap de los jugadores
+         */
+
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+
+            if (key.equals(aliasPlayer1)) {
+                /**
+                 * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
+                 */
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                if (!pokemons.isEmpty()) {
+
+                    /**
+                     * hacemos un objeto de pokemons y decimos que es igual al segundo elemento de la lista de pokemons
+                     */
+                    PokemonProperties secondPokemon = (PokemonProperties) pokemons.get(1);
+                    /**
+                     * almacenamos en la variable int el valor de la vida del pokemon
+                     */
+                    lifePokemon2 = secondPokemon.getLife();
+
+
+
+                    break;
+
+                }
+
+            }
+        }
+        /**
+         * retornamos la vida del pokemon
+         */
+        return lifePokemon2;
+    }
+
+    /**
+     * metodo para obtener el valor de la vida del pokemon numero 3 del jugador 1
+     * @return el valor de la vida del pokemon
+     */
+    public static int getLifePokemon3Player1() {
+
+        /**
+         * iniciamos una variable de tipo int en la que vamos a almacenar la vida del primer pokemon
+         */
+        int lifePokemon3 = 0;
+        String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+
+        /**
+         * for para recorrer el hashmap de los jugadores
+         */
+
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+
+            if (key.equals(aliasPlayer1)) {
+                /**
+                 * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
+                 */
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                if (!pokemons.isEmpty()) {
+
+                    /**
+                     * hacemos un objeto de pokemons y decimos que es igual al segundo elemento de la lista de pokemons
+                     */
+                    PokemonProperties thirdPokemon = (PokemonProperties) pokemons.get(2);
+                    /**
+                     * almacenamos en la variable int el valor de la vida del pokemon
+                     */
+                    lifePokemon3 = thirdPokemon.getLife();
+
+
+
+                    break;
+
+                }
+
+            }
+        }
+        /**
+         * retornamos la vida del pokemon
+         */
+        return lifePokemon3;
     }
 }
