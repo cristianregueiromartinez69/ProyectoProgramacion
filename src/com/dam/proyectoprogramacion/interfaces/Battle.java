@@ -25,17 +25,16 @@ public class Battle extends JFrame {
      */
     private static JPanel contentPanel;
     private  static JPanel globalPanelPLayer1;
-    private static JPanel aliasLogoPlayer1;
     private static JPanel attacksChangesPokemon1Player1;
     private  static JPanel attacksPanelPlayer1;
     private static JPanel changesPokemonsPLayer1;
     private  static JPanel battlePanel;
     private  static JPanel globalPanelPLayer2;
-    private static JPanel aliasLogoPlayer2;
     private static JPanel attacksChangesPokemon1Player2;
     private  static JPanel attacksPanelPlayer2;
     private static JPanel changesPokemonsPLayer2;
     private  static JPanel lifePanelPokemon;
+    private static JPanel textAreaPanel;
     
 
 
@@ -68,7 +67,7 @@ public class Battle extends JFrame {
         /**
          * iniciamos un panel que será el alias y el logo del jugador 1 y lo hacemos igual a un panel de otra clase
          */
-         aliasLogoPlayer1 = new AliasAndLogoPlayer1();
+        JPanel aliasLogoPlayer1 = new AliasAndLogoPlayer1();
         globalPanelPLayer1.add(aliasLogoPlayer1);
         /**
          * iniciamos un panel que serán los botones de cambio y ataque del jugador 1 y lo hacemos igual a un panel de otra clase
@@ -125,7 +124,7 @@ public class Battle extends JFrame {
         /**
          * añadimos al panel global del jugador 2 el logo y alias
          */
-        aliasLogoPlayer2 = new AliasAndLogoPlayer2();
+        JPanel aliasLogoPlayer2 = new AliasAndLogoPlayer2();
         globalPanelPLayer2.add(aliasLogoPlayer2);
 
         /**
