@@ -16,6 +16,11 @@ public class Conexion {
     private String port = "3306";
     private String url = "jdbc:mysql://" + ip + ":" + port + "/" + bd + "";
 
+
+    /**
+     * metodo para conectarse con la base de datos siempre que quiera ser utilizada
+     * @return con
+     */
     public Connection crearConexion() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -71,10 +76,26 @@ public class Conexion {
         }
     }
 
-    public void actualizarTypePokemon(String Name, String newType){
-        String sql = "UPDATE Pokemon SET Name = ? WHERE Name = ?";
+    public void actualizarType1Pokemon(String Name, String newType1){
+        String sql = "UPDATE Pokemon SET Type1 = ? WHERE Name = ?";
         try (PreparedStatement pstmt = con.prepareStatement(sql)){
-            pstmt.setString(1,newType);
+            pstmt.setString(1,newType1);
+            pstmt.setString(2,Name);
+            int affectedRows = pstmt.executeUpdate();
+            if (affectedRows > 0) {
+                JOptionPane.showMessageDialog(null, "Actualizado exitosamente");
+            }else {
+                JOptionPane.showMessageDialog(null, "No se encontro el Pokemon");
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null,"Error al actualizar la tabla");
+        }
+    }
+
+    public void actualizarType2Pokemon(String Name, String newType2){
+        String sql = "UPDATE Pokemon SET Type2 = ? WHERE Name = ?";
+        try (PreparedStatement pstmt = con.prepareStatement(sql)){
+            pstmt.setString(1,newType2);
             pstmt.setString(2,Name);
             int affectedRows = pstmt.executeUpdate();
             if (affectedRows > 0) {
@@ -88,7 +109,7 @@ public class Conexion {
     }
 
     public void actualizarLevelPokemon(String Name, Integer newLevel){
-        String sql = "UPDATE Pokemon SET Name = ? WHERE Name = ?";
+        String sql = "UPDATE Pokemon SET Level = ? WHERE Name = ?";
         try (PreparedStatement pstmt = con.prepareStatement(sql)){
             pstmt.setInt(1,newLevel);
             pstmt.setString(2,Name);
@@ -104,7 +125,7 @@ public class Conexion {
     }
 
     public void actualizarLifePokemon(String Name, Integer newLife){
-        String sql = "UPDATE Pokemon SET Name = ? WHERE Name = ?";
+        String sql = "UPDATE Pokemon SET Life = ? WHERE Name = ?";
         try (PreparedStatement pstmt = con.prepareStatement(sql)){
             pstmt.setInt(1,newLife);
             pstmt.setString(2,Name);
@@ -120,7 +141,7 @@ public class Conexion {
     }
 
     public void actualizarSexPokemon(String Name, String newSex){
-        String sql = "UPDATE Pokemon SET Name = ? WHERE Name = ?";
+        String sql = "UPDATE Pokemon SET Sex = ? WHERE Name = ?";
         try (PreparedStatement pstmt = con.prepareStatement(sql)){
             pstmt.setString(1,newSex);
             pstmt.setString(2,Name);
@@ -136,7 +157,7 @@ public class Conexion {
     }
 
     public void actualizarSpeedPokemon(String Name, Integer newSpeed){
-        String sql = "UPDATE Pokemon SET Name = ? WHERE Name = ?";
+        String sql = "UPDATE Pokemon SET Speed = ? WHERE Name = ?";
         try (PreparedStatement pstmt = con.prepareStatement(sql)){
             pstmt.setInt(1,newSpeed);
             pstmt.setString(2,Name);
@@ -152,7 +173,7 @@ public class Conexion {
     }
 
     public void actualizarWeightPokemon(String Name, Float newSyze){
-        String sql = "UPDATE Pokemon SET Name = ? WHERE Name = ?";
+        String sql = "UPDATE Pokemon SET Syze = ? WHERE Name = ?";
         try (PreparedStatement pstmt = con.prepareStatement(sql)){
             pstmt.setFloat(1,newSyze);
             pstmt.setString(2,Name);
@@ -167,10 +188,10 @@ public class Conexion {
         }
     }
 
-    public void actualizarSyzePokemon(String Name, Float newSyze){
-        String sql = "UPDATE Pokemon SET Name = ? WHERE Name = ?";
+    public void actualizarSyzePokemon(String Name, Float newWeight){
+        String sql = "UPDATE Pokemon SET Weight = ? WHERE Name = ?";
         try (PreparedStatement pstmt = con.prepareStatement(sql)){
-            pstmt.setFloat(1,newSyze);
+            pstmt.setFloat(1,newWeight);
             pstmt.setString(2,Name);
             int affectedRows = pstmt.executeUpdate();
             if (affectedRows > 0) {
