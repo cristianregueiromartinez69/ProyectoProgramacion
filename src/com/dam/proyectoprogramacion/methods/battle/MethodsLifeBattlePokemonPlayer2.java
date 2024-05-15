@@ -72,7 +72,7 @@ public class MethodsLifeBattlePokemonPlayer2 {
      * metodo para obtener el valor de la vida del pokemon numero 2 del jugador 2
      * @return el valor de la vida del pokemon
      */
-    public static int getLifePokemon2Player1() {
+    public static int getLifePokemon2Player2() {
 
         /**
          * iniciamos una variable de tipo int en la que vamos a almacenar la vida del primer pokemon

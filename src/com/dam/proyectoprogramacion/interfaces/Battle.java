@@ -11,10 +11,7 @@ import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer2;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
 import com.dam.proyectoprogramacion.methods.battle.*;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.*;
-import com.dam.proyectoprogramacion.panels.battle.battleplayer2.AliasAndLogoPlayer2;
-import com.dam.proyectoprogramacion.panels.battle.battleplayer2.AttacksAndChangesPokemonPlayer2;
-import com.dam.proyectoprogramacion.panels.battle.battleplayer2.AttacksPokemonPlayer2;
-import com.dam.proyectoprogramacion.panels.battle.battleplayer2.PokemonsToChoosePlayer2;
+import com.dam.proyectoprogramacion.panels.battle.battleplayer2.*;
 
 /**
  * interfaz del combate pokemon
@@ -108,8 +105,10 @@ public class Battle extends JFrame {
         lifePanelPokemons.setLayout(new FlowLayout());
         contentPanel.add(lifePanelPokemons, BorderLayout.NORTH);
 
-        JPanel auxLifePanel = new LifePokemonInBattlePlayer1();
-        lifePanelPokemons.add(auxLifePanel);
+        JPanel auxLifePanelPlayer1 = new LifePokemonInBattlePlayer1();
+        lifePanelPokemons.add(auxLifePanelPlayer1);
+
+
 
 
 
@@ -157,6 +156,15 @@ public class Battle extends JFrame {
         changesPokemonsPLayer2.add(new PokemonsToChoosePlayer2());
         changesPokemonsPLayer2.setVisible(false);
         globalPanelPLayer2.add(changesPokemonsPLayer2);
+
+        /**
+         * iniciamos un panel y lo hacemos igual al panel de vida del pokemon del jugador 2
+         */
+        JPanel auxLifePanelPlayer2 = new LifePokemonInBattlePlayer2();
+        /**
+         * lo añadimos
+         */
+        lifePanelPokemons.add(auxLifePanelPlayer2);
 
         pokemonBattle();
 
@@ -648,7 +656,7 @@ public class Battle extends JFrame {
     }
 
     /**
-     * metodo para actualizar el panel de vida del pokemon en batalla
+     * metodo para actualizar el panel de vida del pokemon en batalla del jugador 1
      */
     private static  void clearLifePanelPlayer1WhenPressButtonToChangePokemon(){
 
@@ -665,7 +673,7 @@ public class Battle extends JFrame {
          * lo instanciamos de nuevo con la clase del panel de la vida
          */
         lifePanelPokemons.add(new LifePokemonInBattlePlayer1());
-
+        lifePanelPokemons.add(new LifePokemonInBattlePlayer2());
 
         /**
          * lo añadimos al panel principal
@@ -682,7 +690,7 @@ public class Battle extends JFrame {
     }
 
     /**
-     * metodo para actualizar la barra de vida del pokemon al cambio
+     * metodo para actualizar la barra de vida del pokemon al cambio del jugador 1
      * @param e objeto de tipo actionevent
      */
     public void changeLifePokemonInBattlePlayer1(ActionEvent e) {
@@ -975,7 +983,77 @@ public class Battle extends JFrame {
         changesPokemonsPLayer2.setVisible(false);
         attacksChangesPokemon1Player2.setVisible(true);
     }
+    /**
+     * metodo para actualizar el panel de vida del pokemon en batalla del jugador 2
+     */
+    private static  void clearLifePanelPlayer2WhenPressButtonToChangePokemon(){
 
+
+        /**
+         * limpiamos el panel de la vida
+         */
+        lifePanelPokemons.removeAll();
+        lifePanelPokemons.repaint();
+        lifePanelPokemons.revalidate();
+
+
+        /**
+         * lo instanciamos de nuevo con la clase del panel de la vida
+         */
+        lifePanelPokemons.add(new LifePokemonInBattlePlayer1());
+        lifePanelPokemons.add(new LifePokemonInBattlePlayer2());
+
+        /**
+         * lo añadimos al panel principal
+         */
+        contentPanel.add(lifePanelPokemons, BorderLayout.NORTH);
+
+
+        /**
+         * repintamos el panel central
+         */
+        contentPanel.repaint();
+        contentPanel.revalidate();
+
+    }
+
+    /**
+     * metodo para actualizar la barra de vida del pokemon al cambio del jugador 2
+     * @param e objeto de tipo actionevent
+     */
+    public void changeLifePokemonInBattlePlayer2(ActionEvent e) {
+        /**
+         * si el jugador pulsa el boton 1 de cambio, entra en la condicion
+         */
+        if(e.getSource() == ButtonInterfaceChangePokemonPlayer2.getPokemon1team()){
+            /**
+             * Se establece la nueva vida actual del pokemon
+             */
+            LifePokemonInBattlePlayer2.setActualLifePokemonInBattlePlayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon1Player2());
+            LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setValue(LifePokemonInBattlePlayer2.getActualLifePokemonInBattlePlayer2());
+        }
+        /**
+         * si el jugador pulsa el boton 2 de cambio, entra en la condicion
+         */
+        else if(e.getSource() == ButtonInterfaceChangePokemonPlayer2.getPokemon2team()){
+            /**
+             * Se establece la nueva vida actual del pokemon
+             */
+            LifePokemonInBattlePlayer2.setActualLifePokemonInBattlePlayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon2Player2());
+            LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setValue(LifePokemonInBattlePlayer2.getActualLifePokemonInBattlePlayer2());
+
+        }/**
+         * si el jugador pulsa el boton 3 de cambio, entra en la condicion
+         */
+        else if((e.getSource() == ButtonInterfaceChangePokemonPlayer2.getPokemon3team())){
+            /**
+             * Se establece la nueva vida actual del pokemon
+             */
+            LifePokemonInBattlePlayer2.setActualLifePokemonInBattlePlayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon3Player2());
+            LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setValue(LifePokemonInBattlePlayer2.getActualLifePokemonInBattlePlayer2());
+
+        }
+    }
 
     /**
      * getter y setter de los atributos de la clase
