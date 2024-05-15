@@ -15,12 +15,12 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
     /**
      * atributos privados de la clase
      */
-    private JPanel panelLifePokemon;
+    private JPanel panelLifePokemonPLayer1;
     private static int lifePokemon1PLayer1;
     private static int lifePokemon2PLayer1;
     private static int lifePokemon3PLayer1;
-    private static int actualLifePokemonInBattle;
-    private static JProgressBar lifePokemonBar;
+    private static int actualLifePokemonInBattlePlayer1;
+    private static JProgressBar lifePokemonBarPlayer1;
 
 
     /**
@@ -37,7 +37,7 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
         /**
          * iniciamos el panel de vida y lo añadimos
          */
-        panelLifePokemon = new JPanel();
+        panelLifePokemonPLayer1 = new JPanel();
 
 
         /**
@@ -50,32 +50,32 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
         /**
          * le damos un valor a la barra de vida del pokemon en batalla
          */
-        lifePokemonBar = new JProgressBar(0, actualLifePokemonInBattle);
-        lifePokemonBar.setValue(actualLifePokemonInBattle);
+        lifePokemonBarPlayer1 = new JProgressBar(0, actualLifePokemonInBattlePlayer1);
+        lifePokemonBarPlayer1.setValue(actualLifePokemonInBattlePlayer1);
 
 
         /**
          * le damos unas dimensiones a la barra de vida
          */
-        lifePokemonBar.setPreferredSize(new Dimension(400,40));
-        lifePokemonBar.setMaximumSize(new Dimension(400,40));
-        lifePokemonBar.setMinimumSize(new Dimension(400,40));
+        lifePokemonBarPlayer1.setPreferredSize(new Dimension(400,40));
+        lifePokemonBarPlayer1.setMaximumSize(new Dimension(400,40));
+        lifePokemonBarPlayer1.setMinimumSize(new Dimension(400,40));
         /**
          * hacemos que sea visible el valor que tiene
          */
-        lifePokemonBar.setStringPainted(true);
+        lifePokemonBarPlayer1.setStringPainted(true);
         /**
          * hacemos que el color de fondo sea igual a un metodo el cual varía el color según su vida actual
          */
-        lifePokemonBar.setForeground(getBackgroundColorLifeBarPokemon());
+        lifePokemonBarPlayer1.setForeground(getBackgroundColorLifeBarPokemonPlayer1());
 
         /**
          * lo añadimos al panel
          */
-        panelLifePokemon.add(lifePokemonBar);
+        panelLifePokemonPLayer1.add(lifePokemonBarPlayer1);
 
 
-        this.add(panelLifePokemon);
+        this.add(panelLifePokemonPLayer1);
 
 
 
@@ -87,26 +87,26 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
      * metodo para establecer el color de fondo de la vida del pokemon
      * @return el color de fondo
      */
-    private Color getBackgroundColorLifeBarPokemon() {
+    private Color getBackgroundColorLifeBarPokemonPlayer1() {
         Color colorBackgroundLifePokemon;
-        lifePokemonBar.setString("" + lifePokemonBar.getValue());
+        lifePokemonBarPlayer1.setString("" + lifePokemonBarPlayer1.getValue());
 
         /**
          * si la vida es menos de un 20%, se pone de color rojo
          */
-        if(lifePokemonBar.getValue() <= lifePokemonBar.getMaximum()*0.2){
+        if(lifePokemonBarPlayer1.getValue() <= lifePokemonBarPlayer1.getMaximum()*0.2){
             colorBackgroundLifePokemon = Color.RED;
         }
         /**
          * si la vida es de un 50% o menos, se pone amarillo
          */
-        else if(lifePokemonBar.getValue() <= lifePokemonBar.getMaximum()*0.5){
+        else if(lifePokemonBarPlayer1.getValue() <= lifePokemonBarPlayer1.getMaximum()*0.5){
             colorBackgroundLifePokemon = Color.YELLOW;
         }
         /**
          * si no es anda de lo anterior, está verde
          */
-        else if(lifePokemonBar.getValue() == 0){
+        else if(lifePokemonBarPlayer1.getValue() == 0){
             colorBackgroundLifePokemon = null;
         }
         else{
@@ -123,11 +123,11 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
      * @return los atributos de la clase
      */
     public JPanel getPanelLifePokemon() {
-        return panelLifePokemon;
+        return panelLifePokemonPLayer1;
     }
 
     public void setPanelLifePokemon(JPanel panelLifePokemon) {
-        this.panelLifePokemon = panelLifePokemon;
+        this.panelLifePokemonPLayer1 = panelLifePokemon;
     }
 
     public static int getLifePokemon1PLayer1() {
@@ -154,19 +154,19 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
         LifePokemonInBattlePlayer1.lifePokemon3PLayer1 = lifePokemon3PLayer1;
     }
 
-    public static JProgressBar getLifePokemonBar() {
-        return lifePokemonBar;
+    public static JProgressBar getLifePokemonBarPlayer1() {
+        return lifePokemonBarPlayer1;
     }
 
     public static void setLifePokemon(JProgressBar lifePokemon) {
-        LifePokemonInBattlePlayer1.lifePokemonBar = lifePokemon;
+        LifePokemonInBattlePlayer1.lifePokemonBarPlayer1 = lifePokemon;
     }
 
-    public static int getActualLifePokemonInBattle() {
-        return actualLifePokemonInBattle;
+    public static int getActualLifePokemonInBattlePlayer1() {
+        return actualLifePokemonInBattlePlayer1;
     }
 
-    public static void setActualLifePokemonInBattle(int actualLifePokemonInBattle) {
-        LifePokemonInBattlePlayer1.actualLifePokemonInBattle = actualLifePokemonInBattle;
+    public static void setActualLifePokemonInBattlePlayer1(int actualLifePokemonInBattle) {
+        LifePokemonInBattlePlayer1.actualLifePokemonInBattlePlayer1 = actualLifePokemonInBattle;
     }
 }

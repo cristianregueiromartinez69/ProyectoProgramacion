@@ -693,8 +693,8 @@ public class Battle extends JFrame {
             /**
              * Se establece la nueva vida actual del pokemon
              */
-            LifePokemonInBattlePlayer1.setActualLifePokemonInBattle(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
-            LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getActualLifePokemonInBattle());
+            LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
+            LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(LifePokemonInBattlePlayer1.getActualLifePokemonInBattlePlayer1());
         }
         /**
          * si el jugador pulsa el boton 2 de cambio, entra en la condicion
@@ -703,8 +703,8 @@ public class Battle extends JFrame {
             /**
              * Se establece la nueva vida actual del pokemon
              */
-            LifePokemonInBattlePlayer1.setActualLifePokemonInBattle(MethodsLifeBattlePokemonPlayer1.getLifePokemon2Player1());
-            LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getActualLifePokemonInBattle());
+            LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon2Player1());
+            LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(LifePokemonInBattlePlayer1.getActualLifePokemonInBattlePlayer1());
 
         }/**
          * si el jugador pulsa el boton 3 de cambio, entra en la condicion
@@ -713,8 +713,8 @@ public class Battle extends JFrame {
             /**
              * Se establece la nueva vida actual del pokemon
              */
-            LifePokemonInBattlePlayer1.setActualLifePokemonInBattle(MethodsLifeBattlePokemonPlayer1.getLifePokemon3Player1());
-            LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getActualLifePokemonInBattle());
+            LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon3Player1());
+            LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(LifePokemonInBattlePlayer1.getActualLifePokemonInBattlePlayer1());
 
         }
     }
