@@ -32,6 +32,9 @@ public class Conexion {
         return con;
     }
 
+    /**
+     * Metodo en el que se va a crear la tabla pokemon con los datos Nombre, Tipo1, Tipo2, Nivel, Sexo, Velocidad, Vida. Tamaño, Peso y ataques
+     */
     public void CrearTabla() {
 
         try (Statement stmt = con.createStatement()){
@@ -43,6 +46,19 @@ public class Conexion {
         }
     }
 
+    /**
+     * Metodo que es utilizado para insertar cualquier nuevo pokemon en la tabla pokemon
+     * @param Name identificador de cada pokemon
+     * @param Type1 Tipo principal del pokemon
+     * @param Type2 Tipo secundario del pokemon
+     * @param Level Nivel que va a tener el pokemon
+     * @param Life Vida que va a tener el pokemon
+     * @param Sex Sexo del pokemon
+     * @param Speed Velocidad que va a tener el pokemon
+     * @param Syze Tamaño del pokemon
+     * @param Weight Peso que va a tener el pokemon
+     * @param Atacks Variable ataque el cual va a servir para identificar los ataques
+     */
     public void InsertarPokemon(String Name, String Type1,String Type2, Integer Level, Integer Life, String Sex, Integer Speed, Float Syze, Float Weight, String Atacks) {
         String sql = "INSERT INTO Pokemon (Name, Type1,,Type2 Level, Life, Sex, Speed. Syze, Weight, Attacks) VALUES (?,?,?,?,?,?,?,?,?)";
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
