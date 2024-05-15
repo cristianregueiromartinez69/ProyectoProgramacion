@@ -1,10 +1,14 @@
 package com.dam.proyectoprogramacion.methods.battle;
 
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer1;
 import com.dam.proyectoprogramacion.methods.selectionpokemon.MethosInterfaceSelectionPokemon;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.pokemon.AttacksPokemons;
 import com.dam.proyectoprogramacion.pokemon.PokemonProperties;
+import com.dam.proyectoprogramacion.panels.battle.battleplayer1.*;
 
+import javax.swing.*;
+import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 
 /**
@@ -157,4 +161,18 @@ public class MethodsLifeBattlePokemonPlayer1 {
          */
         return lifePokemon3;
     }
+
+    public static void updateLifeBarPokemonPlayer1(ActionEvent e){
+
+        if(e.getSource() == ButtonInterfaceChangePokemonPlayer1.getPokemon1team()){
+            LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getLifePokemon1PLayer1());
+        }
+        else if(e.getSource() == ButtonInterfaceChangePokemonPlayer1.getPokemon2team()){
+            LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getLifePokemon2PLayer1());
+        }
+        else if((e.getSource() == ButtonInterfaceChangePokemonPlayer1.getPokemon3team()){
+            LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getLifePokemon3PLayer1());
+        }
+    }
+
 }
