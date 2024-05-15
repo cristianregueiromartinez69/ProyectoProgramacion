@@ -203,6 +203,9 @@ public class Battle extends JFrame {
                 clearGlobalPanelPlayer1WhenPressChange();
             }
         });
+        /**
+         * llamamos otra vez a los listener de los cambios de pokemon para actualizar la vida
+         */
         ButtonInterfaceChangePokemonPlayer1.getPokemon1team().addActionListener(this::changeLifePokemonInBattlePlayer1);
         ButtonInterfaceChangePokemonPlayer1.getPokemon2team().addActionListener(this::changeLifePokemonInBattlePlayer1);
         ButtonInterfaceChangePokemonPlayer1.getPokemon3team().addActionListener(this::changeLifePokemonInBattlePlayer1);
@@ -644,37 +647,72 @@ public class Battle extends JFrame {
         attacksChangesPokemon1Player1.setVisible(true);
     }
 
+    /**
+     * metodo para actualizar el panel de vida del pokemon en batalla
+     */
     private static  void clearLifePanelPlayer1WhenPressButtonToChangePokemon(){
 
 
-
+        /**
+         * limpiamos el panel de la vida
+         */
         lifePanelPokemons.removeAll();
         lifePanelPokemons.repaint();
         lifePanelPokemons.revalidate();
 
 
+        /**
+         * lo instanciamos de nuevo con la clase del panel de la vida
+         */
         lifePanelPokemons.add(new LifePokemonInBattlePlayer1());
 
 
+        /**
+         * lo añadimos al panel principal
+         */
         contentPanel.add(lifePanelPokemons, BorderLayout.NORTH);
 
 
-
+        /**
+         * repintamos el panel central
+         */
         contentPanel.repaint();
         contentPanel.revalidate();
 
     }
+
+    /**
+     * metodo para actualizar la barra de vida del pokemon al cambio
+     * @param e objeto de tipo actionevent
+     */
     public void changeLifePokemonInBattlePlayer1(ActionEvent e) {
+        /**
+         * si el jugador pulsa el boton 1 de cambio, entra en la condicion
+         */
         if(e.getSource() == ButtonInterfaceChangePokemonPlayer1.getPokemon1team()){
+            /**
+             * Se establece la nueva vida actual del pokemon
+             */
             LifePokemonInBattlePlayer1.setActualLifePokemonInBattle(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
             LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getActualLifePokemonInBattle());
         }
+        /**
+         * si el jugador pulsa el boton 2 de cambio, entra en la condicion
+         */
         else if(e.getSource() == ButtonInterfaceChangePokemonPlayer1.getPokemon2team()){
+            /**
+             * Se establece la nueva vida actual del pokemon
+             */
             LifePokemonInBattlePlayer1.setActualLifePokemonInBattle(MethodsLifeBattlePokemonPlayer1.getLifePokemon2Player1());
             LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getActualLifePokemonInBattle());
 
-        }
+        }/**
+         * si el jugador pulsa el boton 3 de cambio, entra en la condicion
+         */
         else if((e.getSource() == ButtonInterfaceChangePokemonPlayer1.getPokemon3team())){
+            /**
+             * Se establece la nueva vida actual del pokemon
+             */
             LifePokemonInBattlePlayer1.setActualLifePokemonInBattle(MethodsLifeBattlePokemonPlayer1.getLifePokemon3Player1());
             LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getActualLifePokemonInBattle());
 
