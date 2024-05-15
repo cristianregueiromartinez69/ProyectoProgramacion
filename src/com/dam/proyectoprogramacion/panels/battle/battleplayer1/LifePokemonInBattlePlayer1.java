@@ -50,7 +50,7 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
         /**
          * le damos un valor a la barra de vida del pokemon en batalla
          */
-        lifePokemonBar = new JProgressBar(0, lifePokemon1PLayer1);
+        lifePokemonBar = new JProgressBar(0, actualLifePokemonInBattle);
         lifePokemonBar.setValue(actualLifePokemonInBattle);
 
 
