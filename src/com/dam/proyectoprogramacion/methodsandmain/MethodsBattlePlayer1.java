@@ -1207,8 +1207,11 @@ public class MethodsBattlePlayer1 {
 
     /**
      * metodo para establecer el nuevo logo del pokemon al cambio
-     * @return
+     * @return el nuevo nombre del icono del pokemon
      */
+
+    //-------------------------Pulsas un boton y cambias EL path del pokemon 1-------------------------//
+
     public static String newPathIconPokemon1Player1() {
         String pathIcon = "";
         /**
@@ -1242,7 +1245,7 @@ public class MethodsBattlePlayer1 {
          */
      return pathIcon;
     }
-
+         //-------------------------Cambio de características del ataque 1 del pokemon 1-------------------------//
     /**
      * metodo para poner el nuevo nombre del primer ataque del pokemon
      * @return el nuevo nombre del primer ataque
@@ -1371,6 +1374,9 @@ public class MethodsBattlePlayer1 {
          */
         return chooseColorAttacksPokemonPlayer1(typeAttack1.toLowerCase());
     }
+
+    //-------------------------Cambio de características del ataque 2 del pokemon 1-------------------------//
+
     /**
      * metodo para poner el nuevo nombre del segundo ataque del pokemon
      * @return el nuevo nombre del primer ataque
@@ -1499,6 +1505,10 @@ public class MethodsBattlePlayer1 {
          */
         return chooseColorAttacksPokemonPlayer1(typeAttack2.toLowerCase());
     }
+
+    //-------------------------Cambio de características del ataque 3 del pokemon 1-------------------------//
+
+
     /**
      * metodo para poner el nuevo nombre del tercer ataque del pokemon
      * @return el nuevo nombre del primer ataque
@@ -1627,6 +1637,10 @@ public class MethodsBattlePlayer1 {
          */
         return chooseColorAttacksPokemonPlayer1(typeAttack3.toLowerCase());
     }
+
+    //-------------------------Cambio de características del ataque 4 del pokemon 1-------------------------//
+
+
     /**
      * metodo para poner el nuevo nombre del tercer ataque del pokemon
      * @return el nuevo nombre del primer ataque
@@ -1796,6 +1810,10 @@ public class MethodsBattlePlayer1 {
         return pathIcon;
     }
 
+    //-------------------------Cambio de características del ataque 1 del pokemon 2-------------------------//
+
+
+
     /**
      * metodo para poner el nuevo nombre del primer ataque del pokemon
      * @return el nuevo nombre del primer ataque
@@ -1924,6 +1942,10 @@ public class MethodsBattlePlayer1 {
          */
         return chooseColorAttacksPokemonPlayer1(typeAttack1.toLowerCase());
     }
+
+    //-------------------------Cambio de características del ataque 2 del pokemon 2-------------------------//
+
+
     /**
      * metodo para poner el nuevo nombre del segundo ataque del pokemon
      * @return el nuevo nombre del primer ataque
@@ -2052,6 +2074,10 @@ public class MethodsBattlePlayer1 {
          */
         return chooseColorAttacksPokemonPlayer1(typeAttack2.toLowerCase());
     }
+
+    //-------------------------Cambio de características del ataque 3 del pokemon 2-------------------------//
+
+
     /**
      * metodo para poner el nuevo nombre del tercer ataque del pokemon
      * @return el nuevo nombre del primer ataque
@@ -2180,6 +2206,10 @@ public class MethodsBattlePlayer1 {
          */
         return chooseColorAttacksPokemonPlayer1(typeAttack3.toLowerCase());
     }
+
+    //-------------------------Cambio de características del ataque 4 del pokemon 2-------------------------//
+
+
     /**
      * metodo para poner el nuevo nombre del tercer ataque del pokemon
      * @return el nuevo nombre del primer ataque
@@ -2348,6 +2378,9 @@ public class MethodsBattlePlayer1 {
         return pathIcon;
     }
 
+    //-------------------------Cambio de características del ataque 1 del pokemon 3-------------------------//
+
+
     /**
      * metodo para poner el nuevo nombre del primer ataque del pokemon
      * @return el nuevo nombre del primer ataque
@@ -2476,6 +2509,10 @@ public class MethodsBattlePlayer1 {
          */
         return chooseColorAttacksPokemonPlayer1(typeAttack1.toLowerCase());
     }
+
+    //-------------------------Cambio de características del ataque 2 del pokemon 3-------------------------//
+
+
     /**
      * metodo para poner el nuevo nombre del segundo ataque del pokemon
      * @return el nuevo nombre del primer ataque
@@ -2604,6 +2641,10 @@ public class MethodsBattlePlayer1 {
          */
         return chooseColorAttacksPokemonPlayer1(typeAttack2.toLowerCase());
     }
+
+    //-------------------------Cambio de características del ataque 3 del pokemon 3-------------------------//
+
+
     /**
      * metodo para poner el nuevo nombre del tercer ataque del pokemon
      * @return el nuevo nombre del primer ataque
@@ -2732,6 +2773,10 @@ public class MethodsBattlePlayer1 {
          */
         return chooseColorAttacksPokemonPlayer1(typeAttack3.toLowerCase());
     }
+
+    //-------------------------Cambio de características del ataque 4 del pokemon 3-------------------------//
+
+
     /**
      * metodo para poner el nuevo nombre del tercer ataque del pokemon
      * @return el nuevo nombre del primer ataque
@@ -2860,6 +2905,10 @@ public class MethodsBattlePlayer1 {
          */
         return chooseColorAttacksPokemonPlayer1(typeAttack4.toLowerCase());
     }
+
+    //-------------------------comprobacion para no poder cambiar a un pokemon que ya está en batalla-------------------------//
+
+
     /**
      * metodo para saber si el pokemon que se intenta cambiar es el que ya está en batalla
      * @return true si no lo es, false si lo es

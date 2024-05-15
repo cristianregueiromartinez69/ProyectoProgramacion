@@ -1,5 +1,7 @@
 package com.dam.proyectoprogramacion.methodsandmain;
 
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer1;
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer2;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
 import com.dam.proyectoprogramacion.pokemon.AttacksPokemons;
@@ -1196,6 +1198,60 @@ public class MethodsBattlePlayer2 {
          */
         return namePokemon;
 
+    }
+
+    /**
+     * metodo para establecer el nuevo logo del pokemon al cambio
+     * @return el nuevo nombre del icono del pokemon
+     */
+
+    //-------------------------Pulsas un boton y cambias EL path del pokemon 1-------------------------//
+
+    public static String newPathIconPokemon1Player2() {
+        String pathIcon = "";
+        /**
+         * recorremos el array de objetos pokemons
+         */
+        for (Object obj : MethosInterfaceSelectionPokemon.getPokemonsPLayer2()) {
+            /**
+             * si es una instancia de los pokemons, se mete en la condicion
+             */
+            if (obj instanceof PokemonProperties) {
+                PokemonProperties pokemon1 = (PokemonProperties) obj;
+                /**
+                 * si el nombre es igual al nombre del boton del pokemon se mete en la condicion
+                 */
+                if (pokemon1.getName().equalsIgnoreCase(getNameOfThePokemonPlayer2Pokemon1())) {
+
+                    /**
+                     * nuevo path
+                     */
+                    pathIcon = "imagenes/" + getNameOfThePokemonPlayer2Pokemon1().toLowerCase() + ".png";
+                }
+
+            }
+
+
+        }
+
+
+        /**
+         * devolvemos el path
+         */
+        return pathIcon;
+    }
+
+    private static String getNameOfThePokemonPlayer2Pokemon1 () {
+
+        return ButtonInterfaceChangePokemonPlayer2.getPokemon1team().getText();
+    }
+    private static String getNameOfThePokemonPlayer2Pokemon2 () {
+
+        return ButtonInterfaceChangePokemonPlayer2.getPokemon2team().getText();
+    }
+    private static String getNameOfThePokemonPlayer2Pokemon3 () {
+
+        return ButtonInterfaceChangePokemonPlayer2.getPokemon3team().getText();
     }
 
 }
