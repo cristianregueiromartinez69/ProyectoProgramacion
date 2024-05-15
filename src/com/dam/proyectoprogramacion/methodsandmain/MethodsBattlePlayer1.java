@@ -1205,12 +1205,14 @@ public class MethodsBattlePlayer1 {
 
     //-------------------------Pulsas un boton y cambias de pokemon-------------------------//
 
+
+    //-------------------------Pulsas un boton y cambias EL path del pokemon 1-------------------------//
+
+
     /**
      * metodo para establecer el nuevo logo del pokemon al cambio
      * @return el nuevo nombre del icono del pokemon
      */
-
-    //-------------------------Pulsas un boton y cambias EL path del pokemon 1-------------------------//
 
     public static String newPathIconPokemon1Player1() {
         String pathIcon = "";
@@ -1247,7 +1249,7 @@ public class MethodsBattlePlayer1 {
     }
          //-------------------------Cambio de características del ataque 1 del pokemon 1-------------------------//
     /**
-     * metodo para poner el nuevo nombre del primer ataque del pokemon
+     * metodo para poner el nuevo nombre del primer ataque del pokemon del jugador 1
      * @return el nuevo nombre del primer ataque
      */
     public static String newName1Attack1Pokemon1Player1() {
@@ -1378,8 +1380,8 @@ public class MethodsBattlePlayer1 {
     //-------------------------Cambio de características del ataque 2 del pokemon 1-------------------------//
 
     /**
-     * metodo para poner el nuevo nombre del segundo ataque del pokemon
-     * @return el nuevo nombre del primer ataque
+     * metodo para poner el nuevo nombre del segundo ataque del pokemon del jugador 1
+     * @return el nuevo nombre del segundo ataque
      */
     public static String newName2Attack2Pokemon1Player1() {
         String nameAttack2 = "";
@@ -1510,8 +1512,8 @@ public class MethodsBattlePlayer1 {
 
 
     /**
-     * metodo para poner el nuevo nombre del tercer ataque del pokemon
-     * @return el nuevo nombre del primer ataque
+     * metodo para poner el nuevo nombre del tercer ataque del pokemon del jugador 1
+     * @return el nuevo nombre del tercer ataque
      */
     public static String newName3Attack3Pokemon1Player1() {
         String nameAttack3 = "";
@@ -1642,8 +1644,8 @@ public class MethodsBattlePlayer1 {
 
 
     /**
-     * metodo para poner el nuevo nombre del tercer ataque del pokemon
-     * @return el nuevo nombre del primer ataque
+     * metodo para poner el nuevo nombre del tercer ataque del pokemon del jugador 1
+     * @return el nuevo nombre del cuarto ataque
      */
     public static String newName4Attack4Pokemon1Player1() {
         String nameAttack4 = "";
@@ -1773,8 +1775,8 @@ public class MethodsBattlePlayer1 {
     //-----------------------------xCambios para el pokemon 2 ---------------------//
 
     /**
-     * metodo para establecer el nuevo logo del pokemon al cambio
-     * @return
+     * metodo para establecer el nuevo logo del pokemon al cambio del jugador 1
+     * @return el nuevo icono
      */
     public static String newPathIconPokemon2Player1() {
         String pathIcon = "";
@@ -1815,7 +1817,7 @@ public class MethodsBattlePlayer1 {
 
 
     /**
-     * metodo para poner el nuevo nombre del primer ataque del pokemon
+     * metodo para poner el nuevo nombre del primer ataque del pokemon del jugador 1
      * @return el nuevo nombre del primer ataque
      */
     public static String newName1Attack1Pokemon2Player1() {
@@ -1947,8 +1949,8 @@ public class MethodsBattlePlayer1 {
 
 
     /**
-     * metodo para poner el nuevo nombre del segundo ataque del pokemon
-     * @return el nuevo nombre del primer ataque
+     * metodo para poner el nuevo nombre del segundo ataque del pokemon del jugador 1
+     * @return el nuevo nombre del segundo ataque
      */
     public static String newName2Attack2Pokemon2Player1() {
         String nameAttack2 = "";
@@ -2079,8 +2081,8 @@ public class MethodsBattlePlayer1 {
 
 
     /**
-     * metodo para poner el nuevo nombre del tercer ataque del pokemon
-     * @return el nuevo nombre del primer ataque
+     * metodo para poner el nuevo nombre del tercer ataque del pokemon del jugador 1
+     * @return el nuevo nombre del tercer ataque
      */
     public static String newName3Attack3Pokemon2Player1() {
         String nameAttack3 = "";
@@ -2211,8 +2213,8 @@ public class MethodsBattlePlayer1 {
 
 
     /**
-     * metodo para poner el nuevo nombre del tercer ataque del pokemon
-     * @return el nuevo nombre del primer ataque
+     * metodo para poner el nuevo nombre del tercer ataque del pokemon del jugador 1
+     * @return el nuevo nombre del cuarto ataque
      */
     public static String newName4Attack4Pokemon2Player1() {
         String nameAttack4 = "";
@@ -2341,8 +2343,8 @@ public class MethodsBattlePlayer1 {
     //---------------------cambio del 3º pokemon -------------------//
 
     /**
-     * metodo para establecer el nuevo logo del pokemon al cambio
-     * @return
+     * metodo para establecer el nuevo logo del pokemon al cambio del jugador 1
+     * @return el nuevo icono
      */
     public static String newPathIconPokemon3Player1() {
         String pathIcon = "";
@@ -2382,7 +2384,7 @@ public class MethodsBattlePlayer1 {
 
 
     /**
-     * metodo para poner el nuevo nombre del primer ataque del pokemon
+     * metodo para poner el nuevo nombre del primer ataque del pokemon del jugador 1
      * @return el nuevo nombre del primer ataque
      */
     public static String newName1Attack1Pokemon3Player1() {
@@ -2514,8 +2516,8 @@ public class MethodsBattlePlayer1 {
 
 
     /**
-     * metodo para poner el nuevo nombre del segundo ataque del pokemon
-     * @return el nuevo nombre del primer ataque
+     * metodo para poner el nuevo nombre del segundo ataque del pokemon del jugador 1
+     * @return el nuevo nombre del segundo ataque
      */
     public static String newName2Attack2Pokemon3Player1() {
         String nameAttack2 = "";
@@ -2646,8 +2648,8 @@ public class MethodsBattlePlayer1 {
 
 
     /**
-     * metodo para poner el nuevo nombre del tercer ataque del pokemon
-     * @return el nuevo nombre del primer ataque
+     * metodo para poner el nuevo nombre del tercer ataque del pokemon del jugador 1
+     * @return el nuevo nombre del tercer ataque
      */
     public static String newName3Attack3Pokemon3Player1() {
         String nameAttack3 = "";
@@ -2778,8 +2780,8 @@ public class MethodsBattlePlayer1 {
 
 
     /**
-     * metodo para poner el nuevo nombre del tercer ataque del pokemon
-     * @return el nuevo nombre del primer ataque
+     * metodo para poner el nuevo nombre del tercer ataque del pokemon del jugador 1
+     * @return el nuevo nombre del cuarto ataque
      */
     public static String newName4Attack4Pokemon3Player1() {
         String nameAttack4 = "";
