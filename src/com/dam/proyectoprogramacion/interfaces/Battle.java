@@ -13,10 +13,7 @@ import com.dam.proyectoprogramacion.methods.battle.DataNamesIconsColorsAttacksAn
 import com.dam.proyectoprogramacion.methods.battle.DataNamesIconsColorsAttacksAndPokemonsPlayer2;
 import com.dam.proyectoprogramacion.methods.battle.MethodsBattlePlayer1;
 import com.dam.proyectoprogramacion.methods.battle.MethodsBattlePlayer2;
-import com.dam.proyectoprogramacion.panels.battle.battleplayer1.AliasAndLogoPlayer1;
-import com.dam.proyectoprogramacion.panels.battle.battleplayer1.AttacksAndChangesPokemonPlayer1;
-import com.dam.proyectoprogramacion.panels.battle.battleplayer1.AttacksPokemonPlayer1;
-import com.dam.proyectoprogramacion.panels.battle.battleplayer1.PokemonsToChoosePlayer1;
+import com.dam.proyectoprogramacion.panels.battle.battleplayer1.*;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer2.AliasAndLogoPlayer2;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer2.AttacksAndChangesPokemonPlayer2;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer2.AttacksPokemonPlayer2;
@@ -157,6 +154,7 @@ public class Battle extends JFrame {
 
         pokemonBattle();
 
+
     }
 
     /**
@@ -218,6 +216,8 @@ public class Battle extends JFrame {
                 /**
                  * llamamos al metodo que actualiza los paneles al cambiar de pokemon
                  */
+                new LifePokemonInBattlePlayer1();
+                System.out.println("vida de " + ButtonInterfaceChangePokemonPlayer1.getPokemon1team().getText() + ": " + LifePokemonInBattlePlayer1.getLifePokemon1PLayer1());
                 clearGlobalPanelPlayer1WhenPressButtonToChangePokemon1InChangePokemon();
                 /**
                  * llamamos al propio metodo para actualizar todo
@@ -235,6 +235,8 @@ public class Battle extends JFrame {
                 /**
                  * llamamos al metodo que actualiza los paneles al cambiar de pokemon
                  */
+                new LifePokemonInBattlePlayer1();
+                System.out.println("vida de " + ButtonInterfaceChangePokemonPlayer1.getPokemon2team().getText() + ": " + LifePokemonInBattlePlayer1.getLifePokemon2PLayer1());
                 clearGlobalPanelPlayer1WhenPressButtonToChangePokemon2InChangePokemon();
                 /**
                  * llamamos al propio metodo para actualizar todo
@@ -252,6 +254,8 @@ public class Battle extends JFrame {
                 /**
                  * llamamos al metodo que actualiza los paneles al cambiar de pokemon
                  */
+                new LifePokemonInBattlePlayer1();
+                System.out.println("vida de " + ButtonInterfaceChangePokemonPlayer1.getPokemon3team().getText() + ": " + LifePokemonInBattlePlayer1.getLifePokemon3PLayer1());
                 clearGlobalPanelPlayer1WhenPressButtonToChangePokemon3InChangePokemon();
                 /**
                  * llamamos al propio metodo para actualizar todo

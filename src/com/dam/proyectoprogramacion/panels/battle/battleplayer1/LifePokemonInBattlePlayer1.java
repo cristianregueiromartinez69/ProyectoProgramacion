@@ -15,8 +15,8 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
      */
     private JPanel panelLifePokemon;
     private static int lifePokemon1PLayer1;
-    private static int lifePokemon1PLayer2;
-    private static int lifePokemon1PLayer3;
+    private static int lifePokemon2PLayer1;
+    private static int lifePokemon3PLayer1;
     private static JProgressBar lifePokemon;
 
 
@@ -38,6 +38,8 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
         this.add(panelLifePokemon);
 
         lifePokemon1PLayer1 = MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1();
+        lifePokemon2PLayer1 = MethodsLifeBattlePokemonPlayer1.getLifePokemon2Player1();
+        lifePokemon3PLayer1 = MethodsLifeBattlePokemonPlayer1.getLifePokemon3Player1();
 
 
 
@@ -61,20 +63,20 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
         LifePokemonInBattlePlayer1.lifePokemon1PLayer1 = lifePokemon1PLayer1;
     }
 
-    public static int getLifePokemon1PLayer2() {
-        return lifePokemon1PLayer2;
+    public static int getLifePokemon2PLayer1() {
+        return lifePokemon2PLayer1;
     }
 
-    public static void setLifePokemon1PLayer2(int lifePokemon1PLayer2) {
-        LifePokemonInBattlePlayer1.lifePokemon1PLayer2 = lifePokemon1PLayer2;
+    public static void setLifePokemon2PLayer1(int lifePokemon2PLayer1) {
+        LifePokemonInBattlePlayer1.lifePokemon2PLayer1 = lifePokemon2PLayer1;
     }
 
-    public static int getLifePokemon1PLayer3() {
-        return lifePokemon1PLayer3;
+    public static int getLifePokemon3PLayer1() {
+        return lifePokemon3PLayer1;
     }
 
-    public static void setLifePokemon1PLayer3(int lifePokemon1PLayer3) {
-        LifePokemonInBattlePlayer1.lifePokemon1PLayer3 = lifePokemon1PLayer3;
+    public static void setLifePokemon3PLayer1(int lifePokemon3PLayer1) {
+        LifePokemonInBattlePlayer1.lifePokemon3PLayer1 = lifePokemon3PLayer1;
     }
 
     public static JProgressBar getLifePokemon() {
