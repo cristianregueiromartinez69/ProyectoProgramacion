@@ -6,7 +6,7 @@ import com.dam.proyectoprogramacion.methods.battle.*;
 import java.awt.*;
 
 /**
- * clase con el panel de la vida del pokemon en batalla
+ * clase con el panel de la vida del pokemon en batalla del jugador 1
  * @author cristian
  * @version v3.0
  */
