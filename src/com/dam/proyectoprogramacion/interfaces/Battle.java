@@ -214,9 +214,6 @@ public class Battle extends JFrame {
         /**
          * llamamos otra vez a los listener de los cambios de pokemon para actualizar la vida
          */
-        ButtonInterfaceChangePokemonPlayer1.getPokemon1team().addActionListener(this::changeLifePokemonInBattlePlayer1);
-        ButtonInterfaceChangePokemonPlayer1.getPokemon2team().addActionListener(this::changeLifePokemonInBattlePlayer1);
-        ButtonInterfaceChangePokemonPlayer1.getPokemon3team().addActionListener(this::changeLifePokemonInBattlePlayer1);
         /**
          * actionlistener del boton de ir hacia atras en el cambio de pokemon
          */
@@ -242,7 +239,7 @@ public class Battle extends JFrame {
                  * llamamos al propio metodo para actualizar all
                  */
 
-                new MethodsLifeBattlePokemonPlayer1();
+
                 clearLifePanelPlayer1WhenPressButtonToChangePokemon();
                 pokemonBattle();
             }
@@ -261,7 +258,7 @@ public class Battle extends JFrame {
                 /**
                  * llamamos al propio metodo para actualizar all
                  */
-                new MethodsLifeBattlePokemonPlayer1();
+
                 clearLifePanelPlayer1WhenPressButtonToChangePokemon();
                 pokemonBattle();
             }
@@ -280,15 +277,19 @@ public class Battle extends JFrame {
                 /**
                  * llamamos al propio metodo para actualizar
                  */
-                new MethodsLifeBattlePokemonPlayer1();
+
                 clearLifePanelPlayer1WhenPressButtonToChangePokemon();
                 pokemonBattle();
             }
         });
+        ButtonInterfaceChangePokemonPlayer1.getPokemon1team().addActionListener(this::changeLifePokemonInBattlePlayer1);
+        ButtonInterfaceChangePokemonPlayer1.getPokemon2team().addActionListener(this::changeLifePokemonInBattlePlayer1);
+        ButtonInterfaceChangePokemonPlayer1.getPokemon3team().addActionListener(this::changeLifePokemonInBattlePlayer1);
 
 
 
-          //---------------------------Botones del jugador 2----------------------//
+
+        //---------------------------Botones del jugador 2----------------------//
 
         /**
          * actionListener del boton de atacar
@@ -345,14 +346,15 @@ public class Battle extends JFrame {
                  */
                 clearGlobalPanelPlayer2WhenPressButtonToChangePokemon1InChangePokemon();
                 /**
-                 * llamamos al propio metodo para actualizar todo
+                 * llamamos al propio metodo para actualizar all
                  */
+                clearLifePanelPlayer2WhenPressButtonToChangePokemon();
                 pokemonBattle();
             }
         });
         /**
          * actionListener para cambiar un pokemon por otro
-         * al cambiar se actualizan las características y todo
+         * al cambiar se actualizan las características y all
          */
         ButtonInterfaceChangePokemonPlayer2.getPokemon2team().addActionListener(new ActionListener() {
             @Override
@@ -362,8 +364,9 @@ public class Battle extends JFrame {
                  */
                 clearGlobalPanelPlayer2WhenPressButtonToChangePokemon2InChangePokemon();
                 /**
-                 * llamamos al propio metodo para actualizar todo
+                 * llamamos al propio metodo para actualizar all
                  */
+                clearLifePanelPlayer2WhenPressButtonToChangePokemon();
                 pokemonBattle();
             }
         });
@@ -379,11 +382,15 @@ public class Battle extends JFrame {
                  */
                 clearGlobalPanelPlayer2WhenPressButtonToChangePokemon3InChangePokemon();
                 /**
-                 * llamamos al propio metodo para actualizar todo
+                 * llamamos al propio metodo para actualizar all
                  */
+                clearLifePanelPlayer2WhenPressButtonToChangePokemon();
                 pokemonBattle();
             }
         });
+        ButtonInterfaceChangePokemonPlayer2.getPokemon1team().addActionListener(this::changeLifePokemonInBattlePlayer2);
+        ButtonInterfaceChangePokemonPlayer2.getPokemon2team().addActionListener(this::changeLifePokemonInBattlePlayer2);
+        ButtonInterfaceChangePokemonPlayer2.getPokemon3team().addActionListener(this::changeLifePokemonInBattlePlayer2);
 
 
     }
