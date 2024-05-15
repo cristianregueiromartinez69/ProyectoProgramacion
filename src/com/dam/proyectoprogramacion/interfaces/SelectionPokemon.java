@@ -3,12 +3,10 @@ package com.dam.proyectoprogramacion.interfaces;
 import com.dam.proyectoprogramacion.background.BackgroundMainMenuPanel;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfacePokemonSelect;
-import com.dam.proyectoprogramacion.methods.battle.DataNamesIconsColorsAttacksAndPokemonsPlayer1;
-import com.dam.proyectoprogramacion.methods.battle.DataNamesIconsColorsAttacksAndPokemonsPlayer2;
-import com.dam.proyectoprogramacion.methods.battle.MethodsBattlePlayer1;
-import com.dam.proyectoprogramacion.methods.battle.MethodsBattlePlayer2;
+import com.dam.proyectoprogramacion.methods.battle.*;
 import com.dam.proyectoprogramacion.methods.luck.MethodsInterfaceLuck;
 import com.dam.proyectoprogramacion.methods.selectionpokemon.MethosInterfaceSelectionPokemon;
+import com.dam.proyectoprogramacion.panels.battle.battleplayer1.LifePokemonInBattlePlayer1;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
 import com.dam.proyectoprogramacion.panels.selectionpokemon.*;
@@ -544,6 +542,8 @@ public class SelectionPokemon extends JFrame {
 
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconPokemon3(MethodsBattlePlayer1.getPathPokemon3Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNamePokemon3(MethodsBattlePlayer1.getNamePokemon3Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+
+                   LifePokemonInBattlePlayer1.setActualLifePokemonInBattle(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
 
                    /**
                     * establecemos todos los valores de los pokemons del jugador 2

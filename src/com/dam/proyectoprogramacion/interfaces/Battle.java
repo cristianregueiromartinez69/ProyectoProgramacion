@@ -229,6 +229,7 @@ public class Battle extends JFrame {
                  */
 
                 new MethodsLifeBattlePokemonPlayer1();
+                clearLifePanelPlayer1WhenPressButtonToChangePokemon();
                 pokemonBattle();
             }
         });
@@ -247,6 +248,7 @@ public class Battle extends JFrame {
                  * llamamos al propio metodo para actualizar all
                  */
                 new MethodsLifeBattlePokemonPlayer1();
+                clearLifePanelPlayer1WhenPressButtonToChangePokemon();
                 pokemonBattle();
             }
         });
@@ -265,6 +267,7 @@ public class Battle extends JFrame {
                  * llamamos al propio metodo para actualizar
                  */
                 new MethodsLifeBattlePokemonPlayer1();
+                clearLifePanelPlayer1WhenPressButtonToChangePokemon();
                 pokemonBattle();
             }
         });
@@ -638,6 +641,26 @@ public class Battle extends JFrame {
         attacksChangesPokemon1Player1.setVisible(true);
     }
 
+    private static  void clearLifePanelPlayer1WhenPressButtonToChangePokemon(){
+
+
+
+        lifePanelPokemons.removeAll();
+        lifePanelPokemons.repaint();
+        lifePanelPokemons.revalidate();
+
+
+        lifePanelPokemons.add(new LifePokemonInBattlePlayer1());
+
+
+        contentPanel.add(lifePanelPokemons, BorderLayout.NORTH);
+
+
+
+        contentPanel.repaint();
+        contentPanel.revalidate();
+
+    }
 
 
     //---------------------------metodos para cambios de paneles del jugador 2-----------------------------------//

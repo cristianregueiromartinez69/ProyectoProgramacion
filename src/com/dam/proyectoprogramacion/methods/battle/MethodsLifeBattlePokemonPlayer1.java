@@ -181,13 +181,18 @@ public class MethodsLifeBattlePokemonPlayer1 implements ActionListener {
 
 
     public static void updateLifePokemon1Player1(){
-        LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getLifePokemon1PLayer1());
+        LifePokemonInBattlePlayer1.setActualLifePokemonInBattle(getLifePokemon1Player1());
+        LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getActualLifePokemonInBattle());
     }
     public static void updateLifePokemon2PLayer1(){
-        LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getLifePokemon1PLayer1());
+        LifePokemonInBattlePlayer1.setActualLifePokemonInBattle(getLifePokemon2Player1());
+        LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getActualLifePokemonInBattle());
+
     }
     public static void updateLifePokemon3PLayer1(){
-        LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getLifePokemon1PLayer1());
+        LifePokemonInBattlePlayer1.setActualLifePokemonInBattle(getLifePokemon3Player1());
+        LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getActualLifePokemonInBattle());
+
     }
 
 

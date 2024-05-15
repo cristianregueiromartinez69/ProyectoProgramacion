@@ -19,6 +19,7 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
     private static int lifePokemon1PLayer1;
     private static int lifePokemon2PLayer1;
     private static int lifePokemon3PLayer1;
+    private static int actualLifePokemonInBattle;
     private static JProgressBar lifePokemonBar;
 
 
@@ -49,8 +50,8 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
         /**
          * le damos un valor a la barra de vida del pokemon en batalla
          */
-        lifePokemonBar = new JProgressBar();
-        lifePokemonBar.setValue(lifePokemon1PLayer1);
+        lifePokemonBar = new JProgressBar(0, lifePokemon1PLayer1);
+        lifePokemonBar.setValue(actualLifePokemonInBattle);
 
 
         /**
@@ -159,5 +160,13 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
 
     public static void setLifePokemon(JProgressBar lifePokemon) {
         LifePokemonInBattlePlayer1.lifePokemonBar = lifePokemon;
+    }
+
+    public static int getActualLifePokemonInBattle() {
+        return actualLifePokemonInBattle;
+    }
+
+    public static void setActualLifePokemonInBattle(int actualLifePokemonInBattle) {
+        LifePokemonInBattlePlayer1.actualLifePokemonInBattle = actualLifePokemonInBattle;
     }
 }
