@@ -772,7 +772,7 @@ public class MethodsBattlePlayer2 {
      * @param players el hashmap de los jugadores
      * @return el nombre del primer ataque
      */
-    public static String getNameAttack4PokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players) {
+    public static String getNameAttack4PokemonInBattlePlayer2(HashMap<String, ArrayList<Object>> players) {
         /**
          * variable local para almacenar el nombre del ataque
          */

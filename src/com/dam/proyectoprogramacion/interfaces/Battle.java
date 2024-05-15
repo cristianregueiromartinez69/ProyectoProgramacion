@@ -160,6 +160,8 @@ public class Battle extends JFrame {
      * Metemos las acciones de los botones en un metodo para poder actualizar los cambios
      */
     public static void pokemonBattle(){
+
+        //---------------------------Botones del jugador 1----------------------//
         /**
          * actionListener del boton de atacar
          */
@@ -253,7 +255,33 @@ public class Battle extends JFrame {
             }
         });
 
+          //---------------------------Botones del jugador 2----------------------//
 
+        /**
+         * actionListener del boton de atacar
+         */
+        ButtonInterfaceCombat.getAttackButtonPlayer2().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                /**
+                 * hace visible un panel y oculta otro
+                 */
+                clearGlobalPanelPlayer2WhenPressAttack();
+            }
+        });
+
+        /**
+         * acionlistener para volver atras en el menu de atacar
+         */
+        ButtonInterfaceAttacks.getBackPlayer2().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                /**
+                 * hace visible un panel y oculta otro
+                 */
+                clearGlobalPanelPlayer2WhenPressBackinAttack();
+            }
+        });
 
     }
 
@@ -520,6 +548,22 @@ public class Battle extends JFrame {
 
         changesPokemonsPLayer1.setVisible(false);
         attacksChangesPokemon1Player1.setVisible(true);
+    }
+    /**
+     * metodo que hace visible el panel de ataques y oculta el de ataque y cambio
+     */
+    private static void clearGlobalPanelPlayer2WhenPressAttack(){
+
+        attacksPanelPlayer2.setVisible(true);
+        attacksChangesPokemon1Player2.setVisible(false);
+    }
+
+    /**
+     * metodo que hace visible el panel de ataque y cambio y oculta el de ataques
+     */
+    private static void clearGlobalPanelPlayer2WhenPressBackinAttack(){
+        attacksPanelPlayer2.setVisible(false);
+        attacksChangesPokemon1Player2.setVisible(true);
     }
 
 
