@@ -35,7 +35,7 @@ public class Battle extends JFrame {
     private static JPanel attacksChangesPokemon1Player2;
     private  static JPanel attacksPanelPlayer2;
     private static JPanel changesPokemonsPLayer2;
-    private  static JPanel lifePanelPokemonPlayer1;
+    private  static JPanel lifePanelPokemon;
     
 
 
@@ -104,12 +104,12 @@ public class Battle extends JFrame {
 
 
 
-        lifePanelPokemonPlayer1 = new JPanel();
-        lifePanelPokemonPlayer1.setLayout(new FlowLayout());
-        contentPanel.add(lifePanelPokemonPlayer1, BorderLayout.NORTH);
+        lifePanelPokemon = new JPanel();
+        lifePanelPokemon.setLayout(new FlowLayout());
+        contentPanel.add(lifePanelPokemon, BorderLayout.NORTH);
 
         JPanel auxLifePanelPlayer1 = new LifePokemonInBattlePlayer1();
-        lifePanelPokemonPlayer1.add(auxLifePanelPlayer1);
+        lifePanelPokemon.add(auxLifePanelPlayer1);
 
 
 
@@ -167,7 +167,7 @@ public class Battle extends JFrame {
         /**
          * lo añadimos
          */
-        lifePanelPokemonPlayer1.add(auxLifePanelPlayer2);
+        lifePanelPokemon.add(auxLifePanelPlayer2);
 
         pokemonBattle();
 
@@ -674,21 +674,21 @@ public class Battle extends JFrame {
         /**
          * limpiamos el panel de la vida
          */
-        lifePanelPokemonPlayer1.removeAll();
-        lifePanelPokemonPlayer1.repaint();
-        lifePanelPokemonPlayer1.revalidate();
+        lifePanelPokemon.removeAll();
+        lifePanelPokemon.repaint();
+        lifePanelPokemon.revalidate();
 
 
         /**
          * lo instanciamos de nuevo con la clase del panel de la vida
          */
-        lifePanelPokemonPlayer1.add(new LifePokemonInBattlePlayer1());
-        lifePanelPokemonPlayer1.add(new LifePokemonInBattlePlayer2());
+        lifePanelPokemon.add(new LifePokemonInBattlePlayer1());
+        lifePanelPokemon.add(new LifePokemonInBattlePlayer2());
 
         /**
          * lo añadimos al panel principal
          */
-        contentPanel.add(lifePanelPokemonPlayer1, BorderLayout.NORTH);
+        contentPanel.add(lifePanelPokemon, BorderLayout.NORTH);
 
 
         /**
@@ -1002,21 +1002,21 @@ public class Battle extends JFrame {
         /**
          * limpiamos el panel de la vida
          */
-        lifePanelPokemonPlayer1.removeAll();
-        lifePanelPokemonPlayer1.repaint();
-        lifePanelPokemonPlayer1.revalidate();
+        lifePanelPokemon.removeAll();
+        lifePanelPokemon.repaint();
+        lifePanelPokemon.revalidate();
 
 
         /**
          * lo instanciamos de nuevo con la clase del panel de la vida
          */
-        lifePanelPokemonPlayer1.add(new LifePokemonInBattlePlayer1());
-        lifePanelPokemonPlayer1.add(new LifePokemonInBattlePlayer2());
+        lifePanelPokemon.add(new LifePokemonInBattlePlayer1());
+        lifePanelPokemon.add(new LifePokemonInBattlePlayer2());
 
         /**
          * lo añadimos al panel principal
          */
-        contentPanel.add(lifePanelPokemonPlayer1, BorderLayout.NORTH);
+        contentPanel.add(lifePanelPokemon, BorderLayout.NORTH);
 
 
         /**
@@ -1110,10 +1110,10 @@ public class Battle extends JFrame {
     }
 
     public JPanel getLifePanelPokemons() {
-        return lifePanelPokemonPlayer1;
+        return lifePanelPokemon;
     }
 
     public void setLifePanelPokemons(JPanel lifePanelPokemons) {
-        this.lifePanelPokemonPlayer1 = lifePanelPokemons;
+        this.lifePanelPokemon = lifePanelPokemons;
     }
 }
