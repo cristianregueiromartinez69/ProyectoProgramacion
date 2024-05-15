@@ -72,24 +72,40 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
     }
 
     /**
-     * metodo
-     * @return
+     * metodo para establecer el color de fondo de la vida del pokemon
+     * @return el color de fondo
      */
     private Color getBackgroundColorLifeBarPokemon() {
         Color colorBackgroundLifePokemon;
 
+        /**
+         * si la vida es menos de un 20%, se pone de color rojo
+         */
         if(lifePokemonBar.getValue() <= lifePokemonBar.getMaximum()*0.2){
             colorBackgroundLifePokemon = Color.RED;
         }
+        /**
+         * si la vida es de un 50% o menos, se pone amarillo
+         */
         else if(lifePokemonBar.getValue() <= lifePokemonBar.getMaximum()*0.5){
             colorBackgroundLifePokemon = Color.YELLOW;
         }
+        /**
+         * si no es anda de lo anterior, está verde
+         */
         else{
             colorBackgroundLifePokemon = Color.GREEN;
         }
+        /**
+         * retornamos el color de fondo
+         */
         return colorBackgroundLifePokemon;
     }
 
+    /**
+     * getter y setter de los atributos de la clase
+     * @return los atributos de la clase
+     */
     public JPanel getPanelLifePokemon() {
         return panelLifePokemon;
     }
