@@ -107,6 +107,15 @@ public class Battle extends JFrame {
 
 
 
+        lifePanelPokemons = new JPanel();
+        lifePanelPokemons.setLayout(new FlowLayout());
+        contentPanel.add(lifePanelPokemons, BorderLayout.NORTH);
+
+        JPanel auxLifePanel = new LifePokemonInBattlePlayer1();
+        lifePanelPokemons.add(auxLifePanel);
+
+
+
 
         /**
          * iniciamos el panel del jugador 2 y le damos un layout
