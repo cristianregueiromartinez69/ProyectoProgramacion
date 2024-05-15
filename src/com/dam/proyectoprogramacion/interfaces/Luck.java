@@ -3,7 +3,7 @@ package com.dam.proyectoprogramacion.interfaces;
 import com.dam.proyectoprogramacion.background.BackgroundMainMenuPanel;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceLuck;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceLuck2;
-import com.dam.proyectoprogramacion.methodsandmain.MethodsInterfaceLuck;
+import com.dam.proyectoprogramacion.methods.luck.MethodsInterfaceLuck;
 import com.dam.proyectoprogramacion.panels.luck.EnterPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.panels.luck.EnterPanelPlayer2Luck;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
@@ -12,7 +12,6 @@ import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 /**
  * interfaz de la suerte en la que se decide quien tira primero
@@ -573,12 +572,12 @@ public class Luck extends JFrame {
      * @param e el objeto de tipo actionevent
      */
     public void winnerFaceOrTail(ActionEvent e){
+        MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
+        new SelectionPokemon();
         /**
          * si se cumple la condicion de este metodo, se pued epulsar el boton
          * el metodo consiste en saber si está editable el alias del jugador 1 y 2
          */
-        MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
-        new SelectionPokemon();
         if(MethodsInterfaceLuck.showWinnerLuck()){
             /**
              * limpiamos el panel del ganador del sorteo

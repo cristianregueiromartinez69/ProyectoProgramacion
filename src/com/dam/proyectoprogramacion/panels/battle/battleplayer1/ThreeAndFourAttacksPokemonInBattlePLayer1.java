@@ -1,7 +1,7 @@
 package com.dam.proyectoprogramacion.panels.battle.battleplayer1;
 
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceAttacks;
-import com.dam.proyectoprogramacion.methodsandmain.DataNamesIconsColorsAttacksAndPokemonsPlayer1;
+import com.dam.proyectoprogramacion.methods.battle.DataNamesIconsColorsAttacksAndPokemonsPlayer1;
 
 import javax.swing.*;
 import java.awt.*;

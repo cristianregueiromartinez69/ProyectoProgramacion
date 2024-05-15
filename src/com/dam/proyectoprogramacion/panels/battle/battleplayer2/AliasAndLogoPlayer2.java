@@ -1,5 +1,5 @@
 package com.dam.proyectoprogramacion.panels.battle.battleplayer2;
-import com.dam.proyectoprogramacion.methodsandmain.MethodsInterfaceLuck;
+import com.dam.proyectoprogramacion.methods.luck.MethodsInterfaceLuck;
 
 
 import javax.swing.*;
