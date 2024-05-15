@@ -712,7 +712,7 @@ public class MethodsBattlePlayer1 {
 
     }
 
-    //---------------------------------xAtaque numero 3 ---------------------------//
+    //---------------------------------xAtaque numero 4 ---------------------------//
 
     /**
      * metodo para pasar el path con el icono del cuarto ataque del pokemon del jugador 1
