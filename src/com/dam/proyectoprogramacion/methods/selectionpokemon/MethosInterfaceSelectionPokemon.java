@@ -1,18 +1,14 @@
-package com.dam.proyectoprogramacion.methodsandmain;
+package com.dam.proyectoprogramacion.methods.selectionpokemon;
 
-import com.dam.proyectoprogramacion.buttons.ButtonInterfacePokemonSelect;
 import com.dam.proyectoprogramacion.interfaces.SelectionPokemon;
+import com.dam.proyectoprogramacion.methods.luck.MethodsInterfaceLuck;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
 import com.dam.proyectoprogramacion.panels.selectionpokemon.*;
-import com.dam.proyectoprogramacion.pokemon.*;
 
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 /**
  * Clase con los metodos de la interfaz de seleccion de pokemons

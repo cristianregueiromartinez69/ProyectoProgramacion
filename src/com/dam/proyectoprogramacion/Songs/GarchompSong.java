@@ -1,22 +1,25 @@
-package com.dam.proyectoprogramacion.pokemonSongs;
+package com.dam.proyectoprogramacion.Songs;
+
+
+
 
 import javax.sound.sampled.*;
 import java.io.File;
 import java.io.IOException;
 
 /**
- * clase con la musica del menu dle juego
+ * clase con el grito de drampa
  * @author cristian
- * @version v1.0
+ * @version v2.0
  */
-public class MusicMainMenu {
+public class GarchompSong {
 
-    public static void music() {
+    public static void musicGarchomp() {
         try {
             /**
              * Cargar el archivo de audio
              */
-            File audioFile = new File("canciones/otramusicaredyblue.wav");
+            File audioFile = new File("canciones/gritoGarchomp.wav");
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
 
             /**
@@ -46,3 +49,5 @@ public class MusicMainMenu {
         }
     }
 }
+
+

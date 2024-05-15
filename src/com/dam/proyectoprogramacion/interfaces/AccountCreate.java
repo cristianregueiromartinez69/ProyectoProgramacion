@@ -2,8 +2,8 @@ package com.dam.proyectoprogramacion.interfaces;
 
 import com.dam.proyectoprogramacion.background.BackgroundMainMenuPanel;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCreateAccount;
-import com.dam.proyectoprogramacion.methodsandmain.MethodsInterfaceAccountCreate;
-import com.dam.proyectoprogramacion.methodsandmain.MethodsLogicalAccountCreate;
+import com.dam.proyectoprogramacion.methods.accountcreate.MethodsInterfaceAccountCreate;
+import com.dam.proyectoprogramacion.methods.accountcreate.MethodsLogicalAccountCreate;
 import com.dam.proyectoprogramacion.panels.accountcreate.*;
 
 import javax.swing.*;

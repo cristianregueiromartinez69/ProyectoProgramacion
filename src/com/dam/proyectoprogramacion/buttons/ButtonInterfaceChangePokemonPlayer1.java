@@ -1,6 +1,6 @@
 package com.dam.proyectoprogramacion.buttons;
 
-import com.dam.proyectoprogramacion.methodsandmain.DataNamesIconsColorsAttacksAndPokemonsPlayer1;
+import com.dam.proyectoprogramacion.methods.battle.DataNamesIconsColorsAttacksAndPokemonsPlayer1;
 
 import javax.swing.*;
 import javax.swing.border.Border;

@@ -3,11 +3,16 @@ package com.dam.proyectoprogramacion.interfaces;
 import com.dam.proyectoprogramacion.background.BackgroundMainMenuPanel;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfacePokemonSelect;
-import com.dam.proyectoprogramacion.methodsandmain.*;
+import com.dam.proyectoprogramacion.methods.battle.DataNamesIconsColorsAttacksAndPokemonsPlayer1;
+import com.dam.proyectoprogramacion.methods.battle.DataNamesIconsColorsAttacksAndPokemonsPlayer2;
+import com.dam.proyectoprogramacion.methods.battle.MethodsBattlePlayer1;
+import com.dam.proyectoprogramacion.methods.battle.MethodsBattlePlayer2;
+import com.dam.proyectoprogramacion.methods.luck.MethodsInterfaceLuck;
+import com.dam.proyectoprogramacion.methods.selectionpokemon.MethosInterfaceSelectionPokemon;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
 import com.dam.proyectoprogramacion.panels.selectionpokemon.*;
-import com.dam.proyectoprogramacion.pokemonSongs.*;
+import com.dam.proyectoprogramacion.Songs.*;
 
 import javax.swing.*;
 import java.awt.*;

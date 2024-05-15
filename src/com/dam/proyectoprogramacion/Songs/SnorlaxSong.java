@@ -1,4 +1,5 @@
-package com.dam.proyectoprogramacion.pokemonSongs;
+package com.dam.proyectoprogramacion.Songs;
+
 
 
 
@@ -11,14 +12,14 @@ import java.io.IOException;
  * @author cristian
  * @version v2.0
  */
-public class DrampaSong {
+public class SnorlaxSong {
 
-    public static void musicDrampa() {
+    public static void musicSnorlax() {
         try {
             /**
              * Cargar el archivo de audio
              */
-            File audioFile = new File("canciones/gritoDrampa.wav");
+            File audioFile = new File("canciones/gritoSnorlax.wav");
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
 
             /**
@@ -48,4 +49,5 @@ public class DrampaSong {
         }
     }
 }
+
 

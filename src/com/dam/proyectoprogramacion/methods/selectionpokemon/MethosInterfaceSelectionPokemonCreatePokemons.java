@@ -1,4 +1,4 @@
-package com.dam.proyectoprogramacion.methodsandmain;
+package com.dam.proyectoprogramacion.methods.selectionpokemon;
 
 import com.dam.proyectoprogramacion.pokemon.*;
 

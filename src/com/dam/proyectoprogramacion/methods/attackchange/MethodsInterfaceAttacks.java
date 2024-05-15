@@ -1,4 +1,4 @@
-package com.dam.proyectoprogramacion.methodsandmain;
+package com.dam.proyectoprogramacion.methods.attackchange;
 
 import javax.swing.*;
 import java.awt.*;

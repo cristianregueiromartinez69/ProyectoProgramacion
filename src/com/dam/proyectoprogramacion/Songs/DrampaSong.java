@@ -1,5 +1,4 @@
-package com.dam.proyectoprogramacion.pokemonSongs;
-
+package com.dam.proyectoprogramacion.Songs;
 
 
 
@@ -12,14 +11,14 @@ import java.io.IOException;
  * @author cristian
  * @version v2.0
  */
-public class MarshadowSong {
+public class DrampaSong {
 
-    public static void musicMarshadow() {
+    public static void musicDrampa() {
         try {
             /**
              * Cargar el archivo de audio
              */
-            File audioFile = new File("canciones/gritoMarshadow.wav");
+            File audioFile = new File("canciones/gritoDrampa.wav");
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
 
             /**
@@ -49,5 +48,4 @@ public class MarshadowSong {
         }
     }
 }
-
 
