@@ -166,7 +166,7 @@ public class Battle extends JFrame {
     /**
      * Metemos las acciones de los botones en un metodo para poder actualizar los cambios
      */
-    public static void pokemonBattle(){
+    public void pokemonBattle(){
 
         //---------------------------Botones del jugador 1----------------------//
         /**
@@ -203,6 +203,9 @@ public class Battle extends JFrame {
                 clearGlobalPanelPlayer1WhenPressChange();
             }
         });
+        ButtonInterfaceChangePokemonPlayer1.getPokemon1team().addActionListener(this::changeLifePokemonInBattlePlayer1);
+        ButtonInterfaceChangePokemonPlayer1.getPokemon2team().addActionListener(this::changeLifePokemonInBattlePlayer1);
+        ButtonInterfaceChangePokemonPlayer1.getPokemon3team().addActionListener(this::changeLifePokemonInBattlePlayer1);
         /**
          * actionlistener del boton de ir hacia atras en el cambio de pokemon
          */
@@ -660,6 +663,22 @@ public class Battle extends JFrame {
         contentPanel.repaint();
         contentPanel.revalidate();
 
+    }
+    public void changeLifePokemonInBattlePlayer1(ActionEvent e) {
+        if(e.getSource() == ButtonInterfaceChangePokemonPlayer1.getPokemon1team()){
+            LifePokemonInBattlePlayer1.setActualLifePokemonInBattle(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
+            LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getActualLifePokemonInBattle());
+        }
+        else if(e.getSource() == ButtonInterfaceChangePokemonPlayer1.getPokemon2team()){
+            LifePokemonInBattlePlayer1.setActualLifePokemonInBattle(MethodsLifeBattlePokemonPlayer1.getLifePokemon2Player1());
+            LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getActualLifePokemonInBattle());
+
+        }
+        else if((e.getSource() == ButtonInterfaceChangePokemonPlayer1.getPokemon3team())){
+            LifePokemonInBattlePlayer1.setActualLifePokemonInBattle(MethodsLifeBattlePokemonPlayer1.getLifePokemon3Player1());
+            LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getActualLifePokemonInBattle());
+
+        }
     }
 
 
