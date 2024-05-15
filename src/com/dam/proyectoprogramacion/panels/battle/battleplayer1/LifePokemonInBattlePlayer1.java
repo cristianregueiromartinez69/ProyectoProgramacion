@@ -52,14 +52,20 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
         lifePokemonBar = new JProgressBar(0, lifePokemon1PLayer1);
         lifePokemonBar.setValue(lifePokemon1PLayer1);
 
-        /**
-         * hacemos que el color de fondo sea igual a un metodo que cambia el color segun la vida que le queda al pokemon
-         */
 
+        /**
+         * le damos unas dimensiones a la barra de vida
+         */
         lifePokemonBar.setPreferredSize(new Dimension(400,40));
         lifePokemonBar.setMaximumSize(new Dimension(400,40));
         lifePokemonBar.setMinimumSize(new Dimension(400,40));
+        /**
+         * hacemos que sea visible el valor que tiene
+         */
         lifePokemonBar.setStringPainted(true);
+        /**
+         * hacemos que el color de fondo sea igual a un metodo el cual varía el color según su vida actual
+         */
         lifePokemonBar.setForeground(getBackgroundColorLifeBarPokemon());
 
         /**
@@ -69,6 +75,15 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
 
 
         this.add(panelLifePokemon);
+
+        Timer timer = new Timer(1000, e -> {
+            int currentValue = lifePokemonBar.getValue();
+            if (currentValue > 0) {
+                lifePokemonBar.setValue(currentValue - 30);
+               lifePokemonBar.setBackground(getBackgroundColorLifeBarPokemon());
+            }
+        });
+        timer.start();
 
 
 
@@ -98,6 +113,9 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
         /**
          * si no es anda de lo anterior, está verde
          */
+        else if(lifePokemonBar.getValue() == 0){
+            colorBackgroundLifePokemon = null;
+        }
         else{
             colorBackgroundLifePokemon = Color.GREEN;
         }
