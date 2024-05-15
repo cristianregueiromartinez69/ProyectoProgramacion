@@ -9,6 +9,7 @@ import com.dam.proyectoprogramacion.panels.battle.battleplayer1.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 /**
@@ -16,7 +17,7 @@ import java.util.ArrayList;
  * @author cristian
  * @version v3.0
  */
-public class MethodsLifeBattlePokemonPlayer1 {
+public class MethodsLifeBattlePokemonPlayer1 implements ActionListener {
 
     /**
      * metodo para obtener el valor de la vida del pokemon numero 1 del jugador 1
@@ -161,18 +162,33 @@ public class MethodsLifeBattlePokemonPlayer1 {
          */
         return lifePokemon3;
     }
-
-    public static void updateLifeBarPokemonPlayer1(ActionEvent e){
-
+    @Override
+    public void actionPerformed(ActionEvent e) {
         if(e.getSource() == ButtonInterfaceChangePokemonPlayer1.getPokemon1team()){
-            LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getLifePokemon1PLayer1());
+            updateLifePokemon1Player1();
         }
         else if(e.getSource() == ButtonInterfaceChangePokemonPlayer1.getPokemon2team()){
-            LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getLifePokemon2PLayer1());
+            updateLifePokemon2PLayer1();
         }
-        else if((e.getSource() == ButtonInterfaceChangePokemonPlayer1.getPokemon3team()){
-            LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getLifePokemon3PLayer1());
+        else if((e.getSource() == ButtonInterfaceChangePokemonPlayer1.getPokemon3team())){
+            updateLifePokemon3PLayer1();
         }
     }
+
+
+
+
+
+
+    public static void updateLifePokemon1Player1(){
+        LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getLifePokemon1PLayer1());
+    }
+    public static void updateLifePokemon2PLayer1(){
+        LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getLifePokemon1PLayer1());
+    }
+    public static void updateLifePokemon3PLayer1(){
+        LifePokemonInBattlePlayer1.getLifePokemonBar().setValue(LifePokemonInBattlePlayer1.getLifePokemon1PLayer1());
+    }
+
 
 }

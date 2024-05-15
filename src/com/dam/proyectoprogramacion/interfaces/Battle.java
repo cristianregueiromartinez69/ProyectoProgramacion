@@ -9,10 +9,7 @@ import com.dam.proyectoprogramacion.buttons.ButtonInterfaceAttacks;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer1;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer2;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
-import com.dam.proyectoprogramacion.methods.battle.DataNamesIconsColorsAttacksAndPokemonsPlayer1;
-import com.dam.proyectoprogramacion.methods.battle.DataNamesIconsColorsAttacksAndPokemonsPlayer2;
-import com.dam.proyectoprogramacion.methods.battle.MethodsBattlePlayer1;
-import com.dam.proyectoprogramacion.methods.battle.MethodsBattlePlayer2;
+import com.dam.proyectoprogramacion.methods.battle.*;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.*;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer2.AliasAndLogoPlayer2;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer2.AttacksAndChangesPokemonPlayer2;
@@ -222,13 +219,16 @@ public class Battle extends JFrame {
         ButtonInterfaceChangePokemonPlayer1.getPokemon1team().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 /**
                  * llamamos al metodo que actualiza los paneles al cambiar de pokemon
                  */
                 clearGlobalPanelPlayer1WhenPressButtonToChangePokemon1InChangePokemon();
                 /**
-                 * llamamos al propio metodo para actualizar todo
+                 * llamamos al propio metodo para actualizar all
                  */
+
+                new MethodsLifeBattlePokemonPlayer1();
                 pokemonBattle();
             }
         });
@@ -244,8 +244,9 @@ public class Battle extends JFrame {
                  */
                 clearGlobalPanelPlayer1WhenPressButtonToChangePokemon2InChangePokemon();
                 /**
-                 * llamamos al propio metodo para actualizar todo
+                 * llamamos al propio metodo para actualizar all
                  */
+                new MethodsLifeBattlePokemonPlayer1();
                 pokemonBattle();
             }
         });
@@ -261,8 +262,9 @@ public class Battle extends JFrame {
                  */
                clearGlobalPanelPlayer1WhenPressButtonToChangePokemon3InChangePokemon();
                 /**
-                 * llamamos al propio metodo para actualizar todo
+                 * llamamos al propio metodo para actualizar
                  */
+                new MethodsLifeBattlePokemonPlayer1();
                 pokemonBattle();
             }
         });
@@ -635,7 +637,10 @@ public class Battle extends JFrame {
         changesPokemonsPLayer1.setVisible(false);
         attacksChangesPokemon1Player1.setVisible(true);
     }
-    //---------------------------metodos para cambios de paneles dle jugador 2-----------------------------------//
+
+
+
+    //---------------------------metodos para cambios de paneles del jugador 2-----------------------------------//
 
     /**
      * metodo que hace visible el panel de ataques y oculta el de ataque y cambio
