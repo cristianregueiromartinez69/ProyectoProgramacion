@@ -216,8 +216,6 @@ public class Battle extends JFrame {
                 /**
                  * llamamos al metodo que actualiza los paneles al cambiar de pokemon
                  */
-                new LifePokemonInBattlePlayer1();
-                System.out.println("vida de " + ButtonInterfaceChangePokemonPlayer1.getPokemon1team().getText() + ": " + LifePokemonInBattlePlayer1.getLifePokemon1PLayer1());
                 clearGlobalPanelPlayer1WhenPressButtonToChangePokemon1InChangePokemon();
                 /**
                  * llamamos al propio metodo para actualizar todo
@@ -235,8 +233,6 @@ public class Battle extends JFrame {
                 /**
                  * llamamos al metodo que actualiza los paneles al cambiar de pokemon
                  */
-                new LifePokemonInBattlePlayer1();
-                System.out.println("vida de " + ButtonInterfaceChangePokemonPlayer1.getPokemon2team().getText() + ": " + LifePokemonInBattlePlayer1.getLifePokemon2PLayer1());
                 clearGlobalPanelPlayer1WhenPressButtonToChangePokemon2InChangePokemon();
                 /**
                  * llamamos al propio metodo para actualizar todo
@@ -254,9 +250,7 @@ public class Battle extends JFrame {
                 /**
                  * llamamos al metodo que actualiza los paneles al cambiar de pokemon
                  */
-                new LifePokemonInBattlePlayer1();
-                System.out.println("vida de " + ButtonInterfaceChangePokemonPlayer1.getPokemon3team().getText() + ": " + LifePokemonInBattlePlayer1.getLifePokemon3PLayer1());
-                clearGlobalPanelPlayer1WhenPressButtonToChangePokemon3InChangePokemon();
+               clearGlobalPanelPlayer1WhenPressButtonToChangePokemon3InChangePokemon();
                 /**
                  * llamamos al propio metodo para actualizar todo
                  */
