@@ -192,7 +192,42 @@ public class Battle extends JFrame {
                 clearGlobalPanelPlayer1WhenPressAttack();
             }
         });
-
+        /**
+         * actionListener del boton de ataque 1 del jugador 1
+         */
+        ButtonInterfaceAttacks.getAttack1Player1().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clearGlobalPanelPlayer1WhenPressAttacksButtons();
+            }
+        });
+        /**
+         * actionListener del boton de ataque 2 del jugador 1
+         */
+        ButtonInterfaceAttacks.getAttack2PLayer1().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clearGlobalPanelPlayer1WhenPressAttacksButtons();
+            }
+        });
+        /**
+         * actionListener del boton de ataque 3 del jugador 1
+         */
+        ButtonInterfaceAttacks.getAttack3Player1().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clearGlobalPanelPlayer1WhenPressAttacksButtons();
+            }
+        });
+        /**
+         * actionListener del boton de ataque 4 del jugador 1
+         */
+        ButtonInterfaceAttacks.getAttack4Player1().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clearGlobalPanelPlayer1WhenPressAttacksButtons();
+            }
+        });
         /**
          * acionlistener para volver atras en el menu de atacar
          */
@@ -308,6 +343,43 @@ public class Battle extends JFrame {
         });
 
         /**
+         * actionListener del boton de ataque 1 del jugador 1
+         */
+        ButtonInterfaceAttacks.getAttack1Player2().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clearGlobalPanelPlayer2WhenPressAttacksButtons();
+            }
+        });
+        /**
+         * actionListener del boton de ataque 2 del jugador 1
+         */
+        ButtonInterfaceAttacks.getAttack2PLayer2().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clearGlobalPanelPlayer2WhenPressAttacksButtons();
+            }
+        });
+        /**
+         * actionListener del boton de ataque 3 del jugador 1
+         */
+        ButtonInterfaceAttacks.getAttack3Player2().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clearGlobalPanelPlayer2WhenPressAttacksButtons();
+            }
+        });
+        /**
+         * actionListener del boton de ataque 4 del jugador 1
+         */
+        ButtonInterfaceAttacks.getAttack4Player2().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clearGlobalPanelPlayer2WhenPressAttacksButtons();
+            }
+        });
+
+        /**
          * acionlistener para volver atras en el menu de atacar
          */
         ButtonInterfaceAttacks.getBackPlayer2().addActionListener(new ActionListener() {
@@ -419,6 +491,14 @@ public class Battle extends JFrame {
 
         attacksPanelPlayer1.setVisible(true);
         attacksChangesPokemon1Player1.setVisible(false);
+    }
+
+    /**
+     * metodo para atacar y hacer visivle el panel de atacar y cambio e invisible el de ataques del jugador 1
+     */
+    private static void clearGlobalPanelPlayer1WhenPressAttacksButtons(){
+        attacksPanelPlayer1.setVisible(false);
+        attacksChangesPokemon1Player1.setVisible(true);
     }
 
     /**
@@ -748,7 +828,13 @@ public class Battle extends JFrame {
         attacksPanelPlayer2.setVisible(true);
         attacksChangesPokemon1Player2.setVisible(false);
     }
-
+    /**
+     * metodo para atacar y hacer visivle el panel de atacar y cambio e invisible el de ataques del jugador 2
+     */
+    private static void clearGlobalPanelPlayer2WhenPressAttacksButtons(){
+        attacksPanelPlayer2.setVisible(false);
+        attacksChangesPokemon1Player2.setVisible(true);
+    }
     /**
      * metodo que hace visible el panel de ataque y cambio y oculta el de ataques
      */
