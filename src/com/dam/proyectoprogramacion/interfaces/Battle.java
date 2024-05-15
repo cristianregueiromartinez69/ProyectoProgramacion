@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceAttacks;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer1;
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer2;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
 import com.dam.proyectoprogramacion.methodsandmain.DataNamesIconsColorsAttacksAndPokemonsPlayer1;
 import com.dam.proyectoprogramacion.methodsandmain.MethodsBattlePlayer1;
@@ -197,6 +198,15 @@ public class Battle extends JFrame {
             }
         });
         /**
+         * actionlistener del boton de ir hacia atras en el cambio de pokemon
+         */
+        ButtonInterfaceChangePokemonPlayer1.getBack().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clearGlobalPanelPlayer1WhenPressBackInChangePokemon();
+            }
+        });
+        /**
          * actionListener para cambiar un pokemon por otro
          * al cambiar se actualizan las características y todo
          */
@@ -248,12 +258,7 @@ public class Battle extends JFrame {
             }
         });
 
-        ButtonInterfaceChangePokemonPlayer1.getBack().addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                clearGlobalPanelPlayer1WhenPressBackInChangePokemon();
-            }
-        });
+
 
           //---------------------------Botones del jugador 2----------------------//
 
@@ -282,6 +287,24 @@ public class Battle extends JFrame {
                 clearGlobalPanelPlayer2WhenPressBackinAttack();
             }
         });
+        /**
+         * actionlistener del boton de cambiar de pokemon
+         */
+        ButtonInterfaceCombat.getChangePokemonButtonPlayer2().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clearGlobalPanelPlayer2WhenPressChange();
+            }
+        });
+        /**
+         * actionlistener del boton de ir hacia atras en el cambio de pokemon
+         */
+        ButtonInterfaceChangePokemonPlayer2.getBack().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clearGlobalPanelPlayer2WhenPressBackInChangePokemon();
+            }
+        });
 
     }
 
@@ -296,6 +319,8 @@ public class Battle extends JFrame {
         contentPanel.setLayout(new BorderLayout());
         return contentPanel;
     }
+
+    //---------------------------metodos para cambios de paneles dle jugador 1-----------------------------------//
 
     /**
      * metodo que hace visible el panel de ataques y oculta el de ataque y cambio
@@ -549,6 +574,8 @@ public class Battle extends JFrame {
         changesPokemonsPLayer1.setVisible(false);
         attacksChangesPokemon1Player1.setVisible(true);
     }
+    //---------------------------metodos para cambios de paneles dle jugador 2-----------------------------------//
+
     /**
      * metodo que hace visible el panel de ataques y oculta el de ataque y cambio
      */
@@ -563,6 +590,22 @@ public class Battle extends JFrame {
      */
     private static void clearGlobalPanelPlayer2WhenPressBackinAttack(){
         attacksPanelPlayer2.setVisible(false);
+        attacksChangesPokemon1Player2.setVisible(true);
+    }
+
+    /**
+     * metodo que hace visible los pokemons a elegir y oculta el de ataque y cambio
+     */
+    private  static void clearGlobalPanelPlayer2WhenPressChange(){
+
+        changesPokemonsPLayer2.setVisible(true);
+        attacksChangesPokemon1Player2.setVisible(false);
+    }
+    /**
+     * metodo que hace visible el ataque y cambio de pokemon y oculta los pokemons a cambiar
+     */
+    private static void clearGlobalPanelPlayer2WhenPressBackInChangePokemon(){
+        changesPokemonsPLayer2.setVisible(false);
         attacksChangesPokemon1Player2.setVisible(true);
     }
 
