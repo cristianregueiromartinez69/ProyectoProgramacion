@@ -1,5 +1,7 @@
 package com.dam.proyectoprogramacion.panels.battle.logicalbattle;
 
+import com.dam.proyectoprogramacion.background.BackgroundBattle;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -11,6 +13,8 @@ public class PanelImageBattlePokemon extends JPanel {
     private static Image battleScenario;
 
     public PanelImageBattlePokemon(){
+
+        BackgroundBattle backBattle = new BackgroundBattle(new I)
 
     }
 
