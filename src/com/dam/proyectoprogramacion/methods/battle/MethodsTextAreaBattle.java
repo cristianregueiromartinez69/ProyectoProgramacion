@@ -45,18 +45,51 @@ public class MethodsTextAreaBattle{
      * @return el nombre del primer ataque
      */
     public static String getNameAttack1PokemonPLayer1(){
+        /**
+         * iniciamos una variable para encontrar el alias del jugador 1 en el hashmap
+         */
         String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+        /**
+         * iniciamos una variable de tipo string igual a un metodo que nos da el nombre del pokemon en batalla
+         */
         String namePokemonToLook = getNamePokemon1PLayer1();
         String attack1 = "";
 
+        /**
+         * recorremos el hashmap de jugasdores
+         */
         for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+            /**
+             * si hay coincidencias en la clave, se mete en la condicion
+             */
             if (key.equals(aliasPlayer1)) {
+                /**
+                 * iniciamos un array de objetos igual al valor del hashmap
+                 */
                 ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                /**
+                 * hacemos un for con el array
+                 */
                 for (int i = 0; i < pokemons.size(); i++) {
+                    /**
+                     * iniciamos una variable de tipo pokemon que es igual al tamaño
+                     */
                     PokemonProperties pokemon = (PokemonProperties) pokemons.get(i);
+                    /**
+                     * si encuentra el nombre del pokemon se mete en la condicion
+                     */
                     if (pokemon.getName().equalsIgnoreCase(namePokemonToLook)) {
+                        /**
+                         * lo indicamos
+                         */
                         pokemon = (PokemonProperties) pokemons.get(i);
+                        /**
+                         * iniciamos una variable de ataques pokemon igual a la posicion 0 del array
+                         */
                         AttacksPokemons attacks = pokemon.getAttacks()[0];
+                        /**
+                         * obtenemos el nombre
+                         */
                         attack1 = attacks.getName();
                         break;
                     }
@@ -64,6 +97,9 @@ public class MethodsTextAreaBattle{
 
             }
         }
+        /**
+         * devolvemos el nombre del ataque
+         */
       return attack1;
     }
 }
