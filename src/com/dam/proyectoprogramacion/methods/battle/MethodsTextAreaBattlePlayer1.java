@@ -350,4 +350,22 @@ public class MethodsTextAreaBattlePlayer1 {
         return namePokemon3Player1;
     }
 
+    public static String KnowTheNameOfTheOpposingPokemon(){
+        String namePokemon1Player2 = "";
+        /**
+         * iniciamos variables iguales al path del pokemon en batalla
+         */
+        String namePokemonInBattle = ButtonInterfaceCombat.getPathPokemonBattlePlayer2();
+
+        /**
+         * tenemos que recortar el path para obtener solo el nombre
+         */
+        int lastIndex = namePokemonInBattle.lastIndexOf('/');
+        namePokemon1Player2 = namePokemonInBattle.substring(lastIndex + 1, namePokemonInBattle.lastIndexOf('.'));
+
+
+        return namePokemon1Player2;
+
+    }
+
 }
