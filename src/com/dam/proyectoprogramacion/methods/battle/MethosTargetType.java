@@ -214,7 +214,6 @@ public class MethosTargetType {
      * @return el resultado
      */
     public static String getResultElectricAttackType(String targetType){
-        String resultAttackSteel = "";
         /**
          * segun el tipo del pokemon rival, el ataque tendrá un daño diferente
          */
@@ -258,44 +257,91 @@ public class MethosTargetType {
     }
 
     /**
-     * metodo para saber el resultado de un ataque de tipo acero al objetivo
+     * metodo para saber el resultado de un ataque de tipo fantasma al objetivo
      * @param targetType el tipo del pokemon rival
      * @return el resultado
      */
-    public static String getResultSteelAttackType(String targetType){
-        String resultAttackSteel = "";
+    public static String getResultGhostAttackType(String targetType){
         /**
          * segun el tipo del pokemon rival, el ataque tendrá un daño diferente
          */
         if(targetType.equalsIgnoreCase("normal-dragon")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.NULL;
         }
         else if(targetType.equalsIgnoreCase("agua-acero")){
-            return MethodsTextAreaBattlePlayer1.VERY_INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("normal")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.NULL;
         }
         else if(targetType.equalsIgnoreCase("hada-acero")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("fantasma-veneno")){
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
+        }
+        else if(targetType.equalsIgnoreCase("roca-siniestro")){
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+        }
+        else if(targetType.equalsIgnoreCase("fuego-lucha")){
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+        }
+        else if(targetType.equalsIgnoreCase("lucha-acero")){
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+        }
+        else if(targetType.equalsIgnoreCase("electrico")){
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+        }
+        else if(targetType.equalsIgnoreCase("dragon-tierra")){
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+        }
+        else if(targetType.equalsIgnoreCase("lucha-fantasma")){
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
+        }
+        else if(targetType.equalsIgnoreCase("agua")){
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+        }
+        return null;
+    }
+
+    /**
+     * metodo para saber el resultado de un ataque de tipo fuego al objetivo
+     * @param targetType el tipo del pokemon rival
+     * @return el resultado
+     */
+    public static String getResultFireAttackType(String targetType){
+        /**
+         * segun el tipo del pokemon rival, el ataque tendrá un daño diferente
+         */
+        if(targetType.equalsIgnoreCase("normal-dragon")){
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+        }
+        else if(targetType.equalsIgnoreCase("agua-acero")){
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+        }
+        else if(targetType.equalsIgnoreCase("normal")){
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+        }
+        else if(targetType.equalsIgnoreCase("hada-acero")){
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
+        }
+        else if(targetType.equalsIgnoreCase("fantasma-veneno")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("roca-siniestro")){
-            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("fuego-lucha")){
             return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("lucha-acero")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("electrico")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("dragon-tierra")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("lucha-fantasma")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
@@ -307,17 +353,64 @@ public class MethosTargetType {
     }
 
     /**
-     * metodo para saber el resultado de un ataque de tipo acero al objetivo
+     * metodo para saber el resultado de un ataque de tipo hada al objetivo
      * @param targetType el tipo del pokemon rival
      * @return el resultado
      */
-    public static String getResultSteelAttackType(String targetType){
-        String resultAttackSteel = "";
+    public static String getResultFairyAttackType(String targetType){
         /**
          * segun el tipo del pokemon rival, el ataque tendrá un daño diferente
          */
         if(targetType.equalsIgnoreCase("normal-dragon")){
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
+        }
+        else if(targetType.equalsIgnoreCase("agua-acero")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
+        }
+        else if(targetType.equalsIgnoreCase("normal")){
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+        }
+        else if(targetType.equalsIgnoreCase("hada-acero")){
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+        }
+        else if(targetType.equalsIgnoreCase("fantasma-veneno")){
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+        }
+        else if(targetType.equalsIgnoreCase("roca-siniestro")){
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
+        }
+        else if(targetType.equalsIgnoreCase("fuego-lucha")){
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
+        }
+        else if(targetType.equalsIgnoreCase("lucha-acero")){
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+        }
+        else if(targetType.equalsIgnoreCase("electrico")){
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+        }
+        else if(targetType.equalsIgnoreCase("dragon-tierra")){
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
+        }
+        else if(targetType.equalsIgnoreCase("lucha-fantasma")){
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
+        }
+        else if(targetType.equalsIgnoreCase("agua")){
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+        }
+        return null;
+    }
+
+    /**
+     * metodo para saber el resultado de un ataque de tipo hielo al objetivo
+     * @param targetType el tipo del pokemon rival
+     * @return el resultado
+     */
+    public static String getResultIceAttackType(String targetType){
+        /**
+         * segun el tipo del pokemon rival, el ataque tendrá un daño diferente
+         */
+        if(targetType.equalsIgnoreCase("normal-dragon")){
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("agua-acero")){
             return MethodsTextAreaBattlePlayer1.VERY_INEFFECTIVE;
@@ -326,13 +419,13 @@ public class MethosTargetType {
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("hada-acero")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("fantasma-veneno")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("roca-siniestro")){
-            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("fuego-lucha")){
             return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
@@ -341,10 +434,10 @@ public class MethosTargetType {
             return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("electrico")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("dragon-tierra")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.SUPER_EFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("lucha-fantasma")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
@@ -356,61 +449,59 @@ public class MethosTargetType {
     }
 
     /**
-     * metodo para saber el resultado de un ataque de tipo acero al objetivo
+     * metodo para saber el resultado de un ataque de tipo lucha al objetivo
      * @param targetType el tipo del pokemon rival
      * @return el resultado
      */
-    public static String getResultSteelAttackType(String targetType){
-        String resultAttackSteel = "";
+    public static String getResultFightingAttackType(String targetType){
         /**
          * segun el tipo del pokemon rival, el ataque tendrá un daño diferente
          */
         if(targetType.equalsIgnoreCase("normal-dragon")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("agua-acero")){
-            return MethodsTextAreaBattlePlayer1.VERY_INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("normal")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("hada-acero")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("fantasma-veneno")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.NULL;
         }
         else if(targetType.equalsIgnoreCase("roca-siniestro")){
-            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.SUPER_EFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("fuego-lucha")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("lucha-acero")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("electrico")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("dragon-tierra")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("lucha-fantasma")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.NULL;
         }
         else if(targetType.equalsIgnoreCase("agua")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         return null;
     }
 
     /**
-     * metodo para saber el resultado de un ataque de tipo acero al objetivo
+     * metodo para saber el resultado de un ataque de tipo normal al objetivo
      * @param targetType el tipo del pokemon rival
      * @return el resultado
      */
-    public static String getResultSteelAttackType(String targetType){
-        String resultAttackSteel = "";
+    public static String getResultNormalAttackType(String targetType){
         /**
          * segun el tipo del pokemon rival, el ataque tendrá un daño diferente
          */
@@ -418,65 +509,64 @@ public class MethosTargetType {
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("agua-acero")){
-            return MethodsTextAreaBattlePlayer1.VERY_INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("normal")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("hada-acero")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("fantasma-veneno")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.NULL;
         }
         else if(targetType.equalsIgnoreCase("roca-siniestro")){
-            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("fuego-lucha")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("lucha-acero")){
             return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("electrico")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("dragon-tierra")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("lucha-fantasma")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.NULL;
         }
         else if(targetType.equalsIgnoreCase("agua")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         return null;
     }
 
     /**
-     * metodo para saber el resultado de un ataque de tipo acero al objetivo
+     * metodo para saber el resultado de un ataque de tipo planta al objetivo
      * @param targetType el tipo del pokemon rival
      * @return el resultado
      */
-    public static String getResultSteelAttackType(String targetType){
-        String resultAttackSteel = "";
+    public static String getResultGrassAttackType(String targetType){
         /**
          * segun el tipo del pokemon rival, el ataque tendrá un daño diferente
          */
         if(targetType.equalsIgnoreCase("normal-dragon")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("agua-acero")){
-            return MethodsTextAreaBattlePlayer1.VERY_INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("normal")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("hada-acero")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("fantasma-veneno")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("roca-siniestro")){
             return MethodsTextAreaBattlePlayer1.EFFECTIVE;
@@ -488,7 +578,7 @@ public class MethosTargetType {
             return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("electrico")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("dragon-tierra")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
@@ -497,18 +587,17 @@ public class MethosTargetType {
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("agua")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
         return null;
     }
 
     /**
-     * metodo para saber el resultado de un ataque de tipo acero al objetivo
+     * metodo para saber el resultado de un ataque de tipo psquico al objetivo
      * @param targetType el tipo del pokemon rival
      * @return el resultado
      */
-    public static String getResultSteelAttackType(String targetType){
-        String resultAttackSteel = "";
+    public static String getResultPsychicAttackType(String targetType){
         /**
          * segun el tipo del pokemon rival, el ataque tendrá un daño diferente
          */
@@ -516,48 +605,47 @@ public class MethosTargetType {
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("agua-acero")){
-            return MethodsTextAreaBattlePlayer1.VERY_INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("normal")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("hada-acero")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("fantasma-veneno")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
-        }
-        else if(targetType.equalsIgnoreCase("roca-siniestro")){
             return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
+        else if(targetType.equalsIgnoreCase("roca-siniestro")){
+            return MethodsTextAreaBattlePlayer1.NULL;
+        }
         else if(targetType.equalsIgnoreCase("fuego-lucha")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("lucha-acero")){
             return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("electrico")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("dragon-tierra")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("lucha-fantasma")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("agua")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         return null;
     }
 
     /**
-     * metodo para saber el resultado de un ataque de tipo acero al objetivo
+     * metodo para saber el resultado de un ataque de tipo roca al objetivo
      * @param targetType el tipo del pokemon rival
      * @return el resultado
      */
-    public static String getResultSteelAttackType(String targetType){
-        String resultAttackSteel = "";
+    public static String getResultRockAttackType(String targetType){
         /**
          * segun el tipo del pokemon rival, el ataque tendrá un daño diferente
          */
@@ -565,48 +653,47 @@ public class MethosTargetType {
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("agua-acero")){
-            return MethodsTextAreaBattlePlayer1.VERY_INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("normal")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("hada-acero")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("fantasma-veneno")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("roca-siniestro")){
-            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("fuego-lucha")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("lucha-acero")){
             return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("electrico")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("dragon-tierra")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("lucha-fantasma")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("agua")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         return null;
     }
 
     /**
-     * metodo para saber el resultado de un ataque de tipo acero al objetivo
+     * metodo para saber el resultado de un ataque de tipo siniestro al objetivo
      * @param targetType el tipo del pokemon rival
      * @return el resultado
      */
-    public static String getResultSteelAttackType(String targetType){
-        String resultAttackSteel = "";
+    public static String getResultDarkAttackType(String targetType){
         /**
          * segun el tipo del pokemon rival, el ataque tendrá un daño diferente
          */
@@ -614,19 +701,19 @@ public class MethosTargetType {
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("agua-acero")){
-            return MethodsTextAreaBattlePlayer1.VERY_INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("normal")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("hada-acero")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("fantasma-veneno")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("roca-siniestro")){
-            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("fuego-lucha")){
             return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
@@ -635,7 +722,7 @@ public class MethosTargetType {
             return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("electrico")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("dragon-tierra")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
@@ -644,18 +731,17 @@ public class MethosTargetType {
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("agua")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         return null;
     }
 
     /**
-     * metodo para saber el resultado de un ataque de tipo acero al objetivo
+     * metodo para saber el resultado de un ataque de tipo tierra al objetivo
      * @param targetType el tipo del pokemon rival
      * @return el resultado
      */
-    public static String getResultSteelAttackType(String targetType){
-        String resultAttackSteel = "";
+    public static String getResultGroundAttackType(String targetType){
         /**
          * segun el tipo del pokemon rival, el ataque tendrá un daño diferente
          */
@@ -663,28 +749,28 @@ public class MethosTargetType {
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("agua-acero")){
-            return MethodsTextAreaBattlePlayer1.VERY_INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("normal")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("hada-acero")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("fantasma-veneno")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("roca-siniestro")){
             return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("fuego-lucha")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("lucha-acero")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("electrico")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("dragon-tierra")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
@@ -693,18 +779,17 @@ public class MethosTargetType {
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("agua")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         return null;
     }
 
     /**
-     * metodo para saber el resultado de un ataque de tipo acero al objetivo
+     * metodo para saber el resultado de un ataque de tipo veneno al objetivo
      * @param targetType el tipo del pokemon rival
      * @return el resultado
      */
-    public static String getResultSteelAttackType(String targetType){
-        String resultAttackSteel = "";
+    public static String getResultPoisonAttackType(String targetType){
         /**
          * segun el tipo del pokemon rival, el ataque tendrá un daño diferente
          */
@@ -712,48 +797,47 @@ public class MethosTargetType {
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("agua-acero")){
-            return MethodsTextAreaBattlePlayer1.VERY_INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NULL;
         }
         else if(targetType.equalsIgnoreCase("normal")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("hada-acero")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.NULL;
         }
         else if(targetType.equalsIgnoreCase("fantasma-veneno")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.VERY_INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("roca-siniestro")){
-            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("fuego-lucha")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("lucha-acero")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NULL;
         }
         else if(targetType.equalsIgnoreCase("electrico")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("dragon-tierra")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("lucha-fantasma")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("agua")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         return null;
     }
 
     /**
-     * metodo para saber el resultado de un ataque de tipo acero al objetivo
+     * metodo para saber el resultado de un ataque de tipo volador al objetivo
      * @param targetType el tipo del pokemon rival
      * @return el resultado
      */
-    public static String getResultSteelAttackType(String targetType){
-        String resultAttackSteel = "";
+    public static String getResultFlyingAttackType(String targetType){
         /**
          * segun el tipo del pokemon rival, el ataque tendrá un daño diferente
          */
@@ -761,25 +845,25 @@ public class MethosTargetType {
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("agua-acero")){
-            return MethodsTextAreaBattlePlayer1.VERY_INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("normal")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("hada-acero")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("fantasma-veneno")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("roca-siniestro")){
-            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("fuego-lucha")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("lucha-acero")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("electrico")){
             return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
@@ -788,108 +872,10 @@ public class MethosTargetType {
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("lucha-fantasma")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
-        }
-        else if(targetType.equalsIgnoreCase("agua")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
-        }
-        return null;
-    }
-
-    /**
-     * metodo para saber el resultado de un ataque de tipo acero al objetivo
-     * @param targetType el tipo del pokemon rival
-     * @return el resultado
-     */
-    public static String getResultSteelAttackType(String targetType){
-        String resultAttackSteel = "";
-        /**
-         * segun el tipo del pokemon rival, el ataque tendrá un daño diferente
-         */
-        if(targetType.equalsIgnoreCase("normal-dragon")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
-        }
-        else if(targetType.equalsIgnoreCase("agua-acero")){
-            return MethodsTextAreaBattlePlayer1.VERY_INEFFECTIVE;
-        }
-        else if(targetType.equalsIgnoreCase("normal")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
-        }
-        else if(targetType.equalsIgnoreCase("hada-acero")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
-        }
-        else if(targetType.equalsIgnoreCase("fantasma-veneno")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
-        }
-        else if(targetType.equalsIgnoreCase("roca-siniestro")){
             return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
-        else if(targetType.equalsIgnoreCase("fuego-lucha")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
-        }
-        else if(targetType.equalsIgnoreCase("lucha-acero")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
-        }
-        else if(targetType.equalsIgnoreCase("electrico")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
-        }
-        else if(targetType.equalsIgnoreCase("dragon-tierra")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
-        }
-        else if(targetType.equalsIgnoreCase("lucha-fantasma")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
-        }
         else if(targetType.equalsIgnoreCase("agua")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
-        }
-        return null;
-    }
-
-    /**
-     * metodo para saber el resultado de un ataque de tipo acero al objetivo
-     * @param targetType el tipo del pokemon rival
-     * @return el resultado
-     */
-    public static String getResultSteelAttackType(String targetType){
-        String resultAttackSteel = "";
-        /**
-         * segun el tipo del pokemon rival, el ataque tendrá un daño diferente
-         */
-        if(targetType.equalsIgnoreCase("normal-dragon")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
-        }
-        else if(targetType.equalsIgnoreCase("agua-acero")){
-            return MethodsTextAreaBattlePlayer1.VERY_INEFFECTIVE;
-        }
-        else if(targetType.equalsIgnoreCase("normal")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
-        }
-        else if(targetType.equalsIgnoreCase("hada-acero")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
-        }
-        else if(targetType.equalsIgnoreCase("fantasma-veneno")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
-        }
-        else if(targetType.equalsIgnoreCase("roca-siniestro")){
-            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
-        }
-        else if(targetType.equalsIgnoreCase("fuego-lucha")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
-        }
-        else if(targetType.equalsIgnoreCase("lucha-acero")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
-        }
-        else if(targetType.equalsIgnoreCase("electrico")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
-        }
-        else if(targetType.equalsIgnoreCase("dragon-tierra")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
-        }
-        else if(targetType.equalsIgnoreCase("lucha-fantasma")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
-        }
-        else if(targetType.equalsIgnoreCase("agua")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         return null;
     }
