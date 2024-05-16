@@ -210,9 +210,11 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack1Player1().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 clearGlobalPanelPlayer1WhenPressAttacksButtons();
             }
         });
+        ButtonInterfaceAttacks.getAttack1Player1().addActionListener(this::putInformationAreaTextBatlle);
         /**
          * actionListener del boton de ataque 2 del jugador 1
          */
@@ -826,6 +828,12 @@ public class Battle extends JFrame {
             LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon3Player1());
             LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(LifePokemonInBattlePlayer1.getActualLifePokemonInBattlePlayer1());
 
+        }
+    }
+    public void putInformationAreaTextBatlle(ActionEvent e) {
+        if (e.getSource() == ButtonInterfaceAttacks.getAttack1Player1()){
+            System.out.println(MethodsTextAreaBattle.getNamePokemon1PLayer1()
+                    + " ha usado " + MethodsTextAreaBattle.getNameAttack1PokemonPLayer1());
         }
     }
 
