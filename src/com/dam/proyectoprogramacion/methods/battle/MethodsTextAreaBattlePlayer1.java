@@ -1,5 +1,6 @@
 package com.dam.proyectoprogramacion.methods.battle;
 
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceAttacks;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer1;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
 import com.dam.proyectoprogramacion.methods.selectionpokemon.MethosInterfaceSelectionPokemon;
@@ -350,6 +351,10 @@ public class MethodsTextAreaBattlePlayer1 {
         return namePokemon3Player1;
     }
 
+    /**
+     * metodo para saber el nombre del pokemon rival, el cual recibirá el ataque
+     * @return el nombre del pokemon rival
+     */
     public static String KnowTheNameOfTheOpposingPokemon(){
         String namePokemon1Player2 = "";
         /**
@@ -366,6 +371,34 @@ public class MethodsTextAreaBattlePlayer1 {
 
         return namePokemon1Player2;
 
+    }
+
+    public static String getTypeAttack1PokemonInBattlePlayer1(String namePokemonInBattle) {
+        String type = "";
+        String attack1 = ButtonInterfaceAttacks.getAttack1Player1().getText();
+
+
+        for (Object pokemonObj : MethosInterfaceSelectionPokemon.getPokemonsPLayer1()) {
+
+            PokemonProperties pokemon = (PokemonProperties) pokemonObj;
+            String nameToLookFor = pokemon.getName();
+
+
+            if (nameToLookFor.equalsIgnoreCase(namePokemonInBattle)) {
+
+                for (AttacksPokemons attack : pokemon.getAttacks()) {
+
+                    if (attack1.equalsIgnoreCase(attack.getName())) {
+
+                        type = attack.getType();
+                        break;
+                    }
+                }
+
+                break;
+            }
+        }
+        return type;
     }
 
 }
