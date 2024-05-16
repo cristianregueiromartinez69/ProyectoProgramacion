@@ -22,14 +22,27 @@ public class TextAreaPanelBattle extends JPanel {
     public TextAreaPanelBattle(){
 
         /**
-         *
+         * haciendo el panel visible y estableciendo un layout
          */
         setVisible(true);
         setLayout(new FlowLayout());
 
+        /**
+         * iniciamos el panel
+         */
         textPanel = new JPanel();
+        /**
+         * hacemos que el textArea sea igual a una clase que hereda de textarea
+         * esa clase contiene una imagen de fondo
+         */
         informationBattle = new TextAreaBattle();
+        /**
+         * hacemos que no se pueda editar
+         */
         informationBattle.setEditable(false);
+        /**
+         * lo añadimos al panel
+         */
         textPanel.add(new JScrollPane(informationBattle));
 
         this.add(textPanel);
