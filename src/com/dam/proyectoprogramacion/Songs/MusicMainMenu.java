@@ -1,4 +1,4 @@
-package com.dam.proyectoprogramacion.pokemonSongs;
+package com.dam.proyectoprogramacion.Songs;
 
 import javax.sound.sampled.*;
 import java.io.File;
