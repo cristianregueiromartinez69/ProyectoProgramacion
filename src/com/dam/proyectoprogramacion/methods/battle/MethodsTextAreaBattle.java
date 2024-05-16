@@ -1,6 +1,7 @@
 package com.dam.proyectoprogramacion.methods.battle;
 
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer1;
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
 import com.dam.proyectoprogramacion.methods.selectionpokemon.MethosInterfaceSelectionPokemon;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.pokemon.AttacksPokemons;
@@ -23,54 +24,20 @@ public class MethodsTextAreaBattle implements ActionListener {
      * @return el nombre del pokemon
      */
     public static String getNamePokemon1PLayer1(){
+        String namePokemon1Player1 = "";
         /**
-         * variable local para almacenar el nombre del ataque
+         * iniciamos variables iguales al path del pokemon en batalla
          */
-        String namePokemon1 = "";
-        String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+        String namePokemonInBattle = ButtonInterfaceCombat.getPathPokemonBattlePlayer1();
 
         /**
-         * for para recorrer el hashmap de los jugadores
+         * tenemos que recortar el path para obtener solo el nombre
          */
-        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
-
-            if (key.equals(aliasPlayer1)) {
-                /**
-                 * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
-                 */
-                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
-                if (!pokemons.isEmpty()) {
-
-                    /**
-                     * hacemos un objeto de pokemons y decimos que es igual al primer elemento de la lista de pokemons
-                     */
-                    PokemonProperties firstPokemon = (PokemonProperties) pokemons.get(0);
-                    /**
-                     * asignamos el valor al string
-                     */
-                    namePokemon1 = firstPokemon.getName();
-                    /**
-                     * almacenamos el nombre
-                     */
-
-                    break;
-
-                } else {
-
-                    /**
-                     * si no hay nada devuelve null
-                     */
-                    return null;
-                }
-
-            }
-        }
-        /**
-         * retorna un metodo que devuelve el nombre del pokemon
-         */
-        return namePokemon1;
+        int lastIndex = namePokemonInBattle.lastIndexOf('/');
+         namePokemon1Player1 = namePokemonInBattle.substring(lastIndex + 1, namePokemonInBattle.lastIndexOf('.'));
 
 
+        return namePokemon1Player1;
     }
 
     /**

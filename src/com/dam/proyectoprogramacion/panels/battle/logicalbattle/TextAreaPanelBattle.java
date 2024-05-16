@@ -40,14 +40,22 @@ public class TextAreaPanelBattle extends JPanel {
          * hacemos que no se pueda editar
          */
         informationBattle.setEditable(false);
-        informationBattle.setPreferredSize(new Dimension(400, 30));
-        informationBattle.setMaximumSize(new Dimension(400,30));
-        informationBattle.setMinimumSize(new Dimension(400,30));
+        informationBattle.setPreferredSize(new Dimension(600, 35));
+        informationBattle.setMaximumSize(new Dimension(600,35));
+        informationBattle.setMinimumSize(new Dimension(600,35));
         /**
          * lo añadimos al panel
          */
         textPanel.add(new JScrollPane(informationBattle));
 
         this.add(textPanel);
+    }
+
+    public static JTextArea getInformationBattle() {
+        return informationBattle;
+    }
+
+    public static void setInformationBattle(JTextArea informationBattle) {
+        TextAreaPanelBattle.informationBattle = informationBattle;
     }
 }
