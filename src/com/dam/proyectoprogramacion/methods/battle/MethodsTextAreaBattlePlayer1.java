@@ -12,21 +12,20 @@ import java.util.ArrayList;
 
 public class MethodsTextAreaBattlePlayer1 {
 
-public static final String SUPER_EFFECTIVE = "Súper eficaz";
-public static final String EFFECTIVE = "eficaz";
-public static final String NEUTRAL = "Neutro";
-public static final String INEFFECTIVE = "Poco eficaz";
-public static final String VERY_INEFFECTIVE = "Muy poco eficaz";
-public static final String NULL = "No ha surtido efecto";
-
-
+    public static final String SUPER_EFFECTIVE = "Súper eficaz";
+    public static final String EFFECTIVE = "eficaz";
+    public static final String NEUTRAL = "Neutro";
+    public static final String INEFFECTIVE = "Poco eficaz";
+    public static final String VERY_INEFFECTIVE = "Muy poco eficaz";
+    public static final String NULL = "No ha surtido efecto";
 
 
     /**
      * metodo para poner el nombre del pokemon que hará el ataque en el text area de batalla
+     *
      * @return el nombre del pokemon
      */
-    public static String getNamePokemon1PLayer1(){
+    public static String getNamePokemon1PLayer1() {
         String namePokemon1Player1 = "";
         /**
          * iniciamos variables iguales al path del pokemon en batalla
@@ -37,11 +36,58 @@ public static final String NULL = "No ha surtido efecto";
          * tenemos que recortar el path para obtener solo el nombre
          */
         int lastIndex = namePokemonInBattle.lastIndexOf('/');
-         namePokemon1Player1 = namePokemonInBattle.substring(lastIndex + 1, namePokemonInBattle.lastIndexOf('.'));
+        namePokemon1Player1 = namePokemonInBattle.substring(lastIndex + 1, namePokemonInBattle.lastIndexOf('.'));
 
 
         return namePokemon1Player1;
     }
+
+    /**
+     * metodo para saber el tipo del pokemon que hay en batalla del jugador 1
+     * @return el tipo del pokemon
+     */
+    public static String getTypePokemonInBattlePlayer1() {
+
+        /**
+         * iniciamos distintas variables
+         * la primera almacenará el tipo
+         * la segundo la iniciamos e indicamos quees igual al nombre del pokemon en batalla
+         * la tercera es un array de objetos que hacemos igual a el array de pokemons del jugador 1
+         */
+        String type = "";
+        String namePokemon = getNamePokemon1PLayer1();
+        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer1();
+
+        /**
+         * recorremos con un for el array de pokemons
+         */
+        for (int i = 0; i < pokemons.size(); i++) {
+
+            PokemonProperties pokemon = (PokemonProperties) pokemons.get(i);
+
+            /**
+             * si algun nombre coincide con el pokemon en batalla, entra en la condicion
+             */
+            if (pokemon.getName().equalsIgnoreCase(namePokemon)) {
+                /**
+                 * lo indicamos
+                 */
+                pokemon = (PokemonProperties) pokemons.get(i);
+
+                /**
+                 * asignamos la variable tipo al tipo del pokemon
+                 */
+                type = pokemon.getType();
+                break;
+
+
+            }
+        }
+        return type;
+    }
+
+
+
 
     /**
      * metodo para poner el nombre del ataque 1 que hará el pokemon en el text area de batalla del jugador 1
@@ -433,10 +479,7 @@ public static final String NULL = "No ha surtido efecto";
         return type;
     }
 
-    public static String getResultOfAttack1PokemonInBattlePlayer1(String type, String namePokemonRival){
 
-return null;
-    }
 
 
 }
