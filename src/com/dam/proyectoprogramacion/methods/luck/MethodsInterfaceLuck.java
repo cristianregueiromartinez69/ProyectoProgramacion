@@ -1,14 +1,14 @@
-package com.dam.proyectoprogramacion.methodsandmain;
+package com.dam.proyectoprogramacion.methods.luck;
 
 import javax.swing.*;
 
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceLuck2;
+import com.dam.proyectoprogramacion.methods.accountcreate.MethodsInterfaceAccountCreate;
 import com.dam.proyectoprogramacion.panels.luck.*;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceLuck;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.util.HashMap;
 import java.util.Map;
 

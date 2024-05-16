@@ -1,4 +1,4 @@
-package com.dam.proyectoprogramacion.pokemonSongs;
+package com.dam.proyectoprogramacion.Songs;
 
 
 
@@ -12,14 +12,14 @@ import java.io.IOException;
  * @author cristian
  * @version v2.0
  */
-public class GengarSong {
+public class EmpoleonSong {
 
-    public static void musicGengar() {
+    public static void musicEmpoleon() {
         try {
             /**
              * Cargar el archivo de audio
              */
-            File audioFile = new File("canciones/gritoGengar.wav");
+            File audioFile = new File("canciones/gritoEmpoleon.wav");
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
 
             /**

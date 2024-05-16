@@ -1,4 +1,4 @@
-package com.dam.proyectoprogramacion.pokemonSongs;
+package com.dam.proyectoprogramacion.Songs;
 
 
 
@@ -12,14 +12,14 @@ import java.io.IOException;
  * @author cristian
  * @version v2.0
  */
-public class LuxraySong {
+public class TinkatonSong {
 
-    public static void musicLuxray() {
+    public static void musicTinkaton() {
         try {
             /**
              * Cargar el archivo de audio
              */
-            File audioFile = new File("canciones/gritoLuxray.wav");
+            File audioFile = new File("canciones/gritoTinkaton.wav");
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
 
             /**

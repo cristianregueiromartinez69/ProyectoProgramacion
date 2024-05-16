@@ -1,4 +1,4 @@
-package com.dam.proyectoprogramacion.pokemonSongs;
+package com.dam.proyectoprogramacion.Songs;
 
 
 
@@ -12,14 +12,14 @@ import java.io.IOException;
  * @author cristian
  * @version v2.0
  */
-public class TyranitarSong {
+public class MiloticSong {
 
-    public static void musicTyranitar() {
+    public static void musicMilotic() {
         try {
             /**
              * Cargar el archivo de audio
              */
-            File audioFile = new File("canciones/gritoTyranitar.wav");
+            File audioFile = new File("canciones/gritoMilotic.wav");
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
 
             /**
