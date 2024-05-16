@@ -13,10 +13,12 @@ import java.util.ArrayList;
 public class MethodsTextAreaBattlePlayer1 {
 
 public static final String SUPER_EFFECTIVE = "Súper eficaz";
+public static final String EFFECTIVE = "eficaz";
 public static final String NEUTRAL = "Neutro";
 public static final String INEFFECTIVE = "Poco eficaz";
+public static final String VERY_INEFFECTIVE = "Muy poco eficaz";
 public static final String NULL = "No ha surtido efecto";
-private static String resultOfAttacksPlayer1;
+
 
 
 
@@ -377,23 +379,49 @@ private static String resultOfAttacksPlayer1;
 
     }
 
+    /**
+     * metodo para obtener el tipo del ataque 1 del pokemon en batalla
+     * @param namePokemonInBattle el nombre del pokemon en batalla
+     * @return el nombre dle tipo
+     */
     public static String getTypeAttack1PokemonInBattlePlayer1(String namePokemonInBattle) {
+        /**
+         * iniciamos variables, una es el tipo y otra el nombre del primer ataque
+         */
         String type = "";
         String attack1 = ButtonInterfaceAttacks.getAttack1Player1().getText();
 
 
+        /**
+         * recorremos con un for el array de objetos de pokemons
+         */
         for (Object pokemonObj : MethosInterfaceSelectionPokemon.getPokemonsPLayer1()) {
 
+            /**
+             * iniciamos un string igual al nombre de los pokemons que vayqan saliendo
+             */
             PokemonProperties pokemon = (PokemonProperties) pokemonObj;
             String nameToLookFor = pokemon.getName();
 
 
+            /**
+             * si algun nombre coincide con el pokemon en batalla, entra en la condicion
+             */
             if (nameToLookFor.equalsIgnoreCase(namePokemonInBattle)) {
 
+                /**
+                 * hacemos un for con los ataques del pokemon
+                 */
                 for (AttacksPokemons attack : pokemon.getAttacks()) {
 
+                    /**
+                     * si algun nombre de sus ataques coincide con el del boton, se mete en la condicion
+                     */
                     if (attack1.equalsIgnoreCase(attack.getName())) {
 
+                        /**
+                         * el tipo será igual al tipo del ataque
+                         */
                         type = attack.getType();
                         break;
                     }
@@ -407,14 +435,8 @@ private static String resultOfAttacksPlayer1;
 
     public static String getResultOfAttack1PokemonInBattlePlayer1(String type, String namePokemonRival){
 
-
+return null;
     }
 
-    public static String getResultOfAttacksPlayer1() {
-        return resultOfAttacksPlayer1;
-    }
 
-    public static void setResultOfAttacksPlayer1(String resultOfAttacksPlayer1) {
-        MethodsTextAreaBattlePlayer1.resultOfAttacksPlayer1 = resultOfAttacksPlayer1;
-    }
 }
