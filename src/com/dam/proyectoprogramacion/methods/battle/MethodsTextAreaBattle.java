@@ -41,7 +41,7 @@ public class MethodsTextAreaBattle{
     }
 
     /**
-     * metodo para poner el nombre del pokemon que hará el ataque en el text area de batalla del jugador 1
+     * metodo para poner el nombre del ataque 1 que hará el pokemon en el text area de batalla del jugador 1
      * @return el nombre del primer ataque
      */
     public static String getNameAttack1PokemonPLayer1(){
@@ -102,4 +102,191 @@ public class MethodsTextAreaBattle{
          */
       return attack1;
     }
+    /**
+     * metodo para poner el nombre del ataque 2 que hará el pokemon en el text area de batalla del jugador 1
+     * @return el nombre del primer ataque
+     */
+    public static String getNameAttack2PokemonPLayer1(){
+        /**
+         * iniciamos una variable para encontrar el alias del jugador 1 en el hashmap
+         */
+        String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+        /**
+         * iniciamos una variable de tipo string igual a un metodo que nos da el nombre del pokemon en batalla
+         */
+        String namePokemonToLook = getNamePokemon1PLayer1();
+        String attack2 = "";
+
+        /**
+         * recorremos el hashmap de jugasdores
+         */
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+            /**
+             * si hay coincidencias en la clave, se mete en la condicion
+             */
+            if (key.equals(aliasPlayer1)) {
+                /**
+                 * iniciamos un array de objetos igual al valor del hashmap
+                 */
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                /**
+                 * hacemos un for con el array
+                 */
+                for (int i = 0; i < pokemons.size(); i++) {
+                    /**
+                     * iniciamos una variable de tipo pokemon que es igual al tamaño
+                     */
+                    PokemonProperties pokemon = (PokemonProperties) pokemons.get(i);
+                    /**
+                     * si encuentra el nombre del pokemon se mete en la condicion
+                     */
+                    if (pokemon.getName().equalsIgnoreCase(namePokemonToLook)) {
+                        /**
+                         * lo indicamos
+                         */
+                        pokemon = (PokemonProperties) pokemons.get(i);
+                        /**
+                         * iniciamos una variable de ataques pokemon igual a la posicion 1 del array
+                         */
+                        AttacksPokemons attacks = pokemon.getAttacks()[1];
+                        /**
+                         * obtenemos el nombre
+                         */
+                        attack2 = attacks.getName();
+                        break;
+                    }
+                }
+
+            }
+        }
+        /**
+         * devolvemos el nombre del ataque
+         */
+        return attack2;
+    }
+    /**
+     * metodo para poner el nombre del ataque 3 que hará el pokemon en el text area de batalla del jugador 1
+     * @return el nombre del tercer ataque
+     */
+    public static String getNameAttack3PokemonPLayer1(){
+        /**
+         * iniciamos una variable para encontrar el alias del jugador 1 en el hashmap
+         */
+        String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+        /**
+         * iniciamos una variable de tipo string igual a un metodo que nos da el nombre del pokemon en batalla
+         */
+        String namePokemonToLook = getNamePokemon1PLayer1();
+        String attack3 = "";
+
+        /**
+         * recorremos el hashmap de jugasdores
+         */
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+            /**
+             * si hay coincidencias en la clave, se mete en la condicion
+             */
+            if (key.equals(aliasPlayer1)) {
+                /**
+                 * iniciamos un array de objetos igual al valor del hashmap
+                 */
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                /**
+                 * hacemos un for con el array
+                 */
+                for (int i = 0; i < pokemons.size(); i++) {
+                    /**
+                     * iniciamos una variable de tipo pokemon que es igual al tamaño
+                     */
+                    PokemonProperties pokemon = (PokemonProperties) pokemons.get(i);
+                    /**
+                     * si encuentra el nombre del pokemon se mete en la condicion
+                     */
+                    if (pokemon.getName().equalsIgnoreCase(namePokemonToLook)) {
+                        /**
+                         * lo indicamos
+                         */
+                        pokemon = (PokemonProperties) pokemons.get(i);
+                        /**
+                         * iniciamos una variable de ataques pokemon igual a la posicion 2 del array
+                         */
+                        AttacksPokemons attacks = pokemon.getAttacks()[2];
+                        /**
+                         * obtenemos el nombre
+                         */
+                        attack3 = attacks.getName();
+                        break;
+                    }
+                }
+
+            }
+        }
+        /**
+         * devolvemos el nombre del ataque
+         */
+        return attack3;
+    }
+    /**
+     * metodo para poner el nombre del ataque 4 que hará el pokemon en el text area de batalla del jugador 1
+     * @return el nombre del cuarto ataque
+     */
+    public static String getNameAttack4PokemonPLayer1(){
+        /**
+         * iniciamos una variable para encontrar el alias del jugador 1 en el hashmap
+         */
+        String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+        /**
+         * iniciamos una variable de tipo string igual a un metodo que nos da el nombre del pokemon en batalla
+         */
+        String namePokemonToLook = getNamePokemon1PLayer1();
+        String attack4 = "";
+
+        /**
+         * recorremos el hashmap de jugasdores
+         */
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+            /**
+             * si hay coincidencias en la clave, se mete en la condicion
+             */
+            if (key.equals(aliasPlayer1)) {
+                /**
+                 * iniciamos un array de objetos igual al valor del hashmap
+                 */
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                /**
+                 * hacemos un for con el array
+                 */
+                for (int i = 0; i < pokemons.size(); i++) {
+                    /**
+                     * iniciamos una variable de tipo pokemon que es igual al tamaño
+                     */
+                    PokemonProperties pokemon = (PokemonProperties) pokemons.get(i);
+                    /**
+                     * si encuentra el nombre del pokemon se mete en la condicion
+                     */
+                    if (pokemon.getName().equalsIgnoreCase(namePokemonToLook)) {
+                        /**
+                         * lo indicamos
+                         */
+                        pokemon = (PokemonProperties) pokemons.get(i);
+                        /**
+                         * iniciamos una variable de ataques pokemon igual a la posicion 3 del array
+                         */
+                        AttacksPokemons attacks = pokemon.getAttacks()[3];
+                        /**
+                         * obtenemos el nombre
+                         */
+                        attack4 = attacks.getName();
+                        break;
+                    }
+                }
+
+            }
+        }
+        /**
+         * devolvemos el nombre del ataque
+         */
+        return attack4;
+    }
+
 }

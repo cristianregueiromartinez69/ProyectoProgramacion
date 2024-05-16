@@ -224,6 +224,8 @@ public class Battle extends JFrame {
                 clearGlobalPanelPlayer1WhenPressAttacksButtons();
             }
         });
+        ButtonInterfaceAttacks.getAttack2PLayer1().addActionListener(this::putInformationAreaTextBatlle);
+
         /**
          * actionListener del boton de ataque 3 del jugador 1
          */
@@ -233,6 +235,8 @@ public class Battle extends JFrame {
                 clearGlobalPanelPlayer1WhenPressAttacksButtons();
             }
         });
+        ButtonInterfaceAttacks.getAttack3Player1().addActionListener(this::putInformationAreaTextBatlle);
+
         /**
          * actionListener del boton de ataque 4 del jugador 1
          */
@@ -242,6 +246,8 @@ public class Battle extends JFrame {
                 clearGlobalPanelPlayer1WhenPressAttacksButtons();
             }
         });
+        ButtonInterfaceAttacks.getAttack4Player1().addActionListener(this::putInformationAreaTextBatlle);
+
         /**
          * acionlistener para volver atras en el menu de atacar
          */
@@ -834,6 +840,18 @@ public class Battle extends JFrame {
         if (e.getSource() == ButtonInterfaceAttacks.getAttack1Player1()){
            TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattle.getNamePokemon1PLayer1()
                    + " ha usado " + MethodsTextAreaBattle.getNameAttack1PokemonPLayer1());
+        }
+        else if(e.getSource() == ButtonInterfaceAttacks.getAttack2PLayer1()){
+            TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattle.getNamePokemon1PLayer1()
+                    + " ha usado " + MethodsTextAreaBattle.getNameAttack2PokemonPLayer1());
+        }
+        else if(e.getSource() == ButtonInterfaceAttacks.getAttack3Player1()){
+            TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattle.getNamePokemon1PLayer1()
+                    + " ha usado " + MethodsTextAreaBattle.getNameAttack3PokemonPLayer1());
+        }
+        else if(e.getSource() == ButtonInterfaceAttacks.getAttack4Player1()){
+            TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattle.getNamePokemon1PLayer1()
+                    + " ha usado " + MethodsTextAreaBattle.getNameAttack4PokemonPLayer1());
         }
     }
 
