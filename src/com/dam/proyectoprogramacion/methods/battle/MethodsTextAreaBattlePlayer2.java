@@ -202,18 +202,18 @@ public class MethodsTextAreaBattlePlayer2 {
         return attack2;
     }
     /**
-     * metodo para poner el nombre del ataque 3 que hará el pokemon en el text area de batalla del jugador 1
+     * metodo para poner el nombre del ataque 3 que hará el pokemon en el text area de batalla del jugador 2
      * @return el nombre del tercer ataque
      */
-    public static String getNameAttack3PokemonPLayer1(){
+    public static String getNameAttack3PokemonPLayer2(){
         /**
-         * iniciamos una variable para encontrar el alias del jugador 1 en el hashmap
+         * iniciamos una variable para encontrar el alias del jugador 2 en el hashmap
          */
-        String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+        String aliasPlayer2 = InformationPanelPlayer2Luck.getAliasTextPlayer2().getText();
         /**
          * iniciamos una variable de tipo string igual a un metodo que nos da el nombre del pokemon en batalla
          */
-        String namePokemonToLook = getNamePokemon1PLayer1();
+        String namePokemonToLook = getNamePokemon1PLayer2();
         String attack3 = "";
 
         /**
@@ -223,7 +223,7 @@ public class MethodsTextAreaBattlePlayer2 {
             /**
              * si hay coincidencias en la clave, se mete en la condicion
              */
-            if (key.equals(aliasPlayer1)) {
+            if (key.equals(aliasPlayer2)) {
                 /**
                  * iniciamos un array de objetos igual al valor del hashmap
                  */
@@ -264,18 +264,18 @@ public class MethodsTextAreaBattlePlayer2 {
         return attack3;
     }
     /**
-     * metodo para poner el nombre del ataque 4 que hará el pokemon en el text area de batalla del jugador 1
+     * metodo para poner el nombre del ataque 4 que hará el pokemon en el text area de batalla del jugador 2
      * @return el nombre del cuarto ataque
      */
-    public static String getNameAttack4PokemonPLayer1(){
+    public static String getNameAttack4PokemonPLayer2(){
         /**
          * iniciamos una variable para encontrar el alias del jugador 1 en el hashmap
          */
-        String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+        String aliasPlayer2 = InformationPanelPlayer2Luck.getAliasTextPlayer2().getText();
         /**
          * iniciamos una variable de tipo string igual a un metodo que nos da el nombre del pokemon en batalla
          */
-        String namePokemonToLook = getNamePokemon1PLayer1();
+        String namePokemonToLook = getNamePokemon1PLayer2();
         String attack4 = "";
 
         /**
@@ -285,7 +285,7 @@ public class MethodsTextAreaBattlePlayer2 {
             /**
              * si hay coincidencias en la clave, se mete en la condicion
              */
-            if (key.equals(aliasPlayer1)) {
+            if (key.equals(aliasPlayer2)) {
                 /**
                  * iniciamos un array de objetos igual al valor del hashmap
                  */
@@ -328,67 +328,67 @@ public class MethodsTextAreaBattlePlayer2 {
 
 
     /**
-     * metodo para poner el nombre del pokemon 1  para cambiarlo del jugador 1
+     * metodo para poner el nombre del pokemon 1  para cambiarlo del jugador 2
      * @return el nombre del pokemon
      */
-    public static String getNamePokemon1ToChangePLayer1(){
-        String namePokemon1Player1 = "";
+    public static String getNamePokemon1ToChangePLayer2(){
+        String namePokemon1Player2 = "";
         /**
          * iniciamos variables iguales al path del pokemon a cambiar
          */
-        String namePokemonChange = DataNamesIconsColorsAttacksAndPokemonsPlayer1.getPathIconPokemon1();
+        String namePokemonChange = DataNamesIconsColorsAttacksAndPokemonsPlayer2.getPathIconPokemon1();
 
         /**
          * tenemos que recortar el path para obtener solo el nombre
          */
         int lastIndex = namePokemonChange.lastIndexOf('/');
-        namePokemon1Player1 = namePokemonChange.substring(lastIndex + 1, namePokemonChange.lastIndexOf('.'));
+        namePokemon1Player2 = namePokemonChange.substring(lastIndex + 1, namePokemonChange.lastIndexOf('.'));
 
 
-        return namePokemon1Player1;
+        return namePokemon1Player2;
     }
 
     /**
-     * metodo para poner el nombre del pokemon 2  para cambiarlo del jugador 1
+     * metodo para poner el nombre del pokemon 2  para cambiarlo del jugador 2
      * @return el nombre del pokemon
      */
-    public static String getNamePokemon2ToChangePLayer1(){
-        String namePokemon2Player1 = "";
+    public static String getNamePokemon2ToChangePLayer2(){
+        String namePokemon2Player2 = "";
         /**
          * iniciamos variables iguales al path del pokemon en a cambiar
          */
-        String namePokemonChange = DataNamesIconsColorsAttacksAndPokemonsPlayer1.getPathIconPokemon2();
+        String namePokemonChange = DataNamesIconsColorsAttacksAndPokemonsPlayer2.getPathIconPokemon2();
 
         /**
          * tenemos que recortar el path para obtener solo el nombre
          */
         int lastIndex = namePokemonChange.lastIndexOf('/');
-        namePokemon2Player1 = namePokemonChange.substring(lastIndex + 1, namePokemonChange.lastIndexOf('.'));
+        namePokemon2Player2 = namePokemonChange.substring(lastIndex + 1, namePokemonChange.lastIndexOf('.'));
 
 
-        return namePokemon2Player1;
+        return namePokemon2Player2;
     }
 
 
     /**
-     * metodo para poner el nombre del pokemon 3  para cambiarlo del jugador 1
+     * metodo para poner el nombre del pokemon 3  para cambiarlo del jugador 2
      * @return el nombre del pokemon
      */
-    public static String getNamePokemon3ToChangePLayer1(){
-        String namePokemon3Player1 = "";
+    public static String getNamePokemon3ToChangePLayer2(){
+        String namePokemon3Player2 = "";
         /**
          * iniciamos variables iguales al path del pokemon a cambiar
          */
-        String namePokemonChange = DataNamesIconsColorsAttacksAndPokemonsPlayer1.getPathIconPokemon3();
+        String namePokemonChange = DataNamesIconsColorsAttacksAndPokemonsPlayer2.getPathIconPokemon3();
 
         /**
          * tenemos que recortar el path para obtener solo el nombre
          */
         int lastIndex = namePokemonChange.lastIndexOf('/');
-        namePokemon3Player1 = namePokemonChange.substring(lastIndex + 1, namePokemonChange.lastIndexOf('.'));
+        namePokemon3Player2 = namePokemonChange.substring(lastIndex + 1, namePokemonChange.lastIndexOf('.'));
 
 
-        return namePokemon3Player1;
+        return namePokemon3Player2;
     }
 
     /**
@@ -396,40 +396,40 @@ public class MethodsTextAreaBattlePlayer2 {
      * @return el nombre del pokemon rival
      */
     public static String KnowTheNameOfTheOpposingPokemon(){
-        String namePokemon1Player2 = "";
+        String namePokemon1Player1 = "";
         /**
          * iniciamos variables iguales al path del pokemon en batalla
          */
-        String namePokemonInBattle = ButtonInterfaceCombat.getPathPokemonBattlePlayer2();
+        String namePokemonInBattle = ButtonInterfaceCombat.getPathPokemonBattlePlayer1();
 
         /**
          * tenemos que recortar el path para obtener solo el nombre
          */
         int lastIndex = namePokemonInBattle.lastIndexOf('/');
-        namePokemon1Player2 = namePokemonInBattle.substring(lastIndex + 1, namePokemonInBattle.lastIndexOf('.'));
+        namePokemon1Player1 = namePokemonInBattle.substring(lastIndex + 1, namePokemonInBattle.lastIndexOf('.'));
 
 
-        return namePokemon1Player2;
+        return namePokemon1Player1;
 
     }
 
     /**
-     * metodo para obtener el tipo del ataque 1 del pokemon en batalla
+     * metodo para obtener el tipo del ataque 1 del pokemon en batalla del jugador 2
      * @param namePokemonInBattle el nombre del pokemon en batalla
      * @return el nombre dle tipo
      */
-    public static String getTypeAttack1PokemonInBattlePlayer1(String namePokemonInBattle) {
+    public static String getTypeAttack1PokemonInBattlePlayer2(String namePokemonInBattle) {
         /**
          * iniciamos variables, una es el tipo y otra el nombre del primer ataque
          */
         String type = "";
-        String attack1 = ButtonInterfaceAttacks.getAttack1Player1().getText();
+        String attack1 = ButtonInterfaceAttacks.getAttack1Player2().getText();
 
 
         /**
          * recorremos con un for el array de objetos de pokemons
          */
-        for (Object pokemonObj : MethosInterfaceSelectionPokemon.getPokemonsPLayer1()) {
+        for (Object pokemonObj : MethosInterfaceSelectionPokemon.getPokemonsPLayer2()) {
 
             /**
              * iniciamos un string igual al nombre de los pokemons que vayqan saliendo
@@ -468,22 +468,22 @@ public class MethodsTextAreaBattlePlayer2 {
     }
 
     /**
-     * metodo para obtener el tipo del ataque 2 del pokemon en batalla del jugador 1
+     * metodo para obtener el tipo del ataque 2 del pokemon en batalla del jugador 2
      * @param namePokemonInBattle el nombre del pokemon en batalla
      * @return el nombre del tipo
      */
-    public static String getTypeAttack2PokemonInBattlePlayer1(String namePokemonInBattle) {
+    public static String getTypeAttack2PokemonInBattlePlayer2(String namePokemonInBattle) {
         /**
          * iniciamos variables, una es el tipo y otra el nombre del segundo ataque
          */
         String type = "";
-        String attack2 = ButtonInterfaceAttacks.getAttack2PLayer1().getText();
+        String attack2 = ButtonInterfaceAttacks.getAttack2PLayer2().getText();
 
 
         /**
          * recorremos con un for el array de objetos de pokemons
          */
-        for (Object pokemonObj : MethosInterfaceSelectionPokemon.getPokemonsPLayer1()) {
+        for (Object pokemonObj : MethosInterfaceSelectionPokemon.getPokemonsPLayer2()) {
 
             /**
              * iniciamos un string igual al nombre de los pokemons que vayqan saliendo
@@ -522,22 +522,22 @@ public class MethodsTextAreaBattlePlayer2 {
     }
 
     /**
-     * metodo para obtener el tipo del ataque 3 del pokemon en batalla del jugador 1
+     * metodo para obtener el tipo del ataque 3 del pokemon en batalla del jugador 2
      * @param namePokemonInBattle el nombre del pokemon en batalla
      * @return el nombre dle tipo
      */
-    public static String getTypeAttack3PokemonInBattlePlayer1(String namePokemonInBattle) {
+    public static String getTypeAttack3PokemonInBattlePlayer2(String namePokemonInBattle) {
         /**
          * iniciamos variables, una es el tipo y otra el nombre del tercer ataque
          */
         String type = "";
-        String attack3 = ButtonInterfaceAttacks.getAttack3Player1().getText();
+        String attack3 = ButtonInterfaceAttacks.getAttack3Player2().getText();
 
 
         /**
          * recorremos con un for el array de objetos de pokemons
          */
-        for (Object pokemonObj : MethosInterfaceSelectionPokemon.getPokemonsPLayer1()) {
+        for (Object pokemonObj : MethosInterfaceSelectionPokemon.getPokemonsPLayer2()) {
 
             /**
              * iniciamos un string igual al nombre de los pokemons que vayqan saliendo
@@ -576,22 +576,22 @@ public class MethodsTextAreaBattlePlayer2 {
     }
 
     /**
-     * metodo para obtener el tipo del ataque 4 del pokemon en batalla del jugador 1
+     * metodo para obtener el tipo del ataque 4 del pokemon en batalla del jugador 2
      * @param namePokemonInBattle el nombre del pokemon en batalla
      * @return el nombre del tipo
      */
-    public static String getTypeAttack4PokemonInBattlePlayer1(String namePokemonInBattle) {
+    public static String getTypeAttack4PokemonInBattlePlayer2(String namePokemonInBattle) {
         /**
          * iniciamos variables, una es el tipo y otra el nombre del primer ataque
          */
         String type = "";
-        String attack4 = ButtonInterfaceAttacks.getAttack4Player1().getText();
+        String attack4 = ButtonInterfaceAttacks.getAttack4Player2().getText();
 
 
         /**
          * recorremos con un for el array de objetos de pokemons
          */
-        for (Object pokemonObj : MethosInterfaceSelectionPokemon.getPokemonsPLayer1()) {
+        for (Object pokemonObj : MethosInterfaceSelectionPokemon.getPokemonsPLayer2()) {
 
             /**
              * iniciamos un string igual al nombre de los pokemons que vayqan saliendo
