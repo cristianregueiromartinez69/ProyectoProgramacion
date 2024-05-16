@@ -853,7 +853,9 @@ public class Battle extends JFrame {
         if (e.getSource() == ButtonInterfaceAttacks.getAttack1Player1()){
            TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()
                    + " ha usado " + MethodsTextAreaBattlePlayer1.getNameAttack1PokemonPLayer1() +
-                   " contra " + MethodsTextAreaBattlePlayer1.KnowTheNameOfTheOpposingPokemon());
+                   " contra " + MethodsTextAreaBattlePlayer1.KnowTheNameOfTheOpposingPokemon() +
+                   " ha sido " + MethosTargetType.getResultOfAttacksBothPlayer(MethodsTextAreaBattlePlayer1.getTypeAttack1PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()
+                   ), MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2()));
         }
         /**
          * si el jugador pulsa del ataque 2, se mete en la condicion y escribe
