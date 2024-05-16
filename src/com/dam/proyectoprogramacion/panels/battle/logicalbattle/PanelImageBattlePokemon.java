@@ -16,6 +16,8 @@ public class PanelImageBattlePokemon extends JPanel {
      * atributos privados de la clase
      */
     private JPanel backgroundPanel;
+    private JPanel imagePanelPokemonPlayer1;
+    private JPanel imagePanelPokemonPlayer2;
     private static Image pokemonPlayer1;
     private static Image pokemonPlayer2;
     private static Image battleScenario;
@@ -33,6 +35,14 @@ public class PanelImageBattlePokemon extends JPanel {
          * iniciamos la imagen de fondo con el path de la imagen de batalla pokemon
          */
         battleScenario = new ImageIcon("imagenes/batalla.jpg").getImage();
+
+        pokemonPlayer1 = new ImageIcon("imagenes/snorlaxSP.png").getImage();
+        pokemonPlayer2 = new ImageIcon("imagenes/tinkatonSP.png").getImage();
+
+        PanelImagePokemonInBattlePlayer1 pokemonImagePlayer1 = new PanelImagePokemonInBattlePlayer1(pokemonPlayer1);
+        PanelImagePokemonInBattlePlayer2 pokemonImagePlayer2 = new PanelImagePokemonInBattlePlayer2(pokemonPlayer2);
+
+
         /**
          * instanciamos el panel de la imagen de batalla y le metemos el path
          */
@@ -46,12 +56,21 @@ public class PanelImageBattlePokemon extends JPanel {
          * añadimos las imagenes al panel
          */
         backgroundPanel = new JPanel();
-         backgroundPanel.add(backBattle, BorderLayout.CENTER);
+         backgroundPanel.add(backBattle);
+
+         imagePanelPokemonPlayer1 = new JPanel();
+         imagePanelPokemonPlayer1.add(pokemonImagePlayer1);
+
+        imagePanelPokemonPlayer2 = new JPanel();
+        imagePanelPokemonPlayer2.add(pokemonImagePlayer2);
+
 
         /**
          * lo añadimos
          */
-        this.add(backgroundPanel);
+        this.add(backgroundPanel, BorderLayout.CENTER);
+        this.add(imagePanelPokemonPlayer1, BorderLayout.WEST);
+        this.add(imagePanelPokemonPlayer2, BorderLayout.EAST);
 
     }
 
