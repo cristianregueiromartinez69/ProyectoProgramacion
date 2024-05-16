@@ -12,6 +12,7 @@ import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
 import com.dam.proyectoprogramacion.methods.battle.*;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.*;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer2.*;
+import com.dam.proyectoprogramacion.panels.battle.logicalbattle.TextAreaPanelBattle;
 
 /**
  * interfaz del combate pokemon
@@ -58,6 +59,8 @@ public class Battle extends JFrame {
         contentPanel = new JPanel();
         contentPanel = makeContentPanel();
         add(contentPanel);
+
+        //---------------------paneles del jugador 1-------------------//
 
         /**
          * instanciamos el panel del jugador 1
@@ -107,10 +110,11 @@ public class Battle extends JFrame {
         lifePanelPokemon.setLayout(new FlowLayout());
         contentPanel.add(lifePanelPokemon, BorderLayout.NORTH);
 
-        JPanel auxLifePanelPlayer1 = new LifePokemonInBattlePlayer1();
-        lifePanelPokemon.add(auxLifePanelPlayer1);
+
+        lifePanelPokemon.add(new LifePokemonInBattlePlayer1());
 
 
+        //---------------------paneles del jugador 2-------------------//
 
 
 
@@ -159,14 +163,23 @@ public class Battle extends JFrame {
         changesPokemonsPLayer2.setVisible(false);
         globalPanelPLayer2.add(changesPokemonsPLayer2);
 
-        /**
-         * iniciamos un panel y lo hacemos igual al panel de vida del pokemon del jugador 2
-         */
-        JPanel auxLifePanelPlayer2 = new LifePokemonInBattlePlayer2();
+
         /**
          * lo añadimos
          */
-        lifePanelPokemon.add(auxLifePanelPlayer2);
+        lifePanelPokemon.add(new LifePokemonInBattlePlayer2());
+
+        //---------------------paneles de ambos jugadores-------------------//
+
+        /**
+         * inici<mos el panel de texto de la batalla
+         */
+        textAreaPanel = new JPanel();
+        contentPanel.add(textAreaPanel, BorderLayout.SOUTH);
+
+        textAreaPanel.add(new TextAreaPanelBattle());
+
+
 
         pokemonBattle();
 

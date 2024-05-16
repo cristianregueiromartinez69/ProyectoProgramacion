@@ -40,6 +40,9 @@ public class TextAreaPanelBattle extends JPanel {
          * hacemos que no se pueda editar
          */
         informationBattle.setEditable(false);
+        informationBattle.setPreferredSize(new Dimension(400, 30));
+        informationBattle.setMaximumSize(new Dimension(400,30));
+        informationBattle.setMinimumSize(new Dimension(400,30));
         /**
          * lo añadimos al panel
          */
