@@ -12,6 +12,7 @@ import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
 import com.dam.proyectoprogramacion.methods.battle.*;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.*;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer2.*;
+import com.dam.proyectoprogramacion.panels.battle.logicalbattle.PanelImageBattlePokemon;
 import com.dam.proyectoprogramacion.panels.battle.logicalbattle.TextAreaPanelBattle;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
@@ -180,6 +181,10 @@ public class Battle extends JFrame {
         contentPanel.add(textAreaPanel, BorderLayout.SOUTH);
 
         textAreaPanel.add(new TextAreaPanelBattle());
+
+        battlePanel = new JPanel();
+        contentPanel.add(battlePanel, BorderLayout.CENTER);
+        battlePanel.add(new PanelImageBattlePokemon());
 
 
 

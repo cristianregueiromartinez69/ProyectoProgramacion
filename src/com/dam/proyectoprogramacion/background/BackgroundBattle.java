@@ -20,6 +20,9 @@ public class BackgroundBattle extends JPanel{
      */
     public BackgroundBattle(Image backgroundImage) {
         this.backgroundImage = backgroundImage;
+        setPreferredSize(new Dimension(1000,1000));
+        setMaximumSize(new Dimension(1000,1000));
+        setMinimumSize(new Dimension(1000,1000));
     }
 
 
