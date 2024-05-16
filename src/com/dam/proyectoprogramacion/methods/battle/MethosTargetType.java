@@ -9,8 +9,64 @@ public class MethosTargetType {
 
     public static String getResultOfAttacksBothPlayer(String typeAttackPokemon, String typeTargetPokemon){
 
+        if(typeAttackPokemon.equalsIgnoreCase("acero")){
+            return getResultSteelAttackType(typeTargetPokemon);
+        }
+        else if(typeAttackPokemon.equalsIgnoreCase("agua")){
+            return getResultWatterAttackType(typeTargetPokemon);
+        }
+        else if(typeAttackPokemon.equalsIgnoreCase("bicho")){
+            return getResultBugAttackType(typeTargetPokemon);
+        }
+        else if(typeAttackPokemon.equalsIgnoreCase("dragon")){
+            return getResultDragonAttackType(typeTargetPokemon);
+        }
+        else if(typeAttackPokemon.equalsIgnoreCase("electrico")){
+            return getResultElectricAttackType(typeTargetPokemon);
+        }
+        else if(typeAttackPokemon.equalsIgnoreCase("fantasma")){
+            return getResultGhostAttackType(typeTargetPokemon);
+        }
+        else if(typeAttackPokemon.equalsIgnoreCase("fuego")){
+            return getResultFireAttackType(typeTargetPokemon);
+        }
+        else if(typeAttackPokemon.equalsIgnoreCase("hada")){
+            return getResultFairyAttackType(typeTargetPokemon);
+        }
+        else if(typeAttackPokemon.equalsIgnoreCase("hielo")){
+            return getResultIceAttackType(typeTargetPokemon);
+        }
+        else if(typeAttackPokemon.equalsIgnoreCase("lucha")){
+            return getResultFightingAttackType(typeTargetPokemon);
+        }
+        else if(typeAttackPokemon.equalsIgnoreCase("normal")){
+            return getResultNormalAttackType(typeTargetPokemon);
+        }
+        else if(typeAttackPokemon.equalsIgnoreCase("planta")){
+            return getResultGrassAttackType(typeTargetPokemon);
+        }
+        else if(typeAttackPokemon.equalsIgnoreCase("psiquico")){
+            return getResultPsychicAttackType(typeTargetPokemon);
+        }
+        else if(typeAttackPokemon.equalsIgnoreCase("roca")){
+            return getResultRockAttackType(typeTargetPokemon);
+        }
+        else if(typeAttackPokemon.equalsIgnoreCase("siniestro")){
+            return getResultDarkAttackType(typeTargetPokemon);
+        }
+        else if(typeAttackPokemon.equalsIgnoreCase("tierra")){
+            return getResultGroundAttackType(typeTargetPokemon);
+        }
+        else if(typeAttackPokemon.equalsIgnoreCase("veneno")){
+            return getResultPoisonAttackType(typeTargetPokemon);
+        }
+        else if(typeAttackPokemon.equalsIgnoreCase("volador")){
+            return getResultFlyingAttackType(typeTargetPokemon);
+        }
 
- return null;
+
+
+
     }
 
     /**
