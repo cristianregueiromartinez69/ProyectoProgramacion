@@ -479,6 +479,168 @@ public class MethodsTextAreaBattlePlayer1 {
         return type;
     }
 
+    /**
+     * metodo para obtener el tipo del ataque 2 del pokemon en batalla del jugador 1
+     * @param namePokemonInBattle el nombre del pokemon en batalla
+     * @return el nombre del tipo
+     */
+    public static String getTypeAttack2PokemonInBattlePlayer1(String namePokemonInBattle) {
+        /**
+         * iniciamos variables, una es el tipo y otra el nombre del segundo ataque
+         */
+        String type = "";
+        String attack2 = ButtonInterfaceAttacks.getAttack2PLayer1().getText();
+
+
+        /**
+         * recorremos con un for el array de objetos de pokemons
+         */
+        for (Object pokemonObj : MethosInterfaceSelectionPokemon.getPokemonsPLayer1()) {
+
+            /**
+             * iniciamos un string igual al nombre de los pokemons que vayqan saliendo
+             */
+            PokemonProperties pokemon = (PokemonProperties) pokemonObj;
+            String nameToLookFor = pokemon.getName();
+
+
+            /**
+             * si algun nombre coincide con el pokemon en batalla, entra en la condicion
+             */
+            if (nameToLookFor.equalsIgnoreCase(namePokemonInBattle)) {
+
+                /**
+                 * hacemos un for con los ataques del pokemon
+                 */
+                for (AttacksPokemons attack : pokemon.getAttacks()) {
+
+                    /**
+                     * si algun nombre de sus ataques coincide con el del boton, se mete en la condicion
+                     */
+                    if (attack2.equalsIgnoreCase(attack.getName())) {
+
+                        /**
+                         * el tipo será igual al tipo del ataque
+                         */
+                        type = attack.getType();
+                        break;
+                    }
+                }
+
+                break;
+            }
+        }
+        return type;
+    }
+
+    /**
+     * metodo para obtener el tipo del ataque 3 del pokemon en batalla del jugador 1
+     * @param namePokemonInBattle el nombre del pokemon en batalla
+     * @return el nombre dle tipo
+     */
+    public static String getTypeAttack3PokemonInBattlePlayer1(String namePokemonInBattle) {
+        /**
+         * iniciamos variables, una es el tipo y otra el nombre del tercer ataque
+         */
+        String type = "";
+        String attack3 = ButtonInterfaceAttacks.getAttack3Player1().getText();
+
+
+        /**
+         * recorremos con un for el array de objetos de pokemons
+         */
+        for (Object pokemonObj : MethosInterfaceSelectionPokemon.getPokemonsPLayer1()) {
+
+            /**
+             * iniciamos un string igual al nombre de los pokemons que vayqan saliendo
+             */
+            PokemonProperties pokemon = (PokemonProperties) pokemonObj;
+            String nameToLookFor = pokemon.getName();
+
+
+            /**
+             * si algun nombre coincide con el pokemon en batalla, entra en la condicion
+             */
+            if (nameToLookFor.equalsIgnoreCase(namePokemonInBattle)) {
+
+                /**
+                 * hacemos un for con los ataques del pokemon
+                 */
+                for (AttacksPokemons attack : pokemon.getAttacks()) {
+
+                    /**
+                     * si algun nombre de sus ataques coincide con el del boton, se mete en la condicion
+                     */
+                    if (attack3.equalsIgnoreCase(attack.getName())) {
+
+                        /**
+                         * el tipo será igual al tipo del ataque
+                         */
+                        type = attack.getType();
+                        break;
+                    }
+                }
+
+                break;
+            }
+        }
+        return type;
+    }
+
+    /**
+     * metodo para obtener el tipo del ataque 4 del pokemon en batalla del jugador 1
+     * @param namePokemonInBattle el nombre del pokemon en batalla
+     * @return el nombre del tipo
+     */
+    public static String getTypeAttack4PokemonInBattlePlayer1(String namePokemonInBattle) {
+        /**
+         * iniciamos variables, una es el tipo y otra el nombre del primer ataque
+         */
+        String type = "";
+        String attack4 = ButtonInterfaceAttacks.getAttack4Player1().getText();
+
+
+        /**
+         * recorremos con un for el array de objetos de pokemons
+         */
+        for (Object pokemonObj : MethosInterfaceSelectionPokemon.getPokemonsPLayer1()) {
+
+            /**
+             * iniciamos un string igual al nombre de los pokemons que vayqan saliendo
+             */
+            PokemonProperties pokemon = (PokemonProperties) pokemonObj;
+            String nameToLookFor = pokemon.getName();
+
+
+            /**
+             * si algun nombre coincide con el pokemon en batalla, entra en la condicion
+             */
+            if (nameToLookFor.equalsIgnoreCase(namePokemonInBattle)) {
+
+                /**
+                 * hacemos un for con los ataques del pokemon
+                 */
+                for (AttacksPokemons attack : pokemon.getAttacks()) {
+
+                    /**
+                     * si algun nombre de sus ataques coincide con el del boton, se mete en la condicion
+                     */
+                    if (attack4.equalsIgnoreCase(attack.getName())) {
+
+                        /**
+                         * el tipo será igual al tipo del ataque
+                         */
+                        type = attack.getType();
+                        break;
+                    }
+                }
+
+                break;
+            }
+        }
+        return type;
+    }
+
 
 
 
