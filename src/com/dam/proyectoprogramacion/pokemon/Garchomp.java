@@ -9,7 +9,7 @@ public class Garchomp extends PokemonProperties{
 
     @Override
     public Integer atacar() {
-        return 0;
+        return null;
     }
 
     @Override

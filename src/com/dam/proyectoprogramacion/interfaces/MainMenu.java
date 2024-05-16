@@ -1,5 +1,5 @@
 package com.dam.proyectoprogramacion.interfaces;
-import com.dam.proyectoprogramacion.methodsandmain.MusicMainMenu;
+import com.dam.proyectoprogramacion.Songs.MusicMainMenu;
 import com.dam.proyectoprogramacion.background.*;
 import com.dam.proyectoprogramacion.buttons.*;
 import javax.swing.*;

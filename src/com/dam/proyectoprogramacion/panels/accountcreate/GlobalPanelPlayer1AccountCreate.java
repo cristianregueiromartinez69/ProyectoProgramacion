@@ -1,10 +1,7 @@
 package com.dam.proyectoprogramacion.panels.accountcreate;
 import javax.swing.*;
 
-import com.dam.proyectoprogramacion.methodsandmain.*;
-
-
-
+import com.dam.proyectoprogramacion.methods.accountcreate.MethodsInterfaceAccountCreate;
 
 
 /**
