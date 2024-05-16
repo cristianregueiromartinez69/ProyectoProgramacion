@@ -13,6 +13,7 @@ import com.dam.proyectoprogramacion.methods.battle.*;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.*;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer2.*;
 import com.dam.proyectoprogramacion.panels.battle.logicalbattle.TextAreaPanelBattle;
+import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 
 /**
  * interfaz del combate pokemon
@@ -302,9 +303,11 @@ public class Battle extends JFrame {
                 pokemonBattle();
             }
         });
+        ButtonInterfaceChangePokemonPlayer1.getPokemon1team().addActionListener(this::changeLifePokemonInBattlePlayer1);
+        ButtonInterfaceChangePokemonPlayer1.getPokemon1team().addActionListener(this::putInformationAreaTextBatlle);
         /**
          * actionListener para cambiar un pokemon por otro
-         * al cambiar se actualizan las características y todo
+         * al cambiar se actualizan las características y all
          */
         ButtonInterfaceChangePokemonPlayer1.getPokemon2team().addActionListener(new ActionListener() {
             @Override
@@ -321,6 +324,9 @@ public class Battle extends JFrame {
                 pokemonBattle();
             }
         });
+        ButtonInterfaceChangePokemonPlayer1.getPokemon2team().addActionListener(this::changeLifePokemonInBattlePlayer1);
+        ButtonInterfaceChangePokemonPlayer1.getPokemon2team().addActionListener(this::putInformationAreaTextBatlle);
+
         /**
          * actionListener para cambiar un pokemon por otro
          * al cambiar se actualizan las características y todo
@@ -340,9 +346,8 @@ public class Battle extends JFrame {
                 pokemonBattle();
             }
         });
-        ButtonInterfaceChangePokemonPlayer1.getPokemon1team().addActionListener(this::changeLifePokemonInBattlePlayer1);
-        ButtonInterfaceChangePokemonPlayer1.getPokemon2team().addActionListener(this::changeLifePokemonInBattlePlayer1);
         ButtonInterfaceChangePokemonPlayer1.getPokemon3team().addActionListener(this::changeLifePokemonInBattlePlayer1);
+        ButtonInterfaceChangePokemonPlayer1.getPokemon3team().addActionListener(this::putInformationAreaTextBatlle);
 
 
 
@@ -853,7 +858,21 @@ public class Battle extends JFrame {
             TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()
                     + " ha usado " + MethodsTextAreaBattlePlayer1.getNameAttack4PokemonPLayer1());
         }
+        else if(e.getSource() == ButtonInterfaceChangePokemonPlayer1.getPokemon1team()){
+            TextAreaPanelBattle.getInformationBattle().setText("El jugador " + InformationPanelPlayer1Luck.getAliasTextPlayer1().getText() +
+                    " ha hecho un cambio de pokemon, sale al campo de batalla " + MethodsTextAreaBattlePlayer1.getNamePokemon1ToChangePLayer1());
+        }
+        else if(e.getSource() == ButtonInterfaceChangePokemonPlayer1.getPokemon2team()){
+            TextAreaPanelBattle.getInformationBattle().setText("El jugador " + InformationPanelPlayer1Luck.getAliasTextPlayer1().getText() +
+                    " ha hecho un cambio de pokemon, sale al campo de batalla " + MethodsTextAreaBattlePlayer1.getNamePokemon2ToChangePLayer1());
+        }
+        else if(e.getSource() == ButtonInterfaceChangePokemonPlayer1.getPokemon3team()){
+            TextAreaPanelBattle.getInformationBattle().setText("El jugador " + InformationPanelPlayer1Luck.getAliasTextPlayer1().getText() +
+                    " ha hecho un cambio de pokemon, sale al campo de batalla " + MethodsTextAreaBattlePlayer1.getNamePokemon3ToChangePLayer1());
+        }
+
     }
+
 
 
     //---------------------------metodos para cambios de paneles del jugador 2-----------------------------------//
