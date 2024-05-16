@@ -838,20 +838,20 @@ public class Battle extends JFrame {
     }
     public void putInformationAreaTextBatlle(ActionEvent e) {
         if (e.getSource() == ButtonInterfaceAttacks.getAttack1Player1()){
-           TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattle.getNamePokemon1PLayer1()
-                   + " ha usado " + MethodsTextAreaBattle.getNameAttack1PokemonPLayer1());
+           TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()
+                   + " ha usado " + MethodsTextAreaBattlePlayer1.getNameAttack1PokemonPLayer1());
         }
         else if(e.getSource() == ButtonInterfaceAttacks.getAttack2PLayer1()){
-            TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattle.getNamePokemon1PLayer1()
-                    + " ha usado " + MethodsTextAreaBattle.getNameAttack2PokemonPLayer1());
+            TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()
+                    + " ha usado " + MethodsTextAreaBattlePlayer1.getNameAttack2PokemonPLayer1());
         }
         else if(e.getSource() == ButtonInterfaceAttacks.getAttack3Player1()){
-            TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattle.getNamePokemon1PLayer1()
-                    + " ha usado " + MethodsTextAreaBattle.getNameAttack3PokemonPLayer1());
+            TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()
+                    + " ha usado " + MethodsTextAreaBattlePlayer1.getNameAttack3PokemonPLayer1());
         }
         else if(e.getSource() == ButtonInterfaceAttacks.getAttack4Player1()){
-            TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattle.getNamePokemon1PLayer1()
-                    + " ha usado " + MethodsTextAreaBattle.getNameAttack4PokemonPLayer1());
+            TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()
+                    + " ha usado " + MethodsTextAreaBattlePlayer1.getNameAttack4PokemonPLayer1());
         }
     }
 

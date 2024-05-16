@@ -1,19 +1,15 @@
 package com.dam.proyectoprogramacion.methods.battle;
 
-import com.dam.proyectoprogramacion.buttons.ButtonInterfaceAttacks;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer1;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
 import com.dam.proyectoprogramacion.methods.selectionpokemon.MethosInterfaceSelectionPokemon;
-import com.dam.proyectoprogramacion.panels.battle.logicalbattle.TextAreaPanelBattle;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.pokemon.AttacksPokemons;
 import com.dam.proyectoprogramacion.pokemon.PokemonProperties;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class MethodsTextAreaBattle{
+public class MethodsTextAreaBattlePlayer1 {
 
 
 
@@ -287,6 +283,71 @@ public class MethodsTextAreaBattle{
          * devolvemos el nombre del ataque
          */
         return attack4;
+    }
+
+
+    /**
+     * metodo para poner el nombre del pokemon 1  para cambiarlo del jugador 1
+     * @return el nombre del pokemon
+     */
+    public static String getNamePokemon1ToChangePLayer1(){
+        String namePokemon1Player1 = "";
+        /**
+         * iniciamos variables iguales al path del pokemon a cambiar
+         */
+        String namePokemonChange = DataNamesIconsColorsAttacksAndPokemonsPlayer1.getPathIconPokemon1();
+
+        /**
+         * tenemos que recortar el path para obtener solo el nombre
+         */
+        int lastIndex = namePokemonChange.lastIndexOf('/');
+        namePokemon1Player1 = namePokemonChange.substring(lastIndex + 1, namePokemonChange.lastIndexOf('.'));
+
+
+        return namePokemon1Player1;
+    }
+
+    /**
+     * metodo para poner el nombre del pokemon 2  para cambiarlo del jugador 1
+     * @return el nombre del pokemon
+     */
+    public static String getNamePokemon2ToChangePLayer1(){
+        String namePokemon2Player1 = "";
+        /**
+         * iniciamos variables iguales al path del pokemon en a cambiar
+         */
+        String namePokemonChange = DataNamesIconsColorsAttacksAndPokemonsPlayer1.getPathIconPokemon2();
+
+        /**
+         * tenemos que recortar el path para obtener solo el nombre
+         */
+        int lastIndex = namePokemonChange.lastIndexOf('/');
+        namePokemon2Player1 = namePokemonChange.substring(lastIndex + 1, namePokemonChange.lastIndexOf('.'));
+
+
+        return namePokemon2Player1;
+    }
+
+
+    /**
+     * metodo para poner el nombre del pokemon 3  para cambiarlo del jugador 1
+     * @return el nombre del pokemon
+     */
+    public static String getNamePokemon3ToChangePLayer1(){
+        String namePokemon3Player1 = "";
+        /**
+         * iniciamos variables iguales al path del pokemon a cambiar
+         */
+        String namePokemonChange = DataNamesIconsColorsAttacksAndPokemonsPlayer1.getPathIconPokemon3();
+
+        /**
+         * tenemos que recortar el path para obtener solo el nombre
+         */
+        int lastIndex = namePokemonChange.lastIndexOf('/');
+        namePokemon3Player1 = namePokemonChange.substring(lastIndex + 1, namePokemonChange.lastIndexOf('.'));
+
+
+        return namePokemon3Player1;
     }
 
 }
