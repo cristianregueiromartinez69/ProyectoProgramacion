@@ -175,15 +175,25 @@ public class Battle extends JFrame {
         //---------------------paneles de ambos jugadores-------------------//
 
         /**
-         * inici<mos el panel de texto de la batalla
+         * iniciamos el panel de texto de la batalla
          */
         textAreaPanel = new JPanel();
         contentPanel.add(textAreaPanel, BorderLayout.SOUTH);
 
         textAreaPanel.add(new TextAreaPanelBattle());
 
+        /**
+         * iniciamos el panel de batalla pokemon
+         * lo añadimos al panel central
+         */
         battlePanel = new JPanel();
         contentPanel.add(battlePanel, BorderLayout.CENTER);
+        /**
+         * el panel de batalla será igual al que tiene las siguientes imagenes:
+         * 1. el del pokemon en batalla del jugador 1
+         * 2. el del pokemon en batalla del jugador 2
+         * 3. el escenario de la batalla pokemon
+         */
         battlePanel.add(new PanelImageBattlePokemon());
 
 
