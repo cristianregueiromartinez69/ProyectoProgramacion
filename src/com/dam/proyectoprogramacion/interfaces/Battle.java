@@ -12,6 +12,10 @@ import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
 import com.dam.proyectoprogramacion.methods.battle.*;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.*;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer2.*;
+import com.dam.proyectoprogramacion.panels.battle.logicalbattle.PanelImageBattlePokemon;
+import com.dam.proyectoprogramacion.panels.battle.logicalbattle.TextAreaPanelBattle;
+import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
+import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
 
 /**
  * interfaz del combate pokemon
@@ -58,6 +62,8 @@ public class Battle extends JFrame {
         contentPanel = new JPanel();
         contentPanel = makeContentPanel();
         add(contentPanel);
+
+        //---------------------paneles del jugador 1-------------------//
 
         /**
          * instanciamos el panel del jugador 1
@@ -107,10 +113,11 @@ public class Battle extends JFrame {
         lifePanelPokemon.setLayout(new FlowLayout());
         contentPanel.add(lifePanelPokemon, BorderLayout.NORTH);
 
-        JPanel auxLifePanelPlayer1 = new LifePokemonInBattlePlayer1();
-        lifePanelPokemon.add(auxLifePanelPlayer1);
+
+        lifePanelPokemon.add(new LifePokemonInBattlePlayer1());
 
 
+        //---------------------paneles del jugador 2-------------------//
 
 
 
@@ -159,14 +166,37 @@ public class Battle extends JFrame {
         changesPokemonsPLayer2.setVisible(false);
         globalPanelPLayer2.add(changesPokemonsPLayer2);
 
-        /**
-         * iniciamos un panel y lo hacemos igual al panel de vida del pokemon del jugador 2
-         */
-        JPanel auxLifePanelPlayer2 = new LifePokemonInBattlePlayer2();
+
         /**
          * lo añadimos
          */
-        lifePanelPokemon.add(auxLifePanelPlayer2);
+        lifePanelPokemon.add(new LifePokemonInBattlePlayer2());
+
+        //---------------------paneles de ambos jugadores-------------------//
+
+        /**
+         * iniciamos el panel de texto de la batalla
+         */
+        textAreaPanel = new JPanel();
+        contentPanel.add(textAreaPanel, BorderLayout.SOUTH);
+
+        textAreaPanel.add(new TextAreaPanelBattle());
+
+        /**
+         * iniciamos el panel de batalla pokemon
+         * lo añadimos al panel central
+         */
+        battlePanel = new JPanel();
+        contentPanel.add(battlePanel, BorderLayout.CENTER);
+        /**
+         * el panel de batalla será igual al que tiene las siguientes imagenes:
+         * 1. el del pokemon en batalla del jugador 1
+         * 2. el del pokemon en batalla del jugador 2
+         * 3. el escenario de la batalla pokemon
+         */
+        battlePanel.add(new PanelImageBattlePokemon());
+
+
 
         pokemonBattle();
 
@@ -197,9 +227,11 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack1Player1().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 clearGlobalPanelPlayer1WhenPressAttacksButtons();
             }
         });
+        ButtonInterfaceAttacks.getAttack1Player1().addActionListener(this::putInformationAreaTextBattlePlayer1);
         /**
          * actionListener del boton de ataque 2 del jugador 1
          */
@@ -209,6 +241,8 @@ public class Battle extends JFrame {
                 clearGlobalPanelPlayer1WhenPressAttacksButtons();
             }
         });
+        ButtonInterfaceAttacks.getAttack2PLayer1().addActionListener(this::putInformationAreaTextBattlePlayer1);
+
         /**
          * actionListener del boton de ataque 3 del jugador 1
          */
@@ -218,6 +252,8 @@ public class Battle extends JFrame {
                 clearGlobalPanelPlayer1WhenPressAttacksButtons();
             }
         });
+        ButtonInterfaceAttacks.getAttack3Player1().addActionListener(this::putInformationAreaTextBattlePlayer1);
+
         /**
          * actionListener del boton de ataque 4 del jugador 1
          */
@@ -227,6 +263,8 @@ public class Battle extends JFrame {
                 clearGlobalPanelPlayer1WhenPressAttacksButtons();
             }
         });
+        ButtonInterfaceAttacks.getAttack4Player1().addActionListener(this::putInformationAreaTextBattlePlayer1);
+
         /**
          * acionlistener para volver atras en el menu de atacar
          */
@@ -281,9 +319,11 @@ public class Battle extends JFrame {
                 pokemonBattle();
             }
         });
+        ButtonInterfaceChangePokemonPlayer1.getPokemon1team().addActionListener(this::changeLifePokemonInBattlePlayer1);
+        ButtonInterfaceChangePokemonPlayer1.getPokemon1team().addActionListener(this::putInformationAreaTextBattlePlayer1);
         /**
          * actionListener para cambiar un pokemon por otro
-         * al cambiar se actualizan las características y todo
+         * al cambiar se actualizan las características y all
          */
         ButtonInterfaceChangePokemonPlayer1.getPokemon2team().addActionListener(new ActionListener() {
             @Override
@@ -300,9 +340,12 @@ public class Battle extends JFrame {
                 pokemonBattle();
             }
         });
+        ButtonInterfaceChangePokemonPlayer1.getPokemon2team().addActionListener(this::changeLifePokemonInBattlePlayer1);
+        ButtonInterfaceChangePokemonPlayer1.getPokemon2team().addActionListener(this::putInformationAreaTextBattlePlayer1);
+
         /**
          * actionListener para cambiar un pokemon por otro
-         * al cambiar se actualizan las características y todo
+         * al cambiar se actualizan las características y all
          */
         ButtonInterfaceChangePokemonPlayer1.getPokemon3team().addActionListener(new ActionListener() {
             @Override
@@ -319,9 +362,8 @@ public class Battle extends JFrame {
                 pokemonBattle();
             }
         });
-        ButtonInterfaceChangePokemonPlayer1.getPokemon1team().addActionListener(this::changeLifePokemonInBattlePlayer1);
-        ButtonInterfaceChangePokemonPlayer1.getPokemon2team().addActionListener(this::changeLifePokemonInBattlePlayer1);
         ButtonInterfaceChangePokemonPlayer1.getPokemon3team().addActionListener(this::changeLifePokemonInBattlePlayer1);
+        ButtonInterfaceChangePokemonPlayer1.getPokemon3team().addActionListener(this::putInformationAreaTextBattlePlayer1);
 
 
 
@@ -350,6 +392,7 @@ public class Battle extends JFrame {
                 clearGlobalPanelPlayer2WhenPressAttacksButtons();
             }
         });
+        ButtonInterfaceAttacks.getAttack1Player2().addActionListener(this::putInformationAreaTextBattlePlayer2);
         /**
          * actionListener del boton de ataque 2 del jugador 1
          */
@@ -359,6 +402,8 @@ public class Battle extends JFrame {
                 clearGlobalPanelPlayer2WhenPressAttacksButtons();
             }
         });
+        ButtonInterfaceAttacks.getAttack2PLayer2().addActionListener(this::putInformationAreaTextBattlePlayer2);
+
         /**
          * actionListener del boton de ataque 3 del jugador 1
          */
@@ -368,6 +413,8 @@ public class Battle extends JFrame {
                 clearGlobalPanelPlayer2WhenPressAttacksButtons();
             }
         });
+        ButtonInterfaceAttacks.getAttack3Player2().addActionListener(this::putInformationAreaTextBattlePlayer2);
+
         /**
          * actionListener del boton de ataque 4 del jugador 1
          */
@@ -377,6 +424,8 @@ public class Battle extends JFrame {
                 clearGlobalPanelPlayer2WhenPressAttacksButtons();
             }
         });
+        ButtonInterfaceAttacks.getAttack4Player2().addActionListener(this::putInformationAreaTextBattlePlayer2);
+
 
         /**
          * acionlistener para volver atras en el menu de atacar
@@ -426,6 +475,10 @@ public class Battle extends JFrame {
                 pokemonBattle();
             }
         });
+        ButtonInterfaceChangePokemonPlayer2.getPokemon1team().addActionListener(this::changeLifePokemonInBattlePlayer2);
+        ButtonInterfaceChangePokemonPlayer2.getPokemon1team().addActionListener(this::putInformationAreaTextBattlePlayer2);
+
+
         /**
          * actionListener para cambiar un pokemon por otro
          * al cambiar se actualizan las características y all
@@ -444,9 +497,12 @@ public class Battle extends JFrame {
                 pokemonBattle();
             }
         });
+        ButtonInterfaceChangePokemonPlayer2.getPokemon2team().addActionListener(this::changeLifePokemonInBattlePlayer2);
+        ButtonInterfaceChangePokemonPlayer2.getPokemon2team().addActionListener(this::putInformationAreaTextBattlePlayer2);
+
         /**
          * actionListener para cambiar un pokemon por otro
-         * al cambiar se actualizan las características y todo
+         * al cambiar se actualizan las características y all
          */
         ButtonInterfaceChangePokemonPlayer2.getPokemon3team().addActionListener(new ActionListener() {
             @Override
@@ -462,9 +518,8 @@ public class Battle extends JFrame {
                 pokemonBattle();
             }
         });
-        ButtonInterfaceChangePokemonPlayer2.getPokemon1team().addActionListener(this::changeLifePokemonInBattlePlayer2);
-        ButtonInterfaceChangePokemonPlayer2.getPokemon2team().addActionListener(this::changeLifePokemonInBattlePlayer2);
         ButtonInterfaceChangePokemonPlayer2.getPokemon3team().addActionListener(this::changeLifePokemonInBattlePlayer2);
+        ButtonInterfaceChangePokemonPlayer2.getPokemon3team().addActionListener(this::putInformationAreaTextBattlePlayer2);
 
 
     }
@@ -816,6 +871,76 @@ public class Battle extends JFrame {
         }
     }
 
+    /**
+     * metodo para escribir en el textarea de la batalla cuando se realiza una accion del jugador 1
+     * @param e el objeto de tipo Action Event
+     */
+    public void putInformationAreaTextBattlePlayer1(ActionEvent e) {
+        /**
+         * si el jugador pulsa del ataque 1, se mete en la condicion y escribe
+         */
+        if (e.getSource() == ButtonInterfaceAttacks.getAttack1Player1()){
+           TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()
+                   + " ha usado " + MethodsTextAreaBattlePlayer1.getNameAttack1PokemonPLayer1() +
+                   " contra " + MethodsTextAreaBattlePlayer1.KnowTheNameOfTheOpposingPokemon() +
+                   " ha sido " + MethosTargetType.getResultOfAttacksBothPlayer(MethodsTextAreaBattlePlayer1.getTypeAttack1PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()
+                   ), MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2()));
+        }
+        /**
+         * si el jugador pulsa del ataque 2, se mete en la condicion y escribe
+         */
+        else if(e.getSource() == ButtonInterfaceAttacks.getAttack2PLayer1()){
+            TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()
+                    + " ha usado " + MethodsTextAreaBattlePlayer1.getNameAttack2PokemonPLayer1() +
+                    " contra " + MethodsTextAreaBattlePlayer1.KnowTheNameOfTheOpposingPokemon() +
+                    " ha sido " + MethosTargetType.getResultOfAttacksBothPlayer(MethodsTextAreaBattlePlayer1.getTypeAttack2PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()
+            ), MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2()));
+        }
+        /**
+         * si el jugador pulsa del ataque 3, se mete en la condicion y escribe
+         */
+        else if(e.getSource() == ButtonInterfaceAttacks.getAttack3Player1()){
+            TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()
+                    + " ha usado " + MethodsTextAreaBattlePlayer1.getNameAttack3PokemonPLayer1() +
+                    " contra " + MethodsTextAreaBattlePlayer1.KnowTheNameOfTheOpposingPokemon() +
+                    " ha sido " + MethosTargetType.getResultOfAttacksBothPlayer(MethodsTextAreaBattlePlayer1.getTypeAttack3PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()
+            ), MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2()));
+        }
+        /**
+         * si el jugador pulsa del ataque 4, se mete en la condicion y escribe
+         */
+        else if(e.getSource() == ButtonInterfaceAttacks.getAttack4Player1()){
+            TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()
+                    + " ha usado " + MethodsTextAreaBattlePlayer1.getNameAttack4PokemonPLayer1() +
+                    " contra " + MethodsTextAreaBattlePlayer1.KnowTheNameOfTheOpposingPokemon() +
+                    " ha sido " + MethosTargetType.getResultOfAttacksBothPlayer(MethodsTextAreaBattlePlayer1.getTypeAttack4PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()
+            ), MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2()));
+        }
+        /**
+         * si el jugador pulsa del cambio 1, se mete en la condicion y escribe
+         */
+        else if(e.getSource() == ButtonInterfaceChangePokemonPlayer1.getPokemon1team()){
+            TextAreaPanelBattle.getInformationBattle().setText("El jugador " + InformationPanelPlayer1Luck.getAliasTextPlayer1().getText() +
+                    " ha hecho un cambio de pokemon, sale al campo de batalla " + MethodsTextAreaBattlePlayer1.getNamePokemon1ToChangePLayer1());
+        }
+        /**
+         * si el jugador pulsa del cambio 2, se mete en la condicion y escribe
+         */
+        else if(e.getSource() == ButtonInterfaceChangePokemonPlayer1.getPokemon2team()){
+            TextAreaPanelBattle.getInformationBattle().setText("El jugador " + InformationPanelPlayer1Luck.getAliasTextPlayer1().getText() +
+                    " ha hecho un cambio de pokemon, sale al campo de batalla " + MethodsTextAreaBattlePlayer1.getNamePokemon2ToChangePLayer1());
+        }
+        /**
+         * si el jugador pulsa del cambio 3, se mete en la condicion y escribe
+         */
+        else if(e.getSource() == ButtonInterfaceChangePokemonPlayer1.getPokemon3team()){
+            TextAreaPanelBattle.getInformationBattle().setText("El jugador " + InformationPanelPlayer1Luck.getAliasTextPlayer1().getText() +
+                    " ha hecho un cambio de pokemon, sale al campo de batalla " + MethodsTextAreaBattlePlayer1.getNamePokemon3ToChangePLayer1());
+        }
+
+    }
+
+
 
     //---------------------------metodos para cambios de paneles del jugador 2-----------------------------------//
 
@@ -1149,6 +1274,75 @@ public class Battle extends JFrame {
 
         }
     }
+    /**
+     * metodo para escribir en el textarea de la batalla cuando se realiza una accion del jugador 2
+     * @param e el objeto de tipo Action Event
+     */
+    public void putInformationAreaTextBattlePlayer2(ActionEvent e) {
+        /**
+         * si el jugador pulsa del ataque 1, se mete en la condicion y escribe
+         */
+        if (e.getSource() == ButtonInterfaceAttacks.getAttack1Player2()){
+            TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()
+                    + " ha usado " + MethodsTextAreaBattlePlayer2.getNameAttack1PokemonPLayer2() +
+                    " contra " + MethodsTextAreaBattlePlayer2.KnowTheNameOfTheOpposingPokemon() +
+                    " ha sido " + MethosTargetType.getResultOfAttacksBothPlayer(MethodsTextAreaBattlePlayer2.getTypeAttack1PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()
+            ), MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1()));
+        }
+        /**
+         * si el jugador pulsa del ataque 2, se mete en la condicion y escribe
+         */
+        else if(e.getSource() == ButtonInterfaceAttacks.getAttack2PLayer2()){
+            TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()
+                    + " ha usado " + MethodsTextAreaBattlePlayer2.getNameAttack2PokemonPLayer2() +
+                    " contra " + MethodsTextAreaBattlePlayer2.KnowTheNameOfTheOpposingPokemon() +
+                    " ha sido " + MethosTargetType.getResultOfAttacksBothPlayer(MethodsTextAreaBattlePlayer2.getTypeAttack2PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()
+            ), MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1()));
+        }
+        /**
+         * si el jugador pulsa del ataque 3, se mete en la condicion y escribe
+         */
+        else if(e.getSource() == ButtonInterfaceAttacks.getAttack3Player2()){
+            TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()
+                    + " ha usado " + MethodsTextAreaBattlePlayer2.getNameAttack3PokemonPLayer2() +
+                    " contra " + MethodsTextAreaBattlePlayer2.KnowTheNameOfTheOpposingPokemon() +
+                    " ha sido " + MethosTargetType.getResultOfAttacksBothPlayer(MethodsTextAreaBattlePlayer2.getTypeAttack3PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()
+            ), MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1()));
+        }
+        /**
+         * si el jugador pulsa del ataque 4, se mete en la condicion y escribe
+         */
+        else if(e.getSource() == ButtonInterfaceAttacks.getAttack4Player2()){
+            TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()
+                    + " ha usado " + MethodsTextAreaBattlePlayer2.getNameAttack4PokemonPLayer2() +
+                    " contra " + MethodsTextAreaBattlePlayer2.KnowTheNameOfTheOpposingPokemon() +
+                    " ha sido " + MethosTargetType.getResultOfAttacksBothPlayer(MethodsTextAreaBattlePlayer2.getTypeAttack4PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()
+            ), MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1()));
+        }
+        /**
+         * si el jugador pulsa del cambio 1, se mete en la condicion y escribe
+         */
+        else if(e.getSource() == ButtonInterfaceChangePokemonPlayer2.getPokemon1team()){
+            TextAreaPanelBattle.getInformationBattle().setText("El jugador " + InformationPanelPlayer2Luck.getAliasTextPlayer2().getText() +
+                    " ha hecho un cambio de pokemon, sale al campo de batalla " + MethodsTextAreaBattlePlayer2.getNamePokemon1ToChangePLayer2());
+        }
+        /**
+         * si el jugador pulsa del cambio 2, se mete en la condicion y escribe
+         */
+        else if(e.getSource() == ButtonInterfaceChangePokemonPlayer2.getPokemon2team()){
+            TextAreaPanelBattle.getInformationBattle().setText("El jugador " + InformationPanelPlayer2Luck.getAliasTextPlayer2().getText() +
+                    " ha hecho un cambio de pokemon, sale al campo de batalla " + MethodsTextAreaBattlePlayer2.getNamePokemon2ToChangePLayer2());
+        }
+        /**
+         * si el jugador pulsa del cambio 3, se mete en la condicion y escribe
+         */
+        else if(e.getSource() == ButtonInterfaceChangePokemonPlayer2.getPokemon3team()){
+            TextAreaPanelBattle.getInformationBattle().setText("El jugador " + InformationPanelPlayer2Luck.getAliasTextPlayer2().getText() +
+                    " ha hecho un cambio de pokemon, sale al campo de batalla " + MethodsTextAreaBattlePlayer2.getNamePokemon3ToChangePLayer2());
+        }
+
+    }
+
 
     /**
      * getter y setter de los atributos de la clase

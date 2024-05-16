@@ -67,7 +67,7 @@ public class AccountCreate extends JFrame {
         /**
          * varibale de tipo imagen que tiene el path de la imagen de fondo
          */
-        Image backgroundImage = new ImageIcon("imagenes/fondosPreparacion.png").getImage();
+        Image backgroundImage = new ImageIcon("imagenes/backSeleccionPokemon.png").getImage();
 
         BackgroundMainMenuPanel backgroundPanel = new BackgroundMainMenuPanel(backgroundImage);
         backgroundPanel.setLayout(new BorderLayout());
