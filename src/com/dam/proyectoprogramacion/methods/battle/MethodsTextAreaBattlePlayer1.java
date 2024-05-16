@@ -12,7 +12,11 @@ import java.util.ArrayList;
 
 public class MethodsTextAreaBattlePlayer1 {
 
-
+public static final String SUPER_EFFECTIVE = "Súper eficaz";
+public static final String NEUTRAL = "Neutro";
+public static final String INEFFECTIVE = "Poco eficaz";
+public static final String NULL = "No ha surtido efecto";
+private static String resultOfAttacksPlayer1;
 
 
 
@@ -401,4 +405,16 @@ public class MethodsTextAreaBattlePlayer1 {
         return type;
     }
 
+    public static String getResultOfAttack1PokemonInBattlePlayer1(String type, String namePokemonRival){
+
+
+    }
+
+    public static String getResultOfAttacksPlayer1() {
+        return resultOfAttacksPlayer1;
+    }
+
+    public static void setResultOfAttacksPlayer1(String resultOfAttacksPlayer1) {
+        MethodsTextAreaBattlePlayer1.resultOfAttacksPlayer1 = resultOfAttacksPlayer1;
+    }
 }
