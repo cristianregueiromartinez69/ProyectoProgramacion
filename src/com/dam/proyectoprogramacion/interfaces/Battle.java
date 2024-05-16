@@ -832,8 +832,8 @@ public class Battle extends JFrame {
     }
     public void putInformationAreaTextBatlle(ActionEvent e) {
         if (e.getSource() == ButtonInterfaceAttacks.getAttack1Player1()){
-            System.out.println(MethodsTextAreaBattle.getNamePokemon1PLayer1()
-                    + " ha usado " + MethodsTextAreaBattle.getNameAttack1PokemonPLayer1());
+           TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattle.getNamePokemon1PLayer1()
+                   + " ha usado " + MethodsTextAreaBattle.getNameAttack1PokemonPLayer1());
         }
     }
 
