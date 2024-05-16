@@ -1,9 +1,6 @@
 package com.dam.proyectoprogramacion.panels.selectionpokemon;
 
-import com.dam.proyectoprogramacion.methods.accountcreate.MethodsInterfaceAccountCreate;
 import com.dam.proyectoprogramacion.methods.luck.MethodsInterfaceLuck;
-import com.dam.proyectoprogramacion.methods.accountcreate.MethodsLogicalAccountCreate;
-import com.dam.proyectoprogramacion.methods.selectionpokemon.MethosInterfaceSelectionPokemon;
 
 import javax.swing.*;
 
