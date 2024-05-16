@@ -22,21 +22,6 @@ public class Atacks {
     }
 
     /**
-     * Creación de la tabla de ataques pokemon en la cual se van a registrar todos los ataques de los pokemon
-     */
-
-    public void CrearTabla() {
-
-        try (Statement stmt = con.createStatement()){
-            String sql = String.join("\n", "CREATE TABLE IF NOT EXISTS  Atacks (", "Name VARCHAR(15) NOT NULL, PRIMARY KEY", "Type VARCHAR(10) NOT NULL, ", "Power INT NOT NULL, ", "PP INT NOT NULL, ", "Precission FLOAT NOT NULL, ","FOREIGN KEY (Name), ", "REFERENCES Pokemon(Atacks);" );
-            stmt.executeUpdate(sql);
-            JOptionPane.showMessageDialog(null, "Tabla de Ataques registrado con exito");
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null,"Error al crear la tabla");
-        }
-    }
-
-    /**
      * Metodo en el que se va a introducir todos los datos de cada uno de los ataque los cuales se van a introducir
      * @param Name variable principal con la cual se va a identificar cada ataque
      * @param Type tipo de cada ataque

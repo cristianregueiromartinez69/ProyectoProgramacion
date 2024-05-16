@@ -11,10 +11,7 @@ public class Conexion {
     private Connection con;
     private String usuario = "root";
     private String contraseña = "debian";
-    private String bd = "datosPokemon";
-    private String ip = "localhost";
-    private String port = "3306";
-    private String url = "jdbc:mysql://" + ip + ":" + port + "/" + bd + "";
+    private String url = "jdbc:postgresql://localhost:5432/postgres;";
 
 
     /**
@@ -32,19 +29,6 @@ public class Conexion {
         return con;
     }
 
-    /**
-     * Metodo en el que se va a crear la tabla pokemon con los datos Nombre, Tipo1, Tipo2, Nivel, Sexo, Velocidad, Vida. Tamaño, Peso y ataques
-     */
-    public void CrearTabla() {
-
-        try (Statement stmt = con.createStatement()){
-                String sql = String.join("\n", "CREATE TABLE IF NOT EXISTS  Pokemon (", "Name VARCHAR(12) NOT NULL, PRIMARY KEY", "Type1 VARCHAR(10) NOT NULL, ","Type2 VARCHAR(10),", "Level INT NOT NULL, ", "Sex VARCHAR(7) NOT NULL, ", "Speed INT NOT NULL, ", "Lyfe INT NOT NULL, ", "Syze FLOAT NOT NULL, ", "Weight FLOAT NOT NULL, ", "Attacks VARCHAR(20) NOT NULL, ");
-                stmt.executeUpdate(sql);
-                JOptionPane.showMessageDialog(null, "Tabla de Pokemon registrado con exito");
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null,"Error al crear la tabla");
-        }
-    }
 
     /**
      * Metodo que es utilizado para insertar cualquier nuevo pokemon en la tabla pokemon
@@ -60,7 +44,7 @@ public class Conexion {
      * @param Atacks Variable ataque el cual va a servir para identificar los ataques
      */
     public void InsertarPokemon(String Name, String Type1,String Type2, Integer Level, Integer Life, String Sex, Integer Speed, Float Syze, Float Weight, String Atacks) {
-        String sql = "INSERT INTO Pokemon (Name, Type1,,Type2 Level, Life, Sex, Speed. Syze, Weight, Attacks) VALUES (?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO Pokemon (Name, Type1,Type2, Level, Life, Sex, Speed, Syze, Weight, Attacks) VALUES (?,?,?,?,?,?,?,?,?,?)";
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setString(1,Name);
             pstmt.setString(2,Type1);
