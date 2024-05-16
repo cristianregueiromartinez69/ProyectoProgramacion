@@ -863,7 +863,9 @@ public class Battle extends JFrame {
         else if(e.getSource() == ButtonInterfaceAttacks.getAttack2PLayer1()){
             TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()
                     + " ha usado " + MethodsTextAreaBattlePlayer1.getNameAttack2PokemonPLayer1() +
-                    " contra " + MethodsTextAreaBattlePlayer1.KnowTheNameOfTheOpposingPokemon());
+                    " contra " + MethodsTextAreaBattlePlayer1.KnowTheNameOfTheOpposingPokemon() +
+                    " ha sido " + MethosTargetType.getResultOfAttacksBothPlayer(MethodsTextAreaBattlePlayer1.getTypeAttack2PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()
+            ), MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2()));
         }
         /**
          * si el jugador pulsa del ataque 3, se mete en la condicion y escribe
@@ -871,7 +873,9 @@ public class Battle extends JFrame {
         else if(e.getSource() == ButtonInterfaceAttacks.getAttack3Player1()){
             TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()
                     + " ha usado " + MethodsTextAreaBattlePlayer1.getNameAttack3PokemonPLayer1() +
-                    " contra " + MethodsTextAreaBattlePlayer1.KnowTheNameOfTheOpposingPokemon());
+                    " contra " + MethodsTextAreaBattlePlayer1.KnowTheNameOfTheOpposingPokemon() +
+                    " ha sido " + MethosTargetType.getResultOfAttacksBothPlayer(MethodsTextAreaBattlePlayer1.getTypeAttack3PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()
+            ), MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2()));
         }
         /**
          * si el jugador pulsa del ataque 4, se mete en la condicion y escribe
@@ -879,7 +883,9 @@ public class Battle extends JFrame {
         else if(e.getSource() == ButtonInterfaceAttacks.getAttack4Player1()){
             TextAreaPanelBattle.getInformationBattle().setText(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()
                     + " ha usado " + MethodsTextAreaBattlePlayer1.getNameAttack4PokemonPLayer1() +
-                    " contra " + MethodsTextAreaBattlePlayer1.KnowTheNameOfTheOpposingPokemon());
+                    " contra " + MethodsTextAreaBattlePlayer1.KnowTheNameOfTheOpposingPokemon() +
+                    " ha sido " + MethosTargetType.getResultOfAttacksBothPlayer(MethodsTextAreaBattlePlayer1.getTypeAttack4PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()
+            ), MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2()));
         }
         /**
          * si el jugador pulsa del cambio 1, se mete en la condicion y escribe
