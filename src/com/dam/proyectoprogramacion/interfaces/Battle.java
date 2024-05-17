@@ -300,7 +300,7 @@ public class Battle extends JFrame {
         });
         /**
          * actionListener para cambiar un pokemon por otro
-         * al cambiar se actualizan las características y todo
+         * al cambiar se actualizan las características y all
          */
         ButtonInterfaceChangePokemonPlayer1.getPokemon1team().addActionListener(new ActionListener() {
             @Override
@@ -734,6 +734,7 @@ public class Battle extends JFrame {
      * @param e objeto de tipo actionevent
      */
     public void changeLifePokemonInBattlePlayer1(ActionEvent e) {
+
         /**
          * si el jugador pulsa el boton 1 de cambio, entra en la condicion
          */
@@ -772,6 +773,7 @@ public class Battle extends JFrame {
      * @param e el objeto de tipo Action Event
      */
     public void putInformationAreaTextBattlePlayer1(ActionEvent e) {
+
         /**
          * si el jugador pulsa del ataque 1, se mete en la condicion y escribe
          */
@@ -818,6 +820,7 @@ public class Battle extends JFrame {
         else if(e.getSource() == ButtonInterfaceChangePokemonPlayer1.getPokemon1team()){
             TextAreaPanelBattle.getInformationBattle().setText("El jugador " + InformationPanelPlayer1Luck.getAliasTextPlayer1().getText() +
                     " ha hecho un cambio de pokemon, sale al campo de batalla " + MethodsTextAreaBattlePlayer1.getNamePokemon1ToChangePLayer1());
+
         }
         /**
          * si el jugador pulsa del cambio 2, se mete en la condicion y escribe
@@ -1136,6 +1139,9 @@ public class Battle extends JFrame {
 
     }
 
+    /**
+     * metodo para limpiar todos los paneles de la interfaz
+     */
     private static void clearContentPanel(){
         contentPanel.removeAll();
         globalPanelPLayer1.removeAll();
@@ -1150,6 +1156,10 @@ public class Battle extends JFrame {
         lifePanelPokemon.removeAll();
         textAreaPanel.removeAll();
     }
+
+    /**
+     * metodo para repintar y validar todos los paneles de la interfaz
+     */
     private static void revalidateContentPanel(){
         contentPanel.repaint();
         contentPanel.revalidate();
@@ -1176,6 +1186,12 @@ public class Battle extends JFrame {
         textAreaPanel.repaint();
         textAreaPanel.revalidate();
     }
+
+    /**
+     * metodo para volver a añadir todos los paneles de la interfaz
+     * @param auxPanel el panel central
+     * @return el nuevo panel central
+     */
     private static JPanel makeAgainContentPanel(JPanel auxPanel){
         auxPanel = new JPanel();
         auxPanel = makeContentPanel();
