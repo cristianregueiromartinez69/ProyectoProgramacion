@@ -23,7 +23,8 @@ public class MainMenu extends JFrame {
         /**
          * metodo para llamar a la musica que sonará en el menu principal
          */
-        MusicMainMenu.music();
+
+        MusicIntroGame.music();
         /**
          * defenimos características de la interfaz
          */

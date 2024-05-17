@@ -62,6 +62,7 @@ public class MethodsBattlePlayer1 {
     }
 
 
+
 //---------------------------------xAtaque numero 1 ---------------------------//
 
     /**
@@ -2995,9 +2996,157 @@ public class MethodsBattlePlayer1 {
     }
 
     /**
-     * metodos para obtener el texto del boton de los pokemons
-     * @return el texto de los pokemons
+     * metodo que recorre un hashmap y busca el primer pokemon escogido por el jugador 1
+     * despues devuelve la imagen del pokemon
+     * @param players el hashmap de los jugadores
+     * @return el path con la imagen del pokemon seleccionado
      */
+    public static String putImagePokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players) {
+
+        String pathImagePokemon = "";
+        String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+        /**
+         * for para recorrer el hashmap de los jugadores
+         */
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+            /**
+             * si encuentra la clave, entra en la condicion
+             */
+            if (key.equals(aliasPlayer1)) {
+                /**
+                 * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
+                 */
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                if (!pokemons.isEmpty()) {
+                    /**
+                     * hacemos un objeto de pokemons y decimos que es igual al primer elemento de la lista de pokemons
+                     */
+                    PokemonProperties firstPokemon = (PokemonProperties) pokemons.get(0);
+                    String name = firstPokemon.getName().toLowerCase();
+                    pathImagePokemon = "imagenes/" + name + "SP.png";
+                    break;
+
+                } else {
+                    /**
+                     * si no hay nada, devuelve null
+                     */
+                    pathImagePokemon = null;
+                }
+
+            }
+        }
+        return pathImagePokemon;
+    }
+
+    /**
+     * metodo para establecer la nueva imagen del pokemon en batalla al cambio
+     * @return la nueva imagen
+     */
+
+    public static String newImagePokemonInBattle1Player1() {
+        String pathIcon = "";
+        /**
+         * recorremos el array de objetos pokemons
+         */
+        for (Object obj : MethosInterfaceSelectionPokemon.getPokemonsPLayer1()) {
+            /**
+             * si es una instancia de los pokemons, se mete en la condicion
+             */
+            if (obj instanceof PokemonProperties) {
+                PokemonProperties pokemon1 = (PokemonProperties) obj;
+                /**
+                 * si el nombre es igual al nombre del boton del pokemon se mete en la condicion
+                 */
+                if (pokemon1.getName().equalsIgnoreCase(getNameOfThePokemonPlayer1Pokemon1())) {
+
+                    /**
+                     * nuevo path
+                     */
+                    pathIcon = "imagenes/" + getNameOfThePokemonPlayer1Pokemon1().toLowerCase() + "SP.png";
+                }
+
+            }
+
+
+        }
+        return pathIcon;
+    }
+
+
+    /**
+     * metodo para establecer la nueva imagen del pokemon en batalla al cambio
+     * @return la nueva imagen
+     */
+
+    public static String newImagePokemonInBattle2Player1() {
+        String pathIcon = "";
+        /**
+         * recorremos el array de objetos pokemons
+         */
+        for (Object obj : MethosInterfaceSelectionPokemon.getPokemonsPLayer1()) {
+            /**
+             * si es una instancia de los pokemons, se mete en la condicion
+             */
+            if (obj instanceof PokemonProperties) {
+                PokemonProperties pokemon1 = (PokemonProperties) obj;
+                /**
+                 * si el nombre es igual al nombre del boton del pokemon se mete en la condicion
+                 */
+                if (pokemon1.getName().equalsIgnoreCase(getNameOfThePokemonPlayer1Pokemon1())) {
+
+                    /**
+                     * nuevo path
+                     */
+                    pathIcon = "imagenes/" + getNameOfThePokemonPlayer1Pokemon2().toLowerCase() + "SP.png";
+                }
+
+            }
+
+
+        }
+        return pathIcon;
+    }
+
+
+    /**
+     * metodo para establecer la nueva imagen del pokemon en batalla al cambio
+     * @return la nueva imagen
+     */
+
+    public static String newImagePokemonInBattle3Player1() {
+        String pathIcon = "";
+        /**
+         * recorremos el array de objetos pokemons
+         */
+        for (Object obj : MethosInterfaceSelectionPokemon.getPokemonsPLayer1()) {
+            /**
+             * si es una instancia de los pokemons, se mete en la condicion
+             */
+            if (obj instanceof PokemonProperties) {
+                PokemonProperties pokemon1 = (PokemonProperties) obj;
+                /**
+                 * si el nombre es igual al nombre del boton del pokemon se mete en la condicion
+                 */
+                if (pokemon1.getName().equalsIgnoreCase(getNameOfThePokemonPlayer1Pokemon1())) {
+
+                    /**
+                     * nuevo path
+                     */
+                    pathIcon = "imagenes/" + getNameOfThePokemonPlayer1Pokemon3().toLowerCase() + "SP.png";
+                }
+
+            }
+
+
+        }
+        return pathIcon;
+    }
+
+
+    /**
+         * metodos para obtener el texto del boton de los pokemons
+         * @return el texto de los pokemons
+         */
     private static String getNameOfThePokemonPlayer1Pokemon1 () {
 
         return ButtonInterfaceChangePokemonPlayer1.getPokemon1team().getText();
