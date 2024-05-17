@@ -57,10 +57,10 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
                 drampa.setSex(rs.getString("Sex"));
                 drampa.setSpeed(Integer.valueOf(rs.getString("Speed")));
                 AttacksPokemons[] drampaAttacks = {
-                        new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.valueOf(ra.getString("Power")), Integer.valueOf(ra.getString("Precission"))),
-                        new AttacksPokemons("Psiquico", "Paranormal", 85, 100),
-                        new AttacksPokemons("Fuego", "Lanzallamas", 90, 100),
-                        new AttacksPokemons("Normal", "Vozarron", 90, 100)
+                        new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                        new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                        new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                        new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
                 };
                 drampa.setAttacks(drampaAttacks);
                 drampa.setSize(Float.valueOf(rs.getString("Syze")));
@@ -97,10 +97,10 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
             empoleon.setSex(rs.getString("Sex"));
             empoleon.setSpeed(Integer.valueOf(rs.getString("Speed")));
             AttacksPokemons[] empoleonAttacks = {
-                    new AttacksPokemons("Roca", "Trampa rocas", 0, 100),
-                    new AttacksPokemons("Agua", "Surf", 90, 100),
-                    new AttacksPokemons("Hielo", "Rayo hielo", 90, 100),
-                    new AttacksPokemons("Volador", "Respiro", 0, 100)
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission")))
             };
             empoleon.setAttacks(empoleonAttacks);
             empoleon.setSize(Float.valueOf(rs.getString("Syze")));
@@ -136,10 +136,10 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
             garchomp.setSex(rs.getString("Sex"));
             garchomp.setSpeed(Integer.valueOf(rs.getString("Speed")));
             AttacksPokemons[] garchompAttacks = {
-                    new AttacksPokemons("Dragon", "Garra Dragon", 80, 100),
-                    new AttacksPokemons("Tierra", "Terremoto", 100, 100),
-                    new AttacksPokemons("Acero", "Cabeza de hierro", 80, 100),
-                    new AttacksPokemons("Normal", "Danza espada", 0, 100)
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission")))
             };
             garchomp.setAttacks(garchompAttacks);
             garchomp.setSize(Float.valueOf(rs.getString("Syze")));
@@ -175,10 +175,10 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
             gengar.setSex(rs.getString("Sex"));
             gengar.setSpeed(Integer.valueOf(rs.getString("Speed")));
             AttacksPokemons[] gengarAttacks = {
-                    new AttacksPokemons("Fantasma", "Bola sombra", 80, 100),
-                    new AttacksPokemons("Veneno", "Onda toxica", 95, 100),
-                    new AttacksPokemons("Lucha", "Onda certera", 120, 70),
-                    new AttacksPokemons("Electrico", "Rayo", 90, 100)
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission")))
             };
             gengar.setAttacks(gengarAttacks);
             gengar.setSize(Float.valueOf(rs.getString("Syze")));
@@ -215,10 +215,10 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
             infernape.setSex(rs.getString("Sex"));
             infernape.setSpeed(Integer.valueOf(rs.getString("Speed")));
             AttacksPokemons[] infernapeAttacks = {
-                    new AttacksPokemons("Fuego", "Envite igneo", 120, 100),
-                    new AttacksPokemons("Lucha", "A bocajarro", 120, 100),
-                    new AttacksPokemons("Bicho", "Ida y vuelta", 70, 100),
-                    new AttacksPokemons("Electrico", "Puño trueno", 75, 100)
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission")))
             };
             infernape.setAttacks(infernapeAttacks);
             infernape.setSize(Float.valueOf(rs.getString("Syze")));
@@ -254,10 +254,10 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
             lucario.setSex(rs.getString("Sex"));
             lucario.setSpeed(Integer.valueOf(rs.getString("Speed")));
             AttacksPokemons[] lucarioAttacks = {
-                    new AttacksPokemons("Normal", "Danza espada", 0, 100),
-                    new AttacksPokemons("Lucha", "A bocajarro", 120, 100),
-                    new AttacksPokemons("Acero", "Puño meteoro", 90, 90),
-                    new AttacksPokemons("Normal", "Velocidad extrema", 80, 100)
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission")))
             };
             lucario.setAttacks(lucarioAttacks);
             lucario.setSize(Float.valueOf(rs.getString("Syze")));
@@ -293,10 +293,10 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
             luxray.setSex(rs.getString("Sex"));
             luxray.setSpeed(Integer.valueOf(rs.getString("Speed")));
             AttacksPokemons[] luxrayAttacks = {
-                    new AttacksPokemons("Electrico", "Voltio cruel", 90, 100),
-                    new AttacksPokemons("Electrico", "Voltiocambio", 70, 100),
-                    new AttacksPokemons("Planta", "abrecaminos", 50, 100),
-                    new AttacksPokemons("Siniestro", "Triturar", 80, 100)
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission")))
             };
             luxray.setAttacks(luxrayAttacks);
             luxray.setSize(Float.valueOf(rs.getString("Syze")));
@@ -332,10 +332,10 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
             marshadow.setSex(rs.getString("Sex"));
             marshadow.setSpeed(Integer.valueOf(rs.getString("Speed")));
             AttacksPokemons[] marshadowAttacks = {
-                    new AttacksPokemons("Fantasma", "Roba sombra", 90, 100),
-                    new AttacksPokemons("Hielo", "Puño hielo", 75, 100),
-                    new AttacksPokemons("Lucha", "A bocajarro", 120, 100),
-                    new AttacksPokemons("Fantasma", "Sombre vil", 40, 100)
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission")))
             };
             marshadow.setAttacks(marshadowAttacks);
             marshadow.setSize(Float.valueOf(rs.getString("Syze")));
@@ -371,10 +371,10 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
             milotic.setSex(rs.getString("Sex"));
             milotic.setSpeed(Integer.valueOf(rs.getString("Speed")));
             AttacksPokemons[] miloticAttacks = {
-                    new AttacksPokemons("Agua", "Escaldar", 80, 100),
-                    new AttacksPokemons("Hielo", "Niebla", 0, 100),
-                    new AttacksPokemons("Veneno", "Toxico", 0, 100),
-                    new AttacksPokemons("Normal", "Recuperacion", 0, 100)
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission")))
             };
             milotic.setAttacks(miloticAttacks);
             milotic.setSize(Float.valueOf(rs.getString("Syze")));
@@ -411,10 +411,10 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
             snorlax.setSex(rs.getString("Sex"));
             snorlax.setSpeed(Integer.valueOf(rs.getString("Speed")));
             AttacksPokemons[] snorlaxAttacks = {
-                    new AttacksPokemons("Normal", "Tambor", 0, 100),
-                    new AttacksPokemons("Normal", "Golpe Cuerpo", 85, 100),
-                    new AttacksPokemons("Psiquico", "Descanso", 0, 100),
-                    new AttacksPokemons("Psiquico", "Cabezazo zen", 80, 90)
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission")))
             };
             snorlax.setAttacks(snorlaxAttacks);
             snorlax.setSize(Float.valueOf(rs.getString("Syze")));
@@ -450,10 +450,10 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
             tinkaton.setSex(rs.getString("Sex"));
             tinkaton.setSpeed(Integer.valueOf(rs.getString("Speed")));
             AttacksPokemons[] tinkatonAttacks = {
-                    new AttacksPokemons("Acero", "Martillo colosal", 160, 100),
-                    new AttacksPokemons("Siniestro", "Desarme", 65, 100),
-                    new AttacksPokemons("Hielo", "Martillo de hielo", 100, 90),
-                    new AttacksPokemons("Normal", "Sorpresa", 40, 100)
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission")))
             };
             tinkaton.setAttacks(tinkatonAttacks);
             tinkaton.setSize(Float.valueOf(rs.getString("Syze")));
@@ -489,10 +489,10 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
             tyranitar.setSex(rs.getString("Sex"));
             tyranitar.setSpeed(Integer.valueOf(rs.getString("Speed")));
             AttacksPokemons[] tyranitarAttacks = {
-                    new AttacksPokemons("Roca", "Roca afilada", 100, 80),
-                    new AttacksPokemons("Siniestro", "Desarme", 65, 100),
-                    new AttacksPokemons("Electrico", "Onda trueno", 0, 90),
-                    new AttacksPokemons("Tierra", "Terremoto", 100, 100)
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission"))),
+                    new AttacksPokemons(ra.getString("Type"),ra.getString("Namea"),Integer.parseInt(ra.getString("Power")), Integer.parseInt(ra.getString("Precission")))
             };
             tyranitar.setAttacks(tyranitarAttacks);
             tyranitar.setSize(Float.valueOf(rs.getString("Syze")));
