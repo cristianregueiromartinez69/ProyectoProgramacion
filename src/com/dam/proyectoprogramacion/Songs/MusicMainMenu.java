@@ -30,6 +30,7 @@ public class MusicMainMenu {
              */
             Clip clip = (Clip) AudioSystem.getLine(info);
             clip.open(audioStream);
+            clip.loop(Clip.LOOP_CONTINUOUSLY);
 
             /**
              * / Reproducir el audio en bucle infinito
