@@ -37,12 +37,12 @@ public class PanelImageBattlePokemon extends JPanel {
                 g.drawImage(battleScenario, 0, 0, getWidth(), getHeight(), this);
 
                 // Dibujar Pokémon del jugador 1
-                int player1X = getWidth() / 4 - pokemonPlayer1.getWidth(null) / 2;
+                int player1X = getWidth() / 3 - pokemonPlayer1.getWidth(null) / 2;
                 int player1Y = getHeight() - pokemonPlayer1.getHeight(null) - offsetPlayer1Y;
                 g.drawImage(pokemonPlayer1, player1X, player1Y, this);
 
                 // Dibujar Pokémon del jugador 2
-                int player2X = 3 * getWidth() / 4 - pokemonPlayer2.getWidth(null) / 2;
+                int player2X = 2 * getWidth() / 3 - pokemonPlayer2.getWidth(null) / 2;
                 int player2Y = getHeight() - pokemonPlayer2.getHeight(null) - offsetPlayer2Y;
                 g.drawImage(pokemonPlayer2, player2X, player2Y, this);
             }
@@ -52,13 +52,7 @@ public class PanelImageBattlePokemon extends JPanel {
         add(backgroundPanel, BorderLayout.CENTER);
     }
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("Panel de Batalla Pokémon");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(new PanelImageBattlePokemon());
-        frame.pack();
-        frame.setVisible(true);
-    }
+
 
 
     /**
