@@ -1,6 +1,7 @@
 package com.dam.proyectoprogramacion.panels.battle.logicalbattle;
 
 import com.dam.proyectoprogramacion.methods.battle.DataNamesIconsColorsAttacksAndPokemonsPlayer1;
+import com.dam.proyectoprogramacion.methods.battle.DataNamesIconsColorsAttacksAndPokemonsPlayer2;
 
 import javax.swing.*;
 import java.awt.*;
@@ -32,7 +33,7 @@ public class PanelImageBattlePokemon extends JPanel {
         // Iniciar imágenes
         battleScenario = new ImageIcon("imagenes/batalla.jpg").getImage();
         pokemonPlayer1 = toBufferedImage(new ImageIcon(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getImagePokemonInBattlePlayer1()).getImage());
-        pokemonPlayer2 = toBufferedImage(new ImageIcon("imagenes/tinkatonSP.png").getImage());
+        pokemonPlayer2 = toBufferedImage(new ImageIcon(DataNamesIconsColorsAttacksAndPokemonsPlayer2.getImagePokemonInBattlePlayer2()).getImage());
 
         // Invertir horizontalmente las imágenes de los Pokémon
         pokemonPlayer1 = flipImageHorizontally(pokemonPlayer1);
