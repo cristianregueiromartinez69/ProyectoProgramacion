@@ -10,6 +10,7 @@ import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer1;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer2;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
 import com.dam.proyectoprogramacion.methods.battle.*;
+import com.dam.proyectoprogramacion.methods.selectionpokemon.MethosInterfaceSelectionPokemon;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.*;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer2.*;
 import com.dam.proyectoprogramacion.panels.battle.logicalbattle.PanelImageBattlePokemon;
@@ -317,6 +318,7 @@ public class Battle extends JFrame {
 
                 clearLifePanelPlayer1WhenPressButtonToChangePokemon();
                 pokemonBattle();
+                MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
             }
         });
         ButtonInterfaceChangePokemonPlayer1.getPokemon1team().addActionListener(this::changeLifePokemonInBattlePlayer1);
@@ -338,6 +340,8 @@ public class Battle extends JFrame {
 
                 clearLifePanelPlayer1WhenPressButtonToChangePokemon();
                 pokemonBattle();
+                MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
+
             }
         });
         ButtonInterfaceChangePokemonPlayer1.getPokemon2team().addActionListener(this::changeLifePokemonInBattlePlayer1);
@@ -360,6 +364,8 @@ public class Battle extends JFrame {
 
                 clearLifePanelPlayer1WhenPressButtonToChangePokemon();
                 pokemonBattle();
+                MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
+
             }
         });
         ButtonInterfaceChangePokemonPlayer1.getPokemon3team().addActionListener(this::changeLifePokemonInBattlePlayer1);
