@@ -479,6 +479,8 @@ public class Battle extends JFrame {
                  */
                 clearLifePanelPlayer2WhenPressButtonToChangePokemon();
                 pokemonBattle();
+                MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
+
             }
         });
         ButtonInterfaceChangePokemonPlayer2.getPokemon1team().addActionListener(this::changeLifePokemonInBattlePlayer2);
@@ -501,6 +503,8 @@ public class Battle extends JFrame {
                  */
                 clearLifePanelPlayer2WhenPressButtonToChangePokemon();
                 pokemonBattle();
+                MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
+
             }
         });
         ButtonInterfaceChangePokemonPlayer2.getPokemon2team().addActionListener(this::changeLifePokemonInBattlePlayer2);
@@ -522,6 +526,8 @@ public class Battle extends JFrame {
                  */
                 clearLifePanelPlayer2WhenPressButtonToChangePokemon();
                 pokemonBattle();
+                MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
+
             }
         });
         ButtonInterfaceChangePokemonPlayer2.getPokemon3team().addActionListener(this::changeLifePokemonInBattlePlayer2);
