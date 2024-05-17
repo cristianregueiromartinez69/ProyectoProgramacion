@@ -2997,7 +2997,7 @@ public class MethodsBattlePlayer1 {
 
     /**
      * metodo que recorre un hashmap y busca el primer pokemon escogido por el jugador 1
-     *
+     * despues devuelve la imagen del pokemon
      * @param players el hashmap de los jugadores
      * @return el path con la imagen del pokemon seleccionado
      */
@@ -3038,11 +3038,114 @@ public class MethodsBattlePlayer1 {
         return pathImagePokemon;
     }
 
+    /**
+     * metodo para establecer la nueva imagen del pokemon en batalla al cambio
+     * @return la nueva imagen
+     */
+
+    public static String newImagePokemonInBattle1Player1() {
+        String pathIcon = "";
+        /**
+         * recorremos el array de objetos pokemons
+         */
+        for (Object obj : MethosInterfaceSelectionPokemon.getPokemonsPLayer1()) {
+            /**
+             * si es una instancia de los pokemons, se mete en la condicion
+             */
+            if (obj instanceof PokemonProperties) {
+                PokemonProperties pokemon1 = (PokemonProperties) obj;
+                /**
+                 * si el nombre es igual al nombre del boton del pokemon se mete en la condicion
+                 */
+                if (pokemon1.getName().equalsIgnoreCase(getNameOfThePokemonPlayer1Pokemon1())) {
+
+                    /**
+                     * nuevo path
+                     */
+                    pathIcon = "imagenes/" + getNameOfThePokemonPlayer1Pokemon1().toLowerCase() + "SP.png";
+                }
+
+            }
+
+
+        }
+        return pathIcon;
+    }
+
 
     /**
-     * metodos para obtener el texto del boton de los pokemons
-     * @return el texto de los pokemons
+     * metodo para establecer la nueva imagen del pokemon en batalla al cambio
+     * @return la nueva imagen
      */
+
+    public static String newImagePokemonInBattle2Player1() {
+        String pathIcon = "";
+        /**
+         * recorremos el array de objetos pokemons
+         */
+        for (Object obj : MethosInterfaceSelectionPokemon.getPokemonsPLayer1()) {
+            /**
+             * si es una instancia de los pokemons, se mete en la condicion
+             */
+            if (obj instanceof PokemonProperties) {
+                PokemonProperties pokemon1 = (PokemonProperties) obj;
+                /**
+                 * si el nombre es igual al nombre del boton del pokemon se mete en la condicion
+                 */
+                if (pokemon1.getName().equalsIgnoreCase(getNameOfThePokemonPlayer1Pokemon1())) {
+
+                    /**
+                     * nuevo path
+                     */
+                    pathIcon = "imagenes/" + getNameOfThePokemonPlayer1Pokemon2().toLowerCase() + "SP.png";
+                }
+
+            }
+
+
+        }
+        return pathIcon;
+    }
+
+
+    /**
+     * metodo para establecer la nueva imagen del pokemon en batalla al cambio
+     * @return la nueva imagen
+     */
+
+    public static String newImagePokemonInBattle3Player1() {
+        String pathIcon = "";
+        /**
+         * recorremos el array de objetos pokemons
+         */
+        for (Object obj : MethosInterfaceSelectionPokemon.getPokemonsPLayer1()) {
+            /**
+             * si es una instancia de los pokemons, se mete en la condicion
+             */
+            if (obj instanceof PokemonProperties) {
+                PokemonProperties pokemon1 = (PokemonProperties) obj;
+                /**
+                 * si el nombre es igual al nombre del boton del pokemon se mete en la condicion
+                 */
+                if (pokemon1.getName().equalsIgnoreCase(getNameOfThePokemonPlayer1Pokemon1())) {
+
+                    /**
+                     * nuevo path
+                     */
+                    pathIcon = "imagenes/" + getNameOfThePokemonPlayer1Pokemon3().toLowerCase() + "SP.png";
+                }
+
+            }
+
+
+        }
+        return pathIcon;
+    }
+
+    /**
+         * metodos para obtener el texto del boton de los pokemons
+         * @return el texto de los pokemons
+         */
     private static String getNameOfThePokemonPlayer1Pokemon1 () {
 
         return ButtonInterfaceChangePokemonPlayer1.getPokemon1team().getText();
