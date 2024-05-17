@@ -73,8 +73,8 @@ public class Battle extends JFrame {
         /**
          * iniciamos un panel que será el alias y el logo del jugador 1 y lo hacemos igual a un panel de otra clase
          */
-        JPanel aliasLogoPlayer1 = new AliasAndLogoPlayer1();
-        globalPanelPLayer1.add(aliasLogoPlayer1);
+
+        globalPanelPLayer1.add(new AliasAndLogoPlayer1());
         /**
          * iniciamos un panel que serán los botones de cambio y ataque del jugador 1 y lo hacemos igual a un panel de otra clase
          */
@@ -131,8 +131,8 @@ public class Battle extends JFrame {
         /**
          * añadimos al panel global del jugador 2 el logo y alias
          */
-        JPanel aliasLogoPlayer2 = new AliasAndLogoPlayer2();
-        globalPanelPLayer2.add(aliasLogoPlayer2);
+
+        globalPanelPLayer2.add(new AliasAndLogoPlayer2());
 
         /**
          * añadimos al panel global del jugador 2 los ataques
@@ -583,6 +583,7 @@ public class Battle extends JFrame {
      * metodo para limpiar el panel entero al cambiar de pokemon
      */
     private static  void clearGlobalPanelPlayer1WhenPressButtonToChangePokemon1InChangePokemon(){
+       clearContentPanel();
         /**
          * establecemos la nueva imagen del pokemon
          */
@@ -616,38 +617,9 @@ public class Battle extends JFrame {
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack4(MethodsBattlePlayer1.newColor4Attack4Pokemon1Player1());
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack4(MethodsBattlePlayer1.newType4Attack4Pokemon1Player1());
 
+        contentPanel.add(makeAgainContentPanel(contentPanel));
 
-
-        /**
-         * limpiamos el panel de ataque y cambio
-         */
-        attacksChangesPokemon1Player1.removeAll();
-        attacksChangesPokemon1Player1.repaint();
-        attacksChangesPokemon1Player1.revalidate();
-
-        /**
-         * limpiamos el panel de ataques
-         */
-        attacksPanelPlayer1.removeAll();
-        attacksPanelPlayer1.repaint();
-        attacksPanelPlayer1.revalidate();
-
-        /**
-         * volvemos a añadir el panel de ataque y cambio
-         */
-        attacksChangesPokemon1Player1.add(new AttacksAndChangesPokemonPlayer1());
-        /**
-         * volvemos a añadir el panel de ataques
-         */
-        attacksPanelPlayer1.add(new AttacksPokemonPlayer1());
-        globalPanelPLayer1.add(attacksChangesPokemon1Player1);
-        globalPanelPLayer1.add(attacksPanelPlayer1);
-        contentPanel.add(globalPanelPLayer1, BorderLayout.WEST);
-
-
-
-        contentPanel.repaint();
-        contentPanel.revalidate();
+        revalidateContentPanel();
 
         changesPokemonsPLayer1.setVisible(false);
         attacksChangesPokemon1Player1.setVisible(true);
@@ -656,6 +628,7 @@ public class Battle extends JFrame {
      * metodo para limpiar el panel entero al cambiar de pokemon
      */
     private static  void clearGlobalPanelPlayer1WhenPressButtonToChangePokemon2InChangePokemon(){
+        clearContentPanel();
         /**
          * establecemos la nueva imagen del pokemon
          */
@@ -689,38 +662,10 @@ public class Battle extends JFrame {
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack4(MethodsBattlePlayer1.newColor4Attack4Pokemon2Player1());
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack4(MethodsBattlePlayer1.newType4Attack4Pokemon2Player1());
 
+        contentPanel.add(makeAgainContentPanel(contentPanel));
+        revalidateContentPanel();
 
 
-        /**
-         * limpiamos el panel de ataque y cambio
-         */
-        attacksChangesPokemon1Player1.removeAll();
-        attacksChangesPokemon1Player1.repaint();
-        attacksChangesPokemon1Player1.revalidate();
-
-        /**
-         * limpiamos el panel de ataques
-         */
-        attacksPanelPlayer1.removeAll();
-        attacksPanelPlayer1.repaint();
-        attacksPanelPlayer1.revalidate();
-
-        /**
-         * volvemos a añadir el panel de ataque y cambio
-         */
-        attacksChangesPokemon1Player1.add(new AttacksAndChangesPokemonPlayer1());
-        /**
-         * volvemos a añadir el panel de ataques
-         */
-        attacksPanelPlayer1.add(new AttacksPokemonPlayer1());
-        globalPanelPLayer1.add(attacksChangesPokemon1Player1);
-        globalPanelPLayer1.add(attacksPanelPlayer1);
-        contentPanel.add(globalPanelPLayer1, BorderLayout.WEST);
-
-
-
-        contentPanel.repaint();
-        contentPanel.revalidate();
 
         changesPokemonsPLayer1.setVisible(false);
         attacksChangesPokemon1Player1.setVisible(true);
@@ -729,6 +674,7 @@ public class Battle extends JFrame {
      * metodo para limpiar el panel entero al cambiar de pokemon
      */
     private static  void clearGlobalPanelPlayer1WhenPressButtonToChangePokemon3InChangePokemon(){
+       clearContentPanel();
         /**
          * establecemos la nueva imagen del pokemon
          */
@@ -763,37 +709,10 @@ public class Battle extends JFrame {
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack4(MethodsBattlePlayer1.newType4Attack4Pokemon3Player1());
 
 
-
-        /**
-         * limpiamos el panel de ataque y cambio
-         */
-        attacksChangesPokemon1Player1.removeAll();
-        attacksChangesPokemon1Player1.repaint();
-        attacksChangesPokemon1Player1.revalidate();
-
-        /**
-         * limpiamos el panel de ataques
-         */
-        attacksPanelPlayer1.removeAll();
-        attacksPanelPlayer1.repaint();
-        attacksPanelPlayer1.revalidate();
-
-        /**
-         * volvemos a añadir el panel de ataque y cambio
-         */
-        attacksChangesPokemon1Player1.add(new AttacksAndChangesPokemonPlayer1());
-        /**
-         * volvemos a añadir el panel de ataques
-         */
-        attacksPanelPlayer1.add(new AttacksPokemonPlayer1());
-        globalPanelPLayer1.add(attacksChangesPokemon1Player1);
-        globalPanelPLayer1.add(attacksPanelPlayer1);
-        contentPanel.add(globalPanelPLayer1, BorderLayout.WEST);
+        contentPanel.add(makeAgainContentPanel(contentPanel));
+        revalidateContentPanel();
 
 
-
-        contentPanel.repaint();
-        contentPanel.revalidate();
 
         changesPokemonsPLayer1.setVisible(false);
         attacksChangesPokemon1Player1.setVisible(true);
@@ -804,32 +723,9 @@ public class Battle extends JFrame {
      */
     private static  void clearLifePanelPlayer1WhenPressButtonToChangePokemon(){
 
-
-        /**
-         * limpiamos el panel de la vida
-         */
-        lifePanelPokemon.removeAll();
-        lifePanelPokemon.repaint();
-        lifePanelPokemon.revalidate();
-
-
-        /**
-         * lo instanciamos de nuevo con la clase del panel de la vida
-         */
-        lifePanelPokemon.add(new LifePokemonInBattlePlayer1());
-        lifePanelPokemon.add(new LifePokemonInBattlePlayer2());
-
-        /**
-         * lo añadimos al panel principal
-         */
-        contentPanel.add(lifePanelPokemon, BorderLayout.NORTH);
-
-
-        /**
-         * repintamos el panel central
-         */
-        contentPanel.repaint();
-        contentPanel.revalidate();
+        clearContentPanel();
+        contentPanel.add(makeAgainContentPanel(contentPanel));
+        revalidateContentPanel();
 
     }
 
@@ -988,6 +884,7 @@ public class Battle extends JFrame {
      * metodo para limpiar el panel entero al cambiar de pokemon
      */
     private static  void clearGlobalPanelPlayer2WhenPressButtonToChangePokemon1InChangePokemon(){
+        clearContentPanel();
         /**
          * establecemos la nueva imagen del pokemon
          */
@@ -1021,38 +918,10 @@ public class Battle extends JFrame {
         DataNamesIconsColorsAttacksAndPokemonsPlayer2.setColorBackgroundAttack4(MethodsBattlePlayer2.newColor4Attack4Pokemon1Player2());
         DataNamesIconsColorsAttacksAndPokemonsPlayer2.setPathIconAttack4(MethodsBattlePlayer2.newType4Attack4Pokemon1Player2());
 
+        contentPanel.add(makeAgainContentPanel(contentPanel));
+        revalidateContentPanel();
 
 
-        /**
-         * limpiamos el panel de ataque y cambio
-         */
-        attacksChangesPokemon1Player2.removeAll();
-        attacksChangesPokemon1Player2.repaint();
-        attacksChangesPokemon1Player2.revalidate();
-
-        /**
-         * limpiamos el panel de ataques
-         */
-        attacksPanelPlayer2.removeAll();
-        attacksPanelPlayer2.repaint();
-        attacksPanelPlayer2.revalidate();
-
-        /**
-         * volvemos a añadir el panel de ataque y cambio
-         */
-        attacksChangesPokemon1Player2.add(new AttacksAndChangesPokemonPlayer2());
-        /**
-         * volvemos a añadir el panel de ataques
-         */
-        attacksPanelPlayer2.add(new AttacksPokemonPlayer2());
-        globalPanelPLayer2.add(attacksChangesPokemon1Player2);
-        globalPanelPLayer2.add(attacksPanelPlayer2);
-        contentPanel.add(globalPanelPLayer2, BorderLayout.EAST);
-
-
-
-        contentPanel.repaint();
-        contentPanel.revalidate();
 
         changesPokemonsPLayer2.setVisible(false);
         attacksChangesPokemon1Player2.setVisible(true);
@@ -1061,6 +930,8 @@ public class Battle extends JFrame {
      * metodo para limpiar el panel entero al cambiar de pokemon
      */
     private static void clearGlobalPanelPlayer2WhenPressButtonToChangePokemon2InChangePokemon(){
+        clearContentPanel();
+
         /**
          * establecemos la nueva imagen del pokemon
          */
@@ -1094,38 +965,10 @@ public class Battle extends JFrame {
         DataNamesIconsColorsAttacksAndPokemonsPlayer2.setColorBackgroundAttack4(MethodsBattlePlayer2.newColor4Attack4Pokemon2Player2());
         DataNamesIconsColorsAttacksAndPokemonsPlayer2.setPathIconAttack4(MethodsBattlePlayer2.newType4Attack4Pokemon2Player2());
 
+        contentPanel.add(makeAgainContentPanel(contentPanel));
+        revalidateContentPanel();
 
 
-        /**
-         * limpiamos el panel de ataque y cambio
-         */
-        attacksChangesPokemon1Player2.removeAll();
-        attacksChangesPokemon1Player2.repaint();
-        attacksChangesPokemon1Player2.revalidate();
-
-        /**
-         * limpiamos el panel de ataques
-         */
-        attacksPanelPlayer2.removeAll();
-        attacksPanelPlayer2.repaint();
-        attacksPanelPlayer2.revalidate();
-
-        /**
-         * volvemos a añadir el panel de ataque y cambio
-         */
-        attacksChangesPokemon1Player2.add(new AttacksAndChangesPokemonPlayer2());
-        /**
-         * volvemos a añadir el panel de ataques
-         */
-        attacksPanelPlayer2.add(new AttacksPokemonPlayer2());
-        globalPanelPLayer2.add(attacksChangesPokemon1Player2);
-        globalPanelPLayer2.add(attacksPanelPlayer2);
-        contentPanel.add(globalPanelPLayer2, BorderLayout.EAST);
-
-
-
-        contentPanel.repaint();
-        contentPanel.revalidate();
 
         changesPokemonsPLayer2.setVisible(false);
         attacksChangesPokemon1Player2.setVisible(true);
@@ -1134,6 +977,8 @@ public class Battle extends JFrame {
      * metodo para limpiar el panel entero al cambiar de pokemon
      */
     private static  void clearGlobalPanelPlayer2WhenPressButtonToChangePokemon3InChangePokemon(){
+       clearContentPanel();
+
         /**
          * establecemos la nueva imagen del pokemon
          */
@@ -1167,38 +1012,8 @@ public class Battle extends JFrame {
         DataNamesIconsColorsAttacksAndPokemonsPlayer2.setColorBackgroundAttack4(MethodsBattlePlayer2.newColor4Attack4Pokemon3Player2());
         DataNamesIconsColorsAttacksAndPokemonsPlayer2.setPathIconAttack4(MethodsBattlePlayer2.newType4Attack4Pokemon3Player2());
 
-
-
-        /**
-         * limpiamos el panel de ataque y cambio
-         */
-        attacksChangesPokemon1Player2.removeAll();
-        attacksChangesPokemon1Player2.repaint();
-        attacksChangesPokemon1Player2.revalidate();
-
-        /**
-         * limpiamos el panel de ataques
-         */
-        attacksPanelPlayer2.removeAll();
-        attacksPanelPlayer2.repaint();
-        attacksPanelPlayer2.revalidate();
-
-        /**
-         * volvemos a añadir el panel de ataque y cambio
-         */
-        attacksChangesPokemon1Player2.add(new AttacksAndChangesPokemonPlayer2());
-        /**
-         * volvemos a añadir el panel de ataques
-         */
-        attacksPanelPlayer2.add(new AttacksPokemonPlayer2());
-        globalPanelPLayer2.add(attacksChangesPokemon1Player2);
-        globalPanelPLayer2.add(attacksPanelPlayer2);
-        contentPanel.add(globalPanelPLayer2, BorderLayout.EAST);
-
-
-
-        contentPanel.repaint();
-        contentPanel.revalidate();
+        contentPanel.add(makeAgainContentPanel(contentPanel));
+        revalidateContentPanel();
 
         changesPokemonsPLayer2.setVisible(false);
         attacksChangesPokemon1Player2.setVisible(true);
@@ -1208,32 +1023,10 @@ public class Battle extends JFrame {
      */
     private static  void clearLifePanelPlayer2WhenPressButtonToChangePokemon(){
 
+        clearContentPanel();
+        contentPanel.add(makeAgainContentPanel(contentPanel));
+        revalidateContentPanel();
 
-        /**
-         * limpiamos el panel de la vida
-         */
-        lifePanelPokemon.removeAll();
-        lifePanelPokemon.repaint();
-        lifePanelPokemon.revalidate();
-
-
-        /**
-         * lo instanciamos de nuevo con la clase del panel de la vida
-         */
-        lifePanelPokemon.add(new LifePokemonInBattlePlayer1());
-        lifePanelPokemon.add(new LifePokemonInBattlePlayer2());
-
-        /**
-         * lo añadimos al panel principal
-         */
-        contentPanel.add(lifePanelPokemon, BorderLayout.NORTH);
-
-
-        /**
-         * repintamos el panel central
-         */
-        contentPanel.repaint();
-        contentPanel.revalidate();
 
     }
 
@@ -1343,7 +1136,7 @@ public class Battle extends JFrame {
 
     }
 
-    private void clearContentPanel(){
+    private static void clearContentPanel(){
         contentPanel.removeAll();
         globalPanelPLayer1.removeAll();
          attacksChangesPokemon1Player1.removeAll();
@@ -1357,7 +1150,7 @@ public class Battle extends JFrame {
         lifePanelPokemon.removeAll();
         textAreaPanel.removeAll();
     }
-    private void revalidateContentPanel(){
+    private static void revalidateContentPanel(){
         contentPanel.repaint();
         contentPanel.revalidate();
         globalPanelPLayer1.repaint();
@@ -1382,6 +1175,39 @@ public class Battle extends JFrame {
         lifePanelPokemon.revalidate();
         textAreaPanel.repaint();
         textAreaPanel.revalidate();
+    }
+    private static JPanel makeAgainContentPanel(JPanel auxPanel){
+        auxPanel = new JPanel();
+        auxPanel = makeContentPanel();
+        globalPanelPLayer1.add(new AliasAndLogoPlayer1());
+        attacksChangesPokemon1Player1 = new AttacksAndChangesPokemonPlayer1();
+        globalPanelPLayer1.add(attacksChangesPokemon1Player1);
+        attacksPanelPlayer1.add(new AttacksPokemonPlayer1());
+        globalPanelPLayer1.add(attacksPanelPlayer1);
+        changesPokemonsPLayer1.add(new PokemonsToChoosePlayer1());
+        globalPanelPLayer1.add(changesPokemonsPLayer1);
+        auxPanel.add(globalPanelPLayer1, BorderLayout.WEST);
+
+        auxPanel.add(lifePanelPokemon, BorderLayout.NORTH);
+        lifePanelPokemon.add(new LifePokemonInBattlePlayer1());
+        lifePanelPokemon.add(new LifePokemonInBattlePlayer2());
+
+
+        globalPanelPLayer2.add(new AliasAndLogoPlayer2());
+        attacksChangesPokemon1Player2 = new AttacksAndChangesPokemonPlayer2();
+        globalPanelPLayer2.add(attacksChangesPokemon1Player2);
+        attacksPanelPlayer2.add(new AttacksPokemonPlayer2());
+        globalPanelPLayer2.add(attacksPanelPlayer2);
+        changesPokemonsPLayer2.add(new PokemonsToChoosePlayer2());
+        globalPanelPLayer2.add(changesPokemonsPLayer2);
+        auxPanel.add(globalPanelPLayer2, BorderLayout.EAST);
+
+        auxPanel.add(textAreaPanel, BorderLayout.SOUTH);
+        textAreaPanel.add(new TextAreaPanelBattle());
+
+        auxPanel.add(battlePanel, BorderLayout.CENTER);
+        battlePanel.add(new PanelImageBattlePokemon());
+        return auxPanel;
     }
 
 

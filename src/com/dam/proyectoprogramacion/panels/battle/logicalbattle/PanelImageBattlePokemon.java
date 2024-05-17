@@ -69,8 +69,8 @@ public class PanelImageBattlePokemon extends JPanel {
          * lo añadimos
          */
         this.add(backgroundPanel, BorderLayout.CENTER);
-        this.add(imagePanelPokemonPlayer1, BorderLayout.WEST);
-        this.add(imagePanelPokemonPlayer2, BorderLayout.EAST);
+        //this.add(imagePanelPokemonPlayer1, BorderLayout.WEST);
+        //this.add(imagePanelPokemonPlayer2, BorderLayout.EAST);
 
     }
 
