@@ -1343,6 +1343,47 @@ public class Battle extends JFrame {
 
     }
 
+    private void clearContentPanel(){
+        contentPanel.removeAll();
+        globalPanelPLayer1.removeAll();
+         attacksChangesPokemon1Player1.removeAll();
+         attacksPanelPlayer1.removeAll();
+       changesPokemonsPLayer1.removeAll();
+      battlePanel.removeAll();
+       globalPanelPLayer2.removeAll();
+       attacksChangesPokemon1Player2.removeAll();
+         attacksPanelPlayer2.removeAll();
+        changesPokemonsPLayer2.removeAll();
+        lifePanelPokemon.removeAll();
+        textAreaPanel.removeAll();
+    }
+    private void revalidateContentPanel(){
+        contentPanel.repaint();
+        contentPanel.revalidate();
+        globalPanelPLayer1.repaint();
+        globalPanelPLayer1.revalidate();
+        attacksChangesPokemon1Player1.repaint();
+        attacksChangesPokemon1Player1.revalidate();
+        attacksPanelPlayer1.repaint();
+        attacksPanelPlayer1.revalidate();
+        changesPokemonsPLayer1.repaint();
+        changesPokemonsPLayer1.revalidate();
+        battlePanel.repaint();
+        battlePanel.revalidate();
+        globalPanelPLayer2.repaint();
+        globalPanelPLayer2.revalidate();
+        attacksChangesPokemon1Player2.repaint();
+        attacksChangesPokemon1Player2.revalidate();
+        attacksPanelPlayer2.repaint();
+        attacksPanelPlayer2.revalidate();
+        changesPokemonsPLayer2.repaint();
+        changesPokemonsPLayer2.revalidate();
+        lifePanelPokemon.repaint();
+        lifePanelPokemon.revalidate();
+        textAreaPanel.repaint();
+        textAreaPanel.revalidate();
+    }
+
 
     /**
      * getter y setter de los atributos de la clase
