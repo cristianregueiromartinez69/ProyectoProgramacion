@@ -545,6 +545,8 @@ public class SelectionPokemon extends JFrame {
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNamePokemon3(MethodsBattlePlayer1.getNamePokemon3Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
                    LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer1.setImagePokemonInBattlePlayer1(MethodsBattlePlayer1.(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+
 
                    /**
                     * establecemos todos los valores de los pokemons del jugador 2
@@ -579,10 +581,13 @@ public class SelectionPokemon extends JFrame {
 
                    LifePokemonInBattlePlayer2.setActualLifePokemonInBattlePlayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon1Player2());
 
+                   DataNamesIconsColorsAttacksAndPokemonsPlayer2.setImagePokemonInBattlePlayer2(MethodsBattlePlayer2.putImagePokemonInBattlePlayer2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
 
 
+                   MusicIntroGame.stopMusic();
                    new Battle();
+                   MusicBattleGame.music();
                    dispose();
                }
             }

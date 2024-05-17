@@ -21,6 +21,7 @@ public class PanelImagePokemonInBattlePlayer1 extends JPanel{
         setPreferredSize(new Dimension(170,170));
         setMaximumSize(new Dimension(170,170));
         setMinimumSize(new Dimension(170,170));
+
     }
 
 
