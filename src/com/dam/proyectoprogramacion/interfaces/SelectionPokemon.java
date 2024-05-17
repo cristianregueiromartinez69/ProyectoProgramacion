@@ -546,6 +546,7 @@ public class SelectionPokemon extends JFrame {
 
                    LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
 
+
                    /**
                     * establecemos todos los valores de los pokemons del jugador 2
                     */
