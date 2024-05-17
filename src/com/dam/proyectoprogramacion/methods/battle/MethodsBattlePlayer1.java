@@ -62,6 +62,7 @@ public class MethodsBattlePlayer1 {
     }
 
 
+
 //---------------------------------xAtaque numero 1 ---------------------------//
 
     /**
@@ -2993,6 +2994,50 @@ public class MethodsBattlePlayer1 {
 
         return marca;
     }
+
+    /**
+     * metodo que recorre un hashmap y busca el primer pokemon escogido por el jugador 1
+     *
+     * @param players el hashmap de los jugadores
+     * @return el path con la imagen del pokemon seleccionado
+     */
+    public static String putImagePokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players) {
+
+        String pathImagePokemon = "";
+        String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+        /**
+         * for para recorrer el hashmap de los jugadores
+         */
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+            /**
+             * si encuentra la clave, entra en la condicion
+             */
+            if (key.equals(aliasPlayer1)) {
+                /**
+                 * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
+                 */
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                if (!pokemons.isEmpty()) {
+                    /**
+                     * hacemos un objeto de pokemons y decimos que es igual al primer elemento de la lista de pokemons
+                     */
+                    PokemonProperties firstPokemon = (PokemonProperties) pokemons.get(0);
+                    String name = firstPokemon.getName().toLowerCase();
+                    pathImagePokemon = "imagenes/" + name + "SP.png";
+                    break;
+
+                } else {
+                    /**
+                     * si no hay nada, devuelve null
+                     */
+                    pathImagePokemon = null;
+                }
+
+            }
+        }
+        return pathImagePokemon;
+    }
+
 
     /**
      * metodos para obtener el texto del boton de los pokemons
