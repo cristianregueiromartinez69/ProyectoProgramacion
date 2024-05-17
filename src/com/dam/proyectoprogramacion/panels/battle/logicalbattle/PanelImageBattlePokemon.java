@@ -1,7 +1,5 @@
 package com.dam.proyectoprogramacion.panels.battle.logicalbattle;
 
-import com.dam.proyectoprogramacion.background.BackgroundBattle;
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -12,67 +10,49 @@ import java.awt.*;
  */
 public class PanelImageBattlePokemon extends JPanel {
 
-    /**
-     * atributos privados de la clase
-     */
-    private JPanel backgroundPanel;
-    private JPanel imagePanelPokemonPlayer1;
-    private JPanel imagePanelPokemonPlayer2;
     private static Image pokemonPlayer1;
     private static Image pokemonPlayer2;
     private static Image battleScenario;
 
-    public PanelImageBattlePokemon(){
+    // Variables para ajustar la posición vertical
+    private static int offsetPlayer1Y = 50;
+    private static int offsetPlayer2Y = 50;
 
-        /**
-         * lo hacemos visible
-         * le damos un layout
-         */
-         setVisible(true);
-         setLayout(new BorderLayout());
+    public PanelImageBattlePokemon() {
 
-        /**
-         * iniciamos la imagen de fondo con el path de la imagen de batalla pokemon
-         */
+        // Configurar el panel principal
+        setVisible(true);
+        setLayout(new BorderLayout());
+
+        // Iniciar imágenes
         battleScenario = new ImageIcon("imagenes/batalla.jpg").getImage();
-
         pokemonPlayer1 = new ImageIcon("imagenes/snorlaxSP.png").getImage();
         pokemonPlayer2 = new ImageIcon("imagenes/tinkatonSP.png").getImage();
 
-        PanelImagePokemonInBattlePlayer1 pokemonImagePlayer1 = new PanelImagePokemonInBattlePlayer1(pokemonPlayer1);
-        PanelImagePokemonInBattlePlayer2 pokemonImagePlayer2 = new PanelImagePokemonInBattlePlayer2(pokemonPlayer2);
+        // Panel de fondo con Pokémon
+        JPanel backgroundPanel = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(battleScenario, 0, 0, getWidth(), getHeight(), this);
 
+                // Dibujar Pokémon del jugador 1
+                int player1X = getWidth() / 4 - pokemonPlayer1.getWidth(null) / 2;
+                int player1Y = getHeight() - pokemonPlayer1.getHeight(null) - offsetPlayer1Y;
+                g.drawImage(pokemonPlayer1, player1X, player1Y, this);
 
-        /**
-         * instanciamos el panel de la imagen de batalla y le metemos el path
-         */
-         BackgroundBattle backBattle = new BackgroundBattle(battleScenario);
+                // Dibujar Pokémon del jugador 2
+                int player2X = 3 * getWidth() / 4 - pokemonPlayer2.getWidth(null) / 2;
+                int player2Y = getHeight() - pokemonPlayer2.getHeight(null) - offsetPlayer2Y;
+                g.drawImage(pokemonPlayer2, player2X, player2Y, this);
+            }
+        };
+        backgroundPanel.setPreferredSize(new Dimension(battleScenario.getWidth(null), battleScenario.getHeight(null)));
 
-        /**
-         * iniciamos el panel central que contendrá todas las imagenes
-         * la de la batalla
-         * la del pokemon en batalla del jugador 1
-         * la del pokemon en batalla del jugador 2
-         * añadimos las imagenes al panel
-         */
-        backgroundPanel = new JPanel();
-         backgroundPanel.add(backBattle);
-
-         imagePanelPokemonPlayer1 = new JPanel();
-         imagePanelPokemonPlayer1.add(pokemonImagePlayer1);
-
-        imagePanelPokemonPlayer2 = new JPanel();
-        imagePanelPokemonPlayer2.add(pokemonImagePlayer2);
-
-
-        /**
-         * lo añadimos
-         */
-        this.add(backgroundPanel, BorderLayout.CENTER);
-        //this.add(imagePanelPokemonPlayer1, BorderLayout.WEST);
-        //this.add(imagePanelPokemonPlayer2, BorderLayout.EAST);
-
+        add(backgroundPanel, BorderLayout.CENTER);
     }
+
+
 
     /**
      * getter y setter de los atributos de la clase
@@ -100,5 +80,21 @@ public class PanelImageBattlePokemon extends JPanel {
 
     public static void setBattleScenario(Image battleScenario) {
         PanelImageBattlePokemon.battleScenario = battleScenario;
+    }
+
+    public static int getOffsetPlayer1Y() {
+        return offsetPlayer1Y;
+    }
+
+    public static void setOffsetPlayer1Y(int offsetPlayer1Y) {
+        PanelImageBattlePokemon.offsetPlayer1Y = offsetPlayer1Y;
+    }
+
+    public static int getOffsetPlayer2Y() {
+        return offsetPlayer2Y;
+    }
+
+    public static void setOffsetPlayer2Y(int offsetPlayer2Y) {
+        PanelImageBattlePokemon.offsetPlayer2Y = offsetPlayer2Y;
     }
 }
