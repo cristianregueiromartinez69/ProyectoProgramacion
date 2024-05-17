@@ -8,10 +8,7 @@ import java.sql.*;
  * Nueva clase en la que se va a conectar con la bbdd
  */
 public class Conexion {
-    private Connection con;
-    private String usuario = "root";
-    private String contraseña = "debian";
-    private String url = "jdbc:postgresql://localhost:5432/postgres;";
+    public static Connection con;
 
 
     /**
@@ -20,9 +17,8 @@ public class Conexion {
      */
     public Connection crearConexion() {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection(url,usuario,contraseña);
-            JOptionPane.showMessageDialog(null, "Conexion establecida con exito");
+            String url = "jdbc:postgresql:bbdd/Pokemon.sql";
+            con = DriverManager.getConnection(url);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Errror de conexión con la base de datos");
         }
@@ -44,7 +40,7 @@ public class Conexion {
      * @param Atacks Variable ataque el cual va a servir para identificar los ataques
      */
     public void InsertarPokemon(String Name, String Type1,String Type2, Integer Level, Integer Life, String Sex, Integer Speed, Float Syze, Float Weight, String Atacks) {
-        String sql = "INSERT INTO Pokemon (Name, Type1,Type2, Level, Life, Sex, Speed, Syze, Weight, Attacks) VALUES (?,?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO Pokemon (Name, Type1,Type2, Level, Life, Sex, Speed, Syze, Weight, Atacks) VALUES (?,?,?,?,?,?,?,?,?,?)";
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setString(1,Name);
             pstmt.setString(2,Type1);
@@ -55,6 +51,7 @@ public class Conexion {
             pstmt.setInt(7,Speed);
             pstmt.setFloat(8,Syze);
             pstmt.setFloat(9,Weight);
+            pstmt.setString(3,Atacks);
             pstmt.executeUpdate();
             JOptionPane.showMessageDialog(null, "Insertado exitosamente");
         }catch (SQLException e) {

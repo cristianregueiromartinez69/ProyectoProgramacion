@@ -23,16 +23,16 @@ public class Atacks {
 
     /**
      * Metodo en el que se va a introducir todos los datos de cada uno de los ataque los cuales se van a introducir
-     * @param Name variable principal con la cual se va a identificar cada ataque
+     * @param Namea variable principal con la cual se va a identificar cada ataque
      * @param Type tipo de cada ataque
      * @param Power poder del ataque
      * @param PP  cantidad de veces que se puede utilizar el ataque
      * @param Precission  probabilidad de que acierte el ataque
      */
-    public void InsertAtacks(String Name, String Type, Integer Power, Integer PP, Float Precission) {
-        String sql = "INSERT INTO Ataques (Name, Type, Power, PP, Precission) VALUES (?,?,?,?,?)";
+    public void InsertAtacks(String Namea, String Type, Integer Power, Integer PP, Float Precission) {
+        String sql = "INSERT INTO Ataques (Namea, Type, Power, PP, Precission) VALUES (?,?,?,?,?)";
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
-            pstmt.setString(1,Name);
+            pstmt.setString(1,Namea);
             pstmt.setString(2,Type);
             pstmt.setInt(3,Power);
             pstmt.setInt(4,PP);
@@ -49,7 +49,7 @@ public class Atacks {
      * @param Name nombre por el cual se va a reconocer el ataque que va a ser eliminado
      */
     public void EliminarAtack(String Name) {
-        String sql = "DELETE FROM Atacks WHERE Name = ?";
+        String sql = "DELETE FROM Atacks WHERE Namea = ?";
         try (PreparedStatement pstmt = con.prepareStatement(sql)){
             pstmt.setString(1,Name);
             int affectedRows = pstmt.executeUpdate();
@@ -69,7 +69,7 @@ public class Atacks {
      * @param newType nuevo tipo al que se va a cambiar
      */
     public void actualizarTypeAtack(String Name, String newType){
-        String sql = "UPDATE Atacks SET Type = ? WHERE Name = ?";
+        String sql = "UPDATE Atacks SET Type = ? WHERE Namea = ?";
         try (PreparedStatement pstmt = con.prepareStatement(sql)){
             pstmt.setString(1,newType);
             pstmt.setString(2,Name);
@@ -90,7 +90,7 @@ public class Atacks {
      * @param newPower nuevo valor que se va a poner en la variable power
      */
     public void actualizarPowerAtack(String Name, Integer newPower){
-        String sql = "UPDATE Atacks SET Power = ? WHERE Name = ?";
+        String sql = "UPDATE Atacks SET Power = ? WHERE Namea = ?";
         try (PreparedStatement pstmt = con.prepareStatement(sql)){
             pstmt.setInt(1,newPower);
             pstmt.setString(2,Name);
@@ -111,7 +111,7 @@ public class Atacks {
      * @param newPP nueva cantidad de veces que se va a poder utilizar el ataque
      */
     public void actualizarPPAtacks(String Name, Integer newPP){
-        String sql = "UPDATE Atacks SET PP = ? WHERE Name = ?";
+        String sql = "UPDATE Atacks SET PP = ? WHERE Namea = ?";
         try (PreparedStatement pstmt = con.prepareStatement(sql)){
             pstmt.setInt(1,newPP);
             pstmt.setString(2,Name);
@@ -132,7 +132,7 @@ public class Atacks {
      * @param newPrecision nueva precision que va a tener el ataque
      */
     public void actualizarPrecissionAtacks(String Name, Float newPrecision){
-        String sql = "UPDATE Atacks SET Precision = ? WHERE Name = ?";
+        String sql = "UPDATE Atacks SET Precision = ? WHERE Namea = ?";
         try (PreparedStatement pstmt = con.prepareStatement(sql)){
             pstmt.setFloat(1,newPrecision);
             pstmt.setString(2,Name);
