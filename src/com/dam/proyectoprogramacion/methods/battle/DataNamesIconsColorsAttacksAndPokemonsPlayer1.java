@@ -37,6 +37,8 @@ public class DataNamesIconsColorsAttacksAndPokemonsPlayer1 {
     private static String pathIconPokemon3;
     private static String namePokemon3;
 
+    private static String imagePokemonInBattlePlayer1;
+
     /**
      * getter y setter de los atributos de la clase
      * @return el atributo correspondiente
@@ -184,4 +186,14 @@ public class DataNamesIconsColorsAttacksAndPokemonsPlayer1 {
     public static void setNamePokemon3(String namePokemon3) {
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.namePokemon3 = namePokemon3;
     }
+
+    public static String getImagePokemonInBattlePlayer1() {
+        return imagePokemonInBattlePlayer1;
+    }
+
+    public static void setImagePokemonInBattlePlayer1(String imagePokemonInBattlePlayer1) {
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.imagePokemonInBattlePlayer1 = imagePokemonInBattlePlayer1;
+    }
+
+
 }

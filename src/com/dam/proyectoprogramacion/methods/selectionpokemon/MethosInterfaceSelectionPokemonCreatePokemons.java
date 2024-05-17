@@ -31,7 +31,7 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
      */
     public static Drampa makeDrampaObject() {
         drampa = new Drampa();
-        drampa.setName("drampa");
+        drampa.setName("Drampa");
         drampa.setType("normal-dragon");
         drampa.setLevel(50);
         drampa.setLife(185);
@@ -55,7 +55,7 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
      */
     public static Empoleon makeEmpoleonObject() {
          empoleon = new Empoleon();
-        empoleon.setName("empoleon");
+        empoleon.setName("Empoleon");
         empoleon.setType("agua-acero");
         empoleon.setLevel(50);
         empoleon.setLife(191);
