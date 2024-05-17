@@ -7,9 +7,12 @@ import java.io.IOException;
 /**
  * clase con la musica del menu dle juego
  * @author cristian
- * @version v1.0
+ * @version v3.0
  */
-public class MusicMainMenu {
+public class MusicIntroGame {
+
+
+    private static Clip clip;
 
     public static void music() {
         try {
@@ -28,14 +31,18 @@ public class MusicMainMenu {
             /**
              * / Abrir el clip
              */
-            Clip clip = (Clip) AudioSystem.getLine(info);
+            clip = (Clip) AudioSystem.getLine(info);
             clip.open(audioStream);
             clip.loop(Clip.LOOP_CONTINUOUSLY);
 
             /**
              * / Reproducir el audio en bucle infinito
              */
-            clip.start();
+
+                clip.start();
+
+
+
 
 
 
@@ -45,5 +52,17 @@ public class MusicMainMenu {
         } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
             e.printStackTrace();
         }
+
     }
+    public static void stopMusic() {
+        if (clip != null && clip.isOpen()) {
+            clip.stop();
+            clip.close();
+        }
+    }
+
+
+
+
+
 }

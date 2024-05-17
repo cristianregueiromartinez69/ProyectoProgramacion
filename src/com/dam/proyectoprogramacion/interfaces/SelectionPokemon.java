@@ -585,8 +585,9 @@ public class SelectionPokemon extends JFrame {
 
 
 
-
+                   MusicIntroGame.stopMusic();
                    new Battle();
+                   MusicBattleGame.music();
                    dispose();
                }
             }
