@@ -40,6 +40,8 @@ public class Battle extends JFrame {
     private static JPanel changesPokemonsPLayer2;
     private  static JPanel lifePanelPokemon;
     private static JPanel textAreaPanel;
+
+    private static int daño = 30;
     
 
 
@@ -230,6 +232,7 @@ public class Battle extends JFrame {
             public void actionPerformed(ActionEvent e) {
 
                 clearGlobalPanelPlayer1WhenPressAttacksButtons();
+
             }
         });
         ButtonInterfaceAttacks.getAttack1Player1().addActionListener(this::putInformationAreaTextBattlePlayer1);
@@ -565,6 +568,9 @@ public class Battle extends JFrame {
     private static void clearGlobalPanelPlayer1WhenPressAttacksButtons(){
         attacksPanelPlayer1.setVisible(false);
         attacksChangesPokemon1Player1.setVisible(true);
+
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(LifePokemonInBattlePlayer1.getLifePokemon1PLayer1() - daño);
+        daño++;
     }
 
     /**
