@@ -42,6 +42,7 @@ public class Battle extends JFrame {
     private static JPanel textAreaPanel;
 
     private static int daño = 30;
+    private static int newLife;
     
 
 
@@ -568,9 +569,16 @@ public class Battle extends JFrame {
     private static void clearGlobalPanelPlayer1WhenPressAttacksButtons(){
         attacksPanelPlayer1.setVisible(false);
         attacksChangesPokemon1Player1.setVisible(true);
-        LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(LifePokemonInBattlePlayer1.getLifePokemon1PLayer1()-daño);
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(LifePokemonInBattlePlayer1.getLifePokemon1PLayer1());
 
+         newLife = LifePokemonInBattlePlayer1.getLifePokemon1PLayer1() - daño;
+        LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(newLife);
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(newLife);
+
+        // Actualizar el color de la barra de vida
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setForeground(LifePokemonInBattlePlayer1.getBackgroundColorLifeBarPokemonPlayer1(newLife));
+
+        // Forzar la actualización visual de la barra de vida
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
     }
 
     /**

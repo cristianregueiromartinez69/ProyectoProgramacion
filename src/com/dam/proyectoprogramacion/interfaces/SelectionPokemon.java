@@ -546,6 +546,9 @@ public class SelectionPokemon extends JFrame {
 
                    LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
                    LifePokemonInBattlePlayer1.setAuxLife(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
+                   LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
+                   LifePokemonInBattlePlayer1.setLifePokemon2PLayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon2Player1());
+                   LifePokemonInBattlePlayer1.setLifePokemon3PLayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon3Player1());
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setImagePokemonInBattlePlayer1(MethodsBattlePlayer1.putImagePokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
 
