@@ -1,7 +1,6 @@
 package com.dam.proyectoprogramacion.panels.battle.battleplayer1;
 
 import javax.swing.*;
-import com.dam.proyectoprogramacion.methods.battle.*;
 
 import java.awt.*;
 
@@ -10,7 +9,7 @@ import java.awt.*;
  * @author cristian
  * @version v3.0
  */
-public class LifePokemonInBattlePlayer1 extends JPanel {
+public class LifePokemon1Player1 extends JPanel {
 
     /**
      * atributos privados de la clase
@@ -27,7 +26,7 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
     /**
      * constructor de la clase
      */
-    public LifePokemonInBattlePlayer1(){
+    public LifePokemon1Player1(){
 
         /**
          * lo hacemos visible y le damos un layout
@@ -115,7 +114,7 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
     }
 
     public static void setLifePokemon1PLayer1(int lifePokemon1PLayer1) {
-        LifePokemonInBattlePlayer1.lifePokemon1PLayer1 = lifePokemon1PLayer1;
+        LifePokemon1Player1.lifePokemon1PLayer1 = lifePokemon1PLayer1;
     }
 
     public static int getLifePokemon2PLayer1() {
@@ -123,7 +122,7 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
     }
 
     public static void setLifePokemon2PLayer1(int lifePokemon2PLayer1) {
-        LifePokemonInBattlePlayer1.lifePokemon2PLayer1 = lifePokemon2PLayer1;
+        LifePokemon1Player1.lifePokemon2PLayer1 = lifePokemon2PLayer1;
     }
 
     public static int getLifePokemon3PLayer1() {
@@ -131,7 +130,7 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
     }
 
     public static void setLifePokemon3PLayer1(int lifePokemon3PLayer1) {
-        LifePokemonInBattlePlayer1.lifePokemon3PLayer1 = lifePokemon3PLayer1;
+        LifePokemon1Player1.lifePokemon3PLayer1 = lifePokemon3PLayer1;
     }
 
     public static JProgressBar getLifePokemonBarPlayer1() {
@@ -139,7 +138,7 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
     }
 
     public static void setLifePokemon(JProgressBar lifePokemon) {
-        LifePokemonInBattlePlayer1.lifePokemonBarPlayer1 = lifePokemon;
+        LifePokemon1Player1.lifePokemonBarPlayer1 = lifePokemon;
     }
 
     public static int getActualLifePokemonInBattlePlayer1() {
@@ -147,7 +146,7 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
     }
 
     public static void setActualLifePokemonInBattlePlayer1(int actualLifePokemonInBattle) {
-        LifePokemonInBattlePlayer1.actualLifePokemonInBattlePlayer1 = actualLifePokemonInBattle;
+        LifePokemon1Player1.actualLifePokemonInBattlePlayer1 = actualLifePokemonInBattle;
     }
 
     public JPanel getPanelLifePokemonPLayer1() {
@@ -161,7 +160,7 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
 
 
     public static void setLifePokemonBarPlayer1(JProgressBar lifePokemonBarPlayer1) {
-        LifePokemonInBattlePlayer1.lifePokemonBarPlayer1 = lifePokemonBarPlayer1;
+        LifePokemon1Player1.lifePokemonBarPlayer1 = lifePokemonBarPlayer1;
     }
 
     public static int getAuxLife() {
@@ -169,6 +168,6 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
     }
 
     public static void setAuxLife(int auxLife) {
-        LifePokemonInBattlePlayer1.auxLife = auxLife;
+        LifePokemon1Player1.auxLife = auxLife;
     }
 }

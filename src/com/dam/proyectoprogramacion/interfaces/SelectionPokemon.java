@@ -6,8 +6,7 @@ import com.dam.proyectoprogramacion.buttons.ButtonInterfacePokemonSelect;
 import com.dam.proyectoprogramacion.methods.battle.*;
 import com.dam.proyectoprogramacion.methods.luck.MethodsInterfaceLuck;
 import com.dam.proyectoprogramacion.methods.selectionpokemon.MethosInterfaceSelectionPokemon;
-import com.dam.proyectoprogramacion.panels.battle.battleplayer1.LifePokemonInBattlePlayer1;
-import com.dam.proyectoprogramacion.panels.battle.battleplayer2.LifePokemonInBattlePlayer2;
+import com.dam.proyectoprogramacion.panels.battle.battleplayer1.LifePokemon1Player1;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer2.LifePokemonInBattlePlayer2;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
@@ -545,11 +544,11 @@ public class SelectionPokemon extends JFrame {
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconPokemon3(MethodsBattlePlayer1.getPathPokemon3Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNamePokemon3(MethodsBattlePlayer1.getNamePokemon3Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
-                   LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
-                   LifePokemonInBattlePlayer1.setAuxLife(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
-                   LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
-                   LifePokemonInBattlePlayer1.setLifePokemon2PLayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon2Player1());
-                   LifePokemonInBattlePlayer1.setLifePokemon3PLayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon3Player1());
+                   LifePokemon1Player1.setActualLifePokemonInBattlePlayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
+                   LifePokemon1Player1.setAuxLife(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
+                   LifePokemon1Player1.setLifePokemon1PLayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
+                   LifePokemon1Player1.setLifePokemon2PLayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon2Player1());
+                   LifePokemon1Player1.setLifePokemon3PLayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon3Player1());
 
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setImagePokemonInBattlePlayer1(MethodsBattlePlayer1.putImagePokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
