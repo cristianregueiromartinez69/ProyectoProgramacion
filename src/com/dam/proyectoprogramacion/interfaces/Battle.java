@@ -232,7 +232,7 @@ public class Battle extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                clearGlobalPanelPlayer1WhenPressAttacksButtons();
+                clearGlobalPanelPlayer1WhenPressAttack1Buttons();
 
             }
         });
@@ -243,7 +243,7 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack2PLayer1().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                clearGlobalPanelPlayer1WhenPressAttacksButtons();
+                clearGlobalPanelPlayer1WhenPressAttack2Buttons();
             }
         });
         ButtonInterfaceAttacks.getAttack2PLayer1().addActionListener(this::putInformationAreaTextBattlePlayer1);
@@ -254,7 +254,7 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack3Player1().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                clearGlobalPanelPlayer1WhenPressAttacksButtons();
+                clearGlobalPanelPlayer1WhenPressAttack3Buttons();
             }
         });
         ButtonInterfaceAttacks.getAttack3Player1().addActionListener(this::putInformationAreaTextBattlePlayer1);
@@ -265,7 +265,7 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack4Player1().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                clearGlobalPanelPlayer1WhenPressAttacksButtons();
+                clearGlobalPanelPlayer1WhenPressAttack4Buttons();
             }
         });
         ButtonInterfaceAttacks.getAttack4Player1().addActionListener(this::putInformationAreaTextBattlePlayer1);
@@ -566,7 +566,49 @@ public class Battle extends JFrame {
     /**
      * metodo para atacar y hacer visivle el panel de atacar y cambio e invisible el de ataques del jugador 1
      */
-    private static void clearGlobalPanelPlayer1WhenPressAttacksButtons(){
+    private static void clearGlobalPanelPlayer1WhenPressAttack1Buttons(){
+        attacksPanelPlayer1.setVisible(false);
+        attacksChangesPokemon1Player1.setVisible(true);
+
+        newLife = LifePokemonInBattlePlayer1.getLifePokemon1PLayer1() - daño;
+        LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(newLife);
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(newLife);
+
+        // Actualizar el color de la barra de vida
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setForeground(LifePokemonInBattlePlayer1.getBackgroundColorLifeBarPokemonPlayer1(newLife));
+
+        // Forzar la actualización visual de la barra de vida
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
+    }
+    private static void clearGlobalPanelPlayer1WhenPressAttack2Buttons(){
+        attacksPanelPlayer1.setVisible(false);
+        attacksChangesPokemon1Player1.setVisible(true);
+
+        newLife = LifePokemonInBattlePlayer1.getLifePokemon1PLayer1() - daño;
+        LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(newLife);
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(newLife);
+
+        // Actualizar el color de la barra de vida
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setForeground(LifePokemonInBattlePlayer1.getBackgroundColorLifeBarPokemonPlayer1(newLife));
+
+        // Forzar la actualización visual de la barra de vida
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
+    }
+    private static void clearGlobalPanelPlayer1WhenPressAttack3Buttons(){
+        attacksPanelPlayer1.setVisible(false);
+        attacksChangesPokemon1Player1.setVisible(true);
+
+        newLife = LifePokemonInBattlePlayer1.getLifePokemon1PLayer1() - daño;
+        LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(newLife);
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(newLife);
+
+        // Actualizar el color de la barra de vida
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setForeground(LifePokemonInBattlePlayer1.getBackgroundColorLifeBarPokemonPlayer1(newLife));
+
+        // Forzar la actualización visual de la barra de vida
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
+    }
+    private static void clearGlobalPanelPlayer1WhenPressAttack4Buttons(){
         attacksPanelPlayer1.setVisible(false);
         attacksChangesPokemon1Player1.setVisible(true);
 
