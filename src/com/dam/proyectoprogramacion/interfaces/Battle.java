@@ -232,7 +232,7 @@ public class Battle extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                clearGlobalPanelPlayer1WhenPressAttacksButtons();
+                clearGlobalPanelPlayer1WhenPressAttack1Buttons();
 
             }
         });
@@ -243,7 +243,7 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack2PLayer1().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                clearGlobalPanelPlayer1WhenPressAttacksButtons();
+                clearGlobalPanelPlayer1WhenPressAttack2Buttons();
             }
         });
         ButtonInterfaceAttacks.getAttack2PLayer1().addActionListener(this::putInformationAreaTextBattlePlayer1);
@@ -254,7 +254,7 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack3Player1().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                clearGlobalPanelPlayer1WhenPressAttacksButtons();
+                clearGlobalPanelPlayer1WhenPressAttack3Buttons();
             }
         });
         ButtonInterfaceAttacks.getAttack3Player1().addActionListener(this::putInformationAreaTextBattlePlayer1);
@@ -265,7 +265,7 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack4Player1().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                clearGlobalPanelPlayer1WhenPressAttacksButtons();
+                clearGlobalPanelPlayer1WhenPressAttack4Buttons();
             }
         });
         ButtonInterfaceAttacks.getAttack4Player1().addActionListener(this::putInformationAreaTextBattlePlayer1);
@@ -566,23 +566,61 @@ public class Battle extends JFrame {
     /**
      * metodo para atacar y hacer visivle el panel de atacar y cambio e invisible el de ataques del jugador 1
      */
-    private static void clearGlobalPanelPlayer1WhenPressAttacksButtons(){
+    private static void clearGlobalPanelPlayer1WhenPressAttack1Buttons(){
         /**
          * hacemos invisible el panel de ayaques y visible el de ataque y cambio
          */
         attacksPanelPlayer1.setVisible(false);
         attacksChangesPokemon1Player1.setVisible(true);
 
-        newLife = LifePokemonInBattlePlayer1.getLifePokemon1PLayer1() - daño;
-        LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(newLife);
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(newLife);
+        newLife = LifePokemonInBattlePlayer2.getLifePokemon1PLayer2() - daño;
+        LifePokemonInBattlePlayer2.setLifePokemon1PLayer2(newLife);
+        LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setValue(newLife);
 
         // Actualizar el color de la barra de vida
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setForeground(LifePokemonInBattlePlayer1.getBackgroundColorLifeBarPokemonPlayer1(newLife));
+        LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setForeground(LifePokemonInBattlePlayer2.getBackgroundColorLifeBarPokemonPlayer2(newLife));
 
         // Forzar la actualización visual de la barra de vida
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
+        LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
     }
+
+    /**
+     * metodo para atacar y hacer visivle el panel de atacar y cambio e invisible el de ataques del jugador 1
+     */
+    private static void clearGlobalPanelPlayer1WhenPressAttack2Buttons(){
+        /**
+         * hacemos invisible el panel de ayaques y visible el de ataque y cambio
+         */
+
+    }
+
+
+    /**
+     * metodo para atacar y hacer visivle el panel de atacar y cambio e invisible el de ataques del jugador 1
+     */
+    private static void clearGlobalPanelPlayer1WhenPressAttack3Buttons(){
+        /**
+         * hacemos invisible el panel de ayaques y visible el de ataque y cambio
+         */
+        attacksPanelPlayer1.setVisible(false);
+        attacksChangesPokemon1Player1.setVisible(true);
+
+
+    }
+
+
+    /**
+     * metodo para atacar y hacer visivle el panel de atacar y cambio e invisible el de ataques del jugador 1
+     */
+    private static void clearGlobalPanelPlayer1WhenPressAttack4Buttons(){
+        /**
+         * hacemos invisible el panel de ayaques y visible el de ataque y cambio
+         */
+        attacksPanelPlayer1.setVisible(false);
+        attacksChangesPokemon1Player1.setVisible(true);
+
+    }
+
 
     /**
      * metodo que hace visible el panel de ataque y cambio y oculta el de ataques
@@ -646,8 +684,9 @@ public class Battle extends JFrame {
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack4(MethodsBattlePlayer1.newColor4Attack4Pokemon1Player1());
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack4(MethodsBattlePlayer1.newType4Attack4Pokemon1Player1());
 
+        MethodsBattlePokemon.updateLifePokemons1Player1AndPlayer2();
+
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.setImagePokemonInBattlePlayer1(MethodsBattlePlayer1.newImagePokemonInBattle1Player1());
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(LifePokemonInBattlePlayer1.getLifePokemon1PLayer1());
 
 
         contentPanel.add(makeAgainContentPanel(contentPanel));
@@ -960,6 +999,10 @@ public class Battle extends JFrame {
         DataNamesIconsColorsAttacksAndPokemonsPlayer2.setPathIconAttack4(MethodsBattlePlayer2.newType4Attack4Pokemon1Player2());
 
         DataNamesIconsColorsAttacksAndPokemonsPlayer2.setImagePokemonInBattlePlayer2(MethodsBattlePlayer2.newImagePokemonInBattle1Player2());
+        MethodsBattlePokemon.updateLifePokemons1Player1AndPlayer2();
+
+
+
 
         contentPanel.add(makeAgainContentPanel(contentPanel));
         revalidateContentPanel();
@@ -1090,7 +1133,7 @@ public class Battle extends JFrame {
              * Se establece la nueva vida actual del pokemon
              */
             LifePokemonInBattlePlayer2.setActualLifePokemonInBattlePlayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon1Player2());
-            LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setValue(LifePokemonInBattlePlayer2.getActualLifePokemonInBattlePlayer2());
+            LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setValue(LifePokemonInBattlePlayer2.getLifePokemon1PLayer2());
         }
         /**
          * si el jugador pulsa el boton 2 de cambio, entra en la condicion
@@ -1100,7 +1143,7 @@ public class Battle extends JFrame {
              * Se establece la nueva vida actual del pokemon
              */
             LifePokemonInBattlePlayer2.setActualLifePokemonInBattlePlayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon2Player2());
-            LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setValue(LifePokemonInBattlePlayer2.getActualLifePokemonInBattlePlayer2());
+            LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setValue(LifePokemonInBattlePlayer2.getLifePokemon2PLayer2());
 
         }/**
          * si el jugador pulsa el boton 3 de cambio, entra en la condicion
@@ -1110,7 +1153,7 @@ public class Battle extends JFrame {
              * Se establece la nueva vida actual del pokemon
              */
             LifePokemonInBattlePlayer2.setActualLifePokemonInBattlePlayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon3Player2());
-            LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setValue(LifePokemonInBattlePlayer2.getActualLifePokemonInBattlePlayer2());
+            LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setValue(LifePokemonInBattlePlayer2.getLifePokemon3PLayer2());
 
         }
     }
