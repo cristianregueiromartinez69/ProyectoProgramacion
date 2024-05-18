@@ -3,6 +3,7 @@ package com.dam.proyectoprogramacion.methods.battle;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.LifePokemonInBattlePlayer1;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer2.LifePokemonInBattlePlayer2;
 
+
 public class MethodsBattlePokemon {
 
     public static int setValueOfLifePokemonInBattlePlayer1(String namePokemon){

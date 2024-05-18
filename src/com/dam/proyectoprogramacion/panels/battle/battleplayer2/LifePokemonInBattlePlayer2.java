@@ -1,16 +1,16 @@
 package com.dam.proyectoprogramacion.panels.battle.battleplayer2;
+
 import javax.swing.*;
 import com.dam.proyectoprogramacion.methods.battle.*;
-import com.dam.proyectoprogramacion.panels.battle.battleplayer1.LifePokemonInBattlePlayer1;
 
 import java.awt.*;
 
 /**
- * clase con el panel de la vida del pokemon en batalla del jugador 2
+ * clase con el panel de la vida del pokemon en batalla del jugador 1
  * @author cristian
  * @version v3.0
  */
-public class LifePokemonInBattlePlayer2 extends JPanel{
+public class LifePokemonInBattlePlayer2 extends JPanel {
 
     /**
      * atributos privados de la clase
@@ -59,7 +59,7 @@ public class LifePokemonInBattlePlayer2 extends JPanel{
         /**
          * establecemos el color inicial de la barra de vida
          */
-        lifePokemonBarPlayer2.setForeground(getBackgroundColorLifeBarPokemonPlayer2(auxLifePlayer2));
+        lifePokemonBarPlayer2.setForeground(getBackgroundColorLifeBarPokemonPlayer1(auxLifePlayer2));
 
         /**
          * lo añadimos todos
@@ -72,7 +72,7 @@ public class LifePokemonInBattlePlayer2 extends JPanel{
      * metodo para establecer el color de fondo de la vida del pokemon
      * @return el color de fondo
      */
-    public static Color getBackgroundColorLifeBarPokemonPlayer2(int value) {
+    public static Color getBackgroundColorLifeBarPokemonPlayer1(int value) {
         /**
          * valor que irá en la barra de vida
          */
