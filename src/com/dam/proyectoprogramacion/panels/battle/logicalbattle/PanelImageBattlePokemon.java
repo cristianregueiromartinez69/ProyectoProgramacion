@@ -20,8 +20,8 @@ public class PanelImageBattlePokemon extends JPanel {
     private static Image battleScenario;
 
     // Variables para ajustar la posición vertical
-    private static int offsetPlayer1Y = 250;
-    private static int offsetPlayer2Y = 250;
+    private static int offsetPlayer1Y = 350;
+    private static int offsetPlayer2Y = 350;
 
     public PanelImageBattlePokemon() {
 
