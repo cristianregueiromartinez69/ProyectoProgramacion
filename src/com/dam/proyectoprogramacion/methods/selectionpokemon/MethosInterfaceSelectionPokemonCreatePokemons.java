@@ -18,7 +18,7 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
     private static Gengar gengar;
     private static Infernape infernape;
     private static Lucario lucario;
-    private static Luxray luxray = new Luxray();
+    private static Luxray luxray;
     private static Marshadow marshadow;
     private static Milotic milotic;
     private static Snorlax snorlax;
@@ -36,6 +36,8 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
         drampa.setLevel(50);
         drampa.setLife(185);
         drampa.setSex("Macho");
+        drampa.setAttack(98);
+        drampa.setDefense(88);
         drampa.setSpeed(36);
         AttacksPokemons[] drampaAttacks = {
                 new AttacksPokemons("Dragon", "Pulso dragon", 85, 100),
@@ -60,6 +62,8 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
         empoleon.setLevel(50);
         empoleon.setLife(191);
         empoleon.setSex("Macho");
+        empoleon.setAttack(98);
+        empoleon.setDefense(88);
         empoleon.setSpeed(96);
         AttacksPokemons[] empoleonAttacks = {
                 new AttacksPokemons("Roca", "Trampa rocas", 0, 100),
