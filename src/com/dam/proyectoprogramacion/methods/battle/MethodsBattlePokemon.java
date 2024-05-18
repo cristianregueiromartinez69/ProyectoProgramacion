@@ -19,6 +19,19 @@ public class MethodsBattlePokemon {
        }
 
     }
+    public static int setValueOfLifePokemonInBattlePlayer2(String namePokemon){
+
+        if(namePokemon.equalsIgnoreCase(MethodsTextAreaBattlePlayer2.getNamePokemon1ToChangePLayer2())){
+            return MethodsLifeBattlePokemonPlayer2.getLifePokemon1Player2();
+        }
+        else if(namePokemon.equalsIgnoreCase(MethodsTextAreaBattlePlayer2.getNamePokemon2ToChangePLayer2())){
+            return MethodsLifeBattlePokemonPlayer2.getLifePokemon2Player2();
+        }
+        else{
+            return MethodsLifeBattlePokemonPlayer2.getLifePokemon3Player2();
+        }
+
+    }
 
     public static void updateLifePokemons1Player1AndPlayer2(){
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(LifePokemonInBattlePlayer1.getLifePokemon1PLayer1());

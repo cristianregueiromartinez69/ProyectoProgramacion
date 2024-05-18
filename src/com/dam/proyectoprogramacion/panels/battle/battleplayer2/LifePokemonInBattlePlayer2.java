@@ -59,7 +59,7 @@ public class LifePokemonInBattlePlayer2 extends JPanel {
         /**
          * establecemos el color inicial de la barra de vida
          */
-        lifePokemonBarPlayer2.setForeground(getBackgroundColorLifeBarPokemonPlayer1(auxLifePlayer2));
+        lifePokemonBarPlayer2.setForeground(getBackgroundColorLifeBarPokemonPlayer2(auxLifePlayer2));
 
         /**
          * lo añadimos todos
@@ -72,7 +72,7 @@ public class LifePokemonInBattlePlayer2 extends JPanel {
      * metodo para establecer el color de fondo de la vida del pokemon
      * @return el color de fondo
      */
-    public static Color getBackgroundColorLifeBarPokemonPlayer1(int value) {
+    public static Color getBackgroundColorLifeBarPokemonPlayer2(int value) {
         /**
          * valor que irá en la barra de vida
          */

@@ -321,6 +321,8 @@ public class Battle extends JFrame {
 
 
                 clearLifePanelPlayer1WhenPressButtonToChangePokemon();
+                updateLifeBarPlayer1();
+                updateLifeBarPlayer2();
                 pokemonBattle();
                 MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
             }
@@ -343,6 +345,8 @@ public class Battle extends JFrame {
                  */
 
                 clearLifePanelPlayer1WhenPressButtonToChangePokemon();
+                updateLifeBarPlayer1();
+                updateLifeBarPlayer2();
                 pokemonBattle();
                 MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
 
@@ -367,6 +371,8 @@ public class Battle extends JFrame {
                  */
 
                 clearLifePanelPlayer1WhenPressButtonToChangePokemon();
+                updateLifeBarPlayer1();
+                updateLifeBarPlayer2();
                 pokemonBattle();
                 MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
 
@@ -483,6 +489,7 @@ public class Battle extends JFrame {
                  */
                 clearLifePanelPlayer2WhenPressButtonToChangePokemon();
                 updateLifeBarPlayer1();
+                updateLifeBarPlayer2();
                 pokemonBattle();
                 MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
 
@@ -508,6 +515,7 @@ public class Battle extends JFrame {
                  */
                 clearLifePanelPlayer2WhenPressButtonToChangePokemon();
                 updateLifeBarPlayer1();
+                updateLifeBarPlayer2();
                 pokemonBattle();
                 MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
 
@@ -532,6 +540,7 @@ public class Battle extends JFrame {
                  */
                 clearLifePanelPlayer2WhenPressButtonToChangePokemon();
                 updateLifeBarPlayer1();
+                updateLifeBarPlayer2();
                 pokemonBattle();
                 MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
 
@@ -574,29 +583,25 @@ public class Battle extends JFrame {
         attacksPanelPlayer1.setVisible(false);
         attacksChangesPokemon1Player1.setVisible(true);
 
-        newLife = LifePokemonInBattlePlayer1.getLifePokemon1PLayer1() - daño;
-        LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(newLife);
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(newLife);
+        newLife = LifePokemonInBattlePlayer2.getLifePokemon1PLayer2() - daño;
+        LifePokemonInBattlePlayer2.setLifePokemon1PLayer2(newLife);
+        LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setValue(newLife);
 
         // Actualizar el color de la barra de vida
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setForeground(LifePokemonInBattlePlayer1.getBackgroundColorLifeBarPokemonPlayer1(newLife));
+        LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setForeground(LifePokemonInBattlePlayer2.getBackgroundColorLifeBarPokemonPlayer2(newLife));
 
         // Forzar la actualización visual de la barra de vida
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
+        LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
+
     }
     private static void clearGlobalPanelPlayer1WhenPressAttack2Buttons(){
+
         attacksPanelPlayer1.setVisible(false);
         attacksChangesPokemon1Player1.setVisible(true);
 
-        newLife = LifePokemonInBattlePlayer1.getLifePokemon1PLayer1() - daño;
-        LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(newLife);
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(newLife);
-
-        // Actualizar el color de la barra de vida
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setForeground(LifePokemonInBattlePlayer1.getBackgroundColorLifeBarPokemonPlayer1(newLife));
-
-        // Forzar la actualización visual de la barra de vida
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
+        int newLife = LifePokemonInBattlePlayer2.getLifePokemon1PLayer2() - daño;
+        LifePokemonInBattlePlayer2.setLifePokemon1PLayer2(newLife);
+        updateLifeBarPlayer2();
     }
     private static void clearGlobalPanelPlayer1WhenPressAttack3Buttons(){
         attacksPanelPlayer1.setVisible(false);
@@ -921,10 +926,10 @@ public class Battle extends JFrame {
 
     private void updateLifeBarPlayer1() {
         int currentLife = LifePokemonInBattlePlayer1.getLifePokemon1PLayer1();
-        JProgressBar lifeBar = LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1();
-        lifeBar.setValue(currentLife);
-        lifeBar.setForeground(LifePokemonInBattlePlayer1.getBackgroundColorLifeBarPokemonPlayer1(currentLife));
-        lifeBar.repaint();
+        LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(currentLife);
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setForeground(LifePokemonInBattlePlayer1.getBackgroundColorLifeBarPokemonPlayer1(currentLife));
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
     }
 
     //---------------------------metodos para cambios de paneles del jugador 2-----------------------------------//
@@ -1137,7 +1142,7 @@ public class Battle extends JFrame {
              * Se establece la nueva vida actual del pokemon
              */
             LifePokemonInBattlePlayer2.setActualLifePokemonInBattlePlayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon1Player2());
-            LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setValue(LifePokemonInBattlePlayer2.getActualLifePokemonInBattlePlayer2());
+            LifePokemonInBattlePlayer2.setAuxLifePlayer2(LifePokemonInBattlePlayer2.getLifePokemon1PLayer2());
         }
         /**
          * si el jugador pulsa el boton 2 de cambio, entra en la condicion
@@ -1147,7 +1152,7 @@ public class Battle extends JFrame {
              * Se establece la nueva vida actual del pokemon
              */
             LifePokemonInBattlePlayer2.setActualLifePokemonInBattlePlayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon2Player2());
-            LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setValue(LifePokemonInBattlePlayer2.getActualLifePokemonInBattlePlayer2());
+            LifePokemonInBattlePlayer2.setAuxLifePlayer2(LifePokemonInBattlePlayer2.getLifePokemon2PLayer2());
 
         }/**
          * si el jugador pulsa el boton 3 de cambio, entra en la condicion
@@ -1157,7 +1162,7 @@ public class Battle extends JFrame {
              * Se establece la nueva vida actual del pokemon
              */
             LifePokemonInBattlePlayer2.setActualLifePokemonInBattlePlayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon3Player2());
-            LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setValue(LifePokemonInBattlePlayer2.getActualLifePokemonInBattlePlayer2());
+            LifePokemonInBattlePlayer2.setAuxLifePlayer2(LifePokemonInBattlePlayer2.getLifePokemon3PLayer2());
 
         }
     }
@@ -1228,6 +1233,13 @@ public class Battle extends JFrame {
                     " ha hecho un cambio de pokemon, sale al campo de batalla " + MethodsTextAreaBattlePlayer2.getNamePokemon3ToChangePLayer2());
         }
 
+    }
+    private static void updateLifeBarPlayer2() {
+        int currentLife = LifePokemonInBattlePlayer2.getLifePokemon1PLayer2();
+        LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(MethodsBattlePokemon.setValueOfLifePokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()));
+        LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setValue(currentLife);
+        LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setForeground(LifePokemonInBattlePlayer2.getBackgroundColorLifeBarPokemonPlayer2(currentLife));
+        LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
     }
 
     /**
