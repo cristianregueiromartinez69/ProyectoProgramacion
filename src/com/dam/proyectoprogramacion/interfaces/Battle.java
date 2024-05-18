@@ -762,7 +762,7 @@ public class Battle extends JFrame {
              * Se establece la nueva vida actual del pokemon
              */
             LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
-            LifePokemonInBattlePlayer1.setAuxLife(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
+            LifePokemonInBattlePlayer1.setAuxLife(LifePokemonInBattlePlayer1.getLifePokemon1PLayer1());
         }
         /**
          * si el jugador pulsa el boton 2 de cambio, entra en la condicion
@@ -772,7 +772,7 @@ public class Battle extends JFrame {
              * Se establece la nueva vida actual del pokemon
              */
             LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon2Player1());
-            LifePokemonInBattlePlayer1.setAuxLife(MethodsLifeBattlePokemonPlayer1.getLifePokemon2Player1());
+            LifePokemonInBattlePlayer1.setAuxLife(LifePokemonInBattlePlayer1.getLifePokemon2PLayer1());
 
         }/**
          * si el jugador pulsa el boton 3 de cambio, entra en la condicion
@@ -782,7 +782,7 @@ public class Battle extends JFrame {
              * Se establece la nueva vida actual del pokemon
              */
             LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon3Player1());
-            LifePokemonInBattlePlayer1.setAuxLife(MethodsLifeBattlePokemonPlayer1.getLifePokemon3Player1());
+            LifePokemonInBattlePlayer1.setAuxLife(LifePokemonInBattlePlayer1.getLifePokemon3PLayer1());
 
         }
     }
