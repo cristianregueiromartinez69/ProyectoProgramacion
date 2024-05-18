@@ -569,8 +569,8 @@ public class Battle extends JFrame {
         attacksPanelPlayer1.setVisible(false);
         attacksChangesPokemon1Player1.setVisible(true);
         LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(LifePokemonInBattlePlayer1.getLifePokemon1PLayer1()-daño);
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(LifePokemonInBattlePlayer1.getLifePokemon1PLayer1() - daño);
-        daño++;
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(LifePokemonInBattlePlayer1.getLifePokemon1PLayer1());
+
     }
 
     /**
@@ -636,6 +636,8 @@ public class Battle extends JFrame {
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack4(MethodsBattlePlayer1.newType4Attack4Pokemon1Player1());
 
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.setImagePokemonInBattlePlayer1(MethodsBattlePlayer1.newImagePokemonInBattle1Player1());
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(LifePokemonInBattlePlayer1.getLifePokemon1PLayer1());
+
 
         contentPanel.add(makeAgainContentPanel(contentPanel));
 
