@@ -583,15 +583,9 @@ public class Battle extends JFrame {
         attacksPanelPlayer1.setVisible(false);
         attacksChangesPokemon1Player1.setVisible(true);
 
-        newLife = LifePokemonInBattlePlayer2.getLifePokemon1PLayer2() - daño;
+        int newLife = LifePokemonInBattlePlayer2.getLifePokemon1PLayer2() - daño;
         LifePokemonInBattlePlayer2.setLifePokemon1PLayer2(newLife);
-        LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setValue(newLife);
-
-        // Actualizar el color de la barra de vida
-        LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setForeground(LifePokemonInBattlePlayer2.getBackgroundColorLifeBarPokemonPlayer2(newLife));
-
-        // Forzar la actualización visual de la barra de vida
-        LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
+        updateLifeBarPlayer2();
 
     }
     private static void clearGlobalPanelPlayer1WhenPressAttack2Buttons(){
@@ -607,29 +601,17 @@ public class Battle extends JFrame {
         attacksPanelPlayer1.setVisible(false);
         attacksChangesPokemon1Player1.setVisible(true);
 
-        newLife = LifePokemonInBattlePlayer1.getLifePokemon1PLayer1() - daño;
-        LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(newLife);
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(newLife);
-
-        // Actualizar el color de la barra de vida
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setForeground(LifePokemonInBattlePlayer1.getBackgroundColorLifeBarPokemonPlayer1(newLife));
-
-        // Forzar la actualización visual de la barra de vida
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
+        int newLife = LifePokemonInBattlePlayer2.getLifePokemon1PLayer2() - daño;
+        LifePokemonInBattlePlayer2.setLifePokemon1PLayer2(newLife);
+        updateLifeBarPlayer2();
     }
     private static void clearGlobalPanelPlayer1WhenPressAttack4Buttons(){
         attacksPanelPlayer1.setVisible(false);
         attacksChangesPokemon1Player1.setVisible(true);
 
-        newLife = LifePokemonInBattlePlayer1.getLifePokemon1PLayer1() - daño;
-        LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(newLife);
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(newLife);
-
-        // Actualizar el color de la barra de vida
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setForeground(LifePokemonInBattlePlayer1.getBackgroundColorLifeBarPokemonPlayer1(newLife));
-
-        // Forzar la actualización visual de la barra de vida
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
+        int newLife = LifePokemonInBattlePlayer2.getLifePokemon1PLayer2() - daño;
+        LifePokemonInBattlePlayer2.setLifePokemon1PLayer2(newLife);
+        updateLifeBarPlayer2();
     }
 
     /**
@@ -925,11 +907,24 @@ public class Battle extends JFrame {
     }
 
     private void updateLifeBarPlayer1() {
+        // Obtener la vida actual del Pokémon en batalla
         int currentLife = LifePokemonInBattlePlayer1.getLifePokemon1PLayer1();
-        LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(currentLife);
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setForeground(LifePokemonInBattlePlayer1.getBackgroundColorLifeBarPokemonPlayer1(currentLife));
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
+
+        // Obtener el JProgressBar de la vida del Pokémon
+        JProgressBar lifeBarPlayer1 = LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1();
+
+        // Actualizar el valor de la vida en batalla usando el método adecuado
+        int actualLife = MethodsBattlePokemon.setValueOfLifePokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
+        LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(actualLife);
+
+        // Establecer el nuevo valor en la barra de vida
+        lifeBarPlayer1.setValue(currentLife);
+
+        // Actualizar el color de la barra de vida según la vida actual
+        lifeBarPlayer1.setForeground(LifePokemonInBattlePlayer1.getBackgroundColorLifeBarPokemonPlayer1(currentLife));
+
+        // Forzar la actualización visual de la barra de vida
+        lifeBarPlayer1.repaint();
     }
 
     //---------------------------metodos para cambios de paneles del jugador 2-----------------------------------//
@@ -1235,12 +1230,26 @@ public class Battle extends JFrame {
 
     }
     private static void updateLifeBarPlayer2() {
+        // Obtener la vida actual del Pokémon en batalla
         int currentLife = LifePokemonInBattlePlayer2.getLifePokemon1PLayer2();
-        LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(MethodsBattlePokemon.setValueOfLifePokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()));
-        LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setValue(currentLife);
-        LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setForeground(LifePokemonInBattlePlayer2.getBackgroundColorLifeBarPokemonPlayer2(currentLife));
-        LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
+
+        // Obtener el JProgressBar de la vida del Pokémon
+        JProgressBar lifeBarPlayer2 = LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2();
+
+        // Actualizar el valor de la vida en batalla usando el método adecuado
+        int actualLife = MethodsBattlePokemon.setValueOfLifePokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
+        LifePokemonInBattlePlayer2.setActualLifePokemonInBattlePlayer2(actualLife);
+
+        // Establecer el nuevo valor en la barra de vida
+        lifeBarPlayer2.setValue(currentLife);
+
+        // Actualizar el color de la barra de vida según la vida actual
+        lifeBarPlayer2.setForeground(LifePokemonInBattlePlayer2.getBackgroundColorLifeBarPokemonPlayer2(currentLife));
+
+        // Forzar la actualización visual de la barra de vida
+        lifeBarPlayer2.repaint();
     }
+
 
     /**
      * metodo para limpiar todos los paneles de la interfaz
