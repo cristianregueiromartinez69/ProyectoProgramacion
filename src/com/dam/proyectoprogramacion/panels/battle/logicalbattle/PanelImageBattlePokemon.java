@@ -10,8 +10,7 @@ import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
 
 /**
- * clase con el panel de imagen de la batalla pokemon
- * @author cristian
+ * Clase con el panel de imagen de la batalla Pokémon
  * @version v3.0
  */
 public class PanelImageBattlePokemon extends JPanel {
@@ -45,7 +44,7 @@ public class PanelImageBattlePokemon extends JPanel {
                 super.paintComponent(g);
                 g.drawImage(battleScenario, 0, 0, getWidth(), getHeight(), this);
 
-
+                // Dibujar Pokémon del jugador 1
                 int player1X = getWidth() / 3 - pokemonPlayer1.getWidth(null) / 2;
                 int player1Y = getHeight() - pokemonPlayer1.getHeight(null) - offsetPlayer1Y;
                 g.drawImage(pokemonPlayer1, player1X, player1Y, this);
@@ -56,7 +55,10 @@ public class PanelImageBattlePokemon extends JPanel {
                 g.drawImage(pokemonPlayer2, player2X, player2Y, this);
             }
         };
-        backgroundPanel.setPreferredSize(new Dimension(battleScenario.getWidth(null), battleScenario.getHeight(null)));
+
+        // Ajustar la altura preferida del escenario de batalla
+        int newHeight = battleScenario.getHeight(null) + 200; // Ajustar según sea necesario
+        backgroundPanel.setPreferredSize(new Dimension(battleScenario.getWidth(null), newHeight));
 
         add(backgroundPanel, BorderLayout.CENTER);
     }
@@ -66,6 +68,7 @@ public class PanelImageBattlePokemon extends JPanel {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(new PanelImageBattlePokemon());
         frame.pack();
+        frame.setSize(frame.getWidth(), frame.getHeight() + 200); // Ajustar la altura del frame
         frame.setVisible(true);
     }
 
@@ -96,12 +99,4 @@ public class PanelImageBattlePokemon extends JPanel {
         AffineTransformOp op = new AffineTransformOp(tx, AffineTransformOp.TYPE_NEAREST_NEIGHBOR);
         return op.filter(img, null);
     }
-
-
-
-    /**
-     * getter y setter de los atributos de la clase
-     * @return los atributos de la clase
-     */
-
 }
