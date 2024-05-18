@@ -568,7 +568,7 @@ public class Battle extends JFrame {
     private static void clearGlobalPanelPlayer1WhenPressAttacksButtons(){
         attacksPanelPlayer1.setVisible(false);
         attacksChangesPokemon1Player1.setVisible(true);
-
+        LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(LifePokemonInBattlePlayer1.getLifePokemon1PLayer1()-daño);
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(LifePokemonInBattlePlayer1.getLifePokemon1PLayer1() - daño);
         daño++;
     }
