@@ -1,6 +1,6 @@
 package com.dam.proyectoprogramacion.methods.battle;
 
-import com.dam.proyectoprogramacion.panels.battle.battleplayer1.LifePokemon1Player1;
+import com.dam.proyectoprogramacion.panels.battle.battleplayer1.LifePokemonInBattlePlayer1;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer2.LifePokemonInBattlePlayer2;
 
 
@@ -34,7 +34,7 @@ public class MethodsBattlePokemon {
     }
 
     public static void updateLifePokemons1Player1AndPlayer2(){
-        LifePokemon1Player1.getLifePokemonBarPlayer1().setValue(LifePokemon1Player1.getLifePokemon1PLayer1());
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(LifePokemonInBattlePlayer1.getLifePokemon1PLayer1());
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setValue(LifePokemonInBattlePlayer2.getLifePokemon1PLayer2());
     }
 
