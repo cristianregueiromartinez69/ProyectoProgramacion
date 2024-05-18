@@ -169,4 +169,18 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
     public static void setActualLifePokemonInBattlePlayer1(int actualLifePokemonInBattle) {
         LifePokemonInBattlePlayer1.actualLifePokemonInBattlePlayer1 = actualLifePokemonInBattle;
     }
+
+    public JPanel getPanelLifePokemonPLayer1() {
+        return panelLifePokemonPLayer1;
+    }
+
+    public void setPanelLifePokemonPLayer1(JPanel panelLifePokemonPLayer1) {
+        this.panelLifePokemonPLayer1 = panelLifePokemonPLayer1;
+    }
+
+
+
+    public static void setLifePokemonBarPlayer1(JProgressBar lifePokemonBarPlayer1) {
+        LifePokemonInBattlePlayer1.lifePokemonBarPlayer1 = lifePokemonBarPlayer1;
+    }
 }
