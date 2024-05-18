@@ -405,7 +405,7 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack1Player2().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                clearGlobalPanelPlayer2WhenPressAttacksButtons();
+                clearGlobalPanelPlayer2WhenPressAttack1Buttons();
             }
         });
         ButtonInterfaceAttacks.getAttack1Player2().addActionListener(this::putInformationAreaTextBattlePlayer2);
@@ -415,7 +415,7 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack2PLayer2().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                clearGlobalPanelPlayer2WhenPressAttacksButtons();
+                clearGlobalPanelPlayer2WhenPressAttack2Buttons();
             }
         });
         ButtonInterfaceAttacks.getAttack2PLayer2().addActionListener(this::putInformationAreaTextBattlePlayer2);
@@ -426,7 +426,7 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack3Player2().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                clearGlobalPanelPlayer2WhenPressAttacksButtons();
+                clearGlobalPanelPlayer2WhenPressAttack3Buttons();
             }
         });
         ButtonInterfaceAttacks.getAttack3Player2().addActionListener(this::putInformationAreaTextBattlePlayer2);
@@ -437,7 +437,7 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack4Player2().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                clearGlobalPanelPlayer2WhenPressAttacksButtons();
+                clearGlobalPanelPlayer2WhenPressAttack4Buttons();
             }
         });
         ButtonInterfaceAttacks.getAttack4Player2().addActionListener(this::putInformationAreaTextBattlePlayer2);
@@ -906,7 +906,7 @@ public class Battle extends JFrame {
 
     }
 
-    private void updateLifeBarPlayer1() {
+    private static void updateLifeBarPlayer1() {
         // Obtener la vida actual del Pokémon en batalla
         int currentLife = LifePokemonInBattlePlayer1.getLifePokemon1PLayer1();
 
@@ -940,9 +940,45 @@ public class Battle extends JFrame {
     /**
      * metodo para atacar y hacer visivle el panel de atacar y cambio e invisible el de ataques del jugador 2
      */
-    private static void clearGlobalPanelPlayer2WhenPressAttacksButtons(){
+    private static void clearGlobalPanelPlayer2WhenPressAttack1Buttons(){
+
         attacksPanelPlayer2.setVisible(false);
         attacksChangesPokemon1Player2.setVisible(true);
+
+        int newLife = LifePokemonInBattlePlayer1.getLifePokemon1PLayer1() - daño;
+        LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(newLife);
+        updateLifeBarPlayer1();
+
+    }
+    private static void clearGlobalPanelPlayer2WhenPressAttack2Buttons(){
+
+        attacksPanelPlayer2.setVisible(false);
+        attacksChangesPokemon1Player2.setVisible(true);
+
+        int newLife = LifePokemonInBattlePlayer1.getLifePokemon1PLayer1() - daño;
+        LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(newLife);
+        updateLifeBarPlayer1();
+
+    }
+    private static void clearGlobalPanelPlayer2WhenPressAttack3Buttons(){
+
+        attacksPanelPlayer2.setVisible(false);
+        attacksChangesPokemon1Player2.setVisible(true);
+
+        int newLife = LifePokemonInBattlePlayer1.getLifePokemon1PLayer1() - daño;
+        LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(newLife);
+        updateLifeBarPlayer1();
+
+    }
+    private static void clearGlobalPanelPlayer2WhenPressAttack4Buttons(){
+
+        attacksPanelPlayer2.setVisible(false);
+        attacksChangesPokemon1Player2.setVisible(true);
+
+        int newLife = LifePokemonInBattlePlayer1.getLifePokemon1PLayer1() - daño;
+        LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(newLife);
+        updateLifeBarPlayer1();
+
     }
     /**
      * metodo que hace visible el panel de ataque y cambio y oculta el de ataques
