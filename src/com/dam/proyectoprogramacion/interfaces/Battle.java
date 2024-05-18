@@ -567,10 +567,13 @@ public class Battle extends JFrame {
      * metodo para atacar y hacer visivle el panel de atacar y cambio e invisible el de ataques del jugador 1
      */
     private static void clearGlobalPanelPlayer1WhenPressAttacksButtons(){
+        /**
+         * hacemos invisible el panel de ayaques y visible el de ataque y cambio
+         */
         attacksPanelPlayer1.setVisible(false);
         attacksChangesPokemon1Player1.setVisible(true);
 
-         newLife = LifePokemonInBattlePlayer1.getLifePokemon1PLayer1() - daño;
+        newLife = LifePokemonInBattlePlayer1.getLifePokemon1PLayer1() - daño;
         LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(newLife);
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(newLife);
 

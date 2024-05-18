@@ -29,26 +29,41 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
      */
     public LifePokemonInBattlePlayer1(){
 
+        /**
+         * lo hacemos visible y le damos un layout
+         */
         setVisible(true);
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
 
         panelLifePokemonPLayer1 = new JPanel();
 
 
-
-
-
+        /**
+         * iniciamos la barra de vida
+         * el valor minimo es 0 y el maximo es la vida del pokemon en batalla
+         */
         lifePokemonBarPlayer1 = new JProgressBar(0, actualLifePokemonInBattlePlayer1);
         lifePokemonBarPlayer1.setValue(auxLife);
 
+        /**
+         * le damos unas dimensiones a la barra de vida
+         */
         lifePokemonBarPlayer1.setPreferredSize(new Dimension(400, 40));
         lifePokemonBarPlayer1.setMaximumSize(new Dimension(400, 40));
         lifePokemonBarPlayer1.setMinimumSize(new Dimension(400, 40));
+        /**
+         * hacemos que aparezca el numero de la vida del pokemon
+         */
         lifePokemonBarPlayer1.setStringPainted(true);
 
-        // Establecer el color inicial de la barra de vida
+        /**
+         * establecemos el color inicial de la barra de vida
+         */
         lifePokemonBarPlayer1.setForeground(getBackgroundColorLifeBarPokemonPlayer1(auxLife));
 
+        /**
+         * lo añadimos todos
+         */
         panelLifePokemonPLayer1.add(lifePokemonBarPlayer1);
         this.add(panelLifePokemonPLayer1);
     }
@@ -58,14 +73,26 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
      * @return el color de fondo
      */
     public static Color getBackgroundColorLifeBarPokemonPlayer1(int value) {
+        /**
+         * valor que irá en la barra de vida
+         */
         lifePokemonBarPlayer1.setString("" + lifePokemonBarPlayer1.getValue());
         if (value == 0) {
+            /**
+             * si la vida es 0, el color será negro
+             */
             return Color.BLACK;
         }
         if (value <= lifePokemonBarPlayer1.getMaximum() * 0.2) {
+            /**
+             * si tiene menos de un 20%, será roja
+             */
             return Color.RED;
         }
         if (value <= lifePokemonBarPlayer1.getMaximum() * 0.5) {
+            /**
+             * si tiene la menos de la mitad, será amarilla
+             */
             return Color.YELLOW;
         }
         return Color.GREEN;
