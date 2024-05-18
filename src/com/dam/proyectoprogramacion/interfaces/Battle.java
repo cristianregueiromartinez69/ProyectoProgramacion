@@ -585,6 +585,7 @@ public class Battle extends JFrame {
 
         int newLife = LifePokemonInBattlePlayer2.getLifePokemon1PLayer2() - daño;
         LifePokemonInBattlePlayer2.setLifePokemon1PLayer2(newLife);
+        updateLifeBarPlayer1();
         updateLifeBarPlayer2();
 
     }
@@ -595,6 +596,8 @@ public class Battle extends JFrame {
 
         int newLife = LifePokemonInBattlePlayer2.getLifePokemon1PLayer2() - daño;
         LifePokemonInBattlePlayer2.setLifePokemon1PLayer2(newLife);
+        updateLifeBarPlayer1();
+
         updateLifeBarPlayer2();
     }
     private static void clearGlobalPanelPlayer1WhenPressAttack3Buttons(){
@@ -603,6 +606,8 @@ public class Battle extends JFrame {
 
         int newLife = LifePokemonInBattlePlayer2.getLifePokemon1PLayer2() - daño;
         LifePokemonInBattlePlayer2.setLifePokemon1PLayer2(newLife);
+        updateLifeBarPlayer1();
+
         updateLifeBarPlayer2();
     }
     private static void clearGlobalPanelPlayer1WhenPressAttack4Buttons(){
@@ -611,6 +616,8 @@ public class Battle extends JFrame {
 
         int newLife = LifePokemonInBattlePlayer2.getLifePokemon1PLayer2() - daño;
         LifePokemonInBattlePlayer2.setLifePokemon1PLayer2(newLife);
+        updateLifeBarPlayer1();
+
         updateLifeBarPlayer2();
     }
 
@@ -677,7 +684,7 @@ public class Battle extends JFrame {
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack4(MethodsBattlePlayer1.newType4Attack4Pokemon1Player1());
 
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.setImagePokemonInBattlePlayer1(MethodsBattlePlayer1.newImagePokemonInBattle1Player1());
-
+        updateLifeBarPlayer1();
 
         contentPanel.add(makeAgainContentPanel(contentPanel));
 
@@ -725,6 +732,8 @@ public class Battle extends JFrame {
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack4(MethodsBattlePlayer1.newType4Attack4Pokemon2Player1());
 
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.setImagePokemonInBattlePlayer1(MethodsBattlePlayer1.newImagePokemonInBattle2Player1());
+
+        updateLifeBarPlayer1();
 
         contentPanel.add(makeAgainContentPanel(contentPanel));
         revalidateContentPanel();
@@ -774,6 +783,8 @@ public class Battle extends JFrame {
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack4(MethodsBattlePlayer1.newType4Attack4Pokemon3Player1());
 
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.setImagePokemonInBattlePlayer1(MethodsBattlePlayer1.newImagePokemonInBattle3Player1());
+
+        updateLifeBarPlayer1();
 
 
         contentPanel.add(makeAgainContentPanel(contentPanel));
@@ -917,8 +928,8 @@ public class Battle extends JFrame {
         int actualLife = MethodsBattlePokemon.setValueOfLifePokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
         LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(actualLife);
 
-        // Establecer el nuevo valor en la barra de vida
-        lifeBarPlayer1.setValue(currentLife);
+        LifePokemonInBattlePlayer1.setAuxLife(currentLife);
+        lifeBarPlayer1.setValue(LifePokemonInBattlePlayer1.getAuxLife());
 
         // Actualizar el color de la barra de vida según la vida actual
         lifeBarPlayer1.setForeground(LifePokemonInBattlePlayer1.getBackgroundColorLifeBarPokemonPlayer1(currentLife));
@@ -1044,6 +1055,10 @@ public class Battle extends JFrame {
         DataNamesIconsColorsAttacksAndPokemonsPlayer2.setPathIconAttack4(MethodsBattlePlayer2.newType4Attack4Pokemon1Player2());
 
         DataNamesIconsColorsAttacksAndPokemonsPlayer2.setImagePokemonInBattlePlayer2(MethodsBattlePlayer2.newImagePokemonInBattle1Player2());
+
+        updateLifeBarPlayer2();
+
+
         contentPanel.add(makeAgainContentPanel(contentPanel));
         revalidateContentPanel();
 
@@ -1093,6 +1108,9 @@ public class Battle extends JFrame {
 
         DataNamesIconsColorsAttacksAndPokemonsPlayer2.setImagePokemonInBattlePlayer2(MethodsBattlePlayer2.newImagePokemonInBattle2Player2());
 
+        updateLifeBarPlayer2();
+
+
         contentPanel.add(makeAgainContentPanel(contentPanel));
         revalidateContentPanel();
 
@@ -1141,6 +1159,9 @@ public class Battle extends JFrame {
         DataNamesIconsColorsAttacksAndPokemonsPlayer2.setPathIconAttack4(MethodsBattlePlayer2.newType4Attack4Pokemon3Player2());
 
         DataNamesIconsColorsAttacksAndPokemonsPlayer2.setImagePokemonInBattlePlayer2(MethodsBattlePlayer2.newImagePokemonInBattle3Player2());
+
+        updateLifeBarPlayer2();
+
 
         contentPanel.add(makeAgainContentPanel(contentPanel));
         revalidateContentPanel();
