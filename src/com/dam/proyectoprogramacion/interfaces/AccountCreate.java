@@ -2,8 +2,8 @@ package com.dam.proyectoprogramacion.interfaces;
 
 import com.dam.proyectoprogramacion.background.BackgroundMainMenuPanel;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCreateAccount;
-import com.dam.proyectoprogramacion.methodsandmain.MethodsInterfaceAccountCreate;
-import com.dam.proyectoprogramacion.methodsandmain.MethodsLogicalAccountCreate;
+import com.dam.proyectoprogramacion.methods.accountcreate.MethodsInterfaceAccountCreate;
+import com.dam.proyectoprogramacion.methods.accountcreate.MethodsLogicalAccountCreate;
 import com.dam.proyectoprogramacion.panels.accountcreate.*;
 
 import javax.swing.*;
@@ -67,7 +67,7 @@ public class AccountCreate extends JFrame {
         /**
          * varibale de tipo imagen que tiene el path de la imagen de fondo
          */
-        Image backgroundImage = new ImageIcon("imagenes/fondosPreparacion.png").getImage();
+        Image backgroundImage = new ImageIcon("imagenes/backSeleccionPokemon.png").getImage();
 
         BackgroundMainMenuPanel backgroundPanel = new BackgroundMainMenuPanel(backgroundImage);
         backgroundPanel.setLayout(new BorderLayout());

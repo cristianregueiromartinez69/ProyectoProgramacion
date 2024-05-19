@@ -1,7 +1,6 @@
 package com.dam.proyectoprogramacion.panels.luck;
 
-import com.dam.proyectoprogramacion.interfaces.Luck;
-import com.dam.proyectoprogramacion.methodsandmain.MethodsInterfaceLuck;
+import com.dam.proyectoprogramacion.methods.luck.MethodsInterfaceLuck;
 
 import javax.swing.*;
 

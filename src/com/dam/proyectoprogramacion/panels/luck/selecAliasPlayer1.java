@@ -1,7 +1,8 @@
 package com.dam.proyectoprogramacion.panels.luck;
 
 import javax.swing.*;
-import com.dam.proyectoprogramacion.methodsandmain.*;
+
+import com.dam.proyectoprogramacion.methods.luck.MethodsInterfaceLuck;
 
 /**
  * clase con el panel del alias del jugador 1

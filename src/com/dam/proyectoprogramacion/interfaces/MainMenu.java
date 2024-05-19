@@ -1,5 +1,5 @@
 package com.dam.proyectoprogramacion.interfaces;
-import com.dam.proyectoprogramacion.pokemonSongs.MusicMainMenu;
+import com.dam.proyectoprogramacion.Songs.MusicIntroGame;
 import com.dam.proyectoprogramacion.background.*;
 import com.dam.proyectoprogramacion.buttons.*;
 import javax.swing.*;
@@ -23,7 +23,8 @@ public class MainMenu extends JFrame {
         /**
          * metodo para llamar a la musica que sonará en el menu principal
          */
-        MusicMainMenu.music();
+
+        MusicIntroGame.music();
         /**
          * defenimos características de la interfaz
          */
