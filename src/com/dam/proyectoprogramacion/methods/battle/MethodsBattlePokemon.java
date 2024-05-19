@@ -88,19 +88,43 @@ public class MethodsBattlePokemon {
     }
 
 
+    /**
+     * metodo para hacer la formula de daño del ataque 1 pokemon en batalla del jugador 1
+     * @param typePokemonUser el tipo del pokemon en batalla del jugador 1
+     * @param typeAttack1PokemonUser el tipo del ataque 1 del pokemon en batalla del jugador 1
+     * @param powerAttack1PokemonUser el poder de ataque del pokemon en batalla del jugador 1
+     * @param powerOfAttackPokemonUser la cantidad de ataque del pokemon en batalla del jugador 1
+     * @param typeOpposingPokemon el tipo de pokemon rival en batalla
+     * @param defenseOpppsingPokemon la defensa del pokemon rival en batalla
+     * @return el daño que le hacemos
+     */
     public static float getDamageAttack1PokemonInBattlePlayer1(String typePokemonUser, String typeAttack1PokemonUser,
                                                     int powerAttack1PokemonUser, int powerOfAttackPokemonUser,
                                                     String typeOpposingPokemon, int defenseOpppsingPokemon){
+        /**
+         * asignamos una variable local de tipo float el metodo que nos dice si hay o no stab
+         */
         float stab = getBonificationStabAttacksPokemonInBattlePlayer1(typePokemonUser);
 
+        /**
+         * asignamos en una variable local de tipo float el metodo para saber la efectividad del ataque sobre el pokemon rival
+         */
         float effectiveness = getEffectivenessForTheOpposingPokemon(typeAttack1PokemonUser, typeOpposingPokemon);
 
+        /**
+         * asignamos en una variable local de tipo floar, el metodo que nos da un valor de 85 a 100         */
         float variation = getValueOfVariation();
 
+        /**
+         * formula de daño
+         */
         float damage = 0.01f * stab * effectiveness * variation *
                 (((0.2f * LEVEL + 1) * powerOfAttackPokemonUser * powerAttack1PokemonUser) /
                         (25 * defenseOpppsingPokemon) + 2);
 
+        /**
+         * devolvemos el daño
+         */
         return damage;
     }
 
