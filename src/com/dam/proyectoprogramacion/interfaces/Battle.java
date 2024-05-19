@@ -233,7 +233,7 @@ public class Battle extends JFrame {
             public void actionPerformed(ActionEvent e) {
 
                 System.out.println("el daño a " + MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2() + " es de: " +
-                        MethodsBattlePokemon.getDamageAttack1PokemonInBattlePlayer1(
+                        MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer1(
                                 MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
                                 MethodsTextAreaBattlePlayer1.getTypeAttack1PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
                                 MethodsBattlePlayer1.getPowerAttack1PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
@@ -252,8 +252,17 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack2PLayer1().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                System.out.println("el daño a " + MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2() + " es de: " +
+                        MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer1(
+                                MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
+                                MethodsTextAreaBattlePlayer1.getTypeAttack2PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                                MethodsBattlePlayer1.getPowerAttack2PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                                MethodsBattlePlayer1.getAmountAttackPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                                MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
+                                MethodsBattlePlayer1.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2())));
 
-                clearGlobalPanelPlayer1WhenPressAttack2Buttons();
+
+                                clearGlobalPanelPlayer1WhenPressAttack2Buttons();
             }
         });
         ButtonInterfaceAttacks.getAttack2PLayer1().addActionListener(this::putInformationAreaTextBattlePlayer1);
@@ -264,7 +273,16 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack3Player1().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                clearGlobalPanelPlayer1WhenPressAttack3Buttons();
+                System.out.println("el daño a " + MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2() + " es de: " +
+                        MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer1(
+                                MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
+                                MethodsTextAreaBattlePlayer1.getTypeAttack3PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                                MethodsBattlePlayer1.getPowerAttack3PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                                MethodsBattlePlayer1.getAmountAttackPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                                MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
+                                MethodsBattlePlayer1.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2())));
+
+                                clearGlobalPanelPlayer1WhenPressAttack3Buttons();
             }
         });
         ButtonInterfaceAttacks.getAttack3Player1().addActionListener(this::putInformationAreaTextBattlePlayer1);
@@ -275,6 +293,15 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack4Player1().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                System.out.println("el daño a " + MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2() + " es de: " +
+                        MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer1(
+                                MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
+                                MethodsTextAreaBattlePlayer1.getTypeAttack4PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                                MethodsBattlePlayer1.getPowerAttack4PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                                MethodsBattlePlayer1.getAmountAttackPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                                MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
+                                MethodsBattlePlayer1.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2())));
+
 
                 clearGlobalPanelPlayer1WhenPressAttack4Buttons();
             }

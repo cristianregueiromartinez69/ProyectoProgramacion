@@ -40,18 +40,11 @@ public class MethodsBattlePokemon {
     /**
      * variables para almacenar la cantidad de ataque, defensa y poder de ataque del pokemon en batalla del jugador 1
      */
-    public static  float Player1PokemonAttackAmount;
-    public static  float powerOfAttack1PokemonPlayer1;
-    public static  float powerOfAttack2PokemonPlayer1;
-    public static  float powerOfAttack3PokemonPlayer1;
-    public static  float powerOfAttack4PokemonPlayer1;
-    public static  float Player1PokemonDefenseAmount;
+
     /**
      * variables para almacenar la cantidad de ataque, defensa y poder de ataque del pokemon en batalla del jugador 2
      */
-    public static  float Player2PokemonAttackAmount;
-    public static  float powerOfAttackPokemonPlayer2;
-    public static  float Player2PokemonDefenseAmount;
+
 
 
 
@@ -98,7 +91,7 @@ public class MethodsBattlePokemon {
      * @param defenseOpppsingPokemon la defensa del pokemon rival en batalla
      * @return el daño que le hacemos
      */
-    public static float getDamageAttack1PokemonInBattlePlayer1(String typePokemonUser, String typeAttack1PokemonUser,
+    public static float getDamageAttacksPokemonInBattlePlayer1(String typePokemonUser, String typeAttack1PokemonUser,
                                                     int powerAttack1PokemonUser, int powerOfAttackPokemonUser,
                                                     String typeOpposingPokemon, int defenseOpppsingPokemon){
         /**
@@ -127,6 +120,8 @@ public class MethodsBattlePokemon {
          */
         return damage;
     }
+
+
 
     /**
      * metodo para saber si el ataque 1 del pokemon en batalla pega por stab dle jugador 1
@@ -247,6 +242,8 @@ public class MethodsBattlePokemon {
         }
 
     }
+
+
 
     //--------------------------------------------------------------------------//
 
