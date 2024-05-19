@@ -127,6 +127,30 @@ public class MethodsBattlePokemon {
      return auxDamage;
     }
 
+    public static float GetEffectivenessForTheOpposingPokemon(String typeAttack, String typeOpposingPokemon){
+
+        String result = MethosTargetType.getResultOfAttacksBothPlayer(typeAttack, typeOpposingPokemon);
+        if(result.equalsIgnoreCase(MethodsTextAreaBattlePlayer1.NULL)){
+            return NULL_DAMAGE;
+        }
+        else if(result.equalsIgnoreCase(MethodsTextAreaBattlePlayer1.VERY_INEFFECTIVE)){
+            return VERY_INEFFECTIVE_DAMAGE;
+        }
+        else if(result.equalsIgnoreCase(MethodsTextAreaBattlePlayer1.INEFFECTIVE)){
+            return INEFFECTIVE_DAMAGE;
+        }
+        else if(result.equalsIgnoreCase(MethodsTextAreaBattlePlayer1.NEUTRAL)){
+            return NEUTRAL_DAMAGE;
+        }
+        else if(result.equalsIgnoreCase(MethodsTextAreaBattlePlayer1.EFFECTIVE)){
+            return EFFECTIVE_DAMAGE;
+        }
+        else{
+            return SUPER_EFFECTIVE_DAMAGE;
+        }
+
+    }
+
     /**
      * metodo para desglosar el tipo del pokemon en batalla para verificar el stab
      * @param type el tipo del pokemon en batalla
