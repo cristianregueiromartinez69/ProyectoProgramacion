@@ -41,8 +41,8 @@ public class Battle extends JFrame {
     private  static JPanel lifePanelPokemon;
     private static JPanel textAreaPanel;
 
-    private static int daño = 30;
-    private static int newLife;
+   private static int damagePlayer1 = 30;
+   private static int damagePlayer2;
 
 
 
@@ -232,15 +232,7 @@ public class Battle extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                System.out.println("el daño a " + MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2() + " es de: " +
-                        MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer1(
-                                MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
-                                MethodsTextAreaBattlePlayer1.getTypeAttack1PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
-                                MethodsBattlePlayer1.getPowerAttack1PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
-                                MethodsBattlePlayer1.getAmountAttackPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
-                                MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
-                                MethodsBattlePlayer1.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2())
-                        ));
+
               clearGlobalPanelPlayer1WhenPressAttack1Buttons();
 
             }
@@ -252,15 +244,6 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack2PLayer1().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("el daño a " + MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2() + " es de: " +
-                        MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer1(
-                                MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
-                                MethodsTextAreaBattlePlayer1.getTypeAttack2PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
-                                MethodsBattlePlayer1.getPowerAttack2PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
-                                MethodsBattlePlayer1.getAmountAttackPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
-                                MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
-                                MethodsBattlePlayer1.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2())));
-
 
                                 clearGlobalPanelPlayer1WhenPressAttack2Buttons();
             }
@@ -273,16 +256,7 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack3Player1().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("el daño a " + MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2() + " es de: " +
-                        MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer1(
-                                MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
-                                MethodsTextAreaBattlePlayer1.getTypeAttack3PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
-                                MethodsBattlePlayer1.getPowerAttack3PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
-                                MethodsBattlePlayer1.getAmountAttackPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
-                                MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
-                                MethodsBattlePlayer1.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2())));
-
-                                clearGlobalPanelPlayer1WhenPressAttack3Buttons();
+                               clearGlobalPanelPlayer1WhenPressAttack3Buttons();
             }
         });
         ButtonInterfaceAttacks.getAttack3Player1().addActionListener(this::putInformationAreaTextBattlePlayer1);
@@ -293,17 +267,7 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack4Player1().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("el daño a " + MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2() + " es de: " +
-                        MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer1(
-                                MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
-                                MethodsTextAreaBattlePlayer1.getTypeAttack4PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
-                                MethodsBattlePlayer1.getPowerAttack4PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
-                                MethodsBattlePlayer1.getAmountAttackPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
-                                MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
-                                MethodsBattlePlayer1.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2())));
-
-
-                clearGlobalPanelPlayer1WhenPressAttack4Buttons();
+                 clearGlobalPanelPlayer1WhenPressAttack4Buttons();
             }
         });
         ButtonInterfaceAttacks.getAttack4Player1().addActionListener(this::putInformationAreaTextBattlePlayer1);
@@ -443,17 +407,7 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack1Player2().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-                System.out.println("el daño a " + MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1() + " es de: " +
-                        MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer2(
-                                MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
-                                MethodsTextAreaBattlePlayer2.getTypeAttack1PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
-                                MethodsBattlePlayer2.getPowerAttack1PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
-                                MethodsBattlePlayer2.getAmountAttackPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
-                                MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
-                                MethodsBattlePlayer2.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1())));
-
-                                clearGlobalPanelPlayer2WhenPressAttack1Buttons();
+                       clearGlobalPanelPlayer2WhenPressAttack1Buttons();
             }
         });
         ButtonInterfaceAttacks.getAttack1Player2().addActionListener(this::putInformationAreaTextBattlePlayer2);
@@ -463,15 +417,6 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack2PLayer2().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("el daño a " + MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1() + " es de: " +
-                        MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer2(
-                                MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
-                                MethodsTextAreaBattlePlayer2.getTypeAttack2PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
-                                MethodsBattlePlayer2.getPowerAttack2PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
-                                MethodsBattlePlayer2.getAmountAttackPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
-                                MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
-                                MethodsBattlePlayer2.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1())));
-
 
                 clearGlobalPanelPlayer2WhenPressAttack2Buttons();
             }
@@ -484,17 +429,7 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack3Player2().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("el daño a " + MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1() + " es de: " +
-                        MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer2(
-                                MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
-                                MethodsTextAreaBattlePlayer2.getTypeAttack3PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
-                                MethodsBattlePlayer2.getPowerAttack3PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
-                                MethodsBattlePlayer2.getAmountAttackPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
-                                MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
-                                MethodsBattlePlayer2.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1())));
-
-
-                clearGlobalPanelPlayer2WhenPressAttack3Buttons();
+                      clearGlobalPanelPlayer2WhenPressAttack3Buttons();
             }
         });
         ButtonInterfaceAttacks.getAttack3Player2().addActionListener(this::putInformationAreaTextBattlePlayer2);
@@ -505,17 +440,7 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack4Player2().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("el daño a " + MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1() + " es de: " +
-                        MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer2(
-                                MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
-                                MethodsTextAreaBattlePlayer2.getTypeAttack4PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
-                                MethodsBattlePlayer2.getPowerAttack4PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
-                                MethodsBattlePlayer2.getAmountAttackPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
-                                MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
-                                MethodsBattlePlayer2.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1())));
-
-
-                clearGlobalPanelPlayer2WhenPressAttack4Buttons();
+                          clearGlobalPanelPlayer2WhenPressAttack4Buttons();
             }
         });
         ButtonInterfaceAttacks.getAttack4Player2().addActionListener(this::putInformationAreaTextBattlePlayer2);
@@ -661,9 +586,8 @@ public class Battle extends JFrame {
         attacksPanelPlayer1.setVisible(false);
         attacksChangesPokemon1Player1.setVisible(true);
 
-        int newLife = LifePokemonInBattlePlayer2.getLifePokemon1PLayer2() - daño;
-        LifePokemonInBattlePlayer2.setLifePokemon1PLayer2(newLife);
-        updateLifeBarPlayer1();
+        int newLife = MethodsBattlePokemon.setValueOfLifePokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2(), damagePlayer1);
+
         updateLifeBarPlayer2();
 
     }
@@ -672,8 +596,8 @@ public class Battle extends JFrame {
         attacksPanelPlayer1.setVisible(false);
         attacksChangesPokemon1Player1.setVisible(true);
 
-        int newLife = LifePokemonInBattlePlayer2.getLifePokemon1PLayer2() - daño;
-        LifePokemonInBattlePlayer2.setLifePokemon1PLayer2(newLife);
+        damagePlayer1 = LifePokemonInBattlePlayer2.getLifePokemon1PLayer2() - 30;
+        LifePokemonInBattlePlayer2.setLifePokemon1PLayer2(damagePlayer1);
         updateLifeBarPlayer1();
 
         updateLifeBarPlayer2();
@@ -995,18 +919,17 @@ public class Battle extends JFrame {
 
     }
 
-    private static void updateLifeBarPlayer1() {
-        // Obtener la vida actual del Pokémon en batalla
-        int currentLife = LifePokemonInBattlePlayer1.getLifePokemon1PLayer1();
+    private static void updateLifeBarPlayer1(int value) {
+
 
         // Obtener el JProgressBar de la vida del Pokémon
         JProgressBar lifeBarPlayer1 = LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1();
 
         // Actualizar el valor de la vida en batalla usando el método adecuado
-        int actualLife = MethodsBattlePokemon.setValueOfLifePokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
+        int actualLife = MethodsLifeBattlePokemonPlayer1.getLifePokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
         LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(actualLife);
 
-        LifePokemonInBattlePlayer1.setAuxLife(currentLife);
+        LifePokemonInBattlePlayer1.setAuxLife(MethodsBattlePokemon.setValueOfLifePokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1(), value));
         lifeBarPlayer1.setValue(LifePokemonInBattlePlayer1.getAuxLife());
 
         // Actualizar el color de la barra de vida según la vida actual
@@ -1034,8 +957,8 @@ public class Battle extends JFrame {
         attacksPanelPlayer2.setVisible(false);
         attacksChangesPokemon1Player2.setVisible(true);
 
-        int newLife = LifePokemonInBattlePlayer1.getLifePokemon1PLayer1() - daño;
-        LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(newLife);
+        int newLife = MethodsLifeBattlePokemonPlayer1.getLifePokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()) - daño;
+        MethodsBattlePokemon.setValueOfLifePokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1(), newLife);
         updateLifeBarPlayer1();
 
     }
@@ -1364,22 +1287,20 @@ public class Battle extends JFrame {
         }
 
     }
-    private static void updateLifeBarPlayer2() {
-        // Obtener la vida actual del Pokémon en batalla
-        int currentLife = LifePokemonInBattlePlayer2.getLifePokemon1PLayer2();
+    private static void updateLifeBarPlayer2(int value) {
 
         // Obtener el JProgressBar de la vida del Pokémon
         JProgressBar lifeBarPlayer2 = LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2();
 
         // Actualizar el valor de la vida en batalla usando el método adecuado
-        int actualLife = MethodsBattlePokemon.setValueOfLifePokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
+        int actualLife = MethodsLifeBattlePokemonPlayer2.getLifePokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
         LifePokemonInBattlePlayer2.setActualLifePokemonInBattlePlayer2(actualLife);
 
-        // Establecer el nuevo valor en la barra de vida
-        lifeBarPlayer2.setValue(currentLife);
+        LifePokemonInBattlePlayer2.setAuxLifePlayer2(MethodsBattlePokemon.setValueOfLifePokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2(), value));
+        lifeBarPlayer2.setValue(LifePokemonInBattlePlayer2.getAuxLifePlayer2());
 
         // Actualizar el color de la barra de vida según la vida actual
-        lifeBarPlayer2.setForeground(LifePokemonInBattlePlayer2.getBackgroundColorLifeBarPokemonPlayer2(currentLife));
+        lifeBarPlayer2.setForeground(LifePokemonInBattlePlayer2.getBackgroundColorLifeBarPokemonPlayer2(value));
 
         // Forzar la actualización visual de la barra de vida
         lifeBarPlayer2.repaint();

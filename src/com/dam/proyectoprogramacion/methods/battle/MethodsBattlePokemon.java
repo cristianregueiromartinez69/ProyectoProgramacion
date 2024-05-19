@@ -66,18 +66,21 @@ public class MethodsBattlePokemon {
      * @param namePokemon el nombre del pokemon en batalla
      * @return la vida del pokemon
      */
-    public static int setValueOfLifePokemonInBattlePlayer1(String namePokemon){
-
+    public static int setValueOfLifePokemonInBattlePlayer1(String namePokemon, int value){
+        int newLifePokemon = 0;
        if(namePokemon.equalsIgnoreCase(MethodsTextAreaBattlePlayer1.getNamePokemon1ToChangePLayer1())){
-           return MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1();
+          LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(value);
+          newLifePokemon = LifePokemonInBattlePlayer1.getLifePokemon1PLayer1();
        }
        else if(namePokemon.equalsIgnoreCase(MethodsTextAreaBattlePlayer1.getNamePokemon2ToChangePLayer1())){
-           return MethodsLifeBattlePokemonPlayer1.getLifePokemon2Player1();
+           LifePokemonInBattlePlayer1.setLifePokemon2PLayer1(value);
+           newLifePokemon = LifePokemonInBattlePlayer1.getLifePokemon2PLayer1();
        }
-       else{
-           return MethodsLifeBattlePokemonPlayer1.getLifePokemon3Player1();
+       else if(namePokemon.equalsIgnoreCase(MethodsTextAreaBattlePlayer1.getNamePokemon3ToChangePLayer1())){
+           LifePokemonInBattlePlayer1.setLifePokemon3PLayer1(value);
+           newLifePokemon = LifePokemonInBattlePlayer1.getLifePokemon3PLayer1();
        }
-
+     return newLifePokemon;
     }
 
 
@@ -229,18 +232,21 @@ public class MethodsBattlePokemon {
      * @param namePokemon el nombre del pokemon en batalla
      * @return la vida del pokemon
      */
-    public static int setValueOfLifePokemonInBattlePlayer2(String namePokemon){
-
+    public static int setValueOfLifePokemonInBattlePlayer2(String namePokemon, int value){
+        int newLifePokemon = 0;
         if(namePokemon.equalsIgnoreCase(MethodsTextAreaBattlePlayer2.getNamePokemon1ToChangePLayer2())){
-            return MethodsLifeBattlePokemonPlayer2.getLifePokemon1Player2();
+            LifePokemonInBattlePlayer2.setLifePokemon1PLayer2(value);
+            newLifePokemon = LifePokemonInBattlePlayer2.getLifePokemon1PLayer2();
         }
         else if(namePokemon.equalsIgnoreCase(MethodsTextAreaBattlePlayer2.getNamePokemon2ToChangePLayer2())){
-            return MethodsLifeBattlePokemonPlayer2.getLifePokemon2Player2();
+            LifePokemonInBattlePlayer2.setLifePokemon2PLayer2(value);
+            newLifePokemon = LifePokemonInBattlePlayer2.getLifePokemon2PLayer2();
         }
-        else{
-            return MethodsLifeBattlePokemonPlayer2.getLifePokemon3Player2();
+        else if(namePokemon.equalsIgnoreCase(MethodsTextAreaBattlePlayer2.getNamePokemon3ToChangePLayer2())){
+            LifePokemonInBattlePlayer2.setLifePokemon3PLayer2(value);
+            newLifePokemon = LifePokemonInBattlePlayer2.getLifePokemon3PLayer2();
         }
-
+        return newLifePokemon;
     }
 
 

@@ -163,6 +163,50 @@ public class MethodsLifeBattlePokemonPlayer1 {
         return lifePokemon3;
     }
 
+    public static int getLifePokemonInBattlePlayer1(String namePokemon){
+
+        /**
+         * iniciamos la cantidad de defensa a 0
+         */
+        int life = 0;
+
+        /**
+         * iniciamos un array de objetos igual a la lista de pokemons escogida por el jugador 1
+         */
+        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer1();
+
+        /**
+         * recorremos con un for el array de pokemons
+         */
+        for (int i = 0; i < pokemons.size(); i++) {
+
+            PokemonProperties pokemon = (PokemonProperties) pokemons.get(i);
+
+            /**
+             * si algun nombre coincide con el pokemon en batalla, entra en la condicion
+             */
+            if (pokemon.getName().equalsIgnoreCase(namePokemon)) {
+                /**
+                 * lo indicamos
+                 */
+                pokemon = (PokemonProperties) pokemons.get(i);
+
+                /**
+                 * almacenamos el valor de la defensa
+                 */
+                life = pokemon.getLife();
+
+                break;
+
+
+            }
+        }
+        /**
+         * devolvemos el ataque
+         */
+        return life;
+    }
+
 
 
 
