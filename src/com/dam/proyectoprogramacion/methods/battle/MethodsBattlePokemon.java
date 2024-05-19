@@ -100,15 +100,30 @@ public class MethodsBattlePokemon {
      */
     public static Float getBonificationStabAttack1PokemonInBattlePlayer1(String type){
 
+        /**
+         * recogemos en un array los tipos del pokemon desglosado
+         */
         String [] desgloseType = breakDownPokemonTypeInBattlePlayer1(MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1());
+        /**
+         * variable local que inicialmente será de no stab
+         */
         float auxDamage = NOT_STAB;
+        /**
+         * for para recorrer el tipo desglosado
+         */
         for(String auxType:desgloseType){
+            /**
+             * si hay coincidencias de tipos, se le asigna el stab
+             */
             if(auxType.equalsIgnoreCase(type)){
                 auxDamage = STAB;
                 return auxDamage;
             }
         }
 
+        /**
+         * si no devolverá que no pega por stab
+         */
      return auxDamage;
     }
 
