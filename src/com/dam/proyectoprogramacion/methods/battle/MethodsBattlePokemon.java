@@ -30,7 +30,7 @@ public class MethodsBattlePokemon {
     /**
      * varible de daño comprendida entre 85 y 100
      */
-    public static float VARIATION;
+    public static float variation;
 
     /**
      * nivel del pokemon que siempre será 100
@@ -91,9 +91,17 @@ public class MethodsBattlePokemon {
     public static float attack1PokemonInBattlePlayer1(String typePokemonUser, String typeAttack1PokemonUser,
                                                     int powerAttack1PokemonUser, int powerOfAttackPokemonUser,
                                                     String typeOpposingPokemon, int defenseOpppsingPokemon){
-    float damage = 0.01f;
+        float stab = getBonificationStabAttacksPokemonInBattlePlayer1(typePokemonUser);
 
-        return 0;
+        float effectiveness = getEffectivenessForTheOpposingPokemon(typeAttack1PokemonUser, typeOpposingPokemon);
+
+        float variation = getValueOfVariation();
+
+        float damage = 0.01f * stab * effectiveness * variation *
+                (((0.2f * LEVEL + 1) * powerOfAttackPokemonUser * powerAttack1PokemonUser) /
+                        (25 * defenseOpppsingPokemon) + 2);
+
+        return damage;
     }
 
     /**
@@ -101,7 +109,7 @@ public class MethodsBattlePokemon {
      * @param type el tipo del ataque 1 del pokemon en batalla
      * @return el daño por stab
      */
-    public static float getBonificationStabAttack1PokemonInBattlePlayer1(String type){
+    public static float getBonificationStabAttacksPokemonInBattlePlayer1(String type){
 
         /**
          * recogemos en un array los tipos del pokemon desglosado
@@ -136,7 +144,7 @@ public class MethodsBattlePokemon {
      * @param typeOpposingPokemon el tipo del rival
      * @return
      */
-    public static float GetEffectivenessForTheOpposingPokemon(String typeAttack, String typeOpposingPokemon){
+    public static float getEffectivenessForTheOpposingPokemon(String typeAttack, String typeOpposingPokemon){
 
         /**
          * iniciamos un string que almacenará el resultado en frase de la efectividad del ataque
