@@ -3191,6 +3191,54 @@ public class MethodsBattlePlayer1 {
          */
         return amountAttack;
     }
+    /**
+     * metodo para saber la cantidad de ataque del pokemon en batalla
+     * @param namePokemon el nombre del pokemon en batalla
+     * @return el valor del ataque
+     */
+    public static int getPowerAttack1PokemonInBattlePlayer1(String namePokemon){
+
+        /**
+         * iniciamos la cantidad de ataue a 0
+         */
+        int powerAttack1 = 0;
+
+        /**
+         * iniciamos un array de objetos igual a la lista de pokemons escogida por el jugador 1
+         */
+        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer1();
+
+        /**
+         * recorremos con un for el array de pokemons
+         */
+        for (int i = 0; i < pokemons.size(); i++) {
+
+            PokemonProperties pokemon = (PokemonProperties) pokemons.get(i);
+
+            /**
+             * si algun nombre coincide con el pokemon en batalla, entra en la condicion
+             */
+            if (pokemon.getName().equalsIgnoreCase(namePokemon)) {
+                /**
+                 * lo indicamos
+                 */
+                pokemon = (PokemonProperties) pokemons.get(i);
+
+                /**
+                 * asignamos el ataque
+                 */
+                AttacksPokemons attacks = pokemon.getAttacks()[0];
+                powerAttack1 = attacks.getPower();
+                break;
+
+
+            }
+        }
+        /**
+         * devolvemos el ataque
+         */
+        return powerAttack1;
+    }
 
 
     /**
