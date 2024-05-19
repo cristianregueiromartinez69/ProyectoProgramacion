@@ -3,9 +3,18 @@ package com.dam.proyectoprogramacion.methods.battle;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.LifePokemonInBattlePlayer1;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer2.LifePokemonInBattlePlayer2;
 
-
+/**
+ * metodos para la batalla pokemon de los jugadores 1 y 2
+ * @author cristian
+ * @version v3.0
+ */
 public class MethodsBattlePokemon {
 
+    /**
+     * metodo para devolver la vida del pokemon en batalla del jugador 1
+     * @param namePokemon el nombre del pokemon en batalla
+     * @return la vida del pokemon
+     */
     public static int setValueOfLifePokemonInBattlePlayer1(String namePokemon){
 
        if(namePokemon.equalsIgnoreCase(MethodsTextAreaBattlePlayer1.getNamePokemon1ToChangePLayer1())){
@@ -19,6 +28,11 @@ public class MethodsBattlePokemon {
        }
 
     }
+    /**
+     * metodo para devolver la vida del pokemon en batalla del jugador 2
+     * @param namePokemon el nombre del pokemon en batalla
+     * @return la vida del pokemon
+     */
     public static int setValueOfLifePokemonInBattlePlayer2(String namePokemon){
 
         if(namePokemon.equalsIgnoreCase(MethodsTextAreaBattlePlayer2.getNamePokemon1ToChangePLayer2())){
@@ -33,10 +47,23 @@ public class MethodsBattlePokemon {
 
     }
 
-    public static void updateLifePokemons1Player1AndPlayer2(){
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(LifePokemonInBattlePlayer1.getLifePokemon1PLayer1());
-        LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setValue(LifePokemonInBattlePlayer2.getLifePokemon1PLayer2());
+    public static float attack1PokemonInBattlePlayer1(String typePokemonUser, String typeAttack1PokemonUser,
+                                                    int powerAttack1PokemonUser, int powerOfAttackPokemonUser,
+                                                    String typeOpposingPokemon, int defenseOpppsingPokemon){
+    float damage = 0.01f;
+
+        return 0;
     }
+
+    public static float getBonificationStab(String type){
+
+   return 0;
+    }
+
+
+
+
+
 
 
 }
