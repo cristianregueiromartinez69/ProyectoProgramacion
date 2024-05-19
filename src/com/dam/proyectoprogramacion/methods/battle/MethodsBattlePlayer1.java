@@ -3144,10 +3144,21 @@ public class MethodsBattlePlayer1 {
 
     //-----------------conseguir ataque, defensa y cantidad de poder de ataques del pokemon en batalla--------------------//
 
+    /**
+     * metodo para saber la cantidad de ataque del pokemon en batalla
+     * @param namePokemon el nombre del pokemon en batalla
+     * @return el valor del ataque
+     */
     public static int getAmountAttackPokemonInBattlePlayer1(String namePokemon){
 
+        /**
+         * iniciamos la cantidad de ataue a 0
+         */
         int amountAttack = 0;
 
+        /**
+         * iniciamos un array de objetos igual a la lista de pokemons escogida por el jugador 1
+         */
         ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer1();
 
         /**
@@ -3175,8 +3186,12 @@ public class MethodsBattlePlayer1 {
 
             }
         }
+        /**
+         * devolvemos el ataque
+         */
         return amountAttack;
     }
+
 
     /**
          * metodos para obtener el texto del boton de los pokemons
