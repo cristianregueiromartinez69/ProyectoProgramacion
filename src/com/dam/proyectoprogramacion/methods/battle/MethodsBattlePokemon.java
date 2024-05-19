@@ -98,7 +98,7 @@ public class MethodsBattlePokemon {
      * @param type el tipo del ataque 1 del pokemon en batalla
      * @return el daño por stab
      */
-    public static Float getBonificationStabAttack1PokemonInBattlePlayer1(String type){
+    public static float getBonificationStabAttack1PokemonInBattlePlayer1(String type){
 
         /**
          * recogemos en un array los tipos del pokemon desglosado
@@ -212,4 +212,21 @@ public class MethodsBattlePokemon {
         }
 
     }
+
+    //--------------------------------------------------------------------------//
+
+//----------------------------Ambos jugadores-----------------------------------//
+
+//--------------------------------------------------------------------------//
+
+    /**
+     * metodo para generar un numero aleatorio entre 85 y 100
+     * @return el numero generado
+     */
+    public static float getValueOfVariation() {
+
+        int randomValue = 85 + (int)(Math.random() * 16);
+        return (float) randomValue;
+    }
+
 }
