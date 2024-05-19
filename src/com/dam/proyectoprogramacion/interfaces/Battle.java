@@ -244,6 +244,7 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack2PLayer1().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                System.out.println("el ataque es de " + MethodsBattlePlayer1.getPowerAttack2PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
 
                 clearGlobalPanelPlayer1WhenPressAttack2Buttons();
             }
@@ -256,6 +257,7 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack3Player1().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                System.out.println("el ataque es de " + MethodsBattlePlayer1.getPowerAttack3PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
 
                 clearGlobalPanelPlayer1WhenPressAttack3Buttons();
             }
@@ -268,6 +270,7 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack4Player1().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                System.out.println("el ataque es de " + MethodsBattlePlayer1.getPowerAttack4PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
 
                 clearGlobalPanelPlayer1WhenPressAttack4Buttons();
             }
