@@ -232,7 +232,7 @@ public class Battle extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                System.out.println(MethodsBattlePokemon.GetEffectivenessForTheOpposingPokemon(MethodsTextAreaBattlePlayer1.getTypeAttack1PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()), MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2()));
+                System.out.println("el ataque es de " + MethodsBattlePlayer1.getAmountAttackPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
                 clearGlobalPanelPlayer1WhenPressAttack1Buttons();
 
             }
@@ -244,7 +244,6 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack2PLayer1().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println(MethodsBattlePokemon.GetEffectivenessForTheOpposingPokemon(MethodsTextAreaBattlePlayer1.getTypeAttack2PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()), MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2()));
 
                 clearGlobalPanelPlayer1WhenPressAttack2Buttons();
             }
@@ -257,7 +256,6 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack3Player1().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println(MethodsBattlePokemon.GetEffectivenessForTheOpposingPokemon(MethodsTextAreaBattlePlayer1.getTypeAttack3PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()), MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2()));
 
                 clearGlobalPanelPlayer1WhenPressAttack3Buttons();
             }
@@ -270,7 +268,6 @@ public class Battle extends JFrame {
         ButtonInterfaceAttacks.getAttack4Player1().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println(MethodsBattlePokemon.GetEffectivenessForTheOpposingPokemon(MethodsTextAreaBattlePlayer1.getTypeAttack4PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()), MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2()));
 
                 clearGlobalPanelPlayer1WhenPressAttack4Buttons();
             }

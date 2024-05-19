@@ -3142,7 +3142,41 @@ public class MethodsBattlePlayer1 {
         return pathIcon;
     }
 
+    //-----------------conseguir ataque, defensa y cantidad de poder de ataques del pokemon en batalla--------------------//
 
+    public static int getAmountAttackPokemonInBattlePlayer1(String namePokemon){
+
+        int amountAttack = 0;
+
+        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer1();
+
+        /**
+         * recorremos con un for el array de pokemons
+         */
+        for (int i = 0; i < pokemons.size(); i++) {
+
+            PokemonProperties pokemon = (PokemonProperties) pokemons.get(i);
+
+            /**
+             * si algun nombre coincide con el pokemon en batalla, entra en la condicion
+             */
+            if (pokemon.getName().equalsIgnoreCase(namePokemon)) {
+                /**
+                 * lo indicamos
+                 */
+                pokemon = (PokemonProperties) pokemons.get(i);
+
+                /**
+                 * asignamos el ataque
+                 */
+                amountAttack = pokemon.getAttack();
+                break;
+
+
+            }
+        }
+        return amountAttack;
+    }
 
     /**
          * metodos para obtener el texto del boton de los pokemons
