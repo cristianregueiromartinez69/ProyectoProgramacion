@@ -232,7 +232,6 @@ public class Battle extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                System.out.println(Arrays.toString(MethodsBattlePokemon.breakDownPokemonTypeInBattlePlayer1(MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1())));
                 clearGlobalPanelPlayer1WhenPressAttack1Buttons();
 
             }
