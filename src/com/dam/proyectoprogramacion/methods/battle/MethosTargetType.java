@@ -727,7 +727,7 @@ public class MethosTargetType {
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("lucha-acero")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.VERY_INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("electrico")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;

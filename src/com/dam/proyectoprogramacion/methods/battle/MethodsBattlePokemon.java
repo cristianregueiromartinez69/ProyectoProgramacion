@@ -127,9 +127,28 @@ public class MethodsBattlePokemon {
      return auxDamage;
     }
 
+    /**
+     * metodo para saber la efectividad del ataque al pokemon rival
+     * @param typeAttack el tipo del ataque que usa el pokemon
+     * @param typeOpposingPokemon el tipo del rival
+     * @return
+     */
     public static float GetEffectivenessForTheOpposingPokemon(String typeAttack, String typeOpposingPokemon){
 
+        /**
+         * iniciamos un string que almacenará el resultado en frase de la efectividad del ataque
+         */
         String result = MethosTargetType.getResultOfAttacksBothPlayer(typeAttack, typeOpposingPokemon);
+        /**
+         * si coincide con los valores de:
+         * Nulo
+         * muy poco eficaz
+         * poco eficaz
+         * neutro
+         * eficaz
+         * super eficaz
+         * devolverá un valor o otro
+         */
         if(result.equalsIgnoreCase(MethodsTextAreaBattlePlayer1.NULL)){
             return NULL_DAMAGE;
         }
