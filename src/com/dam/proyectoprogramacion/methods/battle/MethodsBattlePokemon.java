@@ -88,7 +88,7 @@ public class MethodsBattlePokemon {
     }
 
 
-    public static float attack1PokemonInBattlePlayer1(String typePokemonUser, String typeAttack1PokemonUser,
+    public static float getDamageAttack1PokemonInBattlePlayer1(String typePokemonUser, String typeAttack1PokemonUser,
                                                     int powerAttack1PokemonUser, int powerOfAttackPokemonUser,
                                                     String typeOpposingPokemon, int defenseOpppsingPokemon){
         float stab = getBonificationStabAttacksPokemonInBattlePlayer1(typePokemonUser);
