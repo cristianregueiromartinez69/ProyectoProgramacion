@@ -3103,11 +3103,11 @@ public class MethodsBattlePlayer2 {
         return amountAttack;
     }
     /**
-     * metodo para saber el poder del ataque1 del pokemon en batalla del jugador 1
+     * metodo para saber el poder del ataque1 del pokemon en batalla del jugador 2
      * @param namePokemon el nombre del pokemon en batalla
      * @return el valor del ataque
      */
-    public static int getPowerAttack1PokemonInBattlePlayer1(String namePokemon){
+    public static int getPowerAttack1PokemonInBattlePlayer2(String namePokemon){
 
         /**
          * iniciamos la cantidad de ataque a 0
@@ -3117,7 +3117,7 @@ public class MethodsBattlePlayer2 {
         /**
          * iniciamos un array de objetos igual a la lista de pokemons escogida por el jugador 1
          */
-        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer1();
+        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer2();
 
         /**
          * recorremos con un for el array de pokemons
@@ -3154,11 +3154,11 @@ public class MethodsBattlePlayer2 {
         return powerAttack1;
     }
     /**
-     * metodo para saber el poder del ataque2 del pokemon en batalla del jugador 1
+     * metodo para saber el poder del ataque2 del pokemon en batalla del jugador 2
      * @param namePokemon el nombre del pokemon en batalla
      * @return el valor del ataque
      */
-    public static int getPowerAttack2PokemonInBattlePlayer1(String namePokemon){
+    public static int getPowerAttack2PokemonInBattlePlayer2(String namePokemon){
 
         /**
          * iniciamos la cantidad de ataque a 0
@@ -3168,7 +3168,7 @@ public class MethodsBattlePlayer2 {
         /**
          * iniciamos un array de objetos igual a la lista de pokemons escogida por el jugador 1
          */
-        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer1();
+        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer2();
 
         /**
          * recorremos con un for el array de pokemons
@@ -3205,11 +3205,11 @@ public class MethodsBattlePlayer2 {
         return powerAttack2;
     }
     /**
-     * metodo para saber el poder del ataque3 del pokemon en batalla del jugador 1
+     * metodo para saber el poder del ataque3 del pokemon en batalla del jugador 2
      * @param namePokemon el nombre del pokemon en batalla
      * @return el valor del ataque
      */
-    public static int getPowerAttack3PokemonInBattlePlayer1(String namePokemon){
+    public static int getPowerAttack3PokemonInBattlePlayer2(String namePokemon){
 
         /**
          * iniciamos la cantidad de ataque a 0
@@ -3219,7 +3219,7 @@ public class MethodsBattlePlayer2 {
         /**
          * iniciamos un array de objetos igual a la lista de pokemons escogida por el jugador 1
          */
-        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer1();
+        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer2();
 
         /**
          * recorremos con un for el array de pokemons
@@ -3256,11 +3256,11 @@ public class MethodsBattlePlayer2 {
         return powerAttack3;
     }
     /**
-     * metodo para saber el poder del ataque4 del pokemon en batalla del jugador 1
+     * metodo para saber el poder del ataque4 del pokemon en batalla del jugador 2
      * @param namePokemon el nombre del pokemon en batalla
      * @return el valor del ataque
      */
-    public static int getPowerAttack4PokemonInBattlePlayer1(String namePokemon){
+    public static int getPowerAttack4PokemonInBattlePlayer2(String namePokemon){
 
         /**
          * iniciamos la cantidad de ataque a 0
@@ -3270,7 +3270,7 @@ public class MethodsBattlePlayer2 {
         /**
          * iniciamos un array de objetos igual a la lista de pokemons escogida por el jugador 1
          */
-        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer1();
+        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer2();
 
         /**
          * recorremos con un for el array de pokemons
@@ -3321,7 +3321,7 @@ public class MethodsBattlePlayer2 {
         /**
          * iniciamos un array de objetos igual a la lista de pokemons escogida por el jugador 1
          */
-        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer2();
+        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer1();
 
         /**
          * recorremos con un for el array de pokemons
