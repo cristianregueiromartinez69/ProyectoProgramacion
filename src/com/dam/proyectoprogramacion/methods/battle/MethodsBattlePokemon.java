@@ -60,7 +60,24 @@ public class MethodsBattlePokemon {
    return 0;
     }
 
-
+    /**
+     * metodo para desglosar el tipo del pokemon en batalla para verificar el stab
+     * @param type el tipo del pokemon en batalla
+     * @return el array con los 2 tipos del pokemon en caso de que tenga 2
+     */
+    public static String[] breakDownPokemonTypeInBattlePlayer1(String type) {
+        /**
+         * si el pokemon del jugador 1 tiene doble tipo, se desglosa
+         */
+        if (type.contains("-")) {
+            return type.split("-");
+        } else {
+            /**
+             * si no lo tiene, devolverá el único tipo que tiene
+             */
+            return new String[]{type};
+        }
+    }
 
 
 
