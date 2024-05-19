@@ -41,7 +41,10 @@ public class MethodsBattlePokemon {
      * variables para almacenar la cantidad de ataque, defensa y poder de ataque del pokemon en batalla del jugador 1
      */
     public static  float Player1PokemonAttackAmount;
-    public static  float powerOfAttackPokemonPlayer1;
+    public static  float powerOfAttack1PokemonPlayer1;
+    public static  float powerOfAttack2PokemonPlayer1;
+    public static  float powerOfAttack3PokemonPlayer1;
+    public static  float powerOfAttack4PokemonPlayer1;
     public static  float Player1PokemonDefenseAmount;
     /**
      * variables para almacenar la cantidad de ataque, defensa y poder de ataque del pokemon en batalla del jugador 2

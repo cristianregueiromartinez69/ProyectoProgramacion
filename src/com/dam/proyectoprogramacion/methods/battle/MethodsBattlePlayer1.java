@@ -3143,6 +3143,7 @@ public class MethodsBattlePlayer1 {
     }
 
 
+
     /**
          * metodos para obtener el texto del boton de los pokemons
          * @return el texto de los pokemons
