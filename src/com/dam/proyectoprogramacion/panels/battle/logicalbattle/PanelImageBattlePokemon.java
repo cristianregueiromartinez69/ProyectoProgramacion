@@ -1,12 +1,16 @@
 package com.dam.proyectoprogramacion.panels.battle.logicalbattle;
 
-import com.dam.proyectoprogramacion.background.BackgroundBattle;
+import com.dam.proyectoprogramacion.methods.battle.DataNamesIconsColorsAttacksAndPokemonsPlayer1;
+import com.dam.proyectoprogramacion.methods.battle.DataNamesIconsColorsAttacksAndPokemonsPlayer2;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.geom.AffineTransform;
+import java.awt.image.AffineTransformOp;
+import java.awt.image.BufferedImage;
 
 /**
- * clase con el panel de imagen de la batalla pokemon
+ * Clase con el panel de imagen de la batalla Pokémon
  * @author cristian
  * @version v3.0
  */
@@ -15,90 +19,103 @@ public class PanelImageBattlePokemon extends JPanel {
     /**
      * atributos privados de la clase
      */
-    private JPanel backgroundPanel;
-    private JPanel imagePanelPokemonPlayer1;
-    private JPanel imagePanelPokemonPlayer2;
-    private static Image pokemonPlayer1;
-    private static Image pokemonPlayer2;
+    private static BufferedImage pokemonPlayer1;
+    private static BufferedImage pokemonPlayer2;
     private static Image battleScenario;
 
-    public PanelImageBattlePokemon(){
+    /**
+     * variables para ajustar la posicion vertical de las imagenes de los pokemons
+     */
+    private static int offsetPlayer1Y = 350;
+    private static int offsetPlayer2Y = 350;
+
+    /**
+     * constructor de la clase
+     */
+    public PanelImageBattlePokemon() {
 
         /**
-         * lo hacemos visible
-         * le damos un layout
+         * configuramos el panel principal
          */
-         setVisible(true);
-         setLayout(new BorderLayout());
+        setVisible(true);
+        setLayout(new BorderLayout());
 
         /**
-         * iniciamos la imagen de fondo con el path de la imagen de batalla pokemon
+         * iniciamos las imagenes
          */
         battleScenario = new ImageIcon("imagenes/batalla.jpg").getImage();
-
-        pokemonPlayer1 = new ImageIcon("imagenes/snorlaxSP.png").getImage();
-        pokemonPlayer2 = new ImageIcon("imagenes/tinkatonSP.png").getImage();
-
-        PanelImagePokemonInBattlePlayer1 pokemonImagePlayer1 = new PanelImagePokemonInBattlePlayer1(pokemonPlayer1);
-        PanelImagePokemonInBattlePlayer2 pokemonImagePlayer2 = new PanelImagePokemonInBattlePlayer2(pokemonPlayer2);
-
+        pokemonPlayer1 = toBufferedImage(new ImageIcon(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getImagePokemonInBattlePlayer1()).getImage());
+        pokemonPlayer2 = toBufferedImage(new ImageIcon(DataNamesIconsColorsAttacksAndPokemonsPlayer2.getImagePokemonInBattlePlayer2()).getImage());
 
         /**
-         * instanciamos el panel de la imagen de batalla y le metemos el path
+         * invertimos horizontalemnte la imagen del pokemon del jugador 1 para que mire para el pokemon del jugador 2
          */
-         BackgroundBattle backBattle = new BackgroundBattle(battleScenario);
+        pokemonPlayer1 = flipImageHorizontally(pokemonPlayer1);
 
         /**
-         * iniciamos el panel central que contendrá todas las imagenes
-         * la de la batalla
-         * la del pokemon en batalla del jugador 1
-         * la del pokemon en batalla del jugador 2
-         * añadimos las imagenes al panel
+         * panel de fondo con los pokemons
          */
-        backgroundPanel = new JPanel();
-         backgroundPanel.add(backBattle);
+        JPanel backgroundPanel = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                /**
+                 * pintamos el escenario
+                 */
+                g.drawImage(battleScenario, 0, 0, getWidth(), getHeight(), this);
 
-         imagePanelPokemonPlayer1 = new JPanel();
-         imagePanelPokemonPlayer1.add(pokemonImagePlayer1);
+                /**
+                 * dibujamos el pokemon del jugador 1
+                 */
+                int player1X = getWidth() / 3 - pokemonPlayer1.getWidth(null) / 2;
+                int player1Y = getHeight() - pokemonPlayer1.getHeight(null) - offsetPlayer1Y;
+                g.drawImage(pokemonPlayer1, player1X, player1Y, this);
 
-        imagePanelPokemonPlayer2 = new JPanel();
-        imagePanelPokemonPlayer2.add(pokemonImagePlayer2);
-
+                /**
+                 * dibujamos el pokemon del jugador 2
+                 */
+                int player2X = 2 * getWidth() / 3 - pokemonPlayer2.getWidth(null) / 2;
+                int player2Y = getHeight() - pokemonPlayer2.getHeight(null) - offsetPlayer2Y;
+                g.drawImage(pokemonPlayer2, player2X, player2Y, this);
+            }
+        };
 
         /**
-         * lo añadimos
+         * ajustamos la altura del escenario de la batalla pokemon
          */
-        this.add(backgroundPanel, BorderLayout.CENTER);
-        this.add(imagePanelPokemonPlayer1, BorderLayout.WEST);
-        this.add(imagePanelPokemonPlayer2, BorderLayout.EAST);
+        int newHeight = battleScenario.getHeight(null) + 200; // Ajustar según sea necesario
+        backgroundPanel.setPreferredSize(new Dimension(battleScenario.getWidth(null), newHeight));
 
+        add(backgroundPanel, BorderLayout.CENTER);
+    }
+
+
+
+    /**
+     * metodo para convertir  una imagen a BufferedImage
+     * @param img la imagen a convertir
+     * @return la BufferedImage resultante
+     */
+    private static BufferedImage toBufferedImage(Image img) {
+        if (img instanceof BufferedImage) {
+            return (BufferedImage) img;
+        }
+        BufferedImage bimage = new BufferedImage(img.getWidth(null), img.getHeight(null), BufferedImage.TYPE_INT_ARGB);
+        Graphics2D bGr = bimage.createGraphics();
+        bGr.drawImage(img, 0, 0, null);
+        bGr.dispose();
+        return bimage;
     }
 
     /**
-     * getter y setter de los atributos de la clase
-     * @return los atributos de la clase
+     * metodo para invertir horizontalmente una imagen
+     * @param img la imagen a invertir
+     * @return la imagen invertida
      */
-    public static Image getPokemonPlayer1() {
-        return pokemonPlayer1;
-    }
-
-    public static void setPokemonPlayer1(Image pokemonPlayer1) {
-        PanelImageBattlePokemon.pokemonPlayer1 = pokemonPlayer1;
-    }
-
-    public static Image getPokemonPlayer2() {
-        return pokemonPlayer2;
-    }
-
-    public static void setPokemonPlayer2(Image pokemonPlayer2) {
-        PanelImageBattlePokemon.pokemonPlayer2 = pokemonPlayer2;
-    }
-
-    public static Image getBattleScenario() {
-        return battleScenario;
-    }
-
-    public static void setBattleScenario(Image battleScenario) {
-        PanelImageBattlePokemon.battleScenario = battleScenario;
+    private static BufferedImage flipImageHorizontally(BufferedImage img) {
+        AffineTransform tx = AffineTransform.getScaleInstance(-1, 1);
+        tx.translate(-img.getWidth(), 0);
+        AffineTransformOp op = new AffineTransformOp(tx, AffineTransformOp.TYPE_NEAREST_NEIGHBOR);
+        return op.filter(img, null);
     }
 }

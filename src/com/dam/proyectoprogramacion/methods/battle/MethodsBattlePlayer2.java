@@ -2,6 +2,7 @@ package com.dam.proyectoprogramacion.methods.battle;
 
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer2;
 import com.dam.proyectoprogramacion.methods.selectionpokemon.MethosInterfaceSelectionPokemon;
+import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
 import com.dam.proyectoprogramacion.pokemon.AttacksPokemons;
 import com.dam.proyectoprogramacion.pokemon.PokemonProperties;
@@ -2902,6 +2903,457 @@ public class MethodsBattlePlayer2 {
          * devolvemos el nuevo color del ataque
          */
         return chooseColorAttacksPokemonPlayer2(typeAttack4.toLowerCase());
+    }
+
+    /**
+     * metodo que recorre un hashmap y busca el primer pokemon escogido por el jugador 2
+     * despues devuelve la imagen del pokemon
+     * @param players el hashmap de los jugadores
+     * @return el path con la imagen del pokemon seleccionado
+     */
+    public static String putImagePokemonInBattlePlayer2(HashMap<String, ArrayList<Object>> players) {
+
+        String pathImagePokemon = "";
+        String aliasPlayer2 = InformationPanelPlayer2Luck.getAliasTextPlayer2().getText();
+        /**
+         * for para recorrer el hashmap de los jugadores
+         */
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+            /**
+             * si encuentra la clave, entra en la condicion
+             */
+            if (key.equals(aliasPlayer2)) {
+                /**
+                 * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
+                 */
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                if (!pokemons.isEmpty()) {
+                    /**
+                     * hacemos un objeto de pokemons y decimos que es igual al primer elemento de la lista de pokemons
+                     */
+                    PokemonProperties firstPokemon = (PokemonProperties) pokemons.get(0);
+                    String name = firstPokemon.getName().toLowerCase();
+                    pathImagePokemon = "imagenes/" + name + "SP.png";
+                    break;
+
+                } else {
+                    /**
+                     * si no hay nada, devuelve null
+                     */
+                    pathImagePokemon = null;
+                }
+
+            }
+        }
+        return pathImagePokemon;
+    }
+
+    /**
+     * metodo para establecer la nueva imagen del pokemon en batalla al cambio
+     * @return la nueva imagen
+     */
+
+    public static String newImagePokemonInBattle1Player2() {
+        String pathIcon = "";
+        /**
+         * recorremos el array de objetos pokemons
+         */
+        for (Object obj : MethosInterfaceSelectionPokemon.getPokemonsPLayer2()) {
+            /**
+             * si es una instancia de los pokemons, se mete en la condicion
+             */
+            if (obj instanceof PokemonProperties) {
+                PokemonProperties pokemon1 = (PokemonProperties) obj;
+                /**
+                 * si el nombre es igual al nombre del boton del pokemon se mete en la condicion
+                 */
+                if (pokemon1.getName().equalsIgnoreCase(getNameOfThePokemonPlayer2Pokemon1())) {
+
+                    /**
+                     * nuevo path
+                     */
+                    pathIcon = "imagenes/" + getNameOfThePokemonPlayer2Pokemon1().toLowerCase() + "SP.png";
+                }
+
+            }
+
+
+        }
+        return pathIcon;
+    }
+
+
+    /**
+     * metodo para establecer la nueva imagen del pokemon en batalla al cambio
+     * @return la nueva imagen
+     */
+
+    public static String newImagePokemonInBattle2Player2() {
+        String pathIcon = "";
+        /**
+         * recorremos el array de objetos pokemons
+         */
+        for (Object obj : MethosInterfaceSelectionPokemon.getPokemonsPLayer2()) {
+            /**
+             * si es una instancia de los pokemons, se mete en la condicion
+             */
+            if (obj instanceof PokemonProperties) {
+                PokemonProperties pokemon1 = (PokemonProperties) obj;
+                /**
+                 * si el nombre es igual al nombre del boton del pokemon se mete en la condicion
+                 */
+                if (pokemon1.getName().equalsIgnoreCase(getNameOfThePokemonPlayer2Pokemon1())) {
+
+                    /**
+                     * nuevo path
+                     */
+                    pathIcon = "imagenes/" + getNameOfThePokemonPlayer2Pokemon2().toLowerCase() + "SP.png";
+                }
+
+            }
+
+
+        }
+        return pathIcon;
+    }
+
+
+    /**
+     * metodo para establecer la nueva imagen del pokemon en batalla al cambio
+     * @return la nueva imagen
+     */
+
+    public static String newImagePokemonInBattle3Player2() {
+        String pathIcon = "";
+        /**
+         * recorremos el array de objetos pokemons
+         */
+        for (Object obj : MethosInterfaceSelectionPokemon.getPokemonsPLayer2()) {
+            /**
+             * si es una instancia de los pokemons, se mete en la condicion
+             */
+            if (obj instanceof PokemonProperties) {
+                PokemonProperties pokemon1 = (PokemonProperties) obj;
+                /**
+                 * si el nombre es igual al nombre del boton del pokemon se mete en la condicion
+                 */
+                if (pokemon1.getName().equalsIgnoreCase(getNameOfThePokemonPlayer2Pokemon1())) {
+
+                    /**
+                     * nuevo path
+                     */
+                    pathIcon = "imagenes/" + getNameOfThePokemonPlayer2Pokemon3().toLowerCase() + "SP.png";
+                }
+
+            }
+
+
+        }
+        return pathIcon;
+    }
+
+
+    //-----------------conseguir ataque, defensa y cantidad de poder de ataques del pokemon en batalla--------------------//
+
+    /**
+     * metodo para saber la cantidad de ataque del pokemon en batalla del jugador 2
+     * @param namePokemon el nombre del pokemon en batalla
+     * @return el valor del ataque
+     */
+    public static int getAmountAttackPokemonInBattlePlayer2(String namePokemon){
+
+        /**
+         * iniciamos la cantidad de ataue a 0
+         */
+        int amountAttack = 0;
+
+        /**
+         * iniciamos un array de objetos igual a la lista de pokemons escogida por el jugador 1
+         */
+        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer2();
+
+        /**
+         * recorremos con un for el array de pokemons
+         */
+        for (int i = 0; i < pokemons.size(); i++) {
+
+            PokemonProperties pokemon = (PokemonProperties) pokemons.get(i);
+
+            /**
+             * si algun nombre coincide con el pokemon en batalla, entra en la condicion
+             */
+            if (pokemon.getName().equalsIgnoreCase(namePokemon)) {
+                /**
+                 * lo indicamos
+                 */
+                pokemon = (PokemonProperties) pokemons.get(i);
+
+                /**
+                 * asignamos el ataque
+                 */
+                amountAttack = pokemon.getAttack();
+                break;
+
+
+            }
+        }
+        /**
+         * devolvemos el ataque
+         */
+        return amountAttack;
+    }
+    /**
+     * metodo para saber el poder del ataque1 del pokemon en batalla del jugador 2
+     * @param namePokemon el nombre del pokemon en batalla
+     * @return el valor del ataque
+     */
+    public static int getPowerAttack1PokemonInBattlePlayer2(String namePokemon){
+
+        /**
+         * iniciamos la cantidad de ataque a 0
+         */
+        int powerAttack1 = 0;
+
+        /**
+         * iniciamos un array de objetos igual a la lista de pokemons escogida por el jugador 1
+         */
+        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer2();
+
+        /**
+         * recorremos con un for el array de pokemons
+         */
+        for (int i = 0; i < pokemons.size(); i++) {
+
+            PokemonProperties pokemon = (PokemonProperties) pokemons.get(i);
+
+            /**
+             * si algun nombre coincide con el pokemon en batalla, entra en la condicion
+             */
+            if (pokemon.getName().equalsIgnoreCase(namePokemon)) {
+                /**
+                 * lo indicamos
+                 */
+                pokemon = (PokemonProperties) pokemons.get(i);
+
+                /**
+                 * iniciamos la variable de tipo ataque que es igual a la primera posicion
+                 */
+                AttacksPokemons attacks = pokemon.getAttacks()[0];
+                /**
+                 * recogemos el valor del ataque
+                 */
+                powerAttack1 = attacks.getPower();
+                break;
+
+
+            }
+        }
+        /**
+         * devolvemos el ataque
+         */
+        return powerAttack1;
+    }
+    /**
+     * metodo para saber el poder del ataque2 del pokemon en batalla del jugador 2
+     * @param namePokemon el nombre del pokemon en batalla
+     * @return el valor del ataque
+     */
+    public static int getPowerAttack2PokemonInBattlePlayer2(String namePokemon){
+
+        /**
+         * iniciamos la cantidad de ataque a 0
+         */
+        int powerAttack2 = 0;
+
+        /**
+         * iniciamos un array de objetos igual a la lista de pokemons escogida por el jugador 1
+         */
+        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer2();
+
+        /**
+         * recorremos con un for el array de pokemons
+         */
+        for (int i = 0; i < pokemons.size(); i++) {
+
+            PokemonProperties pokemon = (PokemonProperties) pokemons.get(i);
+
+            /**
+             * si algun nombre coincide con el pokemon en batalla, entra en la condicion
+             */
+            if (pokemon.getName().equalsIgnoreCase(namePokemon)) {
+                /**
+                 * lo indicamos
+                 */
+                pokemon = (PokemonProperties) pokemons.get(i);
+
+                /**
+                 * iniciamos la variable de tipo ataque que es igual a la primera posicion
+                 */
+                AttacksPokemons attacks = pokemon.getAttacks()[1];
+                /**
+                 * recogemos el valor del ataque
+                 */
+                powerAttack2 = attacks.getPower();
+                break;
+
+
+            }
+        }
+        /**
+         * devolvemos el ataque
+         */
+        return powerAttack2;
+    }
+    /**
+     * metodo para saber el poder del ataque3 del pokemon en batalla del jugador 2
+     * @param namePokemon el nombre del pokemon en batalla
+     * @return el valor del ataque
+     */
+    public static int getPowerAttack3PokemonInBattlePlayer2(String namePokemon){
+
+        /**
+         * iniciamos la cantidad de ataque a 0
+         */
+        int powerAttack3= 0;
+
+        /**
+         * iniciamos un array de objetos igual a la lista de pokemons escogida por el jugador 1
+         */
+        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer2();
+
+        /**
+         * recorremos con un for el array de pokemons
+         */
+        for (int i = 0; i < pokemons.size(); i++) {
+
+            PokemonProperties pokemon = (PokemonProperties) pokemons.get(i);
+
+            /**
+             * si algun nombre coincide con el pokemon en batalla, entra en la condicion
+             */
+            if (pokemon.getName().equalsIgnoreCase(namePokemon)) {
+                /**
+                 * lo indicamos
+                 */
+                pokemon = (PokemonProperties) pokemons.get(i);
+
+                /**
+                 * iniciamos la variable de tipo ataque que es igual a la primera posicion
+                 */
+                AttacksPokemons attacks = pokemon.getAttacks()[2];
+                /**
+                 * recogemos el valor del ataque
+                 */
+                powerAttack3 = attacks.getPower();
+                break;
+
+
+            }
+        }
+        /**
+         * devolvemos el ataque
+         */
+        return powerAttack3;
+    }
+    /**
+     * metodo para saber el poder del ataque4 del pokemon en batalla del jugador 2
+     * @param namePokemon el nombre del pokemon en batalla
+     * @return el valor del ataque
+     */
+    public static int getPowerAttack4PokemonInBattlePlayer2(String namePokemon){
+
+        /**
+         * iniciamos la cantidad de ataque a 0
+         */
+        int powerAttack4 = 0;
+
+        /**
+         * iniciamos un array de objetos igual a la lista de pokemons escogida por el jugador 1
+         */
+        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer2();
+
+        /**
+         * recorremos con un for el array de pokemons
+         */
+        for (int i = 0; i < pokemons.size(); i++) {
+
+            PokemonProperties pokemon = (PokemonProperties) pokemons.get(i);
+
+            /**
+             * si algun nombre coincide con el pokemon en batalla, entra en la condicion
+             */
+            if (pokemon.getName().equalsIgnoreCase(namePokemon)) {
+                /**
+                 * lo indicamos
+                 */
+                pokemon = (PokemonProperties) pokemons.get(i);
+
+                /**
+                 * iniciamos la variable de tipo ataque que es igual a la primera posicion
+                 */
+                AttacksPokemons attacks = pokemon.getAttacks()[3];
+                /**
+                 * recogemos el valor del ataque
+                 */
+                powerAttack4 = attacks.getPower();
+                break;
+
+
+            }
+        }
+        /**
+         * devolvemos el ataque
+         */
+        return powerAttack4;
+    }
+
+    /**
+     * metodo para obtener la defensa del pokemon rival en batalla
+     * @param nameOpposingPokemon el nombre del pokemon en batalla
+     * @return el valor de su defensa
+     */
+    public static int getDefenseOpposingPokemonInBattle(String nameOpposingPokemon){
+        /**
+         * iniciamos la cantidad de defensa a 0
+         */
+        int defense = 0;
+
+        /**
+         * iniciamos un array de objetos igual a la lista de pokemons escogida por el jugador 1
+         */
+        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer1();
+
+        /**
+         * recorremos con un for el array de pokemons
+         */
+        for (int i = 0; i < pokemons.size(); i++) {
+
+            PokemonProperties pokemon = (PokemonProperties) pokemons.get(i);
+
+            /**
+             * si algun nombre coincide con el pokemon en batalla, entra en la condicion
+             */
+            if (pokemon.getName().equalsIgnoreCase(nameOpposingPokemon)) {
+                /**
+                 * lo indicamos
+                 */
+                pokemon = (PokemonProperties) pokemons.get(i);
+
+                /**
+                 * almacenamos el valor de la defensa
+                 */
+                defense = pokemon.getDefense();
+
+                break;
+
+
+            }
+        }
+        /**
+         * devolvemos el ataque
+         */
+        return defense;
+
     }
 
     private static String getNameOfThePokemonPlayer2Pokemon1 () {
