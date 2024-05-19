@@ -100,6 +100,7 @@ public class MethodsBattlePokemon {
                 /**
                  * almacenamos el valor de la defensa
                  */
+
                 life = pokemon.getLife();
 
                 break;
@@ -258,26 +259,54 @@ public class MethodsBattlePokemon {
 
 //--------------------------------------------------------------------------//
     /**
-     * metodo para devolver la vida del pokemon en batalla del jugador 2
+     * metodo para devolver la vida del pokemon en batalla del jugador 1
      * @param namePokemon el nombre del pokemon en batalla
      * @return la vida del pokemon
      */
-    public static int setValueOfLifePokemonInBattlePlayer2(String namePokemon, int value){
-        int newLifePokemon = 0;
-        if(namePokemon.equalsIgnoreCase(MethodsTextAreaBattlePlayer2.getNamePokemon1ToChangePLayer2())){
-            LifePokemonInBattlePlayer2.setLifePokemon1PLayer2(value);
-            newLifePokemon = LifePokemonInBattlePlayer2.getLifePokemon1PLayer2();
+    public static int setValueOfLifePokemonInBattlePlayer2(String namePokemon){
+        /**
+         * iniciamos la cantidad de defensa a 0
+         */
+        int life = 0;
+
+        /**
+         * iniciamos un array de objetos igual a la lista de pokemons escogida por el jugador 1
+         */
+        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer2();
+
+        /**
+         * recorremos con un for el array de pokemons
+         */
+        for (int i = 0; i < pokemons.size(); i++) {
+
+            PokemonProperties pokemon = (PokemonProperties) pokemons.get(i);
+
+            /**
+             * si algun nombre coincide con el pokemon en batalla, entra en la condicion
+             */
+            if (pokemon.getName().equalsIgnoreCase(namePokemon)) {
+                /**
+                 * lo indicamos
+                 */
+                pokemon = (PokemonProperties) pokemons.get(i);
+
+                /**
+                 * almacenamos el valor de la defensa
+                 */
+
+                life = pokemon.getLife();
+
+                break;
+
+
+            }
         }
-        else if(namePokemon.equalsIgnoreCase(MethodsTextAreaBattlePlayer2.getNamePokemon2ToChangePLayer2())){
-            LifePokemonInBattlePlayer2.setLifePokemon2PLayer2(value);
-            newLifePokemon = LifePokemonInBattlePlayer2.getLifePokemon2PLayer2();
-        }
-        else if(namePokemon.equalsIgnoreCase(MethodsTextAreaBattlePlayer2.getNamePokemon3ToChangePLayer2())){
-            LifePokemonInBattlePlayer2.setLifePokemon3PLayer2(value);
-            newLifePokemon = LifePokemonInBattlePlayer2.getLifePokemon3PLayer2();
-        }
-        return newLifePokemon;
+        /**
+         * devolvemos el ataque
+         */
+        return life;
     }
+
 
 
     /**

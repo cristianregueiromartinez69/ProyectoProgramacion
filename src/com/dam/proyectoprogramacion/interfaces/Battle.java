@@ -179,7 +179,8 @@ public class Battle extends JFrame {
         /**
          * lo añadimos
          */
-        lifePanelPokemon.add(new LifePokemonInBattlePlayer2());
+        lifePanelPokemon.add(new LifePokemonInBattlePlayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()
+                ), MethodsBattlePokemon.setValueOfLifePokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2())));
 
         //---------------------paneles de ambos jugadores-------------------//
 
@@ -490,13 +491,11 @@ public class Battle extends JFrame {
                 /**
                  * llamamos al propio metodo para actualizar all
                  */
-                clearLifePanelPlayer2WhenPressButtonToChangePokemon();
                  pokemonBattle();
                 MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
 
             }
         });
-        ButtonInterfaceChangePokemonPlayer2.getPokemon1team().addActionListener(this::changeLifePokemonInBattlePlayer2);
         ButtonInterfaceChangePokemonPlayer2.getPokemon1team().addActionListener(this::putInformationAreaTextBattlePlayer2);
 
 
@@ -514,13 +513,11 @@ public class Battle extends JFrame {
                 /**
                  * llamamos al propio metodo para actualizar all
                  */
-                clearLifePanelPlayer2WhenPressButtonToChangePokemon();
                  pokemonBattle();
                 MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
 
             }
         });
-        ButtonInterfaceChangePokemonPlayer2.getPokemon2team().addActionListener(this::changeLifePokemonInBattlePlayer2);
         ButtonInterfaceChangePokemonPlayer2.getPokemon2team().addActionListener(this::putInformationAreaTextBattlePlayer2);
 
         /**
@@ -537,13 +534,11 @@ public class Battle extends JFrame {
                 /**
                  * llamamos al propio metodo para actualizar all
                  */
-                clearLifePanelPlayer2WhenPressButtonToChangePokemon();
                   pokemonBattle();
                 MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
 
             }
         });
-        ButtonInterfaceChangePokemonPlayer2.getPokemon3team().addActionListener(this::changeLifePokemonInBattlePlayer2);
         ButtonInterfaceChangePokemonPlayer2.getPokemon3team().addActionListener(this::putInformationAreaTextBattlePlayer2);
 
 
@@ -581,7 +576,6 @@ public class Battle extends JFrame {
         attacksChangesPokemon1Player1.setVisible(true);
 
 
-        updateLifeBarPlayer2(newLifePlayer2);
 
     }
     private static void clearGlobalPanelPlayer1WhenPressAttack2Buttons(){
@@ -591,18 +585,15 @@ public class Battle extends JFrame {
 
 
 
-        updateLifeBarPlayer2(newLifePlayer2);
     }
     private static void clearGlobalPanelPlayer1WhenPressAttack3Buttons(){
         attacksPanelPlayer1.setVisible(false);
         attacksChangesPokemon1Player1.setVisible(true);
-        updateLifeBarPlayer2(newLifePlayer2);
 
     }
     private static void clearGlobalPanelPlayer1WhenPressAttack4Buttons(){
         attacksPanelPlayer1.setVisible(false);
         attacksChangesPokemon1Player1.setVisible(true);
-        updateLifeBarPlayer2(newLifePlayer2);
 
     }
 
@@ -940,7 +931,6 @@ public class Battle extends JFrame {
         attacksPanelPlayer2.setVisible(false);
         attacksChangesPokemon1Player2.setVisible(true);
 
-          updateLifeBarPlayer1(newLifePLayer1);
 
     }
     private static void clearGlobalPanelPlayer2WhenPressAttack2Buttons(){
@@ -948,7 +938,6 @@ public class Battle extends JFrame {
         attacksPanelPlayer2.setVisible(false);
         attacksChangesPokemon1Player2.setVisible(true);
 
-         updateLifeBarPlayer1(newLifePLayer1);
 
     }
     private static void clearGlobalPanelPlayer2WhenPressAttack3Buttons(){
@@ -956,7 +945,6 @@ public class Battle extends JFrame {
         attacksPanelPlayer2.setVisible(false);
         attacksChangesPokemon1Player2.setVisible(true);
 
-        updateLifeBarPlayer1(newLifePLayer1);
 
     }
     private static void clearGlobalPanelPlayer2WhenPressAttack4Buttons(){
@@ -964,7 +952,6 @@ public class Battle extends JFrame {
         attacksPanelPlayer2.setVisible(false);
         attacksChangesPokemon1Player2.setVisible(true);
 
-        updateLifeBarPlayer1(newLifePLayer1);
 
     }
     /**
@@ -1032,7 +1019,6 @@ public class Battle extends JFrame {
 
         DataNamesIconsColorsAttacksAndPokemonsPlayer2.setImagePokemonInBattlePlayer2(MethodsBattlePlayer2.newImagePokemonInBattle1Player2());
 
-        updateLifeBarPlayer1(newLifePLayer1);
 
 
         contentPanel.add(makeAgainContentPanel(contentPanel));
@@ -1084,7 +1070,6 @@ public class Battle extends JFrame {
 
         DataNamesIconsColorsAttacksAndPokemonsPlayer2.setImagePokemonInBattlePlayer2(MethodsBattlePlayer2.newImagePokemonInBattle2Player2());
 
-        updateLifeBarPlayer1(newLifePLayer1);
 
 
         contentPanel.add(makeAgainContentPanel(contentPanel));
@@ -1136,7 +1121,6 @@ public class Battle extends JFrame {
 
         DataNamesIconsColorsAttacksAndPokemonsPlayer2.setImagePokemonInBattlePlayer2(MethodsBattlePlayer2.newImagePokemonInBattle3Player2());
 
-        updateLifeBarPlayer1(newLifePLayer1);
 
 
         contentPanel.add(makeAgainContentPanel(contentPanel));
@@ -1271,7 +1255,7 @@ public class Battle extends JFrame {
         int actualLife = MethodsLifeBattlePokemonPlayer2.getLifePokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
         LifePokemonInBattlePlayer2.setActualLifePokemonInBattlePlayer2(actualLife);
 
-        LifePokemonInBattlePlayer2.setAuxLifePlayer2(MethodsBattlePokemon.setValueOfLifePokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2(), value));
+        LifePokemonInBattlePlayer2.setAuxLifePlayer2(MethodsBattlePokemon.setValueOfLifePokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()));
         lifeBarPlayer2.setValue(LifePokemonInBattlePlayer2.getAuxLifePlayer2());
 
         // Actualizar el color de la barra de vida según la vida actual
@@ -1350,7 +1334,8 @@ public class Battle extends JFrame {
         auxPanel.add(lifePanelPokemon, BorderLayout.NORTH);
         lifePanelPokemon.add(new LifePokemonInBattlePlayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
                 MethodsBattlePokemon.setValueOfLifePokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1())));
-        lifePanelPokemon.add(new LifePokemonInBattlePlayer2());
+        lifePanelPokemon.add(new LifePokemonInBattlePlayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()
+        ), MethodsBattlePokemon.setValueOfLifePokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2())));
 
 
         globalPanelPLayer2.add(new AliasAndLogoPlayer2());
