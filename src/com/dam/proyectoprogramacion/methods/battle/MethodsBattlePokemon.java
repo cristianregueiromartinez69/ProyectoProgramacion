@@ -1,7 +1,11 @@
 package com.dam.proyectoprogramacion.methods.battle;
 
+import com.dam.proyectoprogramacion.methods.selectionpokemon.MethosInterfaceSelectionPokemon;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.LifePokemonInBattlePlayer1;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer2.LifePokemonInBattlePlayer2;
+import com.dam.proyectoprogramacion.pokemon.PokemonProperties;
+
+import java.util.ArrayList;
 
 /**
  * metodos para la batalla pokemon de los jugadores 1 y 2
@@ -66,21 +70,47 @@ public class MethodsBattlePokemon {
      * @param namePokemon el nombre del pokemon en batalla
      * @return la vida del pokemon
      */
-    public static int setValueOfLifePokemonInBattlePlayer1(String namePokemon, int value){
-        int newLifePokemon = 0;
-       if(namePokemon.equalsIgnoreCase(MethodsTextAreaBattlePlayer1.getNamePokemon1ToChangePLayer1())){
-          LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(value);
-          newLifePokemon = LifePokemonInBattlePlayer1.getLifePokemon1PLayer1();
-       }
-       else if(namePokemon.equalsIgnoreCase(MethodsTextAreaBattlePlayer1.getNamePokemon2ToChangePLayer1())){
-           LifePokemonInBattlePlayer1.setLifePokemon2PLayer1(value);
-           newLifePokemon = LifePokemonInBattlePlayer1.getLifePokemon2PLayer1();
-       }
-       else if(namePokemon.equalsIgnoreCase(MethodsTextAreaBattlePlayer1.getNamePokemon3ToChangePLayer1())){
-           LifePokemonInBattlePlayer1.setLifePokemon3PLayer1(value);
-           newLifePokemon = LifePokemonInBattlePlayer1.getLifePokemon3PLayer1();
-       }
-     return newLifePokemon;
+    public static int setValueOfLifePokemonInBattlePlayer1(String namePokemon){
+        /**
+         * iniciamos la cantidad de defensa a 0
+         */
+        int life = 0;
+
+        /**
+         * iniciamos un array de objetos igual a la lista de pokemons escogida por el jugador 1
+         */
+        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer1();
+
+        /**
+         * recorremos con un for el array de pokemons
+         */
+        for (int i = 0; i < pokemons.size(); i++) {
+
+            PokemonProperties pokemon = (PokemonProperties) pokemons.get(i);
+
+            /**
+             * si algun nombre coincide con el pokemon en batalla, entra en la condicion
+             */
+            if (pokemon.getName().equalsIgnoreCase(namePokemon)) {
+                /**
+                 * lo indicamos
+                 */
+                pokemon = (PokemonProperties) pokemons.get(i);
+
+                /**
+                 * almacenamos el valor de la defensa
+                 */
+                life = pokemon.getLife();
+
+                break;
+
+
+            }
+        }
+        /**
+         * devolvemos el ataque
+         */
+        return life;
     }
 
 

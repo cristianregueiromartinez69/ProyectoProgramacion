@@ -26,14 +26,13 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
     /**
      * constructor de la clase
      */
-    public LifePokemonInBattlePlayer1(){
+    public LifePokemonInBattlePlayer1(int actualLifePokemonInBattlePlayer1, int auxLife){
 
         /**
          * lo hacemos visible y le damos un layout
          */
         setVisible(true);
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
-
         panelLifePokemonPLayer1 = new JPanel();
 
 
