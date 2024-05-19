@@ -93,9 +93,23 @@ public class MethodsBattlePokemon {
         return 0;
     }
 
-    public static float getBonificationStab(String type){
+    /**
+     * metodo para saber si el ataque 1 del pokemon en batalla pega por stab dle jugador 1
+     * @param type el tipo del ataque 1 del pokemon en batalla
+     * @return el daño por stab
+     */
+    public static Float getBonificationStabAttack1PokemonInBattlePlayer1(String type){
 
-   return 0;
+        String [] desgloseType = breakDownPokemonTypeInBattlePlayer1(MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1());
+        float auxDamage = NOT_STAB;
+        for(String auxType:desgloseType){
+            if(auxType.equalsIgnoreCase(type)){
+                auxDamage = STAB;
+                return auxDamage;
+            }
+        }
+
+     return auxDamage;
     }
 
     /**

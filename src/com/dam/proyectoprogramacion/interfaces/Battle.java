@@ -232,6 +232,7 @@ public class Battle extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                System.out.println(MethodsBattlePokemon.getBonificationStabAttack1PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getTypeAttack1PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1())));
                 clearGlobalPanelPlayer1WhenPressAttack1Buttons();
 
             }
