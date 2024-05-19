@@ -10,67 +10,89 @@ import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
 
 /**
- * clase con el panel de imagen de la batalla pokemon
+ * Clase con el panel de imagen de la batalla Pokémon
  * @author cristian
  * @version v3.0
  */
 public class PanelImageBattlePokemon extends JPanel {
 
+    /**
+     * atributos privados de la clase
+     */
     private static BufferedImage pokemonPlayer1;
     private static BufferedImage pokemonPlayer2;
     private static Image battleScenario;
 
-    // Variables para ajustar la posición vertical
-    private static int offsetPlayer1Y = 250;
-    private static int offsetPlayer2Y = 250;
+    /**
+     * variables para ajustar la posicion vertical de las imagenes de los pokemons
+     */
+    private static int offsetPlayer1Y = 350;
+    private static int offsetPlayer2Y = 350;
 
+    /**
+     * constructor de la clase
+     */
     public PanelImageBattlePokemon() {
 
-        // Configurar el panel principal
+        /**
+         * configuramos el panel principal
+         */
         setVisible(true);
         setLayout(new BorderLayout());
 
-        // Iniciar imágenes
+        /**
+         * iniciamos las imagenes
+         */
         battleScenario = new ImageIcon("imagenes/batalla.jpg").getImage();
         pokemonPlayer1 = toBufferedImage(new ImageIcon(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getImagePokemonInBattlePlayer1()).getImage());
         pokemonPlayer2 = toBufferedImage(new ImageIcon(DataNamesIconsColorsAttacksAndPokemonsPlayer2.getImagePokemonInBattlePlayer2()).getImage());
 
-        // Invertir horizontalmente las imágenes de los Pokémon
+        /**
+         * invertimos horizontalemnte la imagen del pokemon del jugador 1 para que mire para el pokemon del jugador 2
+         */
         pokemonPlayer1 = flipImageHorizontally(pokemonPlayer1);
 
-        // Panel de fondo con Pokémon
+        /**
+         * panel de fondo con los pokemons
+         */
         JPanel backgroundPanel = new JPanel() {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
+                /**
+                 * pintamos el escenario
+                 */
                 g.drawImage(battleScenario, 0, 0, getWidth(), getHeight(), this);
 
-
+                /**
+                 * dibujamos el pokemon del jugador 1
+                 */
                 int player1X = getWidth() / 3 - pokemonPlayer1.getWidth(null) / 2;
                 int player1Y = getHeight() - pokemonPlayer1.getHeight(null) - offsetPlayer1Y;
                 g.drawImage(pokemonPlayer1, player1X, player1Y, this);
 
-                // Dibujar Pokémon del jugador 2
+                /**
+                 * dibujamos el pokemon del jugador 2
+                 */
                 int player2X = 2 * getWidth() / 3 - pokemonPlayer2.getWidth(null) / 2;
                 int player2Y = getHeight() - pokemonPlayer2.getHeight(null) - offsetPlayer2Y;
                 g.drawImage(pokemonPlayer2, player2X, player2Y, this);
             }
         };
-        backgroundPanel.setPreferredSize(new Dimension(battleScenario.getWidth(null), battleScenario.getHeight(null)));
+
+        /**
+         * ajustamos la altura del escenario de la batalla pokemon
+         */
+        int newHeight = battleScenario.getHeight(null) + 200; // Ajustar según sea necesario
+        backgroundPanel.setPreferredSize(new Dimension(battleScenario.getWidth(null), newHeight));
 
         add(backgroundPanel, BorderLayout.CENTER);
     }
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("Panel de Batalla Pokémon");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(new PanelImageBattlePokemon());
-        frame.pack();
-        frame.setVisible(true);
-    }
+
 
     /**
-     * Convierte una imagen a BufferedImage
+     * metodo para convertir  una imagen a BufferedImage
      * @param img la imagen a convertir
      * @return la BufferedImage resultante
      */
@@ -86,7 +108,7 @@ public class PanelImageBattlePokemon extends JPanel {
     }
 
     /**
-     * Invierte horizontalmente una imagen
+     * metodo para invertir horizontalmente una imagen
      * @param img la imagen a invertir
      * @return la imagen invertida
      */
@@ -96,12 +118,4 @@ public class PanelImageBattlePokemon extends JPanel {
         AffineTransformOp op = new AffineTransformOp(tx, AffineTransformOp.TYPE_NEAREST_NEIGHBOR);
         return op.filter(img, null);
     }
-
-
-
-    /**
-     * getter y setter de los atributos de la clase
-     * @return los atributos de la clase
-     */
-
 }
