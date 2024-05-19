@@ -3396,6 +3396,54 @@ public class MethodsBattlePlayer1 {
         return powerAttack4;
     }
 
+    /**
+     * metodo para obtener la defensa del pokemon rival en batalla
+     * @param nameOpposingPokemon el nombre del pokemon en batalla
+     * @return el valor de su defensa
+     */
+    public static int getDefenseOpposingPokemonInBattle(String nameOpposingPokemon){
+        /**
+         * iniciamos la cantidad de defensa a 0
+         */
+        int defense = 0;
+
+        /**
+         * iniciamos un array de objetos igual a la lista de pokemons escogida por el jugador 1
+         */
+        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer2();
+
+        /**
+         * recorremos con un for el array de pokemons
+         */
+        for (int i = 0; i < pokemons.size(); i++) {
+
+            PokemonProperties pokemon = (PokemonProperties) pokemons.get(i);
+
+            /**
+             * si algun nombre coincide con el pokemon en batalla, entra en la condicion
+             */
+            if (pokemon.getName().equalsIgnoreCase(nameOpposingPokemon)) {
+                /**
+                 * lo indicamos
+                 */
+                pokemon = (PokemonProperties) pokemons.get(i);
+
+                /**
+                 * almacenamos el valor de la defensa
+                 */
+                defense = pokemon.getDefense();
+
+                break;
+
+
+            }
+        }
+        /**
+         * devolvemos el ataque
+         */
+        return defense;
+
+    }
 
     /**
          * metodos para obtener el texto del boton de los pokemons

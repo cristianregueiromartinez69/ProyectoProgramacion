@@ -3052,6 +3052,8 @@ public class MethodsBattlePlayer2 {
         return pathIcon;
     }
 
+
+
     private static String getNameOfThePokemonPlayer2Pokemon1 () {
 
         return ButtonInterfaceChangePokemonPlayer2.getPokemon1team().getText();
