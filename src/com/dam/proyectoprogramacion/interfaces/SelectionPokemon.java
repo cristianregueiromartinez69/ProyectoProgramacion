@@ -545,6 +545,11 @@ public class SelectionPokemon extends JFrame {
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNamePokemon3(MethodsBattlePlayer1.getNamePokemon3Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
                    LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
+                   LifePokemonInBattlePlayer1.setAuxLife(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
+                   LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
+                   LifePokemonInBattlePlayer1.setLifePokemon2PLayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon2Player1());
+                   LifePokemonInBattlePlayer1.setLifePokemon3PLayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon3Player1());
+
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setImagePokemonInBattlePlayer1(MethodsBattlePlayer1.putImagePokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
 
@@ -580,6 +585,10 @@ public class SelectionPokemon extends JFrame {
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setNamePokemon3(MethodsBattlePlayer2.getNamePokemon3Player2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
                    LifePokemonInBattlePlayer2.setActualLifePokemonInBattlePlayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon1Player2());
+                   LifePokemonInBattlePlayer2.setAuxLifePlayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon1Player2());
+                   LifePokemonInBattlePlayer2.setLifePokemon1PLayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon1Player2());
+                   LifePokemonInBattlePlayer2.setLifePokemon2PLayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon2Player2());
+                   LifePokemonInBattlePlayer2.setLifePokemon3PLayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon3Player2());
 
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setImagePokemonInBattlePlayer2(MethodsBattlePlayer2.putImagePokemonInBattlePlayer2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 

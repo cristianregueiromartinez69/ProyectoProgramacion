@@ -18,7 +18,7 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
     private static Gengar gengar;
     private static Infernape infernape;
     private static Lucario lucario;
-    private static Luxray luxray = new Luxray();
+    private static Luxray luxray;
     private static Marshadow marshadow;
     private static Milotic milotic;
     private static Snorlax snorlax;
@@ -36,6 +36,8 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
         drampa.setLevel(50);
         drampa.setLife(185);
         drampa.setSex("Macho");
+        drampa.setAttack(98);
+        drampa.setDefense(88);
         drampa.setSpeed(36);
         AttacksPokemons[] drampaAttacks = {
                 new AttacksPokemons("Dragon", "Pulso dragon", 85, 100),
@@ -60,6 +62,8 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
         empoleon.setLevel(50);
         empoleon.setLife(191);
         empoleon.setSex("Macho");
+        empoleon.setAttack(99);
+        empoleon.setDefense(95);
         empoleon.setSpeed(96);
         AttacksPokemons[] empoleonAttacks = {
                 new AttacksPokemons("Roca", "Trampa rocas", 0, 100),
@@ -83,6 +87,8 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
         garchomp.setType("dragon-tierra");
         garchomp.setLevel(50);
         garchomp.setLife(195);
+        garchomp.setAttack(105);
+        garchomp.setDefense(90);
         garchomp.setSex("Hembra");
         garchomp.setSpeed(169);
         AttacksPokemons[] garchompAttacks = {
@@ -108,6 +114,8 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
         gengar.setLevel(50);
         gengar.setLife(135);
         gengar.setSex("Macho");
+        gengar.setAttack(98);
+        gengar.setDefense(68);
         gengar.setSpeed(178);
         AttacksPokemons[] gengarAttacks = {
                 new AttacksPokemons("Fantasma", "Bola sombra", 80, 100),
@@ -132,6 +140,8 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
         infernape.setLevel(50);
         infernape.setLife(160);
         infernape.setSex("Macho");
+        infernape.setAttack(104);
+        infernape.setDefense(71);
         infernape.setSpeed(176);
         AttacksPokemons[] infernapeAttacks = {
                 new AttacksPokemons("Fuego", "Envite igneo", 120, 100),
@@ -156,6 +166,8 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
         lucario.setLevel(50);
         lucario.setLife(150);
         lucario.setSex("Macho");
+        lucario.setAttack(113);
+        lucario.setDefense(70);
         lucario.setSpeed(156);
         AttacksPokemons[] lucarioAttacks = {
                 new AttacksPokemons("Normal", "Danza espada", 0, 100),
@@ -180,6 +192,8 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
         luxray.setLevel(50);
         luxray.setLife(160);
         luxray.setSex("Hembra");
+        luxray.setAttack(108);
+        luxray.setDefense(79);
         luxray.setSpeed(134);
         AttacksPokemons[] luxrayAttacks = {
                 new AttacksPokemons("Electrico", "Voltio cruel", 90, 100),
@@ -204,6 +218,8 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
         marshadow.setLevel(50);
         marshadow.setLife(170);
         marshadow.setSex(null);
+        marshadow.setAttack(108);
+        marshadow.setDefense(85);
         marshadow.setSpeed(194);
         AttacksPokemons[] marshadowAttacks = {
                 new AttacksPokemons("Fantasma", "Roba sombra", 90, 100),
@@ -228,6 +244,8 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
         milotic.setLevel(50);
         milotic.setLife(202);
         milotic.setSex("Hembra");
+        milotic.setAttack(80);
+        milotic.setDefense(102);
         milotic.setSpeed(138);
         AttacksPokemons[] miloticAttacks = {
                 new AttacksPokemons("Agua", "Escaldar", 80, 100),
@@ -253,6 +271,8 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
         snorlax.setLevel(50);
         snorlax.setLife(267);
         snorlax.setSex("Macho");
+        snorlax.setAttack(88);
+        snorlax.setDefense(88);
         snorlax.setSpeed(31);
         AttacksPokemons[] snorlaxAttacks = {
                 new AttacksPokemons("Normal", "Tambor", 0, 100),
@@ -277,6 +297,8 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
         tinkaton.setLevel(50);
         tinkaton.setLife(180);
         tinkaton.setSex("Hembra");
+        tinkaton.setAttack(73);
+        tinkaton.setDefense(91);
         tinkaton.setSpeed(160);
         AttacksPokemons[] tinkatonAttacks = {
                 new AttacksPokemons("Acero", "Martillo colosal", 160, 100),
@@ -301,6 +323,8 @@ public class MethosInterfaceSelectionPokemonCreatePokemons {
         tyranitar.setLevel(50);
         tyranitar.setLife(207);
         tyranitar.setSex("Hembra");
+        tyranitar.setAttack(115);
+        tyranitar.setDefense(105);
         tyranitar.setSpeed(110);
         AttacksPokemons[] tyranitarAttacks = {
                 new AttacksPokemons("Roca", "Roca afilada", 100, 80),
