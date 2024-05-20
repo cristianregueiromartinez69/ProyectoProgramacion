@@ -1122,6 +1122,26 @@ public class Battle extends JFrame {
                     MethodsBattlePlayer2.getPowerAttack1PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
                     MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(), MethodsBattlePlayer2.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
 
+        /**
+         * llamamos al hashmap para recoger la vida del pokemon en batalla
+         */
+        int currentLife = MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
+        /**
+         * llamamos al hashmap para poner la vida del pokemon en batalla
+         */
+        MethodsBattlePokemon.putValuesLifePokemonsPlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1(), currentLife - damagePlayer2);
+        /**
+         * llamamos al panel de la vida del pokemon para poner la vida del pokemon despues de recibir daño
+         */
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
+        /**
+         * llamamos al panel de la vida del pokemon para poner el color de la barra de vida
+         */
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setForeground(LifePokemonInBattlePlayer1.getBackgroundColorLifeBarPokemonPlayer1(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1())));
+        /**
+         * llamamos al panel de la vida del pokemon para repintar la barra de vida
+         */
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
             /**
              * cambiamos los turnos de los jugadores
              */
@@ -1134,10 +1154,16 @@ public class Battle extends JFrame {
 
 
     }
+    /**
+     * metodo para atacar y hacer visible el panel de atacar y cambio e invisible el de ataques del jugador 2
+     */
     private static void clearGlobalPanelPlayer2WhenPressAttack2Buttons(){
             attacksPanelPlayer2.setVisible(false);
             attacksChangesPokemon1Player2.setVisible(true);
 
+            /**
+             * llamamos al metodo que calcula el daño del ataque
+             */
         damagePlayer2 = (int) MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
                 MethodsTextAreaBattlePlayer2.getTypeAttack2PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
                 MethodsBattlePlayer2.getAmountAttackPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
@@ -1146,25 +1172,25 @@ public class Battle extends JFrame {
 
 
         /**
-         * cambiamos los turnos de los jugadores
+         * llamamos al hashmap para recoger la vida del pokemon en batalla
          */
-        if(MethodsBattlePokemon.turnsToCombat()== 2){
-            MethodsBattlePokemon.setTurnsToCombat(1);
-        }
-        else if(MethodsBattlePokemon.turnsToCombat() == 1){
-            MethodsBattlePokemon.setTurnsToCombat(2);
-        }
-
-    }
-    private static void clearGlobalPanelPlayer2WhenPressAttack3Buttons(){
-            attacksPanelPlayer2.setVisible(false);
-            attacksChangesPokemon1Player2.setVisible(true);
-
-        damagePlayer2 = (int) MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
-                MethodsTextAreaBattlePlayer2.getTypeAttack3PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
-                MethodsBattlePlayer2.getAmountAttackPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
-                MethodsBattlePlayer2.getPowerAttack3PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
-                MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(), MethodsBattlePlayer2.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
+        int currentLife = MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
+        /**
+         * llamamos al hashmap para poner la vida del pokemon en batalla
+         */
+        MethodsBattlePokemon.putValuesLifePokemonsPlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1(), currentLife - damagePlayer2);
+        /**
+         * llamamos al panel de la vida del pokemon para poner la vida del pokemon despues de recibir daño
+         */
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
+        /**
+         * llamamos al panel de la vida del pokemon para poner el color de la barra de vida
+         */
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setForeground(LifePokemonInBattlePlayer1.getBackgroundColorLifeBarPokemonPlayer1(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1())));
+        /**
+         * llamamos al panel de la vida del pokemon para repintar la barra de vida
+         */
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
 
         /**
          * cambiamos los turnos de los jugadores
@@ -1177,16 +1203,90 @@ public class Battle extends JFrame {
         }
 
     }
+    /**
+     * metodo para atacar y hacer visible el panel de atacar y cambio e invisible el de ataques del jugador 2
+     */
+    private static void clearGlobalPanelPlayer2WhenPressAttack3Buttons(){
+            attacksPanelPlayer2.setVisible(false);
+            attacksChangesPokemon1Player2.setVisible(true);
+            /**
+             * llamamos al metodo que calcula el daño del ataque
+             */
+        damagePlayer2 = (int) MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
+                MethodsTextAreaBattlePlayer2.getTypeAttack3PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
+                MethodsBattlePlayer2.getAmountAttackPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
+                MethodsBattlePlayer2.getPowerAttack3PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
+                MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(), MethodsBattlePlayer2.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
+
+
+        /**
+         * llamamos al hashmap para recoger la vida del pokemon en batalla
+         */
+        int currentLife = MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
+        /**
+         * llamamos al hashmap para poner la vida del pokemon en batalla
+         */
+        MethodsBattlePokemon.putValuesLifePokemonsPlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1(), currentLife - damagePlayer2);
+        /**
+         * llamamos al panel de la vida del pokemon para poner la vida del pokemon despues de recibir daño
+         */
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
+        /**
+         * llamamos al panel de la vida del pokemon para poner el color de la barra de vida
+         */
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setForeground(LifePokemonInBattlePlayer1.getBackgroundColorLifeBarPokemonPlayer1(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1())));
+        /**
+         * llamamos al panel de la vida del pokemon para repintar la barra de vida
+         */
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
+        /**
+         * cambiamos los turnos de los jugadores
+         */
+        if(MethodsBattlePokemon.turnsToCombat()== 2){
+            MethodsBattlePokemon.setTurnsToCombat(1);
+        }
+        else if(MethodsBattlePokemon.turnsToCombat() == 1){
+            MethodsBattlePokemon.setTurnsToCombat(2);
+        }
+
+    }
+    /**
+     * metodo para atacar y hacer visible el panel de atacar y cambio e invisible el de ataques del jugador 2
+     */
     private static void clearGlobalPanelPlayer2WhenPressAttack4Buttons(){
             attacksPanelPlayer2.setVisible(false);
             attacksChangesPokemon1Player2.setVisible(true);
 
+            /**
+             * llamamos al metodo que calcula el daño del ataque
+             */
         damagePlayer2 = (int) MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
                 MethodsTextAreaBattlePlayer2.getTypeAttack4PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
                 MethodsBattlePlayer2.getAmountAttackPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
                 MethodsBattlePlayer2.getPowerAttack4PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
                 MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(), MethodsBattlePlayer2.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
 
+
+        /**
+         * llamamos al hashmap para recoger la vida del pokemon en batalla
+         */
+        int currentLife = MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
+        /**
+         * llamamos al hashmap para poner la vida del pokemon en batalla
+         */
+        MethodsBattlePokemon.putValuesLifePokemonsPlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1(), currentLife - damagePlayer2);
+        /**
+         * llamamos al panel de la vida del pokemon para poner la vida del pokemon despues de recibir daño
+         */
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
+        /**
+         * llamamos al panel de la vida del pokemon para poner el color de la barra de vida
+         */
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setForeground(LifePokemonInBattlePlayer1.getBackgroundColorLifeBarPokemonPlayer1(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1())));
+        /**
+         * llamamos al panel de la vida del pokemon para repintar la barra de vida
+         */
+        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
         /**
          * cambiamos los turnos de los jugadores
          */
