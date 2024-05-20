@@ -41,6 +41,11 @@ public class MethodsBattlePokemon {
      */
     public static final float LEVEL = 100f;
 
+    private static boolean isPlayer1Turn = true;
+    private static boolean isPlayer2Turn = true;
+
+
+
     /**
      * variables para almacenar la cantidad de ataque, defensa y poder de ataque del pokemon en batalla del jugador 1
      */
@@ -468,7 +473,7 @@ public class MethodsBattlePokemon {
         /**
          * si el speed del pokemon 1 es mayor que el del pokemon 2, el daño será el del pokemon 1
          */
-        if(speedPokemonPlayer1 > speedPokemonPlayer2){
+        if(speedPokemonPlayer1 > speedPokemonPlayer2 && isPlayer1Turn){
             /**
              *
              */
@@ -478,12 +483,13 @@ public class MethodsBattlePokemon {
                     MethodsBattlePlayer1.getPowerAttack1PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
                     MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
                     MethodsBattlePlayer1.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()));
+            isPlayer1Turn = false;
 
         }
         /**
          * si el speed del pokemon 2 es mayor que el del pokemon 1, el daño será el del pokemon 2
          */
-        else{
+        else if(speedPokemonPlayer1 < speedPokemonPlayer2 && !isPlayer1Turn){
             /**
              * asignamos el daño
              */
@@ -493,6 +499,7 @@ public class MethodsBattlePokemon {
                     MethodsBattlePlayer2.getPowerAttack1PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
                     MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
                     MethodsBattlePlayer2.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
+            isPlayer1Turn = true;
         }
         /**
          * devolvemos el daño
