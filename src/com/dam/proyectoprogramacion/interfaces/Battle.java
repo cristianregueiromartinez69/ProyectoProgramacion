@@ -327,8 +327,8 @@ public class Battle extends JFrame {
                  * llamamos al propio metodo para actualizar all
                  */
 
-                int valor = MethodsBattlePokemon.setValueOfLifePokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
-                System.out.println("la vida actual es de " + valor);
+                int speed = MethodsBattlePlayer1.getSpeedPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
+                System.out.println("la velocidad es de " + speed);
 
                 pokemonBattle();
                 MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
@@ -350,8 +350,8 @@ public class Battle extends JFrame {
                 /**
                  * llamamos al propio metodo para actualizar all
                  */
-                int valor = MethodsBattlePokemon.setValueOfLifePokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
-                System.out.println("la vida actual es de " + valor);
+                int speed = MethodsBattlePlayer1.getSpeedPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
+                System.out.println("la velocidad es de " + speed);
 
                 pokemonBattle();
                 MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
@@ -374,8 +374,8 @@ public class Battle extends JFrame {
                 /**
                  * llamamos al propio metodo para actualizar
                  */
-                int valor = MethodsBattlePokemon.setValueOfLifePokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
-                System.out.println("la vida actual es de " + valor);
+                int speed = MethodsBattlePlayer1.getSpeedPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
+                System.out.println("la velocidad es de " + speed);
 
                 pokemonBattle();
                 MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
@@ -491,7 +491,10 @@ public class Battle extends JFrame {
                 /**
                  * llamamos al propio metodo para actualizar all
                  */
-                 pokemonBattle();
+                int speed = MethodsBattlePlayer2.getSpeedPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
+                System.out.println("la velocidad es de " + speed);
+
+                pokemonBattle();
                 MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
 
             }
@@ -513,7 +516,10 @@ public class Battle extends JFrame {
                 /**
                  * llamamos al propio metodo para actualizar all
                  */
-                 pokemonBattle();
+                int speed = MethodsBattlePlayer2.getSpeedPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
+                System.out.println("la velocidad es de " + speed);
+
+                pokemonBattle();
                 MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
 
             }
@@ -534,7 +540,10 @@ public class Battle extends JFrame {
                 /**
                  * llamamos al propio metodo para actualizar all
                  */
-                  pokemonBattle();
+                int speed = MethodsBattlePlayer2.getSpeedPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
+                System.out.println("la velocidad es de " + speed);
+
+                pokemonBattle();
                 MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
 
             }
