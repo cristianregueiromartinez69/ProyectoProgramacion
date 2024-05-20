@@ -592,6 +592,8 @@ public class SelectionPokemon extends JFrame {
 
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setImagePokemonInBattlePlayer2(MethodsBattlePlayer2.putImagePokemonInBattlePlayer2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
+                   MethosInterfaceSelectionPokemon.addLifePokemonsPlayer1(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
+                   MethosInterfaceSelectionPokemon.addLifePokemonsPlayer2(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
 
                    MusicIntroGame.stopMusic();
