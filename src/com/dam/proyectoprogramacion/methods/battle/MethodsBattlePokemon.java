@@ -39,18 +39,13 @@ public class MethodsBattlePokemon {
      */
     public static final float LEVEL = 100f;
 
+    /**
+     * variable para saber el turno de combate
+     */
     private static int turnsToCombat = 1;
 
 
 
-
-    /**
-     * variables para almacenar la cantidad de ataque, defensa y poder de ataque del pokemon en batalla del jugador 1
-     */
-
-    /**
-     * variables para almacenar la cantidad de ataque, defensa y poder de ataque del pokemon en batalla del jugador 2
-     */
 
 
     //--------------------------------------------------------------------------//

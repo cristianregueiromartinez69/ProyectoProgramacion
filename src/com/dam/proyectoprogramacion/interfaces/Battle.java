@@ -41,12 +41,9 @@ public class Battle extends JFrame {
     private  static JPanel lifePanelPokemon;
     private static JPanel textAreaPanel;
 
-   private static int damagePlayer1 = 30;
-   private static int damagePlayer2 = 60;
-
-   private static  int newLifePlayer2 = MethodsLifeBattlePokemonPlayer2.getLifePokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
-   private static int newLifePLayer1 = MethodsLifeBattlePokemonPlayer1.getLifePokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
-
+    /**
+     * atributos privados de tipo int para saber la velocidad de los pokemons
+     */
    private static int speedPlayer1 = MethodsBattlePlayer1.getSpeedPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
     private static int speedPlayer2 = MethodsBattlePlayer2.getSpeedPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
 
@@ -118,12 +115,17 @@ public class Battle extends JFrame {
         globalPanelPLayer1.add(changesPokemonsPLayer1);
 
 
-
+        /**
+         * iniciamos el panel de la vida del pokemon
+         */
         lifePanelPokemon = new JPanel();
         lifePanelPokemon.setLayout(new FlowLayout());
         contentPanel.add(lifePanelPokemon, BorderLayout.NORTH);
 
 
+        /**
+         * añadimos al panel de la vida del pokemon un panel que será la vida del pokemon en batalla
+         */
         lifePanelPokemon.add(new LifePokemonInBattlePlayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
                 MethodsBattlePokemon.setValueOfLifePokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1())));
 
@@ -210,6 +212,9 @@ public class Battle extends JFrame {
 
 
 
+        /**
+         * llamamos al metodo que contiene los actionListener de los botones
+         */
         pokemonBattle();
 
 
@@ -330,6 +335,9 @@ public class Battle extends JFrame {
                  */
 
                 pokemonBattle();
+                /**
+                 * llamamos al metodo que pone el sonido de cambio de pokemon
+                 */
                 MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
 
             }
@@ -350,10 +358,14 @@ public class Battle extends JFrame {
                  * llamamos al propio metodo para actualizar all
                  */
                 pokemonBattle();
+                /**
+                 * llamamos al metodo que pone el sonido de cambio de pokemon
+                 */
                 MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
 
             }
         });
+
         ButtonInterfaceChangePokemonPlayer1.getPokemon2team().addActionListener(this::putInformationAreaTextBattlePlayer1);
 
         /**
@@ -372,6 +384,9 @@ public class Battle extends JFrame {
                  */
 
                 pokemonBattle();
+                /**
+                 * llamamos al metodo que pone el sonido de cambio de pokemon
+                 */
                 MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
 
             }
@@ -486,6 +501,9 @@ public class Battle extends JFrame {
                  * llamamos al propio metodo para actualizar all
                  */
                 pokemonBattle();
+                /**
+                 * llamamos al metodo que pone el sonido de cambio de pokemon
+                 */
                 MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
 
             }
@@ -509,6 +527,9 @@ public class Battle extends JFrame {
                  */
 
                 pokemonBattle();
+                /**
+                 * llamamos al metodo que pone el sonido de cambio de pokemon
+                 */
                 MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
 
             }
@@ -531,6 +552,9 @@ public class Battle extends JFrame {
                  */
 
                 pokemonBattle();
+                /**
+                 * llamamos al metodo que pone el sonido de cambio de pokemon
+                 */
                 MethodsSongBattle.PutPokemonSoundOnExitAndChangeInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
 
             }
@@ -558,10 +582,18 @@ public class Battle extends JFrame {
      * metodo que hace visible el panel de ataques y oculta el de ataque y cambio
      */
     private static void clearGlobalPanelPlayer1WhenPressAttack() {
+        /**
+         * si la velocidad del jugador 1 es mayor que la del jugador 2 y es el turno del jugador 1
+         * se hace visible el panel de ataques y se oculta el de ataque y cambio
+         */
         if (speedPlayer1 > speedPlayer2 && MethodsBattlePokemon.turnsToCombat() == 1) {
             attacksPanelPlayer1.setVisible(true);
             attacksChangesPokemon1Player1.setVisible(false);
 
+            /**
+             * si la velocidad del jugador 1 es menor que la del jugador 2 y es el turno del jugador 2
+             * se hace visible el panel de ataques y se oculta el de ataque y cambio
+             */
         } else if (speedPlayer1 < speedPlayer2 && MethodsBattlePokemon.turnsToCombat() == 2) {
             attacksPanelPlayer1.setVisible(true);
             attacksChangesPokemon1Player1.setVisible(false);
@@ -574,9 +606,12 @@ public class Battle extends JFrame {
      */
     private static void clearGlobalPanelPlayer1WhenPressAttack1Buttons(){
 
+
             attacksPanelPlayer1.setVisible(false);
             attacksChangesPokemon1Player1.setVisible(true);
-            System.out.println("jugador 1 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack1Player1());
+        /**
+         * cambiamos los turnos de los jugadores
+         */
         if(MethodsBattlePokemon.turnsToCombat()== 1){
             MethodsBattlePokemon.setTurnsToCombat(2);
         }
@@ -591,7 +626,10 @@ public class Battle extends JFrame {
 
             attacksPanelPlayer1.setVisible(false);
             attacksChangesPokemon1Player1.setVisible(true);
-            System.out.println("jugador 1 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack2Player1());
+
+            /**
+             * cambiamos los turnos de los jugadores
+             */
             if(MethodsBattlePokemon.turnsToCombat()== 1){
                 MethodsBattlePokemon.setTurnsToCombat(2);
             }
@@ -606,8 +644,11 @@ public class Battle extends JFrame {
 
             attacksPanelPlayer1.setVisible(false);
             attacksChangesPokemon1Player1.setVisible(true);
-            System.out.println("jugador 1 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack3Player1());
-            if(MethodsBattlePokemon.turnsToCombat()== 1){
+
+        /**
+         * cambiamos los turnos de los jugadores
+         */
+        if(MethodsBattlePokemon.turnsToCombat()== 1){
                 MethodsBattlePokemon.setTurnsToCombat(2);
             }
             else if(MethodsBattlePokemon.turnsToCombat() == 2){
@@ -619,7 +660,10 @@ public class Battle extends JFrame {
 
             attacksPanelPlayer1.setVisible(false);
             attacksChangesPokemon1Player1.setVisible(true);
-            System.out.println("jugador 1 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack4Player1());
+
+            /**
+             * cambiamos los turnos de los jugadores
+             */
             if(MethodsBattlePokemon.turnsToCombat()== 1){
                 MethodsBattlePokemon.setTurnsToCombat(2);
             }
@@ -640,6 +684,10 @@ public class Battle extends JFrame {
      * metodo que hace visible los pokemons a elegir y oculta el de ataque y cambio
      */
     private  static void clearGlobalPanelPlayer1WhenPressChange(){
+        /**
+         * si la velocidad del jugador 1 es mayor que la del jugador 2 y es el turno del jugador 1
+         * se hace visible el panel de cambio de pokemons y se oculta el de ataque y cambio
+         */
         if(speedPlayer1 > speedPlayer2 && MethodsBattlePokemon.turnsToCombat() == 1){
             changesPokemonsPLayer1.setVisible(true);
             attacksChangesPokemon1Player1.setVisible(false);
@@ -699,9 +747,16 @@ public class Battle extends JFrame {
         DataNamesIconsColorsAttacksAndPokemonsPlayer1.setImagePokemonInBattlePlayer1(MethodsBattlePlayer1.newImagePokemonInBattle1Player1());
 
 
+        /**
+         * lo añadimos
+         */
         contentPanel.add(makeAgainContentPanel(contentPanel));
 
+
         revalidateContentPanel();
+        /**
+         * cambiamos los turnos de los jugadores
+         */
         if(MethodsBattlePokemon.turnsToCombat()== 1){
             MethodsBattlePokemon.setTurnsToCombat(2);
         }
@@ -755,6 +810,9 @@ public class Battle extends JFrame {
         contentPanel.add(makeAgainContentPanel(contentPanel));
         revalidateContentPanel();
 
+        /**
+         * cambiamos los turnos de los jugadores
+         */
         if(MethodsBattlePokemon.turnsToCombat()== 1){
             MethodsBattlePokemon.setTurnsToCombat(2);
         }
@@ -810,6 +868,9 @@ public class Battle extends JFrame {
         contentPanel.add(makeAgainContentPanel(contentPanel));
         revalidateContentPanel();
 
+        /**
+         * cambiamos los turnos de los jugadores
+         */
         if(MethodsBattlePokemon.turnsToCombat()== 1){
             MethodsBattlePokemon.setTurnsToCombat(2);
         }
@@ -821,48 +882,9 @@ public class Battle extends JFrame {
         attacksChangesPokemon1Player1.setVisible(true);
     }
 
-    /**
-     * metodo para actualizar el panel de vida del pokemon en batalla del jugador 1
-     */
 
-    /**
-     * metodo para actualizar la barra de vida del pokemon al cambio del jugador 1
-     * @param e objeto de tipo actionevent
-     */
-    public void changeLifePokemonInBattlePlayer1(ActionEvent e) {
 
-        /**
-         * si el jugador pulsa el boton 1 de cambio, entra en la condicion
-         */
-        if(e.getSource() == ButtonInterfaceChangePokemonPlayer1.getPokemon1team()){
-            /**
-             * Se establece la nueva vida actual del pokemon
-             */
-            LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
-            LifePokemonInBattlePlayer1.setAuxLife(LifePokemonInBattlePlayer1.getLifePokemon1PLayer1());
-        }
-        /**
-         * si el jugador pulsa el boton 2 de cambio, entra en la condicion
-         */
-        else if(e.getSource() == ButtonInterfaceChangePokemonPlayer1.getPokemon2team()){
-            /**
-             * Se establece la nueva vida actual del pokemon
-             */
-            LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon2Player1());
-            LifePokemonInBattlePlayer1.setAuxLife(LifePokemonInBattlePlayer1.getLifePokemon2PLayer1());
 
-        }/**
-         * si el jugador pulsa el boton 3 de cambio, entra en la condicion
-         */
-        else if((e.getSource() == ButtonInterfaceChangePokemonPlayer1.getPokemon3team())){
-            /**
-             * Se establece la nueva vida actual del pokemon
-             */
-            LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon3Player1());
-            LifePokemonInBattlePlayer1.setAuxLife(LifePokemonInBattlePlayer1.getLifePokemon3PLayer1());
-
-        }
-    }
 
     /**
      * metodo para escribir en el textarea de la batalla cuando se realiza una accion del jugador 1
@@ -935,35 +957,7 @@ public class Battle extends JFrame {
 
     }
 
-    private static JProgressBar  updateLifeBarPlayer1(int value) {
 
-
-        // Obtener el JProgressBar de la vida del Pokémon
-        JProgressBar lifeBarPlayer1 = new JProgressBar(0, value);
-
-        // Actualizar el valor de la vida en batalla usando el método adecuado
-        LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(value);
-
-        LifePokemonInBattlePlayer1.setAuxLife(MethodsBattlePokemon.setValueOfLifePokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
-        lifeBarPlayer1.setValue(LifePokemonInBattlePlayer1.getAuxLife());
-
-        lifeBarPlayer1.setPreferredSize(new Dimension(400, 40));
-        lifeBarPlayer1.setMaximumSize(new Dimension(400, 40));
-        lifeBarPlayer1.setMinimumSize(new Dimension(400, 40));
-        /**
-         * hacemos que aparezca el numero de la vida del pokemon
-         */
-        lifeBarPlayer1.setStringPainted(true);
-
-        lifeBarPlayer1.setString("" + value);
-
-        // Actualizar el color de la barra de vida según la vida actual
-        lifeBarPlayer1.setForeground(LifePokemonInBattlePlayer1.getBackgroundColorLifeBarPokemonPlayer1(value));
-
-        // Forzar la actualización visual de la barra de vida
-        lifeBarPlayer1.repaint();
-        return lifeBarPlayer1;
-    }
 
     //---------------------------metodos para cambios de paneles del jugador 2-----------------------------------//
 
@@ -971,11 +965,19 @@ public class Battle extends JFrame {
      * metodo que hace visible el panel de ataques y oculta el de ataque y cambio
      */
     private static void clearGlobalPanelPlayer2WhenPressAttack(){
+        /**
+         * si la velocidad del jugador 1 es mayor que la del jugador 2 y es el turno del jugador 2
+         * se hace visible el panel de ataques y se oculta el de ataque y cambio
+         */
         if(speedPlayer1 > speedPlayer2 && MethodsBattlePokemon.turnsToCombat() == 2){
             attacksPanelPlayer2.setVisible(true);
             attacksChangesPokemon1Player2.setVisible(false);
 
         }
+        /**
+         * si la velocidad del jugador 1 es menor que la del jugador 2 y es el turno del jugador 1
+         * se hace visible el panel de ataques y se oculta el de ataque y cambio
+         */
         else if(speedPlayer1 < speedPlayer2 && MethodsBattlePokemon.turnsToCombat() == 1){
             attacksPanelPlayer2.setVisible(true);
             attacksChangesPokemon1Player2.setVisible(false);
@@ -990,7 +992,10 @@ public class Battle extends JFrame {
     private static void clearGlobalPanelPlayer2WhenPressAttack1Buttons(){
             attacksPanelPlayer2.setVisible(false);
             attacksChangesPokemon1Player2.setVisible(true);
-            System.out.println("jugador 2 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack1Player2());
+
+            /**
+             * cambiamos los turnos de los jugadores
+             */
         if(MethodsBattlePokemon.turnsToCombat()== 2){
             MethodsBattlePokemon.setTurnsToCombat(1);
         }
@@ -1003,7 +1008,10 @@ public class Battle extends JFrame {
     private static void clearGlobalPanelPlayer2WhenPressAttack2Buttons(){
             attacksPanelPlayer2.setVisible(false);
             attacksChangesPokemon1Player2.setVisible(true);
-            System.out.println("jugador 2 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack2Player2());
+
+            /**
+             * cambiamos los turnos de los jugadores
+             */
         if(MethodsBattlePokemon.turnsToCombat()== 2){
             MethodsBattlePokemon.setTurnsToCombat(1);
         }
@@ -1015,7 +1023,10 @@ public class Battle extends JFrame {
     private static void clearGlobalPanelPlayer2WhenPressAttack3Buttons(){
             attacksPanelPlayer2.setVisible(false);
             attacksChangesPokemon1Player2.setVisible(true);
-            System.out.println("jugador 2 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack3Player2());
+
+            /**
+             * cambiamos los turnos de los jugadores
+             */
         if(MethodsBattlePokemon.turnsToCombat()== 2){
             MethodsBattlePokemon.setTurnsToCombat(1);
         }
@@ -1027,7 +1038,10 @@ public class Battle extends JFrame {
     private static void clearGlobalPanelPlayer2WhenPressAttack4Buttons(){
             attacksPanelPlayer2.setVisible(false);
             attacksChangesPokemon1Player2.setVisible(true);
-            System.out.println("jugador 2 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack4Player2());
+
+            /**
+             * cambiamos los turnos de los jugadores
+             */
         if(MethodsBattlePokemon.turnsToCombat()== 2){
             MethodsBattlePokemon.setTurnsToCombat(1);
         }
@@ -1047,11 +1061,19 @@ public class Battle extends JFrame {
      * metodo que hace visible los pokemons a elegir y oculta el de ataque y cambio
      */
     private  static void clearGlobalPanelPlayer2WhenPressChange(){
+       /**
+         * si la velocidad del jugador 1 es mayor que la del jugador 2 y es el turno del jugador 2
+         * se hace visible el panel de cambio de pokemons y se oculta el de ataque y cambio
+         */
         if(speedPlayer1 > speedPlayer2 && MethodsBattlePokemon.turnsToCombat() == 2){
             changesPokemonsPLayer2.setVisible(true);
             attacksChangesPokemon1Player2.setVisible(false);
 
         }
+        /**
+         * si la velocidad del jugador 1 es menor que la del jugador 2 y es el turno del jugador 1
+         * se hace visible el panel de cambio de pokemons y se oculta el de ataque y cambio
+         */
         else if(speedPlayer1 < speedPlayer2 && MethodsBattlePokemon.turnsToCombat() == 1){
             changesPokemonsPLayer2.setVisible(true);
             attacksChangesPokemon1Player2.setVisible(false);
@@ -1111,6 +1133,9 @@ public class Battle extends JFrame {
 
         contentPanel.add(makeAgainContentPanel(contentPanel));
         revalidateContentPanel();
+        /**
+         * cambiamos los turnos de los jugadores
+         */
         if(MethodsBattlePokemon.turnsToCombat()== 2){
             MethodsBattlePokemon.setTurnsToCombat(1);
         }
@@ -1167,6 +1192,9 @@ public class Battle extends JFrame {
 
         contentPanel.add(makeAgainContentPanel(contentPanel));
         revalidateContentPanel();
+        /**
+         * cambiamos los turnos de los jugadores
+         */
         if(MethodsBattlePokemon.turnsToCombat()== 2){
             MethodsBattlePokemon.setTurnsToCombat(1);
         }
@@ -1219,6 +1247,9 @@ public class Battle extends JFrame {
 
         DataNamesIconsColorsAttacksAndPokemonsPlayer2.setImagePokemonInBattlePlayer2(MethodsBattlePlayer2.newImagePokemonInBattle3Player2());
 
+        /**
+         * cambiamos los turnos de los jugadores
+         */
         if(MethodsBattlePokemon.turnsToCombat()== 2){
             MethodsBattlePokemon.setTurnsToCombat(1);
         }
@@ -1235,43 +1266,7 @@ public class Battle extends JFrame {
 
 
 
-    /**
-     * metodo para actualizar la barra de vida del pokemon al cambio del jugador 2
-     * @param e objeto de tipo actionevent
-     */
-    public void changeLifePokemonInBattlePlayer2(ActionEvent e) {
-        /**
-         * si el jugador pulsa el boton 1 de cambio, entra en la condicion
-         */
-        if(e.getSource() == ButtonInterfaceChangePokemonPlayer2.getPokemon1team()){
-            /**
-             * Se establece la nueva vida actual del pokemon
-             */
-            LifePokemonInBattlePlayer2.setActualLifePokemonInBattlePlayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon1Player2());
-            LifePokemonInBattlePlayer2.setAuxLifePlayer2(LifePokemonInBattlePlayer2.getLifePokemon1PLayer2());
-        }
-        /**
-         * si el jugador pulsa el boton 2 de cambio, entra en la condicion
-         */
-        else if(e.getSource() == ButtonInterfaceChangePokemonPlayer2.getPokemon2team()){
-            /**
-             * Se establece la nueva vida actual del pokemon
-             */
-            LifePokemonInBattlePlayer2.setActualLifePokemonInBattlePlayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon2Player2());
-            LifePokemonInBattlePlayer2.setAuxLifePlayer2(LifePokemonInBattlePlayer2.getLifePokemon2PLayer2());
 
-        }/**
-         * si el jugador pulsa el boton 3 de cambio, entra en la condicion
-         */
-        else if((e.getSource() == ButtonInterfaceChangePokemonPlayer2.getPokemon3team())){
-            /**
-             * Se establece la nueva vida actual del pokemon
-             */
-            LifePokemonInBattlePlayer2.setActualLifePokemonInBattlePlayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon3Player2());
-            LifePokemonInBattlePlayer2.setAuxLifePlayer2(LifePokemonInBattlePlayer2.getLifePokemon3PLayer2());
-
-        }
-    }
     /**
      * metodo para escribir en el textarea de la batalla cuando se realiza una accion del jugador 2
      * @param e el objeto de tipo Action Event
@@ -1339,24 +1334,6 @@ public class Battle extends JFrame {
                     " ha hecho un cambio de pokemon, sale al campo de batalla " + MethodsTextAreaBattlePlayer2.getNamePokemon3ToChangePLayer2());
         }
 
-    }
-    private static void updateLifeBarPlayer2(int value) {
-
-        // Obtener el JProgressBar de la vida del Pokémon
-        JProgressBar lifeBarPlayer2 = LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2();
-
-        // Actualizar el valor de la vida en batalla usando el método adecuado
-        int actualLife = MethodsLifeBattlePokemonPlayer2.getLifePokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
-        LifePokemonInBattlePlayer2.setActualLifePokemonInBattlePlayer2(actualLife);
-
-        LifePokemonInBattlePlayer2.setAuxLifePlayer2(MethodsBattlePokemon.setValueOfLifePokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()));
-        lifeBarPlayer2.setValue(LifePokemonInBattlePlayer2.getAuxLifePlayer2());
-
-        // Actualizar el color de la barra de vida según la vida actual
-        lifeBarPlayer2.setForeground(LifePokemonInBattlePlayer2.getBackgroundColorLifeBarPokemonPlayer2(value));
-
-        // Forzar la actualización visual de la barra de vida
-        lifeBarPlayer2.repaint();
     }
 
 
