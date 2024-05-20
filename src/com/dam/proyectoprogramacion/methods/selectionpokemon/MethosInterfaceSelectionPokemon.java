@@ -1420,7 +1420,7 @@ public class MethosInterfaceSelectionPokemon {
                         /**
                          * añadimos los valores al hashmap de los pokemons con vida
                          */
-                        String namePokemon = auxPokemons.getName();
+                        String namePokemon = auxPokemons.getName().toLowerCase();
                         int lifePokemon = auxPokemons.getLife();
                         MethodsBattlePokemon.putValuesLifePokemonsPlayer1(namePokemon, lifePokemon);
                     }
@@ -1458,7 +1458,7 @@ public class MethosInterfaceSelectionPokemon {
                         /**
                          * añadimos los valores al hashmap de los pokemons con vida
                          */
-                        String namePokemon = auxPokemons.getName();
+                        String namePokemon = auxPokemons.getName().toLowerCase();
                         int lifePokemon = auxPokemons.getLife();
                         MethodsBattlePokemon.putValuesLifePokemonsPlayer2(namePokemon, lifePokemon);
                     }
