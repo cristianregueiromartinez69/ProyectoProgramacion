@@ -45,7 +45,10 @@ public class Battle extends JFrame {
      * atributos privados de tipo int para saber la velocidad de los pokemons
      */
    private static int speedPlayer1 = MethodsBattlePlayer1.getSpeedPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
-    private static int speedPlayer2 = MethodsBattlePlayer2.getSpeedPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
+   private static int speedPlayer2 = MethodsBattlePlayer2.getSpeedPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
+
+   private static int damagaPlayer1;
+   private static int damagaPlayer2;
 
 
 
@@ -609,6 +612,11 @@ public class Battle extends JFrame {
 
             attacksPanelPlayer1.setVisible(false);
             attacksChangesPokemon1Player1.setVisible(true);
+            damagaPlayer1 = (int) MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
+                    MethodsTextAreaBattlePlayer1.getTypeAttack1PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                    MethodsBattlePlayer1.getAmountAttackPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                    MethodsBattlePlayer1.getPowerAttack1PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                    MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(), MethodsBattlePlayer1.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()));
         /**
          * cambiamos los turnos de los jugadores
          */
