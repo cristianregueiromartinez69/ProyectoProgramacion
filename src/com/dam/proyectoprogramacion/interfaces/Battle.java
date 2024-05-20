@@ -127,7 +127,7 @@ public class Battle extends JFrame {
          * añadimos al panel de la vida del pokemon un panel que será la vida del pokemon en batalla
          */
         lifePanelPokemon.add(new LifePokemonInBattlePlayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
-                MethodsBattlePokemon.setValueOfLifePokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1())));
+                MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1())));
 
 
         //---------------------paneles del jugador 2-------------------//
