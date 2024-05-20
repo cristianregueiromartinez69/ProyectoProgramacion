@@ -354,8 +354,14 @@ public class MethodsBattlePokemon {
             return new String[]{type};
         }
     }
+    public static void putValuesLifePokemons(String namePokemon, int life){
+        lifePokemons.put(namePokemon, life);
+    }
 
-//--------------------------------------------------------------------------//
+    public static HashMap<String, Integer> getLifePokemons() {
+        return lifePokemons;
+    }
+    //--------------------------------------------------------------------------//
 
 //----------------------------Jugador 2-----------------------------------//
 
