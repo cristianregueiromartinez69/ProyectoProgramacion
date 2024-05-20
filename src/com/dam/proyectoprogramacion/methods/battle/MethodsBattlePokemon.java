@@ -45,8 +45,8 @@ public class MethodsBattlePokemon {
      */
     private static int turnsToCombat = 1;
 
-    private static HashMap<String, Integer> lifePokemons = new HashMap<>();
-
+    private static HashMap<String, Integer> lifePokemonsPlayer1 = new HashMap<>();
+    private static HashMap<String, Integer> lifePokemonsPlayer2 = new HashMap<>();
 
 
 
@@ -354,13 +354,21 @@ public class MethodsBattlePokemon {
             return new String[]{type};
         }
     }
-    public static void putValuesLifePokemons(String namePokemon, int life){
-        lifePokemons.put(namePokemon, life);
+    public static void putValuesLifePokemonsPlayer1(String namePokemon, int life){
+        lifePokemonsPlayer1.put(namePokemon, life);
     }
 
-    public static HashMap<String, Integer> getLifePokemons() {
-        return lifePokemons;
+    public static HashMap<String, Integer> getLifePokemonsPlayer1() {
+        return lifePokemonsPlayer1;
     }
+    public static void putValuesLifePokemonsPlayer2(String namePokemon, int life){
+        lifePokemonsPlayer2.put(namePokemon, life);
+    }
+
+    public static HashMap<String, Integer> getLifePokemonsPlayer2() {
+        return lifePokemonsPlayer2;
+    }
+
     //--------------------------------------------------------------------------//
 
 //----------------------------Jugador 2-----------------------------------//

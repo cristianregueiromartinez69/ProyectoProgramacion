@@ -1422,7 +1422,45 @@ public class MethosInterfaceSelectionPokemon {
                          */
                         String namePokemon = auxPokemons.getName();
                         int lifePokemon = auxPokemons.getLife();
-                        MethodsBattlePokemon.putValuesLifePokemons(namePokemon, lifePokemon);
+                        MethodsBattlePokemon.putValuesLifePokemonsPlayer1(namePokemon, lifePokemon);
+                    }
+                    break;
+                }
+            }
+        }
+    }
+    /**
+     * metodo para añadir valores al hashmap de pokemons con vida  del jugador 2
+     * @return el alias del jugador 2
+     */
+    public static void addLifePokemonsPlayer2(String aliasPlayer2){
+        /**
+         * recorremos el hashmap de los jugadores
+         */
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+            /**
+             * si el alias del jugador 1 coincide con la clave del hashmap de jugadores
+             * se mete en el codigo
+             */
+            if (key.equals(aliasPlayer2)) {
+
+                /**
+                 * si hay coincidencia, hacemos un arraylist de objetos igual al valor del hashmao
+                 */
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                if (!pokemons.isEmpty()) {
+
+                    /**
+                     * recorremos el arraylist de objetos
+                     */
+                    for (Object pokemon : pokemons) {
+                        PokemonProperties auxPokemons = (PokemonProperties) pokemon;
+                        /**
+                         * añadimos los valores al hashmap de los pokemons con vida
+                         */
+                        String namePokemon = auxPokemons.getName();
+                        int lifePokemon = auxPokemons.getLife();
+                        MethodsBattlePokemon.putValuesLifePokemonsPlayer2(namePokemon, lifePokemon);
                     }
                     break;
                 }
