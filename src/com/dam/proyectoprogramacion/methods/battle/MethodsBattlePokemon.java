@@ -177,6 +177,7 @@ public class MethodsBattlePokemon {
          * variable para saber si es el turno del jugador 2
          */
         isPlayer1Turn = 2;
+        isPlayer2Turn = 1;
 
         /**
          * devolvemos el daño
@@ -207,6 +208,7 @@ public class MethodsBattlePokemon {
          * variable para saber si es el turno del jugador 2
          */
         isPlayer1Turn = 2;
+        isPlayer2Turn = 1;
 
         /**
          * devolvemos el daño
@@ -237,6 +239,7 @@ public class MethodsBattlePokemon {
          * variable para saber si es el turno del jugador 2
          */
         isPlayer1Turn = 2;
+        isPlayer2Turn = 1;
 
         /**
          * devolvemos el daño
@@ -267,6 +270,7 @@ public class MethodsBattlePokemon {
          * variable para saber si es el turno del jugador 2
          */
         isPlayer1Turn = 2;
+        isPlayer2Turn = 1;
 
         /**
          * devolvemos el daño
@@ -485,6 +489,7 @@ public class MethodsBattlePokemon {
                 MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
                 MethodsBattlePlayer2.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
         isPlayer1Turn = 1;
+        isPlayer2Turn = 2;
 
         return damage;
     }
@@ -512,6 +517,7 @@ public class MethodsBattlePokemon {
          * variable para saber si es el turno del jugador 2
          */
         isPlayer1Turn = 1;
+        isPlayer2Turn = 2;
 
         /**
          * devolvemos el daño
@@ -543,6 +549,7 @@ public class MethodsBattlePokemon {
          * variable para saber si es el turno del jugador 2
          */
         isPlayer1Turn = 1;
+        isPlayer2Turn = 2;
 
         /**
          * devolvemos el daño
@@ -574,6 +581,7 @@ public class MethodsBattlePokemon {
          * variable para saber si es el turno del jugador 2
          */
         isPlayer1Turn = 1;
+        isPlayer2Turn = 2;
 
         /**
          * devolvemos el daño

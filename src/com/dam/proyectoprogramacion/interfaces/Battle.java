@@ -573,6 +573,11 @@ public class Battle extends JFrame {
             attacksChangesPokemon1Player1.setVisible(true);
             System.out.println("jugador 1 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack1Player1());
         }
+        else if(speedPlayer1 < speedPlayer2 && MethodsBattlePokemon.isIsPlayer2Turn() == 2){
+            attacksPanelPlayer1.setVisible(false);
+            attacksChangesPokemon1Player1.setVisible(true);
+            System.out.println("jugador 1 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack1Player1());
+        }
 
 
 
@@ -586,6 +591,11 @@ public class Battle extends JFrame {
             attacksChangesPokemon1Player1.setVisible(true);
             System.out.println("jugador 1 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack2Player1());
         }
+        else if(speedPlayer1 < speedPlayer2 && MethodsBattlePokemon.isIsPlayer2Turn() == 2){
+            attacksPanelPlayer1.setVisible(false);
+            attacksChangesPokemon1Player1.setVisible(true);
+            System.out.println("jugador 1 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack2Player1());
+        }
 
 
     }
@@ -595,12 +605,21 @@ public class Battle extends JFrame {
             attacksPanelPlayer1.setVisible(false);
             attacksChangesPokemon1Player1.setVisible(true);
             System.out.println("jugador 1 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack3Player1());
+        }else if(speedPlayer1 < speedPlayer2 && MethodsBattlePokemon.isIsPlayer2Turn() == 2){
+            attacksPanelPlayer1.setVisible(false);
+            attacksChangesPokemon1Player1.setVisible(true);
+            System.out.println("jugador 1 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack3Player1());
         }
 
     }
     private static void clearGlobalPanelPlayer1WhenPressAttack4Buttons(){
 
         if(speedPlayer1 > speedPlayer2 && MethodsBattlePokemon.isIsPlayer1Turn() == 1){
+            attacksPanelPlayer1.setVisible(false);
+            attacksChangesPokemon1Player1.setVisible(true);
+            System.out.println("jugador 1 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack4Player1());
+        }
+        else if(speedPlayer1 < speedPlayer2 && MethodsBattlePokemon.isIsPlayer2Turn() == 2){
             attacksPanelPlayer1.setVisible(false);
             attacksChangesPokemon1Player1.setVisible(true);
             System.out.println("jugador 1 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack4Player1());
@@ -942,11 +961,21 @@ public class Battle extends JFrame {
             attacksChangesPokemon1Player2.setVisible(true);
             System.out.println("jugador 2 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack1Player2());
         }
+        else if(speedPlayer1 < speedPlayer2 && MethodsBattlePokemon.isIsPlayer2Turn() == 1){
+            attacksPanelPlayer2.setVisible(false);
+            attacksChangesPokemon1Player2.setVisible(true);
+            System.out.println("jugador 2 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack1Player2());
+        }
 
 
     }
     private static void clearGlobalPanelPlayer2WhenPressAttack2Buttons(){
         if(speedPlayer1 > speedPlayer2 && MethodsBattlePokemon.isIsPlayer1Turn() == 2){
+            attacksPanelPlayer2.setVisible(false);
+            attacksChangesPokemon1Player2.setVisible(true);
+            System.out.println("jugador 2 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack2Player2());
+        }
+        else if(speedPlayer1 < speedPlayer2 && MethodsBattlePokemon.isIsPlayer2Turn() == 1){
             attacksPanelPlayer2.setVisible(false);
             attacksChangesPokemon1Player2.setVisible(true);
             System.out.println("jugador 2 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack2Player2());
@@ -959,10 +988,20 @@ public class Battle extends JFrame {
             attacksChangesPokemon1Player2.setVisible(true);
             System.out.println("jugador 2 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack3Player2());
         }
+        else if(speedPlayer1 < speedPlayer2 && MethodsBattlePokemon.isIsPlayer2Turn() == 1){
+            attacksPanelPlayer2.setVisible(false);
+            attacksChangesPokemon1Player2.setVisible(true);
+            System.out.println("jugador 2 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack3Player2());
+        }
 
     }
     private static void clearGlobalPanelPlayer2WhenPressAttack4Buttons(){
         if(speedPlayer1 > speedPlayer2 && MethodsBattlePokemon.isIsPlayer1Turn() == 2){
+            attacksPanelPlayer2.setVisible(false);
+            attacksChangesPokemon1Player2.setVisible(true);
+            System.out.println("jugador 2 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack4Player2());
+        }
+        else if(speedPlayer1 < speedPlayer2 && MethodsBattlePokemon.isIsPlayer2Turn() == 1){
             attacksPanelPlayer2.setVisible(false);
             attacksChangesPokemon1Player2.setVisible(true);
             System.out.println("jugador 2 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack4Player2());
