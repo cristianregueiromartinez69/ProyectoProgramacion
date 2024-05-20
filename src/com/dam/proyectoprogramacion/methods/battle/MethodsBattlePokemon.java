@@ -159,18 +159,121 @@ public class MethodsBattlePokemon {
      */
     public static int damageOppossingPokemonAttack1Player1(){
 
+        /**
+         * variable local que almacenará el daño que le hacemos al pokemon rival
+         */
         int damage = 0;
 
+        /**
+         * asignamos a la variable local el daño que le hacemos al pokemon rival
+         */
         damage = (int) getDamageAttacksPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
                 MethodsTextAreaBattlePlayer1.getTypeAttack1PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
                 MethodsBattlePlayer1.getAmountAttackPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
                 MethodsBattlePlayer1.getPowerAttack1PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
                 MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
                 MethodsBattlePlayer1.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()));
+        /**
+         * variable para saber si es el turno del jugador 2
+         */
         isPlayer1Turn = 2;
 
+        /**
+         * devolvemos el daño
+         */
         return damage;
     }
+    /**
+     * metodo para saber el daño del ataque 1 que le hacemos al pokemon rival
+     * @return  el daño que le hacemos
+     */
+    public static int damageOppossingPokemonAttack2Player1(){
+
+        /**
+         * variable local que almacenará el daño que le hacemos al pokemon rival
+         */
+        int damage = 0;
+
+        /**
+         * asignamos a la variable local el daño que le hacemos al pokemon rival
+         */
+        damage = (int) getDamageAttacksPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
+                MethodsTextAreaBattlePlayer1.getTypeAttack2PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                MethodsBattlePlayer1.getAmountAttackPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                MethodsBattlePlayer1.getPowerAttack2PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
+                MethodsBattlePlayer1.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()));
+        /**
+         * variable para saber si es el turno del jugador 2
+         */
+        isPlayer1Turn = 2;
+
+        /**
+         * devolvemos el daño
+         */
+        return damage;
+    }
+    /**
+     * metodo para saber el daño del ataque 1 que le hacemos al pokemon rival
+     * @return  el daño que le hacemos
+     */
+    public static int damageOppossingPokemonAttack3Player1(){
+
+        /**
+         * variable local que almacenará el daño que le hacemos al pokemon rival
+         */
+        int damage = 0;
+
+        /**
+         * asignamos a la variable local el daño que le hacemos al pokemon rival
+         */
+        damage = (int) getDamageAttacksPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
+                MethodsTextAreaBattlePlayer1.getTypeAttack3PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                MethodsBattlePlayer1.getAmountAttackPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                MethodsBattlePlayer1.getPowerAttack3PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
+                MethodsBattlePlayer1.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()));
+        /**
+         * variable para saber si es el turno del jugador 2
+         */
+        isPlayer1Turn = 2;
+
+        /**
+         * devolvemos el daño
+         */
+        return damage;
+    }
+    /**
+     * metodo para saber el daño del ataque 1 que le hacemos al pokemon rival
+     * @return  el daño que le hacemos
+     */
+    public static int damageOppossingPokemonAttack4Player1(){
+
+        /**
+         * variable local que almacenará el daño que le hacemos al pokemon rival
+         */
+        int damage = 0;
+
+        /**
+         * asignamos a la variable local el daño que le hacemos al pokemon rival
+         */
+        damage = (int) getDamageAttacksPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
+                MethodsTextAreaBattlePlayer1.getTypeAttack4PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                MethodsBattlePlayer1.getAmountAttackPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                MethodsBattlePlayer1.getPowerAttack4PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
+                MethodsBattlePlayer1.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()));
+        /**
+         * variable para saber si es el turno del jugador 2
+         */
+        isPlayer1Turn = 2;
+
+        /**
+         * devolvemos el daño
+         */
+        return damage;
+    }
+
 
 
     /**
@@ -365,6 +468,7 @@ public class MethodsBattlePokemon {
         return damage;
     }
 
+
     /**
      * metodo para saber el daño del ataque 1 que le hacemos al pokemon rival del juagdor 2
      * @return  el daño que le hacemos
@@ -384,6 +488,99 @@ public class MethodsBattlePokemon {
 
         return damage;
     }
+    /**
+     * metodo para saber el daño del ataque 2 que le hacemos al pokemon rival
+     * @return  el daño que le hacemos
+     */
+    public static int damageOppossingPokemonAttack2Player2(){
+
+        /**
+         * variable local que almacenará el daño que le hacemos al pokemon rival
+         */
+        int damage = 0;
+
+        /**
+         * asignamos a la variable local el daño que le hacemos al pokemon rival
+         */
+        damage = (int) getDamageAttacksPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
+                MethodsTextAreaBattlePlayer2.getTypeAttack2PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
+                MethodsBattlePlayer2.getAmountAttackPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
+                MethodsBattlePlayer2.getPowerAttack2PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
+                MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
+                MethodsBattlePlayer2.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
+        /**
+         * variable para saber si es el turno del jugador 2
+         */
+        isPlayer1Turn = 1;
+
+        /**
+         * devolvemos el daño
+         */
+        return damage;
+    }
+    /**
+     * metodo para saber el daño del ataque 3 que le hacemos al pokemon rival
+     * @return  el daño que le hacemos
+     */
+    public static int damageOppossingPokemonAttack3Player2(){
+
+        /**
+         * variable local que almacenará el daño que le hacemos al pokemon rival
+         */
+        int damage = 0;
+
+        /**
+         * asignamos a la variable local el daño que le hacemos al pokemon rival
+         */
+        damage = (int) getDamageAttacksPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
+                MethodsTextAreaBattlePlayer2.getTypeAttack3PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
+                MethodsBattlePlayer2.getAmountAttackPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
+                MethodsBattlePlayer2.getPowerAttack3PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
+                MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
+                MethodsBattlePlayer2.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
+
+        /**
+         * variable para saber si es el turno del jugador 2
+         */
+        isPlayer1Turn = 1;
+
+        /**
+         * devolvemos el daño
+         */
+        return damage;
+    }
+    /**
+     * metodo para saber el daño del ataque 4 que le hacemos al pokemon rival
+     * @return  el daño que le hacemos
+     */
+    public static int damageOppossingPokemonAttack4Player2(){
+
+        /**
+         * variable local que almacenará el daño que le hacemos al pokemon rival
+         */
+        int damage = 0;
+
+        /**
+         * asignamos a la variable local el daño que le hacemos al pokemon rival
+         */
+        damage = (int) getDamageAttacksPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
+                MethodsTextAreaBattlePlayer2.getTypeAttack4PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
+                MethodsBattlePlayer2.getAmountAttackPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
+                MethodsBattlePlayer2.getPowerAttack4PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
+                MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
+                MethodsBattlePlayer2.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
+
+        /**
+         * variable para saber si es el turno del jugador 2
+         */
+        isPlayer1Turn = 1;
+
+        /**
+         * devolvemos el daño
+         */
+        return damage;
+    }
+
 
 
     /**
