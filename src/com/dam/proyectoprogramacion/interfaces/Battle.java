@@ -47,6 +47,8 @@ public class Battle extends JFrame {
    private static  int newLifePlayer2 = MethodsLifeBattlePokemonPlayer2.getLifePokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
    private static int newLifePLayer1 = MethodsLifeBattlePokemonPlayer1.getLifePokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
 
+   private static int speedPlayer1 = MethodsBattlePlayer1.getSpeedPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
+    private static int speedPlayer2 = MethodsBattlePlayer2.getSpeedPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
 
 
 
@@ -566,8 +568,12 @@ public class Battle extends JFrame {
      */
     private static void clearGlobalPanelPlayer1WhenPressAttack1Buttons(){
 
-        attacksPanelPlayer1.setVisible(false);
-        attacksChangesPokemon1Player1.setVisible(true);
+        if(speedPlayer1 > speedPlayer2 && MethodsBattlePokemon.isIsPlayer1Turn() == 1){
+            attacksPanelPlayer1.setVisible(false);
+            attacksChangesPokemon1Player1.setVisible(true);
+            System.out.println("jugador 1 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack1Player1());
+        }
+
 
 
 
@@ -921,9 +927,11 @@ public class Battle extends JFrame {
      * metodo para atacar y hacer visivle el panel de atacar y cambio e invisible el de ataques del jugador 2
      */
     private static void clearGlobalPanelPlayer2WhenPressAttack1Buttons(){
-
-        attacksPanelPlayer2.setVisible(false);
-        attacksChangesPokemon1Player2.setVisible(true);
+        if(speedPlayer1 < speedPlayer2 && MethodsBattlePokemon.isIsPlayer1Turn() == 2){
+            attacksPanelPlayer1.setVisible(false);
+            attacksChangesPokemon1Player1.setVisible(true);
+            System.out.println("jugador 2 daño: " + MethodsBattlePokemon.damageOppossingPokemonAttack1Player2());
+        }
 
 
     }

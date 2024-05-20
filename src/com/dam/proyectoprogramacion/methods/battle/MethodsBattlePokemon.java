@@ -41,8 +41,8 @@ public class MethodsBattlePokemon {
      */
     public static final float LEVEL = 100f;
 
-    private static boolean isPlayer1Turn = true;
-    private static boolean isPlayer2Turn = true;
+    private static int isPlayer1Turn = 1;
+    private static int isPlayer2Turn = 2;
 
 
 
@@ -150,6 +150,25 @@ public class MethodsBattlePokemon {
         /**
          * devolvemos el daño
          */
+        return damage;
+    }
+
+    /**
+     * metodo para saber el daño del ataque 1 que le hacemos al pokemon rival
+     * @return  el daño que le hacemos
+     */
+    public static int damageOppossingPokemonAttack1Player1(){
+
+        int damage = 0;
+
+        damage = (int) getDamageAttacksPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
+                MethodsTextAreaBattlePlayer1.getTypeAttack1PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                MethodsBattlePlayer1.getAmountAttackPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                MethodsBattlePlayer1.getPowerAttack1PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
+                MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
+                MethodsBattlePlayer1.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()));
+        isPlayer1Turn = 2;
+
         return damage;
     }
 
@@ -346,6 +365,26 @@ public class MethodsBattlePokemon {
         return damage;
     }
 
+    /**
+     * metodo para saber el daño del ataque 1 que le hacemos al pokemon rival del juagdor 2
+     * @return  el daño que le hacemos
+     */
+    public static int damageOppossingPokemonAttack1Player2(){
+
+        int damage = 0;
+
+
+        damage = (int) getDamageAttacksPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
+                MethodsTextAreaBattlePlayer2.getTypeAttack1PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
+                MethodsBattlePlayer2.getAmountAttackPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
+                MethodsBattlePlayer2.getPowerAttack1PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
+                MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
+                MethodsBattlePlayer2.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
+        isPlayer1Turn = 1;
+
+        return damage;
+    }
+
 
     /**
      * metodo para saber si el ataque 1 del pokemon en batalla pega por stab del jugador 2
@@ -459,52 +498,21 @@ public class MethodsBattlePokemon {
         return (float) randomValue;
     }
 
-    /**
-     * metodo para saber el daño que le hacemos al pokemon rival
-     * @param speedPokemonPlayer1 el speed del pokemon del jugador 1
-     * @param speedPokemonPlayer2 el speed del pokemon del jugador 2
-     * @return  el daño que le hacemos
-     */
-    public static int damageOppossingPokemonAttack1(int speedPokemonPlayer1, int speedPokemonPlayer2){
-        /**
-         * variable local de daño
-         */
-        int damage = 0;
-        /**
-         * si el speed del pokemon 1 es mayor que el del pokemon 2, el daño será el del pokemon 1
-         */
-        if(speedPokemonPlayer1 > speedPokemonPlayer2 && isPlayer1Turn){
-            /**
-             *
-             */
-            damage = (int) getDamageAttacksPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
-                    MethodsTextAreaBattlePlayer1.getTypeAttack1PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
-                    MethodsBattlePlayer1.getAmountAttackPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
-                    MethodsBattlePlayer1.getPowerAttack1PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
-                    MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
-                    MethodsBattlePlayer1.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()));
-            isPlayer1Turn = false;
 
-        }
-        /**
-         * si el speed del pokemon 2 es mayor que el del pokemon 1, el daño será el del pokemon 2
-         */
-        else if(speedPokemonPlayer1 < speedPokemonPlayer2 && !isPlayer1Turn){
-            /**
-             * asignamos el daño
-             */
-            damage = (int) getDamageAttacksPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
-                    MethodsTextAreaBattlePlayer2.getTypeAttack1PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
-                    MethodsBattlePlayer2.getAmountAttackPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
-                    MethodsBattlePlayer2.getPowerAttack1PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
-                    MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(),
-                    MethodsBattlePlayer2.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
-            isPlayer1Turn = true;
-        }
-        /**
-         * devolvemos el daño
-         */
-      return damage;
+
+    public static int isIsPlayer1Turn() {
+        return isPlayer1Turn;
     }
 
+    public static void setIsPlayer1Turn(int isPlayer1Turn) {
+        MethodsBattlePokemon.isPlayer1Turn = isPlayer1Turn;
+    }
+
+    public static int isIsPlayer2Turn() {
+        return isPlayer2Turn;
+    }
+
+    public static void setIsPlayer2Turn(int isPlayer2Turn) {
+        MethodsBattlePokemon.isPlayer2Turn = isPlayer2Turn;
+    }
 }
