@@ -625,6 +625,8 @@ public class Battle extends JFrame {
         int currentLife = MethodsBattlePokemon.getLifePokemonsPlayer2().get(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
         MethodsBattlePokemon.putValuesLifePokemonsPlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2(), currentLife - damagePlayer1);
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setValue(MethodsBattlePokemon.getLifePokemonsPlayer2().get(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()));
+        LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().setForeground(LifePokemonInBattlePlayer2.getBackgroundColorLifeBarPokemonPlayer2(MethodsBattlePokemon.getLifePokemonsPlayer2().get(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2())));
+        LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
 
         /**
          * cambiamos los turnos de los jugadores
