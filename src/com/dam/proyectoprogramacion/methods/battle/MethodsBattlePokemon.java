@@ -4,6 +4,7 @@ import com.dam.proyectoprogramacion.methods.selectionpokemon.MethosInterfaceSele
 import com.dam.proyectoprogramacion.pokemon.PokemonProperties;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * metodos para la batalla pokemon de los jugadores 1 y 2
@@ -43,6 +44,8 @@ public class MethodsBattlePokemon {
      * variable para saber el turno de combate
      */
     private static int turnsToCombat = 1;
+
+    private static HashMap<String, Integer> lifePokemons = new HashMap<>();
 
 
 
