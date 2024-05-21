@@ -199,30 +199,72 @@ public class MethodsBattlePokemon {
             return new String[]{type};
         }
     }
+    /**
+     * metodo para saber si el pokemon está vivo
+     * @param life la vida del pokemon
+     * @return si está vivo o no
+     */
     public static boolean isPokemonAlivePlayer1(int life){
+        /**
+         * variable local que inicialmente será falsa
+         */
         boolean marca = false;
+        /**
+         * si la vida es mayor que 0, devolverá que está vivo
+         */
         if(life > 0){
             marca = true;
         }
         return marca;
     }
+    /**
+     * metodo para cambiar de pokemon cuando muere el pokemon en batalla del jugador 1
+     */
     public static void changePokemonWhenDiesPokemonInBattlePlayer1(){
+        /**
+         * si el pokemon en batalla del jugador 1 muere, se deshabilitará el boton de ataque y se habilitará el de cambio
+         */
         if(!isPokemonAlivePlayer1(getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()))){
             Battle.getAttacksChangesPokemon1Player1().setVisible(false);
             Battle.getChangesPokemonsPLayer1().setVisible(true);
+            /**
+             * se deshabilitará el boton de atrás
+             */
             ButtonInterfaceChangePokemonPlayer1.getBack().setEnabled(false);
-
+            /**
+             * llamamos al metodo que hará que se deshabilite el boton del pokemon muerto
+             */
+            setEnabledButtonPokemonDiePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
+            /**
+             * reiniciamos el turno de combate al inicial
+             */
+            turnsToCombat = 1;
         }
     }
+    /**
+     * metodo para deshabilitar el boton del pokemon muerto en batalla
+     * @param namePokemon nombre del pokemon en batalla
+     */
     public static void setEnabledButtonPokemonDiePlayer1(String namePokemon){
+        /**
+         * array de botones de los nombres de los pokemons
+         */
         JButton [] namePokemonsButtons = {ButtonInterfaceChangePokemonPlayer1.getPokemon1team(), ButtonInterfaceChangePokemonPlayer1.getPokemon2team(),
                 ButtonInterfaceChangePokemonPlayer1.getPokemon3team()};
         for(int i = 0; i < namePokemonsButtons.length; i++){
+            /**
+             * si el nombre del pokemon coincide con el nombre del pokemon en batalla, se deshabilitará el boton
+             */
             if(namePokemonsButtons[i].getText().equalsIgnoreCase(namePokemon)){
                 namePokemonsButtons[i].setEnabled(false);
             }
         }
     }
+    /**
+     * metodo para poner valores al hashmap de la vida de los pokemons del jugador 1
+     * @param namePokemon nombre de los pokemons del jugador 1
+     * @param life vida de los pokemons del jugador 1
+     */
     public static void putValuesLifePokemonsPlayer1(String namePokemon, int life){
         lifePokemonsPlayer1.put(namePokemon, life);
     }
