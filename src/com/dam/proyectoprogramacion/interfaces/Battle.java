@@ -401,6 +401,7 @@ public class Battle extends JFrame {
         });
         ButtonInterfaceChangePokemonPlayer1.getPokemon3team().addActionListener(this::putInformationAreaTextBattlePlayer1);
 
+        MethodsBattlePokemon.preventAPokemonFromChangingThatIsInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
 
 
 
@@ -872,7 +873,6 @@ public class Battle extends JFrame {
      * metodo para limpiar el panel entero al cambiar de pokemon
      */
     private static  void clearGlobalPanelPlayer1WhenPressButtonToChangePokemon1InChangePokemon(){
-        MethodsBattlePokemon.preventAPokémonFromChangingThatIsInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
         clearContentPanel();
         /**
          * establecemos la nueva imagen del pokemon
@@ -933,7 +933,6 @@ public class Battle extends JFrame {
      * metodo para limpiar el panel entero al cambiar de pokemon
      */
     private static  void clearGlobalPanelPlayer1WhenPressButtonToChangePokemon2InChangePokemon(){
-        MethodsBattlePokemon.preventAPokémonFromChangingThatIsInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
 
         clearContentPanel();
         /**
@@ -992,7 +991,6 @@ public class Battle extends JFrame {
      * metodo para limpiar el panel entero al cambiar de pokemon
      */
     private static  void clearGlobalPanelPlayer1WhenPressButtonToChangePokemon3InChangePokemon(){
-        MethodsBattlePokemon.preventAPokémonFromChangingThatIsInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
 
         clearContentPanel();
         /**

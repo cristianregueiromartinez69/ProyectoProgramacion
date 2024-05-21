@@ -278,13 +278,28 @@ public class MethodsBattlePokemon {
         }
     }
 
-    public static void preventAPokémonFromChangingThatIsInBattlePlayer1(String namePokemon){
+    public static void preventAPokemonFromChangingThatIsInBattlePlayer1(String namePokemon){
 
         JButton [] namePokemonsButtons = {ButtonInterfaceChangePokemonPlayer1.getPokemon1team(), ButtonInterfaceChangePokemonPlayer1.getPokemon2team(),
                 ButtonInterfaceChangePokemonPlayer1.getPokemon3team()};
         for(int i = 0; i < namePokemonsButtons.length; i++){
             if(namePokemonsButtons[i].getText().equalsIgnoreCase(namePokemon)){
                 namePokemonsButtons[i].setEnabled(false);
+                if(i == 0) {
+                    ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon1(false);
+                    ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon2(true);
+                    ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon3(true);
+                }else if(i == 1){
+                    ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon2(false);
+                    ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon1(true);
+                    ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon3(true);
+                }
+                else{
+                    ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon3(false);
+                    ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon1(true);
+                    ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon2(true);
+                }
+
             }
         }
     }
