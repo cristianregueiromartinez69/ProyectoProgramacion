@@ -2,6 +2,7 @@ package com.dam.proyectoprogramacion.interfaces;
 
 import com.dam.proyectoprogramacion.background.BackgroundMainMenuPanel;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer1;
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer2;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfacePokemonSelect;
 import com.dam.proyectoprogramacion.methods.battle.*;
@@ -624,18 +625,21 @@ public class SelectionPokemon extends JFrame {
                     */
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setPathIconPokemon1(MethodsBattlePlayer2.getPathPokemon1Player2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setNamePokemon1(MethodsBattlePlayer2.getNamePokemon1Player2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   ButtonInterfaceChangePokemonPlayer2.setEnableButtonPokemon1(true);
 
                    /**
                     * establecemos los valores del boton de cambio del pokemon 2 del jugador 2
                     */
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setPathIconPokemon2(MethodsBattlePlayer2.getPathPokemon2Player2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setNamePokemon2(MethodsBattlePlayer2.getNamePokemon2Player2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                     ButtonInterfaceChangePokemonPlayer2.setEnableButtonPokemon2(true);
 
                    /**
                     * establecemos los valores del boton de cambio del pokemon 3 del jugador 2
                     */
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setPathIconPokemon3(MethodsBattlePlayer2.getPathPokemon3Player2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setNamePokemon3(MethodsBattlePlayer2.getNamePokemon3Player2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   ButtonInterfaceChangePokemonPlayer2.setEnableButtonPokemon3(true);
 
                    /**
                     * establecemos los valores de la vida de los pokemons del jugador 2

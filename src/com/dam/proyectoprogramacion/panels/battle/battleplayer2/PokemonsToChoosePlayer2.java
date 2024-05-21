@@ -21,6 +21,9 @@ public class PokemonsToChoosePlayer2 extends JPanel {
     private JPanel pokemon1;
     private JPanel pokemon2;
     private JPanel pokemon3;
+    private boolean enableButtonPokemon1;
+    private boolean enableButtonPokemon2;
+    private boolean enableButtonPokemon3;
     private JPanel backToBattlePanel;
 
     public PokemonsToChoosePlayer2() {
@@ -41,6 +44,8 @@ public class PokemonsToChoosePlayer2 extends JPanel {
         JButton pokemon1Button = new ButtonInterfaceChangePokemonPlayer2().makePokemon1TeamButton();
         pokemon1Button.setBackground(Color.GREEN);
         pokemon1Button.setForeground(Color.WHITE);
+        enableButtonPokemon1 = ButtonInterfaceChangePokemonPlayer2.isEnableButtonPokemon1();
+        pokemon1Button.setEnabled(enableButtonPokemon1);
         pokemon1Button.setPreferredSize(new Dimension(170, 100));
         pokemon1Button.setMaximumSize(new Dimension(170, 100));
         pokemon1Button.setMinimumSize(new Dimension(170, 100));
@@ -60,6 +65,8 @@ public class PokemonsToChoosePlayer2 extends JPanel {
         JButton pokemon2Button = new ButtonInterfaceChangePokemonPlayer2().makePokemon2TeamButton();
         pokemon2Button.setBackground(Color.GREEN);
         pokemon2Button.setForeground(Color.WHITE);
+        enableButtonPokemon2 = ButtonInterfaceChangePokemonPlayer2.isEnableButtonPokemon2();
+        pokemon2Button.setEnabled(enableButtonPokemon2);
         pokemon2Button.setPreferredSize(new Dimension(170, 100));
         pokemon2Button.setMaximumSize(new Dimension(170, 100));
         pokemon2Button.setMinimumSize(new Dimension(170, 100));
@@ -80,6 +87,8 @@ public class PokemonsToChoosePlayer2 extends JPanel {
         JButton pokemon3Button = new ButtonInterfaceChangePokemonPlayer2().makePokemon3TeamButton();
         pokemon3Button.setBackground(Color.GREEN);
         pokemon3Button.setForeground(Color.WHITE);
+        enableButtonPokemon3 = ButtonInterfaceChangePokemonPlayer2.isEnableButtonPokemon3();
+        pokemon3Button.setEnabled(enableButtonPokemon3);
         pokemon3Button.setPreferredSize(new Dimension(170, 100));
         pokemon3Button.setMaximumSize(new Dimension(170, 100));
         pokemon3Button.setMinimumSize(new Dimension(170, 100));

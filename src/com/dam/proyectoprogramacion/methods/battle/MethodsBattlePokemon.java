@@ -1,6 +1,7 @@
 package com.dam.proyectoprogramacion.methods.battle;
 
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer1;
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer2;
 import com.dam.proyectoprogramacion.interfaces.Battle;
 import com.dam.proyectoprogramacion.methods.selectionpokemon.MethosInterfaceSelectionPokemon;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.PokemonsToChoosePlayer1;
@@ -439,12 +440,81 @@ public class MethodsBattlePokemon {
             return new String[]{type};
         }
     }
+    /**
+     * metodo para saber si el pokemon está vivo
+     * @param life la vida del pokemon
+     * @return si está vivo o no
+     */
     public static boolean isPokemonAlivePlayer2(int life){
+        /**
+         * variable local que inicialmente será falsa
+         */
         boolean marca = false;
+        /**
+         * si la vida es mayor que 0, devolverá que está vivo
+         */
         if(life > 0){
             marca = true;
         }
         return marca;
+    }
+    /**
+     * metodo para cambiar de pokemon cuando muere el pokemon en batalla del jugador 2
+     */
+    public static void changePokemonWhenDiesPokemonInBattlePlayer2(){
+
+        Battle.getAttacksChangesPokemon1Player2().setVisible(false);
+        Battle.getChangesPokemonsPLayer2().setVisible(true);
+        /**
+         * se deshabilitará el boton de atrás
+         */
+        ButtonInterfaceChangePokemonPlayer2.getBack().setEnabled(false);
+        /**
+         * llamamos al metodo que hará que se deshabilite el boton del pokemon muerto
+         */
+        setEnabledButtonPokemonDiePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
+        /**
+         * reiniciamos el turno de combate al inicial
+         */
+
+    }
+    /**
+     * metodo para deshabilitar el boton del pokemon muerto en batalla
+     * @param namePokemon nombre del pokemon en batalla
+     */
+    public static void setEnabledButtonPokemonDiePlayer2(String namePokemon){
+        /**
+         * array de botones de los nombres de los pokemons
+         */
+        JButton [] namePokemonsButtons = {ButtonInterfaceChangePokemonPlayer2.getPokemon1team(), ButtonInterfaceChangePokemonPlayer2.getPokemon2team(),
+                ButtonInterfaceChangePokemonPlayer2.getPokemon3team()};
+        for(int i = 0; i < namePokemonsButtons.length; i++){
+            /**
+             * si el nombre del pokemon coincide con el nombre del pokemon en batalla, se deshabilitará el boton
+             */
+            if(namePokemonsButtons[i].getText().equalsIgnoreCase(namePokemon)){
+                /**
+                 * se deshabilitará el boton
+                 */
+                namePokemonsButtons[i].setEnabled(false);
+                /**
+                 * si el boton es el 1, se deshabilitará el boton 1
+                 */
+                if(i == 0) {
+                    ButtonInterfaceChangePokemonPlayer2.setEnableButtonPokemon1(false);
+                    /**
+                     * si el boton es el 2, se deshabilitará el boton 2
+                     */
+                }else if(i == 1){
+                    ButtonInterfaceChangePokemonPlayer2.setEnableButtonPokemon2(false);
+                    /**
+                     * si el boton es el 3, se deshabilitará el boton 3
+                     */
+                }else{
+                    ButtonInterfaceChangePokemonPlayer2.setEnableButtonPokemon3(false);
+                }
+            }
+        }
     }
 
 
