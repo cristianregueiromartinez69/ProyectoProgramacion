@@ -569,6 +569,7 @@ public class Battle extends JFrame {
             }
         });
         ButtonInterfaceChangePokemonPlayer2.getPokemon3team().addActionListener(this::putInformationAreaTextBattlePlayer2);
+        MethodsBattlePokemon.preventAPokemonFromChangingThatIsInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
     }
 
 
