@@ -645,7 +645,14 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
 
+        /**
+         * si el pokemon del jugador 2 muere tendrá que ser forzado a cambiar de pokemon
+         */
+        if(!MethodsBattlePokemon.isPokemonAlivePlayer2(MethodsBattlePokemon.getLifePokemonsPlayer2().get(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()))){
+            MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer2();
+            MethodsBattlePokemon.setTurnsToCombat(1);
 
+        }
 
 
         /**
@@ -700,6 +707,15 @@ public class Battle extends JFrame {
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
 
         /**
+         * si el pokemon del jugador 2 muere tendrá que ser forzado a cambiar de pokemon
+         */
+        if(!MethodsBattlePokemon.isPokemonAlivePlayer2(MethodsBattlePokemon.getLifePokemonsPlayer2().get(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()))){
+            MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer2();
+            MethodsBattlePokemon.setTurnsToCombat(1);
+
+        }
+
+        /**
          * cambiamos los turnos de los jugadores
          */
             if(MethodsBattlePokemon.turnsToCombat()== 1){
@@ -748,6 +764,15 @@ public class Battle extends JFrame {
          * llamamos al panel de la vida del pokemon para repintar la barra de vida
          */
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
+
+        /**
+         * si el pokemon del jugador 2 muere tendrá que ser forzado a cambiar de pokemon
+         */
+        if(!MethodsBattlePokemon.isPokemonAlivePlayer2(MethodsBattlePokemon.getLifePokemonsPlayer2().get(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()))){
+            MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer2();
+            MethodsBattlePokemon.setTurnsToCombat(1);
+
+        }
         /**
          * cambiamos los turnos de los jugadores
          */
@@ -789,6 +814,15 @@ public class Battle extends JFrame {
          * llamamos al panel de la vida del pokemon para repintar la barra de vida
          */
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
+
+        /**
+         * si el pokemon del jugador 2 muere tendrá que ser forzado a cambiar de pokemon
+         */
+        if(!MethodsBattlePokemon.isPokemonAlivePlayer2(MethodsBattlePokemon.getLifePokemonsPlayer2().get(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()))){
+            MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer2();
+            MethodsBattlePokemon.setTurnsToCombat(1);
+
+        }
             /**
              * cambiamos los turnos de los jugadores
              */
