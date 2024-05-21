@@ -278,23 +278,48 @@ public class MethodsBattlePokemon {
         }
     }
 
+    /**
+     * metodo para prevenir que un pokemon cambie si está en batalla del jugador 1
+     * @param namePokemon nombre del pokemon
+     */
     public static void preventAPokemonFromChangingThatIsInBattlePlayer1(String namePokemon){
 
+        /**
+         * array de botones de los nombres de los pokemons
+         */
         JButton [] namePokemonsButtons = {ButtonInterfaceChangePokemonPlayer1.getPokemon1team(), ButtonInterfaceChangePokemonPlayer1.getPokemon2team(),
                 ButtonInterfaceChangePokemonPlayer1.getPokemon3team()};
+        /**
+         * for para recorrer los botones
+         */
         for(int i = 0; i < namePokemonsButtons.length; i++){
+            /**
+             * si el nombre del pokemon coincide con el nombre del pokemon en batalla, se deshabilitará el boton
+             */
             if(namePokemonsButtons[i].getText().equalsIgnoreCase(namePokemon)){
                 namePokemonsButtons[i].setEnabled(false);
+                /**
+                 * si el boton es el 1, se deshabilitará el boton 1
+                 * se habilitan los demas
+                 */
                 if(i == 0) {
                     ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon1(false);
                     ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon2(true);
                     ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon3(true);
                 }else if(i == 1){
+                    /**
+                     * si el boton es el 2, se deshabilitará el boton 2
+                     * se habilitan los demas
+                     */
                     ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon2(false);
                     ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon1(true);
                     ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon3(true);
                 }
                 else{
+                    /**
+                     * si el boton es el 3, se deshabilitará el boton 3
+                     * se habilitan los demas
+                     */
                     ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon3(false);
                     ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon1(true);
                     ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon2(true);
