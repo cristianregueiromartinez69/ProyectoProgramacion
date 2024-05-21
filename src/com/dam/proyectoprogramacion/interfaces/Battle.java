@@ -872,6 +872,7 @@ public class Battle extends JFrame {
      * metodo para limpiar el panel entero al cambiar de pokemon
      */
     private static  void clearGlobalPanelPlayer1WhenPressButtonToChangePokemon1InChangePokemon(){
+        MethodsBattlePokemon.preventAPokémonFromChangingThatIsInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
         clearContentPanel();
         /**
          * establecemos la nueva imagen del pokemon
@@ -932,6 +933,8 @@ public class Battle extends JFrame {
      * metodo para limpiar el panel entero al cambiar de pokemon
      */
     private static  void clearGlobalPanelPlayer1WhenPressButtonToChangePokemon2InChangePokemon(){
+        MethodsBattlePokemon.preventAPokémonFromChangingThatIsInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
+
         clearContentPanel();
         /**
          * establecemos la nueva imagen del pokemon
@@ -989,6 +992,8 @@ public class Battle extends JFrame {
      * metodo para limpiar el panel entero al cambiar de pokemon
      */
     private static  void clearGlobalPanelPlayer1WhenPressButtonToChangePokemon3InChangePokemon(){
+        MethodsBattlePokemon.preventAPokémonFromChangingThatIsInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
+
         clearContentPanel();
         /**
          * establecemos la nueva imagen del pokemon
@@ -1756,83 +1761,28 @@ public class Battle extends JFrame {
      * getter y setter de los atributos de la clase
      * @return los atributos
      */
-    public JPanel getContentPanel() {
-        return contentPanel;
-    }
 
-    public void setContentPanel(JPanel contentPanel) {
-        this.contentPanel = contentPanel;
-    }
-
-    public JPanel getGlobalPanelPLayer1() {
-        return globalPanelPLayer1;
-    }
-
-    public void setGlobalPanelPLayer1(JPanel globalPanelPLayer1) {
-        this.globalPanelPLayer1 = globalPanelPLayer1;
-    }
-
-    public JPanel getAttacksPanelPlayer1() {
-        return attacksPanelPlayer1;
-    }
-
-    public void setAttacksPanelPlayer1(JPanel attacksPanelPlayer1) {
-        this.attacksPanelPlayer1 = attacksPanelPlayer1;
-    }
-
-    public JPanel getBattlePanel() {
-        return battlePanel;
-    }
-
-    public void setBattlePanel(JPanel battlePanel) {
-        this.battlePanel = battlePanel;
-    }
-
-    public JPanel getGlobalPanelPLayer2() {
-        return globalPanelPLayer2;
-    }
-
-    public void setGlobalPanelPLayer2(JPanel globalPanelPLayer2) {
-        this.globalPanelPLayer2 = globalPanelPLayer2;
-    }
-
-    public JPanel getLifePanelPokemons() {
-        return lifePanelPokemon;
-    }
-
-    public void setLifePanelPokemons(JPanel lifePanelPokemons) {
-        this.lifePanelPokemon = lifePanelPokemons;
-    }
 
     public static JPanel getAttacksChangesPokemon1Player1() {
         return attacksChangesPokemon1Player1;
     }
 
-    public static void setAttacksChangesPokemon1Player1(JPanel attacksChangesPokemon1Player1) {
-        Battle.attacksChangesPokemon1Player1 = attacksChangesPokemon1Player1;
-    }
+
 
     public static JPanel getChangesPokemonsPLayer1() {
         return changesPokemonsPLayer1;
     }
 
-    public static void setChangesPokemonsPLayer1(JPanel changesPokemonsPLayer1) {
-        Battle.changesPokemonsPLayer1 = changesPokemonsPLayer1;
-    }
+
 
     public static JPanel getAttacksChangesPokemon1Player2() {
         return attacksChangesPokemon1Player2;
     }
 
-    public static void setAttacksChangesPokemon1Player2(JPanel attacksChangesPokemon1Player2) {
-        Battle.attacksChangesPokemon1Player2 = attacksChangesPokemon1Player2;
-    }
 
     public static JPanel getChangesPokemonsPLayer2() {
         return changesPokemonsPLayer2;
     }
 
-    public static void setChangesPokemonsPLayer2(JPanel changesPokemonsPLayer2) {
-        Battle.changesPokemonsPLayer2 = changesPokemonsPLayer2;
-    }
+
 }

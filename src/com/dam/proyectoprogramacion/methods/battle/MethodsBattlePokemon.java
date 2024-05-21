@@ -277,6 +277,17 @@ public class MethodsBattlePokemon {
             }
         }
     }
+
+    public static void preventAPokémonFromChangingThatIsInBattlePlayer1(String namePokemon){
+
+        JButton [] namePokemonsButtons = {ButtonInterfaceChangePokemonPlayer1.getPokemon1team(), ButtonInterfaceChangePokemonPlayer1.getPokemon2team(),
+                ButtonInterfaceChangePokemonPlayer1.getPokemon3team()};
+        for(int i = 0; i < namePokemonsButtons.length; i++){
+            if(namePokemonsButtons[i].getText().equalsIgnoreCase(namePokemon)){
+                namePokemonsButtons[i].setEnabled(false);
+            }
+        }
+    }
     /**
      * metodo para poner valores al hashmap de la vida de los pokemons del jugador 1
      * @param namePokemon nombre de los pokemons del jugador 1
