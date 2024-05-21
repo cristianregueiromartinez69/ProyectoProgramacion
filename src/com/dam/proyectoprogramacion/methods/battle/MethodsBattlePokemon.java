@@ -221,10 +221,7 @@ public class MethodsBattlePokemon {
      * metodo para cambiar de pokemon cuando muere el pokemon en batalla del jugador 1
      */
     public static void changePokemonWhenDiesPokemonInBattlePlayer1(){
-        /**
-         * si el pokemon en batalla del jugador 1 muere, se deshabilitará el boton de ataque y se habilitará el de cambio
-         */
-        if(!isPokemonAlivePlayer1(getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()))){
+
             Battle.getAttacksChangesPokemon1Player1().setVisible(false);
             Battle.getChangesPokemonsPLayer1().setVisible(true);
             /**
@@ -238,8 +235,7 @@ public class MethodsBattlePokemon {
             /**
              * reiniciamos el turno de combate al inicial
              */
-            turnsToCombat = 1;
-        }
+
     }
     /**
      * metodo para deshabilitar el boton del pokemon muerto en batalla

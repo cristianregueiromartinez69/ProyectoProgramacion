@@ -48,6 +48,9 @@ public class Battle extends JFrame {
    private static int speedPlayer1 = MethodsBattlePlayer1.getSpeedPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
    private static int speedPlayer2 = MethodsBattlePlayer2.getSpeedPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
 
+   /**
+    * atributos privados de tipo int para saber el daño de los pokemons
+    */
    private static int damagePlayer1;
    private static int damagePlayer2;
 
@@ -132,6 +135,7 @@ public class Battle extends JFrame {
          */
         lifePanelPokemon.add(new LifePokemonInBattlePlayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
                 MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1())));
+
 
 
         //---------------------paneles del jugador 2-------------------//
@@ -564,8 +568,6 @@ public class Battle extends JFrame {
             }
         });
         ButtonInterfaceChangePokemonPlayer2.getPokemon3team().addActionListener(this::putInformationAreaTextBattlePlayer2);
-
-
     }
 
 
@@ -642,6 +644,8 @@ public class Battle extends JFrame {
          * llamamos al panel de la vida del pokemon para repintar la barra de vida
          */
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
+
+
 
 
         /**
@@ -1143,9 +1147,14 @@ public class Battle extends JFrame {
          * llamamos al panel de la vida del pokemon para repintar la barra de vida
          */
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
-            /**
-             * cambiamos los turnos de los jugadores
-             */
+
+        if(!MethodsBattlePokemon.isPokemonAlivePlayer1(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()))){
+            MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer1();
+            MethodsBattlePokemon.setTurnsToCombat(1);
+        }
+        /**
+         * cambiamos los turnos de los jugadores
+         */
         if(MethodsBattlePokemon.turnsToCombat()== 2){
             MethodsBattlePokemon.setTurnsToCombat(1);
         }
@@ -1193,6 +1202,12 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
 
+
+        if(!MethodsBattlePokemon.isPokemonAlivePlayer1(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()))){
+            MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer1();
+            MethodsBattlePokemon.setTurnsToCombat(1);
+
+        }
         /**
          * cambiamos los turnos de los jugadores
          */
@@ -1240,6 +1255,12 @@ public class Battle extends JFrame {
          * llamamos al panel de la vida del pokemon para repintar la barra de vida
          */
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
+
+        if(!MethodsBattlePokemon.isPokemonAlivePlayer1(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()))){
+            MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer1();
+            MethodsBattlePokemon.setTurnsToCombat(1);
+
+        }
         /**
          * cambiamos los turnos de los jugadores
          */
@@ -1288,6 +1309,12 @@ public class Battle extends JFrame {
          * llamamos al panel de la vida del pokemon para repintar la barra de vida
          */
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
+
+        if(!MethodsBattlePokemon.isPokemonAlivePlayer1(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()))){
+            MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer1();
+            MethodsBattlePokemon.setTurnsToCombat(1);
+        }
+
         /**
          * cambiamos los turnos de los jugadores
          */
