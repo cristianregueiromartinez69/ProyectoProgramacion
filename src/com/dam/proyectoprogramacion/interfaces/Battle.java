@@ -1121,6 +1121,9 @@ public class Battle extends JFrame {
             attacksPanelPlayer2.setVisible(false);
             attacksChangesPokemon1Player2.setVisible(true);
 
+            /**
+             * llamamos al metodo que calcula el daño del ataque
+             */
             damagePlayer2 = (int) MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
                     MethodsTextAreaBattlePlayer2.getTypeAttack1PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
                     MethodsBattlePlayer2.getAmountAttackPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
@@ -1148,6 +1151,9 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
 
+        /**
+         * si el pokemon muere, se cambia de pokemon
+         */
         if(!MethodsBattlePokemon.isPokemonAlivePlayer1(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()))){
             MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer1();
             MethodsBattlePokemon.setTurnsToCombat(1);
@@ -1203,6 +1209,9 @@ public class Battle extends JFrame {
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
 
 
+        /**
+         * si el pokemon muere, se cambia de pokemon
+         */
         if(!MethodsBattlePokemon.isPokemonAlivePlayer1(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()))){
             MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer1();
             MethodsBattlePokemon.setTurnsToCombat(1);
@@ -1256,6 +1265,9 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
 
+        /**
+         * si el pokemon muere, se cambia de pokemon
+         */
         if(!MethodsBattlePokemon.isPokemonAlivePlayer1(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()))){
             MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer1();
             MethodsBattlePokemon.setTurnsToCombat(1);
@@ -1310,6 +1322,9 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
 
+        /**
+         * si el pokemon muere, se cambia de pokemon
+         */
         if(!MethodsBattlePokemon.isPokemonAlivePlayer1(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()))){
             MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer1();
             MethodsBattlePokemon.setTurnsToCombat(1);
