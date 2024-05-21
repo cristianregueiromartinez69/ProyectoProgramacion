@@ -643,6 +643,7 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
 
+
         /**
          * cambiamos los turnos de los jugadores
          */
@@ -1725,5 +1726,37 @@ public class Battle extends JFrame {
 
     public void setLifePanelPokemons(JPanel lifePanelPokemons) {
         this.lifePanelPokemon = lifePanelPokemons;
+    }
+
+    public static JPanel getAttacksChangesPokemon1Player1() {
+        return attacksChangesPokemon1Player1;
+    }
+
+    public static void setAttacksChangesPokemon1Player1(JPanel attacksChangesPokemon1Player1) {
+        Battle.attacksChangesPokemon1Player1 = attacksChangesPokemon1Player1;
+    }
+
+    public static JPanel getChangesPokemonsPLayer1() {
+        return changesPokemonsPLayer1;
+    }
+
+    public static void setChangesPokemonsPLayer1(JPanel changesPokemonsPLayer1) {
+        Battle.changesPokemonsPLayer1 = changesPokemonsPLayer1;
+    }
+
+    public static JPanel getAttacksChangesPokemon1Player2() {
+        return attacksChangesPokemon1Player2;
+    }
+
+    public static void setAttacksChangesPokemon1Player2(JPanel attacksChangesPokemon1Player2) {
+        Battle.attacksChangesPokemon1Player2 = attacksChangesPokemon1Player2;
+    }
+
+    public static JPanel getChangesPokemonsPLayer2() {
+        return changesPokemonsPLayer2;
+    }
+
+    public static void setChangesPokemonsPLayer2(JPanel changesPokemonsPLayer2) {
+        Battle.changesPokemonsPLayer2 = changesPokemonsPLayer2;
     }
 }

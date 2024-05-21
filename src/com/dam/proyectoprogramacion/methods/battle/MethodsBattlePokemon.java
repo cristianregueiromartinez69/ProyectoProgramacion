@@ -1,8 +1,11 @@
 package com.dam.proyectoprogramacion.methods.battle;
 
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer1;
+import com.dam.proyectoprogramacion.interfaces.Battle;
 import com.dam.proyectoprogramacion.methods.selectionpokemon.MethosInterfaceSelectionPokemon;
 import com.dam.proyectoprogramacion.pokemon.PokemonProperties;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -196,8 +199,29 @@ public class MethodsBattlePokemon {
             return new String[]{type};
         }
     }
-    public static boolean isPokemonAlivePlayer1(String namePokemon){
-        return lifePokemonsPlayer1.get(namePokemon) > 0;
+    public static boolean isPokemonAlivePlayer1(int life){
+        boolean marca = false;
+        if(life > 0){
+            marca = true;
+        }
+        return marca;
+    }
+    public static void changePokemonWhenDiesPokemonInBattlePlayer1(){
+        if(!isPokemonAlivePlayer1(getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()))){
+            Battle.getAttacksChangesPokemon1Player1().setVisible(false);
+            Battle.getChangesPokemonsPLayer1().setVisible(true);
+            ButtonInterfaceChangePokemonPlayer1.getBack().setEnabled(false);
+
+        }
+    }
+    public static void setEnabledButtonPokemonDiePlayer1(String namePokemon){
+        JButton [] namePokemonsButtons = {ButtonInterfaceChangePokemonPlayer1.getPokemon1team(), ButtonInterfaceChangePokemonPlayer1.getPokemon2team(),
+                ButtonInterfaceChangePokemonPlayer1.getPokemon3team()};
+        for(int i = 0; i < namePokemonsButtons.length; i++){
+            if(namePokemonsButtons[i].getText().equalsIgnoreCase(namePokemon)){
+                namePokemonsButtons[i].setEnabled(false);
+            }
+        }
     }
     public static void putValuesLifePokemonsPlayer1(String namePokemon, int life){
         lifePokemonsPlayer1.put(namePokemon, life);
@@ -357,6 +381,13 @@ public class MethodsBattlePokemon {
             return new String[]{type};
         }
     }
+    public static boolean isPokemonAlivePlayer2(int life){
+        boolean marca = false;
+        if(life > 0){
+            marca = true;
+        }
+        return marca;
+    }
 
 
     //--------------------------------------------------------------------------//
@@ -375,6 +406,7 @@ public class MethodsBattlePokemon {
         int randomValue = 85 + (int) (Math.random() * 16);
         return (float) randomValue;
     }
+
 
 
 
