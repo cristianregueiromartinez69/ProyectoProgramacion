@@ -3,6 +3,7 @@ package com.dam.proyectoprogramacion.methods.battle;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer1;
 import com.dam.proyectoprogramacion.interfaces.Battle;
 import com.dam.proyectoprogramacion.methods.selectionpokemon.MethosInterfaceSelectionPokemon;
+import com.dam.proyectoprogramacion.panels.battle.battleplayer1.PokemonsToChoosePlayer1;
 import com.dam.proyectoprogramacion.pokemon.PokemonProperties;
 
 import javax.swing.*;
@@ -253,6 +254,13 @@ public class MethodsBattlePokemon {
              */
             if(namePokemonsButtons[i].getText().equalsIgnoreCase(namePokemon)){
                 namePokemonsButtons[i].setEnabled(false);
+                if(i == 0) {
+                    ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon1(false);
+                }else if(i == 1){
+                    ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon2(false);
+                }else{
+                    ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon3(false);
+                }
             }
         }
     }
