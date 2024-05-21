@@ -521,41 +521,67 @@ public class SelectionPokemon extends JFrame {
                     */
                    ButtonInterfaceCombat.setPathPokemonBattlePlayer1(MethodsBattlePlayer1.putImageAttackButtonPlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
+                   /**
+                    * establecemos los valores del ataque 1 del jugador 1
+                    */
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack1(MethodsBattlePlayer1.getTypeAttack1PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNameAttack1(MethodsBattlePlayer1.getNameAttack1PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack1(MethodsBattlePlayer1.getColorAttack1PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
+                   /**
+                    * establecemos los valores del ataque 2 del jugador 1
+                    */
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack2(MethodsBattlePlayer1.getTypeAttack2PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNameAttack2(MethodsBattlePlayer1.getNameAttack2PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack2(MethodsBattlePlayer1.getColorAttack2PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
+                     /**
+                      * establecemos los valores del ataque 3 del jugador 1
+                      */
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack3(MethodsBattlePlayer1.getTypeAttack3PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNameAttack3(MethodsBattlePlayer1.getNameAttack3PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack3(MethodsBattlePlayer1.getColorAttack3PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
+                     /**
+                      * establecemos los valores del ataque 4 del jugador 1
+                      */
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack4(MethodsBattlePlayer1.getTypeAttack4PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNameAttack4(MethodsBattlePlayer1.getNameAttack4PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack4(MethodsBattlePlayer1.getColorAttack4PokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
+                   /**
+                    * establecemos los valores del boton de cambio del pokemon 1 del jugador 1
+                    */
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconPokemon1(MethodsBattlePlayer1.getPathPokemon1Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNamePokemon1(MethodsBattlePlayer1.getNamePokemon1Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon1(true);
-                   ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon2(true);
-                   ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon3(true);
 
-
+                   /**
+                    * establecemos los valores del boton de cambio del pokemon 2 del jugador 1
+                    */
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconPokemon2(MethodsBattlePlayer1.getPathPokemon2Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNamePokemon2(MethodsBattlePlayer1.getNamePokemon2Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon2(true);
 
+                   /**
+                    * establecemos los valores del boton de cambio del pokemon 3 del jugador 1
+                    */
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconPokemon3(MethodsBattlePlayer1.getPathPokemon3Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNamePokemon3(MethodsBattlePlayer1.getNamePokemon3Player1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
+                   ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon3(true);
 
+                   /**
+                    * establecemos los valores de la vida de los pokemons del jugador 1
+                    */
                    LifePokemonInBattlePlayer1.setActualLifePokemonInBattlePlayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
                    LifePokemonInBattlePlayer1.setAuxLife(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
                    LifePokemonInBattlePlayer1.setLifePokemon1PLayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon1Player1());
                    LifePokemonInBattlePlayer1.setLifePokemon2PLayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon2Player1());
                    LifePokemonInBattlePlayer1.setLifePokemon3PLayer1(MethodsLifeBattlePokemonPlayer1.getLifePokemon3Player1());
 
+                   /**
+                    * establecemos la imagen de los pokemons del jugador 1
+                    */
                    DataNamesIconsColorsAttacksAndPokemonsPlayer1.setImagePokemonInBattlePlayer1(MethodsBattlePlayer1.putImagePokemonInBattlePlayer1(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
 
@@ -564,46 +590,82 @@ public class SelectionPokemon extends JFrame {
                     */
                    ButtonInterfaceCombat.setPathPokemonBattlePlayer2(MethodsBattlePlayer2.putImageAttackButtonPlayer2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
+                   /**
+                    * establecemos los valores del ataque 1 del jugador 2
+                    */
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setPathIconAttack1(MethodsBattlePlayer2.getTypeAttack1PokemonInBattlePlayer2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setNameAttack1(MethodsBattlePlayer2.getNameAttack1PokemonInBattlePlayer2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setColorBackgroundAttack1(MethodsBattlePlayer2.getColorAttack1PokemonInBattlePlayer2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
+                   /**
+                    * establecemos los valores del ataque 2 del jugador 2
+                    */
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setPathIconAttack2(MethodsBattlePlayer2.getTypeAttack2PokemonInBattlePlayer2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setNameAttack2(MethodsBattlePlayer2.getNameAttack2PokemonInBattlePlayer2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setColorBackgroundAttack2(MethodsBattlePlayer2.getColorAttack2PokemonInBattlePlayer2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
+                   /**
+                    * establecemos los valores del ataque 3 del jugador 2
+                    */
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setPathIconAttack3(MethodsBattlePlayer2.getTypeAttack3PokemonInBattlePlayer2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setNameAttack3(MethodsBattlePlayer2.getNameAttack3PokemonInBattlePlayer2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setColorBackgroundAttack3(MethodsBattlePlayer2.getColorAttack3PokemonInBattlePlayer2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
+                   /**
+                    * establecemos los valores del ataque 4 del jugador 2
+                    */
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setPathIconAttack4(MethodsBattlePlayer2.getTypeAttack4PokemonInBattlePlayer2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setNameAttack4(MethodsBattlePlayer2.getNameAttack4PokemonInBattlePlayer2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setColorBackgroundAttack4(MethodsBattlePlayer2.getColorAttack4PokemonInBattlePlayer2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
 
+                   /**
+                    * establecemos los valores del boton de cambio del pokemon 1 del jugador 2
+                    */
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setPathIconPokemon1(MethodsBattlePlayer2.getPathPokemon1Player2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setNamePokemon1(MethodsBattlePlayer2.getNamePokemon1Player2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
+                   /**
+                    * establecemos los valores del boton de cambio del pokemon 2 del jugador 2
+                    */
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setPathIconPokemon2(MethodsBattlePlayer2.getPathPokemon2Player2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setNamePokemon2(MethodsBattlePlayer2.getNamePokemon2Player2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
+                   /**
+                    * establecemos los valores del boton de cambio del pokemon 3 del jugador 2
+                    */
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setPathIconPokemon3(MethodsBattlePlayer2.getPathPokemon3Player2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setNamePokemon3(MethodsBattlePlayer2.getNamePokemon3Player2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
+                   /**
+                    * establecemos los valores de la vida de los pokemons del jugador 2
+                    */
                    LifePokemonInBattlePlayer2.setActualLifePokemonInBattlePlayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon1Player2());
                    LifePokemonInBattlePlayer2.setAuxLifePlayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon1Player2());
                    LifePokemonInBattlePlayer2.setLifePokemon1PLayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon1Player2());
                    LifePokemonInBattlePlayer2.setLifePokemon2PLayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon2Player2());
                    LifePokemonInBattlePlayer2.setLifePokemon3PLayer2(MethodsLifeBattlePokemonPlayer2.getLifePokemon3Player2());
 
+                   /**
+                    * establecemos la imagen de los pokemons del jugador 2
+                    */
                    DataNamesIconsColorsAttacksAndPokemonsPlayer2.setImagePokemonInBattlePlayer2(MethodsBattlePlayer2.putImagePokemonInBattlePlayer2(MethosInterfaceSelectionPokemon.getPlayersBattle()));
 
+                   /**
+                    * añadimos la vida de los pokemons de los jugadores al hasmap para la JProgressbar
+                    */
                    MethosInterfaceSelectionPokemon.addLifePokemonsPlayer1(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText());
                    MethosInterfaceSelectionPokemon.addLifePokemonsPlayer2(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
 
 
+                   /**
+                    * iniciamos la interfaz de batalla y paramos la musica de la intro del juego
+                    */
                    MusicIntroGame.stopMusic();
                    new Battle();
+                   /**
+                    * iniciamos la musica de batalla
+                    */
                    MusicBattleGame.music();
                    dispose();
                }

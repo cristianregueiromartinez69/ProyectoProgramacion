@@ -253,11 +253,23 @@ public class MethodsBattlePokemon {
              * si el nombre del pokemon coincide con el nombre del pokemon en batalla, se deshabilitará el boton
              */
             if(namePokemonsButtons[i].getText().equalsIgnoreCase(namePokemon)){
+                /**
+                 * se deshabilitará el boton
+                 */
                 namePokemonsButtons[i].setEnabled(false);
+                /**
+                 * si el boton es el 1, se deshabilitará el boton 1
+                 */
                 if(i == 0) {
                     ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon1(false);
+                    /**
+                     * si el boton es el 2, se deshabilitará el boton 2
+                     */
                 }else if(i == 1){
                     ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon2(false);
+                    /**
+                     * si el boton es el 3, se deshabilitará el boton 3
+                     */
                 }else{
                     ButtonInterfaceChangePokemonPlayer1.setEnableButtonPokemon3(false);
                 }

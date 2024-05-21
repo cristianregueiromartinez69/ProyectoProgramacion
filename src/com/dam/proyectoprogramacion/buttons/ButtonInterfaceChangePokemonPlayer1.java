@@ -19,6 +19,9 @@ public class ButtonInterfaceChangePokemonPlayer1 extends JPanel {
     private static JButton pokemon1team;
     private static JButton pokemon2team;
     private static JButton pokemon3team;
+    /**
+     * atributos privados de tipo boolean que serán los que habiliten o no los botones de los pokemons
+     */
     private static boolean enableButtonPokemon1;
     private static boolean enableButtonPokemon2;
     private static boolean enableButtonPokemon3;
