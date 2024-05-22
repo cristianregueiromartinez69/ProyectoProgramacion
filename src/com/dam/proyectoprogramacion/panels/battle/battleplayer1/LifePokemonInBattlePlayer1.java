@@ -77,7 +77,7 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
          * valor que irá en la barra de vida
          */
         lifePokemonBarPlayer1.setString("" + lifePokemonBarPlayer1.getValue());
-        if (value == 0) {
+        if (value <= 0) {
             /**
              * si la vida es 0, el color será negro
              */
