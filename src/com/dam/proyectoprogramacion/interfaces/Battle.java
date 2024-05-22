@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import com.dam.proyectoprogramacion.Songs.MusicBattleGame;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceAttacks;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer1;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer2;
@@ -651,6 +652,7 @@ public class Battle extends JFrame {
          * si el equipo pokemon del jugador 2 muere, se acaba la batalla y nos vamos al salon de la fama
          */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
+            MusicBattleGame.stopMusic();
             dispose();
             new HallOfFame();
         }
@@ -719,6 +721,7 @@ public class Battle extends JFrame {
          * si el equipo pokemon del jugador 2 muere, se acaba la batalla y nos vamos al salon de la fama
          */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
+            MusicBattleGame.stopMusic();
             dispose();
             new HallOfFame();
         }
@@ -786,6 +789,7 @@ public class Battle extends JFrame {
          * si el equipo pokemon del jugador 2 muere, se acaba la batalla y nos vamos al salon de la fama
          */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
+            MusicBattleGame.stopMusic();
             dispose();
             new HallOfFame();
         }
@@ -845,6 +849,7 @@ public class Battle extends JFrame {
          * si el equipo pokemon del jugador 2 muere, se acaba la batalla y nos vamos al salon de la fama
          */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
+            MusicBattleGame.stopMusic();
             dispose();
             new HallOfFame();
         }
@@ -1226,6 +1231,7 @@ public class Battle extends JFrame {
          * si el equipo pokemon del jugador 1 muere, se acaba la batalla y nos vamos al salon de la fama
          */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
+            MusicBattleGame.stopMusic();
             dispose();
             new HallOfFame();
         }
@@ -1292,6 +1298,7 @@ public class Battle extends JFrame {
          * si el equipo pokemon del jugador 1 muere, se acaba la batalla y nos vamos al salon de la fama
          */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
+            MusicBattleGame.stopMusic();
             dispose();
             new HallOfFame();
         }
@@ -1356,6 +1363,7 @@ public class Battle extends JFrame {
          * si el equipo pokemon del jugador 1 muere, se acaba la batalla y nos vamos al salon de la fama
          */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
+            MusicBattleGame.stopMusic();
             dispose();
             new HallOfFame();
         }
@@ -1423,6 +1431,7 @@ public class Battle extends JFrame {
          * si el equipo pokemon del jugador 1 muere, se acaba la batalla y nos vamos al salon de la fama
          */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
+            MusicBattleGame.stopMusic();
             dispose();
             new HallOfFame();
         }
