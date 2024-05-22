@@ -6,13 +6,14 @@ import java.io.IOException;
 
 public class LifeRedPokemonInBattleSong {
 
+    private static Clip clip;
 
     public static void musicLifeRed() {
         try {
             /**
              * Cargar el archivo de audio
              */
-            File audioFile = new File("canciones/gritoDrampa.wav");
+            File audioFile = new File("canciones/vidaroja.wav");
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
 
             /**
@@ -24,7 +25,7 @@ public class LifeRedPokemonInBattleSong {
             /**
              * / Abrir el clip
              */
-            Clip clip = (Clip) AudioSystem.getLine(info);
+             clip = (Clip) AudioSystem.getLine(info);
             clip.open(audioStream);
 
             /**
@@ -39,6 +40,12 @@ public class LifeRedPokemonInBattleSong {
              */
         } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
             e.printStackTrace();
+        }
+    }
+    public static void stopMusic() {
+        if (clip != null && clip.isOpen()) {
+            clip.stop();
+            clip.close();
         }
     }
 }
