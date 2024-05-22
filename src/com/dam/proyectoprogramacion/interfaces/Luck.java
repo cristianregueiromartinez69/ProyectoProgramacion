@@ -574,7 +574,7 @@ public class Luck extends JFrame {
     public void winnerFaceOrTail(ActionEvent e){
         MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
         new SelectionPokemon();
-            /**
+             /**
          * si se cumple la condicion de este metodo, se pued epulsar el boton
          * el metodo consiste en saber si está editable el alias del jugador 1 y 2
          */
