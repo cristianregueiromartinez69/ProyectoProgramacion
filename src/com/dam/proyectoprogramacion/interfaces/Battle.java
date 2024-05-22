@@ -1217,15 +1217,8 @@ public class Battle extends JFrame {
         /**
          * llamamos al panel de la vida del pokemon para poner la vida del pokemon despues de recibir daño
          */
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
-        /**
-         * llamamos al panel de la vida del pokemon para poner el color de la barra de vida
-         */
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setForeground(LifePokemonInBattlePlayer1.getBackgroundColorLifeBarPokemonPlayer1(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1())));
-        /**
-         * llamamos al panel de la vida del pokemon para repintar la barra de vida
-         */
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
+         LifePokemonInBattlePlayer1.updateLifeBar(LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1(), MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
+
 
         /**
          * si el equipo pokemon del jugador 1 muere, se acaba la batalla y nos vamos al salon de la fama
@@ -1284,15 +1277,7 @@ public class Battle extends JFrame {
         /**
          * llamamos al panel de la vida del pokemon para poner la vida del pokemon despues de recibir daño
          */
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
-        /**
-         * llamamos al panel de la vida del pokemon para poner el color de la barra de vida
-         */
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setForeground(LifePokemonInBattlePlayer1.getBackgroundColorLifeBarPokemonPlayer1(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1())));
-        /**
-         * llamamos al panel de la vida del pokemon para repintar la barra de vida
-         */
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
+        LifePokemonInBattlePlayer1.updateLifeBar(LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1(), MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
 
         /**
          * si el equipo pokemon del jugador 1 muere, se acaba la batalla y nos vamos al salon de la fama
@@ -1349,15 +1334,8 @@ public class Battle extends JFrame {
         /**
          * llamamos al panel de la vida del pokemon para poner la vida del pokemon despues de recibir daño
          */
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
-        /**
-         * llamamos al panel de la vida del pokemon para poner el color de la barra de vida
-         */
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setForeground(LifePokemonInBattlePlayer1.getBackgroundColorLifeBarPokemonPlayer1(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1())));
-        /**
-         * llamamos al panel de la vida del pokemon para repintar la barra de vida
-         */
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
+        LifePokemonInBattlePlayer1.updateLifeBar(LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1(), MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
+
 
         /**
          * si el equipo pokemon del jugador 1 muere, se acaba la batalla y nos vamos al salon de la fama
@@ -1417,15 +1395,8 @@ public class Battle extends JFrame {
         /**
          * llamamos al panel de la vida del pokemon para poner la vida del pokemon despues de recibir daño
          */
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setValue(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
-        /**
-         * llamamos al panel de la vida del pokemon para poner el color de la barra de vida
-         */
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().setForeground(LifePokemonInBattlePlayer1.getBackgroundColorLifeBarPokemonPlayer1(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1())));
-        /**
-         * llamamos al panel de la vida del pokemon para repintar la barra de vida
-         */
-        LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
+        LifePokemonInBattlePlayer1.updateLifeBar(LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1(), MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
+
 
         /**
          * si el equipo pokemon del jugador 1 muere, se acaba la batalla y nos vamos al salon de la fama
