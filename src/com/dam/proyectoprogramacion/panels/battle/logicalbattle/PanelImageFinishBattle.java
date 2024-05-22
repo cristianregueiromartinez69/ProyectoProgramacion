@@ -1,5 +1,7 @@
 package com.dam.proyectoprogramacion.panels.battle.logicalbattle;
 
+import com.dam.proyectoprogramacion.methods.luck.MethodsInterfaceLuck;
+
 import javax.swing.*;
 
 public class PanelImageFinishBattle extends JPanel {
@@ -15,6 +17,8 @@ public class PanelImageFinishBattle extends JPanel {
         imageTextWinnerPanel = new JPanel();
         aliasWinnerPanel = new JPanel();
         goToHallOfFamePanel = new JPanel();
+
+        imageTextWinnerPanel = MethodsInterfaceLuck.makeImageWinnerPanel();
 
 
 
