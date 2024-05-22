@@ -4,14 +4,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Arrays;
 
+import com.dam.proyectoprogramacion.Songs.HallOfFameSong;
+import com.dam.proyectoprogramacion.Songs.MusicBattleGame;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceAttacks;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer1;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer2;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
 import com.dam.proyectoprogramacion.methods.battle.*;
-import com.dam.proyectoprogramacion.methods.selectionpokemon.MethosInterfaceSelectionPokemon;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.*;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer2.*;
 import com.dam.proyectoprogramacion.panels.battle.logicalbattle.PanelImageBattlePokemon;
@@ -41,6 +41,7 @@ public class Battle extends JFrame {
     private static JPanel changesPokemonsPLayer2;
     private  static JPanel lifePanelPokemon;
     private static JPanel textAreaPanel;
+    private static JPanel finishBattlePanel;
 
     /**
      * atributos privados de tipo int para saber la velocidad de los pokemons
@@ -48,6 +49,9 @@ public class Battle extends JFrame {
    private static int speedPlayer1 = MethodsBattlePlayer1.getSpeedPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1());
    private static int speedPlayer2 = MethodsBattlePlayer2.getSpeedPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2());
 
+   /**
+    * atributos privados de tipo int para saber el daño de los pokemons
+    */
    private static int damagePlayer1;
    private static int damagePlayer2;
 
@@ -134,6 +138,7 @@ public class Battle extends JFrame {
                 MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1())));
 
 
+
         //---------------------paneles del jugador 2-------------------//
 
 
@@ -213,6 +218,8 @@ public class Battle extends JFrame {
          * 3. el escenario de la batalla pokemon
          */
         battlePanel.add(new PanelImageBattlePokemon());
+
+
 
 
 
@@ -400,6 +407,7 @@ public class Battle extends JFrame {
 
 
 
+
         //---------------------------Botones del jugador 2----------------------//
 
         /**
@@ -564,8 +572,6 @@ public class Battle extends JFrame {
             }
         });
         ButtonInterfaceChangePokemonPlayer2.getPokemon3team().addActionListener(this::putInformationAreaTextBattlePlayer2);
-
-
     }
 
 
@@ -608,7 +614,7 @@ public class Battle extends JFrame {
     /**
      * metodo para atacar y hacer visivle el panel de atacar y cambio e invisible el de ataques del jugador 1
      */
-    private static void clearGlobalPanelPlayer1WhenPressAttack1Buttons(){
+    private void clearGlobalPanelPlayer1WhenPressAttack1Buttons(){
 
 
             attacksPanelPlayer1.setVisible(false);
@@ -644,6 +650,26 @@ public class Battle extends JFrame {
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
 
         /**
+         * si el equipo pokemon del jugador 2 muere, se acaba la batalla y nos vamos al salon de la fama
+         */
+        if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
+            MusicBattleGame.stopMusic();
+            HallOfFameSong.hallOfFameMusic();
+            dispose();
+            new HallOfFame();
+
+        }
+        /**
+         * si el pokemon del jugador 2 muere tendrá que ser forzado a cambiar de pokemon
+         */
+        if(!MethodsBattlePokemon.isPokemonAlivePlayer2(MethodsBattlePokemon.getLifePokemonsPlayer2().get(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()))){
+            MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer2();
+            MethodsBattlePokemon.setTurnsToCombat(1);
+
+        }
+
+
+        /**
          * cambiamos los turnos de los jugadores
          */
         if(MethodsBattlePokemon.turnsToCombat()== 1){
@@ -658,7 +684,7 @@ public class Battle extends JFrame {
     /**
      * metodo para atacar y hacer visible el panel de atacar y cambio e invisible el de ataques del jugador 1
      */
-    private static void clearGlobalPanelPlayer1WhenPressAttack2Buttons(){
+    private void clearGlobalPanelPlayer1WhenPressAttack2Buttons(){
 
 
             attacksPanelPlayer1.setVisible(false);
@@ -695,6 +721,25 @@ public class Battle extends JFrame {
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
 
         /**
+         * si el equipo pokemon del jugador 2 muere, se acaba la batalla y nos vamos al salon de la fama
+         */
+        if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
+            MusicBattleGame.stopMusic();
+            HallOfFameSong.hallOfFameMusic();
+            dispose();
+            new HallOfFame();
+        }
+
+        /**
+         * si el pokemon del jugador 2 muere tendrá que ser forzado a cambiar de pokemon
+         */
+        if(!MethodsBattlePokemon.isPokemonAlivePlayer2(MethodsBattlePokemon.getLifePokemonsPlayer2().get(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()))){
+            MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer2();
+            MethodsBattlePokemon.setTurnsToCombat(1);
+
+        }
+
+        /**
          * cambiamos los turnos de los jugadores
          */
             if(MethodsBattlePokemon.turnsToCombat()== 1){
@@ -710,7 +755,7 @@ public class Battle extends JFrame {
     /**
      * metodo para atacar y hacer visible el panel de atacar y cambio e invisible el de ataques del jugador 1
      */
-    private static void clearGlobalPanelPlayer1WhenPressAttack3Buttons(){
+    private void clearGlobalPanelPlayer1WhenPressAttack3Buttons(){
 
             attacksPanelPlayer1.setVisible(false);
             attacksChangesPokemon1Player1.setVisible(true);
@@ -743,6 +788,26 @@ public class Battle extends JFrame {
          * llamamos al panel de la vida del pokemon para repintar la barra de vida
          */
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
+
+        /**
+         * si el equipo pokemon del jugador 2 muere, se acaba la batalla y nos vamos al salon de la fama
+         */
+        if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
+            MusicBattleGame.stopMusic();
+            HallOfFameSong.hallOfFameMusic();
+            dispose();
+            new HallOfFame();
+        }
+
+        /**
+         * si el pokemon del jugador 2 muere tendrá que ser forzado a cambiar de pokemon
+         */
+        if(!MethodsBattlePokemon.isPokemonAlivePlayer2(MethodsBattlePokemon.getLifePokemonsPlayer2().get(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()))){
+            MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer2();
+            MethodsBattlePokemon.setTurnsToCombat(1);
+
+        }
+
         /**
          * cambiamos los turnos de los jugadores
          */
@@ -754,7 +819,7 @@ public class Battle extends JFrame {
             }
 
     }
-    private static void clearGlobalPanelPlayer1WhenPressAttack4Buttons(){
+    private void clearGlobalPanelPlayer1WhenPressAttack4Buttons(){
 
             attacksPanelPlayer1.setVisible(false);
             attacksChangesPokemon1Player1.setVisible(true);
@@ -784,6 +849,26 @@ public class Battle extends JFrame {
          * llamamos al panel de la vida del pokemon para repintar la barra de vida
          */
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
+
+        /**
+         * si el equipo pokemon del jugador 2 muere, se acaba la batalla y nos vamos al salon de la fama
+         */
+        if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
+            MusicBattleGame.stopMusic();
+            HallOfFameSong.hallOfFameMusic();
+            dispose();
+            new HallOfFame();
+        }
+
+        /**
+         * si el pokemon del jugador 2 muere tendrá que ser forzado a cambiar de pokemon
+         */
+        if(!MethodsBattlePokemon.isPokemonAlivePlayer2(MethodsBattlePokemon.getLifePokemonsPlayer2().get(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()))){
+            MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer2();
+            MethodsBattlePokemon.setTurnsToCombat(1);
+
+        }
+
             /**
              * cambiamos los turnos de los jugadores
              */
@@ -893,6 +978,7 @@ public class Battle extends JFrame {
      * metodo para limpiar el panel entero al cambiar de pokemon
      */
     private static  void clearGlobalPanelPlayer1WhenPressButtonToChangePokemon2InChangePokemon(){
+
         clearContentPanel();
         /**
          * establecemos la nueva imagen del pokemon
@@ -950,6 +1036,7 @@ public class Battle extends JFrame {
      * metodo para limpiar el panel entero al cambiar de pokemon
      */
     private static  void clearGlobalPanelPlayer1WhenPressButtonToChangePokemon3InChangePokemon(){
+
         clearContentPanel();
         /**
          * establecemos la nueva imagen del pokemon
@@ -1112,10 +1199,13 @@ public class Battle extends JFrame {
     /**
      * metodo para atacar y hacer visivle el panel de atacar y cambio e invisible el de ataques del jugador 2
      */
-    private static void clearGlobalPanelPlayer2WhenPressAttack1Buttons(){
+    private void clearGlobalPanelPlayer2WhenPressAttack1Buttons(){
             attacksPanelPlayer2.setVisible(false);
             attacksChangesPokemon1Player2.setVisible(true);
 
+            /**
+             * llamamos al metodo que calcula el daño del ataque
+             */
             damagePlayer2 = (int) MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(),
                     MethodsTextAreaBattlePlayer2.getTypeAttack1PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
                     MethodsBattlePlayer2.getAmountAttackPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
@@ -1142,9 +1232,28 @@ public class Battle extends JFrame {
          * llamamos al panel de la vida del pokemon para repintar la barra de vida
          */
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
-            /**
-             * cambiamos los turnos de los jugadores
-             */
+
+        /**
+         * si el equipo pokemon del jugador 1 muere, se acaba la batalla y nos vamos al salon de la fama
+         */
+        if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
+            MusicBattleGame.stopMusic();
+            HallOfFameSong.hallOfFameMusic();
+            dispose();
+            new HallOfFame();
+        }
+
+        /**
+         * si el pokemon muere, se cambia de pokemon
+         */
+        if(!MethodsBattlePokemon.isPokemonAlivePlayer1(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()))){
+            MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer1();
+            MethodsBattlePokemon.setTurnsToCombat(1);
+        }
+
+        /**
+         * cambiamos los turnos de los jugadores
+         */
         if(MethodsBattlePokemon.turnsToCombat()== 2){
             MethodsBattlePokemon.setTurnsToCombat(1);
         }
@@ -1157,7 +1266,7 @@ public class Battle extends JFrame {
     /**
      * metodo para atacar y hacer visible el panel de atacar y cambio e invisible el de ataques del jugador 2
      */
-    private static void clearGlobalPanelPlayer2WhenPressAttack2Buttons(){
+    private void clearGlobalPanelPlayer2WhenPressAttack2Buttons(){
             attacksPanelPlayer2.setVisible(false);
             attacksChangesPokemon1Player2.setVisible(true);
 
@@ -1193,6 +1302,24 @@ public class Battle extends JFrame {
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
 
         /**
+         * si el equipo pokemon del jugador 1 muere, se acaba la batalla y nos vamos al salon de la fama
+         */
+        if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
+            MusicBattleGame.stopMusic();
+            HallOfFameSong.hallOfFameMusic();
+            dispose();
+            new HallOfFame();
+        }
+        /**
+         * si el pokemon muere, se cambia de pokemon
+         */
+        if(!MethodsBattlePokemon.isPokemonAlivePlayer1(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()))){
+            MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer1();
+            MethodsBattlePokemon.setTurnsToCombat(1);
+
+        }
+
+        /**
          * cambiamos los turnos de los jugadores
          */
         if(MethodsBattlePokemon.turnsToCombat()== 2){
@@ -1206,7 +1333,7 @@ public class Battle extends JFrame {
     /**
      * metodo para atacar y hacer visible el panel de atacar y cambio e invisible el de ataques del jugador 2
      */
-    private static void clearGlobalPanelPlayer2WhenPressAttack3Buttons(){
+    private void clearGlobalPanelPlayer2WhenPressAttack3Buttons(){
             attacksPanelPlayer2.setVisible(false);
             attacksChangesPokemon1Player2.setVisible(true);
             /**
@@ -1239,6 +1366,27 @@ public class Battle extends JFrame {
          * llamamos al panel de la vida del pokemon para repintar la barra de vida
          */
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
+
+        /**
+         * si el equipo pokemon del jugador 1 muere, se acaba la batalla y nos vamos al salon de la fama
+         */
+        if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
+            MusicBattleGame.stopMusic();
+            HallOfFameSong.hallOfFameMusic();
+            dispose();
+            new HallOfFame();
+        }
+        /**
+         * si el pokemon muere, se cambia de pokemon
+         */
+        if(!MethodsBattlePokemon.isPokemonAlivePlayer1(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()))){
+            MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer1();
+            MethodsBattlePokemon.setTurnsToCombat(1);
+
+        }
+        if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
+            new HallOfFame();
+        }
         /**
          * cambiamos los turnos de los jugadores
          */
@@ -1253,7 +1401,7 @@ public class Battle extends JFrame {
     /**
      * metodo para atacar y hacer visible el panel de atacar y cambio e invisible el de ataques del jugador 2
      */
-    private static void clearGlobalPanelPlayer2WhenPressAttack4Buttons(){
+    private void clearGlobalPanelPlayer2WhenPressAttack4Buttons(){
             attacksPanelPlayer2.setVisible(false);
             attacksChangesPokemon1Player2.setVisible(true);
 
@@ -1287,6 +1435,25 @@ public class Battle extends JFrame {
          * llamamos al panel de la vida del pokemon para repintar la barra de vida
          */
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
+
+        /**
+         * si el equipo pokemon del jugador 1 muere, se acaba la batalla y nos vamos al salon de la fama
+         */
+        if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
+            MusicBattleGame.stopMusic();
+            HallOfFameSong.hallOfFameMusic();
+            dispose();
+            new HallOfFame();
+        }
+        /**
+         * si el pokemon muere, se cambia de pokemon
+         */
+        if(!MethodsBattlePokemon.isPokemonAlivePlayer1(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()))){
+            MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer1();
+            MethodsBattlePokemon.setTurnsToCombat(1);
+        }
+
+
         /**
          * cambiamos los turnos de los jugadores
          */
@@ -1674,56 +1841,36 @@ public class Battle extends JFrame {
         return auxPanel;
     }
 
+    public void closeWindow(){
+        dispose();
+    }
 
     /**
      * getter y setter de los atributos de la clase
      * @return los atributos
      */
-    public JPanel getContentPanel() {
-        return contentPanel;
+
+
+    public static JPanel getAttacksChangesPokemon1Player1() {
+        return attacksChangesPokemon1Player1;
     }
 
-    public void setContentPanel(JPanel contentPanel) {
-        this.contentPanel = contentPanel;
+
+
+    public static JPanel getChangesPokemonsPLayer1() {
+        return changesPokemonsPLayer1;
     }
 
-    public JPanel getGlobalPanelPLayer1() {
-        return globalPanelPLayer1;
+
+
+    public static JPanel getAttacksChangesPokemon1Player2() {
+        return attacksChangesPokemon1Player2;
     }
 
-    public void setGlobalPanelPLayer1(JPanel globalPanelPLayer1) {
-        this.globalPanelPLayer1 = globalPanelPLayer1;
+
+    public static JPanel getChangesPokemonsPLayer2() {
+        return changesPokemonsPLayer2;
     }
 
-    public JPanel getAttacksPanelPlayer1() {
-        return attacksPanelPlayer1;
-    }
 
-    public void setAttacksPanelPlayer1(JPanel attacksPanelPlayer1) {
-        this.attacksPanelPlayer1 = attacksPanelPlayer1;
-    }
-
-    public JPanel getBattlePanel() {
-        return battlePanel;
-    }
-
-    public void setBattlePanel(JPanel battlePanel) {
-        this.battlePanel = battlePanel;
-    }
-
-    public JPanel getGlobalPanelPLayer2() {
-        return globalPanelPLayer2;
-    }
-
-    public void setGlobalPanelPLayer2(JPanel globalPanelPLayer2) {
-        this.globalPanelPLayer2 = globalPanelPLayer2;
-    }
-
-    public JPanel getLifePanelPokemons() {
-        return lifePanelPokemon;
-    }
-
-    public void setLifePanelPokemons(JPanel lifePanelPokemons) {
-        this.lifePanelPokemon = lifePanelPokemons;
-    }
 }
