@@ -653,8 +653,10 @@ public class Battle extends JFrame {
          */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
             MusicBattleGame.stopMusic();
+
             dispose();
             new HallOfFame();
+
         }
         /**
          * si el pokemon del jugador 2 muere tendrá que ser forzado a cambiar de pokemon
