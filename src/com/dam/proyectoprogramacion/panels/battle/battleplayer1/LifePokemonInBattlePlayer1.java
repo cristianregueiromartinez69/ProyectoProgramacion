@@ -5,8 +5,6 @@ import com.dam.proyectoprogramacion.Songs.LifeRedPokemonInBattleSong;
 import javax.swing.*;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 /**
  * clase con el panel de la vida del pokemon en batalla del jugador 1
@@ -102,30 +100,6 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
         }
         LifeRedPokemonInBattleSong.stopMusic();
         return Color.GREEN;
-    }
-
-
-    public static void updateLifeBar(JProgressBar lifeBar, int newLifeValue) {
-        // Crea un nuevo Timer que se activa cada 100 milisegundos
-        Timer timer = new Timer(100, new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                // Obtiene el valor actual de la barra de progreso
-                int currentValue = lifeBar.getValue();
-
-                // Si el valor actual es mayor que el nuevo valor de vida, disminuye el valor actual en 1
-                if (currentValue > newLifeValue) {
-                    lifeBar.setValue(currentValue - 15);
-                    lifeBar.setForeground(getBackgroundColorLifeBarPokemonPlayer1(currentValue - 15));
-                    lifeBar.repaint();
-                } else {
-                    // Si el valor actual es igual o menor que el nuevo valor de vida, detiene el Timer
-                    ((Timer)e.getSource()).stop();
-                }
-            }
-        });
-
-        // Inicia el Timer
-        timer.start();
     }
 
     /**

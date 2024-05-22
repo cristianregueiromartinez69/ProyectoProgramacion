@@ -35,7 +35,6 @@ public class LifeRedPokemonInBattleSong {
              */
              clip = (Clip) AudioSystem.getLine(info);
             clip.open(audioStream);
-            clip.loop(Clip.LOOP_CONTINUOUSLY);
 
 
             /**
