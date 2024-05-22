@@ -19,7 +19,7 @@ public class PanelImageFinishBattle extends JPanel {
     private JPanel imageTextWinnerPanel;
     private JPanel aliasWinnerPanel;
     private JPanel goToHallOfFamePanel;
-    private JButton goToHallOfFameButton;
+    private static JButton goToHallOfFameButton;
 
     /**
      * constructor de la clase
@@ -57,6 +57,9 @@ public class PanelImageFinishBattle extends JPanel {
         goToHallOfFamePanel.add(goToHallOfFameButton);
 
 
+        /**
+         * añadimos los paneles al panel principal
+         */
         add(imageTextWinnerPanel);
         add(aliasWinnerPanel);
         add(goToHallOfFamePanel);
@@ -78,4 +81,17 @@ public class PanelImageFinishBattle extends JPanel {
         }
         return auxPanel;
     }
+
+    /**
+     * getter y setter del boton de ir al salon de la fama
+     */
+    public static JButton getGoToHallOfFameButton() {
+        return goToHallOfFameButton;
+    }
+
+    public static void setGoToHallOfFameButton(JButton goToHallOfFameButton) {
+        PanelImageFinishBattle.goToHallOfFameButton = goToHallOfFameButton;
+    }
+
+
 }

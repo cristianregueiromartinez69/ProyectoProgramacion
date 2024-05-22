@@ -15,6 +15,7 @@ import com.dam.proyectoprogramacion.methods.selectionpokemon.MethosInterfaceSele
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.*;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer2.*;
 import com.dam.proyectoprogramacion.panels.battle.logicalbattle.PanelImageBattlePokemon;
+import com.dam.proyectoprogramacion.panels.battle.logicalbattle.PanelImageFinishBattle;
 import com.dam.proyectoprogramacion.panels.battle.logicalbattle.TextAreaPanelBattle;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
@@ -41,6 +42,7 @@ public class Battle extends JFrame {
     private static JPanel changesPokemonsPLayer2;
     private  static JPanel lifePanelPokemon;
     private static JPanel textAreaPanel;
+    private static JPanel finishBattlePanel;
 
     /**
      * atributos privados de tipo int para saber la velocidad de los pokemons
@@ -217,6 +219,12 @@ public class Battle extends JFrame {
          * 3. el escenario de la batalla pokemon
          */
         battlePanel.add(new PanelImageBattlePokemon());
+
+        /**
+         * iniciamos el panel de final de batalla
+         */
+        finishBattlePanel = new JPanel();
+        finishBattlePanel.add(new PanelImageFinishBattle());
 
 
 
