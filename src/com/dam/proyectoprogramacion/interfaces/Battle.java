@@ -4,18 +4,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Arrays;
 
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceAttacks;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer1;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer2;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
 import com.dam.proyectoprogramacion.methods.battle.*;
-import com.dam.proyectoprogramacion.methods.selectionpokemon.MethosInterfaceSelectionPokemon;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer1.*;
 import com.dam.proyectoprogramacion.panels.battle.battleplayer2.*;
 import com.dam.proyectoprogramacion.panels.battle.logicalbattle.PanelImageBattlePokemon;
-import com.dam.proyectoprogramacion.panels.battle.logicalbattle.PanelImageFinishBattle;
 import com.dam.proyectoprogramacion.panels.battle.logicalbattle.TextAreaPanelBattle;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
@@ -650,7 +647,10 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
 
+        if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
 
+            new HallOfFame();
+        }
         /**
          * si el pokemon del jugador 2 muere tendrá que ser forzado a cambiar de pokemon
          */
@@ -660,9 +660,7 @@ public class Battle extends JFrame {
 
         }
 
-        if(!MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
-            new HallOfFame();
-        }
+
         /**
          * cambiamos los turnos de los jugadores
          */
@@ -714,6 +712,10 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
 
+        if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
+
+            new HallOfFame();
+        }
 
         /**
          * si el pokemon del jugador 2 muere tendrá que ser forzado a cambiar de pokemon
@@ -722,9 +724,6 @@ public class Battle extends JFrame {
             MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer2();
             MethodsBattlePokemon.setTurnsToCombat(1);
 
-        }
-        if(!MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
-            new HallOfFame();
         }
 
         /**
@@ -777,6 +776,10 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
 
+        if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
+
+            new HallOfFame();
+        }
 
         /**
          * si el pokemon del jugador 2 muere tendrá que ser forzado a cambiar de pokemon
@@ -786,9 +789,7 @@ public class Battle extends JFrame {
             MethodsBattlePokemon.setTurnsToCombat(1);
 
         }
-        if(!MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
-            new HallOfFame();
-        }
+
         /**
          * cambiamos los turnos de los jugadores
          */
@@ -831,6 +832,10 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
 
+        if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
+
+            new HallOfFame();
+        }
 
         /**
          * si el pokemon del jugador 2 muere tendrá que ser forzado a cambiar de pokemon
@@ -840,9 +845,7 @@ public class Battle extends JFrame {
             MethodsBattlePokemon.setTurnsToCombat(1);
 
         }
-        if(!MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
-            new HallOfFame();
-        }
+
             /**
              * cambiamos los turnos de los jugadores
              */
@@ -1207,6 +1210,9 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
 
+        if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
+            new HallOfFame();
+        }
 
         /**
          * si el pokemon muere, se cambia de pokemon
@@ -1215,9 +1221,7 @@ public class Battle extends JFrame {
             MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer1();
             MethodsBattlePokemon.setTurnsToCombat(1);
         }
-        if(!MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
-            new HallOfFame();
-        }
+
         /**
          * cambiamos los turnos de los jugadores
          */
@@ -1268,7 +1272,9 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
 
-
+        if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
+            new HallOfFame();
+        }
         /**
          * si el pokemon muere, se cambia de pokemon
          */
@@ -1277,9 +1283,7 @@ public class Battle extends JFrame {
             MethodsBattlePokemon.setTurnsToCombat(1);
 
         }
-        if(!MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
-            new HallOfFame();
-        }
+
         /**
          * cambiamos los turnos de los jugadores
          */
@@ -1328,6 +1332,9 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
 
+        if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
+            new HallOfFame();
+        }
         /**
          * si el pokemon muere, se cambia de pokemon
          */
@@ -1336,7 +1343,7 @@ public class Battle extends JFrame {
             MethodsBattlePokemon.setTurnsToCombat(1);
 
         }
-        if(!MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
+        if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
             new HallOfFame();
         }
         /**
@@ -1388,6 +1395,9 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
 
+        if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
+            new HallOfFame();
+        }
         /**
          * si el pokemon muere, se cambia de pokemon
          */
@@ -1395,9 +1405,7 @@ public class Battle extends JFrame {
             MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer1();
             MethodsBattlePokemon.setTurnsToCombat(1);
         }
-        if(!MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
-            new HallOfFame();
-        }
+
 
         /**
          * cambiamos los turnos de los jugadores
@@ -1786,6 +1794,9 @@ public class Battle extends JFrame {
         return auxPanel;
     }
 
+    public void closeWindow(){
+        dispose();
+    }
 
     /**
      * getter y setter de los atributos de la clase

@@ -3,12 +3,8 @@ package com.dam.proyectoprogramacion.methods.battle;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer1;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer2;
 import com.dam.proyectoprogramacion.interfaces.Battle;
-import com.dam.proyectoprogramacion.methods.selectionpokemon.MethosInterfaceSelectionPokemon;
-import com.dam.proyectoprogramacion.panels.battle.battleplayer1.PokemonsToChoosePlayer1;
-import com.dam.proyectoprogramacion.pokemon.PokemonProperties;
 
 import javax.swing.*;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -329,13 +325,9 @@ public class MethodsBattlePokemon {
         }
     }
     public static boolean isTeamPokemonAlivePlayer1(){
-        boolean marca = false;
-        if(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1ToChangePLayer1()) > 0 &&
-                MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon2ToChangePLayer1()) > 0 &&
-                MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon3ToChangePLayer1()) > 0){
-            marca = true;
-        }
-        return marca;
+        return MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1ToChangePLayer1()) <= 0 &&
+                MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon2ToChangePLayer1()) <= 0 &&
+                MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon3ToChangePLayer1()) <= 0;
     }
     /**
      * metodo para poner valores al hashmap de la vida de los pokemons del jugador 1
@@ -628,15 +620,10 @@ public class MethodsBattlePokemon {
     }
 
     public static boolean isTeamPokemonAlivePlayer2(){
-        boolean marca = false;
-        if(ButtonInterfaceChangePokemonPlayer2.getPokemon1team().isEnabled() &&
-                ButtonInterfaceChangePokemonPlayer2.getPokemon2team().isEnabled() &&
-                ButtonInterfaceChangePokemonPlayer2.getPokemon3team().isEnabled()){
-            marca = true;
-        }
-        return marca;
+        return MethodsBattlePokemon.getLifePokemonsPlayer2().get(MethodsTextAreaBattlePlayer2.getNamePokemon1ToChangePLayer2()) <= 0 &&
+                MethodsBattlePokemon.getLifePokemonsPlayer2().get(MethodsTextAreaBattlePlayer2.getNamePokemon2ToChangePLayer2()) <= 0 &&
+                MethodsBattlePokemon.getLifePokemonsPlayer2().get(MethodsTextAreaBattlePlayer2.getNamePokemon3ToChangePLayer2()) <= 0;
     }
-
     //--------------------------------------------------------------------------//
 
 //----------------------------Ambos jugadores-----------------------------------//

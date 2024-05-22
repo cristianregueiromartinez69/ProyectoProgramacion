@@ -71,11 +71,11 @@ public class PanelImageFinishBattle extends JPanel {
      */
     private JPanel getAliasWinnerBattle(){
         JPanel auxPanel = new JPanel();
-        if(!MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
+        if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
             aliasWinnerPanel = MethodsInterfaceLuck.selectAliasImagePlayer2();
             auxPanel = aliasWinnerPanel;
         }
-        else if(!MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
+        else if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
             aliasWinnerPanel = MethodsInterfaceLuck.selectAliasImagePlayer1();
             auxPanel = aliasWinnerPanel;
         }
