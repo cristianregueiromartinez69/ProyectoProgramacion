@@ -647,6 +647,9 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
 
+        /**
+         * si el equipo pokemon del jugador 2 muere, se acaba la batalla y nos vamos al salon de la fama
+         */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
             dispose();
             new HallOfFame();
@@ -712,6 +715,9 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
 
+        /**
+         * si el equipo pokemon del jugador 2 muere, se acaba la batalla y nos vamos al salon de la fama
+         */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
             dispose();
             new HallOfFame();
@@ -776,6 +782,9 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
 
+        /**
+         * si el equipo pokemon del jugador 2 muere, se acaba la batalla y nos vamos al salon de la fama
+         */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
             dispose();
             new HallOfFame();
@@ -832,6 +841,9 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
 
+        /**
+         * si el equipo pokemon del jugador 2 muere, se acaba la batalla y nos vamos al salon de la fama
+         */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
             dispose();
             new HallOfFame();
@@ -1210,6 +1222,9 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
 
+        /**
+         * si el equipo pokemon del jugador 1 muere, se acaba la batalla y nos vamos al salon de la fama
+         */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
             dispose();
             new HallOfFame();
@@ -1273,6 +1288,9 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
 
+        /**
+         * si el equipo pokemon del jugador 1 muere, se acaba la batalla y nos vamos al salon de la fama
+         */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
             dispose();
             new HallOfFame();
@@ -1334,6 +1352,9 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
 
+        /**
+         * si el equipo pokemon del jugador 1 muere, se acaba la batalla y nos vamos al salon de la fama
+         */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
             dispose();
             new HallOfFame();
@@ -1398,6 +1419,9 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
 
+        /**
+         * si el equipo pokemon del jugador 1 muere, se acaba la batalla y nos vamos al salon de la fama
+         */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
             dispose();
             new HallOfFame();

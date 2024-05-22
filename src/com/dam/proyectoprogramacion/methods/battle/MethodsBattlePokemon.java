@@ -9,7 +9,7 @@ import java.util.HashMap;
 
 /**
  * metodos para la batalla pokemon de los jugadores 1 y 2
- * @author cristian
+ * @author cristian & chema
  * @version v3.0
  */
 public class MethodsBattlePokemon {
@@ -324,6 +324,10 @@ public class MethodsBattlePokemon {
             }
         }
     }
+    /**
+     * metodo para saber si el equipo de pokemons del jugador 1 está vivo
+     * @return si está vivo o no
+     */
     public static boolean isTeamPokemonAlivePlayer1(){
         return MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1ToChangePLayer1()) <= 0 &&
                 MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon2ToChangePLayer1()) <= 0 &&
@@ -340,13 +344,6 @@ public class MethodsBattlePokemon {
 
     public static HashMap<String, Integer> getLifePokemonsPlayer1() {
         return lifePokemonsPlayer1;
-    }
-    public static void putValuesLifePokemonsPlayer2(String namePokemon, int life){
-        lifePokemonsPlayer2.put(namePokemon, life);
-    }
-
-    public static HashMap<String, Integer> getLifePokemonsPlayer2() {
-        return lifePokemonsPlayer2;
     }
 
     //--------------------------------------------------------------------------//
@@ -619,11 +616,28 @@ public class MethodsBattlePokemon {
         }
     }
 
+    /**
+     * metodo para saber si el equipo de pokemons del jugador 2 está vivo
+     * @return si está vivo o no
+     */
     public static boolean isTeamPokemonAlivePlayer2(){
         return MethodsBattlePokemon.getLifePokemonsPlayer2().get(MethodsTextAreaBattlePlayer2.getNamePokemon1ToChangePLayer2()) <= 0 &&
                 MethodsBattlePokemon.getLifePokemonsPlayer2().get(MethodsTextAreaBattlePlayer2.getNamePokemon2ToChangePLayer2()) <= 0 &&
                 MethodsBattlePokemon.getLifePokemonsPlayer2().get(MethodsTextAreaBattlePlayer2.getNamePokemon3ToChangePLayer2()) <= 0;
     }
+    /**
+     * metodo para poner valores al hashmap de la vida de los pokemons del jugador 2
+     * @param namePokemon nombre de los pokemons del jugador 2
+     * @param life vida de los pokemons del jugador 2
+     */
+    public static void putValuesLifePokemonsPlayer2(String namePokemon, int life){
+        lifePokemonsPlayer2.put(namePokemon, life);
+    }
+
+    public static HashMap<String, Integer> getLifePokemonsPlayer2() {
+        return lifePokemonsPlayer2;
+    }
+
     //--------------------------------------------------------------------------//
 
 //----------------------------Ambos jugadores-----------------------------------//
