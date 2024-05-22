@@ -330,9 +330,9 @@ public class MethodsBattlePokemon {
     }
     public static boolean isTeamPokemonAlivePlayer1(){
         boolean marca = false;
-        if(ButtonInterfaceChangePokemonPlayer1.getPokemon1team().isEnabled() &&
-                ButtonInterfaceChangePokemonPlayer1.getPokemon2team().isEnabled() &&
-                ButtonInterfaceChangePokemonPlayer1.getPokemon3team().isEnabled()){
+        if(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1ToChangePLayer1()) > 0 &&
+                MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon2ToChangePLayer1()) > 0 &&
+                MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon3ToChangePLayer1()) > 0){
             marca = true;
         }
         return marca;
