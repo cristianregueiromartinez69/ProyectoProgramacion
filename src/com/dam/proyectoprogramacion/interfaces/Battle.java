@@ -612,7 +612,7 @@ public class Battle extends JFrame {
     /**
      * metodo para atacar y hacer visivle el panel de atacar y cambio e invisible el de ataques del jugador 1
      */
-    private static void clearGlobalPanelPlayer1WhenPressAttack1Buttons(){
+    private void clearGlobalPanelPlayer1WhenPressAttack1Buttons(){
 
 
             attacksPanelPlayer1.setVisible(false);
@@ -648,7 +648,7 @@ public class Battle extends JFrame {
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
 
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
-
+            dispose();
             new HallOfFame();
         }
         /**
@@ -676,7 +676,7 @@ public class Battle extends JFrame {
     /**
      * metodo para atacar y hacer visible el panel de atacar y cambio e invisible el de ataques del jugador 1
      */
-    private static void clearGlobalPanelPlayer1WhenPressAttack2Buttons(){
+    private void clearGlobalPanelPlayer1WhenPressAttack2Buttons(){
 
 
             attacksPanelPlayer1.setVisible(false);
@@ -713,7 +713,7 @@ public class Battle extends JFrame {
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
 
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
-
+            dispose();
             new HallOfFame();
         }
 
@@ -742,7 +742,7 @@ public class Battle extends JFrame {
     /**
      * metodo para atacar y hacer visible el panel de atacar y cambio e invisible el de ataques del jugador 1
      */
-    private static void clearGlobalPanelPlayer1WhenPressAttack3Buttons(){
+    private void clearGlobalPanelPlayer1WhenPressAttack3Buttons(){
 
             attacksPanelPlayer1.setVisible(false);
             attacksChangesPokemon1Player1.setVisible(true);
@@ -777,7 +777,7 @@ public class Battle extends JFrame {
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
 
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
-
+            dispose();
             new HallOfFame();
         }
 
@@ -801,7 +801,7 @@ public class Battle extends JFrame {
             }
 
     }
-    private static void clearGlobalPanelPlayer1WhenPressAttack4Buttons(){
+    private void clearGlobalPanelPlayer1WhenPressAttack4Buttons(){
 
             attacksPanelPlayer1.setVisible(false);
             attacksChangesPokemon1Player1.setVisible(true);
@@ -833,7 +833,7 @@ public class Battle extends JFrame {
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
 
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
-
+            dispose();
             new HallOfFame();
         }
 
@@ -1176,7 +1176,7 @@ public class Battle extends JFrame {
     /**
      * metodo para atacar y hacer visivle el panel de atacar y cambio e invisible el de ataques del jugador 2
      */
-    private static void clearGlobalPanelPlayer2WhenPressAttack1Buttons(){
+    private void clearGlobalPanelPlayer2WhenPressAttack1Buttons(){
             attacksPanelPlayer2.setVisible(false);
             attacksChangesPokemon1Player2.setVisible(true);
 
@@ -1211,6 +1211,7 @@ public class Battle extends JFrame {
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
 
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
+            dispose();
             new HallOfFame();
         }
 
@@ -1237,7 +1238,7 @@ public class Battle extends JFrame {
     /**
      * metodo para atacar y hacer visible el panel de atacar y cambio e invisible el de ataques del jugador 2
      */
-    private static void clearGlobalPanelPlayer2WhenPressAttack2Buttons(){
+    private void clearGlobalPanelPlayer2WhenPressAttack2Buttons(){
             attacksPanelPlayer2.setVisible(false);
             attacksChangesPokemon1Player2.setVisible(true);
 
@@ -1273,6 +1274,7 @@ public class Battle extends JFrame {
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
 
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
+            dispose();
             new HallOfFame();
         }
         /**
@@ -1298,7 +1300,7 @@ public class Battle extends JFrame {
     /**
      * metodo para atacar y hacer visible el panel de atacar y cambio e invisible el de ataques del jugador 2
      */
-    private static void clearGlobalPanelPlayer2WhenPressAttack3Buttons(){
+    private void clearGlobalPanelPlayer2WhenPressAttack3Buttons(){
             attacksPanelPlayer2.setVisible(false);
             attacksChangesPokemon1Player2.setVisible(true);
             /**
@@ -1333,6 +1335,7 @@ public class Battle extends JFrame {
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
 
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
+            dispose();
             new HallOfFame();
         }
         /**
@@ -1360,7 +1363,7 @@ public class Battle extends JFrame {
     /**
      * metodo para atacar y hacer visible el panel de atacar y cambio e invisible el de ataques del jugador 2
      */
-    private static void clearGlobalPanelPlayer2WhenPressAttack4Buttons(){
+    private void clearGlobalPanelPlayer2WhenPressAttack4Buttons(){
             attacksPanelPlayer2.setVisible(false);
             attacksChangesPokemon1Player2.setVisible(true);
 
@@ -1396,6 +1399,7 @@ public class Battle extends JFrame {
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
 
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
+            dispose();
             new HallOfFame();
         }
         /**
