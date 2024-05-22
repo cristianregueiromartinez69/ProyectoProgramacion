@@ -1,6 +1,8 @@
 package com.dam.proyectoprogramacion.panels.battle.battleplayer2;
 
 import javax.swing.*;
+
+import com.dam.proyectoprogramacion.Songs.LifeRedPokemonInBattleSong;
 import com.dam.proyectoprogramacion.methods.battle.*;
 
 import java.awt.*;
@@ -81,20 +83,24 @@ public class LifePokemonInBattlePlayer2 extends JPanel {
             /**
              * si la vida es 0, el color será negro
              */
+            LifeRedPokemonInBattleSong.stopMusic();
             return Color.BLACK;
         }
         if (value <= lifePokemonBarPlayer2.getMaximum() * 0.2) {
             /**
              * si tiene menos de un 20%, será roja
              */
+            LifeRedPokemonInBattleSong.musicLifeRed();
             return Color.RED;
         }
         if (value <= lifePokemonBarPlayer2.getMaximum() * 0.5) {
             /**
              * si tiene la menos de la mitad, será amarilla
              */
+            LifeRedPokemonInBattleSong.stopMusic();
             return Color.YELLOW;
         }
+        LifeRedPokemonInBattleSong.stopMusic();
         return Color.GREEN;
     }
 

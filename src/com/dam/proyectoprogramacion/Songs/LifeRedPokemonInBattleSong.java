@@ -4,8 +4,16 @@ import javax.sound.sampled.*;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * clase con la musica de la batalla del juego cuando un pokemon tiene vida mayor que 0 y menor del 20%
+ * @author cristian & chema
+ * @version v4.0
+ */
 public class LifeRedPokemonInBattleSong {
 
+    /**
+     * atributo privado de la clase
+     */
     private static Clip clip;
 
     public static void musicLifeRed() {
@@ -27,6 +35,8 @@ public class LifeRedPokemonInBattleSong {
              */
              clip = (Clip) AudioSystem.getLine(info);
             clip.open(audioStream);
+            clip.loop(Clip.LOOP_CONTINUOUSLY);
+
 
             /**
              * / Reproducir el audio en bucle infinito
@@ -42,6 +52,9 @@ public class LifeRedPokemonInBattleSong {
             e.printStackTrace();
         }
     }
+    /**
+     * metodo para parar la musica
+     */
     public static void stopMusic() {
         if (clip != null && clip.isOpen()) {
             clip.stop();
