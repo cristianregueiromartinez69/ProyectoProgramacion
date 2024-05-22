@@ -404,6 +404,7 @@ public class Battle extends JFrame {
 
 
 
+
         //---------------------------Botones del jugador 2----------------------//
 
         /**
