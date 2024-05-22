@@ -650,6 +650,7 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
 
+
         /**
          * si el pokemon del jugador 2 muere tendrá que ser forzado a cambiar de pokemon
          */
@@ -659,7 +660,9 @@ public class Battle extends JFrame {
 
         }
 
-
+        if(!MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
+            new HallOfFame();
+        }
         /**
          * cambiamos los turnos de los jugadores
          */
@@ -711,6 +714,7 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
 
+
         /**
          * si el pokemon del jugador 2 muere tendrá que ser forzado a cambiar de pokemon
          */
@@ -718,6 +722,9 @@ public class Battle extends JFrame {
             MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer2();
             MethodsBattlePokemon.setTurnsToCombat(1);
 
+        }
+        if(!MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
+            new HallOfFame();
         }
 
         /**
@@ -770,6 +777,7 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
 
+
         /**
          * si el pokemon del jugador 2 muere tendrá que ser forzado a cambiar de pokemon
          */
@@ -777,6 +785,9 @@ public class Battle extends JFrame {
             MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer2();
             MethodsBattlePokemon.setTurnsToCombat(1);
 
+        }
+        if(!MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
+            new HallOfFame();
         }
         /**
          * cambiamos los turnos de los jugadores
@@ -820,6 +831,7 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer2.getLifePokemonBarPlayer2().repaint();
 
+
         /**
          * si el pokemon del jugador 2 muere tendrá que ser forzado a cambiar de pokemon
          */
@@ -827,6 +839,9 @@ public class Battle extends JFrame {
             MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer2();
             MethodsBattlePokemon.setTurnsToCombat(1);
 
+        }
+        if(!MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
+            new HallOfFame();
         }
             /**
              * cambiamos los turnos de los jugadores
@@ -1192,12 +1207,16 @@ public class Battle extends JFrame {
          */
         LifePokemonInBattlePlayer1.getLifePokemonBarPlayer1().repaint();
 
+
         /**
          * si el pokemon muere, se cambia de pokemon
          */
         if(!MethodsBattlePokemon.isPokemonAlivePlayer1(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()))){
             MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer1();
             MethodsBattlePokemon.setTurnsToCombat(1);
+        }
+        if(!MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
+            new HallOfFame();
         }
         /**
          * cambiamos los turnos de los jugadores
@@ -1258,6 +1277,9 @@ public class Battle extends JFrame {
             MethodsBattlePokemon.setTurnsToCombat(1);
 
         }
+        if(!MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
+            new HallOfFame();
+        }
         /**
          * cambiamos los turnos de los jugadores
          */
@@ -1314,6 +1336,9 @@ public class Battle extends JFrame {
             MethodsBattlePokemon.setTurnsToCombat(1);
 
         }
+        if(!MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
+            new HallOfFame();
+        }
         /**
          * cambiamos los turnos de los jugadores
          */
@@ -1369,6 +1394,9 @@ public class Battle extends JFrame {
         if(!MethodsBattlePokemon.isPokemonAlivePlayer1(MethodsBattlePokemon.getLifePokemonsPlayer1().get(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()))){
             MethodsBattlePokemon.changePokemonWhenDiesPokemonInBattlePlayer1();
             MethodsBattlePokemon.setTurnsToCombat(1);
+        }
+        if(!MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
+            new HallOfFame();
         }
 
         /**
