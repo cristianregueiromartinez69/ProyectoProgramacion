@@ -328,6 +328,15 @@ public class MethodsBattlePokemon {
             }
         }
     }
+    public static boolean isTeamPokemonAlivePlayer1(){
+        boolean marca = false;
+        if(ButtonInterfaceChangePokemonPlayer1.getPokemon1team().isEnabled() &&
+                ButtonInterfaceChangePokemonPlayer1.getPokemon2team().isEnabled() &&
+                ButtonInterfaceChangePokemonPlayer1.getPokemon3team().isEnabled()){
+            marca = true;
+        }
+        return marca;
+    }
     /**
      * metodo para poner valores al hashmap de la vida de los pokemons del jugador 1
      * @param namePokemon nombre de los pokemons del jugador 1
@@ -618,11 +627,11 @@ public class MethodsBattlePokemon {
         }
     }
 
-    public static boolean isTeamPokemonAlivePlayer1(){
+    public static boolean isTeamPokemonAlivePlayer2(){
         boolean marca = false;
-        if(ButtonInterfaceChangePokemonPlayer1.getPokemon1team().isEnabled() &&
-                ButtonInterfaceChangePokemonPlayer1.getPokemon2team().isEnabled() &&
-                ButtonInterfaceChangePokemonPlayer1.getPokemon3team().isEnabled()){
+        if(ButtonInterfaceChangePokemonPlayer2.getPokemon1team().isEnabled() &&
+                ButtonInterfaceChangePokemonPlayer2.getPokemon2team().isEnabled() &&
+                ButtonInterfaceChangePokemonPlayer2.getPokemon3team().isEnabled()){
             marca = true;
         }
         return marca;
