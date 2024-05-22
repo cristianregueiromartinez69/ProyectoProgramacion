@@ -220,11 +220,7 @@ public class Battle extends JFrame {
          */
         battlePanel.add(new PanelImageBattlePokemon());
 
-        /**
-         * iniciamos el panel de final de batalla
-         */
-        finishBattlePanel = new JPanel();
-        finishBattlePanel.add(new PanelImageFinishBattle());
+
 
 
 
