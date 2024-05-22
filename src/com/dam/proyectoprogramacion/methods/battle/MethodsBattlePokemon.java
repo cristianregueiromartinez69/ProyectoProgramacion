@@ -618,6 +618,16 @@ public class MethodsBattlePokemon {
         }
     }
 
+    public static boolean isTeamPokemonAlivePlayer1(){
+        boolean marca = false;
+        if(ButtonInterfaceChangePokemonPlayer1.getPokemon1team().isEnabled() &&
+                ButtonInterfaceChangePokemonPlayer1.getPokemon2team().isEnabled() &&
+                ButtonInterfaceChangePokemonPlayer1.getPokemon3team().isEnabled()){
+            marca = true;
+        }
+        return marca;
+    }
+
     //--------------------------------------------------------------------------//
 
 //----------------------------Ambos jugadores-----------------------------------//
