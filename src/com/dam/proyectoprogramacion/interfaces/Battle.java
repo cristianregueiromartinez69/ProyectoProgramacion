@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import com.dam.proyectoprogramacion.Songs.HallOfFameSong;
 import com.dam.proyectoprogramacion.Songs.MusicBattleGame;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceAttacks;
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceChangePokemonPlayer1;
@@ -653,7 +654,7 @@ public class Battle extends JFrame {
          */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
             MusicBattleGame.stopMusic();
-
+            HallOfFameSong.hallOfFameMusic();
             dispose();
             new HallOfFame();
 
@@ -724,6 +725,7 @@ public class Battle extends JFrame {
          */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
             MusicBattleGame.stopMusic();
+            HallOfFameSong.hallOfFameMusic();
             dispose();
             new HallOfFame();
         }
@@ -792,6 +794,7 @@ public class Battle extends JFrame {
          */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
             MusicBattleGame.stopMusic();
+            HallOfFameSong.hallOfFameMusic();
             dispose();
             new HallOfFame();
         }
@@ -852,6 +855,7 @@ public class Battle extends JFrame {
          */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer2()){
             MusicBattleGame.stopMusic();
+            HallOfFameSong.hallOfFameMusic();
             dispose();
             new HallOfFame();
         }
@@ -1234,6 +1238,7 @@ public class Battle extends JFrame {
          */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
             MusicBattleGame.stopMusic();
+            HallOfFameSong.hallOfFameMusic();
             dispose();
             new HallOfFame();
         }
@@ -1301,6 +1306,7 @@ public class Battle extends JFrame {
          */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
             MusicBattleGame.stopMusic();
+            HallOfFameSong.hallOfFameMusic();
             dispose();
             new HallOfFame();
         }
@@ -1366,6 +1372,7 @@ public class Battle extends JFrame {
          */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
             MusicBattleGame.stopMusic();
+            HallOfFameSong.hallOfFameMusic();
             dispose();
             new HallOfFame();
         }
@@ -1434,6 +1441,7 @@ public class Battle extends JFrame {
          */
         if(MethodsBattlePokemon.isTeamPokemonAlivePlayer1()){
             MusicBattleGame.stopMusic();
+            HallOfFameSong.hallOfFameMusic();
             dispose();
             new HallOfFame();
         }
