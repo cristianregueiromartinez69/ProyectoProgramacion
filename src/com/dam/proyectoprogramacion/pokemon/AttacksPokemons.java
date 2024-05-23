@@ -14,6 +14,10 @@ public class AttacksPokemons {
         this.precision = precision;
     }
 
+    /**
+     * Devuelve un array con todos los ataques posibles
+     * @return String[]
+     */
     public static String [] allAttacks(){
         return new String[]{"pulso dragon", "hiperrayo", "viento hielo", "rayo",
         "envite acuatico", "garra metal", "acua jet", "salmuera",

@@ -6,10 +6,18 @@ import com.dam.proyectoprogramacion.pokemon.Tyranitar;
 import javax.sound.sampled.*;
 import java.io.File;
 import java.io.IOException;
-
+/**
+ * Clase que contiene los métodos de las canciones de los pokemons en batalla
+ * @author cristian
+ * @version v4.0
+ */
 public class MethodsSongBattle {
 
 
+    /**
+     * Método que reproduce la canción del pokemon en batalla
+     * @param name nombre del pokemon que sale a la batalla
+     */
     public static void PutPokemonSoundOnExitAndChangeInBattle(String name){
         name = name.toLowerCase();
         switch (name){
