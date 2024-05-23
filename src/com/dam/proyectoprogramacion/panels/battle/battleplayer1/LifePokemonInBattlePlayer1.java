@@ -106,24 +106,20 @@ public class LifePokemonInBattlePlayer1 extends JPanel {
             /**
              * si la vida es 0, el color será negro
              */
-            MethodsSongBattle.stopMusic();
             return Color.BLACK;
         }
         if (value <= lifePokemonBarPlayer1.getMaximum() * 0.2) {
             /**
              * si tiene menos de un 20%, será roja
              */
-            MethodsSongBattle.musicLifeRed();
             return Color.RED;
         }
         if (value <= lifePokemonBarPlayer1.getMaximum() * 0.5) {
             /**
              * si tiene la menos de la mitad, será amarilla
              */
-            MethodsSongBattle.stopMusic();
             return Color.YELLOW;
         }
-        MethodsSongBattle.stopMusic();
         return Color.GREEN;
     }
 
