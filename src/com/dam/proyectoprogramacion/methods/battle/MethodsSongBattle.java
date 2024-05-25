@@ -64,139 +64,138 @@ public class MethodsSongBattle {
      * @param nameAttack nombre del ataque que hace el pokemon
      */
     public static void putSongAttackPokemonsInBattle(String nameAttack){
-        nameAttack = nameAttack.toLowerCase();
         switch(nameAttack){
 
-            case "a bocajarro":
+            case "A Bocajarro":
                 AttacksSongs.musicCloseCombat();
                 break;
-            case "acróbata":
+            case "Acróbata":
                 AttacksSongs.musicAcrobatics();
                 break;
-            case "acua jet":
+            case "Acua Jet":
                 AttacksSongs.musicAquaJet();
                 break;
-            case "ataque oseo":
+            case "Ataque Oseo":
                 AttacksSongs.musicBoneRush();
                 break;
-            case  "avalancha":
+            case  "Avalancha":
                 AttacksSongs.musicRockSlide();
                 break;
-            case "bola sombra":
+            case "Bola Sombra":
                 AttacksSongs.musicShadowBall();
                 break;
-            case "bomba ácida":
+            case "Bomba Ácida":
                 AttacksSongs.musicAcidSpray();
                 break;
-            case "carga tóxica":
+            case "Carga Tóxica":
                 AttacksSongs.musicVenoshock();
                 break;
-            case "cola dragon":
+            case "Cola Dragon":
                 AttacksSongs.musicDragonTail();
                 break;
-            case "colmillo rayo":
+            case "Colmillo Rayo":
                 AttacksSongs.musicThunderFang();
                 break;
-            case "desarme":
+            case "Desarme":
                 AttacksSongs.musicKnockOff();
                 break;
-            case "enfado":
+            case "Enfado":
                 AttacksSongs.musicOutrage();
                 break;
-            case "envite acuático":
+            case "Envite Acuático":
                 AttacksSongs.musicWaveCrash();
                 break;
-            case "envite ígneo":
+            case "Envite Ígneo":
                 AttacksSongs.musicFlareBlitz();
                 break;
-            case "esfera aural":
+            case "Esfera Aural":
                 AttacksSongs.musicAuraSphere();
                 break;
-            case "fuerza equina":
+            case "Fuerza Equina":
                 AttacksSongs.musicHighHorsePower();
                 break;
-            case "garra dragon":
+            case "Garra Dragon":
                 AttacksSongs.musicDragonClaw();
                 break;
-            case "garra metal":
+            case "Garra Metal":
                 AttacksSongs.musicMetalClaw();
                 break;
-            case "gigaimpacto":
+            case "Gigaimpacto":
                 AttacksSongs.musicGigaImpact();
                 break;
-            case "golpe bajo":
+            case "Golpe Bajo":
                 AttacksSongs.musicSuckerPunch();
                 break;
-            case "golpe cuerpo":
+            case "Golpe Cuerpo":
                 AttacksSongs.musicBodySlam();
                 break;
-            case "hidrobomba":
+            case "Hidrobomba":
                 AttacksSongs.musicHidroPump();
                 break;
-            case "hiperrayo":
+            case "Hiperrayo":
                 AttacksSongs.musicHyperBean();
                 break;
-            case "machada":
+            case "Machada":
                 AttacksSongs.musicHammerArm();
                 break;
-            case "martillo colosal":
+            case "Martillo Colosal":
                 AttacksSongs.musicGigantonHammer();
                 break;
-            case "martillo de hielo":
+            case "Martillo de Hielo":
                 AttacksSongs.musicIceHammer();
                 break;
-            case "mordisco", "triturar":
+            case "Mordisco", "Triturar":
                 AttacksSongs.musicBite();
                 break;
-            case "onda vacío":
+            case "Onda Vacío":
                 AttacksSongs.musicVacuumWave();
                 break;
-            case "pataleta":
+            case "Pataleta":
                 AttacksSongs.musicStompingTantrum();
                 break;
-            case "psiococolmillo":
+            case "Psicocolmillo":
                 AttacksSongs.musicPsychicFangs();
                 break;
-            case "pulso dragon":
+            case "Pulso Dragon":
                 AttacksSongs.musicDragonPulse();
                 break;
-            case "pulso umbrío":
+            case "Pulso Umbrío":
                 AttacksSongs.musicDarkPulse();
                 break;
-            case "puño sombraa":
+            case "Puño Sombraa":
                 AttacksSongs.musicShadowPunch();
                 break;
-            case "puño trueno":
+            case "Puño Trueno":
                 AttacksSongs.musicThunderPunch();
                 break;
-            case "rayo hielo":
+            case "Rayo Hielo":
                 AttacksSongs.musicIceBeam();
                 break;
-            case "rayo":
+            case "Rayo":
                 AttacksSongs.musicThunderbolt();
                 break;
-            case "roca afilada":
+            case "Roca Afilada":
                 AttacksSongs.musicStoneEdge();
                 break;
-            case "salmuera":
+            case "Salmuera":
                 AttacksSongs.musicBrine();
                 break;
-            case "sorpresa":
+            case "Sorpresa":
                 AttacksSongs.musicFakeOut();
                 break;
-            case "surf":
+            case "Surf":
                 AttacksSongs.musicSurf();
                 break;
-            case "terremoto":
+            case "Terremoto":
                 AttacksSongs.musicEarthQuake();
                 break;
-            case "ultra puño":
+            case "Ultrapuño":
                 AttacksSongs.musicMachPunch();
                 break;
-            case "viento hielo":
+            case "Viento Hielo":
                 AttacksSongs.musicIceWind();
                 break;
-            case "voltio cruel":
+            case "Voltio Cruel":
                 AttacksSongs.musicWildCharge();
                 break;
             default:
