@@ -10,7 +10,7 @@ public class ProbandoBotonesPaneles extends JFrame {
     public static void musicprueba() {
         try {
             // Cargar el archivo de audio
-            File audioFile = new File("canciones/gigaimpactosonido.wav");
+            File audioFile = new File("canciones/golpecuerposonido.wav");
             if (!audioFile.exists()) {
                 System.err.println("El archivo de audio no existe: " + audioFile.getAbsolutePath());
                 return;
