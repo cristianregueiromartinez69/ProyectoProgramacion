@@ -70,7 +70,7 @@ public class MethodsSongBattle {
             case "a bocajarro":
                 AttacksSongs.musicCloseCombat();
                 break;
-            case "acrobata":
+            case "acróbata":
                 AttacksSongs.musicAcrobatics();
                 break;
             case "acua jet":
@@ -85,10 +85,10 @@ public class MethodsSongBattle {
             case "bola sombra":
                 AttacksSongs.musicShadowBall();
                 break;
-            case "bomba acida":
+            case "bomba ácida":
                 AttacksSongs.musicAcidSpray();
                 break;
-            case "carga toxica":
+            case "carga tóxica":
                 AttacksSongs.musicVenoshock();
                 break;
             case "cola dragon":
@@ -103,10 +103,10 @@ public class MethodsSongBattle {
             case "enfado":
                 AttacksSongs.musicOutrage();
                 break;
-            case "envite acuatico":
+            case "envite acuático":
                 AttacksSongs.musicWaveCrash();
                 break;
-            case "envite igneo":
+            case "envite ígneo":
                 AttacksSongs.musicFlareBlitz();
                 break;
             case "esfera aural":
@@ -148,7 +148,7 @@ public class MethodsSongBattle {
             case "mordisco", "triturar":
                 AttacksSongs.musicBite();
                 break;
-            case "onda vacio":
+            case "onda vacío":
                 AttacksSongs.musicVacuumWave();
                 break;
             case "pataleta":
@@ -160,10 +160,10 @@ public class MethodsSongBattle {
             case "pulso dragon":
                 AttacksSongs.musicDragonPulse();
                 break;
-            case "pulso umbrio":
+            case "pulso umbrío":
                 AttacksSongs.musicDarkPulse();
                 break;
-            case "puño sombra":
+            case "puño sombraa":
                 AttacksSongs.musicShadowPunch();
                 break;
             case "puño trueno":
