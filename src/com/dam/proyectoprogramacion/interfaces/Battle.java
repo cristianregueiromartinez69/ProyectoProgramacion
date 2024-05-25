@@ -627,6 +627,7 @@ public class Battle extends JFrame {
                     MethodsBattlePlayer1.getAmountAttackPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
                     MethodsBattlePlayer1.getPowerAttack1PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
                     MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(), MethodsBattlePlayer1.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()));
+            MethodsSongBattle.putSongAttackPokemonsInBattle(ButtonInterfaceAttacks.getAttack1Player1().getText());
 
             /**
              * llamamos al hashmap para recoger la vida del pokemon en batalla
@@ -688,6 +689,7 @@ public class Battle extends JFrame {
                 MethodsBattlePlayer1.getAmountAttackPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
                 MethodsBattlePlayer1.getPowerAttack2PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
                 MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(), MethodsBattlePlayer1.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()));
+        MethodsSongBattle.putSongAttackPokemonsInBattle(ButtonInterfaceAttacks.getAttack2PLayer1().getText());
 
         /**
          * llamamos al hashmap para recoger la vida del pokemon en batalla
@@ -748,6 +750,7 @@ public class Battle extends JFrame {
                 MethodsBattlePlayer1.getAmountAttackPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
                 MethodsBattlePlayer1.getPowerAttack3PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
                 MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(), MethodsBattlePlayer1.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()));
+        MethodsSongBattle.putSongAttackPokemonsInBattle(ButtonInterfaceAttacks.getAttack3Player1().getText());
 
         /**
          * llamamos al hashmap para recoger la vida del pokemon en batalla
@@ -801,6 +804,9 @@ public class Battle extends JFrame {
                 MethodsBattlePlayer1.getAmountAttackPokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
                 MethodsBattlePlayer1.getPowerAttack4PokemonInBattlePlayer1(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()),
                 MethodsTextAreaBattlePlayer2.getTypePokemonInBattlePlayer2(), MethodsBattlePlayer1.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()));
+
+        MethodsSongBattle.putSongAttackPokemonsInBattle(ButtonInterfaceAttacks.getAttack4Player1().getText());
+
         /**
          * llamamos al hashmap para recoger la vida del pokemon en batalla
          */
@@ -1175,6 +1181,8 @@ public class Battle extends JFrame {
                     MethodsBattlePlayer2.getPowerAttack1PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
                     MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(), MethodsBattlePlayer2.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
 
+                    MethodsSongBattle.putSongAttackPokemonsInBattle(ButtonInterfaceAttacks.getAttack1Player2().getText());
+
         /**
          * llamamos al hashmap para recoger la vida del pokemon en batalla
          */
@@ -1231,6 +1239,7 @@ public class Battle extends JFrame {
                 MethodsBattlePlayer2.getPowerAttack2PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
                 MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(), MethodsBattlePlayer2.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
 
+                MethodsSongBattle.putSongAttackPokemonsInBattle(ButtonInterfaceAttacks.getAttack2PLayer2().getText());
 
         /**
          * llamamos al hashmap para recoger la vida del pokemon en batalla
@@ -1287,6 +1296,8 @@ public class Battle extends JFrame {
                 MethodsBattlePlayer2.getAmountAttackPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
                 MethodsBattlePlayer2.getPowerAttack3PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
                 MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(), MethodsBattlePlayer2.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
+
+                MethodsSongBattle.putSongAttackPokemonsInBattle(ButtonInterfaceAttacks.getAttack3Player2().getText());
 
 
         /**
@@ -1346,6 +1357,8 @@ public class Battle extends JFrame {
                 MethodsBattlePlayer2.getAmountAttackPokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
                 MethodsBattlePlayer2.getPowerAttack4PokemonInBattlePlayer2(MethodsTextAreaBattlePlayer2.getNamePokemon1PLayer2()),
                 MethodsTextAreaBattlePlayer1.getTypePokemonInBattlePlayer1(), MethodsBattlePlayer2.getDefenseOpposingPokemonInBattle(MethodsTextAreaBattlePlayer1.getNamePokemon1PLayer1()));
+
+                MethodsSongBattle.putSongAttackPokemonsInBattle(ButtonInterfaceAttacks.getAttack4Player2().getText());
 
 
         /**

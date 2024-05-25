@@ -59,6 +59,10 @@ public class MethodsSongBattle {
                 break;
         }
     }
+    /**
+     * Método que reproduce la canción del ataque en batalla
+     * @param nameAttack nombre del ataque que hace el pokemon
+     */
     public static void putSongAttackPokemonsInBattle(String nameAttack){
         nameAttack = nameAttack.toLowerCase();
         switch(nameAttack){
@@ -197,23 +201,7 @@ public class MethodsSongBattle {
                 break;
             default:
                 AttacksSongs.musicMetalClaw();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                break;
         }
 
     }
