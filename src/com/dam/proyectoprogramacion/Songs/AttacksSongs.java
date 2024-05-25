@@ -304,4 +304,263 @@ public class AttacksSongs {
             e.printStackTrace();
         }
     }
+    /**
+     * metodo que reproduce la musica del ataque de cola dragon
+     */
+    public static void musicDragonTail() {
+        try {
+            /**
+             * Cargar el archivo de audio
+             */
+            File audioFile = new File("canciones/coladragonsonido.wav");
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
+
+            /**
+             *  Obtener el formato de audio
+             */
+            AudioFormat format = audioStream.getFormat();
+            DataLine.Info info = new DataLine.Info(Clip.class, format);
+
+            /**
+             * / Abrir el clip
+             */
+            Clip clip = (Clip) AudioSystem.getLine(info);
+            clip.open(audioStream);
+
+            /**
+             * / Reproducir el audio
+             */
+            clip.start();
+
+
+
+            /**
+             * capturamos la excepcion en caso de que no se reproduzca la musica
+             */
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            e.printStackTrace();
+        }
+    }
+    /**
+     * metodo que reproduce la musica del ataque de colmillo rayo
+     */
+    public static void musicThunderFang() {
+        try {
+            /**
+             * Cargar el archivo de audio
+             */
+            File audioFile = new File("canciones/colmillorayosonido.wav");
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
+
+            /**
+             *  Obtener el formato de audio
+             */
+            AudioFormat format = audioStream.getFormat();
+            DataLine.Info info = new DataLine.Info(Clip.class, format);
+
+            /**
+             * / Abrir el clip
+             */
+            Clip clip = (Clip) AudioSystem.getLine(info);
+            clip.open(audioStream);
+
+            /**
+             * / Reproducir el audio
+             */
+            clip.start();
+
+
+
+            /**
+             * capturamos la excepcion en caso de que no se reproduzca la musica
+             */
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            e.printStackTrace();
+        }
+    }
+    /**
+     * metodo que reproduce la musica del ataque de desarme
+     */
+    public static void musicKnockOff() {
+        try {
+            /**
+             * Cargar el archivo de audio
+             */
+            File audioFile = new File("canciones/desarmesonido.wav");
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
+
+            /**
+             *  Obtener el formato de audio
+             */
+            AudioFormat format = audioStream.getFormat();
+            DataLine.Info info = new DataLine.Info(Clip.class, format);
+
+            /**
+             * / Abrir el clip
+             */
+            Clip clip = (Clip) AudioSystem.getLine(info);
+            clip.open(audioStream);
+
+            /**
+             * / Reproducir el audio
+             */
+            clip.start();
+
+
+
+            /**
+             * capturamos la excepcion en caso de que no se reproduzca la musica
+             */
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            e.printStackTrace();
+        }
+    }
+    /**
+     * metodo que reproduce la musica del ataque de enfado
+     */
+    public static void musicOutrage() {
+        try {
+            /**
+             * Cargar el archivo de audio
+             */
+            File audioFile = new File("canciones/enfadosonido.wav");
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
+
+            /**
+             *  Obtener el formato de audio
+             */
+            AudioFormat format = audioStream.getFormat();
+            DataLine.Info info = new DataLine.Info(Clip.class, format);
+
+            /**
+             * / Abrir el clip
+             */
+            Clip clip = (Clip) AudioSystem.getLine(info);
+            clip.open(audioStream);
+
+            /**
+             * / Reproducir el audio
+             */
+            clip.start();
+
+
+
+            /**
+             * capturamos la excepcion en caso de que no se reproduzca la musica
+             */
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            e.printStackTrace();
+        }
+    }
+    /**
+     * metodo que reproduce la musica del ataque de envite acuatico
+     */
+    public static void musicWaveCrash() {
+        try {
+            /**
+             * Cargar el archivo de audio
+             */
+            File audioFile = new File("canciones/enviteacuaticosonido.wav");
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
+
+            /**
+             *  Obtener el formato de audio
+             */
+            AudioFormat format = audioStream.getFormat();
+            DataLine.Info info = new DataLine.Info(Clip.class, format);
+
+            /**
+             * / Abrir el clip
+             */
+            Clip clip = (Clip) AudioSystem.getLine(info);
+            clip.open(audioStream);
+
+            /**
+             * / Reproducir el audio
+             */
+            clip.start();
+
+
+
+            /**
+             * capturamos la excepcion en caso de que no se reproduzca la musica
+             */
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            e.printStackTrace();
+        }
+    }
+    /**
+     * metodo que reproduce la musica del ataque de envite igneo
+     */
+    public static void musicFlareBlitz() {
+        try {
+            /**
+             * Cargar el archivo de audio
+             */
+            File audioFile = new File("canciones/enviteigneosonido.wav");
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
+
+            /**
+             *  Obtener el formato de audio
+             */
+            AudioFormat format = audioStream.getFormat();
+            DataLine.Info info = new DataLine.Info(Clip.class, format);
+
+            /**
+             * / Abrir el clip
+             */
+            Clip clip = (Clip) AudioSystem.getLine(info);
+            clip.open(audioStream);
+
+            /**
+             * / Reproducir el audio
+             */
+            clip.start();
+
+
+
+            /**
+             * capturamos la excepcion en caso de que no se reproduzca la musica
+             */
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            e.printStackTrace();
+        }
+    }
+    /**
+     * metodo que reproduce la musica del ataque de esfera aural
+     */
+    public static void musicAuraSphere() {
+        try {
+            /**
+             * Cargar el archivo de audio
+             */
+            File audioFile = new File("canciones/esferaauralsonido.wav");
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
+
+            /**
+             *  Obtener el formato de audio
+             */
+            AudioFormat format = audioStream.getFormat();
+            DataLine.Info info = new DataLine.Info(Clip.class, format);
+
+            /**
+             * / Abrir el clip
+             */
+            Clip clip = (Clip) AudioSystem.getLine(info);
+            clip.open(audioStream);
+
+            /**
+             * / Reproducir el audio
+             */
+            clip.start();
+
+
+
+            /**
+             * capturamos la excepcion en caso de que no se reproduzca la musica
+             */
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            e.printStackTrace();
+        }
+    }
     }
