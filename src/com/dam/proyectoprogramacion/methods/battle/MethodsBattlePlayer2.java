@@ -3306,6 +3306,48 @@ public class MethodsBattlePlayer2 {
          */
         return powerAttack4;
     }
+    /**
+     * metodo para saber la velocidad del pokemon en batalla del jugador 2
+     * @param namePokemon el nombre del pokemon en batalla
+     * @return el valor de la velocidad
+     */
+    public static int getSpeedPokemonInBattlePlayer2(String namePokemon) {
+
+        /**
+         * iniciamos la cantidad de ataque a 0
+         */
+        int speed = 0;
+
+        /**
+         * iniciamos un array de objetos igual a la lista de pokemons escogida por el jugador 2
+         */
+        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer2();
+
+        /**
+         * recorremos con un for el array de pokemons
+         */
+        for (int i = 0; i < pokemons.size(); i++) {
+
+            PokemonProperties pokemon = (PokemonProperties) pokemons.get(i);
+
+            /**
+             * si algun nombre coincide con el pokemon en batalla, entra en la condicion
+             */
+            if (pokemon.getName().equalsIgnoreCase(namePokemon)) {
+                /**
+                 * lo indicamos
+                 */
+                pokemon = (PokemonProperties) pokemons.get(i);
+
+                /**
+                 * asignamos la velocidad
+                 */
+                speed = pokemon.getSpeed();
+                break;
+            }
+        }
+        return speed;
+    }
 
     /**
      * metodo para obtener la defensa del pokemon rival en batalla

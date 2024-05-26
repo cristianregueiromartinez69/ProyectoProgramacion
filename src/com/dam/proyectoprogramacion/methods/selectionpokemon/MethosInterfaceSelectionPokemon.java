@@ -1,10 +1,13 @@
 package com.dam.proyectoprogramacion.methods.selectionpokemon;
 
 import com.dam.proyectoprogramacion.interfaces.SelectionPokemon;
+import com.dam.proyectoprogramacion.methods.battle.MethodsBattlePokemon;
 import com.dam.proyectoprogramacion.methods.luck.MethodsInterfaceLuck;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
 import com.dam.proyectoprogramacion.panels.selectionpokemon.*;
+import com.dam.proyectoprogramacion.pokemon.AttacksPokemons;
+import com.dam.proyectoprogramacion.pokemon.PokemonProperties;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -33,6 +36,23 @@ public class MethosInterfaceSelectionPokemon {
      */
     private static ArrayList <Object> pokemonsPLayer1 = new ArrayList<>();
     private static ArrayList <Object> pokemonsPLayer2 = new ArrayList<>();
+
+    /**
+     * atributos privados de tipo boolean para saber si el pokemon ha sido escogido
+     */
+    private static boolean wasDrampaChoosen = false;
+    private static boolean wasEmpoleonChoosen = false;
+    private static boolean wasGarchompChoosen = false;
+    private static boolean wasGengarChoosen = false;
+    private static boolean wasInfernapeChoosen = false;
+    private static boolean wasLucarioChoosen = false;
+    private static boolean wasLuxrayChoosen = false;
+    private static boolean wasMarshadowChoosen = false;
+    private static boolean wasMiloticChoosen = false;
+    private static boolean wasSnorlaxChoosen = false;
+    private static boolean wasTinkatonChoosen = false;
+    private static boolean wasTyranitarChoosen = false;
+
 
 
 
@@ -1389,31 +1409,81 @@ public class MethosInterfaceSelectionPokemon {
     }
 
     /**
-     * metodo que crea el panel de tick verde el jugador 1 cuando se han seleccionado 3 pokemons
-     * @return el panel creado
+     * metodo para añadir valores al hashmap de pokemons con vida  del jugador 1
+     * @return el alias del jugador 1
      */
-    public static JPanel makeTickReadyButtonPlayer1(){
-        JPanel imagePanel = new JPanel();
-        ImageIcon imageIcon = new ImageIcon("imagenes/tick.png");
-        JLabel imageLabel = new JLabel();
-        imageLabel.setIcon(imageIcon);
-        imagePanel.add(imageLabel);
-        return imagePanel;
+    public static void addLifePokemonsPlayer1(String aliasPlayer1){
+        /**
+         * recorremos el hashmap de los jugadores
+         */
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+            /**
+             * si el alias del jugador 1 coincide con la clave del hashmap de jugadores
+             * se mete en el codigo
+             */
+            if (key.equals(aliasPlayer1)) {
+
+                /**
+                 * si hay coincidencia, hacemos un arraylist de objetos igual al valor del hashmao
+                 */
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                if (!pokemons.isEmpty()) {
+
+                    /**
+                     * recorremos el arraylist de objetos
+                     */
+                    for (Object pokemon : pokemons) {
+                        PokemonProperties auxPokemons = (PokemonProperties) pokemon;
+                        /**
+                         * añadimos los valores al hashmap de los pokemons con vida
+                         */
+                        String namePokemon = auxPokemons.getName().toLowerCase();
+                        int lifePokemon = auxPokemons.getLife();
+                        MethodsBattlePokemon.putValuesLifePokemonsPlayer1(namePokemon, lifePokemon);
+                    }
+                    break;
+                }
+            }
+        }
     }
     /**
-     * metodo que crea el panel de tick verde el jugador 2 cuando se han seleccionado 3 pokemons
-     * @return el panel creado
+     * metodo para añadir valores al hashmap de pokemons con vida  del jugador 2
+     * @return el alias del jugador 2
      */
-    public static JPanel makeTickReadyButtonPlayer2(){
-        JPanel imagePanel = new JPanel();
-        ImageIcon imageIcon = new ImageIcon("imagenes/tick.png");
-        JLabel imageLabel = new JLabel();
-        imageLabel.setIcon(imageIcon);
-        imagePanel.add(imageLabel);
-        return imagePanel;
+    public static void addLifePokemonsPlayer2(String aliasPlayer2){
+        /**
+         * recorremos el hashmap de los jugadores
+         */
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+            /**
+             * si el alias del jugador 1 coincide con la clave del hashmap de jugadores
+             * se mete en el codigo
+             */
+            if (key.equals(aliasPlayer2)) {
+
+                /**
+                 * si hay coincidencia, hacemos un arraylist de objetos igual al valor del hashmao
+                 */
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                if (!pokemons.isEmpty()) {
+
+                    /**
+                     * recorremos el arraylist de objetos
+                     */
+                    for (Object pokemon : pokemons) {
+                        PokemonProperties auxPokemons = (PokemonProperties) pokemon;
+                        /**
+                         * añadimos los valores al hashmap de los pokemons con vida
+                         */
+                        String namePokemon = auxPokemons.getName().toLowerCase();
+                        int lifePokemon = auxPokemons.getLife();
+                        MethodsBattlePokemon.putValuesLifePokemonsPlayer2(namePokemon, lifePokemon);
+                    }
+                    break;
+                }
+            }
+        }
     }
-
-
     /**
      * metodo para añadir valores al hashmap de los participantes en la batalla pokemon
      * @param alias el alias del jugador
@@ -1519,5 +1589,109 @@ public class MethosInterfaceSelectionPokemon {
 
     public static HashMap<String, ArrayList<Object>> getPlayersBattle() {
         return playersBattle;
+    }
+
+    public static JPanel getPanelPokemonsPlayer1() {
+        return panelPokemonsPlayer1;
+    }
+
+    public static void setPanelPokemonsPlayer1(JPanel panelPokemonsPlayer1) {
+        MethosInterfaceSelectionPokemon.panelPokemonsPlayer1 = panelPokemonsPlayer1;
+    }
+
+    public static boolean isWasDrampaChoosen() {
+        return wasDrampaChoosen;
+    }
+
+    public static void setWasDrampaChoosen(boolean wasDrampaChoosen) {
+        MethosInterfaceSelectionPokemon.wasDrampaChoosen = wasDrampaChoosen;
+    }
+
+    public static boolean isWasEmpoleonChoosen() {
+        return wasEmpoleonChoosen;
+    }
+
+    public static void setWasEmpoleonChoosen(boolean wasEmpoleonChoosen) {
+        MethosInterfaceSelectionPokemon.wasEmpoleonChoosen = wasEmpoleonChoosen;
+    }
+
+    public static boolean isWasGarchompChoosen() {
+        return wasGarchompChoosen;
+    }
+
+    public static void setWasGarchompChoosen(boolean wasGarchompChoosen) {
+        MethosInterfaceSelectionPokemon.wasGarchompChoosen = wasGarchompChoosen;
+    }
+
+    public static boolean isWasGengarChoosen() {
+        return wasGengarChoosen;
+    }
+
+    public static void setWasGengarChoosen(boolean wasGengarChoosen) {
+        MethosInterfaceSelectionPokemon.wasGengarChoosen = wasGengarChoosen;
+    }
+
+    public static boolean isWasInfernapeChoosen() {
+        return wasInfernapeChoosen;
+    }
+
+    public static void setWasInfernapeChoosen(boolean wasInfernapeChoosen) {
+        MethosInterfaceSelectionPokemon.wasInfernapeChoosen = wasInfernapeChoosen;
+    }
+
+    public static boolean isWasLucarioChoosen() {
+        return wasLucarioChoosen;
+    }
+
+    public static void setWasLucarioChoosen(boolean wasLucarioChoosen) {
+        MethosInterfaceSelectionPokemon.wasLucarioChoosen = wasLucarioChoosen;
+    }
+
+    public static boolean isWasLuxrayChoosen() {
+        return wasLuxrayChoosen;
+    }
+
+    public static void setWasLuxrayChoosen(boolean wasLuxrayChoosen) {
+        MethosInterfaceSelectionPokemon.wasLuxrayChoosen = wasLuxrayChoosen;
+    }
+
+    public static boolean isWasMarshadowChoosen() {
+        return wasMarshadowChoosen;
+    }
+
+    public static void setWasMarshadowChoosen(boolean wasMarshadowChoosen) {
+        MethosInterfaceSelectionPokemon.wasMarshadowChoosen = wasMarshadowChoosen;
+    }
+
+    public static boolean isWasMiloticChoosen() {
+        return wasMiloticChoosen;
+    }
+
+    public static void setWasMiloticChoosen(boolean wasMiloticChoosen) {
+        MethosInterfaceSelectionPokemon.wasMiloticChoosen = wasMiloticChoosen;
+    }
+
+    public static boolean isWasSnorlaxChoosen() {
+        return wasSnorlaxChoosen;
+    }
+
+    public static void setWasSnorlaxChoosen(boolean wasSnorlaxChoosen) {
+        MethosInterfaceSelectionPokemon.wasSnorlaxChoosen = wasSnorlaxChoosen;
+    }
+
+    public static boolean isWasTinkatonChoosen() {
+        return wasTinkatonChoosen;
+    }
+
+    public static void setWasTinkatonChoosen(boolean wasTinkatonChoosen) {
+        MethosInterfaceSelectionPokemon.wasTinkatonChoosen = wasTinkatonChoosen;
+    }
+
+    public static boolean isWasTyranitarChoosen() {
+        return wasTyranitarChoosen;
+    }
+
+    public static void setWasTyranitarChoosen(boolean wasTyranitarChoosen) {
+        MethosInterfaceSelectionPokemon.wasTyranitarChoosen = wasTyranitarChoosen;
     }
 }

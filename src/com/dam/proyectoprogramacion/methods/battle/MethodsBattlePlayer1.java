@@ -2913,87 +2913,6 @@ public class MethodsBattlePlayer1 {
     //-------------------------comprobacion para no poder cambiar a un pokemon que ya está en batalla-------------------------//
 
 
-    /**
-     * metodo para saber si el pokemon que se intenta cambiar es el que ya está en batalla
-     * @return true si no lo es, false si lo es
-     */
-    public boolean checkingPokemonNamewithPokemonInBattlePokemon1(){
-        boolean marca = true;
-        /**
-         * iniciamos variables iguales al pokemon en batalla y al que quiere ser cambiado
-         */
-        String namePokemonInBattle = ButtonInterfaceCombat.getPathPokemonBattlePlayer1();
-        String namePokemonToChange1 = ButtonInterfaceChangePokemonPlayer1.getPokemon1team().getText();
-
-        /**
-         * tenemos que recortar uno de ellos ya que estamos cogiendo el path
-         */
-        int lastIndex = namePokemonInBattle.lastIndexOf('/');
-        String auxPokemonInBattle = namePokemonInBattle.substring(lastIndex + 1, namePokemonInBattle.lastIndexOf('.'));
-
-        /**
-         * si es igual, no se hará el cambio, si no lo es, se hará
-         */
-        if(namePokemonToChange1.equalsIgnoreCase(auxPokemonInBattle)){
-            marca = false;
-        }
-
-      return marca;
-    }
-    /**
-     * metodo para saber si el pokemon que se intenta cambiar es el que ya está en batalla
-     * @return true si no lo es, false si lo es
-     */
-    public boolean checkingPokemonNamewithPokemonInBattlePokemon2(){
-        boolean marca = true;
-        /**
-         * iniciamos variables iguales al pokemon en batalla y al que quiere ser cambiado
-         */
-        String namePokemonInBattle = ButtonInterfaceCombat.getPathPokemonBattlePlayer1();
-        String namePokemonToChange2 = ButtonInterfaceChangePokemonPlayer1.getPokemon2team().getText();
-
-        /**
-         * tenemos que recortar uno de ellos ya que estamos cogiendo el path
-         */
-        int lastIndex = namePokemonInBattle.lastIndexOf('/');
-        String auxPokemonInBattle = namePokemonInBattle.substring(lastIndex + 1, namePokemonInBattle.lastIndexOf('.'));
-
-        /**
-         * si es igual, no se hará el cambio, si no lo es, se hará
-         */
-        if(namePokemonToChange2.equalsIgnoreCase(auxPokemonInBattle)){
-            marca = false;
-        }
-
-        return marca;
-    }
-    /**
-     * metodo para saber si el pokemon que se intenta cambiar es el que ya está en batalla
-     * @return true si no lo es, false si lo es
-     */
-    public boolean checkingPokemonNamewithPokemonInBattlePokemon3(){
-        boolean marca = true;
-        /**
-         * iniciamos variables iguales al pokemon en batalla y al que quiere ser cambiado
-         */
-        String namePokemonInBattle = ButtonInterfaceCombat.getPathPokemonBattlePlayer1();
-        String namePokemonToChange3 = ButtonInterfaceChangePokemonPlayer1.getPokemon3team().getText();
-
-        /**
-         * tenemos que recortar uno de ellos ya que estamos cogiendo el path
-         */
-        int lastIndex = namePokemonInBattle.lastIndexOf('/');
-        String auxPokemonInBattle = namePokemonInBattle.substring(lastIndex + 1, namePokemonInBattle.lastIndexOf('.'));
-
-        /**
-         * si es igual, no se hará el cambio, si no lo es, se hará
-         */
-        if(namePokemonToChange3.equalsIgnoreCase(auxPokemonInBattle)){
-            marca = false;
-        }
-
-        return marca;
-    }
 
     /**
      * metodo que recorre un hashmap y busca el primer pokemon escogido por el jugador 1
@@ -3395,6 +3314,50 @@ public class MethodsBattlePlayer1 {
          */
         return powerAttack4;
     }
+
+    /**
+     * metodo para saber la velocidad del pokemon en batalla del jugador 1
+     * @param namePokemon el nombre del pokemon en batalla
+     * @return el valor de la velocidad
+     */
+    public static int getSpeedPokemonInBattlePlayer1(String namePokemon) {
+
+        /**
+         * iniciamos la cantidad de ataque a 0
+         */
+        int speed = 0;
+
+        /**
+         * iniciamos un array de objetos igual a la lista de pokemons escogida por el jugador 1
+         */
+        ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPokemonsPLayer1();
+
+        /**
+         * recorremos con un for el array de pokemons
+         */
+        for (int i = 0; i < pokemons.size(); i++) {
+
+            PokemonProperties pokemon = (PokemonProperties) pokemons.get(i);
+
+            /**
+             * si algun nombre coincide con el pokemon en batalla, entra en la condicion
+             */
+            if (pokemon.getName().equalsIgnoreCase(namePokemon)) {
+                /**
+                 * lo indicamos
+                 */
+                pokemon = (PokemonProperties) pokemons.get(i);
+
+                /**
+                 * asignamos la velocidad
+                 */
+                speed = pokemon.getSpeed();
+                break;
+            }
+        }
+        return speed;
+    }
+
 
     /**
      * metodo para obtener la defensa del pokemon rival en batalla
