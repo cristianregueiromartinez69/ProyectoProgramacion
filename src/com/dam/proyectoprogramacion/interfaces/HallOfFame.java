@@ -13,11 +13,7 @@ import java.awt.event.MouseEvent;
 public class HallOfFame extends JFrame {
 
     ButtonInterfaceSkipHall buttonsHall = new ButtonInterfaceSkipHall();
-    private static JPanel backgroundImage;
-    private static JPanel Player;
-    private static JPanel Pokemon1;
-    private static JPanel Pokemon2;
-    private static JPanel Pokemon3;
+
 
     public void HallofFame() {
 
@@ -27,16 +23,14 @@ public class HallOfFame extends JFrame {
 
         HallOfFameSong.hallOfFameMusic();
 
-        setTitle("Hall of Fame");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(800, 600);
 
         /**
          * Variable con la imagen de fondo
          */
 
         Image image = new ImageIcon("imagenes/Registro_en_el_Hall_de_la_Fama_Pt.png").getImage();
-        backgroundImage.setLayout(new BorderLayout());
+        BackgroundHallOfFame backgroundHall = new BackgroundHallOfFame(image);
+        backgroundHall.setLayout(new BorderLayout());
 
         /**
          * Jpanel igual a un metodo el cual va a devolver un jpanel
@@ -48,9 +42,9 @@ public class HallOfFame extends JFrame {
         /**
          * añadir el panel recien creado
          */
-        backgroundImage.add(background, BorderLayout.CENTER);
+        backgroundHall.add(background, BorderLayout.CENTER);
 
-        add(backgroundImage);
+        add(backgroundHall);
         setVisible(true);
 
         gbc.gridy = 0;
@@ -59,14 +53,14 @@ public class HallOfFame extends JFrame {
 
         JButton back = buttonsHall.makeBackButton();
         back.setPreferredSize(new Dimension(200, 50));
-        backgroundImage.add(buttonBackPanel(back),gbc);
+        backgroundHall.add(buttonBackPanel(back),gbc);
 
         gbc.gridx = 1;
         gbc.gridy = 0;
 
         JButton playAgain = buttonsHall.makePlayAgainButton();
         playAgain.setPreferredSize(new Dimension(200,50));
-        backgroundImage.add(playAgainPannel(playAgain),gbc);
+        backgroundHall.add(playAgainPannel(playAgain),gbc);
 
 
 
@@ -91,6 +85,17 @@ public class HallOfFame extends JFrame {
                 playAgain.setBackground(Color.blue);
             }
         });
+
+        back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                HallOfFame.this.dispose();
+                MainMenu menu = new MainMenu();
+                menu.setVisible(true);
+            }
+        });
+
+
     }
 
     private JPanel makePanel() {
