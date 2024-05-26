@@ -1,7 +1,6 @@
 package com.dam.proyectoprogramacion.buttons;
 
-import com.dam.proyectoprogramacion.methodsandmain.MethodsInterfaceChangePokemon;
-
+import com.dam.proyectoprogramacion.methods.attackchange.MethodsInterfaceChangePokemon;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
