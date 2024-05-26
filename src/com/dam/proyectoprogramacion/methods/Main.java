@@ -10,7 +10,7 @@ public class Main {
 
 
 
-        //TODO: hay que hacer el combate pokemon y el funcionamiento
+       //TODO: hacer que cuando un pokemon tenga vida 0, salga un sonido, la imagen se vaya hacia abajo y salga el panel de cambio
 
 
 
