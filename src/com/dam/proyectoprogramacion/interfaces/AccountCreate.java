@@ -55,6 +55,12 @@ public class AccountCreate extends JFrame {
     private JPanel ALiasAndLogoPlayer1Panel;
     private JPanel AliasAndLogoPlayer2Panel;
 
+    /**
+     * atributos privados de tipo boolean que nos servirán para confirmar si el jugador 1 y el jugador 2 han pulsado cualquier boton del logo
+     */
+    private static boolean confirmLogoPlayer1 = false;
+    private static boolean confirmLogoPlayer2 = false;
+
 
     public AccountCreate() {
         /**
@@ -295,6 +301,7 @@ public class AccountCreate extends JFrame {
              * se borra lo anterior del panel para introducir lo nuevo
              */
             if (e.getSource() == ButtonInterfaceCreateAccount.getIcon1Player1Button()) {
+                confirmLogoPlayer1 = true;
                 ALiasAndLogoPlayer1Panel.removeAll();
                 ALiasAndLogoPlayer1Panel.revalidate();
                 ALiasAndLogoPlayer1Panel.repaint();
@@ -312,6 +319,7 @@ public class AccountCreate extends JFrame {
                  * Se repite la misma instruccion por cada boton de icono que hay
                  */
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon2Player1Button()) {
+                confirmLogoPlayer1 = true;
                 ALiasAndLogoPlayer1Panel.removeAll();
                 ALiasAndLogoPlayer1Panel.revalidate();
                 ALiasAndLogoPlayer1Panel.repaint();
@@ -321,6 +329,7 @@ public class AccountCreate extends JFrame {
                 MethodsLogicalAccountCreate.setImagePlayer1(new ImageIcon("imagenes/icono2.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon3Player1Button()) {
+                confirmLogoPlayer1 = true;
                 ALiasAndLogoPlayer1Panel.removeAll();
                 ALiasAndLogoPlayer1Panel.revalidate();
                 ALiasAndLogoPlayer1Panel.repaint();
@@ -330,6 +339,7 @@ public class AccountCreate extends JFrame {
                 MethodsLogicalAccountCreate.setImagePlayer1(new ImageIcon("imagenes/icono3.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon4Player1Button()) {
+                confirmLogoPlayer1 = true;
                 ALiasAndLogoPlayer1Panel.removeAll();
                 ALiasAndLogoPlayer1Panel.revalidate();
                 ALiasAndLogoPlayer1Panel.repaint();
@@ -339,6 +349,7 @@ public class AccountCreate extends JFrame {
                 MethodsLogicalAccountCreate.setImagePlayer1(new ImageIcon("imagenes/icono4.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon5Player1Button()) {
+                confirmLogoPlayer1 = true;
                 ALiasAndLogoPlayer1Panel.removeAll();
                 ALiasAndLogoPlayer1Panel.revalidate();
                 ALiasAndLogoPlayer1Panel.repaint();
@@ -348,6 +359,7 @@ public class AccountCreate extends JFrame {
                 MethodsLogicalAccountCreate.setImagePlayer1(new ImageIcon("imagenes/icono5.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon6Player1Button()) {
+                confirmLogoPlayer1 = true;
                 ALiasAndLogoPlayer1Panel.removeAll();
                 ALiasAndLogoPlayer1Panel.revalidate();
                 ALiasAndLogoPlayer1Panel.repaint();
@@ -357,6 +369,7 @@ public class AccountCreate extends JFrame {
                 MethodsLogicalAccountCreate.setImagePlayer1(new ImageIcon("imagenes/icono6.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon7Player1Button()) {
+                confirmLogoPlayer1 = true;
                 ALiasAndLogoPlayer1Panel.removeAll();
                 ALiasAndLogoPlayer1Panel.revalidate();
                 ALiasAndLogoPlayer1Panel.repaint();
@@ -366,6 +379,7 @@ public class AccountCreate extends JFrame {
                 MethodsLogicalAccountCreate.setImagePlayer1(new ImageIcon("imagenes/icono7.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon8Player1Button()) {
+                confirmLogoPlayer1 = true;
                 ALiasAndLogoPlayer1Panel.removeAll();
                 ALiasAndLogoPlayer1Panel.revalidate();
                 ALiasAndLogoPlayer1Panel.repaint();
@@ -375,6 +389,7 @@ public class AccountCreate extends JFrame {
                 MethodsLogicalAccountCreate.setImagePlayer1(new ImageIcon("imagenes/icono8.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon9Player1Button()) {
+                confirmLogoPlayer1 = true;
                 ALiasAndLogoPlayer1Panel.removeAll();
                 ALiasAndLogoPlayer1Panel.revalidate();
                 ALiasAndLogoPlayer1Panel.repaint();
@@ -384,6 +399,7 @@ public class AccountCreate extends JFrame {
                 MethodsLogicalAccountCreate.setImagePlayer1(new ImageIcon("imagenes/icono9.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon10Player1Button()) {
+                confirmLogoPlayer1 = true;
                 ALiasAndLogoPlayer1Panel.removeAll();
                 ALiasAndLogoPlayer1Panel.revalidate();
                 ALiasAndLogoPlayer1Panel.repaint();
@@ -412,6 +428,7 @@ public class AccountCreate extends JFrame {
              * se borra lo anterior del panel para introducir lo nuevo
              */
             if (e.getSource() == ButtonInterfaceCreateAccount.getIcon1Player2Button()) {
+                confirmLogoPlayer2 = true;
                 AliasAndLogoPlayer2Panel.removeAll();
                 AliasAndLogoPlayer2Panel.revalidate();
                 AliasAndLogoPlayer2Panel.repaint();
@@ -429,6 +446,7 @@ public class AccountCreate extends JFrame {
                  * Se repite la misma instruccion por cada boton de icono que hay
                  */
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon2Player2Button()) {
+                confirmLogoPlayer2 = true;
                 AliasAndLogoPlayer2Panel.removeAll();
                 AliasAndLogoPlayer2Panel.revalidate();
                 AliasAndLogoPlayer2Panel.repaint();
@@ -438,6 +456,7 @@ public class AccountCreate extends JFrame {
                 MethodsLogicalAccountCreate.setImagePlayer2(new ImageIcon("imagenes/icono2.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon3Player2Button()) {
+                confirmLogoPlayer2 = true;
                 AliasAndLogoPlayer2Panel.removeAll();
                 AliasAndLogoPlayer2Panel.revalidate();
                 AliasAndLogoPlayer2Panel.repaint();
@@ -447,6 +466,7 @@ public class AccountCreate extends JFrame {
                 MethodsLogicalAccountCreate.setImagePlayer2(new ImageIcon("imagenes/icono3.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon4Player2Button()) {
+                confirmLogoPlayer2 = true;
                 AliasAndLogoPlayer2Panel.removeAll();
                 AliasAndLogoPlayer2Panel.revalidate();
                 AliasAndLogoPlayer2Panel.repaint();
@@ -456,6 +476,7 @@ public class AccountCreate extends JFrame {
                 MethodsLogicalAccountCreate.setImagePlayer2(new ImageIcon("imagenes/icono4.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon5Player2Button()) {
+                confirmLogoPlayer2 = true;
                 AliasAndLogoPlayer2Panel.removeAll();
                 AliasAndLogoPlayer2Panel.revalidate();
                 AliasAndLogoPlayer2Panel.repaint();
@@ -465,6 +486,7 @@ public class AccountCreate extends JFrame {
                 MethodsLogicalAccountCreate.setImagePlayer2(new ImageIcon("imagenes/icono5.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon6Player2Button()) {
+                confirmLogoPlayer2 = true;
                 AliasAndLogoPlayer2Panel.removeAll();
                 AliasAndLogoPlayer2Panel.revalidate();
                 AliasAndLogoPlayer2Panel.repaint();
@@ -474,6 +496,7 @@ public class AccountCreate extends JFrame {
                 MethodsLogicalAccountCreate.setImagePlayer2(new ImageIcon("imagenes/icono6.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon7Player2Button()) {
+                confirmLogoPlayer2 = true;
                 AliasAndLogoPlayer2Panel.removeAll();
                 AliasAndLogoPlayer2Panel.revalidate();
                 AliasAndLogoPlayer2Panel.repaint();
@@ -483,6 +506,7 @@ public class AccountCreate extends JFrame {
                 MethodsLogicalAccountCreate.setImagePlayer2(new ImageIcon("imagenes/icono7.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon8Player2Button()) {
+                confirmLogoPlayer2 = true;
                 AliasAndLogoPlayer2Panel.removeAll();
                 AliasAndLogoPlayer2Panel.revalidate();
                 AliasAndLogoPlayer2Panel.repaint();
@@ -492,6 +516,7 @@ public class AccountCreate extends JFrame {
                 MethodsLogicalAccountCreate.setImagePlayer2(new ImageIcon("imagenes/icono8.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon9Player2Button()) {
+                confirmLogoPlayer2 = true;
                 AliasAndLogoPlayer2Panel.removeAll();
                 AliasAndLogoPlayer2Panel.revalidate();
                 AliasAndLogoPlayer2Panel.repaint();
@@ -501,6 +526,7 @@ public class AccountCreate extends JFrame {
                 MethodsLogicalAccountCreate.setImagePlayer2(new ImageIcon("imagenes/icono9.png"));
 
             } else if (e.getSource() == ButtonInterfaceCreateAccount.getIcon10Player2Button()) {
+                confirmLogoPlayer2 = true;
                 AliasAndLogoPlayer2Panel.removeAll();
                 AliasAndLogoPlayer2Panel.revalidate();
                 AliasAndLogoPlayer2Panel.repaint();
@@ -519,50 +545,77 @@ public class AccountCreate extends JFrame {
      * @param e el objeto de tipo actionevent
      */
     public void confirmReadyPlayer1(ActionEvent e) {
-        /**
-         * se elimina lo que había
-         */
-        ALiasAndLogoPlayer1Panel.removeAll();
-        ALiasAndLogoPlayer1Panel.revalidate();
-        ALiasAndLogoPlayer1Panel.repaint();
-        /**
-         * añadimos un panel que será un tick verde en señal de que salió bien
-         */
-        ALiasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeTickReadyButtonPlayer1());
-        /**
-         * llamamos a un metodo que deshabilita los botones de los iconos y no deja modificar el alias del jugador
-         */
-        MethodsInterfaceAccountCreate.disableButtonsAndAliasesPlayer1();
-        /**
-         * por último, añadimos la información seleccionada a el hashmap de los jugadores
-         */
-        MethodsInterfaceAccountCreate.putPlayersInformation(MethodsLogicalAccountCreate.getAliasPlayer1(), MethodsLogicalAccountCreate.getImagePlayer1());
 
+        if (confirmLogoPlayer1) {
+            /**
+             * se elimina lo que había
+             */
+            ALiasAndLogoPlayer1Panel.removeAll();
+            ALiasAndLogoPlayer1Panel.revalidate();
+            ALiasAndLogoPlayer1Panel.repaint();
+            /**
+             * añadimos un panel que será un tick verde en señal de que salió bien
+             */
+            ALiasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeTickReadyButtonPlayer1());
+            /**
+             * llamamos a un metodo que deshabilita los botones de los iconos y no deja modificar el alias del jugador
+             */
+            MethodsInterfaceAccountCreate.disableButtonsAndAliasesPlayer1();
+            /**
+             * por último, añadimos la información seleccionada a el hashmap de los jugadores
+             */
+            MethodsInterfaceAccountCreate.putPlayersInformation(MethodsLogicalAccountCreate.getAliasPlayer1(), MethodsLogicalAccountCreate.getImagePlayer1());
+            /**
+             * se elimina lo que había
+             */
+            ALiasAndLogoPlayer1Panel.removeAll();
+            ALiasAndLogoPlayer1Panel.revalidate();
+            ALiasAndLogoPlayer1Panel.repaint();
+            /**
+             * añadimos un panel que será un tick verde en señal de que salió bien
+             */
+            ALiasAndLogoPlayer1Panel.add(MethodsLogicalAccountCreate.makeTickReadyButtonPlayer1());
+            /**
+             * llamamos a un metodo que deshabilita los botones de los iconos y no deja modificar el alias del jugador
+             */
+            MethodsInterfaceAccountCreate.disableButtonsAndAliasesPlayer1();
+            /**
+             * por último, añadimos la información seleccionada a el hashmap de los jugadores
+             */
+            MethodsInterfaceAccountCreate.putPlayersInformation(MethodsLogicalAccountCreate.getAliasPlayer1(), MethodsLogicalAccountCreate.getImagePlayer1());
+
+
+        }
     }
     /**
      * metodo para modificar el panel en el que aparece la informacion seleccionada del jugador 2
      * @param e el objeto de tipo actionevent
      */
     public void confirmReadyPlayer2(ActionEvent e) {
-        /**
-         * se elimina lo que había
-         */
-        AliasAndLogoPlayer2Panel.removeAll();
-        AliasAndLogoPlayer2Panel.revalidate();
-        AliasAndLogoPlayer2Panel.repaint();
-        /**
-         * añadimos un panel que será un tick verde en señal de que salió bien
-         */
-        AliasAndLogoPlayer2Panel.add(MethodsLogicalAccountCreate.makeTickReadyButtonPlayer2());
-        /**
-         * llamamos a un metodo que deshabilita los botones de los iconos y no deja modificar el alias del jugador
-         */
-        MethodsInterfaceAccountCreate.disableButtonsAndAliasesPlayer2();
-        /**
-         * por último, añadimos la información seleccionada a el hashmap de los jugadores
-         */
-        MethodsInterfaceAccountCreate.putPlayersInformation(MethodsLogicalAccountCreate.getAliasPlayer2(), MethodsLogicalAccountCreate.getImagePlayer2());
+
+        if(confirmLogoPlayer2){
+            /**
+             * se elimina lo que había
+             */
+            AliasAndLogoPlayer2Panel.removeAll();
+            AliasAndLogoPlayer2Panel.revalidate();
+            AliasAndLogoPlayer2Panel.repaint();
+            /**
+             * añadimos un panel que será un tick verde en señal de que salió bien
+             */
+            AliasAndLogoPlayer2Panel.add(MethodsLogicalAccountCreate.makeTickReadyButtonPlayer2());
+            /**
+             * llamamos a un metodo que deshabilita los botones de los iconos y no deja modificar el alias del jugador
+             */
+            MethodsInterfaceAccountCreate.disableButtonsAndAliasesPlayer2();
+            /**
+             * por último, añadimos la información seleccionada a el hashmap de los jugadores
+             */
+            MethodsInterfaceAccountCreate.putPlayersInformation(MethodsLogicalAccountCreate.getAliasPlayer2(), MethodsLogicalAccountCreate.getImagePlayer2());
+        }
     }
+
+
     public void completeInformationBothPlayers(ActionEvent e){
         if(MethodsInterfaceAccountCreate.checkEnabledButtonsPlayer1ToFinish() &&
         MethodsInterfaceAccountCreate.checkEnabledButtonsPlayer2ToFinish()){
