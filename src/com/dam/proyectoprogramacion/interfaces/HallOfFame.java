@@ -95,7 +95,14 @@ public class HallOfFame extends JFrame {
             }
         });
 
-
+        playAgain.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                HallOfFame.this.dispose();
+                SelectionPokemon play = new SelectionPokemon();
+                play.setVisible(true);
+            }
+        });
     }
 
     private JPanel makePanel() {
