@@ -19,6 +19,12 @@ public class ButtonInterfaceChangePokemonPlayer1 extends JPanel {
     private static JButton pokemon1team;
     private static JButton pokemon2team;
     private static JButton pokemon3team;
+    /**
+     * atributos privados de tipo boolean que serán los que habiliten o no los botones de los pokemons
+     */
+    private static boolean enableButtonPokemon1;
+    private static boolean enableButtonPokemon2;
+    private static boolean enableButtonPokemon3;
     private static JButton back;
 
     /**
@@ -30,6 +36,7 @@ public class ButtonInterfaceChangePokemonPlayer1 extends JPanel {
         pokemon1team = new CreateButtons(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getNamePokemon1(), iconPokemon);
         setBackground(Color.GREEN);
         setForeground(Color.BLACK);
+        pokemon1team.setEnabled(enableButtonPokemon1);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
         setBorder(borderboton);
         return pokemon1team;
@@ -43,6 +50,7 @@ public class ButtonInterfaceChangePokemonPlayer1 extends JPanel {
         pokemon2team = new CreateButtons(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getNamePokemon2(), iconPokemon);
         setBackground(Color.GREEN);
         setForeground(Color.BLACK);
+        pokemon2team.setEnabled(enableButtonPokemon2);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
         setBorder(borderboton);
         return pokemon2team;
@@ -56,6 +64,7 @@ public class ButtonInterfaceChangePokemonPlayer1 extends JPanel {
         pokemon3team = new CreateButtons(DataNamesIconsColorsAttacksAndPokemonsPlayer1.getNamePokemon3(), iconPokemon);
         setBackground(Color.GREEN);
         setForeground(Color.BLACK);
+        pokemon3team.setEnabled(enableButtonPokemon3);
         Border borderboton = BorderFactory.createLineBorder(Color.BLACK, 2);
         setBorder(borderboton);
         return pokemon3team;
@@ -104,5 +113,29 @@ public class ButtonInterfaceChangePokemonPlayer1 extends JPanel {
 
     public static void setBack(JButton back) {
         ButtonInterfaceChangePokemonPlayer1.back = back;
+    }
+
+    public static boolean isEnableButtonPokemon1() {
+        return enableButtonPokemon1;
+    }
+
+    public static void setEnableButtonPokemon1(boolean enableButtonPokemon1) {
+        ButtonInterfaceChangePokemonPlayer1.enableButtonPokemon1 = enableButtonPokemon1;
+    }
+
+    public static boolean isEnableButtonPokemon2() {
+        return enableButtonPokemon2;
+    }
+
+    public static void setEnableButtonPokemon2(boolean enableButtonPokemon2) {
+        ButtonInterfaceChangePokemonPlayer1.enableButtonPokemon2 = enableButtonPokemon2;
+    }
+
+    public static boolean isEnableButtonPokemon3() {
+        return enableButtonPokemon3;
+    }
+
+    public static void setEnableButtonPokemon3(boolean enableButtonPokemon3) {
+        ButtonInterfaceChangePokemonPlayer1.enableButtonPokemon3 = enableButtonPokemon3;
     }
 }

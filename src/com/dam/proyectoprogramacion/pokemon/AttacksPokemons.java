@@ -14,6 +14,7 @@ public class AttacksPokemons {
         this.precision = precision;
     }
 
+
     public String getType() {
         return type;
     }

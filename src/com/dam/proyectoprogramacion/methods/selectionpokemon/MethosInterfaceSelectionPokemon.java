@@ -1,10 +1,13 @@
 package com.dam.proyectoprogramacion.methods.selectionpokemon;
 
 import com.dam.proyectoprogramacion.interfaces.SelectionPokemon;
+import com.dam.proyectoprogramacion.methods.battle.MethodsBattlePokemon;
 import com.dam.proyectoprogramacion.methods.luck.MethodsInterfaceLuck;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
 import com.dam.proyectoprogramacion.panels.selectionpokemon.*;
+import com.dam.proyectoprogramacion.pokemon.AttacksPokemons;
+import com.dam.proyectoprogramacion.pokemon.PokemonProperties;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -1389,31 +1392,81 @@ public class MethosInterfaceSelectionPokemon {
     }
 
     /**
-     * metodo que crea el panel de tick verde el jugador 1 cuando se han seleccionado 3 pokemons
-     * @return el panel creado
+     * metodo para añadir valores al hashmap de pokemons con vida  del jugador 1
+     * @return el alias del jugador 1
      */
-    public static JPanel makeTickReadyButtonPlayer1(){
-        JPanel imagePanel = new JPanel();
-        ImageIcon imageIcon = new ImageIcon("imagenes/tick.png");
-        JLabel imageLabel = new JLabel();
-        imageLabel.setIcon(imageIcon);
-        imagePanel.add(imageLabel);
-        return imagePanel;
+    public static void addLifePokemonsPlayer1(String aliasPlayer1){
+        /**
+         * recorremos el hashmap de los jugadores
+         */
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+            /**
+             * si el alias del jugador 1 coincide con la clave del hashmap de jugadores
+             * se mete en el codigo
+             */
+            if (key.equals(aliasPlayer1)) {
+
+                /**
+                 * si hay coincidencia, hacemos un arraylist de objetos igual al valor del hashmao
+                 */
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                if (!pokemons.isEmpty()) {
+
+                    /**
+                     * recorremos el arraylist de objetos
+                     */
+                    for (Object pokemon : pokemons) {
+                        PokemonProperties auxPokemons = (PokemonProperties) pokemon;
+                        /**
+                         * añadimos los valores al hashmap de los pokemons con vida
+                         */
+                        String namePokemon = auxPokemons.getName().toLowerCase();
+                        int lifePokemon = auxPokemons.getLife();
+                        MethodsBattlePokemon.putValuesLifePokemonsPlayer1(namePokemon, lifePokemon);
+                    }
+                    break;
+                }
+            }
+        }
     }
     /**
-     * metodo que crea el panel de tick verde el jugador 2 cuando se han seleccionado 3 pokemons
-     * @return el panel creado
+     * metodo para añadir valores al hashmap de pokemons con vida  del jugador 2
+     * @return el alias del jugador 2
      */
-    public static JPanel makeTickReadyButtonPlayer2(){
-        JPanel imagePanel = new JPanel();
-        ImageIcon imageIcon = new ImageIcon("imagenes/tick.png");
-        JLabel imageLabel = new JLabel();
-        imageLabel.setIcon(imageIcon);
-        imagePanel.add(imageLabel);
-        return imagePanel;
+    public static void addLifePokemonsPlayer2(String aliasPlayer2){
+        /**
+         * recorremos el hashmap de los jugadores
+         */
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+            /**
+             * si el alias del jugador 1 coincide con la clave del hashmap de jugadores
+             * se mete en el codigo
+             */
+            if (key.equals(aliasPlayer2)) {
+
+                /**
+                 * si hay coincidencia, hacemos un arraylist de objetos igual al valor del hashmao
+                 */
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                if (!pokemons.isEmpty()) {
+
+                    /**
+                     * recorremos el arraylist de objetos
+                     */
+                    for (Object pokemon : pokemons) {
+                        PokemonProperties auxPokemons = (PokemonProperties) pokemon;
+                        /**
+                         * añadimos los valores al hashmap de los pokemons con vida
+                         */
+                        String namePokemon = auxPokemons.getName().toLowerCase();
+                        int lifePokemon = auxPokemons.getLife();
+                        MethodsBattlePokemon.putValuesLifePokemonsPlayer2(namePokemon, lifePokemon);
+                    }
+                    break;
+                }
+            }
+        }
     }
-
-
     /**
      * metodo para añadir valores al hashmap de los participantes en la batalla pokemon
      * @param alias el alias del jugador
