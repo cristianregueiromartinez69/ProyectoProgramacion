@@ -59,10 +59,15 @@ public class HallOfFame extends JFrame {
 
         JButton back = buttonsHall.makeBackButton();
         back.setPreferredSize(new Dimension(200, 50));
-        backgroundImage.add(buttonsPanel(back),gbc);
+        backgroundImage.add(buttonBackPanel(back),gbc);
 
         gbc.gridx = 1;
         gbc.gridy = 0;
+
+        JButton playAgain = buttonsHall.makePlayAgainButton();
+        playAgain.setPreferredSize(new Dimension(200,50));
+        backgroundImage.add(playAgainPannel(playAgain),gbc);
+
 
 
         back.addMouseListener(new MouseAdapter() {
@@ -75,7 +80,17 @@ public class HallOfFame extends JFrame {
             public void mouseExited(MouseEvent e){back.setBackground(Color.WHITE);}
         });
 
+        playAgain.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                playAgain.setBackground(Color.RED.brighter());
+            }
 
+            @Override
+            public void mouseExited(MouseEvent e){
+                playAgain.setBackground(Color.blue);
+            }
+        });
     }
 
     private JPanel makePanel() {
@@ -88,10 +103,17 @@ public class HallOfFame extends JFrame {
         return contentPanel;
     }
 
-    private JPanel buttonsPanel(JButton battle) {
+    private JPanel buttonBackPanel(JButton back) {
         JPanel skip = new JPanel();
         skip.setLayout(new GridBagLayout());
-        skip.add(battle);
+        skip.add(back);
         return skip;
+    }
+
+    private JPanel playAgainPannel(JButton play) {
+        JPanel playAgainPannel = new JPanel();
+        playAgainPannel.setLayout(new GridBagLayout());
+        playAgainPannel.add(play);
+        return playAgainPannel;
     }
 }
