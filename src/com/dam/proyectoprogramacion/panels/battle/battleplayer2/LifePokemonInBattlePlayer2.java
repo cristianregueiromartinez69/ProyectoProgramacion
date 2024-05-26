@@ -1,9 +1,12 @@
 package com.dam.proyectoprogramacion.panels.battle.battleplayer2;
 
+import com.dam.proyectoprogramacion.methods.battle.MethodsSongBattle;
+
 import javax.swing.*;
-import com.dam.proyectoprogramacion.methods.battle.*;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * clase con el panel de la vida del pokemon en batalla del jugador 1
@@ -68,6 +71,25 @@ public class LifePokemonInBattlePlayer2 extends JPanel {
         this.add(panelLifePokemonPLayer2);
     }
 
+    public static void updateLifeBar(JProgressBar lifeBar, int newLifeValue) {
+        Timer timer = new Timer(100, new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                int currentValue = lifeBar.getValue();
+
+                if (currentValue > newLifeValue) {
+                    lifeBar.setValue(currentValue - 12);
+                    lifeBar.setForeground(getBackgroundColorLifeBarPokemonPlayer2(currentValue - 12));
+                    lifeBar.repaint();
+                } else {
+                    ((Timer)e.getSource()).stop();
+                }
+            }
+        });
+
+        timer.start();
+    }
+
+
     /**
      * metodo para establecer el color de fondo de la vida del pokemon
      * @return el color de fondo
@@ -77,7 +99,7 @@ public class LifePokemonInBattlePlayer2 extends JPanel {
          * valor que irá en la barra de vida
          */
         lifePokemonBarPlayer2.setString("" + lifePokemonBarPlayer2.getValue());
-        if (value == 0) {
+        if (value <= 0) {
             /**
              * si la vida es 0, el color será negro
              */
