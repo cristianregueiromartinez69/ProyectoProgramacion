@@ -292,10 +292,11 @@ public class AccountCreate extends JFrame {
          * iniciamos una variable local que es igual al texto introducido en el alias del jugador 1
          */
         String aliasTextPlayer1 = InformationPlayerPanel1AccountCreate.getAliasTextPlayer1().getText();
+        String aliasTextPlayer2 = InformationPlayerPanel2AccountCreate.getAliasTextPlayer2().getText();
         /**
          * si el alias se ha introducido, podemos proseguir
          */
-        if (MethodsInterfaceAccountCreate.checkEmptyContentPlayer1()) {
+        if (MethodsInterfaceAccountCreate.checkEmptyContentPlayer1() && !MethodsLogicalAccountCreate.check2AliasAreTheSame(aliasTextPlayer1, aliasTextPlayer2)) {
             /**
              * si el usuario pulsa el boton del icono, aparecerá su alias junto con el logo escogido
              * se borra lo anterior del panel para introducir lo nuevo
@@ -418,11 +419,12 @@ public class AccountCreate extends JFrame {
         /**
          * iniciamos una variable local que es igual al texto introducido en el alias del jugador 2
          */
+        String aliasTextPlayer1 = InformationPlayerPanel1AccountCreate.getAliasTextPlayer1().getText();
         String aliasTextPlayer2 = InformationPlayerPanel2AccountCreate.getAliasTextPlayer2().getText();
         /**
          * si el alias se ha introducido, podemos proseguir
          */
-        if (MethodsInterfaceAccountCreate.checkEmptyContentPlayer2()) {
+        if (MethodsInterfaceAccountCreate.checkEmptyContentPlayer2() && !MethodsLogicalAccountCreate.check2AliasAreTheSame(aliasTextPlayer1, aliasTextPlayer2)) {
             /**
              * si el usuario pulsa el boton del icono, aparecerá su alias junto con el logo escogido
              * se borra lo anterior del panel para introducir lo nuevo
