@@ -67,13 +67,10 @@ Esta semana nos toca seguir haciendo interfaces con su funcionalidad e implement
 
 Cristian:
 1. Realizacion de la interfaz cuenta
-2. Realizacion de los metodos de la interfaz de la suerte 
-3. Realizacion de más botones para la interfaz de la suerte 
-4. Realizacion de la interfaz de seleccion de pokemons
-5. Realizacion de la lógica de la interfaz de seleccion de pokemons
+2. Realizacion de los metodos de la interfaz cuenta
+3. Realizacion de más botones para la interfaz cuenta
 
-
-***Explicacion de el funcionamiento de la interfaz de la suerte***
+***Explicacion de el funcionamiento de la interfaz***
 La interfaz funciona de la siguiente manera:
 1. para poder avanzar, tienes que tener una cuenta creada, si no no puedes jugar
 2. Si creaste la cuenta, deberías poder introducir correctamente el usuario
@@ -95,48 +92,5 @@ el numero escogido por el jugador 1 y 2 debe de ser igual al numero generado, de
 3. Falta refactorizar bastante esa clase
 4. Lo bueno es que funciona perfectamente y lo unico que nos importa de esa interfaz es saber el ganador del sorteo, el cual funciona perfectamente
 
-***explicacion del funcionamiento de la interfaz de seleccion de pokemon***
-Una vez ya tenemos ganador del sorteo, vamos con la seleccion de pokemons
-1. El ganador tiene que escoger a los 3 pokemos para la batalla
-2. una vez escoja a los 3 pokemons, le toca al oponente
-3. Si los 2 han escogido a los 3 pokemons, le podrán dar al boton de finish e ir a la batalla pokemon
-4. Los datos se guardan en un hashmap en el cual la clave es el alias del jugador y el valor es un arraylist de objetos de tipo pokemons
-
-
 Chema:
 1. Implementación de la base de datos en el proyecto
-
-***Semana 3 del proyecto***
-Esta semana nos toca ponernos las botas, ya que toca hacer la interfaz más dificil de todas, la batalla pokemon.
-
-Cristian:
-1. Haciendo gran parte de la interfaz de batalla pokemon
-2. añadiendo paneles para el jugador 1 de ataque y cambio de pokemon
-3. añadiendo peneles para el jugador 2 de ataques y cambio de pokemons
-4. añadiendo la barra de vida del pokemon en batalla del jugador 1
-5. añadiendo la barra de vida del pokemon en batalla del jugador 2
-6. La barra de vida es una JProgressbar y es posible que se cambie por otra cosa
-7. añadiendo un text area con la información de la batalla pokemon
-8. añadiendo el escenario de batalla con un pokemon a un lado y otro al otro lado
-9. añadiendo una imagen del pokemon para el jugador 1 y otro para el jugador 2 en el escenario
-10. Realizando formula de daño pokemon
-11. actualizando todo al cambio
-12. Realizando muchos metodos para la interfaz batalla
-
-chema:
-1. terminando implementacion de la base de datos
-2. actualizando datos de los pokemons con la base de datos
-3. añadiendo los ataques de la base de datos a los pokemons
-4. modificando atributos de los pokemons
-
-***explicacion de la interfaz batalla***
-cuando los 2 jugadores han escogido a sus 3 pokemons, nos vamos a la batalla
-1. el jugador 1 esta a la izquierda y el 2 a la derecha
-2. los 2 jugadores tienen ataques para hacer y pueden cambiar de pokemon
-3. cuando se cambia de pokemon, se actualizan todos los datos
-4. La formulas de daño esta hecha, falta implementarla para reducir la vida del oponente
-5. será un combate por turnos y cuando los 3 pokemons de un rival mueran, habrá un ganador
-
-**problemas encontramos**
-El principal de todos, la barra de vida. Me está costando mucho actualizarla bien con la progressbar, quizas haya que poner otra cosa, pero se intentará hasta el final
-
