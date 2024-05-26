@@ -12,11 +12,17 @@ import java.awt.event.MouseEvent;
 
 public class HallOfFame extends JFrame {
 
+    private static JPanel pokemon1;
+    private static JPanel pokemon2;
+    private static JPanel pokemon3;
+    private static JPanel player;
+
     ButtonInterfaceSkipHall buttonsHall = new ButtonInterfaceSkipHall();
 
 
     public void HallofFame() {
 
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         /**
          * Llamar a la musica que va a sonar en el hall of fame
          */
@@ -28,7 +34,7 @@ public class HallOfFame extends JFrame {
          * Variable con la imagen de fondo
          */
 
-        Image image = new ImageIcon("imagenes/Registro_en_el_Hall_de_la_Fama_Pt.png").getImage();
+        Image image = new ImageIcon("imagenes/Hall.png").getImage();
         BackgroundHallOfFame backgroundHall = new BackgroundHallOfFame(image);
         backgroundHall.setLayout(new BorderLayout());
 
@@ -47,21 +53,20 @@ public class HallOfFame extends JFrame {
         add(backgroundHall);
         setVisible(true);
 
-        gbc.gridy = 0;
-        gbc.gridx = 0;
+        gbc.gridy = 1;
+        gbc.gridx = 1;
 
 
         JButton back = buttonsHall.makeBackButton();
-        back.setPreferredSize(new Dimension(200, 50));
-        backgroundHall.add(buttonBackPanel(back),gbc);
+        back.setPreferredSize(new Dimension(300, 100));
+        background.add(buttonBackPanel(back), gbc);
 
-        gbc.gridx = 1;
-        gbc.gridy = 0;
+        gbc.gridx = (int) 0.8;
+        gbc.gridy = (int) 0.8;
 
         JButton playAgain = buttonsHall.makePlayAgainButton();
-        playAgain.setPreferredSize(new Dimension(200,50));
-        backgroundHall.add(playAgainPannel(playAgain),gbc);
-
+        playAgain.setPreferredSize(new Dimension(300, 100));
+        background.add(playAgainPannel(playAgain), gbc);
 
 
         back.addMouseListener(new MouseAdapter() {
@@ -71,7 +76,9 @@ public class HallOfFame extends JFrame {
             }
 
             @Override
-            public void mouseExited(MouseEvent e){back.setBackground(Color.WHITE);}
+            public void mouseExited(MouseEvent e) {
+                back.setBackground(Color.WHITE);
+            }
         });
 
         playAgain.addMouseListener(new MouseAdapter() {
@@ -81,7 +88,7 @@ public class HallOfFame extends JFrame {
             }
 
             @Override
-            public void mouseExited(MouseEvent e){
+            public void mouseExited(MouseEvent e) {
                 playAgain.setBackground(Color.blue);
             }
         });
@@ -103,7 +110,25 @@ public class HallOfFame extends JFrame {
                 play.setVisible(true);
             }
         });
+
+        pokemon1 = new JPanel();
+        pokemon1 = pokemon1Panel();
+
+        pokemon2 = new JPanel();
+        pokemon2 = pokemon2Panel();
+
+        pokemon3 = new JPanel();
+        pokemon3 = pokemon3Panel();
+
+        player = new JPanel();
+        player = playerPanel();
+
+        background.add(pokemon1);
+        background.add(pokemon2);
+        background.add(pokemon3);
+        background.add(player);
     }
+
 
     private JPanel makePanel() {
         JPanel contentPanel = new JPanel();
@@ -127,5 +152,57 @@ public class HallOfFame extends JFrame {
         playAgainPannel.setLayout(new GridBagLayout());
         playAgainPannel.add(play);
         return playAgainPannel;
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                HallOfFame ventana = new HallOfFame();
+                ventana.HallofFame();
+            }
+        });
+    }
+
+    /**
+     * metodos para realizar los paneles de los pokemon y devolverlos
+     * @return pokemon1
+     */
+    public static JPanel pokemon1Panel(){
+        JPanel pokemon1 = new JPanel();
+        pokemon1.setLayout(new BoxLayout(pokemon1,BoxLayout.X_AXIS));
+        return pokemon1;
+    }
+
+    /**
+     * metodo para realizar los paneles de los pokemon y devolverlos
+     * @return pokemon2
+     */
+
+    public static JPanel pokemon2Panel(){
+        JPanel pokemon2 = new JPanel();
+        pokemon2.setLayout(new BoxLayout(pokemon2,BoxLayout.X_AXIS));
+        return pokemon2;
+    }
+
+    /**
+     * metodo para realizar los paneles de los pokemon y devolverlos
+     * @return pokemon3
+     */
+
+    public static JPanel pokemon3Panel(){
+        JPanel pokemon3 = new JPanel();
+        pokemon3.setLayout(new BoxLayout(pokemon3,BoxLayout.X_AXIS));
+        return pokemon3;
+    }
+
+    /**
+     * metodo para realizar los paneles del jugador y devolverlos
+     * @return player
+     */
+
+    public static JPanel playerPanel(){
+        JPanel player = new JPanel();
+        player.setLayout(new BoxLayout(player,BoxLayout.X_AXIS));
+        return player;
     }
 }
