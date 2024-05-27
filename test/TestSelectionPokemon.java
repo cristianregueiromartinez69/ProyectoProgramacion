@@ -472,4 +472,17 @@ public class TestSelectionPokemon {
         assertEquals(100, lifePokemonsPlayer1.get("pokemon1"));
         assertEquals(200, lifePokemonsPlayer1.get("pokemon2"));
     }
+
+
+    @Test
+    @DisplayName("comprobar que hay 3 pokemons en la lista")
+    public void testCheckSizeListPokemonsPlayer1() {
+
+        MethosInterfaceSelectionPokemon.getPokemonsPLayer1().add("Pokemon1");
+        MethosInterfaceSelectionPokemon.getPokemonsPLayer1().add("Pokemon2");
+        MethosInterfaceSelectionPokemon.getPokemonsPLayer1().add("Pokemon2");
+
+        assertFalse(MethosInterfaceSelectionPokemon.checkSizeListPokemonsPLayer1());
+    }
+
 }
