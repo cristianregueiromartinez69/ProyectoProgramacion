@@ -74,6 +74,9 @@ Para poder hacer un combate, tienes que tener una cuenta creada.
 **Cuando le das a listo, se guarda la informacion seleccionada en un hashmap
 1. la clave es el alias del jugador
 2. el valor es el path del icono seleccionado
+![crearcuenta5](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/5a37254c-76ce-475c-9d2f-c981b04cdbec)
+![crearcuenta6](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/bffce609-45b6-4d11-8806-fc6f1d147b60)
+
 
 Chema:
 1. Realizacion del paquete de pokemons
@@ -91,13 +94,15 @@ Chema:
 13. Realiacion de la clase Tyranitar con sus atributos, getters y setters
 14. Realizacion de la interfaz de pokemon con los metodos que van a implementar las clases anteriores
 15. Realización de la super clase pokemon de la cual van a haredar las clases anteriores
+![pokemons1](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/3f1a163a-fc0d-497b-871e-a1065a93c2f6)
+
 16. Criticar la imagen de fondo de la interfaz creaar cuenta XD
 
 ***Semana 2 del proyecto***
 Esta semana nos toca seguir haciendo interfaces con su funcionalidad e implementar la base de datos
 
 Cristian:
-1. Realizacion de la interfaz cuenta
+1. Realizacion de la interfaz suerte
 2. Realizacion de los metodos de la interfaz de la suerte
 3. Realizacion de más botones para la interfaz de la suerte
 4. Realizacion de la interfaz de seleccion de pokemons
@@ -108,17 +113,33 @@ Cristian:
 La interfaz funciona de la siguiente manera:
 1. para poder avanzar, tienes que tener una cuenta creada, si no no puedes jugar
 2. Si creaste la cuenta, deberías poder introducir correctamente el usuario
+![caraocruz1](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/16c3f240-83c4-4570-9f76-b31ad4f5836f)
+
+
 3. Al introducirlo, tienes que seleccionar si quieres cara o cruz
 4. El jugador 2 hará lo mismo
 5. si ya has seleccionado cara y estás conforme con la eleccion, le das a enter
+![caraocruz2](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/0cc063ec-f5c0-40da-9d64-229c31941d21)
+
+
 6. el jugador 2 hará lo mismo
+![caraocruz3](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/79c7d61e-a191-4783-a140-03865dfb6187)
+
+
 7. El ganador del sorteo se decide de la siguiente manera:
    si el jugador escoge cara, se le asigna el numero 1
    si el jugador 1 escoge cruz, se le asigna el nunero 2
    se genera un numero aleatorio entre el 1 y 2
-   el numero escogido por el jugador 1 y 2 debe de ser igual al numero generado, de ahí sale el ganador
-8. Una vez se conoce al ganador, sale una imagen del ganador del sorteo en el panel de winner
-9. sale también un boton para ir a la seleccion de pokemons
+el numero escogido por el jugador 1 y 2 debe de ser igual al numero generado, de ahí sale el ganador
+   ![caraocruz5](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/ea9ccd16-4ba6-47ed-80b4-9f6f49ad5ca2)
+
+   
+9. Una vez se conoce al ganador, sale una imagen del ganador del sorteo en el panel de winner
+![caraocruz4](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/4c473bd1-ded7-4029-b9b1-0c7e29ee38b9)
+
+
+
+10. sale también un boton para ir a la seleccion de pokemons
 
 ***Problemas encontrados y a resolver en el futuro***
 1. los botones de cara o cruz no consigo que salgan 2 para cada jugador
@@ -128,10 +149,22 @@ La interfaz funciona de la siguiente manera:
 
 ***explicacion del funcionamiento de la interfaz de seleccion de pokemon***
 Una vez ya tenemos ganador del sorteo, vamos con la seleccion de pokemons
+![seleccionpokemon1](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/f14ab274-e529-4de3-8f4e-5fb6ec294612)
+
+
 1. El ganador tiene que escoger a los 3 pokemos para la batalla
+![seleccionpokemon2](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/4c014f15-23ae-4863-b383-9291212deca9)
+
+
 2. una vez escoja a los 3 pokemons, le toca al oponente
+![seleccionpokemon3](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/2502e391-aeda-49bf-a357-766a4774be8d)
+
+
 3. Si los 2 han escogido a los 3 pokemons, le podrán dar al boton de finish e ir a la batalla pokemon
+
+
 4. Los datos se guardan en un hashmap en el cual la clave es el alias del jugador y el valor es un arraylist de objetos de tipo pokemons
+![seleccionpokemon4](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/f8f04a18-9b18-45e9-96be-d041f133be4e)
 
 
 Chema:
