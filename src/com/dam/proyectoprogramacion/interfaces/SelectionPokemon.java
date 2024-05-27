@@ -138,19 +138,26 @@ public class SelectionPokemon extends JFrame {
             }
             @Override
             public void mouseClicked(MouseEvent e) {
-               DrampaSong.musicDrampa();
-
                 /**
-                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
-                 * en caso contrario se actualiza el del jugador 2
+                 * si no ha sido escogido, se escoge y se pone a true
                  */
-               if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
-                   contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelDrampaBothPlayers(), BorderLayout.WEST);
-               }
-               else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
-                   contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelDrampaBothPlayers(), BorderLayout.EAST);
-               }
+              if(!MethosInterfaceSelectionPokemon.isWasDrampaChoosen()){
+                  MethosInterfaceSelectionPokemon.setWasDrampaChoosen(true);
+                  DrampaSong.musicDrampa();
 
+                  /**
+                   * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                   * en caso contrario se actualiza el del jugador 2
+                   */
+                  if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                      contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelDrampaBothPlayers(), BorderLayout.WEST);
+                  }
+                  else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                      contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelDrampaBothPlayers(), BorderLayout.EAST);
+                  }
+
+
+              }
 
             }
 
@@ -174,18 +181,22 @@ public class SelectionPokemon extends JFrame {
             }
             @Override
             public void mouseClicked(MouseEvent e) {
-                EmpoleonSong.musicEmpoleon();
+               if(!MethosInterfaceSelectionPokemon.isWasEmpoleonChoosen()){
+                   MethosInterfaceSelectionPokemon.setWasEmpoleonChoosen(true);
+                   EmpoleonSong.musicEmpoleon();
 
-                /**
-                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
-                 * en caso contrario se actualiza el del jugador 2
-                 */
-                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
-                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelEmpoleonBothPlayers(), BorderLayout.WEST);
-                }
-                else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
-                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelEmpoleonBothPlayers(), BorderLayout.EAST);
-                }
+                   /**
+                    * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                    * en caso contrario se actualiza el del jugador 2
+                    */
+                   if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                       contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelEmpoleonBothPlayers(), BorderLayout.WEST);
+                   }
+                   else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                       contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelEmpoleonBothPlayers(), BorderLayout.EAST);
+                   }
+               }
+
             }
         });
 
@@ -207,17 +218,21 @@ public class SelectionPokemon extends JFrame {
             }
             @Override
             public void mouseClicked(MouseEvent e) {
-                GarchompSong.musicGarchomp();
-                /**
-                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
-                 * en caso contrario se actualiza el del jugador 2
-                 */
-                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
-                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelGarchompBothPlayers(), BorderLayout.WEST);
+                if(!MethosInterfaceSelectionPokemon.isWasGarchompChoosen()){
+                    MethosInterfaceSelectionPokemon.setWasGarchompChoosen(true);
+                    GarchompSong.musicGarchomp();
+                    /**
+                     * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                     * en caso contrario se actualiza el del jugador 2
+                     */
+                    if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                        contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelGarchompBothPlayers(), BorderLayout.WEST);
+                    }
+                    else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                        contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelGarchompBothPlayers(), BorderLayout.EAST);
+                    }
                 }
-                else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
-                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelGarchompBothPlayers(), BorderLayout.EAST);
-                }
+
             }
         });
 
@@ -239,17 +254,21 @@ public class SelectionPokemon extends JFrame {
             }
             @Override
             public void mouseClicked(MouseEvent e) {
-                GengarSong.musicGengar();
-                /**
-                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
-                 * en caso contrario se actualiza el del jugador 2
-                 */
-                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
-                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelGengarBothPlayers(), BorderLayout.WEST);
+                if(!MethosInterfaceSelectionPokemon.isWasGengarChoosen()){
+                    MethosInterfaceSelectionPokemon.setWasGengarChoosen(true);
+                    GengarSong.musicGengar();
+                    /**
+                     * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                     * en caso contrario se actualiza el del jugador 2
+                     */
+                    if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                        contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelGengarBothPlayers(), BorderLayout.WEST);
+                    }
+                    else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                        contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelGengarBothPlayers(), BorderLayout.EAST);
+                    }
                 }
-                else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
-                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelGengarBothPlayers(), BorderLayout.EAST);
-                }
+
             }
         });
 
@@ -271,17 +290,23 @@ public class SelectionPokemon extends JFrame {
             }
             @Override
             public void mouseClicked(MouseEvent e) {
-               InfernapeSong.musicInfernape();
-                /**
-                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
-                 * en caso contrario se actualiza el del jugador 2
-                 */
-                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
-                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelInfernapeBothPlayers(), BorderLayout.WEST);
+
+                if(!MethosInterfaceSelectionPokemon.isWasInfernapeChoosen()){
+                    MethosInterfaceSelectionPokemon.setWasInfernapeChoosen(true);
+                    InfernapeSong.musicInfernape();
+                    /**
+                     * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                     * en caso contrario se actualiza el del jugador 2
+                     */
+                    if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                        contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelInfernapeBothPlayers(), BorderLayout.WEST);
+                    }
+                    else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                        contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelInfernapeBothPlayers(), BorderLayout.EAST);
+                    }
+
                 }
-                else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
-                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelInfernapeBothPlayers(), BorderLayout.EAST);
-                }
+
             }
         });
 
@@ -303,17 +328,21 @@ public class SelectionPokemon extends JFrame {
             }
             @Override
             public void mouseClicked(MouseEvent e) {
-                LucarioSong.musicLucario();
-                /**
-                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
-                 * en caso contrario se actualiza el del jugador 2
-                 */
-                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
-                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelLucarioBothPlayers(), BorderLayout.WEST);
+                if(!MethosInterfaceSelectionPokemon.isWasLucarioChoosen()){
+                    MethosInterfaceSelectionPokemon.setWasLucarioChoosen(true);
+                    LucarioSong.musicLucario();
+                    /**
+                     * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                     * en caso contrario se actualiza el del jugador 2
+                     */
+                    if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                        contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelLucarioBothPlayers(), BorderLayout.WEST);
+                    }
+                    else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                        contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelLucarioBothPlayers(), BorderLayout.EAST);
+                    }
                 }
-                else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
-                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelLucarioBothPlayers(), BorderLayout.EAST);
-                }
+
             }
         });
 
@@ -335,17 +364,21 @@ public class SelectionPokemon extends JFrame {
             }
             @Override
             public void mouseClicked(MouseEvent e) {
-                LuxraySong.musicLuxray();
-                /**
-                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
-                 * en caso contrario se actualiza el del jugador 2
-                 */
-                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
-                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelLuxrayBothPlayers(), BorderLayout.WEST);
+                if(!MethosInterfaceSelectionPokemon.isWasLuxrayChoosen()){
+                    MethosInterfaceSelectionPokemon.setWasLuxrayChoosen(true);
+                    LuxraySong.musicLuxray();
+                    /**
+                     * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                     * en caso contrario se actualiza el del jugador 2
+                     */
+                    if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                        contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelLuxrayBothPlayers(), BorderLayout.WEST);
+                    }
+                    else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                        contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelLuxrayBothPlayers(), BorderLayout.EAST);
+                    }
                 }
-                else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
-                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelLuxrayBothPlayers(), BorderLayout.EAST);
-                }
+
             }
         });
 
@@ -367,17 +400,21 @@ public class SelectionPokemon extends JFrame {
             }
             @Override
             public void mouseClicked(MouseEvent e) {
-                MarshadowSong.musicMarshadow();
-                /**
-                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
-                 * en caso contrario se actualiza el del jugador 2
-                 */
-                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
-                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelMarshadowBothPlayers(), BorderLayout.WEST);
+                if(!MethosInterfaceSelectionPokemon.isWasMarshadowChoosen()){
+                    MethosInterfaceSelectionPokemon.setWasMarshadowChoosen(true);
+                    MarshadowSong.musicMarshadow();
+                    /**
+                     * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                     * en caso contrario se actualiza el del jugador 2
+                     */
+                    if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                        contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelMarshadowBothPlayers(), BorderLayout.WEST);
+                    }
+                    else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                        contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelMarshadowBothPlayers(), BorderLayout.EAST);
+                    }
                 }
-                else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
-                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelMarshadowBothPlayers(), BorderLayout.EAST);
-                }
+
             }
         });
 
@@ -399,17 +436,21 @@ public class SelectionPokemon extends JFrame {
             }
             @Override
             public void mouseClicked(MouseEvent e) {
-                MiloticSong.musicMilotic();
-                /**
-                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
-                 * en caso contrario se actualiza el del jugador 2
-                 */
-                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
-                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelMiloticBothPlayers(), BorderLayout.WEST);
+                if(!MethosInterfaceSelectionPokemon.isWasMiloticChoosen()){
+                    MethosInterfaceSelectionPokemon.setWasMiloticChoosen(true);
+                    MiloticSong.musicMilotic();
+                    /**
+                     * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                     * en caso contrario se actualiza el del jugador 2
+                     */
+                    if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                        contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelMiloticBothPlayers(), BorderLayout.WEST);
+                    }
+                    else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                        contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelMiloticBothPlayers(), BorderLayout.EAST);
+                    }
                 }
-                else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
-                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelMiloticBothPlayers(), BorderLayout.EAST);
-                }
+
             }
         });
 
@@ -431,17 +472,21 @@ public class SelectionPokemon extends JFrame {
             }
             @Override
             public void mouseClicked(MouseEvent e) {
-                SnorlaxSong.musicSnorlax();
-                /**
-                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
-                 * en caso contrario se actualiza el del jugador 2
-                 */
-                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
-                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelSnorlaxBothPlayers(), BorderLayout.WEST);
+                if(!MethosInterfaceSelectionPokemon.isWasSnorlaxChoosen()){
+                    MethosInterfaceSelectionPokemon.setWasSnorlaxChoosen(true);
+                    SnorlaxSong.musicSnorlax();
+                    /**
+                     * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                     * en caso contrario se actualiza el del jugador 2
+                     */
+                    if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                        contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelSnorlaxBothPlayers(), BorderLayout.WEST);
+                    }
+                    else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                        contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelSnorlaxBothPlayers(), BorderLayout.EAST);
+                    }
                 }
-                else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
-                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelSnorlaxBothPlayers(), BorderLayout.EAST);
-                }
+
             }
         });
 
@@ -463,17 +508,21 @@ public class SelectionPokemon extends JFrame {
             }
             @Override
             public void mouseClicked(MouseEvent e) {
-                TinkatonSong.musicTinkaton();
-                /**
-                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
-                 * en caso contrario se actualiza el del jugador 2
-                 */
-                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
-                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelTinkatonBothPlayers(), BorderLayout.WEST);
+                if(!MethosInterfaceSelectionPokemon.isWasTinkatonChoosen()){
+                    MethosInterfaceSelectionPokemon.setWasTinkatonChoosen(true);
+                    TinkatonSong.musicTinkaton();
+                    /**
+                     * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                     * en caso contrario se actualiza el del jugador 2
+                     */
+                    if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                        contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelTinkatonBothPlayers(), BorderLayout.WEST);
+                    }
+                    else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                        contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelTinkatonBothPlayers(), BorderLayout.EAST);
+                    }
                 }
-                else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
-                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelTinkatonBothPlayers(), BorderLayout.EAST);
-                }
+
             }
         });
 
@@ -495,17 +544,21 @@ public class SelectionPokemon extends JFrame {
             }
             @Override
             public void mouseClicked(MouseEvent e) {
-                TyranitarSong.musicTyranitar();
-                /**
-                 * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
-                 * en caso contrario se actualiza el del jugador 2
-                 */
-                if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
-                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelTyranitarBothPlayers(), BorderLayout.WEST);
+                if(!MethosInterfaceSelectionPokemon.isWasTyranitarChoosen()){
+                    MethosInterfaceSelectionPokemon.setWasTyranitarChoosen(true);
+                    TyranitarSong.musicTyranitar();
+                    /**
+                     * si el ganador del sorteo es el jugador 1, se actualiza el panel del jugador 1
+                     * en caso contrario se actualiza el del jugador 2
+                     */
+                    if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer1Luck.getAliasTextPlayer1().getText())){
+                        contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelTyranitarBothPlayers(), BorderLayout.WEST);
+                    }
+                    else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
+                        contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelTyranitarBothPlayers(), BorderLayout.EAST);
+                    }
                 }
-                else if(MethodsInterfaceLuck.getAliasWinnerLuck().equalsIgnoreCase(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText())){
-                    contentPanel.add(MethosInterfaceSelectionPokemon.updatePanelTyranitarBothPlayers(), BorderLayout.EAST);
-                }
+
             }
         });
         /**

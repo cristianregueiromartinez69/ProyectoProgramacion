@@ -1237,7 +1237,7 @@ public class AttacksSongs {
             /**
              * Cargar el archivo de audio
              */
-            File audioFile = new File("canciones/puñotruenosonido.wav");
+            File audioFile = new File("canciones/puñotruenosonido .wav");
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
 
             /**

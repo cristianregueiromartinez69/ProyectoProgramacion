@@ -265,6 +265,12 @@ public class MethodsLogicalAccountCreate {
 
 
     /**
+     * metodo para comprobar que el alias introducido por el jugador 1 no sea igual al del jugador 2
+     */
+    public static boolean check2AliasAreTheSame(String alias1, String alias2){
+        return alias1.equals(alias2);
+    }
+    /**
      * getters y setters de los atributos que nos servirán para poner información en el hashmap de players
      * @return el valor correspondiente
      */
