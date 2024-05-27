@@ -1,4 +1,4 @@
-**Proyecto de programacion**
+![batalla8](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/dc96963d-1c7e-4c00-9d66-e25eaa9bc652)**Proyecto de programacion**
 integrantes: José María Cao Baqueiro y Cristian Regueiro Martínez
 
 ***Semana 0 del proyecto***
@@ -195,10 +195,26 @@ chema:
 
 ***explicacion de la interfaz batalla***
 cuando los 2 jugadores han escogido a sus 3 pokemons, nos vamos a la batalla
+![batalla1](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/159d71fc-2769-4c5e-a21c-4884f5883354)
+
+
 1. el jugador 1 esta a la izquierda y el 2 a la derecha
+
+
 2. los 2 jugadores tienen ataques para hacer y pueden cambiar de pokemon
+![batalla2](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/1ee57f29-69af-445f-9d93-881d6919c18b)
+![batalla3](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/52f313eb-e45e-4933-9ec0-98136f6a5b4c)
+
+
 3. cuando se cambia de pokemon, se actualizan todos los datos
+![batalla4](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/eee21d0b-d470-4d85-9146-fe8f98807ab2)
+![batalla5](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/9810e598-606d-421d-895f-0f35b3b79476)
+
+
 4. La formulas de daño esta hecha, falta implementarla para reducir la vida del oponente
+![batalla6](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/3621d330-3fd3-41c9-bfa4-74b3eee0f9ae)
+
+
 5. será un combate por turnos y cuando los 3 pokemons de un rival mueran, habrá un ganador
 
 **problemas encontramos**
@@ -232,15 +248,27 @@ chema:
 ***explicacion de la interfaz battala (actualizada y acabada)***
 Esta ha sido la interfaz más dificil de todas, pero la hemos acabado.
 1. los 2 jugadores tienen 3 pokemons
+
 2. los 2 jugadores tienen 4 ataques
 3. los 2 jugadores pueden cambiar de pokemon
 4. los 2 jugadores tienen una barra de vida
 5. los 2 jugadores tienen un escenario de batalla
 6. los 2 jugadores tienen un text area con la información de la batalla
+![batalla7](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/57e5979a-daee-4038-800d-2ae2075d63d9)
+
+
 7. los 2 jugadores tienen un sonido de ataque y cambio de pokemon
 8. el pokemon más rapido ataca primero y luego le toca al otro
+![batalla8](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/9c701fbd-422c-4790-a295-b7fae7a32a0b)
+
+
 9. cuando un pokemon muere, se fuerza al cambio de pokemon
+![batalla9](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/ef1b011a-d8e6-4769-aaac-c5f03d5f2abe)
+
+
 10. cuando los 3 pokemons de un jugador mueren, se acaba la batalla
+
+
 11. cuando se acaba la batalla, se muestra el ganador en el hall de la fama
 
 ***problemas encontrados***
