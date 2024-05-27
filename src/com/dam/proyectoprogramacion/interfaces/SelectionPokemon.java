@@ -43,6 +43,9 @@ public class SelectionPokemon extends JFrame {
      * constructor de la clase
      */
     public SelectionPokemon(){
+
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
         /**
          * defenimos características de la interfaz
          */
