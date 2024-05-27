@@ -64,6 +64,8 @@ public class Battle extends JFrame {
      */
     public Battle(){
 
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
         /**
          * lo hacemos visible y le damos un layout
          */
@@ -647,7 +649,8 @@ public class Battle extends JFrame {
             MusicBattleGame.stopMusic();
             HallOfFameSong.hallOfFameMusic();
             dispose();
-            new HallOfFame();
+            HallOfFame hall = new HallOfFame();
+            hall.setVisible(true);
 
         }
         /**
