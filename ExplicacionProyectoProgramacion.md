@@ -1,4 +1,3 @@
-![batalla8](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/dc96963d-1c7e-4c00-9d66-e25eaa9bc652)**Proyecto de programacion**
 integrantes: José María Cao Baqueiro y Cristian Regueiro Martínez
 
 ***Semana 0 del proyecto***
