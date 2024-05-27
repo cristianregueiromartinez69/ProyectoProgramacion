@@ -20,6 +20,9 @@ public class MainMenu extends JFrame {
      */
     ButtonInterfaceMenu buttonsMenu = new ButtonInterfaceMenu();
     public MainMenu() {
+
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
         /**
          * metodo para llamar a la musica que sonará en el menu principal
          */
@@ -126,14 +129,19 @@ public class MainMenu extends JFrame {
         account.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new AccountCreate();
+                MainMenu.this.dispose();
+                AccountCreate accountCreate = new AccountCreate();
+                accountCreate.setVisible(true);
 
             }
         });
         battle.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new Luck();
+                MainMenu.this.dispose();
+                Luck luck = new Luck();
+                luck.setVisible(true);
+
             }
         });
 
