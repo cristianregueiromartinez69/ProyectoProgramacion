@@ -12,6 +12,7 @@ import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * interfaz de la suerte en la que se decide quien tira primero
@@ -73,6 +74,9 @@ public class Luck extends JFrame {
     GridBagConstraints gbc;
 
     public Luck() {
+
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
         /**
          * establecemos un titulo y dimensiones
          * lo hacemos visible
@@ -306,7 +310,15 @@ public class Luck extends JFrame {
         ButtonInterfaceLuck.getConfirmbuttonPlayer1().addActionListener(this::LuckChoiceMadePlayer1);
         ButtonInterfaceLuck2.getConfirmbuttonPlayer2().addActionListener(this::LuckChoiceMadePlayer2);
         ButtonInterfaceLuck.getFinishButton().addActionListener(this::winnerFaceOrTail);
-        ButtonInterfaceLuck.getSelectionButton().addActionListener(this::goToSelectionInterface);
+
+        ButtonInterfaceLuck.getSelectionButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Luck.this.dispose();
+                SelectionPokemon selectionPokemon = new SelectionPokemon();
+                selectionPokemon.setVisible(true);
+            }
+        });
 
 
 
@@ -572,9 +584,8 @@ public class Luck extends JFrame {
      * @param e el objeto de tipo actionevent
      */
     public void winnerFaceOrTail(ActionEvent e){
-        MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
-        new SelectionPokemon();
-             /**
+
+        /**
          * si se cumple la condicion de este metodo, se pued epulsar el boton
          * el metodo consiste en saber si está editable el alias del jugador 1 y 2
          */
