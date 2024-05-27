@@ -57,6 +57,9 @@ public class AccountCreate extends JFrame {
 
 
     public AccountCreate() {
+
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
         /**
          * le damos visibilidad y ponemos un titulo al frame
          */
@@ -268,10 +271,20 @@ public class AccountCreate extends JFrame {
                 /**
                  * este metodo cierra la ventana y nos llevará al menú
                  */
-                dispose();
+                AccountCreate.this.dispose();
+                MainMenu menu = new MainMenu();
+                menu.setVisible(true);
             }
         });
-        startButton.addActionListener(this::completeInformationBothPlayers);
+        startButton.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AccountCreate.this.dispose();
+                MainMenu menu = new MainMenu();
+                menu.setVisible(true);
+            }
+        });
 
     }
 
