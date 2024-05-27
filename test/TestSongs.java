@@ -70,4 +70,7 @@ public class TestSongs {
         verify(mockClip).open(mockAudioInputStream);
         verify(mockClip).start();
     }
+
+
+    //Estos son algunos test de los sonidos de ataques, los demás son iguales ya que solo camia la pita de audio
 }
