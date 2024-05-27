@@ -405,6 +405,8 @@ public class Luck extends JFrame {
          * al lado saldrá un boton que confirmacion
          */
         if(e.getSource() == ButtonInterfaceLuck.getFaceButton()){
+            MethodsInterfaceLuck.setHaveIChoosenFace(true);
+            MethodsInterfaceLuck.setHaveIChoosenTail(false);
             confirmFaceOrTailPlayer1.removeAll();
             confirmFaceOrTailPlayer1.revalidate();
             confirmFaceOrTailPlayer1.repaint();
@@ -438,6 +440,8 @@ public class Luck extends JFrame {
          * al lado saldrá un boton que confirmacion
          */
         else if(e.getSource() == ButtonInterfaceLuck.getTailButton()){
+            MethodsInterfaceLuck.setHaveIChoosenFace(false);
+            MethodsInterfaceLuck.setHaveIChoosenTail(true);
             confirmFaceOrTailPlayer1.removeAll();
             confirmFaceOrTailPlayer1.revalidate();
             confirmFaceOrTailPlayer1.repaint();
@@ -476,9 +480,13 @@ public class Luck extends JFrame {
          * al lado saldrá un boton que confirmacion
          */
         if(e.getSource() == ButtonInterfaceLuck.getFaceButton()){
+            MethodsInterfaceLuck.setHaveIChoosenFace(true);
+            MethodsInterfaceLuck.setHaveIChoosenTail(false);
             confirmFaceOrTailPlayer2.removeAll();
             confirmFaceOrTailPlayer2.revalidate();
             confirmFaceOrTailPlayer2.repaint();
+
+
             /**
              * recogemos en variables el alias y la eleccion de cara o cruz
              * esto será usado para introducirlo en un hashmap
@@ -503,15 +511,19 @@ public class Luck extends JFrame {
             gbc.gridy = 2;
             contentPanelPlayer1.add(confirmFaceOrTailPlayer2, gbc);
 
+
         }
         /**
          * si has elegido cruz, saldrá una imagen que será la cruz de la moneda
          * al lado saldrá un boton que confirmacion
          */
         else if(e.getSource() == ButtonInterfaceLuck.getTailButton()){
+            MethodsInterfaceLuck.setHaveIChoosenFace(false);
+            MethodsInterfaceLuck.setHaveIChoosenTail(true);
             confirmFaceOrTailPlayer2.removeAll();
             confirmFaceOrTailPlayer2.revalidate();
             confirmFaceOrTailPlayer2.repaint();
+
             /**
              * recogemos en variables el alias y la eleccion de cara o cruz
              * esto será usado para introducirlo en un hashmap
@@ -546,11 +558,11 @@ public class Luck extends JFrame {
      * @param e el objeto de tipo ActionEvent
      */
     public void LuckChoiceMadePlayer1(ActionEvent e){
+            MethodsInterfaceLuck.disableFaceOrTail(MethodsInterfaceLuck.isHaveIChoosenFace(), MethodsInterfaceLuck.isHaveIChoosenTail());
             MethodsInterfaceLuck.disableButtonsAndAliasesPlayer1Luck();
             MethodsInterfaceLuck.setLuckPlayers(MethodsInterfaceLuck.getAuxMapAliasPlayer1Luck(),
                     MethodsInterfaceLuck.getChosenItem());
             valuePlayer1 = MethodsInterfaceLuck.takeValuesPlayer1(MethodsInterfaceLuck.getLuckPlayers());
-
 
 
     }
@@ -560,6 +572,7 @@ public class Luck extends JFrame {
      * @param e el objeto de tipo ActionEvent
      */
     public void LuckChoiceMadePlayer2(ActionEvent e){
+        MethodsInterfaceLuck.disableFaceOrTail(MethodsInterfaceLuck.isHaveIChoosenFace(), MethodsInterfaceLuck.isHaveIChoosenTail());
         MethodsInterfaceLuck.disableButtonsAndAliasesPlayer2Luck();
         MethodsInterfaceLuck.setLuckPlayers(MethodsInterfaceLuck.getAuxMapAliasPlayer2Luck(),
                 MethodsInterfaceLuck.getChosenItem2());
