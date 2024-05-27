@@ -15,6 +15,7 @@ public class TestSelectionPokemon {
         assertNotNull(drampa);
         assertEquals("Drampa", drampa.getName());
         assertEquals("normal-dragon", drampa.getType());
+        assertEquals(50, (int) drampa.getLevel());
 
     }
 
