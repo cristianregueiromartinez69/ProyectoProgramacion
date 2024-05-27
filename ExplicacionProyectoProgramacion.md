@@ -4,7 +4,7 @@ integrantes: José María Cao Baqueiro y Cristian Regueiro Martínez
 ***Semana 0 del proyecto***
 __Planificacion__:
 Cristian: Me encargué de hacer el diagrama de flujo del proyecto en el que se explicaba muy detalladamente todo el flujo de ejecución que iba a hacer el programa
-
+![diagramadeflujoinicial.png](..%2F..%2F..%2FEscritorio%2FimagenesReadmeProyectoProgramacion%2Fdiagramadeflujoinicial.png)
 
 Me encargué de hacer el pdf con todo lo que había que incluir en el proyecto, como las tencologías a utilizar, incluir el diagrama de flujo... entre otras
 
