@@ -20,9 +20,14 @@ public class HallOfFame extends JFrame {
     ButtonInterfaceSkipHall buttonsHall = new ButtonInterfaceSkipHall();
 
 
-    public void HallofFame() {
+    public HallOfFame() {
 
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
+        setVisible(true);
+        setLayout(new BorderLayout());
+        setBounds(600,600,600,600);
+
         /**
          * Llamar a la musica que va a sonar en el hall of fame
          */
@@ -154,14 +159,7 @@ public class HallOfFame extends JFrame {
         return playAgainPannel;
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                HallOfFame ventana = new HallOfFame();
-                ventana.HallofFame();
-            }
-        });
-    }
+
 
     /**
      * metodos para realizar los paneles de los pokemon y devolverlos
