@@ -4,11 +4,20 @@ integrantes: José María Cao Baqueiro y Cristian Regueiro Martínez
 ***Semana 0 del proyecto***
 __Planificacion__:
 Cristian: Me encargué de hacer el diagrama de flujo del proyecto en el que se explicaba muy detalladamente todo el flujo de ejecución que iba a hacer el programa
-![diagramadeflujoinicial.png](..%2F..%2F..%2FEscritorio%2FimagenesReadmeProyectoProgramacion%2Fdiagramadeflujoinicial.png)
+![diagramadeflujoinicial](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/c5a178c3-4892-48c4-b75b-5ab27a2023ef)
 
-Me encargué de hacer el pdf con todo lo que había que incluir en el proyecto, como las tencologías a utilizar, incluir el diagrama de flujo... entre otras
+ 
+Me encargué de hacer el pdf con todo lo que había que incluir en el proyecto, como las tencologías a utilizar, diagrama de flujo...
+![pdfinicioproyecto1](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/0edaac28-03ff-4356-bf9d-cb3a18c39e8b)
+![pdfinicioproyecto2](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/e0a40abb-a4c7-4e50-b036-31aa80f86bd8)
+![pdfinicioproyecto3](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/cca0c8fc-dedf-42d8-b696-78453e615063)
+
+
 
 Chema: Se encargó de hacer el diagrama de clases (supér grande xD)
+![diagramadeclasesinicial](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/15e38c50-1f2b-4ed9-b862-7eaa2fd245fb)
+
+
 
 ***Semana 1 del proyecto***
 Las planificaciones las vamos a ir haciendo semana a semana.
@@ -30,15 +39,35 @@ Cristian:
 14. Realiación de los metodos de la interfaz crear cuenta
 15. Empezando a hacer la interfaz de luck
 
+***Explicacion de la interfaz del menu principal***
+No tiene mucho que explicar la verdad:
+1. tenemos una imagen de fondo
+2. tenemos 2 botones, uno de batalla y otro de crear cuenta
+3. Si quieres combatir, necesitas si o si crear una cuenta
+4. Una vez la tengas creada, te vas a batalla para empezar los preparativos de la pelea
+![menuprincipal](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/860e9925-bc34-42a8-bc68-b58266840a28)
+
+
+
 ***Explicación del funcionamiento de la interfaz crear cuenta***
 Para poder hacer un combate, tienes que tener una cuenta creada.
 1. pulsas el boton de crear cuenta en el menu de inicio
 2. hay 2 bloques, el del jugador 1 y 2
+
+![crearcuenta1](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/5049a7e7-c004-439f-88ca-38c2769e1bfd)
+
 3. introduces el alias que quieras y escoges un logo
 4. Es obligatorio introducir ambas cosas
 5. Si ya acabaste le das a el boton de listo
+
+![crearcuenta2](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/d3d237fb-64a4-4faa-b83d-7fe8e86e0113)
+
 6. Una vez le diste al boton de listo, se bloquean todos los botones y esperas al jugador 2
 7. Lo mismo para el jugador 2
+
+![crearcuenta3](https://github.com/cristianregueiromartinez69/ProyectoProgramacion/assets/145323617/b0741f5d-1eb9-4709-ab76-07db2dafc48c)
+
+
 8. Una vez acabaron los 2, le das al boton de finish
 9. Se cierra la ventana
 
