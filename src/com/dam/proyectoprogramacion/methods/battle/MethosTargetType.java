@@ -7,6 +7,12 @@ package com.dam.proyectoprogramacion.methods.battle;
  */
 public class MethosTargetType {
 
+    /**
+     * metodo para saber el resultado de un ataque  al objetivo
+     * @param typeAttackPokemon el tipo del pokemon atacante
+     * @param typeTargetPokemon el tipo del pokemon rival
+     * @return el resultado
+     */
     public static String getResultOfAttacksBothPlayer(String typeAttackPokemon, String typeTargetPokemon){
 
         if(typeAttackPokemon.equalsIgnoreCase("acero")){
@@ -132,7 +138,7 @@ public class MethosTargetType {
             return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("agua-acero")){
-            return MethodsTextAreaBattlePlayer1.VERY_INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("normal")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
@@ -187,7 +193,7 @@ public class MethosTargetType {
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("hada-acero")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.VERY_INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("fantasma-veneno")){
             return MethodsTextAreaBattlePlayer1.VERY_INEFFECTIVE;
@@ -196,7 +202,7 @@ public class MethosTargetType {
             return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("fuego-lucha")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.VERY_INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("lucha-acero")){
             return MethodsTextAreaBattlePlayer1.VERY_INEFFECTIVE;
