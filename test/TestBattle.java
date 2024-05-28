@@ -1,4 +1,5 @@
 import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
+import com.dam.proyectoprogramacion.methods.battle.DataNamesIconsColorsAttacksAndPokemonsPlayer1;
 import com.dam.proyectoprogramacion.methods.battle.MethodsBattlePlayer1;
 import com.dam.proyectoprogramacion.methods.battle.MethodsBattlePokemon;
 import com.dam.proyectoprogramacion.methods.battle.MethodsTextAreaBattlePlayer1;
@@ -219,6 +220,25 @@ public class TestBattle {
     }
 
 
+    @Test
+    public void testGetNamePokemonToChangePlayer1() {
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconPokemon1("/path/to/pokemon1.png");
+        assertEquals("pokemon1", MethodsTextAreaBattlePlayer1.getNamePokemon1ToChangePLayer1());
+
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconPokemon2("/path/to/pokemon2.png");
+        assertEquals("pokemon2", MethodsTextAreaBattlePlayer1.getNamePokemon2ToChangePLayer1());
+
+        DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconPokemon3("/path/to/pokemon3.png");
+        assertEquals("pokemon3", MethodsTextAreaBattlePlayer1.getNamePokemon3ToChangePLayer1());
+
+    }
+
+    @Test
+    public void testKnowTheNameOfTheOpposingPokemon() {
+        ButtonInterfaceCombat.setPathPokemonBattlePlayer2("/path/to/opposingPokemon.png");
+        assertEquals("opposingPokemon", MethodsTextAreaBattlePlayer1.KnowTheNameOfTheOpposingPokemon());
+
+    }
 
 
 }
