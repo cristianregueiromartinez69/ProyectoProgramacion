@@ -1,5 +1,6 @@
 import com.dam.proyectoprogramacion.methods.accountcreate.MethodsInterfaceAccountCreate;
 import com.dam.proyectoprogramacion.methods.battle.MethodsBattlePokemon;
+import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.pokemon.*;
 import com.dam.proyectoprogramacion.methods.selectionpokemon.*;
 import org.junit.Assert;
@@ -29,4 +30,6 @@ public class TestAccountCreate {
         Assertions.assertTrue(players.containsKey(alias));
         assertEquals(image, players.get(alias));
     }
+
+
 }
