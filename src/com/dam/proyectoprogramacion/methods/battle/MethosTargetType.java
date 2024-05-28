@@ -427,7 +427,7 @@ public class MethosTargetType {
             return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("agua-acero")){
-            return MethodsTextAreaBattlePlayer1.NEUTRAL;
+            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("normal")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
@@ -442,10 +442,10 @@ public class MethosTargetType {
             return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("fuego-lucha")){
-            return MethodsTextAreaBattlePlayer1.EFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("lucha-acero")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("electrico")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
@@ -685,7 +685,7 @@ public class MethosTargetType {
             return MethodsTextAreaBattlePlayer1.EFFECTIVE;
         }
         else if(targetType.equalsIgnoreCase("lucha-acero")){
-            return MethodsTextAreaBattlePlayer1.INEFFECTIVE;
+            return MethodsTextAreaBattlePlayer1.NEUTRAL;
         }
         else if(targetType.equalsIgnoreCase("electrico")){
             return MethodsTextAreaBattlePlayer1.NEUTRAL;
