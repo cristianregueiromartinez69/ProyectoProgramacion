@@ -1,5 +1,7 @@
+import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
 import com.dam.proyectoprogramacion.methods.battle.MethodsBattlePlayer1;
 import com.dam.proyectoprogramacion.methods.battle.MethodsBattlePokemon;
+import com.dam.proyectoprogramacion.methods.battle.MethodsTextAreaBattlePlayer1;
 import com.dam.proyectoprogramacion.pokemon.*;
 import com.dam.proyectoprogramacion.methods.selectionpokemon.*;
 import org.junit.Assert;
@@ -11,6 +13,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Optional;
 
+import static com.dam.proyectoprogramacion.methods.battle.MethodsBattlePokemon.*;
 import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -169,6 +172,52 @@ public class TestBattle {
 
 
     }
+
+
+
+
+    @Test
+    @DisplayName("comprobar que se añaden valores a lifePokemonsPlayer1 correctamente")
+    public void testPutValuesLifePokemonsPlayer1() {
+        MethodsBattlePokemon.putValuesLifePokemonsPlayer1("Pokemon1", 50);
+        assertEquals(50, MethodsBattlePokemon.getLifePokemonsPlayer1().get("Pokemon1"));
+
+        MethodsBattlePokemon.putValuesLifePokemonsPlayer1("Pokemon2", 100);
+        assertEquals(100, MethodsBattlePokemon.getLifePokemonsPlayer1().get("Pokemon2"));
+    }
+
+
+
+    @Test
+    public void testGetEffectivenessForTheOpposingPokemonPlayer1() {
+        assertEquals(MethodsBattlePokemon.NULL_DAMAGE, MethodsBattlePokemon.getEffectivenessForTheOpposingPokemonPlayer1("fantasma", "normal"));
+        assertEquals(MethodsBattlePokemon.VERY_INEFFECTIVE_DAMAGE, MethodsBattlePokemon.getEffectivenessForTheOpposingPokemonPlayer1("acero", "agua-acero"));
+        assertEquals(MethodsBattlePokemon.INEFFECTIVE_DAMAGE, MethodsBattlePokemon.getEffectivenessForTheOpposingPokemonPlayer1("fuego", "agua"));
+        assertEquals(MethodsBattlePokemon.NEUTRAL_DAMAGE, MethodsBattlePokemon.getEffectivenessForTheOpposingPokemonPlayer1("hada", "electrico"));
+        assertEquals(MethodsBattlePokemon.EFFECTIVE_DAMAGE, MethodsBattlePokemon.getEffectivenessForTheOpposingPokemonPlayer1("lucha", "agua-acero"));
+        assertEquals(MethodsBattlePokemon.SUPER_EFFECTIVE_DAMAGE, MethodsBattlePokemon.getEffectivenessForTheOpposingPokemonPlayer1("lucha", "roca-siniestro"));
+    }
+
+
+    @Test
+    @DisplayName("comprobar que el stab se hace correctamente")
+    public void testGetBonificationStabAttacksPokemonInBattlePlayer1() {
+
+         MethosInterfaceSelectionPokemon.getPokemonsPLayer1().add(MethosInterfaceSelectionPokemonCreatePokemons.makeTinkatonObject());
+
+
+        ButtonInterfaceCombat.setPathPokemonBattlePlayer1("imagenes/tinkaton.png");
+        assertEquals(MethodsBattlePokemon.STAB, MethodsBattlePokemon.getBonificationStabAttacksPokemonInBattlePlayer1("hada"));
+
+        assertEquals(MethodsBattlePokemon.NOT_STAB, MethodsBattlePokemon.getBonificationStabAttacksPokemonInBattlePlayer1("siniestro"));
+
+        ButtonInterfaceCombat.setPathPokemonBattlePlayer1("imagenes/lucario.png");
+
+        MethosInterfaceSelectionPokemon.getPokemonsPLayer1().add(MethosInterfaceSelectionPokemonCreatePokemons.makeLucarioObject());
+
+        assertEquals(MethodsBattlePokemon.STAB, MethodsBattlePokemon.getBonificationStabAttacksPokemonInBattlePlayer1("lucha"));
+    }
+
 
 
 
