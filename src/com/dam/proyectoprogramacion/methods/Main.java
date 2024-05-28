@@ -10,7 +10,7 @@ public class Main {
 
 
 
-       //TODO: hacer que cuando un pokemon tenga vida 0, salga un sonido, la imagen se vaya hacia abajo y salga el panel de cambio
+       //TODO: hacer que se integre todo con los ataques actualizados de chema y hall of fame, diagrama de clases y presentacion.
 
 
 
