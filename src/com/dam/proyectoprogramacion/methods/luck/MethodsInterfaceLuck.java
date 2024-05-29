@@ -432,6 +432,8 @@ public class MethodsInterfaceLuck {
     public static void setHaveIChoosenTail(boolean haveIChoosenTail) {
         MethodsInterfaceLuck.haveIChoosenTail = haveIChoosenTail;
     }
+
+
 }
 
 
