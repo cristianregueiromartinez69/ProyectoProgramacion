@@ -200,6 +200,7 @@ public class TestBattle {
 
 
     @Test
+    @DisplayName("Comprobar efectividad de ataques del jugador 1")
     public void testGetEffectivenessForTheOpposingPokemonPlayer1() {
         assertEquals(MethodsBattlePokemon.NULL_DAMAGE, MethodsBattlePokemon.getEffectivenessForTheOpposingPokemonPlayer1("fantasma", "normal"));
         assertEquals(MethodsBattlePokemon.VERY_INEFFECTIVE_DAMAGE, MethodsBattlePokemon.getEffectivenessForTheOpposingPokemonPlayer1("acero", "agua-acero"));
