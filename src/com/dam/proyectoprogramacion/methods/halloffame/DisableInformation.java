@@ -1,6 +1,7 @@
 package com.dam.proyectoprogramacion.methods.halloffame;
 import com.dam.proyectoprogramacion.methods.luck.MethodsInterfaceLuck;
 import com.dam.proyectoprogramacion.methods.selectionpokemon.MethosInterfaceSelectionPokemon;
+import com.dam.proyectoprogramacion.methods.battle.*;
 /**
  * clase con metodos para deshabilitar la informacion de las intefaces
  * @author cristian
@@ -41,6 +42,30 @@ public class DisableInformation {
             MethosInterfaceSelectionPokemon.setWasTinkatonChoosen(false);
             MethosInterfaceSelectionPokemon.setWasTyranitarChoosen(false);
      }
+
+     public static void disableInformationBattlePlayer1(){
+            DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNameAttack1(null);
+            DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNameAttack2(null);
+            DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNameAttack3(null);
+            DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNameAttack4(null);
+            DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack1(null);
+            DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack2(null);
+            DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack3(null);
+            DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconAttack4(null);
+            DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack1(null);
+            DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack2(null);
+            DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack3(null);
+            DataNamesIconsColorsAttacksAndPokemonsPlayer1.setColorBackgroundAttack4(null);
+            DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconPokemon1(null);
+            DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconPokemon2(null);
+            DataNamesIconsColorsAttacksAndPokemonsPlayer1.setPathIconPokemon3(null);
+            DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNamePokemon1(null);
+            DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNamePokemon2(null);
+            DataNamesIconsColorsAttacksAndPokemonsPlayer1.setNamePokemon3(null);
+            DataNamesIconsColorsAttacksAndPokemonsPlayer1.setImagePokemonInBattlePlayer1(null);
+     }
+
+
 
 
 }
