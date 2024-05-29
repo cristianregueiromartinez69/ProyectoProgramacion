@@ -688,4 +688,6 @@ public class Luck extends JFrame {
     public static void setAuxWinnerPanelPLayer2(JPanel auxWinnerPanelPLayer2) {
         Luck.auxWinnerPanelPLayer2 = auxWinnerPanelPLayer2;
     }
+
+
 }
