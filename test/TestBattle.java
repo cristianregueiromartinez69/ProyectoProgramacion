@@ -581,4 +581,70 @@ public class TestBattle {
     }
 
 
+    @Test
+    @DisplayName("comprobar la vida de los pokemons en batalla")
+    public void testGetLifePokemonInBattlePlayer1() {
+        MethosInterfaceSelectionPokemon.getPokemonsPLayer1().add(MethosInterfaceSelectionPokemonCreatePokemons.makeDrampaObject());
+        MethosInterfaceSelectionPokemon.getPokemonsPLayer1().add(MethosInterfaceSelectionPokemonCreatePokemons.makeEmpoleonObject());
+        MethosInterfaceSelectionPokemon.getPokemonsPLayer1().add(MethosInterfaceSelectionPokemonCreatePokemons.makeGarchompObject());
+        MethosInterfaceSelectionPokemon.getPokemonsPLayer1().add(MethosInterfaceSelectionPokemonCreatePokemons.makeLucarioObject());
+        MethosInterfaceSelectionPokemon.getPokemonsPLayer1().add(MethosInterfaceSelectionPokemonCreatePokemons.makeTinkatonObject());
+        MethosInterfaceSelectionPokemon.getPokemonsPLayer1().add(MethosInterfaceSelectionPokemonCreatePokemons.makeInfernapeObject());
+        MethosInterfaceSelectionPokemon.getPokemonsPLayer1().add(MethosInterfaceSelectionPokemonCreatePokemons.makeGengarObject());
+        MethosInterfaceSelectionPokemon.getPokemonsPLayer1().add(MethosInterfaceSelectionPokemonCreatePokemons.makeTyranitarObject());
+        MethosInterfaceSelectionPokemon.getPokemonsPLayer1().add(MethosInterfaceSelectionPokemonCreatePokemons.makeLuxrayObject());
+        MethosInterfaceSelectionPokemon.getPokemonsPLayer1().add(MethosInterfaceSelectionPokemonCreatePokemons.makeSnorlaxObject());
+        MethosInterfaceSelectionPokemon.getPokemonsPLayer1().add(MethosInterfaceSelectionPokemonCreatePokemons.makeMarshadowObject());
+        MethosInterfaceSelectionPokemon.getPokemonsPLayer1().add(MethosInterfaceSelectionPokemonCreatePokemons.makeMiloticObject());
+
+        assertEquals(185, MethodsLifeBattlePokemonPlayer1.getLifePokemonInBattlePlayer1("Drampa"));
+        assertEquals(191, MethodsLifeBattlePokemonPlayer1.getLifePokemonInBattlePlayer1("Empoleon"));
+        assertEquals(195, MethodsLifeBattlePokemonPlayer1.getLifePokemonInBattlePlayer1("Garchomp"));
+        assertEquals(150, MethodsLifeBattlePokemonPlayer1.getLifePokemonInBattlePlayer1("Lucario"));
+        assertEquals(180, MethodsLifeBattlePokemonPlayer1.getLifePokemonInBattlePlayer1("Tinkaton"));
+        assertEquals(160, MethodsLifeBattlePokemonPlayer1.getLifePokemonInBattlePlayer1("Infernape"));
+        assertEquals(135, MethodsLifeBattlePokemonPlayer1.getLifePokemonInBattlePlayer1("Gengar"));
+        assertEquals(207, MethodsLifeBattlePokemonPlayer1.getLifePokemonInBattlePlayer1("Tyranitar"));
+        assertEquals(160, MethodsLifeBattlePokemonPlayer1.getLifePokemonInBattlePlayer1("Luxray"));
+        assertEquals(267, MethodsLifeBattlePokemonPlayer1.getLifePokemonInBattlePlayer1("Snorlax"));
+        assertEquals(170, MethodsLifeBattlePokemonPlayer1.getLifePokemonInBattlePlayer1("Marshadow"));
+        assertEquals(202, MethodsLifeBattlePokemonPlayer1.getLifePokemonInBattlePlayer1("Milotic"));
+
+        assertEquals(0, MethodsLifeBattlePokemonPlayer1.getLifePokemonInBattlePlayer1("Mewtwo"));
+    }
+
+    @Test
+    @DisplayName("comprobar daño que le haces al pokemon con un ataque")
+    public void testGetDamageAttacksPokemonInBattlePlayer1() {
+
+        ButtonInterfaceCombat.setPathPokemonBattlePlayer1("imagenes/luxray.png");
+
+        float damage = MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer1("electrico", "electrico", 108, 90, "agua", 102);
+        assertTrue(damage > 0);
+
+        damage = MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer1("electrico", "electrico", 108, 90, "dragon-tierra", 90);
+        assertEquals(0, damage);
+
+        ButtonInterfaceCombat.setPathPokemonBattlePlayer1("imagenes/infernape.png");
+        damage = MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer1("fuego-lucha", "fuego", 104, 120, "roca-siniestro", 105);
+        assertTrue(damage < 100);
+
+        damage = MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer1("fuego-lucha", "lucha", 104, 120, "roca-siniestro", 105);
+        assertTrue(damage > 150);
+
+        damage = MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer1("fuego-lucha", "bicho", 104, 70, "hada-acero", 91);
+        assertTrue(damage < 50);
+
+        ButtonInterfaceCombat.setPathPokemonBattlePlayer1("imagenes/tinkaton.png");
+        damage = MethodsBattlePokemon.getDamageAttacksPokemonInBattlePlayer1("hada-acero", "acero", 73, 160, "roca-siniestro", 105);
+        assertTrue(damage > 100);
+
+
+
+
+
+
+    }
+
+
 }
