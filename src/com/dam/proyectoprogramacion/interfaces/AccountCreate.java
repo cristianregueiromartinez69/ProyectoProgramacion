@@ -25,17 +25,6 @@ public class AccountCreate extends JFrame {
     private JPanel globalPlayerPanel1;
     private JPanel globalPlayerPanel2;
 
-    /**
-     * atributos privados de tipo JPanel para poner la información del jugador 1 y del jugador 2
-     */
-    private JPanel informationPlayerPanel1;
-    private JPanel informationPLayerPanel2;
-
-    /**
-     * atributos privados de tipo JPanel para poner los botones de listo del jugador 1 y del jugador 2
-     */
-    private JPanel confirmAreaPlayer1;
-    private JPanel ConfirmAreaPlayer2;
 
     /**
      * atributo privado de tipo JPanel para poner el boton de start de ambos jugadores cuando terminaron de crear la cuenta
@@ -414,6 +403,11 @@ public class AccountCreate extends JFrame {
         }
     }
 
+    /**
+     * metodo para confirmar la cuenta del jugador 2
+     *
+     * @param e este es el objeto de tipo actionlistener que será añadido a los botones
+     */
     public void selectNameAndIconPlayer2(ActionEvent e) {
 
         /**
