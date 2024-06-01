@@ -9,9 +9,12 @@ import java.sql.*;
  */
 public class Conexion {
     private Connection con;
-    private String usuario = "root";
-    private String contraseña = "debian";
-    private String url = "jdbc:postgresql://localhost:5432/postgres;";
+    private String usuario = "postgres";
+    private String contraseña = "postgres";
+    private String bd = "pokemon";
+    private String ip = "localhost";
+    private String puerto = "5432";
+    private String url = "jdbc:postgresql://"+ip+":"+puerto+"/"+bd;
 
 
     /**
