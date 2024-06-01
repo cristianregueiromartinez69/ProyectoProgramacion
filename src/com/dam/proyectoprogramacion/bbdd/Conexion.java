@@ -43,12 +43,11 @@ public class Conexion {
      * @param Weight Peso que va a tener el pokemon
      * @param Atacks Variable ataque el cual va a servir para identificar los ataques
      */
-    public void InsertarPokemon(String Name, String Type1,String Type2, Integer Level, Integer Life, String Sex, Integer Speed, Float Syze, Float Weight, String Atacks) {
-        String sql = "INSERT INTO Pokemon (Name, Type1,Type2, Level, Life, Sex, Speed, Syze, Weight, Attacks) VALUES (?,?,?,?,?,?,?,?,?,?)";
+    public void InsertarPokemon(String Name, String Type1, Integer Level, Integer Life, String Sex, Integer Speed, Float Syze, Float Weight, String Atacks) {
+        String sql = "INSERT INTO Pokemon (Name, Type1, Level, Life, Sex, Speed, Syze, Weight, Attacks) VALUES (?,?,?,?,?,?,?,?,?,?)";
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setString(1,Name);
             pstmt.setString(2,Type1);
-            pstmt.setString(3,Type2);
             pstmt.setInt(4,Level);
             pstmt.setInt(5,Life);
             pstmt.setString(6,Sex);
@@ -80,22 +79,6 @@ public class Conexion {
         String sql = "UPDATE Pokemon SET Type1 = ? WHERE Name = ?";
         try (PreparedStatement pstmt = con.prepareStatement(sql)){
             pstmt.setString(1,newType1);
-            pstmt.setString(2,Name);
-            int affectedRows = pstmt.executeUpdate();
-            if (affectedRows > 0) {
-                JOptionPane.showMessageDialog(null, "Actualizado exitosamente");
-            }else {
-                JOptionPane.showMessageDialog(null, "No se encontro el Pokemon");
-            }
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null,"Error al actualizar la tabla");
-        }
-    }
-
-    public void actualizarType2Pokemon(String Name, String newType2){
-        String sql = "UPDATE Pokemon SET Type2 = ? WHERE Name = ?";
-        try (PreparedStatement pstmt = con.prepareStatement(sql)){
-            pstmt.setString(1,newType2);
             pstmt.setString(2,Name);
             int affectedRows = pstmt.executeUpdate();
             if (affectedRows > 0) {
