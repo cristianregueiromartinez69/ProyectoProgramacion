@@ -136,19 +136,17 @@ public class HallOfFame extends JFrame {
         pokemon3 = pokemon3Panel();
         background.add(pokemon3, gbc);
 
-        gbc.gridx++;
-        player = playerPanel();
-        player.add(new JLabel("Player Info"));
-        background.add(player, gbc);
+
 
         if (equipo.isTeamPokemonAlivePlayer1()) {
-            pokemon1.add(labelPokemon1Player1);
-            pokemon2.add(labelPokemon2Player1);
-            pokemon3.add(labelPokemon3Player1);
-        } else {
             pokemon1.add(labelPokemon1Player2);
             pokemon2.add(labelPokemon2Player2);
             pokemon3.add(labelPokemon3Player2);
+        } else {
+            pokemon1.add(labelPokemon1Player1);
+            pokemon2.add(labelPokemon2Player1);
+            pokemon3.add(labelPokemon3Player1);
+
         }
     }
 
