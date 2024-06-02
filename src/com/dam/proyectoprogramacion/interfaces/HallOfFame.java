@@ -2,12 +2,22 @@ package com.dam.proyectoprogramacion.interfaces;
 import com.dam.proyectoprogramacion.background.*;
 import com.dam.proyectoprogramacion.buttons.*;
 import com.dam.proyectoprogramacion.Songs.HallOfFameSong;
+import com.dam.proyectoprogramacion.methods.battle.MethodsBattlePokemon;
+import com.dam.proyectoprogramacion.methods.selectionpokemon.MethosInterfaceSelectionPokemon;
+import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
+import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
+import com.dam.proyectoprogramacion.pokemon.PokemonProperties;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+
+
+
 
 
 public class HallOfFame extends JFrame {
@@ -16,7 +26,21 @@ public class HallOfFame extends JFrame {
     private static JPanel pokemon2;
     private static JPanel pokemon3;
     private static JPanel player;
+    private static ImageIcon pokemon1Player1_img = new ImageIcon(putImagePokemon1InBattlePlayer1());
+    private static ImageIcon pokemon2Player1_img = new ImageIcon(putImagePokemon2InBattlePlayer1());
+    private static ImageIcon pokemon3Player1_img = new ImageIcon(putImagePokemon3InBattlePlayer1());
+    private static final JLabel labelPokemon1Player1 = new JLabel("pokemon1", pokemon1Player1_img,JLabel.CENTER);
+    private static final JLabel labelPokemon2Player1 = new JLabel("pokemon2", pokemon2Player1_img,JLabel.CENTER);
+    private static final JLabel labelPokemon3Player1 = new JLabel("pokemon3", pokemon3Player1_img,JLabel.CENTER);
+    private static ImageIcon pokemon1Player2_img = new ImageIcon(putImagePokemonInBattle1Player2());
+    private static ImageIcon pokemon2Player2_img = new ImageIcon(putImagePokemonInBattle2Player2());
+    private static ImageIcon pokemon3Player2_img = new ImageIcon(putImagePokemonInBattle3Player2());
+    private static final JLabel labelPokemon1Player2 = new JLabel("pokemon1", pokemon1Player2_img,JLabel.CENTER);
+    private static final JLabel labelPokemon2Player2 = new JLabel("pokemon2", pokemon2Player2_img,JLabel.CENTER);
+    private static final JLabel labelPokemon3Player2 = new JLabel("pokemon3", pokemon3Player2_img,JLabel.CENTER);
 
+    MethosInterfaceSelectionPokemon seleccion = new MethosInterfaceSelectionPokemon();
+    MethodsBattlePokemon equipo = new MethodsBattlePokemon();
     ButtonInterfaceSkipHall buttonsHall = new ButtonInterfaceSkipHall();
 
 
@@ -116,22 +140,60 @@ public class HallOfFame extends JFrame {
             }
         });
 
+        JFrame frame = new JFrame("Pokémon Game");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLayout(new GridBagLayout());
+
         pokemon1 = new JPanel();
         pokemon1 = pokemon1Panel();
+        pokemon1.setPreferredSize(new Dimension(100, 100));
+
 
         pokemon2 = new JPanel();
         pokemon2 = pokemon2Panel();
+        pokemon2.setPreferredSize(new Dimension(300, 300));
 
         pokemon3 = new JPanel();
         pokemon3 = pokemon3Panel();
+        pokemon3.setPreferredSize(new Dimension(300, 300));
+
 
         player = new JPanel();
         player = playerPanel();
+        player.setPreferredSize(new Dimension(200, 200));
 
-        background.add(pokemon1);
-        background.add(pokemon2);
-        background.add(pokemon3);
-        background.add(player);
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        frame.add(player, gbc);
+
+        GridBagConstraints fr = new GridBagConstraints();
+        fr.gridx = 0;
+        fr.gridy = 0;
+        fr.insets = new Insets(10, 10, 10, 10); // Espacio entre los paneles
+        frame.add(pokemon1, fr);
+        fr.gridx = 1;
+        frame.add(pokemon2, fr);
+
+        fr.gridx = 2;
+        frame.add(pokemon3, fr);
+
+        frame.pack();
+        frame.setVisible(true);
+
+        background.add(frame);
+
+
+        if (equipo.isTeamPokemonAlivePlayer1()==true){
+            pokemon1.add(labelPokemon1Player1);
+            pokemon2.add(labelPokemon2Player1);
+            pokemon3.add(labelPokemon3Player1);
+            background.add(Battle.globalPanelPLayer1);
+        }else{
+            pokemon1.add(labelPokemon1Player2);
+            pokemon2.add(labelPokemon2Player2);
+            pokemon3.add(labelPokemon3Player2);
+            background.add(Battle.globalPanelPLayer2);
+        }
     }
 
 
@@ -202,5 +264,230 @@ public class HallOfFame extends JFrame {
         JPanel player = new JPanel();
         player.setLayout(new BoxLayout(player,BoxLayout.X_AXIS));
         return player;
+    }
+
+    public static String putImagePokemon1InBattlePlayer1() {
+
+        String pathImagePokemon = "";
+        String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+        /**
+         * for para recorrer el hashmap de los jugadores
+         */
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+            /**
+             * si encuentra la clave, entra en la condicion
+             */
+            if (key.equals(aliasPlayer1)) {
+                /**
+                 * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
+                 */
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                if (!pokemons.isEmpty()) {
+                    /**
+                     * hacemos un objeto de pokemons y decimos que es igual al primer elemento de la lista de pokemons
+                     */
+                    PokemonProperties firstPokemon = (PokemonProperties) pokemons.get(0);
+                    String name = firstPokemon.getName().toLowerCase();
+                    pathImagePokemon = "imagenes/" + name + "SP.png";
+                    break;
+
+                } else {
+                    /**
+                     * si no hay nada, devuelve null
+                     */
+                    pathImagePokemon = null;
+                }
+
+            }
+        }
+        return pathImagePokemon;
+    }
+
+    public static String putImagePokemon2InBattlePlayer1() {
+
+        String pathImagePokemon = "";
+        String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+        /**
+         * for para recorrer el hashmap de los jugadores
+         */
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+            /**
+             * si encuentra la clave, entra en la condicion
+             */
+            if (key.equals(aliasPlayer1)) {
+                /**
+                 * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
+                 */
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                if (!pokemons.isEmpty()) {
+                    /**
+                     * hacemos un objeto de pokemons y decimos que es igual al primer elemento de la lista de pokemons
+                     */
+                    PokemonProperties firstPokemon = (PokemonProperties) pokemons.get(1);
+                    String name = firstPokemon.getName().toLowerCase();
+                    pathImagePokemon = "imagenes/" + name + "SP.png";
+                    break;
+
+                } else {
+                    /**
+                     * si no hay nada, devuelve null
+                     */
+                    pathImagePokemon = null;
+                }
+
+            }
+        }
+        return pathImagePokemon;
+    }
+
+
+    public static String putImagePokemon3InBattlePlayer1() {
+
+        String pathImagePokemon = "";
+        String aliasPlayer1 = InformationPanelPlayer1Luck.getAliasTextPlayer1().getText();
+        /**
+         * for para recorrer el hashmap de los jugadores
+         */
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+            /**
+             * si encuentra la clave, entra en la condicion
+             */
+            if (key.equals(aliasPlayer1)) {
+                /**
+                 * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
+                 */
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                if (!pokemons.isEmpty()) {
+                    /**
+                     * hacemos un objeto de pokemons y decimos que es igual al primer elemento de la lista de pokemons
+                     */
+                    PokemonProperties firstPokemon = (PokemonProperties) pokemons.get(2);
+                    String name = firstPokemon.getName().toLowerCase();
+                    pathImagePokemon = "imagenes/" + name + "SP.png";
+                    break;
+
+                } else {
+                    /**
+                     * si no hay nada, devuelve null
+                     */
+                    pathImagePokemon = null;
+                }
+
+            }
+        }
+        return pathImagePokemon;
+    }
+
+
+    public static String putImagePokemonInBattle1Player2() {
+
+        String pathImagePokemon = "";
+        String aliasPlayer2 = InformationPanelPlayer2Luck.getAliasTextPlayer2().getText();
+        /**
+         * for para recorrer el hashmap de los jugadores
+         */
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+            /**
+             * si encuentra la clave, entra en la condicion
+             */
+            if (key.equals(aliasPlayer2)) {
+                /**
+                 * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
+                 */
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                if (!pokemons.isEmpty()) {
+                    /**
+                     * hacemos un objeto de pokemons y decimos que es igual al primer elemento de la lista de pokemons
+                     */
+                    PokemonProperties firstPokemon = (PokemonProperties) pokemons.get(0);
+                    String name = firstPokemon.getName().toLowerCase();
+                    pathImagePokemon = "imagenes/" + name + "SP.png";
+                    break;
+
+                } else {
+                    /**
+                     * si no hay nada, devuelve null
+                     */
+                    pathImagePokemon = null;
+                }
+
+            }
+        }
+        return pathImagePokemon;
+    }
+
+
+    public static String putImagePokemonInBattle2Player2() {
+
+        String pathImagePokemon = "";
+        String aliasPlayer2 = InformationPanelPlayer2Luck.getAliasTextPlayer2().getText();
+        /**
+         * for para recorrer el hashmap de los jugadores
+         */
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+            /**
+             * si encuentra la clave, entra en la condicion
+             */
+            if (key.equals(aliasPlayer2)) {
+                /**
+                 * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
+                 */
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                if (!pokemons.isEmpty()) {
+                    /**
+                     * hacemos un objeto de pokemons y decimos que es igual al primer elemento de la lista de pokemons
+                     */
+                    PokemonProperties firstPokemon = (PokemonProperties) pokemons.get(1);
+                    String name = firstPokemon.getName().toLowerCase();
+                    pathImagePokemon = "imagenes/" + name + "SP.png";
+                    break;
+
+                } else {
+                    /**
+                     * si no hay nada, devuelve null
+                     */
+                    pathImagePokemon = null;
+                }
+
+            }
+        }
+        return pathImagePokemon;
+    }
+
+    public static String putImagePokemonInBattle3Player2() {
+
+        String pathImagePokemon = "";
+        String aliasPlayer2 = InformationPanelPlayer2Luck.getAliasTextPlayer2().getText();
+        /**
+         * for para recorrer el hashmap de los jugadores
+         */
+        for (String key : MethosInterfaceSelectionPokemon.getPlayersBattle().keySet()) {
+            /**
+             * si encuentra la clave, entra en la condicion
+             */
+            if (key.equals(aliasPlayer2)) {
+                /**
+                 * iniciamos un array de objetos y lo hacemos igual al valor del hashmap de jugadores
+                 */
+                ArrayList<Object> pokemons = MethosInterfaceSelectionPokemon.getPlayersBattle().get(key);
+                if (!pokemons.isEmpty()) {
+                    /**
+                     * hacemos un objeto de pokemons y decimos que es igual al primer elemento de la lista de pokemons
+                     */
+                    PokemonProperties firstPokemon = (PokemonProperties) pokemons.get(2);
+                    String name = firstPokemon.getName().toLowerCase();
+                    pathImagePokemon = "imagenes/" + name + "SP.png";
+                    break;
+
+                } else {
+                    /**
+                     * si no hay nada, devuelve null
+                     */
+                    pathImagePokemon = null;
+                }
+
+            }
+        }
+        return pathImagePokemon;
     }
 }

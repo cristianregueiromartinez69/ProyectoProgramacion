@@ -30,12 +30,12 @@ public class Battle extends JFrame {
      * qatributos privados de tipo jpanel de la interfaz
      */
     private static JPanel contentPanel;
-    private  static JPanel globalPanelPLayer1;
+    public static JPanel globalPanelPLayer1;
     private static JPanel attacksChangesPokemon1Player1;
     private  static JPanel attacksPanelPlayer1;
     private static JPanel changesPokemonsPLayer1;
     private  static JPanel battlePanel;
-    private  static JPanel globalPanelPLayer2;
+    public  static JPanel globalPanelPLayer2;
     private static JPanel attacksChangesPokemon1Player2;
     private  static JPanel attacksPanelPlayer2;
     private static JPanel changesPokemonsPLayer2;

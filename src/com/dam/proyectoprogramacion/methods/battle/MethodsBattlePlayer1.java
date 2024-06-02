@@ -2920,6 +2920,7 @@ public class MethodsBattlePlayer1 {
      * @param players el hashmap de los jugadores
      * @return el path con la imagen del pokemon seleccionado
      */
+
     public static String putImagePokemonInBattlePlayer1(HashMap<String, ArrayList<Object>> players) {
 
         String pathImagePokemon = "";
@@ -3412,15 +3413,15 @@ public class MethodsBattlePlayer1 {
          * metodos para obtener el texto del boton de los pokemons
          * @return el texto de los pokemons
          */
-    private static String getNameOfThePokemonPlayer1Pokemon1 () {
+    public static String getNameOfThePokemonPlayer1Pokemon1() {
 
         return ButtonInterfaceChangePokemonPlayer1.getPokemon1team().getText();
     }
-    private static String getNameOfThePokemonPlayer1Pokemon2 () {
+    public static String getNameOfThePokemonPlayer1Pokemon2() {
 
         return ButtonInterfaceChangePokemonPlayer1.getPokemon2team().getText();
     }
-    private static String getNameOfThePokemonPlayer1Pokemon3 () {
+    public static String getNameOfThePokemonPlayer1Pokemon3() {
 
         return ButtonInterfaceChangePokemonPlayer1.getPokemon3team().getText();
     }
