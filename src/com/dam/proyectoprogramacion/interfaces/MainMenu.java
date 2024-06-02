@@ -21,7 +21,7 @@ public class MainMenu extends JFrame {
     ButtonInterfaceMenu buttonsMenu = new ButtonInterfaceMenu();
     public MainMenu() {
 
-        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        //this.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
         /**
          * metodo para llamar a la musica que sonará en el menu principal
@@ -32,8 +32,7 @@ public class MainMenu extends JFrame {
          * defenimos características de la interfaz
          */
         setTitle("Pokemon Showdown");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(600, 400);
+        setSize(1600, 900);
 
 /**
  * varibale de tipo imagen que tiene el path de la imagen de fondo
