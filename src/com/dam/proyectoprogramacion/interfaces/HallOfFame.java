@@ -1,9 +1,13 @@
 package com.dam.proyectoprogramacion.interfaces;
+
 import com.dam.proyectoprogramacion.background.*;
 import com.dam.proyectoprogramacion.buttons.*;
 import com.dam.proyectoprogramacion.Songs.HallOfFameSong;
 import com.dam.proyectoprogramacion.methods.battle.MethodsBattlePokemon;
+import com.dam.proyectoprogramacion.methods.halloffame.DisableInformation;
 import com.dam.proyectoprogramacion.methods.selectionpokemon.MethosInterfaceSelectionPokemon;
+import com.dam.proyectoprogramacion.panels.battle.battleplayer1.AliasAndLogoPlayer1;
+import com.dam.proyectoprogramacion.panels.battle.battleplayer2.AliasAndLogoPlayer2;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
 import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
 import com.dam.proyectoprogramacion.pokemon.PokemonProperties;
@@ -25,15 +29,15 @@ public class HallOfFame extends JFrame {
     private static ImageIcon pokemon1Player1_img = new ImageIcon(putImagePokemon1InBattlePlayer1());
     private static ImageIcon pokemon2Player1_img = new ImageIcon(putImagePokemon2InBattlePlayer1());
     private static ImageIcon pokemon3Player1_img = new ImageIcon(putImagePokemon3InBattlePlayer1());
-    private static final JLabel labelPokemon1Player1 = new JLabel("", pokemon1Player1_img,JLabel.CENTER);
-    private static final JLabel labelPokemon2Player1 = new JLabel("", pokemon2Player1_img,JLabel.CENTER);
-    private static final JLabel labelPokemon3Player1 = new JLabel("", pokemon3Player1_img,JLabel.CENTER);
+    private static final JLabel labelPokemon1Player1 = new JLabel("", pokemon1Player1_img, JLabel.CENTER);
+    private static final JLabel labelPokemon2Player1 = new JLabel("", pokemon2Player1_img, JLabel.CENTER);
+    private static final JLabel labelPokemon3Player1 = new JLabel("", pokemon3Player1_img, JLabel.CENTER);
     private static ImageIcon pokemon1Player2_img = new ImageIcon(putImagePokemonInBattle1Player2());
     private static ImageIcon pokemon2Player2_img = new ImageIcon(putImagePokemonInBattle2Player2());
     private static ImageIcon pokemon3Player2_img = new ImageIcon(putImagePokemonInBattle3Player2());
-    private static final JLabel labelPokemon1Player2 = new JLabel("", pokemon1Player2_img,JLabel.CENTER);
-    private static final JLabel labelPokemon2Player2 = new JLabel("", pokemon2Player2_img,JLabel.CENTER);
-    private static final JLabel labelPokemon3Player2 = new JLabel("", pokemon3Player2_img,JLabel.CENTER);
+    private static final JLabel labelPokemon1Player2 = new JLabel("", pokemon1Player2_img, JLabel.CENTER);
+    private static final JLabel labelPokemon2Player2 = new JLabel("", pokemon2Player2_img, JLabel.CENTER);
+    private static final JLabel labelPokemon3Player2 = new JLabel("", pokemon3Player2_img, JLabel.CENTER);
 
     MethosInterfaceSelectionPokemon seleccion = new MethosInterfaceSelectionPokemon();
     MethodsBattlePokemon equipo = new MethodsBattlePokemon();
@@ -43,7 +47,7 @@ public class HallOfFame extends JFrame {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
-        setBounds(600,600,600,600);
+        setBounds(600, 600, 600, 600);
 
         // Llamar a la musica que va a sonar en el hall of fame
         HallOfFameSong.hallOfFameMusic();
@@ -56,7 +60,7 @@ public class HallOfFame extends JFrame {
         // Crear panel de fondo
         JPanel background = makePanel();
         GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(20, 20, 20, 20);  // Aumentar espacio entre componentes
+        gbc.insets = new Insets(20, 20, 20, 20); // Aumentar espacio entre componentes
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.gridwidth = GridBagConstraints.REMAINDER;
@@ -66,17 +70,57 @@ public class HallOfFame extends JFrame {
         add(backgroundHall);
         setVisible(true);
 
-        // Configurar botones
+        // Configurar y agregar paneles de Pokémon
         gbc.gridwidth = 1;
         gbc.gridy++;
-        JButton back = buttonsHall.makeBackButton();
-        back.setPreferredSize(new Dimension(300, 100));
-        background.add(back, gbc);
+        pokemon1 = pokemon1Panel();
+        background.add(pokemon1, gbc);
 
         gbc.gridx++;
+        pokemon2 = pokemon2Panel();
+        background.add(pokemon2, gbc);
+
+        gbc.gridx++;
+        pokemon3 = pokemon3Panel();
+
+        background.add(pokemon3, gbc);
+
+
+
+        if (!equipo.isTeamPokemonAlivePlayer1()) {
+            pokemon1.add(labelPokemon1Player1);
+            pokemon2.add(labelPokemon2Player1);
+            pokemon3.add(labelPokemon3Player1);
+            gbc.gridx++;
+            player = playerPanel();
+            player.add(new AliasAndLogoPlayer1());
+            background.add(player, gbc);
+        } else {
+            pokemon1.add(labelPokemon1Player2);
+            pokemon2.add(labelPokemon2Player2);
+            pokemon3.add(labelPokemon3Player2);
+            gbc.gridx++;
+            player = playerPanel();
+            player.add(new AliasAndLogoPlayer2());
+            background.add(player, gbc);
+        }
+
+        // Configurar botones y agregarlos a la parte inferior
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 50, 10));
+        buttonPanel.setOpaque(false); // Hacer que el fondo del panel de botones sea transparente
+        gbc.gridx = 0;
+        gbc.gridy++;
+        gbc.gridwidth = GridBagConstraints.REMAINDER;
+        gbc.anchor = GridBagConstraints.SOUTH;
+        backgroundHall.add(buttonPanel, gbc);
+
+        JButton back = buttonsHall.makeBackButton();
+        back.setPreferredSize(new Dimension(150, 50));
+        buttonPanel.add(back);
+
         JButton playAgain = buttonsHall.makePlayAgainButton();
-        playAgain.setPreferredSize(new Dimension(300, 100));
-        background.add(playAgain, gbc);
+        playAgain.setPreferredSize(new Dimension(150, 50));
+        buttonPanel.add(playAgain);
 
         // Agregar eventos de ratón a los botones
         back.addMouseListener(new MouseAdapter() {
@@ -99,7 +143,7 @@ public class HallOfFame extends JFrame {
 
             @Override
             public void mouseExited(MouseEvent e) {
-                playAgain.setBackground(Color.blue);
+                playAgain.setBackground(Color.WHITE);
             }
         });
 
@@ -110,6 +154,11 @@ public class HallOfFame extends JFrame {
                 HallOfFame.this.dispose();
                 MainMenu menu = new MainMenu();
                 menu.setVisible(true);
+                DisableInformation.disableInformationBattlePlayer1();
+                DisableInformation.disableInformationBattlePlayer2();
+                DisableInformation.disableInformationInterfaceLuck();
+                DisableInformation.disableInformationInterfaceSelectionPokemon();
+                DisableInformation.disableInformationInterfaceLuck();
             }
         });
 
@@ -119,35 +168,12 @@ public class HallOfFame extends JFrame {
                 HallOfFame.this.dispose();
                 SelectionPokemon play = new SelectionPokemon();
                 play.setVisible(true);
+                DisableInformation.disableInformationBattlePlayer1();
+                DisableInformation.disableInformationBattlePlayer2();
+                DisableInformation.disableInformationInterfaceLuck();
+                DisableInformation.disableInformationInterfaceSelectionPokemon();
             }
         });
-
-        // Configurar y agregar paneles de Pokémon
-        gbc.gridx = 0;
-        gbc.gridy++;
-        pokemon1 = pokemon1Panel();
-        background.add(pokemon1, gbc);
-
-        gbc.gridx++;
-        pokemon2 = pokemon2Panel();
-        background.add(pokemon2, gbc);
-
-        gbc.gridx++;
-        pokemon3 = pokemon3Panel();
-        background.add(pokemon3, gbc);
-
-
-
-        if (equipo.isTeamPokemonAlivePlayer1()) {
-            pokemon1.add(labelPokemon1Player2);
-            pokemon2.add(labelPokemon2Player2);
-            pokemon3.add(labelPokemon3Player2);
-        } else {
-            pokemon1.add(labelPokemon1Player1);
-            pokemon2.add(labelPokemon2Player1);
-            pokemon3.add(labelPokemon3Player1);
-
-        }
     }
 
     private JPanel makePanel() {
