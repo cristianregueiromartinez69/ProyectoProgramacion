@@ -73,6 +73,8 @@ public class Luck extends JFrame {
     GridBagConstraints gbc;
 
     public Luck() {
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
         /**
          * establecemos un titulo y dimensiones
          * lo hacemos visible
