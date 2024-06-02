@@ -12,7 +12,6 @@ import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer2Luck;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 /**
  * interfaz de la suerte en la que se decide quien tira primero
@@ -74,9 +73,6 @@ public class Luck extends JFrame {
     GridBagConstraints gbc;
 
     public Luck() {
-
-        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-
         /**
          * establecemos un titulo y dimensiones
          * lo hacemos visible
@@ -310,15 +306,7 @@ public class Luck extends JFrame {
         ButtonInterfaceLuck.getConfirmbuttonPlayer1().addActionListener(this::LuckChoiceMadePlayer1);
         ButtonInterfaceLuck2.getConfirmbuttonPlayer2().addActionListener(this::LuckChoiceMadePlayer2);
         ButtonInterfaceLuck.getFinishButton().addActionListener(this::winnerFaceOrTail);
-
-        ButtonInterfaceLuck.getSelectionButton().addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Luck.this.dispose();
-                SelectionPokemon selectionPokemon = new SelectionPokemon();
-                selectionPokemon.setVisible(true);
-            }
-        });
+        ButtonInterfaceLuck.getSelectionButton().addActionListener(this::goToSelectionInterface);
 
 
 
@@ -417,6 +405,8 @@ public class Luck extends JFrame {
          * al lado saldrá un boton que confirmacion
          */
         if(e.getSource() == ButtonInterfaceLuck.getFaceButton()){
+            MethodsInterfaceLuck.setHaveIChoosenFace(true);
+            MethodsInterfaceLuck.setHaveIChoosenTail(false);
             confirmFaceOrTailPlayer1.removeAll();
             confirmFaceOrTailPlayer1.revalidate();
             confirmFaceOrTailPlayer1.repaint();
@@ -450,6 +440,8 @@ public class Luck extends JFrame {
          * al lado saldrá un boton que confirmacion
          */
         else if(e.getSource() == ButtonInterfaceLuck.getTailButton()){
+            MethodsInterfaceLuck.setHaveIChoosenFace(false);
+            MethodsInterfaceLuck.setHaveIChoosenTail(true);
             confirmFaceOrTailPlayer1.removeAll();
             confirmFaceOrTailPlayer1.revalidate();
             confirmFaceOrTailPlayer1.repaint();
@@ -488,9 +480,13 @@ public class Luck extends JFrame {
          * al lado saldrá un boton que confirmacion
          */
         if(e.getSource() == ButtonInterfaceLuck.getFaceButton()){
+            MethodsInterfaceLuck.setHaveIChoosenFace(true);
+            MethodsInterfaceLuck.setHaveIChoosenTail(false);
             confirmFaceOrTailPlayer2.removeAll();
             confirmFaceOrTailPlayer2.revalidate();
             confirmFaceOrTailPlayer2.repaint();
+
+
             /**
              * recogemos en variables el alias y la eleccion de cara o cruz
              * esto será usado para introducirlo en un hashmap
@@ -515,15 +511,19 @@ public class Luck extends JFrame {
             gbc.gridy = 2;
             contentPanelPlayer1.add(confirmFaceOrTailPlayer2, gbc);
 
+
         }
         /**
          * si has elegido cruz, saldrá una imagen que será la cruz de la moneda
          * al lado saldrá un boton que confirmacion
          */
         else if(e.getSource() == ButtonInterfaceLuck.getTailButton()){
+            MethodsInterfaceLuck.setHaveIChoosenFace(false);
+            MethodsInterfaceLuck.setHaveIChoosenTail(true);
             confirmFaceOrTailPlayer2.removeAll();
             confirmFaceOrTailPlayer2.revalidate();
             confirmFaceOrTailPlayer2.repaint();
+
             /**
              * recogemos en variables el alias y la eleccion de cara o cruz
              * esto será usado para introducirlo en un hashmap
@@ -558,11 +558,11 @@ public class Luck extends JFrame {
      * @param e el objeto de tipo ActionEvent
      */
     public void LuckChoiceMadePlayer1(ActionEvent e){
+            MethodsInterfaceLuck.disableFaceOrTail(MethodsInterfaceLuck.isHaveIChoosenFace(), MethodsInterfaceLuck.isHaveIChoosenTail());
             MethodsInterfaceLuck.disableButtonsAndAliasesPlayer1Luck();
             MethodsInterfaceLuck.setLuckPlayers(MethodsInterfaceLuck.getAuxMapAliasPlayer1Luck(),
                     MethodsInterfaceLuck.getChosenItem());
             valuePlayer1 = MethodsInterfaceLuck.takeValuesPlayer1(MethodsInterfaceLuck.getLuckPlayers());
-
 
 
     }
@@ -572,6 +572,7 @@ public class Luck extends JFrame {
      * @param e el objeto de tipo ActionEvent
      */
     public void LuckChoiceMadePlayer2(ActionEvent e){
+        MethodsInterfaceLuck.disableFaceOrTail(MethodsInterfaceLuck.isHaveIChoosenFace(), MethodsInterfaceLuck.isHaveIChoosenTail());
         MethodsInterfaceLuck.disableButtonsAndAliasesPlayer2Luck();
         MethodsInterfaceLuck.setLuckPlayers(MethodsInterfaceLuck.getAuxMapAliasPlayer2Luck(),
                 MethodsInterfaceLuck.getChosenItem2());
@@ -584,8 +585,9 @@ public class Luck extends JFrame {
      * @param e el objeto de tipo actionevent
      */
     public void winnerFaceOrTail(ActionEvent e){
-
-        /**
+        MethodsInterfaceLuck.setAliasWinnerLuck(InformationPanelPlayer2Luck.getAliasTextPlayer2().getText());
+        new SelectionPokemon();
+            /**
          * si se cumple la condicion de este metodo, se pued epulsar el boton
          * el metodo consiste en saber si está editable el alias del jugador 1 y 2
          */
@@ -688,4 +690,6 @@ public class Luck extends JFrame {
     public static void setAuxWinnerPanelPLayer2(JPanel auxWinnerPanelPLayer2) {
         Luck.auxWinnerPanelPLayer2 = auxWinnerPanelPLayer2;
     }
+
+
 }

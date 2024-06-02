@@ -127,7 +127,7 @@ public class MethodsBattlePlayer1 {
      * @param type el tipo del ataque
      * @return el path del icono
      */
-    private static String chooseAttackIconPokemon1Player1(String type) {
+    public static String chooseAttackIconPokemon1Player1(String type) {
 
         String pathType = "";
         switch (type) {
@@ -309,7 +309,7 @@ public class MethodsBattlePlayer1 {
      * @param type el tipo del ataque
      * @return el color correspondiente
      */
-    private static Color chooseColorAttacksPokemonPlayer1(String type) {
+    public static Color chooseColorAttacksPokemonPlayer1(String type) {
 
         Color colorAttack = Color.BLUE;
         switch (type) {

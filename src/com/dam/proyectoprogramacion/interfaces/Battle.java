@@ -1781,9 +1781,7 @@ public class Battle extends JFrame {
         return auxPanel;
     }
 
-    public void closeWindow(){
-        dispose();
-    }
+
 
     /**
      * getter y setter de los atributos de la clase

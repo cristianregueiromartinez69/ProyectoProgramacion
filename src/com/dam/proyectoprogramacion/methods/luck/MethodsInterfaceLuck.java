@@ -45,6 +45,9 @@ public class MethodsInterfaceLuck {
      */
     private static String aliasWinnerLuck;
 
+    private static boolean haveIChoosenFace = false;
+    private static boolean haveIChoosenTail = false;
+
     /**
      * metodo para crear un panel en función del alias escrito
      *
@@ -306,6 +309,25 @@ public class MethodsInterfaceLuck {
         return valuePlayer2;
     }
 
+    /**
+     * metodo para deshabilitar el boton de cara o cruz
+     * @param face la variable booleana de cara
+     * @param tail la variable booleana de cruz
+     */
+    public static void disableFaceOrTail(boolean face, boolean tail){
+        /**
+         * si la variable face es true, se deshabilita el boton de cara y se habilita el de cruz
+         * si la variable tail es true, se deshabilita el boton de cruz y se habilita el de cara
+         */
+        if(face){
+            ButtonInterfaceLuck.getFaceButton().setEnabled(false);
+            ButtonInterfaceLuck.getTailButton().setEnabled(true);
+        }
+        else if(tail){
+            ButtonInterfaceLuck.getTailButton().setEnabled(false);
+            ButtonInterfaceLuck.getFaceButton().setEnabled(true);
+        }
+    }
 
     /**
      * metodo booleano que comprueba si los alias están deshabilitados para escribir
@@ -394,6 +416,24 @@ public class MethodsInterfaceLuck {
     public static void setAliasWinnerLuck(String aliasWinnerLuck) {
         MethodsInterfaceLuck.aliasWinnerLuck = aliasWinnerLuck;
     }
+
+    public static boolean isHaveIChoosenFace() {
+        return haveIChoosenFace;
+    }
+
+    public static void setHaveIChoosenFace(boolean haveIChoosenFace) {
+        MethodsInterfaceLuck.haveIChoosenFace = haveIChoosenFace;
+    }
+
+    public static boolean isHaveIChoosenTail() {
+        return haveIChoosenTail;
+    }
+
+    public static void setHaveIChoosenTail(boolean haveIChoosenTail) {
+        MethodsInterfaceLuck.haveIChoosenTail = haveIChoosenTail;
+    }
+
+
 }
 
 
