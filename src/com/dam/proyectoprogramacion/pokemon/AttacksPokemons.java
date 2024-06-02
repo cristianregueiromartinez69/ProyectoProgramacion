@@ -7,6 +7,7 @@ public class AttacksPokemons {
     private int power;
     private int precision;
 
+
     public AttacksPokemons(String type, String name, int power, int precision) {
         this.type = type;
         this.name = name;
