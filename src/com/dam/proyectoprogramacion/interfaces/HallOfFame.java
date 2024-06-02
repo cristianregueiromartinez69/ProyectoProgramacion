@@ -1,5 +1,7 @@
 package com.dam.proyectoprogramacion.interfaces;
 
+import com.dam.proyectoprogramacion.Songs.MusicBattleGame;
+import com.dam.proyectoprogramacion.Songs.MusicIntroGame;
 import com.dam.proyectoprogramacion.background.*;
 import com.dam.proyectoprogramacion.buttons.*;
 import com.dam.proyectoprogramacion.Songs.HallOfFameSong;
@@ -154,6 +156,8 @@ public class HallOfFame extends JFrame {
                 HallOfFame.this.dispose();
                 MainMenu menu = new MainMenu();
                 menu.setVisible(true);
+                HallOfFameSong.stopMusic();
+                MusicIntroGame.music();
                 DisableInformation.disableInformationBattlePlayer1();
                 DisableInformation.disableInformationBattlePlayer2();
                 DisableInformation.disableInformationInterfaceLuck();
@@ -168,6 +172,8 @@ public class HallOfFame extends JFrame {
                 HallOfFame.this.dispose();
                 SelectionPokemon play = new SelectionPokemon();
                 play.setVisible(true);
+                HallOfFameSong.stopMusic();
+                MusicBattleGame.music();
                 DisableInformation.disableInformationBattlePlayer1();
                 DisableInformation.disableInformationBattlePlayer2();
                 DisableInformation.disableInformationInterfaceLuck();

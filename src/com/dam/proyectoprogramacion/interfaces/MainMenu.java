@@ -1,4 +1,5 @@
 package com.dam.proyectoprogramacion.interfaces;
+import com.dam.proyectoprogramacion.Songs.MusicBattleGame;
 import com.dam.proyectoprogramacion.Songs.MusicIntroGame;
 import com.dam.proyectoprogramacion.background.*;
 import com.dam.proyectoprogramacion.buttons.*;
@@ -140,6 +141,8 @@ public class MainMenu extends JFrame {
                 MainMenu.this.dispose();
                 Luck luck = new Luck();
                 luck.setVisible(true);
+                MusicIntroGame.stopMusic();
+                MusicBattleGame.music();
 
             }
         });
