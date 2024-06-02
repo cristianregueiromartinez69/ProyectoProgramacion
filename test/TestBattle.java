@@ -1,28 +1,22 @@
-import com.dam.proyectoprogramacion.buttons.ButtonInterfaceCombat;
-import com.dam.proyectoprogramacion.methods.battle.*;
-import com.dam.proyectoprogramacion.pokemon.*;
-import com.dam.proyectoprogramacion.methods.selectionpokemon.*;
+import com.dam.proyectoprogramacion.view.buttons.ButtonInterfaceCombat;
+import com.dam.proyectoprogramacion.controller.methods.battle.*;
+import com.dam.proyectoprogramacion.model.pokemon.*;
+import com.dam.proyectoprogramacion.controller.methods.selectionpokemon.*;
 import org.junit.Assert;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.awt.*;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Optional;
 
-import static com.dam.proyectoprogramacion.methods.battle.MethodsBattlePokemon.*;
-import com.dam.proyectoprogramacion.methods.battle.MethodsBattlePlayer1;
-import com.dam.proyectoprogramacion.methods.battle.MethodsBattlePokemon;
-import com.dam.proyectoprogramacion.pokemon.*;
-import com.dam.proyectoprogramacion.methods.selectionpokemon.*;
-import org.junit.Assert;
+import static com.dam.proyectoprogramacion.controller.methods.battle.MethodsBattlePokemon.*;
+import com.dam.proyectoprogramacion.controller.methods.battle.MethodsBattlePlayer1;
+import com.dam.proyectoprogramacion.controller.methods.battle.MethodsBattlePokemon;
+import com.dam.proyectoprogramacion.model.pokemon.*;
+import com.dam.proyectoprogramacion.controller.methods.selectionpokemon.*;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Optional;
 
 import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;

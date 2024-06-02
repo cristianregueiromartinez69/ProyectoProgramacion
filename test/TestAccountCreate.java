@@ -1,9 +1,9 @@
-import com.dam.proyectoprogramacion.methods.accountcreate.MethodsInterfaceAccountCreate;
-import com.dam.proyectoprogramacion.methods.accountcreate.MethodsLogicalAccountCreate;
-import com.dam.proyectoprogramacion.methods.battle.MethodsBattlePokemon;
-import com.dam.proyectoprogramacion.panels.luck.InformationPanelPlayer1Luck;
-import com.dam.proyectoprogramacion.pokemon.*;
-import com.dam.proyectoprogramacion.methods.selectionpokemon.*;
+import com.dam.proyectoprogramacion.controller.methods.accountcreate.MethodsInterfaceAccountCreate;
+import com.dam.proyectoprogramacion.controller.methods.accountcreate.MethodsLogicalAccountCreate;
+import com.dam.proyectoprogramacion.controller.methods.battle.MethodsBattlePokemon;
+import com.dam.proyectoprogramacion.view.panels.luck.InformationPanelPlayer1Luck;
+import com.dam.proyectoprogramacion.model.pokemon.*;
+import com.dam.proyectoprogramacion.controller.methods.selectionpokemon.*;
 import org.junit.Assert;
 import org.junit.jupiter.api.*;
 

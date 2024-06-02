@@ -1,6 +1,6 @@
-import com.dam.proyectoprogramacion.methods.battle.MethodsBattlePokemon;
-import com.dam.proyectoprogramacion.pokemon.*;
-import com.dam.proyectoprogramacion.methods.selectionpokemon.*;
+import com.dam.proyectoprogramacion.controller.methods.battle.MethodsBattlePokemon;
+import com.dam.proyectoprogramacion.model.pokemon.*;
+import com.dam.proyectoprogramacion.controller.methods.selectionpokemon.*;
 import org.junit.Test;
 import org.junit.Assert;
 import org.junit.jupiter.api.DisplayName;
